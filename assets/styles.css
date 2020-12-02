@@ -148,7 +148,7 @@ section {
 /*Swiper*/
 .swiper-container {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
 }
 
 .swiper-slide {
