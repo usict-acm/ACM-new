@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5 {
   font-family: 'Poppins', sans-serif;
 }
 
+.form-input-boxes-manual{
+  box-shadow: 0.5px 0.7px 2.5px #4169E1;
+}
+
 .parallax-section {
   background-attachment: fixed !important;
 }
