@@ -9,8 +9,15 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
+h2, h3, h4, h5 {
   font-family: 'Poppins', sans-serif;
+}
+
+.section-heading{
+  color:#4169E1;
+  font-weight: bold;
+  font-size: 2.7rem;
+  display:inline-block;
 }
 
 .form-input-boxes-manual{
