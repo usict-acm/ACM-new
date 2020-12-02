@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/user/public_html/ACM_New/
+    - export DEPLOYPATH=/home/usicthosting/public_html/ACM_New/
     - /bin/cp -a * $DEPLOYPATH
