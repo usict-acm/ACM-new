@@ -231,6 +231,16 @@ section {
   font-size: 32px;
 }
 
+.p-t-150 {
+  padding-top: 150px !important;
+}
+.p-b-150 {
+  padding-bottom: 150px !important;
+}
+.m-b-30 {
+  margin-bottom: 30px !important;
+}
+
 .service-sec h2 small {
   color: #222;
   display: block;
