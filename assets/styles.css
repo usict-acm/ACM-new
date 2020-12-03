@@ -1583,3 +1583,75 @@ select[multiple] {
   margin-left: auto;
   margin-right: auto;
 }
+.separator {
+  color: #ccc;
+  width: 100%;
+  margin: 30px auto;
+  overflow: hidden;
+  text-align: center;
+  line-height: 1.2em;
+}
+
+  .separator.seperator-small {
+    width: 10%;
+    margin: 5px auto; }
+
+    .counter {
+      margin-bottom: 14px; }
+      .counter span {
+        font-size: 50px;
+        line-height: 40px; }
+      .counter.small > span {
+        font-size: 32px !important; }
+      .counter.medium > span {
+        font-size: 50px !important; }
+      .counter.large > span {
+        font-size: 62px !important; }
+    
+    .icon-box.fancy > .counter span {
+      margin: 0 12px 10px 56px; }
+    .icon-box.fancy.medium > .counter span {
+      margin: 0 12px 10px 80px; }
+    .icon-box.effect:not(.center) > .counter span {
+      margin: 0 12px 10px 82px; }
+    .icon-box.effect.large:not(.center) > .counter span {
+      margin: 0 12px 10px 107px; }
+    .icon-box.effect.medium:not(.center) > .counter span {
+      margin: 0 12px 10px 82px; }
+    .icon-box.effect.small:not(.center) > .counter span {
+      margin: 0 12px 10px 58px;
+      font-size: 32px !important; }
+.f-icon  {
+  weight: 80px;
+  text-align: center;
+  margin-bottom: 3%;
+  border-radius: 50%;
+  color:#3b5998;
+}
+.l-icon  {
+  weight: 80px;
+  text-align: center;
+  margin-bottom: 3%;
+  border-radius: 50%;
+  color:#0e76a8;
+}
+.i-icon  {
+  weight: 80px;
+  text-align: center;
+  margin-bottom: 3%;
+  border-radius: 50%;
+  color: #E1306C;
+}
+.c-icon  {
+  weight: 80px;
+  text-align: center;
+  margin-bottom: 3%;
+  border-radius: 50%;
+  color: #2250fc;
+}
+.count{
+  color: #444;
+}
+.follower-count{
+  color: #444;
+}
