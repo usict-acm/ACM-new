@@ -2077,3 +2077,33 @@ var ScrollPosStyler = (function(document, window) {
 
   return pub;
 })(document, window);
+
+//**************************************************EVENTS********************************************************************
+
+window.addEventListener('load', function(){
+  new Glider(document.querySelector('.glider'), {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    duration: 1.5,
+    rewind: true,
+    draggable: true,
+    dots: '.dots',
+    arrows: {
+      prev: '.glider-prev',
+      next: '.glider-next'
+    },
+    responsive: [
+    {
+
+      breakpoint: 775,
+      settings: {
+
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        duration: 1.5
+      }
+    }
+  ]
+
+  })
+});

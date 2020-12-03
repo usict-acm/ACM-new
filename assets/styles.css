@@ -1607,7 +1607,7 @@ select[multiple] {
         font-size: 50px !important; }
       .counter.large > span {
         font-size: 62px !important; }
-    
+
     .icon-box.fancy > .counter span {
       margin: 0 12px 10px 56px; }
     .icon-box.fancy.medium > .counter span {
@@ -1654,4 +1654,202 @@ select[multiple] {
 }
 .follower-count{
   color: #444;
+}
+
+
+
+
+
+
+
+
+
+/*******************************************************************TEAM******************************************/
+
+
+body{
+  background-color: #F8F9FA;
+}
+
+
+.team-mem{
+  width: 60%;
+  height: 60%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.team-lead{
+  width: 60%;
+  height: 60%;
+  margin: auto;
+  overflow: hidden;
+
+}
+
+.dean{
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+
+}
+
+.dean-sir{
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.head-office{
+  text-align: center;
+}
+
+.team-member{
+  text-align: center;
+}
+
+.team-memberName{
+  margin-bottom: 0;
+}
+
+h1{
+  text-align: center;
+  padding: 2rem;
+}
+
+
+
+.col-md-3{
+  padding: 1px;
+}
+
+.content{
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.team-mem:hover{
+  opacity: 0.7;
+}
+.team-mem:hover .content{
+  opacity: 1;
+}
+
+.team-lead:hover{
+  opacity: 0.7;
+}
+.team-lead:hover .content{
+  opacity: 1;
+}
+
+.content ul{
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+
+.content ul li a{
+  text-decoration: none;
+}
+
+.content ul li a i{
+  background-color: white;
+  font-size: 2rem;
+  height: 3rem;
+  width: 3rem;
+  color: black;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 3rem;
+  transform: translateY(100px);
+  transition: all 0.5s ease;
+}
+
+.team-mem:hover .content ul li a i{
+  transform: translateY(-1.5rem);
+}
+
+.team-lead:hover .content ul li a i{
+  transform: translateY(-3rem);
+}
+
+.teams{
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.team_ded_page{
+
+width: 20rem;
+height: 4rem;
+margin: auto;
+color: white;
+background: linear-gradient(180deg, #0E8E96 0%, #2DD6E0 100%);
+border-radius: 2rem;
+border: none;
+font-weight: 500;
+}
+
+.team_ded_page:hover{
+  background: linear-gradient(180deg, #2DD6E0 0%, #0E8E96 100%);
+
+}
+
+
+/* ***************************************EVENTS SECTION*************************************************************** */
+
+
+.events{
+  background-color: #CBE9FF;
+  padding-bottom: 2rem;
+}
+
+.event-sec{
+  background-color: #CBE9FF;
+}
+.events-heading{
+  color: #008CF3;
+  text-align: center;
+  padding: 2rem;
+  font-weight: 900;
+}
+
+.event-details{
+  background-color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: solid #008CF3;
+  margin: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.event-pic{
+  height: 13rem;
+  width: 13rem;
+  border-radius: 1rem;
+  margin-bottom: 10%;
+}
+
+.event-para{
+  color: #3E375A;
+}
+
+.dateTime-para{
+  color:#292E64;
+  text-align: left;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 775px) {
+  button{
+    visibility: hidden;
+  }
 }
