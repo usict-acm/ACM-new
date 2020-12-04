@@ -1678,7 +1678,7 @@ select[multiple] {
 
 
 body{
-  background-color: #F8F9FA;
+  background-color: #fff;
 }
 
 
@@ -1797,11 +1797,11 @@ h1{
 
 .team_ded_page{
 
-width: 20rem;
-height: 4rem;
+padding: 10px 10px;
+/* height: 2rem; */
 margin: auto;
 color: white;
-background: linear-gradient(180deg, #0E8E96 0%, #2DD6E0 100%);
+background: linear-gradient(180deg, #CBE9FF 0%, #2DD6E0 100%);
 border-radius: 2rem;
 border: none;
 font-weight: 500;
