@@ -1,3 +1,7 @@
+function myFunction() {
+  document.getElementById("togglerButton").classList.add("sps--blw");
+  document.getElementById("togglerButton").classList.remove("sps--abv");
+}
 /*------- Smooth Scroll -------*/
 
 $('a[href^="#"]').on('click', function(event) {
