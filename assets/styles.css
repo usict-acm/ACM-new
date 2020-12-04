@@ -1792,7 +1792,7 @@ h1{
 
 .teams{
   text-align: center;
-  padding-bottom: 1rem;
+
 }
 
 .team_ded_page{
@@ -1812,6 +1812,9 @@ font-weight: 500;
 
 }
 
+.te{
+  padding: 2rem 0;
+}
 
 /* ***************************************EVENTS SECTION*************************************************************** */
 
@@ -1823,12 +1826,7 @@ font-weight: 500;
 
 .event-sec{
   background-color: #CBE9FF;
-}
-.events-heading{
-  color: #008CF3;
   text-align: center;
-  padding: 2rem;
-  font-weight: 900;
 }
 
 .event-details{
