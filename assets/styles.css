@@ -163,7 +163,9 @@ section {
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 14px;
+  font-weight: bolder !important;
+  padding-bottom: 50px;
   background: #fff;
   /* Center slide text vertically */
   display: -webkit-box;
@@ -177,7 +179,7 @@ section {
   -webkit-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .main-slider .slider-bg-position {
@@ -1583,7 +1585,7 @@ select[multiple] {
 }
 @media (min-width: 0px) and (max-width: 500px) {
   .contact-us-img{
-    width: 400px !important;
+    /* width: 400px !important; */
     /* height: 400px !important; */
     /* margin: 100px 80px !important; */
     }
