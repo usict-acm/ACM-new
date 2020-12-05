@@ -243,7 +243,12 @@ section {
 .m-b-30 {
   margin-bottom: 30px !important;
 }
-
+.p-b-80 {
+  padding-bottom: 80px !important;
+}
+.p-t-80 {
+  padding-top: 80px !important;
+}
 .service-sec h2 small {
   color: #222;
   display: block;
