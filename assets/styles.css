@@ -1823,7 +1823,11 @@ font-weight: 500;
 .te{
   padding: 2rem 0;
 }
-
+@media only screen and (max-width: 775px) {
+  .hid{
+    visibility: hidden;
+  }
+}
 /* ***************************************EVENTS SECTION*************************************************************** */
 
 
@@ -1842,9 +1846,11 @@ font-weight: 500;
   text-align: center;
   padding: 1rem;
   border-radius: 1rem;
-  /* border: solid #008CF3; */
+  /* border: solid #CBE9FF; */
   margin: 1rem;
-   box-shadow: 1.1px 1.25px 10px 5px grey;
+  box-shadow: 1.1px 1.25px 10px 5px grey;
+
+  z-index: 2;
 }
 
 .event-pic{
