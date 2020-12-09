@@ -1350,7 +1350,7 @@ select[multiple] {
     }
     #widget-contact-form {
       clear: left; }
-      
+
         .background-colored {
           background-color: #2250fc; }
 
@@ -1692,4 +1692,239 @@ font-weight: 500;
   text-align: left;
   font-weight: 500;
   /* text-align: center; */
+}
+
+/*
+************************************ANNOUNCEMENT************************************************************ */
+
+.detai{
+background-color: #CBE9FF;
+border-radius: 1rem;
+padding: 1rem;
+height: 100%;
+
+}
+.text{
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+
+.btn{
+  background: linear-gradient(180deg, #CBE9FF 0%, #2DD6E0 100%);;
+  border-radius: 1rem;
+  color: white;
+}
+
+.btn:hover{
+  background: linear-gradient(180deg, #2DD6E0 0%, #0E8E96 100%);
+  color: white;
+}
+
+.timeout{
+  font-size: 2rem;
+  padding: 1rem;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  color: black;
+  font-weight: 500;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.det-row{
+  height: 15rem;
+}
+.divide{
+
+  margin-top: 1rem;
+
+}
+
+.det{
+  width: 65%;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem 0 grey;
+  padding: 1rem;
+  height: auto;
+}
+
+.butn{
+  text-align: center;
+
+  transition: all .5s ease;
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 1rem;
+}
+
+.list div{
+  flex: 1;
+}
+.det h2{
+  font-weight: 900;
+  color: #00008B;
+}
+
+.heading{
+  margin: 1rem 1rem 2rem 1rem;
+  text-align: center;
+}
+
+
+.imag{
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.countdown{
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.7;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ***************************************ANNOUNCEMENT **********************************************/
+.announcement{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.detai{
+background-color: #CBE9FF;
+border-radius: 1rem;
+padding: 1rem;
+height: 100%;
+
+}
+.text{
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+
+.btn1{
+  /* background: linear-gradient(180deg, #CBE9FF 0%, #2DD6E0 100%);; */
+  background-color: blue;
+  border-radius: 1rem;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+}
+
+.btn1:hover{
+  /* background: linear-gradient(180deg, #2DD6E0 0%, #0E8E96 100%); */
+  box-shadow: 0 0 1rem 0 blue;
+  color: white;
+}
+
+.timeout{
+  font-size: 2rem;
+  padding: 1rem;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  color: black;
+  font-weight: 900;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.det-row{
+  height: 15rem;
+  margin-top: -2.5rem;
+}
+.divide{
+    margin-top: 1rem;
+
+}
+
+.det{
+  width: 65%;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem 0 grey;
+  padding: 1rem;
+  height: auto;
+}
+
+.butn{
+  text-align: center;
+  transition: all .5s ease;
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 1rem;
+}
+
+.list div{
+  flex: 1;
+}
+.det h1{
+  font-weight: 900;
+  color: black;
+}
+
+.heading{
+  margin-top: -1rem;
+  text-align: center;
+}
+
+
+.imag{
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.countdown{
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.7;
+
 }
