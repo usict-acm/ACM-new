@@ -1737,20 +1737,27 @@ height: 100%;
 }
 
 .det-row{
-  height: 15rem;
+  /* height: 25%; */
+  width: 100%;
 }
 .divide{
 
   margin-top: 1rem;
-
 }
 
 .det{
-  width: 65%;
+  width: 65%;k
   border-radius: 1rem;
   box-shadow: 0 0 1rem 0 grey;
   padding: 1rem;
-  height: auto;
+  /* height: auto; */
+}
+
+@media all and (max-width:500px) {
+  .det{
+    width: 100%;
+  }
+
 }
 
 .butn{
@@ -1762,14 +1769,14 @@ height: 100%;
 .list{
   display: flex;
   flex-direction: column;
-  height: 100%;
+
   margin-top: 1rem;
 }
 
 .list div{
   flex: 1;
 }
-.det h2{
+.det h1{
   font-weight: 900;
   color: #00008B;
 }
@@ -1781,7 +1788,7 @@ height: 100%;
 
 
 .imag{
-  height: 100%;
+  height: 15rem;
   border-radius: 1rem;
 }
 
@@ -1874,8 +1881,28 @@ height: 100%;
   margin-top: 1rem;
 }
 
+
+.det{
+  width: 65%;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem 0 grey;
+  padding: 1rem;
+  /* height: auto; */
+}
+
+@media only screen and (max-width:775px) {
+    .det{
+      width: 100%;
+    }
+    .timeout{
+      width:100%;k
+    }
+    .det h1{
+      font-size: 2rem;
+    }
+}
 .det-row{
-  height: 15rem;
+  /* height: 15rem; */
   margin-top: -2.5rem;
 }
 .divide{
@@ -1883,13 +1910,7 @@ height: 100%;
 
 }
 
-.det{
-  width: 65%;
-  border-radius: 1rem;
-  box-shadow: 0 0 1rem 0 grey;
-  padding: 1rem;
-  height: auto;
-}
+
 
 .butn{
   text-align: center;
@@ -1909,6 +1930,7 @@ height: 100%;
 .det h1{
   font-weight: 900;
   color: black;
+  text-align: center;
 }
 
 .heading{
@@ -1918,7 +1940,7 @@ height: 100%;
 
 
 .imag{
-  height: 100%;
+  /* height: 100%; */
   border-radius: 1rem;
 }
 
