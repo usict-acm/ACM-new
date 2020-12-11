@@ -2133,8 +2133,8 @@ var x = setInterval(function() {
   // Display the result in the element with id="demo"
   document.getElementById("demoDay").innerHTML = days + "<br/><div class = countdown>DAYS</div> ";
   document.getElementById("demoHour").innerHTML = hours + "<br/><div class = countdown>H0URS</div> ";
-  document.getElementById("demoMin").innerHTML = minutes + "<br/><div class = countdown>MINUTES</div> ";
-  document.getElementById("demoSec").innerHTML = seconds + "<br/><div class = countdown>SECONDS</div> ";
+  document.getElementById("demoMin").innerHTML = minutes + "<br/><div class = countdown>MIN(s)</div> ";
+  document.getElementById("demoSec").innerHTML = seconds + "<br/><div class = countdown>SEC(s)</div> ";
 
   // If the count down is finished, write some text
   if (distance < 0) {
