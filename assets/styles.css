@@ -1350,7 +1350,7 @@ select[multiple] {
     }
     #widget-contact-form {
       clear: left; }
-      
+
         .background-colored {
           background-color: #2250fc; }
 
@@ -1692,4 +1692,113 @@ font-weight: 500;
   text-align: left;
   font-weight: 500;
   /* text-align: center; */
+}
+
+/* ***************************************ANNOUNCEMENT **********************************************/
+.announcement{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.detai{
+background-color: #CBE9FF;
+border-radius: 1rem;
+padding: 1rem;
+height: 100%;
+
+}
+.text{
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.timeout{
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  color: black;
+  font-weight: 900;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+
+.det{
+  width: 65%;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem 0 grey;
+  padding: 1rem;
+  /* height: auto; */
+}
+
+@media only screen and (max-width:775px) {
+    .det{
+      width: 100%;
+    }
+    .timeout{
+      width:100%;
+    }
+    .det h1{
+      font-size: 2rem;
+    }
+}
+.det-row{
+  /* height: 15rem; */
+  margin-top: -2.5rem;
+  text-align: center;
+}
+.divide{
+    margin-top: 1rem;
+
+}
+
+
+
+.butn{
+  text-align: center;
+  transition: all .5s ease;
+
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 1rem;
+  align-self: center;
+}
+
+.list div{
+  flex: 1;
+}
+.det h1{
+  font-weight: 900;
+  color: black;
+  text-align: center;
+}
+
+.heading{
+  margin-top: -1rem;
+  text-align: center;
+}
+
+
+.imag{
+  height: 17rem;
+  border-radius: 1rem;
+}
+
+.countdown{
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.7;
+
 }
