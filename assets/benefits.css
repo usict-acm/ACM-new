@@ -910,10 +910,6 @@ box-shadow: 2px 2px 4px grey;
 transition: all .5s ease;
 }
 
-.images img:hover{
- box-shadow: 2px 0 5px 0 grey;
- z-index: 1;
-}
 .images{
  width: 80%;
  text-align: center;
