@@ -2086,7 +2086,7 @@ var ScrollPosStyler = (function(document, window) {
 
 window.addEventListener('load', function(){
   new Glider(document.querySelector('.glider'), {
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
     duration: 1.5,
     rewind: true,
