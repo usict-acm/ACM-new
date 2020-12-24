@@ -2082,11 +2082,11 @@ var ScrollPosStyler = (function(document, window) {
   return pub;
 })(document, window);
 
-//**************************************************EVENTS********************************************************************
+//**************************************************ALUMNI********************************************************************
 
 window.addEventListener('load', function(){
   new Glider(document.querySelector('.glider'), {
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     duration: 1.5,
     rewind: true,
@@ -2099,14 +2099,23 @@ window.addEventListener('load', function(){
     responsive: [
     {
 
-      breakpoint: 775,
+      breakpoint: 990,
+      settings: {
+
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        duration: 1.5
+      }
+    },
+    {
+      breakpoint: 700,
       settings: {
 
         slidesToShow: 3,
         slidesToScroll: 1,
         duration: 1.5
-      }
     }
+  },
   ]
 
   })
