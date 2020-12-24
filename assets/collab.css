@@ -1355,7 +1355,7 @@ button.swiper-pagination-bullet {
   transition: all 0.5s ease-in-out !important;
 }
 .card-14 {
-  background: url("images/collab/iisc-ConvertImage.png") no-repeat;
+  background: url("images/collab/zenon-ConvertImage.png") no-repeat;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -1366,7 +1366,7 @@ button.swiper-pagination-bullet {
   transition: all 0.5s ease-in-out !important;
 }
 .card-14:hover {
-  background: url("images/collab/iisc.png") no-repeat;
+  background: url("images/collab/zenon.png") no-repeat;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -1377,7 +1377,7 @@ button.swiper-pagination-bullet {
   transition: all 0.5s ease-in-out !important;
 }
 .card-15 {
-  background: url("images/collab/iisc-ConvertImage.png") no-repeat;
+  background: url("images/collab/stage3-ConvertImage.png") no-repeat;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -1388,7 +1388,7 @@ button.swiper-pagination-bullet {
   transition: all 0.5s ease-in-out !important;
 }
 .card-15:hover {
-  background: url("images/collab/iisc.png") no-repeat;
+  background: url("images/collab/stage3.png") no-repeat;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
