@@ -9,9 +9,9 @@ body {
   margin-left: 1px;
 }
 
-h1, h2, h3, h4, h5 {
+/* h1, h2, h3, h4, h5 {
   font-family: 'Montserrat', sans-serif;
-}
+} */
 
 ul{
   list-style: none;
@@ -925,12 +925,14 @@ transition: all .5s ease;
  text-shadow: 1px 1px 2px grey;
 }
 
-hr{
+.line{
  width: 15%;
  /* color: #3106F9; */
- color: #0297FF;
- height: 5px!important;
+ background-color: #0297FF;
+ height: 5px;
  border-radius: 1rem;
+ margin-bottom: 1rem;
+ margin-top: -2rem;
 }
 
 .alumnus{
