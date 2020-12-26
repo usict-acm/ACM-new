@@ -1032,6 +1032,7 @@ button.swiper-pagination-bullet {
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: 0 0 3.5px #0297ff;
+  margin-bottom: -13%;
 }
 .uheading {
   font-size: 2rem;
@@ -1039,7 +1040,7 @@ button.swiper-pagination-bullet {
 .lheading {
   font-size: 2rem;
 }
-@media (min-width: 300px) and (max-width: 580px) {
+@media (min-width: 200px) and (max-width: 580px) {
   .uheading {
     font-size: 16px;
   }
@@ -1048,6 +1049,10 @@ button.swiper-pagination-bullet {
   }
   .acm-logo-navbar {
     margin-left: 10px;
+  }
+  .pt-card{
+    margin-top: 7%;
+    margin-bottom: -40%;
   }
 }
 .perk-card {
