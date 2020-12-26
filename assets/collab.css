@@ -1036,6 +1036,7 @@ button.swiper-pagination-bullet {
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: 0 0 3.5px #0297ff;
+  margin-bottom: -13%;
 }
 .collab-card {
   width: 250px !important;
