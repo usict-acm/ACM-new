@@ -1131,3 +1131,130 @@ button.swiper-pagination-bullet {
     visibility: hidden;
   }
 }
+
+/* ********************************************************************WINNERS******************************************************* */
+
+.winnerInnerDiv img{
+  width: 100%;
+  border-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 14rem;
+}
+
+.winners{
+  position: relative;
+  top: 0;
+  left: 0;
+  text-align: center;
+    width: 100vw;
+}
+
+.winners h1{
+  margin: 1rem;
+  text-align: left;
+}
+
+.winners h1 b{
+
+  color: #0297FF;
+  font-weight: 500;
+}
+.winnerInnerDiv{
+  position: relative;
+  box-shadow: 0 0 0.3rem 0 BLACK;
+  border-radius: 1rem;
+  width: 80%;
+  transition: all .5s ease;
+  padding-bottom: 0.5rem;
+  background: linear-gradient(180deg, #2DD6E0 0%, #0E8E96 100%);;
+  margin: auto;
+}
+
+.winnerInnerDiv:hover{
+  box-shadow: 0 0 1.5rem 0 grey;
+
+}
+
+.winners h2{
+
+text-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+line-height: 1.2;
+font-size: 1.3rem;
+font-weight: 600;
+color: white;
+}
+.winners h4{
+  font-size: 1rem;
+  color: white;
+}
+
+.winnerDetails{
+  padding-top: 0;
+}
+
+.winners #overlay{
+  position: absolute;
+  top: -2rem;
+  left: -3rem;
+  height: 80px;
+  width: 100px;
+  z-index: 2;
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+.winnerInnerDiv:hover #overlay{
+  opacity: 1;
+}
+
+.fa-crown{
+  color: #F9B605;
+  transform: rotate(-45deg);
+}
+
+.line{
+ width: 15%;
+ background-color: #0297FF;
+ z-index: 1;
+  border-radius: 1rem;
+  height: 5px;
+  margin: 1rem;
+}
+
+.custom-canvas{
+  position: absolute;
+  z-index: -1;
+  /* left: 0;
+  top: 0; */
+  width: 100vw!important;
+  height: 100%!important;
+}
+
+.winBox{
+  padding: 1.5rem 0.7rem;
+}
+
+.glider{
+
+  padding: 1rem 0;
+}
+
+.alumni-prev1{
+ color: #0297FF!important;
+ font-weight: 700!important;
+}
+
+.alumni-next1{
+ color: #0297FF!important;
+ font-weight: 700!important;
+}
+
+@media only screen and (max-width: 600px) {
+ .alumni-prev1 {
+   visibility: hidden;
+ }
+ .alumni-prev1 {
+   visibility: hidden;
+ }
+}
