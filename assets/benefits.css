@@ -1244,7 +1244,9 @@ color: white;
 
   padding: 1rem 0;
 }
-
+.winnerOut{
+  padding-bottom: 3rem;
+}
 .alumni-prev1{
  color: #0297FF!important;
  font-weight: 700!important;
@@ -1259,7 +1261,7 @@ color: white;
  .alumni-prev1 {
    visibility: hidden;
  }
- .alumni-prev1 {
+ .alumni-next1 {
    visibility: hidden;
  }
 }
