@@ -1052,7 +1052,15 @@ button.swiper-pagination-bullet {
   }
   .pt-card{
     margin-top: 7%;
-    margin-bottom: -40%;
+    margin-bottom: -25%;
+  }
+}
+@media (min-width: 200px) and (max-width: 700px){
+  .alert-info.new2{
+    font-size: 12px;
+  }
+  .md-text-custom{
+    font-size: 14px;
   }
 }
 .perk-card {
@@ -1264,4 +1272,47 @@ color: white;
  .alumni-next1 {
    visibility: hidden;
  }
+}
+
+
+.alert-info.new2 {
+  vertical-align: middle;
+  background: #f3f8f3;
+  border: none;
+  border-left: 4px solid #5bc0de;
+  border-radius: 0;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
+  margin-top: 7%;
+  margin-bottom: -6%;
+  border-radius: 0 15px 15px 0;
+  margin-left:9%;
+  margin-right:9%;
+}
+
+.alert-info.new2.p-4 {
+  padding: 0.75rem 0.75rem !important;
+  vertical-align: justify;
+}
+
+.alert-info.new2 .fa {
+  color: #5bc0de;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 40px;
+  margin-left:1%;
+  vertical-align: middle;
+}
+
+.alert-info .alert-body {
+  padding-left: 0.75rem;
+  color: rgba(0,0,0,0.5);
+  vertical-align: middle;
+}
+
+.alert-info .alert-header {
+  font-weight: 700;
+  color: #5bc0de;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
 }
