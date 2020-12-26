@@ -2113,7 +2113,7 @@ window.addEventListener('load', function(){
 });
 
 
-var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+var countDownDate = new Date("Dec 28, 2020 15:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -2137,8 +2137,18 @@ var x = setInterval(function() {
   document.getElementById("demoSec").innerHTML = seconds + "<br/><div class = countdown>SEC(s)</div> ";
 
   // If the count down is finished, write some text
+document.getElementById("links").addEventListener("click", function(){
+  if(distance>0)
+    {
+      document.getElementById("links").disabled = true;
+      alert("Meeting not started yet");
+    }
+
+})
+
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "EXPIRED";
+
   }
 }, 1000);

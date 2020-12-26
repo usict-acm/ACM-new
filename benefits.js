@@ -2111,7 +2111,7 @@ window.addEventListener('load', function(){
       breakpoint: 700,
       settings: {
 
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         duration: 1.5
     }

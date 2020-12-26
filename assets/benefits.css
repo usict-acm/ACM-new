@@ -896,14 +896,12 @@ button.swiper-pagination-bullet {
 
 
 /* ******************************************************************ALUMNI************************************************************ */
-
 .images img{
  width: 50%;
  height: 50%;
  border-radius: 100%;
  border-bottom-right-radius: 0;
  transform: rotate(45deg);
- /* border: solid 5px #3106F9; */
  border: solid 5px #0297FF;
 box-shadow: 2px 2px 4px grey;
 
@@ -913,6 +911,10 @@ transition: all .5s ease;
 .images{
  width: 80%;
  text-align: center;
+ margin: auto;
+ /* box-shadow: 2px 2px 4px grey;
+ border-radius: 1rem;
+ padding: 1rem 0; */
 }
 
 .images h4{
@@ -935,7 +937,6 @@ transition: all .5s ease;
 }
 
 .alumnus{
- /* background: url("./images/polymesh2-08-01.jpg"); */
  margin-bottom: 3rem;
  padding: 0;
 }
@@ -943,11 +944,9 @@ transition: all .5s ease;
 .alumn h1{
  margin-bottom: 3rem;
  font-size: 2rem;
- /* color: white; */
 }
 
 .alumn h1 b{
- /* color: #3106F9; */
  color: #0297FF;
  text-decoration:none;
 }
@@ -962,8 +961,11 @@ transition: all .5s ease;
  font-weight: 700!important;
 }
 
-@media only screen and (max-width: 600px) {
- button{
+@media only screen and (max-width: 700px) {
+ .alumni-prev {
+   visibility: hidden;
+ }
+ .alumni-next {
    visibility: hidden;
  }
 }
