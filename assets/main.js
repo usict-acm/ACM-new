@@ -2148,7 +2148,9 @@ document.getElementById("links").addEventListener("click", function(){
 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demo").innerHTML = `<div class="butn">
+    <button id="links" class="team_ded_page" type="button" name="button">JOIN NOW</button>
+  </div>`;
 
   }
 }, 1000);
