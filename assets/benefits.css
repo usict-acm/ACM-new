@@ -1026,7 +1026,7 @@ button.swiper-pagination-bullet {
 }
 
 .pt-card {
-  padding: 8%;
+  padding: 6.5%;
   border-radius: 30px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -1035,31 +1035,42 @@ button.swiper-pagination-bullet {
   margin-bottom: -13%;
 }
 .uheading {
-  font-size: 2rem;
+  font-size: 36px;
 }
 .lheading {
-  font-size: 2rem;
+  font-size: 36px;
 }
 @media (min-width: 200px) and (max-width: 580px) {
   .uheading {
-    font-size: 16px;
+    font-size: 20px;
   }
   .lheading {
-    font-size: 16px;
+    font-size: 20px;
   }
   .acm-logo-navbar {
     margin-left: 10px;
   }
-  .pt-card{
+  .pt-card {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 580px) and (max-width: 780px) {
+  .uheading {
+    font-size: 26px;
+  }
+  .lheading {
+    font-size: 26px;
+  }
+  .pt-card {
     margin-top: 7%;
     margin-bottom: -25%;
   }
 }
-@media (min-width: 200px) and (max-width: 700px){
-  .alert-info.new2{
+@media (min-width: 200px) and (max-width: 700px) {
+  .alert-info.new2 {
     font-size: 12px;
   }
-  .md-text-custom{
+  .md-text-custom {
     font-size: 14px;
   }
 }
@@ -1147,7 +1158,7 @@ button.swiper-pagination-bullet {
 
 /* ********************************************************************WINNERS******************************************************* */
 
-.winnerInnerDiv img{
+.winnerInnerDiv img {
   width: 100%;
   border-radius: 1rem;
   border-bottom-left-radius: 0;
@@ -1155,58 +1166,55 @@ button.swiper-pagination-bullet {
   height: 14rem;
 }
 
-.winners{
+.winners {
   position: relative;
   top: 0;
   left: 0;
   text-align: center;
-    width: 100vw;
+  width: 100vw;
 }
 
-.winners h1{
+.winners h1 {
   margin: 1rem;
   text-align: left;
 }
 
-.winners h1 b{
-
-  color: #0297FF;
+.winners h1 b {
+  color: #0297ff;
   font-weight: 500;
 }
-.winnerInnerDiv{
+.winnerInnerDiv {
   position: relative;
   box-shadow: 0 0 0.3rem 0 BLACK;
   border-radius: 1rem;
   width: 80%;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   padding-bottom: 0.5rem;
-  background: linear-gradient(180deg, #2DD6E0 0%, #0E8E96 100%);;
+  background: linear-gradient(180deg, #2dd6e0 0%, #0e8e96 100%);
   margin: auto;
 }
 
-.winnerInnerDiv:hover{
+.winnerInnerDiv:hover {
   box-shadow: 0 0 1.5rem 0 grey;
-
 }
 
-.winners h2{
-
-text-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
-line-height: 1.2;
-font-size: 1.3rem;
-font-weight: 600;
-color: white;
+.winners h2 {
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+  line-height: 1.2;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
 }
-.winners h4{
+.winners h4 {
   font-size: 1rem;
   color: white;
 }
 
-.winnerDetails{
+.winnerDetails {
   padding-top: 0;
 }
 
-.winners #overlay{
+.winners #overlay {
   position: absolute;
   top: -2rem;
   left: -3rem;
@@ -1214,66 +1222,64 @@ color: white;
   width: 100px;
   z-index: 2;
   opacity: 0;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
-.winnerInnerDiv:hover #overlay{
+.winnerInnerDiv:hover #overlay {
   opacity: 1;
 }
 
-.fa-crown{
-  color: #F9B605;
+.fa-crown {
+  color: #f9b605;
   transform: rotate(-45deg);
 }
 
-.line{
- width: 15%;
- background-color: #0297FF;
- z-index: 1;
+.line {
+  width: 15%;
+  background-color: #0297ff;
+  z-index: 1;
   border-radius: 1rem;
   height: 5px;
   margin: 1rem;
 }
 
-.custom-canvas{
+.custom-canvas {
   position: absolute;
   z-index: -1;
   /* left: 0;
   top: 0; */
-  width: 100vw!important;
-  height: 100%!important;
+  width: 100vw !important;
+  height: 100% !important;
 }
 
-.winBox{
+.winBox {
   padding: 1.5rem 0.7rem;
 }
 
-.glider{
-
+.glider {
   padding: 1rem 0;
 }
-.winnerOut{
+.winnerOut {
   padding-bottom: 3rem;
 }
-.alumni-prev1{
- color: #0297FF!important;
- font-weight: 700!important;
+.alumni-prev1 {
+  color: #0297ff !important;
+  font-weight: 700 !important;
 }
 
-.alumni-next1{
- color: #0297FF!important;
- font-weight: 700!important;
+.alumni-next1 {
+  color: #0297ff !important;
+  font-weight: 700 !important;
 }
 
 @media only screen and (max-width: 600px) {
- .alumni-prev1 {
-   visibility: hidden;
- }
- .alumni-next1 {
-   visibility: hidden;
- }
+  .alumni-prev1 {
+    visibility: hidden;
+  }
+  .alumni-next1 {
+    visibility: hidden;
+  }
 }
-
 
 .alert-info.new2 {
   vertical-align: middle;
@@ -1281,12 +1287,12 @@ color: white;
   border: none;
   border-left: 4px solid #5bc0de;
   border-radius: 0;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   margin-top: 7%;
   margin-bottom: -6%;
   border-radius: 0 15px 15px 0;
-  margin-left:9%;
-  margin-right:9%;
+  margin-left: 9%;
+  margin-right: 9%;
 }
 
 .alert-info.new2.p-4 {
@@ -1299,13 +1305,13 @@ color: white;
   text-align: center;
   vertical-align: middle;
   font-size: 40px;
-  margin-left:1%;
+  margin-left: 1%;
   vertical-align: middle;
 }
 
 .alert-info .alert-body {
-  padding-left: 0.75rem;
-  color: rgba(0,0,0,0.5);
+  /* padding-left: 0.75rem; */
+  color: rgba(0, 0, 0, 0.5);
   vertical-align: middle;
 }
 

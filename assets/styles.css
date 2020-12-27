@@ -1698,6 +1698,7 @@ font-weight: 500;
 .announcement{
   text-align: center;
   margin-bottom: 1rem;
+  background-color: white;
 }
 
 .detai{
