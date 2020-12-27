@@ -1032,6 +1032,7 @@ button.swiper-pagination-bullet {
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: 0 0 3.5px #0297ff;
+  margin-bottom: -13%;
 }
 .uheading {
   font-size: 36px;
@@ -1039,7 +1040,7 @@ button.swiper-pagination-bullet {
 .lheading {
   font-size: 36px;
 }
-@media (min-width: 300px) and (max-width: 580px) {
+@media (min-width: 200px) and (max-width: 580px) {
   .uheading {
     font-size: 20px;
   }
@@ -1049,6 +1050,7 @@ button.swiper-pagination-bullet {
   .acm-logo-navbar {
     margin-left: 10px;
   }
+<<<<<<< HEAD
   .pt-card {
     margin-top: 10px;
   }
@@ -1059,6 +1061,19 @@ button.swiper-pagination-bullet {
   }
   .lheading {
     font-size: 26px;
+=======
+  .pt-card{
+    margin-top: 7%;
+    margin-bottom: -25%;
+  }
+}
+@media (min-width: 200px) and (max-width: 700px){
+  .alert-info.new2{
+    font-size: 12px;
+  }
+  .md-text-custom{
+    font-size: 14px;
+>>>>>>> bad73a1f4ef1a43df3da49acade424f68d8d1b95
   }
 }
 .perk-card {
@@ -1141,4 +1156,176 @@ button.swiper-pagination-bullet {
   .alumni-next {
     visibility: hidden;
   }
+}
+
+/* ********************************************************************WINNERS******************************************************* */
+
+.winnerInnerDiv img{
+  width: 100%;
+  border-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 14rem;
+}
+
+.winners{
+  position: relative;
+  top: 0;
+  left: 0;
+  text-align: center;
+    width: 100vw;
+}
+
+.winners h1{
+  margin: 1rem;
+  text-align: left;
+}
+
+.winners h1 b{
+
+  color: #0297FF;
+  font-weight: 500;
+}
+.winnerInnerDiv{
+  position: relative;
+  box-shadow: 0 0 0.3rem 0 BLACK;
+  border-radius: 1rem;
+  width: 80%;
+  transition: all .5s ease;
+  padding-bottom: 0.5rem;
+  background: linear-gradient(180deg, #2DD6E0 0%, #0E8E96 100%);;
+  margin: auto;
+}
+
+.winnerInnerDiv:hover{
+  box-shadow: 0 0 1.5rem 0 grey;
+
+}
+
+.winners h2{
+
+text-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+line-height: 1.2;
+font-size: 1.3rem;
+font-weight: 600;
+color: white;
+}
+.winners h4{
+  font-size: 1rem;
+  color: white;
+}
+
+.winnerDetails{
+  padding-top: 0;
+}
+
+.winners #overlay{
+  position: absolute;
+  top: -2rem;
+  left: -3rem;
+  height: 80px;
+  width: 100px;
+  z-index: 2;
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+.winnerInnerDiv:hover #overlay{
+  opacity: 1;
+}
+
+.fa-crown{
+  color: #F9B605;
+  transform: rotate(-45deg);
+}
+
+.line{
+ width: 15%;
+ background-color: #0297FF;
+ z-index: 1;
+  border-radius: 1rem;
+  height: 5px;
+  margin: 1rem;
+}
+
+.custom-canvas{
+  position: absolute;
+  z-index: -1;
+  /* left: 0;
+  top: 0; */
+  width: 100vw!important;
+  height: 100%!important;
+}
+
+.winBox{
+  padding: 1.5rem 0.7rem;
+}
+
+.glider{
+
+  padding: 1rem 0;
+}
+.winnerOut{
+  padding-bottom: 3rem;
+}
+.alumni-prev1{
+ color: #0297FF!important;
+ font-weight: 700!important;
+}
+
+.alumni-next1{
+ color: #0297FF!important;
+ font-weight: 700!important;
+}
+
+@media only screen and (max-width: 600px) {
+ .alumni-prev1 {
+   visibility: hidden;
+ }
+ .alumni-next1 {
+   visibility: hidden;
+ }
+}
+
+
+.alert-info.new2 {
+  vertical-align: middle;
+  background: #f3f8f3;
+  border: none;
+  border-left: 4px solid #5bc0de;
+  border-radius: 0;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
+  margin-top: 7%;
+  margin-bottom: -6%;
+  border-radius: 0 15px 15px 0;
+  margin-left:9%;
+  margin-right:9%;
+}
+
+.alert-info.new2.p-4 {
+  padding: 0.75rem 0.75rem !important;
+  vertical-align: justify;
+}
+
+.alert-info.new2 .fa {
+  color: #5bc0de;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 40px;
+  margin-left:1%;
+  vertical-align: middle;
+}
+
+.alert-info .alert-body {
+  padding-left: 0.75rem;
+  color: rgba(0,0,0,0.5);
+  vertical-align: middle;
+}
+
+.alert-info .alert-header {
+  font-weight: 700;
+  color: #5bc0de;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
 }

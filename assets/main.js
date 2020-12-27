@@ -2136,19 +2136,12 @@ var x = setInterval(function() {
   document.getElementById("demoMin").innerHTML = minutes + "<br/><div class = countdown>MIN(s)</div> ";
   document.getElementById("demoSec").innerHTML = seconds + "<br/><div class = countdown>SEC(s)</div> ";
 
-  // If the count down is finished, write some text
-document.getElementById("links").addEventListener("click", function(){
-  if(distance>0)
-    {
-      document.getElementById("links").disabled = true;
-      alert("Meeting not started yet");
-    }
-
-})
 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demo").innerHTML = `<div class="butn">
+    <button id="links" class="team_ded_page" type="button" name="button">JOIN NOW</button>
+  </div>`;
 
   }
 }, 1000);

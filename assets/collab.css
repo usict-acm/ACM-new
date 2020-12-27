@@ -1036,6 +1036,7 @@ button.swiper-pagination-bullet {
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: 0 0 3.5px #0297ff;
+  margin-bottom: -13%;
 }
 .uheading {
   font-size: 36px;
@@ -1463,4 +1464,20 @@ button.swiper-pagination-bullet {
   font-size: 1.5rem;
   font-weight: 500;
   color: #222;
+}
+
+@media (min-width: 200px) and (max-width: 580px) {
+  .uheading {
+    font-size: 16px;
+  }
+  .lheading {
+    font-size: 16px;
+  }
+  .acm-logo-navbar {
+    margin-left: 10px;
+  }
+  .pt-card{
+    margin-top: 7%;
+    margin-bottom: -40%;
+  }
 }
