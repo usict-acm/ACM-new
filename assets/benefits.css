@@ -256,6 +256,7 @@ section {
   line-height: 22px;
   margin-top: 13px;
   padding: 0 21px;
+  text-align: justify;
 }
 
 .service-sec .service-block {
