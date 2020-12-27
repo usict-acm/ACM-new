@@ -1026,7 +1026,7 @@ button.swiper-pagination-bullet {
 }
 
 .pt-card {
-  padding: 8%;
+  padding: 6.5%;
   border-radius: 30px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -1034,20 +1034,31 @@ button.swiper-pagination-bullet {
   box-shadow: 0 0 3.5px #0297ff;
 }
 .uheading {
-  font-size: 2rem;
+  font-size: 36px;
 }
 .lheading {
-  font-size: 2rem;
+  font-size: 36px;
 }
 @media (min-width: 300px) and (max-width: 580px) {
   .uheading {
-    font-size: 16px;
+    font-size: 20px;
   }
   .lheading {
-    font-size: 16px;
+    font-size: 20px;
   }
   .acm-logo-navbar {
     margin-left: 10px;
+  }
+  .pt-card {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 580px) and (max-width: 780px) {
+  .uheading {
+    font-size: 26px;
+  }
+  .lheading {
+    font-size: 26px;
   }
 }
 .perk-card {
