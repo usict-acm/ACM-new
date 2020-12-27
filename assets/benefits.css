@@ -1077,7 +1077,7 @@ button.swiper-pagination-bullet {
 }
 .perk-card {
   width: 18rem !important;
-  height: 15rem;
+  /* height: 15rem; */
   margin: 3%;
   border-radius: 8px;
   text-align: center;
