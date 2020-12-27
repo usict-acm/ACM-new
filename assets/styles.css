@@ -185,7 +185,7 @@ section {
 
 .main-slider .slider-bg-position {
   background-size: cover !important;
-  background-position: center center !important;
+  /* background-position: center center !important; */
 }
 
 .main-slider .swiper-button-prev, .main-slider .swiper-button-next {
