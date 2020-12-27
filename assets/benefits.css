@@ -1310,7 +1310,7 @@ button.swiper-pagination-bullet {
 }
 
 .alert-info .alert-body {
-  padding-left: 0.75rem;
+  /* padding-left: 0.75rem; */
   color: rgba(0, 0, 0, 0.5);
   vertical-align: middle;
 }
