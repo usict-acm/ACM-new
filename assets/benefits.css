@@ -1054,7 +1054,7 @@ button.swiper-pagination-bullet {
     margin-top: 10px;
   }
 }
-@media (min-width: 580px) and (max-width: 780px) {
+@media (min-width: 200px) and (max-width: 780px) {
   .uheading {
     font-size: 26px;
   }
@@ -1063,7 +1063,7 @@ button.swiper-pagination-bullet {
   }
   .pt-card {
     margin-top: 7%;
-    margin-bottom: -25%;
+    margin-bottom: -20%;
   }
 }
 @media (min-width: 200px) and (max-width: 700px) {
