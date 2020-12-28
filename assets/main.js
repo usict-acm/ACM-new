@@ -2140,7 +2140,7 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = `<div class="butn">
-    <button id="links" class="team_ded_page" type="button" name="button">JOIN NOW</button>
+    <button id="links" class="team_ded_page" type="button" name="button"><a href="https://youtu.be/PNsWlQDyjiY">JOIN NOW</a></button>
   </div>`;
 
   }
