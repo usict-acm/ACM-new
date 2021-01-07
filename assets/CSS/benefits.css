@@ -1137,7 +1137,7 @@ button.swiper-pagination-bullet {
   top: 0;
   left: 0;
   text-align: center;
-  width: 100vw;
+  width: 98vw;
 }
 
 .winners h1 {
@@ -1216,7 +1216,7 @@ button.swiper-pagination-bullet {
   z-index: -1;
   /* left: 0;
   top: 0; */
-  width: 100% !important;
+  width: 99% !important;
   height: 100% !important;
 }
 
