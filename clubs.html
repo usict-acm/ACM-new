@@ -39,44 +39,11 @@
 
   <link rel="stylesheet" type="text/css" href="./assets/CSS/glider.css">
   <script src="https://kit.fontawesome.com/d459eda8d9.js" crossorigin="anonymous"></script>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    
-    .aboutclub {
-  float: left;
-  width: 50%;
-  padding: 15px;
-    }
-    .lead {
-  float: left;
-  width: 25%;
-  padding: 5px;
-    }
-    .vicelead {
-  float: left;
-  width: 25%;
-  padding: 5px;
-    }
-    
-    .club{
-        margin-bottom: 50px;
-    }
-    /* Clearfix (clear floats) */
-    .row::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-    </style>
+  <link href="/assets/CSS/clubs.css" rel="stylesheet">
 
 </head>
 
 <body>
-
-    
   <nav id="togglerButton" class="navbar navbar-expand-lg mb-4 top-bar navbar-static-top sps sps--abv">
     <div class="container">
       <button class="navbar-toggler navbar-toggler-right" type="button" onclick="myFunction()" data-toggle="collapse" data-target="#navbarCollapse1" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,8 +57,6 @@
           <li class="nav-item"> <a class="nav-link" href="./collab.html">Sponsors</a> </li>
           <li class="nav-item"> <a class="nav-link" href="./benefits.html">Why Join Us?</a> </li>
           <li class="nav-item active"> <a class="nav-link" href="./clubs.html"><span class="sr-only">(current)</span>Clubs</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#team">Our Team</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#contact">Contact Us</a> </li>
           <li class="nav-item"> <a class="nav-link" href="https://services.acm.org/public/qj/proflevel/proflevel_control.cfm?level=3&country=India&form_type=Student&promo=LEVEL&pay=DD">ACM Registration</a> </li>
         </ul>
       </div>
@@ -136,46 +101,260 @@
     <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
   </div>
 
-<section>
- <div class="container">
-  <div class="row">
-     <div class="club">  
-        <div class="aboutclub">
-            <h2>Appetite</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nisi nec turpis facilisis vestibulum sit amet in neque. Proin turpis justo, dapibus vel urna a, lobortis iaculis odio.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nisi nec turpis facilisis vestibulum sit amet in neque. Proin turpis justo, dapibus vel urna a, lobortis iaculis odio.</p>
-        </div>
-        <div class="lead">
-            <img src="./assets/images/acm1.png" alt="Forest" style="width:100%;height: 40vh;">
-            <h4 style="text-align: center;margin: 0%;line-height: 30px;padding: 0%;">StudentName</h4>
-            <h6 style="text-align: center;">Lead</h6>
-        </div>
-        <div class="vicelead">
-            <img src="./assets/images/acm1.png" alt="Mountains" style="width:100%;height: 40vh;">
-            <h4 style="text-align: center;margin: 0%;line-height: 30px;padding: 0%;">StudentName</h4>
-            <h6 style="text-align: center;">Vice Lead</h6>
-        </div>
-     </div>
+<section style="background: white;">
+  <div class="container">
+    <div class="row pageTitle">
+      <img class="bg-shape" id="bg-shape-1" src="/assets/images/clubs/Background shapes/Bg shape 1.svg">
+      <h1>ACM CLUBS</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
     </div>
-
-    <div class="row">
-        <div class="club">  
-           <div class="lead">
-               <img src="./assets/images/acm1.png" alt="Forest" style="width:100%;height: 40vh;">
-               <h4 style="text-align: center;margin: 0%;line-height: 30px;padding: 0%;">StudentName</h4>
-               <h6 style="text-align: center;">Lead</h6>
-           </div>
-           <div class="vicelead">
-               <img src="./assets/images/acm1.png" alt="Mountains" style="width:100%;height: 40vh;">
-               <h4 style="text-align: center;margin: 0%;line-height: 30px;padding: 0%;">StudentName</h4>
-               <h6 style="text-align: center;">Vice Lead</h6>
-           </div>
-           <div class="aboutclub">
-            <h2>Webify</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nisi nec turpis facilisis vestibulum sit amet in neque. Proin turpis justo, dapibus vel urna a, lobortis iaculis odio.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nisi nec turpis facilisis vestibulum sit amet in neque. Proin turpis justo, dapibus vel urna a, lobortis iaculis odio.</p>
-        </div>
-        </div>
+  </div>
+  <div class="club-container">
+    <img src="/assets/images/clubs/Background shapes/Bg shape 2.svg" class="bg-shape" id="bg-shape-2">
+    <div class="row club-row">
+       <div class="container club">  
+          <div class="aboutclub">
+              <h2>Appetite</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              </p>
+              <p>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+          </div>
+          <div class="lead white">
+              <div class="img">
+                <img src="./assets/images/clubs/Prateek.jpeg">
+              </div>
+              <h4>Student Name</h4>
+              <h6>Lead</h6>
+          </div>
+          <div class="vicelead white">
+              <div class="img">
+                <img src="./assets/images/clubs/Appitie vice lead.jpeg" >
+              </div>
+              <h4>Student Name</h4>
+              <h6>Vice Lead</h6>
+          </div>
        </div>
-</div> 
+    </div>
+  </div>
+  <div class="club-container">
+    <div class="row club-row">
+      <div class="club container">      
+        <img src="assets/images/clubs/Background shapes/Bg shape 3.svg"  class="bg-shape" id="bg-shape-3"  >
+        <!-- <img src="assets/images/clubs/Background shapes/Bg shape 3-white.svg" class="bg-shape" id="bg-shape-3-white"> -->
+         <div class="lead">
+             <div class="img">
+               <img src="./assets/images/clubs/Prateek.jpeg">
+             </div>
+             <h4>Student Name</h4>
+             <h6>Lead</h6>
+         </div>
+         <div class="vicelead white">
+             <div class="img">
+               <img src="./assets/images/clubs/Appitie vice lead.jpeg" >
+             </div>
+             <h4>Student Name</h4>
+             <h6>Vice Lead</h6>
+         </div>
+         <div class="aboutclub aboutclub-right white">
+          <h2>Webify</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.’
+          </p>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="club-container">
+  
+    <div class="row club-row">
+       <div class="container club">  
+        <img src="/assets/images/clubs/Background shapes/Bg shape 4.svg" class="bg-shape" id="bg-shape-4">
+          <div class="aboutclub">
+              <h2>Appetite</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              </p>
+              <p>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+          </div>
+          <div class="lead">
+              <div class="img">
+                <img src="./assets/images/clubs/Prateek.jpeg">
+              </div>
+              <h4>Student Name</h4>
+              <h6>Lead</h6>
+          </div>
+          <div class="vicelead">
+              <div class="img">
+                <img src="./assets/images/clubs/Appitie vice lead.jpeg" >
+              </div>
+              <h4>Student Name</h4>
+              <h6>Vice Lead</h6>
+          </div>
+       </div>
+    </div>
+  </div>
+  <div class="club-container">
+    
+    <div class="row club-row">
+      <div class="club container">      
+         <div class="lead white">
+             <div class="img">
+               <img src="./assets/images/clubs/Prateek.jpeg">
+             </div>
+             <h4>Student Name</h4>
+             <h6>Lead</h6>
+         </div>
+         <div class="vicelead white">
+             <div class="img">
+               <img src="./assets/images/clubs/Appitie vice lead.jpeg" >
+             </div>
+             <h4>Student Name</h4>
+             <h6>Vice Lead</h6>
+         </div>
+         <div class="aboutclub aboutclub-right">
+          <h2>Webify</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.’
+          </p>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="club-container">
+    <div class="bg-shape" id="bg-shape-6"></div> 
+    <img src="/assets/images/clubs/Background shapes/Bg shape 7.svg" class="bg-shape" id="bg-shape-7">
+    <img src="/assets/images/clubs/Background shapes/Bg shape 5.svg" class="bg-shape" id="bg-shape-5">
+    <div class="row club-row">
+       <div class="container club"> 
+
+          <div class="aboutclub white">
+              <h2>Appetite</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              </p>
+              <p>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+          </div>
+          <div class="lead white">
+              <div class="img">
+                <img src="./assets/images/clubs/Prateek.jpeg">
+              </div>
+              <h4>Student Name</h4>
+              <h6>Lead</h6>
+          </div>
+          <div class="vicelead white">
+              <div class="img">
+                <img src="./assets/images/clubs/Appitie vice lead.jpeg" >
+              </div>
+              <h4>Student Name</h4>
+              <h6>Vice Lead</h6>
+          </div>
+       </div>
+    </div>
+  </div>
+  <div class="club-container">
+    <div class="row club-row">
+      <div class="club container">      
+         <div class="lead">
+             <div class="img">
+               <img src="./assets/images/clubs/Prateek.jpeg">
+             </div>
+             <h4>Student Name</h4>
+             <h6>Lead</h6>
+         </div>
+         <div class="vicelead">
+             <div class="img">
+               <img src="./assets/images/clubs/Appitie vice lead.jpeg" >
+             </div>
+             <h4>Student Name</h4>
+             <h6>Vice Lead</h6>
+         </div>
+         <div class="aboutclub aboutclub-right">
+          <h2>Webify</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.’
+          </p>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="club-container">
+    <img src="/assets/images/clubs/Background shapes/Bg shape 9.svg" class="bg-shape" id="bg-shape-9">
+    <div class="row club-row">
+       <div class="container club"> 
+        <img src="/assets/images/clubs/Background shapes/Bg shape 8.svg" class="bg-shape" id="bg-shape-8">
+          <div class="aboutclub">
+              <h2>Appetite</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              </p>
+              <p>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+          </div>
+          <div class="lead">
+              <div class="img">
+                <img src="./assets/images/clubs/Prateek.jpeg">
+              </div>
+              <h4>Student Name</h4>
+              <h6>Lead</h6>
+          </div>
+          <div class="vicelead">
+              <div class="img">
+                <img src="./assets/images/clubs/Appitie vice lead.jpeg" >
+              </div>
+              <h4>Student Name</h4>
+              <h6>Vice Lead</h6>
+          </div>
+       </div>
+    </div>
+  </div>
+  <div class="club-container">
+    <div class="row club-row">
+      <div class="club container">      
+         <div class="lead">
+             <div class="img">
+               <img src="./assets/images/clubs/Prateek.jpeg">
+             </div>
+             <h4>Student Name</h4>
+             <h6>Lead</h6>
+         </div>
+         <div class="vicelead">
+             <div class="img">
+               <img src="./assets/images/clubs/Appitie vice lead.jpeg" >
+             </div>
+             <h4>Student Name</h4>
+             <h6>Vice Lead</h6>
+         </div>
+         <div class="aboutclub aboutclub-right">
+          <h2>Webify</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.’
+          </p>
+      </div>
+      </div>
+    </div>
+    <div class="bg-shape" id="bg-shape-10"></div>
+  </div>
+
 </section>      
 
 
