@@ -893,6 +893,376 @@ ul{
   background-repeat: no-repeat
 }
 
+
+.pt-card {
+  padding: 6.5%;
+  border-radius: 30px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 0 3.5px #0297ff;
+  margin-bottom: -13%;
+}
+
+.uheading {
+  font-size: 36px;
+}
+
+.lheading {
+  font-size: 36px;
+}
+
+@media (min-width: 200px) and (max-width: 580px) {
+  .uheading {
+    font-size: 20px;
+  }
+
+  .lheading {
+    font-size: 20px;
+  }
+
+  .acm-logo-navbar {
+    margin-left: 10px;
+  }
+
+  .pt-card {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 780px) {
+  .uheading {
+    font-size: 26px;
+  }
+
+  .lheading {
+    font-size: 26px;
+  }
+
+  .pt-card {
+    margin-top: 7%;
+    margin-bottom: -20%;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 700px) {
+  .alert-info.new2 {
+    font-size: 12px;
+  }
+
+  .md-text-custom {
+    font-size: 14px;
+  }
+}
+
+.perk-card {
+  width: 18rem !important;
+  /* height: 15rem; */
+  margin: 3%;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* ******************************************************************ALUMNI************************************************************ */
+.images img {
+  width: 50%;
+  height: 50%;
+  border-radius: 100%;
+  border-bottom-right-radius: 0;
+  transform: rotate(45deg);
+  border: solid 5px #0297ff;
+  box-shadow: 2px 2px 4px grey;
+  transition: all 0.5s ease;
+}
+
+.images {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  /* box-shadow: 2px 2px 4px grey;
+ border-radius: 1rem;
+ padding: 1rem 0; */
+}
+
+.images h4 {
+  margin-top: 2.5rem;
+  color: #0297ff;
+  text-shadow: 1px 1px 2px grey;
+  font-size: 1.4rem;
+}
+
+.images h5 {
+  font-size: 1rem;
+}
+
+.line {
+  width: 15%;
+  /* color: #3106F9; */
+  background-color: #0297ff;
+  height: 5px;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  margin-top: -2rem;
+}
+
+.alumnus {
+  margin-bottom: 3rem;
+  padding: 0;
+}
+
+.alumn h1 {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+
+.alumn h1 b {
+  color: #0297ff;
+  text-decoration: none;
+}
+
+.alumni-prev {
+  color: #0297ff !important;
+  font-weight: 700 !important;
+}
+
+.alumni-next {
+  color: #0297ff !important;
+  font-weight: 700 !important;
+}
+
+@media only screen and (max-width: 700px) {
+  .alumni-prev {
+    visibility: hidden;
+  }
+
+  .alumni-next {
+    visibility: hidden;
+  }
+}
+
+/* ********************************************************************WINNERS******************************************************* */
+.winnerInnerDiv img {
+  width: 100%;
+  border-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 14rem;
+}
+
+.winners {
+  position: relative;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 98vw;
+}
+
+.winners h1 {
+  margin: 1rem;
+  text-align: left;
+}
+
+.winners h1 b {
+  color: #0297ff;
+  font-weight: 500;
+}
+
+.winnerInnerDiv {
+  position: relative;
+  box-shadow: 0 0 0.3rem 0 BLACK;
+  border-radius: 1rem;
+  width: 80%;
+  transition: all 0.5s ease;
+  padding-bottom: 0.5rem;
+  background: linear-gradient(180deg, #2dd6e0 0%, #0e8e96 100%);
+  margin: auto;
+}
+
+.winnerInnerDiv:hover {
+  box-shadow: 0 0 1.5rem 0 grey;
+}
+
+.winners h2 {
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+  line-height: 1.2;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+}
+
+.winners h4 {
+  font-size: 1rem;
+  color: white;
+}
+
+.winnerDetails {
+  padding-top: 0;
+}
+
+.winners #overlay {
+  position: absolute;
+  top: -2rem;
+  left: -3rem;
+  height: 80px;
+  width: 100px;
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.winnerInnerDiv:hover #overlay {
+  opacity: 1;
+}
+
+.fa-crown {
+  color: #f9b605;
+  transform: rotate(-45deg);
+}
+
+.line {
+  width: 15%;
+  background-color: #0297ff;
+  z-index: 1;
+  border-radius: 1rem;
+  height: 5px;
+  margin: 1rem;
+}
+
+.custom-canvas {
+  position: absolute;
+  z-index: -1;
+  /* left: 0;
+  top: 0; */
+  width: 99% !important;
+  height: 80% !important;
+}
+
+.winBox {
+  padding: 1.5rem 0.7rem;
+}
+
+.glider {
+  padding: 1rem 0;
+}
+
+.winnerOut {
+  padding-bottom: 3rem;
+}
+
+.alumni-prev1 {
+  color: #0297ff !important;
+  font-weight: 700 !important;
+}
+
+.alumni-next1 {
+  color: #0297ff !important;
+  font-weight: 700 !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .alumni-prev1 {
+    visibility: hidden;
+  }
+
+  .alumni-next1 {
+    visibility: hidden;
+  }
+}
+
+.alert-info.new2 {
+  vertical-align: middle;
+  background: #f3f8f3;
+  border: none;
+  border-left: 4px solid #5bc0de;
+  border-radius: 0;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 7%;
+  margin-bottom: -6%;
+  border-radius: 0 15px 15px 0;
+  margin-left: 9%;
+  margin-right: 9%;
+}
+
+.alert-info.new2.p-4 {
+  padding: 0.75rem 0.75rem !important;
+  vertical-align: justify;
+}
+
+.alert-info.new2 .fa {
+  color: #5bc0de;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 40px;
+  margin-left: 1%;
+  vertical-align: middle;
+}
+
+.alert-info .alert-body {
+  /* padding-left: 0.75rem; */
+  color: rgba(0, 0, 0, 0.5);
+  vertical-align: middle;
+}
+
+.alert-info .alert-header {
+  font-weight: 700;
+  color: #5bc0de;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+}
+/* ***************************************************Registration form************************************************** */
+
+.registration-form-div {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 4px 4px 26px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  display: block;
+  text-align: center;
+}
+.form-input-boxes-manual{
+  box-shadow: 0.5px 0.7px 2.5px #0297ff;
+}
+.registration-heading {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  margin: 20px auto 40px auto;
+
+  color: #0297ff;
+}
+.blue-hr {
+  margin: 0px !important;
+  border-style: none;
+  border-top: 6px solid #0297ff !important;
+  border-radius: 8px;
+  width: 100%;
+}
+.registration-img {
+  width: 100%;
+  margin-top: 20%;
+}
+.registration-inner-div {
+  width: 80%;
+  margin: 20px auto;
+}
+.registration-button {
+  padding: 8px 30px;
+  color: white;
+  background: #0297ff;
+  border-radius: 8px;
+  margin: 40px auto 0 auto;
+}
+.club{
+  margin: 10px;
+  text-align: left;
+}
+.label-course{
+  margin-left: 5px;
+}
 .m-t-20 {
   margin-top: 20px !important; }
 
@@ -1389,382 +1759,4 @@ select[multiple] {
   100% {
     transform: rotate(360deg)
   }
-}
-.form-input-boxes-manual{
-  box-shadow: 0.5px 0.7px 2.5px #4169E1;
-}
-
-.pt-card {
-  padding: 6.5%;
-  border-radius: 30px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  box-shadow: 0 0 3.5px #0297ff;
-  margin-bottom: -13%;
-}
-
-.uheading {
-  font-size: 36px;
-}
-
-.lheading {
-  font-size: 36px;
-}
-
-@media (min-width: 200px) and (max-width: 580px) {
-  .uheading {
-    font-size: 20px;
-  }
-
-  .lheading {
-    font-size: 20px;
-  }
-
-  .acm-logo-navbar {
-    margin-left: 10px;
-  }
-
-  .pt-card {
-    margin-top: 10px;
-  }
-}
-
-@media (min-width: 200px) and (max-width: 780px) {
-  .uheading {
-    font-size: 26px;
-  }
-
-  .lheading {
-    font-size: 26px;
-  }
-
-  .pt-card {
-    margin-top: 7%;
-    margin-bottom: -20%;
-  }
-}
-
-@media (min-width: 200px) and (max-width: 700px) {
-  .alert-info.new2 {
-    font-size: 12px;
-  }
-
-  .md-text-custom {
-    font-size: 14px;
-  }
-}
-
-.perk-card {
-  width: 18rem !important;
-  /* height: 15rem; */
-  margin: 3%;
-  border-radius: 8px;
-  text-align: center;
-}
-
-/* ******************************************************************ALUMNI************************************************************ */
-.images img {
-  width: 50%;
-  height: 50%;
-  border-radius: 100%;
-  border-bottom-right-radius: 0;
-  transform: rotate(45deg);
-  border: solid 5px #0297ff;
-  box-shadow: 2px 2px 4px grey;
-  transition: all 0.5s ease;
-}
-
-.images {
-  width: 80%;
-  text-align: center;
-  margin: auto;
-  /* box-shadow: 2px 2px 4px grey;
- border-radius: 1rem;
- padding: 1rem 0; */
-}
-
-.images h4 {
-  margin-top: 2.5rem;
-  color: #0297ff;
-  text-shadow: 1px 1px 2px grey;
-  font-size: 1.4rem;
-}
-
-.images h5 {
-  font-size: 1rem;
-}
-
-.line {
-  width: 15%;
-  /* color: #3106F9; */
-  background-color: #0297ff;
-  height: 5px;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-  margin-top: -2rem;
-}
-
-.alumnus {
-  margin-bottom: 3rem;
-  padding: 0;
-}
-
-.alumn h1 {
-  margin-bottom: 3rem;
-  font-size: 2rem;
-}
-
-.alumn h1 b {
-  color: #0297ff;
-  text-decoration: none;
-}
-
-.alumni-prev {
-  color: #0297ff !important;
-  font-weight: 700 !important;
-}
-
-.alumni-next {
-  color: #0297ff !important;
-  font-weight: 700 !important;
-}
-
-@media only screen and (max-width: 700px) {
-  .alumni-prev {
-    visibility: hidden;
-  }
-
-  .alumni-next {
-    visibility: hidden;
-  }
-}
-
-/* ********************************************************************WINNERS******************************************************* */
-.winnerInnerDiv img {
-  width: 100%;
-  border-radius: 1rem;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  height: 14rem;
-}
-
-.winners {
-  position: relative;
-  top: 0;
-  left: 0;
-  text-align: center;
-  width: 98vw;
-}
-
-.winners h1 {
-  margin: 1rem;
-  text-align: left;
-}
-
-.winners h1 b {
-  color: #0297ff;
-  font-weight: 500;
-}
-
-.winnerInnerDiv {
-  position: relative;
-  box-shadow: 0 0 0.3rem 0 BLACK;
-  border-radius: 1rem;
-  width: 80%;
-  transition: all 0.5s ease;
-  padding-bottom: 0.5rem;
-  background: linear-gradient(180deg, #2dd6e0 0%, #0e8e96 100%);
-  margin: auto;
-}
-
-.winnerInnerDiv:hover {
-  box-shadow: 0 0 1.5rem 0 grey;
-}
-
-.winners h2 {
-  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
-  line-height: 1.2;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: white;
-}
-
-.winners h4 {
-  font-size: 1rem;
-  color: white;
-}
-
-.winnerDetails {
-  padding-top: 0;
-}
-
-.winners #overlay {
-  position: absolute;
-  top: -2rem;
-  left: -3rem;
-  height: 80px;
-  width: 100px;
-  z-index: 2;
-  opacity: 0;
-  transition: all 0.5s ease;
-}
-
-.winnerInnerDiv:hover #overlay {
-  opacity: 1;
-}
-
-.fa-crown {
-  color: #f9b605;
-  transform: rotate(-45deg);
-}
-
-.line {
-  width: 15%;
-  background-color: #0297ff;
-  z-index: 1;
-  border-radius: 1rem;
-  height: 5px;
-  margin: 1rem;
-}
-
-.custom-canvas {
-  position: absolute;
-  z-index: -1;
-  /* left: 0;
-  top: 0; */
-  width: 99% !important;
-  height: 80% !important;
-}
-
-.winBox {
-  padding: 1.5rem 0.7rem;
-}
-
-.glider {
-  padding: 1rem 0;
-}
-
-.winnerOut {
-  padding-bottom: 3rem;
-}
-
-.alumni-prev1 {
-  color: #0297ff !important;
-  font-weight: 700 !important;
-}
-
-.alumni-next1 {
-  color: #0297ff !important;
-  font-weight: 700 !important;
-}
-
-@media only screen and (max-width: 600px) {
-  .alumni-prev1 {
-    visibility: hidden;
-  }
-
-  .alumni-next1 {
-    visibility: hidden;
-  }
-}
-
-.alert-info.new2 {
-  vertical-align: middle;
-  background: #f3f8f3;
-  border: none;
-  border-left: 4px solid #5bc0de;
-  border-radius: 0;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-  margin-top: 7%;
-  margin-bottom: -6%;
-  border-radius: 0 15px 15px 0;
-  margin-left: 9%;
-  margin-right: 9%;
-}
-
-.alert-info.new2.p-4 {
-  padding: 0.75rem 0.75rem !important;
-  vertical-align: justify;
-}
-
-.alert-info.new2 .fa {
-  color: #5bc0de;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 40px;
-  margin-left: 1%;
-  vertical-align: middle;
-}
-
-.alert-info .alert-body {
-  /* padding-left: 0.75rem; */
-  color: rgba(0, 0, 0, 0.5);
-  vertical-align: middle;
-}
-
-.alert-info .alert-header {
-  font-weight: 700;
-  color: #5bc0de;
-  padding: 0;
-  margin: 0;
-  vertical-align: middle;
-}
-/* ***************************************************Registration form************************************************** */
-
-.registration-form-div {
-  width: 100%;
-  background: #ffffff;
-  box-shadow: 4px 4px 26px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  display: block;
-  text-align: center;
-}
-.registration-heading {
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 26px;
-  text-align: center;
-  margin: 20px auto 40px auto;
-
-  color: #0e32ae;
-}
-.blue-hr {
-  margin: 0px !important;
-  border-style: none;
-  border-top: 6px solid #0e32ae !important;
-  border-radius: 8px;
-  width: 100%;
-}
-.registration-img {
-  width: 100%;
-  margin-top: 18%;
-}
-.registration-inner-div {
-  width: 80%;
-  margin: 20px auto;
-}
-.input {
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid #0e32ae;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-
-  color: #d0d0d0;
-}
-.registration-button {
-  padding: 8px 30px;
-  color: white;
-  background: #0e32ae;
-  border-radius: 8px;
-  margin: 40px auto 0 auto;
 }
