@@ -15,8 +15,133 @@
     max-width: 800px;
     position: relative;
     color: white;
+    margin-top: 120px;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+  }
+
+
+  .navbar.top-bar {
+    border-radius: 0;
+    padding: 16px 0;
+    z-index: 16;
+  }
+  
+  .navbar-toggler {
+    border: 1px solid #fff;
+    color: #000;
+    position: absolute;
+    right: 21px;
+  }
+  
+  .sps {
+    padding: 1em 0.5em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.25s ease;
+    width: 100%;
+  }
+  
+  .sps--abv {
+    background-color: white;
+    color: #000;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .sps--blw {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .top-bar a.navbar-brand {
+    color: #000;
+    font-size: 26px;
+    font-weight: 800;
+    padding: 5px 0 0 10px;
+    text-transform: uppercase;
+  }
+  
+  .sps--blw.top-bar a.navbar-brand {
+    color: #000;
+  }
+  
+  .top-bar a.navbar-brand span {
+    color: #0297ff;
+  }
+  
+  .top-bar .nav-link {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 18px !important;
+  }
+  
+  .sps--blw.top-bar .nav-link {
+    color: #000;
+  }
+  
+  .top-bar .navbar-nav .nav-item {
+    margin: 0;
+  }
+  
+  .top-bar .nav-link:hover,
+  .top-bar .nav-item.active a {
+    color: #000;
+    border-bottom: 2px solid #fff;
+    border-radius: 0;
+  }
+  
+  .sps--blw.top-bar .nav-link:hover,
+  .sps--blw.top-bar .nav-item.active a {
+    color: #0297ff;
+    border-bottom: none;
+    border-radius: 0;
+  }
+  
+  .pt-card {
+    padding: 8%;
+    border-radius: 30px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 0 3.5px #0297ff;
+    margin-bottom: -13%;
+  }
+  .uheading {
+    font-size: 36px;
+  }
+  .lheading {
+    font-size: 36px;
+  }
+  @media (min-width: 300px) and (max-width: 580px) {
+    .uheading {
+      font-size: 20px;
+    }
+    .lheading {
+      font-size: 20px;
+    }
+    .acm-logo-navbar {
+      margin-left: 10px;
+    }
+    .pt-card {
+      margin-top: 10px;
+    }
+  }
+  @media (min-width: 580px) and (max-width: 780px) {
+    .uheading {
+      font-size: 26px;
+    }
+    .lheading {
+      font-size: 26px;
+    }
+  }
+
+  
 .pageTitle h1
 {
     font-size: 100px;
@@ -87,11 +212,15 @@
   color: #0297ff;
   font-weight: bold;
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .aboutclub p {
-    font-size: 18px;
+    font-size: 16px;
     color: #595959;
+    line-height: initial;
+    text-align: justify;
+    font-weight: 700;
 }
 
 .lead img,
@@ -103,6 +232,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 .lead .img,
@@ -121,7 +251,7 @@
     text-align: center;
     font-family: "Lato";
     font-weight: bold;
-    color:#9A9A9A;
+    color:white;
 }
 
 .club h6 
@@ -140,9 +270,13 @@
 
 .aboutclub.white p{
     color: white;
-    opacity: 0.89;
+    opacity: 1;
 }
 
+.lead h4,
+.vicelead h4{
+    color: #0297FF
+}
 .lead.white h4,
 .vicelead.white h4{
     color: white;
@@ -150,8 +284,7 @@
 
 .lead.white h6,
 .vicelead.white h6{
-    color: #f6f6f6;
-    opacity: 0.81;
+    color: white;
 }
 
 
@@ -160,12 +293,12 @@
 .bg-shape
 {
     position: absolute;
-
     z-index: 9;
 }
 
 #bg-shape-1
 {
+    opacity: 0.8;
     left: -493px;
     top: -144px;
 }
@@ -199,7 +332,7 @@
     background-color: #0297FF;
     height: 226%;
     width: 100%;
-    top: -77%;
+    top: -73%;
     clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75%);
 }
 #bg-shape-7{
@@ -210,7 +343,7 @@
     left: -5%;
 }
 #bg-shape-9{
-    left: -255px;
+    left: -300px;
     top: 212px;
 }
 
@@ -220,6 +353,12 @@
     height: 150px;
     width: 100%;
     bottom: 0;
-    clip-path: polygon(100% 0, 100% 0%, 100% 100%, 60% 100%);
+    clip-path: polygon(100% 20%, 100% 0%, 100% 100%, 60% 100%);
     margin-bottom: -40px;
+}
+
+
+#bg-shape-11{
+    right: 0px;
+    top: -200px;
 }
