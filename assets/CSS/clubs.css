@@ -6,6 +6,10 @@
   font-family: "Lato";
 }
 
+body{
+  overflow-x: hidden;
+}
+
 .club-container {
   position: relative;
 }
