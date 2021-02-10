@@ -344,7 +344,7 @@ a {
   top: -200px;
 }
 
-@media (min-width: 300px) and (max-width: 786px) {
+@media (min-width: 250px) and (max-width: 786px) {
   .club h4 {
     color: black;
   }
@@ -390,4 +390,35 @@ a {
     color: black;
   }
 
+  #bg-shape-6, #bg-shape-4, #bg-shape-8{
+    display: none;
+  }
+
+  #bg-shape-3{
+    margin-left: -10%;
+  }
+
+
+}
+
+@media (min-width: 250px) and (max-width: 420px){
+  #bg-shape-1{
+    margin-left: -190%;
+  }
+}
+
+@media (min-width: 421px) and (max-width: 786px){
+  #bg-shape-1{
+    margin-left: -120%;
+  }
+
+  #bg-shape-3{
+    margin-left: -10%;
+  }
+}
+
+@media (min-width: 787px) and (max-width: 1000px){
+  #bg-shape-1{
+    margin-left: -25%;
+  }
 }
