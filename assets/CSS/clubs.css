@@ -6,6 +6,10 @@
   font-family: "Lato";
 }
 
+body{
+  overflow-x: hidden;
+}
+
 .club-container {
   position: relative;
 }
@@ -338,4 +342,52 @@ a {
 #bg-shape-11 {
   right: 0px;
   top: -200px;
+}
+
+@media (min-width: 300px) and (max-width: 786px) {
+  .club h4 {
+    color: black;
+  }
+
+  .club h6 {
+    color: black;
+  }
+
+  .aboutclub.white h2 {
+    color: black;
+  }
+
+  .aboutclub.white p {
+    color: black;
+  }
+
+  .lead h4,
+  .vicelead h4 {
+    color: black;
+  }
+  .lead.white h4,
+  .vicelead.white h4 {
+    color: black;
+  }
+
+  .lead.white h6,
+  .vicelead.white h6 {
+    color: black;
+  }
+  .aboutclub h2 {
+    color: black;
+  }
+
+  .aboutclub p {
+    color: black;
+  }
+
+  .pageTitle h1 {
+    color: black;
+  }
+
+  .pageTitle p {
+    color: black;
+  }
+
 }
