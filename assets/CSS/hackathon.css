@@ -1,0 +1,118 @@
+/* ----------theme hackathon page ---------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+
+.themeHackhathon {
+  background-color: black;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#themeHackhathonHeader {
+  color: white;
+  font-size: 6.5rem;
+  padding: 5rem;
+  text-align: center;
+}
+
+.themeBox {
+  display: inline-block;
+  text-align: center;
+  margin-left: 90px;
+}
+
+.themeBoxContent {
+  border: white solid 3.5px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  width: 65%;
+  margin: 40px;
+  padding: 30px;
+}
+
+.themeBoxContentHeader {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 3.5rem;
+  margin-top: 20px;
+}
+
+.themeBoxContentImage {
+  width: 13rem;
+  height: 10rem;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.themeBoxContentDescription {
+  font-size: 1.8rem;
+  line-height: 1.75;
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: left;
+}
+
+@media (min-device-width: 769px) and (max-device-width: 1439px) {
+  #themeHackhathonHeader {
+    font-size: 7rem;
+    text-align: center;
+  }
+
+  .themeBox {
+    margin-left: -10px;
+  }
+
+  .themeBoxContent {
+    width: 94%;
+  }
+
+  .themeBoxContentHeader {
+    font-size: 5.2rem;
+    margin-top: 20px;
+  }
+
+  .themeBoxContentImage {
+    width: 14rem;
+    height: 12rem;
+  }
+
+  .themeBoxContentDescription {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-device-width: 1440px) {
+  #themeHackhathonHeader {
+    font-size: 7rem;
+    text-align: center;
+  }
+
+  .themeBox {
+    margin-left: -15px;
+  }
+
+  .col-lg-4 {
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+
+  .themeBoxRow {
+    width: 100%;
+  }
+
+  .themeBoxContent {
+    width: 100%;
+  }
+
+  .themeBoxContentHeader {
+    font-size: 4.8rem;
+    margin-top: 20px;
+  }
+
+  .themeBoxContentImage {
+    width: 14rem;
+    height: 12rem;
+  }
+
+  .themeBoxContentDescription {
+    font-size: 2.1rem;
+  }
+}
