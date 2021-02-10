@@ -180,8 +180,8 @@ section {
 }
 
 .flip-card {
-  width: 250px !important;
-  height: 280px;
+  width: 260px !important;
+  height: 300px;
   margin: 3% 1%;
   border-radius: 8px;
   text-align: center;
@@ -590,4 +590,18 @@ section {
     margin-top: 7%;
     margin-bottom: -40%;
   }
+}
+
+.fab {
+  padding: 10px;
+  font-size: 40px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 50px 2px;
+  border-radius: 50%;
+}
+
+.fab:hover {
+    opacity: 0.7;
 }
