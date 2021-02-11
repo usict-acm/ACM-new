@@ -51,6 +51,7 @@ canvas{
   margin-left: 10%;
   width:80%;
   margin-right: 10%;
+  margin-top: 7%;
 }
 
 .hero-left-div{
@@ -58,8 +59,30 @@ canvas{
   font-style: normal;
   font-weight: bold;
   color: #70FF00;
-  margin-top: 10%;
   font-size: 6rem;
+}
+
+.hero-right-div{
+  margin-top: 50px;
+  font-family: Ruda;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFFFFF;
+
+}
+
+.hero-register-button{
+  background: #000000;
+  border: 3px solid #70FF00;
+  box-sizing: border-box;
+  color: white;
+  margin: 10px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 2rem;
 }
 
 
@@ -309,5 +332,5 @@ canvas{
   padding: 10%;
 }
 /* @media (min-width: 300px) and (max-width: 580px) {
-  
+
 } */
