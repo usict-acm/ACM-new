@@ -37,7 +37,7 @@ body {
 canvas {
   position: absolute;
   height: 100vh;
-  width: 100vw;
+  width: 98.5vw;
   top: 0;
   left: 0;
   z-index: -1;
@@ -45,7 +45,7 @@ canvas {
 
 .hero-hackathon {
   height: 100vh;
-  width: 100vw;
+  width: 98.5vw;
 }
 
 .hero-container {
@@ -92,6 +92,16 @@ canvas {
 
   .hide-below-lg {
     display: none;
+  }
+
+  .hero-right-div{
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero-register-button{
+    font-size: 1.2rem;
   }
 }
 
@@ -165,9 +175,9 @@ canvas {
     margin-left: 5px;
   }
 
-  .col-sm-12 {
+  /* .col-sm-12 {
     padding-right: 0;
-  }
+  } */
 
   .themeBoxContent {
     margin: 30px;
@@ -201,12 +211,12 @@ canvas {
   .themeBox {
     margin-left: -7px;
   }
-
+/*
   .col-lg-4,
   .col-md-6 {
     padding-right: 0;
     padding-left: 0;
-  }
+  } */
 
   .themeBoxContent {
     width: 90%;
@@ -246,10 +256,10 @@ canvas {
     display: inline-block;
   }
 
-  .col-lg-4 {
+  /* .col-lg-4 {
     padding-right: 30px;
     padding-left: 30px;
-  }
+  } */
 
   .themeBoxRow {
     width: 60%;
@@ -347,11 +357,11 @@ canvas {
   font-family: "Source Sans Pro", sans-serif;
   margin-top: 20px;
 }
-
+/*
 .col-lg-3 {
   padding-left: 0;
   padding-right: 0;
-}
+} */
 
 @media (max-device-width: 767px) {
   .otherPerksContentImage {
@@ -446,9 +456,9 @@ canvas {
   text-align: left;
   font-family: "Source Sans Pro", sans-serif;
 }
-.col-lg-3 .col-md-3 .col-sm-6 .col-6 {
+/* .col-lg-3 .col-md-3 .col-sm-6 .col-6 {
   padding: 3%;
-}
+} */
 .orgainisingTeamCard {
   margin: 3% 0%;
 }
