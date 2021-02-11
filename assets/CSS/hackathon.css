@@ -1,11 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@500&display=swap');
 
-/* ----------Hero hackathon page ---------- */
+
+body{
+  background-color: black;
+}
+
+/* ----------NavBar hackathon page ---------- */
 
 .nav{
   background-color: black;
+  font-size: 1.1rem;
 }
 
 .nav-link{
@@ -16,6 +23,46 @@
 .nav-link:hover{
   color: red;
 }
+
+.nav-item{
+  padding-left: 25px;
+  padding-right: 10px;
+}
+
+
+
+/* -----------Hero ------------*/
+
+canvas{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero-hackathon{
+  height: 100vh;
+  width: 100vw;
+}
+
+.hero-container{
+  margin-left: 10%;
+  width:80%;
+  margin-right: 10%;
+}
+
+.hero-left-div{
+  font-family: 'Ruda', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  color: #70FF00;
+  margin-top: 10%;
+  font-size: 6rem;
+}
+
+
 
 /* ----------theme hackathon page ---------- */
 .themeHackhathon {
