@@ -9,7 +9,7 @@
 
 #themeHackhathonHeader {
   color: white;
-  font-size: 6.5rem;
+  font-size: 8rem;
   padding: 5rem;
   text-align: center;
 }
@@ -17,42 +17,43 @@
 .themeBox {
   display: inline-block;
   text-align: center;
-  margin-left: 90px;
+  margin-left: 50px;
 }
 
 .themeBoxContent {
-  border: white solid 3.5px;
+  border: white solid 5px;
   border-radius: 10px;
   background-color: black;
   color: white;
-  width: 65%;
+  width: 80%;
   margin: 40px;
   padding: 30px;
 }
 
 .themeBoxContentHeader {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 3.5rem;
-  margin-top: 20px;
+  font-size: 4rem;
+  margin-top: 30px;
 }
 
 .themeBoxContentImage {
-  width: 13rem;
-  height: 10rem;
+  width: 40rem;
+  height: 34rem;
   border-radius: 50%;
   text-align: center;
 }
 
 .themeBoxContentDescription {
-  font-size: 1.8rem;
-  line-height: 1.75;
+  font-size: 2.1rem;
+  line-height: 1.7;
   font-family: "Source Sans Pro", sans-serif;
   text-align: left;
+  margin-top: 30px;
 }
 
 @media (min-device-width: 769px) and (max-device-width: 1439px) {
   #themeHackhathonHeader {
-    font-size: 7rem;
+    font-size: 8rem;
     text-align: center;
   }
 
@@ -61,27 +62,29 @@
   }
 
   .themeBoxContent {
-    width: 94%;
+    width: 90%;
+    border: white solid 5px;
   }
 
   .themeBoxContentHeader {
-    font-size: 5.2rem;
-    margin-top: 20px;
+    font-size: 5.5rem;
+    margin-top: 30px;
   }
 
   .themeBoxContentImage {
-    width: 14rem;
-    height: 12rem;
+    width: 37rem;
+    height: 33rem;
   }
 
   .themeBoxContentDescription {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
+    margin-top: 30px;
   }
 }
 
 @media (min-device-width: 1440px) {
   #themeHackhathonHeader {
-    font-size: 7rem;
+    font-size: 9rem;
     text-align: center;
   }
 
@@ -100,19 +103,22 @@
 
   .themeBoxContent {
     width: 100%;
+    border: white solid 5px;
   }
 
   .themeBoxContentHeader {
-    font-size: 4.8rem;
-    margin-top: 20px;
+    font-size: 5.4rem;
+    margin-top: 30px;
   }
 
   .themeBoxContentImage {
-    width: 14rem;
-    height: 12rem;
+    width: 36rem;
+    height: 32rem;
   }
 
   .themeBoxContentDescription {
     font-size: 2.1rem;
+    line-height: 1.6;
+    margin-top: 30px;
   }
 }
