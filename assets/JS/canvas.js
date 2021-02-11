@@ -4,13 +4,13 @@ var w = c.width = window.innerWidth,
 
     opts = {
 
-      len: 20,
-      count: 50,
+      len: 25,
+      count: 80,
       baseTime: 10,
       addedTime: 10,
       dieChance: .05,
       spawnChance: 1,
-      sparkChance: .1,
+      sparkChance: .2,
       sparkDist: 10,
       sparkSize: 2,
 
