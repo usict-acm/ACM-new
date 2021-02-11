@@ -86,6 +86,17 @@ canvas{
 }
 
 
+@media max-width(786px) {
+  .hero-left-div{
+    font-size: 3rem;
+  }
+
+  .hide-below-lg{
+    display: none;
+  }
+}
+
+
 
 /* ----------theme hackathon page ---------- */
 .themeHackhathon {
