@@ -1,7 +1,23 @@
-/* ----------theme hackathon page ---------- */
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
 
+/* ----------Hero hackathon page ---------- */
+
+.nav{
+  background-color: black;
+}
+
+.nav-link{
+  color: #e8e3e3;
+  padding: 20px;
+}
+
+.nav-link:hover{
+  color: red;
+}
+
+/* ----------theme hackathon page ---------- */
 .themeHackhathon {
   background-color: black;
   font-family: "Source Sans Pro", sans-serif;
