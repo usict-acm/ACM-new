@@ -114,7 +114,7 @@ canvas {
 .themeBox {
   display: inline-block;
   text-align: center;
-  margin-left: 0px;
+  margin-left: -4px;
 }
 
 .themeBoxContent {
@@ -162,7 +162,7 @@ canvas {
   }
 
   .themeBox {
-    margin-left: 15px;
+    margin-left: 5px;
   }
 
   .col-sm-12 {
@@ -199,7 +199,7 @@ canvas {
   }
 
   .themeBox {
-    margin-left: -5px;
+    margin-left: -7px;
   }
 
   .col-lg-4,
@@ -240,7 +240,7 @@ canvas {
   }
 
   .themeBox {
-    margin-left: -15px;
+    margin-left: -7px;
     flex-wrap: nowrap;
     margin-right: 0;
     display: inline-block;
@@ -375,7 +375,7 @@ canvas {
   }
 
   .otherPerksContent {
-    margin-left: 25px;
+    margin-left: 20px;
   }
 
   .otherPerksContentDescription {
