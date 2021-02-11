@@ -44,7 +44,7 @@ canvas {
 }
 
 .hero-hackathon {
-  height: 100vh;
+  min-height: 100vh;
   width: 98.5vw;
 }
 
@@ -66,7 +66,7 @@ canvas {
 .hero-right-div {
   margin-top: 50px;
   font-family: Ruda;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0em;
@@ -85,15 +85,33 @@ canvas {
   font-size: 2rem;
 }
 
+.font-red{
+  color: red;
+}
+
+.countdown-item{
+  display: inline-block;
+  list-style-type: none;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.countdown-span{
+  display: block;
+}
+
+#countdown{
+  margin-top: 3%;
+  text-align: center;
+  align-self: center;
+  color: #fff;
+  font-size: 2rem;
+}
+
 @media (max-width: 786px) {
   .hero-left-div {
     font-size: 3rem;
   }
-
-  .hide-below-lg {
-    display: none;
-  }
-
   .hero-right-div{
     font-size: 1.3rem;
   }
@@ -102,6 +120,12 @@ canvas {
 @media (max-width: 450px) {
   .hero-register-button{
     font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1200px){
+  .themeHackhathon{
+    margin-top: -5%;
   }
 }
 
