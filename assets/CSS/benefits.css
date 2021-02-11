@@ -1223,6 +1223,7 @@ ul{
 }
 .form-input-boxes-manual{
   box-shadow: 0.5px 0.7px 2.5px #0297ff;
+  width: 100%;
 }
 .registration-heading {
   font-family: inherit;
@@ -1247,7 +1248,7 @@ ul{
 }
 .registration-img {
   width: 100%;
-  margin-top: 20%;
+  margin-top: 3%;
 }
 .registration-inner-div {
   width: 80%;
@@ -1261,8 +1262,13 @@ ul{
   margin: 40px auto 0 auto;
 }
 .club{
-  margin: 5px;
   text-align: left;
+}
+.col-md-6 .form-group{
+  padding: 2% !important;
+}
+.form-group{
+  margin: 0px 0px 10px !important;
 }
 .label-course{
   margin-left: 5px;
