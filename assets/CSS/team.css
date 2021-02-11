@@ -123,6 +123,7 @@ section {
 }
 .uheading {
   font-size: 36px;
+  font-weight: bold;
 }
 .lheading {
   font-size: 36px;
@@ -130,6 +131,7 @@ section {
 @media (min-width: 300px) and (max-width: 580px) {
   .uheading {
     font-size: 20px;
+    font-weight: bold;
   }
   .lheading {
     font-size: 20px;
@@ -144,6 +146,7 @@ section {
 @media (min-width: 580px) and (max-width: 780px) {
   .uheading {
     font-size: 26px;
+    font-weight: bold;
   }
   .lheading {
     font-size: 26px;
@@ -579,6 +582,7 @@ section {
 @media (min-width: 200px) and (max-width: 580px) {
   .uheading {
     font-size: 16px;
+    font-weight: bold;
   }
   .lheading {
     font-size: 16px;
