@@ -14,10 +14,6 @@ body {
   font-size: 1.1rem;
 }
 
-.nav {
-  background-color: black;
-}
-
 .nav-link {
   color: #e8e3e3;
   padding: 20px;
@@ -118,7 +114,7 @@ canvas {
 }
 
 @media (max-width: 450px) {
-  .hero-register-button{
+  .hero-register-button {
     font-size: 1.2rem;
   }
 }
@@ -133,37 +129,33 @@ canvas {
 
 .themeHackhathon {
   background-color: black;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Ruda", sans-serif;
 }
 
 #themeHackhathonHeader {
-  color: white;
-  font-size: 2.2rem;
+  color: #ff00b8;
+  font-size: 1.8rem;
   padding: 0.7rem;
   padding-top: 3rem;
   text-align: center;
   margin-bottom: 0;
+  /* margin-top: 100px; */
 }
 
 .themeBox {
   display: inline-block;
   text-align: center;
-  margin-left: -4px;
+  margin-left: -2px;
 }
 
 .themeBoxContent {
-  border: white solid 3.5px;
-  border-radius: 15px;
+  border: #00ff47 solid 3.5px;
+  border-radius: 4%;
   background-color: black;
   color: white;
-  width: 90%;
+  width: 85%;
   margin: 30px;
   padding: 20px;
-}
-
-.col-sm-12 {
-  padding-left: 0;
-  /* padding-right: 0; */
 }
 
 .themeBoxContentHeader {
@@ -171,6 +163,7 @@ canvas {
   font-size: 2.2rem;
   margin-top: 10px;
   padding: 0.7rem;
+  color: #ff00b8;
 }
 
 .themeBoxContentImage {
@@ -191,17 +184,14 @@ canvas {
 
 @media (max-device-width: 320px) {
   #themeHackhathonHeader {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     margin-bottom: 0;
+    /* margin-top: 100px; */
   }
 
   .themeBox {
-    margin-left: 5px;
+    margin-left: -2px;
   }
-
-  /* .col-sm-12 {
-    padding-right: 0;
-  } */
 
   .themeBoxContent {
     margin: 30px;
@@ -233,18 +223,12 @@ canvas {
   }
 
   .themeBox {
-    margin-left: -7px;
+    margin-left: -8px;
   }
-/*
-  .col-lg-4,
-  .col-md-6 {
-    padding-right: 0;
-    padding-left: 0;
-  } */
 
   .themeBoxContent {
     width: 90%;
-    border: white solid 5px;
+    border: #00ff47 solid 5px;
   }
 
   .themeBoxContentHeader {
@@ -274,16 +258,8 @@ canvas {
   }
 
   .themeBox {
-    margin-left: -7px;
-    flex-wrap: nowrap;
-    margin-right: 0;
-    display: inline-block;
+    margin-left: -4px;
   }
-
-  /* .col-lg-4 {
-    padding-right: 30px;
-    padding-left: 30px;
-  } */
 
   .themeBoxRow {
     width: 60%;
@@ -291,7 +267,7 @@ canvas {
 
   .themeBoxContent {
     width: 90%;
-    border: white solid 5px;
+    border: #00ff47 solid 5px;
   }
 
   .themeBoxContentHeader {
@@ -319,41 +295,15 @@ canvas {
   margin-top: 100px;
   background-color: black;
   text-align: center;
+  font-family: "Ruda", sans-serif;
 }
-
-/* .prizeSecond {
-  margin-top: 60px;
-  margin-bottom: 100px;
-  width: 20%;
-  height: 30%;
-  border: white solid 3px;
-  display: inline-block;
-}
-
-.prizeFirst {
-  margin-top: 60px;
-  margin-bottom: 100px;
-  width: 20%;
-  height: 50%;
-  border: white solid 3px;
-  display: inline-block;
-}
-
-.prizeThird {
-  margin-top: 60px;
-  margin-bottom: 100px;
-  width: 20%;
-  height: 10%;
-  border: white solid 3px;
-  display: inline-block;
-} */
 
 .otherPerksContentImage {
   border-radius: 50%;
-  width: 16rem;
-  height: 15rem;
+  width: 15rem;
+  height: 14rem;
   text-align: center;
-  margin-left: -2px;
+  margin-left: -6px;
   padding: 10px;
 }
 
@@ -363,6 +313,8 @@ canvas {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   width: 85%;
+  color: #ebff00;
+  border-color: #00e0ff;
 }
 
 #otherPerksHeader {
@@ -381,16 +333,16 @@ canvas {
   font-family: "Source Sans Pro", sans-serif;
   margin-top: 20px;
 }
-/*
-.col-lg-3 {
-  padding-left: 0;
-  padding-right: 0;
-} */
 
 @media (max-device-width: 767px) {
   .otherPerksContentImage {
     width: 13.5rem;
     height: 12.5rem;
+  }
+
+  .otherPerksContent {
+    margin-left: 29px;
+    border-color: #00e0ff;
   }
 
   .otherPerksContentDescription {
@@ -406,10 +358,13 @@ canvas {
     width: 10.5rem;
     height: 10rem;
     text-align: center;
+    margin-left: -8px;
   }
 
   .otherPerksContent {
-    margin-left: 20px;
+    margin-left: 12px;
+    width: 90%;
+    border-color: #00e0ff;
   }
 
   .otherPerksContentDescription {
@@ -430,8 +385,9 @@ canvas {
   }
 
   .otherPerksContent {
-    margin-left: 35px;
+    margin-left: 30px;
     width: 80%;
+    border-color: #00e0ff;
   }
 
   .otherPerksContentDescription {
