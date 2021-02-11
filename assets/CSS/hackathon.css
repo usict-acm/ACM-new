@@ -10,17 +10,17 @@ body{
 
 /* ----------NavBar hackathon page ---------- */
 
-.nav{
+.nav {
   background-color: black;
   font-size: 1.1rem;
 }
 
-.nav-link{
+.nav-link {
   color: #e8e3e3;
   padding: 20px;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   color: red;
 }
 
@@ -257,3 +257,57 @@ canvas{
   padding-left: 0;
   padding-right: 0;
 }
+/* ************************************ Organising Team ******************************************** */
+
+.orgainisingTeamLeftHeadingCard {
+  display: inline-block;
+  border: 2px solid #fff;
+  border-left: none;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  /* float: left; */
+}
+.orgainisingTeamLeftHeading {
+  height: 20%;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 1.5rem 2rem 1.5rem 8rem;
+  text-align: right;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.orgainisingTeamRightHeadingCard {
+  display: inline-block;
+  border: 2px solid #fff;
+  border-right: none;
+  border-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  text-align: right;
+  /* float: right; */
+}
+.orgainisingTeamRightHeading {
+  height: 20%;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 1.5rem 8rem 1.5rem 2rem;
+  text-align: left;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.col-lg-3 .col-md-3 .col-sm-6 .col-6 {
+  padding: 3%;
+}
+.orgainisingTeamCard {
+  margin: 3% 0%;
+}
+.orgainisingTeamMember {
+  width: 100%;
+  /* border: 2px solid #fff; */
+  border-radius: 10px;
+  padding: 10%;
+}
+/* @media (min-width: 300px) and (max-width: 580px) {
+  
+} */
