@@ -457,6 +457,10 @@ canvas {
 /*
   Timeline Pranav starts here till 649
 */
+
+.page-section{
+  padding: 0px 0px 40px 0px ;
+}
 .timeline {
   position: relative;
   padding:0px;
