@@ -40,7 +40,7 @@ canvas {
 }
 
 .hero-hackathon {
-  min-height: 100vh;
+  min-height: 70vh;
   width: 98.5vw;
 }
 
@@ -454,7 +454,7 @@ canvas {
 
 
 
-/* 
+/*
   Timeline Pranav starts here till 649
 */
 .timeline {
@@ -629,6 +629,6 @@ canvas {
 }
 
 
-/* 
+/*
   Timeline Pranav ends here
 */
