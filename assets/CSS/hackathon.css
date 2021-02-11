@@ -122,3 +122,75 @@
     margin-top: 30px;
   }
 }
+
+/* ------prizes hackathon-------- */
+
+.prizes {
+  margin-top: 100px;
+  background-color: black;
+  text-align: center;
+}
+
+.prizeSecond {
+  margin-top: 60px;
+  margin-bottom: 100px;
+  width: 20%;
+  height: 30%;
+  border: white solid 3px;
+  display: inline-block;
+}
+
+.prizeFirst {
+  margin-top: 60px;
+  margin-bottom: 100px;
+  width: 20%;
+  height: 50%;
+  border: white solid 3px;
+  display: inline-block;
+}
+
+.prizeThird {
+  margin-top: 60px;
+  margin-bottom: 100px;
+  width: 20%;
+  height: 10%;
+  border: white solid 3px;
+  display: inline-block;
+}
+
+.otherPerksContentImage {
+  border-radius: 50%;
+  height: 18rem;
+  width: 21rem;
+  text-align: center;
+  margin-left: -2px;
+}
+
+.otherPerksContent {
+  border-top-left-radius: 65px;
+  border-top-right-radius: 65px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 80%;
+}
+
+#otherPerksHeader {
+  text-align: left;
+  margin-left: 5%;
+  color: white;
+  font-size: 7rem;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.otherPerksContentDescription {
+  text-align: left;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-top: 30px;
+}
+
+.col-lg-3 {
+  padding-left: 0;
+  padding-right: 0;
+}
