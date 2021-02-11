@@ -469,7 +469,7 @@ a {
 
 @media (min-width: 690px) and (max-width: 786px){
 
-    #bg-shape-1 { 
+    #bg-shape-1 {
         opacity: 0.8;
         left: -830px;
         top: -144px;
@@ -493,7 +493,7 @@ a {
         color: white;
         z-index: 10;
     }
-   
+
     #bg-shape-8 {
         top: -72%;
         left: -60%;
@@ -537,7 +537,7 @@ a {
         margin-left: 20px;
         margin-right: 100px;
     }
-    
+
 }
 
 
@@ -596,7 +596,7 @@ a {
         clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75%);
         opacity: 0.9;
     }
-    
+
 }
 
 @media (min-width: 430px) and (max-width: 459px){
@@ -627,7 +627,7 @@ a {
         margin-left: 20px;
         margin-right: 120px;
     }
-    
+
 }
 
 @media (min-width: 390px) and (max-width: 429px){
@@ -658,7 +658,7 @@ a {
         margin-left: 20px;
         margin-right: 140px;
     }
-    
+
 }
 
 @media (min-width: 350px) and (max-width: 389px){
@@ -699,7 +699,7 @@ a {
         top: -72%;
         left: -170%;
     }
-    
+
 }
 
 
@@ -724,19 +724,19 @@ a {
     .club h4 {
         color: black;
       }
-    
+
       .club h6 {
         color: black;
       }
-    
+
       .aboutclub.white h2 {
         color: black;
       }
-    
+
       .aboutclub.white p {
         color: black;
       }
-    
+
       .lead h4,
       .vicelead h4 {
         color: black;
@@ -745,7 +745,7 @@ a {
       .vicelead.white h4 {
         color: black;
       }
-    
+
       .lead.white h6,
       .vicelead.white h6 {
         color: black;
@@ -753,15 +753,15 @@ a {
       .aboutclub h2 {
         color: black;
       }
-    
+
       .aboutclub p {
         color: black;
       }
-    
+
       .pageTitle h1 {
         color: white;
       }
-    
+
       .pageTitle p {
         color: white;
         margin-right: 100px;
@@ -771,8 +771,7 @@ a {
 
 
 @media (min-width: 1000px) and (max-width: 1199px){
-    #headresearch{
-        color: black; 
+    #black_research{
+        color: black;
     }
 }
-
