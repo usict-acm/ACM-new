@@ -25,12 +25,12 @@ body {
   border-bottom: 3px solid red;
 }
 
-.nav-link.active::after{
+.nav-link.active::after {
   color: red;
   border-bottom: 3px solid red;
 }
 
-.black{
+.black {
   background-color: black !important;
   box-shadow: 0 2px 3px 0 red, 0 4px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -120,22 +120,12 @@ canvas {
   .hero-left-div {
     font-size: 3rem;
   }
-<<<<<<< HEAD
-=======
-/* <<<<<<< HEAD */
->>>>>>> bc95c24701dd43f6ba3372da57a3d8405373e276
 
   .hide-below-lg {
     display: none;
   }
 
   .hero-right-div {
-<<<<<<< HEAD
-=======
-/* ======= */
-  /* .hero-right-div{
->>>>>>> 15d5e71f06838148dfcfa5072eab8b3105ac73d2 */
->>>>>>> bc95c24701dd43f6ba3372da57a3d8405373e276
     font-size: 1.3rem;
   }
 }
@@ -152,7 +142,7 @@ canvas {
   }
 }
 
-/* ----------theme hackathon page ---------- */
+/* ----------theme hackathon page ----------*/
 
 .themeHackhathon {
   background-color: black;
@@ -252,15 +242,12 @@ canvas {
   .themeBox {
     margin-left: -8px;
   }
-<<<<<<< HEAD
   /*
   .col-lg-4,
   .col-md-6 {
     padding-right: 0;
     padding-left: 0;
   } */
-=======
->>>>>>> bc95c24701dd43f6ba3372da57a3d8405373e276
 
   .themeBoxContent {
     width: 90%;
@@ -702,11 +689,7 @@ canvas {
   width: 90%;
   height: 80%;
   z-index: 9;
-<<<<<<< HEAD
   left: 80%;
-=======
-  left:80%;
->>>>>>> bc95c24701dd43f6ba3372da57a3d8405373e276
   margin-top: 9%;
   border: 7px solid red;
 }
@@ -723,11 +706,6 @@ canvas {
   font-weight: 900;
   font-size: 40px;
 }
-
-<<<<<<< HEAD
-/* ***********************************Registartion********************************* */
-=======
-
 
 /**********Contact form start***********************/
 
@@ -748,7 +726,7 @@ canvas {
 }
 
 .white {
-  color: #fff!important;
+  color: #fff !important;
 }
 
 .team {
@@ -784,101 +762,111 @@ span.team-text {
   font-weight: 800;
 }
 
-.team-content a{
-  -webkit-transition: .3s all ease;
-  -o-transition: .3s all ease;
-  transition: .3s all ease;
+.team-content a {
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
   color: #08b439;
 }
 
-@media (max-width: 600px){
-  .team-text{
-      font-size: 1em;
+@media (max-width: 600px) {
+  .team-text {
+    font-size: 1em;
   }
-  .team-img{
-      width: 30vw;
+  .team-img {
+    width: 30vw;
   }
 }
-
 
 .ftco-consultation .half {
-  width: 50%; }
-
-  @media (max-width: 967.98px) {
-    .ftco-consultation .half {
-        width: 100%; } }
-  .ftco-consultation .half.img {
-    position: relative;
-    z-index: 0; }
-  @media (min-width: 992px) {
-    .ftco-consultation .half.img {
-        margin-top: -50px; } }
-  @media (max-width: 767.98px) {
-    .ftco-consultation .half.img {
-        padding: 4em; } }
-  .ftco-consultation .half.img:after {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    right: 50px;
-    bottom: 50px;
-    content: '';
-    z-index: -1;
-    opacity: .4;
-    border: 1px solid #08b439; }
-  .ftco-consultation .half.img .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    opacity: .7;
-    z-index: -1;
-    background: #16181d; }
-  .ftco-consultation .half.img .desc h1 a span {
-    display: block;
-    font-size: 16px;
-    font-family: "MyWebFont"; }
-  .ftco-consultation .half.img .desc .icon span {
-    font-size: 50px;
-    color: #08b439; }
-
-@media (min-width: 768px){
-.p-md-5 {
-    padding: 3rem !important;
+  width: 50%;
 }
-  
+
+@media (max-width: 967.98px) {
+  .ftco-consultation .half {
+    width: 100%;
+  }
+}
+.ftco-consultation .half.img {
+  position: relative;
+  z-index: 0;
+}
+@media (min-width: 992px) {
+  .ftco-consultation .half.img {
+    margin-top: -50px;
+  }
+}
+@media (max-width: 767.98px) {
+  .ftco-consultation .half.img {
+    padding: 4em;
+  }
+}
+.ftco-consultation .half.img:after {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  content: "";
+  z-index: -1;
+  opacity: 0.4;
+  border: 1px solid #08b439;
+}
+.ftco-consultation .half.img .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  opacity: 0.7;
+  z-index: -1;
+  background: #16181d;
+}
+.ftco-consultation .half.img .desc h1 a span {
+  display: block;
+  font-size: 16px;
+  font-family: "MyWebFont";
+}
+.ftco-consultation .half.img .desc .icon span {
+  font-size: 50px;
+  color: #08b439;
+}
+
+@media (min-width: 768px) {
+  .p-md-5 {
+    padding: 3rem !important;
+  }
+
   /**********Contact form ends***********************/
 
-/**********FOOTER***********************/
+  /**********FOOTER***********************/
 
-.foot{
-/* color: black; */
-color: #ffda29;
-background-color: #B90B0B;
-}
+  .foot {
+    /* color: black; */
+    color: #ffda29;
+    background-color: #b90b0b;
+  }
 
-.foot i{
-  color: white;
-}
-.foot li a:hover{
-  color: #ffda29;
-}
+  .foot i {
+    color: white;
+  }
+  .foot li a:hover {
+    color: #ffda29;
+  }
 
-.concept{
-  font-weight: 500;
-  color: white;
-}
+  .concept {
+    font-weight: 500;
+    color: white;
+  }
 
-.foot-head{
-  color: black;
-  font-weight: 700 !important;
-}
+  .foot-head {
+    color: black;
+    font-weight: 700 !important;
+  }
 
-.footPara{
-  color: black;
-  font-weight: 400;
+  .footPara {
+    color: black;
+    font-weight: 400;
+  }
 }
-}
->>>>>>> bc95c24701dd43f6ba3372da57a3d8405373e276
