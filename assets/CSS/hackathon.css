@@ -14,10 +14,6 @@ body {
   font-size: 1.1rem;
 }
 
-.nav {
-  background-color: black;
-}
-
 .nav-link {
   color: #e8e3e3;
   padding: 20px;
@@ -44,7 +40,7 @@ canvas {
 }
 
 .hero-hackathon {
-  height: 100vh;
+  min-height: 75vh;
   width: 98.5vw;
 }
 
@@ -66,7 +62,7 @@ canvas {
 .hero-right-div {
   margin-top: 50px;
   font-family: Ruda;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0em;
@@ -85,16 +81,43 @@ canvas {
   font-size: 2rem;
 }
 
+.font-red{
+  color: red;
+}
+
+.countdown-item{
+  display: inline-block;
+  list-style-type: none;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.countdown-span{
+  display: block;
+}
+
+#countdown{
+  margin-top: 3%;
+  text-align: center;
+  align-self: center;
+  color: #fff;
+  font-size: 2rem;
+}
+
 @media (max-width: 786px) {
   .hero-left-div {
     font-size: 3rem;
   }
+<<<<<<< HEAD
 
   .hide-below-lg {
     display: none;
   }
 
   .hero-right-div {
+=======
+  .hero-right-div{
+>>>>>>> 15d5e71f06838148dfcfa5072eab8b3105ac73d2
     font-size: 1.3rem;
   }
 }
@@ -105,41 +128,43 @@ canvas {
   }
 }
 
+@media (min-width: 1200px){
+  .themeHackhathon{
+    margin-top: -5%;
+  }
+}
+
 /* ----------theme hackathon page ---------- */
 
 .themeHackhathon {
   background-color: black;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Ruda", sans-serif;
 }
 
 #themeHackhathonHeader {
-  color: white;
-  font-size: 2.2rem;
+  color: #ff00b8;
+  font-size: 1.8rem;
   padding: 0.7rem;
   padding-top: 3rem;
   text-align: center;
   margin-bottom: 0;
+  /* margin-top: 100px; */
 }
 
 .themeBox {
   display: inline-block;
   text-align: center;
-  margin-left: -4px;
+  margin-left: -2px;
 }
 
 .themeBoxContent {
-  border: white solid 3.5px;
-  border-radius: 15px;
+  border: #00ff47 solid 3.5px;
+  border-radius: 4%;
   background-color: black;
   color: white;
-  width: 90%;
+  width: 85%;
   margin: 30px;
   padding: 20px;
-}
-
-.col-sm-12 {
-  padding-left: 0;
-  /* padding-right: 0; */
 }
 
 .themeBoxContentHeader {
@@ -147,6 +172,7 @@ canvas {
   font-size: 2.2rem;
   margin-top: 10px;
   padding: 0.7rem;
+  color: #ff00b8;
 }
 
 .themeBoxContentImage {
@@ -167,17 +193,14 @@ canvas {
 
 @media (max-device-width: 320px) {
   #themeHackhathonHeader {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     margin-bottom: 0;
+    /* margin-top: 100px; */
   }
 
   .themeBox {
-    margin-left: 5px;
+    margin-left: -2px;
   }
-
-  /* .col-sm-12 {
-    padding-right: 0;
-  } */
 
   .themeBoxContent {
     margin: 30px;
@@ -209,18 +232,21 @@ canvas {
   }
 
   .themeBox {
-    margin-left: -7px;
+    margin-left: -8px;
   }
+<<<<<<< HEAD
   /*
   .col-lg-4,
   .col-md-6 {
     padding-right: 0;
     padding-left: 0;
   } */
+=======
+>>>>>>> 15d5e71f06838148dfcfa5072eab8b3105ac73d2
 
   .themeBoxContent {
     width: 90%;
-    border: white solid 5px;
+    border: #00ff47 solid 5px;
   }
 
   .themeBoxContentHeader {
@@ -250,16 +276,8 @@ canvas {
   }
 
   .themeBox {
-    margin-left: -7px;
-    flex-wrap: nowrap;
-    margin-right: 0;
-    display: inline-block;
+    margin-left: -4px;
   }
-
-  /* .col-lg-4 {
-    padding-right: 30px;
-    padding-left: 30px;
-  } */
 
   .themeBoxRow {
     width: 60%;
@@ -267,7 +285,7 @@ canvas {
 
   .themeBoxContent {
     width: 90%;
-    border: white solid 5px;
+    border: #00ff47 solid 5px;
   }
 
   .themeBoxContentHeader {
@@ -295,41 +313,15 @@ canvas {
   margin-top: 100px;
   background-color: black;
   text-align: center;
+  font-family: "Ruda", sans-serif;
 }
-
-/* .prizeSecond {
-  margin-top: 60px;
-  margin-bottom: 100px;
-  width: 20%;
-  height: 30%;
-  border: white solid 3px;
-  display: inline-block;
-}
-
-.prizeFirst {
-  margin-top: 60px;
-  margin-bottom: 100px;
-  width: 20%;
-  height: 50%;
-  border: white solid 3px;
-  display: inline-block;
-}
-
-.prizeThird {
-  margin-top: 60px;
-  margin-bottom: 100px;
-  width: 20%;
-  height: 10%;
-  border: white solid 3px;
-  display: inline-block;
-} */
 
 .otherPerksContentImage {
   border-radius: 50%;
-  width: 16rem;
-  height: 15rem;
+  width: 15rem;
+  height: 14rem;
   text-align: center;
-  margin-left: -2px;
+  margin-left: -6px;
   padding: 10px;
 }
 
@@ -339,6 +331,8 @@ canvas {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   width: 85%;
+  color: #ebff00;
+  border-color: #00e0ff;
 }
 
 #otherPerksHeader {
@@ -357,16 +351,16 @@ canvas {
   font-family: "Source Sans Pro", sans-serif;
   margin-top: 20px;
 }
-/*
-.col-lg-3 {
-  padding-left: 0;
-  padding-right: 0;
-} */
 
 @media (max-device-width: 767px) {
   .otherPerksContentImage {
     width: 13.5rem;
     height: 12.5rem;
+  }
+
+  .otherPerksContent {
+    margin-left: 29px;
+    border-color: #00e0ff;
   }
 
   .otherPerksContentDescription {
@@ -382,10 +376,13 @@ canvas {
     width: 10.5rem;
     height: 10rem;
     text-align: center;
+    margin-left: -8px;
   }
 
   .otherPerksContent {
-    margin-left: 20px;
+    margin-left: 12px;
+    width: 90%;
+    border-color: #00e0ff;
   }
 
   .otherPerksContentDescription {
@@ -406,8 +403,9 @@ canvas {
   }
 
   .otherPerksContent {
-    margin-left: 35px;
+    margin-left: 30px;
     width: 80%;
+    border-color: #00e0ff;
   }
 
   .otherPerksContentDescription {
@@ -469,3 +467,233 @@ canvas {
 /* @media (min-width: 300px) and (max-width: 580px) {
 
 } */
+
+
+
+/*
+  Timeline Pranav starts here till 649
+*/
+
+.page-section{
+  padding: 0px 0px 40px 0px ;
+}
+.timeline {
+  position: relative;
+  padding:0px;
+  list-style: none;
+}
+
+
+
+.timeline:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40px;
+  width: 2px;
+  margin-left: -1.5px;
+  content: "";
+  background-color: #e9ecef;
+}
+.timeline > li {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 50px;
+}
+.timeline > li:after, .timeline > li:before {
+  display: table;
+  content: " ";
+}
+.timeline > li:after {
+  clear: both;
+}
+.timeline > li .timeline-panel {
+  position: relative;
+  float: right;
+  width: 100%;
+  padding: 0 20px 0 100px;
+  text-align: left;
+}
+.timeline > li .timeline-panel:before {
+  right: auto;
+  left: -15px;
+  border-right-width: 15px;
+  border-left-width: 0;
+}
+.timeline > li .timeline-panel:after {
+  right: auto;
+  left: -14px;
+  border-right-width: 14px;
+  border-left-width: 0;
+}
+.timeline > li .timeline-image {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  margin-left:0;
+  text-align: center;
+  color: white;
+  border: 7px solid #e9ecef;
+  border-radius:100%;
+  background-color:black;
+}
+.timeline > li .timeline-image h4 {
+  font-size: 10px;
+  line-height: 14px;
+  margin-top: 12px;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+  padding: 0 20px 0 100px;
+  text-align: left;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  right: auto;
+  left: -15px;
+  border-right-width: 15px;
+  border-left-width: 0;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  right: auto;
+  left: -14px;
+  border-right-width: 14px;
+  border-left-width: 0;
+}
+.timeline > li:last-child {
+  margin-bottom: 0;
+}
+.timeline .timeline-heading h4 {
+  margin-top: 0;
+  color: inherit;
+}
+.timeline .timeline-heading h4.subheading {
+  text-transform: none;
+}
+.timeline .timeline-body > ul,
+.timeline .timeline-body > p {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .timeline:before {
+    left: 50%;
+  }
+  .timeline > li {
+    min-height: 100px;
+    margin-bottom: 100px;
+  }
+  .timeline > li .timeline-panel {
+    float: left;
+    width: 41%;
+    padding: 0 20px 20px 30px;
+    text-align: right;
+  }
+  .timeline > li .timeline-image {
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+  }
+  .timeline > li .timeline-image h4 {
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 16px;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+    padding: 0 30px 20px 20px;
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
+  .timeline > li {
+    min-height: 150px;
+  }
+  .timeline > li .timeline-panel {
+    padding: 0 20px 20px;
+  }
+  .timeline > li .timeline-image {
+    width: 150px;
+    height: 150px;
+    margin-left: -75px;
+  }
+  .timeline > li .timeline-image h4 {
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 30px;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel {
+    padding: 0 20px 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .timeline > li {
+    min-height: 170px;
+  }
+  .timeline > li .timeline-panel {
+    padding: 0 20px 20px 100px;
+  }
+  .timeline > li .timeline-image {
+    width: 180px;
+    height: 180px;
+    margin-left: -85px;
+  }
+  .timeline > li .timeline-image h4 {
+    margin-top: 40px;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel {
+    padding: 0 100px 20px 20px;
+  }
+}
+
+
+/*
+  Timeline Pranav ends here
+*/
+
+.AboutUs{
+  height: 90vh;
+}
+
+.aboutUsHead{
+  color: yellow;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+.container1 {
+  width: 40%;
+  height: 80%;
+  position: relative;
+  margin-left: 15%;
+}
+.box{
+  width: 90%;
+  height: 100%;            
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;  
+}
+.stack-top{
+  width: 90%;
+  height: 80%;
+  z-index: 9;
+  left:80%;
+  margin-top: 9%; 
+  border: 7px solid red;
+}
+
+.aboutHackUsict{
+height: 100%;
+width: 100%;
+padding: 20px;
+z-index: 20;
+color: white;
+}
+
+.aboutHackUsict h2{
+  font-weight: 900;
+  font-size: 40px;
+}
