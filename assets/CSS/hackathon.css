@@ -246,15 +246,6 @@ canvas {
   .themeBox {
     margin-left: -8px;
   }
-<<<<<<< HEAD
-  /*
-  .col-lg-4,
-  .col-md-6 {
-    padding-right: 0;
-    padding-left: 0;
-  } */
-=======
->>>>>>> 15d5e71f06838148dfcfa5072eab8b3105ac73d2
 
   .themeBoxContent {
     width: 90%;
@@ -712,6 +703,127 @@ color: white;
 
 
 
+/**********Contact form start***********************/
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  /* background-attachment: scroll; */
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.white {
+  color: #fff!important;
+}
+
+.team {
+  padding: 40px 0px;
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+
+.team-img {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 1;
+  width: 12vw;
+}
+
+.team-content {
+  display: block;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  line-height: 2em;
+}
+
+span.team-text {
+  color: #999999;
+}
+.team-text {
+  display: block;
+  font-size: 1.25em;
+  line-height: 1em;
+  font-weight: 800;
+}
+
+.team-content a{
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+  color: #08b439;
+}
+
+@media (max-width: 600px){
+  .team-text{
+      font-size: 1em;
+  }
+  .team-img{
+      width: 30vw;
+  }
+}
+
+
+.ftco-consultation .half {
+  width: 50%; }
+
+  @media (max-width: 967.98px) {
+    .ftco-consultation .half {
+        width: 100%; } }
+  .ftco-consultation .half.img {
+    position: relative;
+    z-index: 0; }
+  @media (min-width: 992px) {
+    .ftco-consultation .half.img {
+        margin-top: -50px; } }
+  @media (max-width: 767.98px) {
+    .ftco-consultation .half.img {
+        padding: 4em; } }
+  .ftco-consultation .half.img:after {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+    content: '';
+    z-index: -1;
+    opacity: .4;
+    border: 1px solid #08b439; }
+  .ftco-consultation .half.img .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: .7;
+    z-index: -1;
+    background: #16181d; }
+  .ftco-consultation .half.img .desc h1 a span {
+    display: block;
+    font-size: 16px;
+    font-family: "MyWebFont"; }
+  .ftco-consultation .half.img .desc .icon span {
+    font-size: 50px;
+    color: #08b439; }
+
+@media (min-width: 768px){
+.p-md-5 {
+    padding: 3rem !important;
+}
+  
+  /**********Contact form ends***********************/
 
 /**********FOOTER***********************/
 
@@ -741,4 +853,5 @@ background-color: #B90B0B;
 .footPara{
   color: black;
   font-weight: 400;
+}
 }
