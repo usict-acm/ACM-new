@@ -81,22 +81,22 @@ canvas {
   font-size: 2rem;
 }
 
-.font-red{
+.font-red {
   color: red;
 }
 
-.countdown-item{
+.countdown-item {
   display: inline-block;
   list-style-type: none;
   padding: 10px;
   text-transform: uppercase;
 }
 
-.countdown-span{
+.countdown-span {
   display: block;
 }
 
-#countdown{
+#countdown {
   margin-top: 3%;
   text-align: center;
   align-self: center;
@@ -108,16 +108,12 @@ canvas {
   .hero-left-div {
     font-size: 3rem;
   }
-<<<<<<< HEAD
 
   .hide-below-lg {
     display: none;
   }
 
   .hero-right-div {
-=======
-  .hero-right-div{
->>>>>>> 15d5e71f06838148dfcfa5072eab8b3105ac73d2
     font-size: 1.3rem;
   }
 }
@@ -128,8 +124,8 @@ canvas {
   }
 }
 
-@media (min-width: 1200px){
-  .themeHackhathon{
+@media (min-width: 1200px) {
+  .themeHackhathon {
     margin-top: -5%;
   }
 }
@@ -234,15 +230,12 @@ canvas {
   .themeBox {
     margin-left: -8px;
   }
-<<<<<<< HEAD
   /*
   .col-lg-4,
   .col-md-6 {
     padding-right: 0;
     padding-left: 0;
   } */
-=======
->>>>>>> 15d5e71f06838148dfcfa5072eab8b3105ac73d2
 
   .themeBoxContent {
     width: 90%;
@@ -416,7 +409,16 @@ canvas {
 }
 
 /* ************************************ Organising Team ******************************************** */
+.organisingTeamMainHeading {
+  font-family: Ruda;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 73px;
+  text-align: center;
 
+  color: #70ff00;
+}
 .orgainisingTeamLeftHeadingCard {
   display: inline-block;
   border: 5px solid #70ff00;
@@ -424,7 +426,6 @@ canvas {
   border-radius: 10px;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  float: inline-start;
 }
 .orgainisingTeamLeftHeading {
   height: 20%;
@@ -433,7 +434,7 @@ canvas {
   font-weight: bold;
   padding: 1.5rem 2rem;
   text-align: right;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: Ruda;
 }
 .orgainisingTeamRightHeadingCard {
   display: inline-block;
@@ -443,7 +444,7 @@ canvas {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
   text-align: right;
-  float: inline-end;
+  /* float: inline-end; */
 }
 .orgainisingTeamRightHeading {
   height: 20%;
@@ -452,7 +453,7 @@ canvas {
   font-weight: bold;
   padding: 1.5rem 2rem;
   text-align: left;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: Ruda;
 }
 .orgainisingTeamCard {
   margin: 3% 0%;
@@ -468,22 +469,18 @@ canvas {
 
 } */
 
-
-
 /*
   Timeline Pranav starts here till 649
 */
 
-.page-section{
-  padding: 0px 0px 40px 0px ;
+.page-section {
+  padding: 0px 0px 40px 0px;
 }
 .timeline {
   position: relative;
-  padding:0px;
+  padding: 0px;
   list-style: none;
 }
-
-
 
 .timeline:before {
   position: absolute;
@@ -500,7 +497,8 @@ canvas {
   min-height: 50px;
   margin-bottom: 50px;
 }
-.timeline > li:after, .timeline > li:before {
+.timeline > li:after,
+.timeline > li:before {
   display: table;
   content: " ";
 }
@@ -532,12 +530,12 @@ canvas {
   left: 0;
   width: 80px;
   height: 80px;
-  margin-left:0;
+  margin-left: 0;
   text-align: center;
   color: white;
   border: 7px solid #e9ecef;
-  border-radius:100%;
-  background-color:black;
+  border-radius: 100%;
+  background-color: black;
 }
 .timeline > li .timeline-image h4 {
   font-size: 10px;
@@ -648,16 +646,15 @@ canvas {
   }
 }
 
-
 /*
   Timeline Pranav ends here
 */
 
-.AboutUs{
+.AboutUs {
   height: 90vh;
 }
 
-.aboutUsHead{
+.aboutUsHead {
   color: yellow;
   font-weight: 900;
   margin-bottom: 50px;
@@ -668,32 +665,34 @@ canvas {
   position: relative;
   margin-left: 15%;
 }
-.box{
+.box {
   width: 90%;
-  height: 100%;            
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 1;  
+  opacity: 1;
 }
-.stack-top{
+.stack-top {
   width: 90%;
   height: 80%;
   z-index: 9;
-  left:80%;
-  margin-top: 9%; 
+  left: 80%;
+  margin-top: 9%;
   border: 7px solid red;
 }
 
-.aboutHackUsict{
-height: 100%;
-width: 100%;
-padding: 20px;
-z-index: 20;
-color: white;
+.aboutHackUsict {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  z-index: 20;
+  color: white;
 }
 
-.aboutHackUsict h2{
+.aboutHackUsict h2 {
   font-weight: 900;
   font-size: 40px;
 }
+
+/* ***********************************Registartion********************************* */
