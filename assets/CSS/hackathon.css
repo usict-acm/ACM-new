@@ -30,8 +30,8 @@ body {
   border-bottom: 3px solid red;
 }
 
-.black-bg{
-  background-color: black;
+.black{
+  background-color: black !important;
 }
 
 .nav-item {
