@@ -704,32 +704,29 @@ color: white;
 /**********FOOTER***********************/
 
 .foot{
-/* background: linear-gradient(180deg, #F27705 0%, #DA3D0B 100%); */
-/* background-color: red; */
-color: black;
-background: linear-gradient(180deg,#DA0B0B 0%, #FD0000 100% ) !important;
+/* color: black; */
+color: #ffda29;
+background-color: #B90B0B;
 }
 
 .foot i{
   color: white;
 }
-.foot li a{
+.foot li a:hover{
+  color: #ffda29;
+}
+
+.concept{
+  font-weight: 500;
+  color: white;
+}
+
+.foot-head{
   color: black;
-}
-.foot .fb:hover{
-  color: blue;
+  font-weight: 700 !important;
 }
 
-.foot .yt:hover{
-  color: red;
-}
-
-.foot .insta:hover{
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-   background-clip: text;
-    text-fill-color: transparent;
-}
-
-.foot .mail:hover{
-  color: black ;
+.footPara{
+  color: black;
+  font-weight: 400;
 }
