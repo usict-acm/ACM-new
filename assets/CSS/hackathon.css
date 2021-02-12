@@ -636,3 +636,48 @@ canvas {
 /*
   Timeline Pranav ends here
 */
+
+.AboutUs{
+  height: 90vh;
+}
+
+.aboutUsHead{
+  color: yellow;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+.container1 {
+  width: 40%;
+  height: 80%;
+  position: relative;
+  margin-left: 15%;
+}
+.box{
+  width: 90%;
+  height: 100%;            
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;  
+}
+.stack-top{
+  width: 90%;
+  height: 80%;
+  z-index: 9;
+  left:80%;
+  margin-top: 9%; 
+  border: 7px solid red;
+}
+
+.aboutHackUsict{
+height: 100%;
+width: 100%;
+padding: 20px;
+z-index: 20;
+color: white;
+}
+
+.aboutHackUsict h2{
+  font-weight: 900;
+  font-size: 40px;
+}
