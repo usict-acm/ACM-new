@@ -108,16 +108,16 @@ canvas {
   .hero-left-div {
     font-size: 3rem;
   }
-<<<<<<< HEAD
+/* <<<<<<< HEAD */
 
   .hide-below-lg {
     display: none;
   }
 
   .hero-right-div {
-=======
-  .hero-right-div{
->>>>>>> 15d5e71f06838148dfcfa5072eab8b3105ac73d2
+/* ======= */
+  /* .hero-right-div{
+>>>>>>> 15d5e71f06838148dfcfa5072eab8b3105ac73d2 */
     font-size: 1.3rem;
   }
 }
@@ -670,18 +670,18 @@ canvas {
 }
 .box{
   width: 90%;
-  height: 100%;            
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 1;  
+  opacity: 1;
 }
 .stack-top{
   width: 90%;
   height: 80%;
   z-index: 9;
   left:80%;
-  margin-top: 9%; 
+  margin-top: 9%;
   border: 7px solid red;
 }
 
@@ -696,4 +696,40 @@ color: white;
 .aboutHackUsict h2{
   font-weight: 900;
   font-size: 40px;
+}
+
+
+
+
+/**********FOOTER***********************/
+
+.foot{
+/* background: linear-gradient(180deg, #F27705 0%, #DA3D0B 100%); */
+/* background-color: red; */
+color: black;
+background: linear-gradient(180deg,#DA0B0B 0%, #FD0000 100% ) !important;
+}
+
+.foot i{
+  color: white;
+}
+.foot li a{
+  color: black;
+}
+.foot .fb:hover{
+  color: blue;
+}
+
+.foot .yt:hover{
+  color: red;
+}
+
+.foot .insta:hover{
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+   background-clip: text;
+    text-fill-color: transparent;
+}
+
+.foot .mail:hover{
+  color: black ;
 }
