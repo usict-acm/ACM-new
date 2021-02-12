@@ -119,7 +119,16 @@ canvas {
   .hero-left-div {
     font-size: 3rem;
   }
-  .hero-right-div{
+/* <<<<<<< HEAD */
+
+  .hide-below-lg {
+    display: none;
+  }
+
+  .hero-right-div {
+/* ======= */
+  /* .hero-right-div{
+>>>>>>> 15d5e71f06838148dfcfa5072eab8b3105ac73d2 */
     font-size: 1.3rem;
   }
 }
@@ -236,6 +245,15 @@ canvas {
   .themeBox {
     margin-left: -8px;
   }
+<<<<<<< HEAD
+  /*
+  .col-lg-4,
+  .col-md-6 {
+    padding-right: 0;
+    padding-left: 0;
+  } */
+=======
+>>>>>>> 15d5e71f06838148dfcfa5072eab8b3105ac73d2
 
   .themeBoxContent {
     width: 90%;
@@ -412,52 +430,50 @@ canvas {
 
 .orgainisingTeamLeftHeadingCard {
   display: inline-block;
-  border: 2px solid #fff;
+  border: 5px solid #70ff00;
   border-left: none;
   border-radius: 10px;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  /* float: left; */
+  float: inline-start;
 }
 .orgainisingTeamLeftHeading {
   height: 20%;
-  color: #fff;
+  color: #70ff00;
   font-size: 32px;
   font-weight: bold;
-  padding: 1.5rem 2rem 1.5rem 8rem;
+  padding: 1.5rem 2rem;
   text-align: right;
   font-family: "Source Sans Pro", sans-serif;
 }
 .orgainisingTeamRightHeadingCard {
   display: inline-block;
-  border: 2px solid #fff;
+  border: 5px solid #70ff00;
   border-right: none;
   border-radius: 10px;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
   text-align: right;
-  /* float: right; */
+  float: inline-end;
 }
 .orgainisingTeamRightHeading {
   height: 20%;
-  color: #fff;
+  color: #70ff00;
   font-size: 32px;
   font-weight: bold;
-  padding: 1.5rem 8rem 1.5rem 2rem;
+  padding: 1.5rem 2rem;
   text-align: left;
   font-family: "Source Sans Pro", sans-serif;
 }
-/* .col-lg-3 .col-md-3 .col-sm-6 .col-6 {
-  padding: 3%;
-} */
 .orgainisingTeamCard {
   margin: 3% 0%;
+  border-radius: 50%;
 }
 .orgainisingTeamMember {
-  width: 100%;
-  /* border: 2px solid #fff; */
-  border-radius: 10px;
-  padding: 10%;
+  width: 80%;
+  /* background-color: #70ff00; */
+  /* filter: drop-shadow(0 0 20px #fff); */
+  border-radius: 50%;
 }
 /* @media (min-width: 300px) and (max-width: 580px) {
 
@@ -647,3 +663,84 @@ canvas {
 /*
   Timeline Pranav ends here
 */
+
+.AboutUs{
+  height: 90vh;
+}
+
+.aboutUsHead{
+  color: yellow;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+.container1 {
+  width: 40%;
+  height: 80%;
+  position: relative;
+  margin-left: 15%;
+}
+.box{
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+.stack-top{
+  width: 90%;
+  height: 80%;
+  z-index: 9;
+  left:80%;
+  margin-top: 9%;
+  border: 7px solid red;
+}
+
+.aboutHackUsict{
+height: 100%;
+width: 100%;
+padding: 20px;
+z-index: 20;
+color: white;
+}
+
+.aboutHackUsict h2{
+  font-weight: 900;
+  font-size: 40px;
+}
+
+
+
+
+/**********FOOTER***********************/
+
+.foot{
+/* background: linear-gradient(180deg, #F27705 0%, #DA3D0B 100%); */
+/* background-color: red; */
+color: black;
+background: linear-gradient(180deg,#DA0B0B 0%, #FD0000 100% ) !important;
+}
+
+.foot i{
+  color: white;
+}
+.foot li a{
+  color: black;
+}
+.foot .fb:hover{
+  color: blue;
+}
+
+.foot .yt:hover{
+  color: red;
+}
+
+.foot .insta:hover{
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+   background-clip: text;
+    text-fill-color: transparent;
+}
+
+.foot .mail:hover{
+  color: black ;
+}
