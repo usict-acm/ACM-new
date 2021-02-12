@@ -10,17 +10,28 @@ body {
 /* ----------NavBar hackathon page ---------- */
 
 .nav {
-  background-color: black;
   font-size: 1.1rem;
 }
 
 .nav-link {
   color: #e8e3e3;
   padding: 20px;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
 }
 
 .nav-link:hover {
   color: red;
+  border-bottom: 3px solid red;
+}
+
+.nav-link.active::after{
+  color: red;
+  border-bottom: 3px solid red;
+}
+
+.black-bg{
+  background-color: black;
 }
 
 .nav-item {
