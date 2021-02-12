@@ -870,3 +870,100 @@ span.team-text {
     font-weight: 400;
   }
 }
+/* ******************************Registration****************************** */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #000;
+  font-family: "Raleway";
+}
+.tabs {
+  width: 80%;
+  padding: 30px 20px;
+  background: linear-gradient(180deg, #070707 0%, rgba(33, 33, 33, 0.92) 100%);
+  margin: 0 auto;
+  /* box-shadow: 5px 5px 10px 5px #ccc; */
+  filter: drop-shadow(0 0 20px #70ff00);
+  overflow: hidden;
+}
+.tabs .tab-header {
+  float: left;
+  width: 40%;
+  height: 100%;
+  border-right: 2px solid #70ff00;
+  padding: 50px 5px;
+}
+.tab-header-content-div {
+  display: inline-block;
+  padding: 5px;
+}
+.tab-header-icon-div {
+  width: 100px !important;
+  height: 65px !important;
+  background-color: #000;
+  border-radius: 10px;
+  margin: auto 10px;
+}
+.tab-header-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.tab-header-content {
+  display: block;
+  font-size: 14px;
+  margin-left: 20px;
+}
+.tabs .tab-header > div:hover,
+.tabs .tab-header > div.active {
+  background-color: #70ff00;
+}
+.tabs .tab-header > div {
+  height: 120px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  padding-left: 10px;
+  margin: 20px;
+}
+.tabs .tab-content {
+  position: relative;
+  width: 500px;
+  height: 100%;
+  margin: 0 auto;
+}
+.tabs .tab-content > div > i {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: #70ff00;
+  color: #000;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+}
+.tabs .tab-content > div {
+  position: absolute;
+  text-align: center;
+  padding: 40px 20px;
+  top: -500px;
+  transition: all 1000ms ease-in-out;
+}
+.tabs .tab-content > div.active {
+  top: 20px;
+}
+.tabs .tab-indicator {
+  position: relative;
+  width: 7px;
+  height: 120px;
+  background: #70ff00;
+  /* left: 40%; */
+  top: 70px;
+  transition: all 500ms ease-in-out;
+}
