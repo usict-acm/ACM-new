@@ -969,7 +969,7 @@ body {
 }
 
 /*
-    Common 
+    Common
 */
 
 .wizard,
@@ -1293,4 +1293,68 @@ body {
 
 .tabcontrol > .content > .body ul > li {
   display: list-item;
+}
+
+
+
+
+/* ****************************FAQ*********************************************** */
+
+.panel-group .panel {
+        border-radius: 0;
+        box-shadow: none;
+        border-color: #EEEEEE;
+    }
+
+.faq h1{
+  font-family: "Ruda", sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+    .panel-default .panel-heading {
+        padding: 0;
+        border-radius: 0;
+        color: white;
+        background-color: black;
+        border: 3px solid green;
+        border-radius: 1rem;
+        margin: 0.5rem 0;
+
+    }
+
+    .panel-title {
+        font-size: 1rem;
+    }
+
+    .panel-title a {
+      text-align: left;
+        display: block;
+        padding: 0.5rem;
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+    }
+
+    .more-less {
+        float: right;
+        color: white;
+    }
+
+
+.panel-body{
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+
+}
+.panel-heading:hover{
+  background-color: green;
+}
+
+.panel-heading h4{
+  margin: 0.5rem 1rem;
 }
