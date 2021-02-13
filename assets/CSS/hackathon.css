@@ -310,6 +310,7 @@
     font-size: 2.8rem;
     text-align: center;
     padding: 1.5rem;
+    padding-top: 7rem;
   }
 
   .themeBox {
@@ -1648,85 +1649,86 @@ body {
   margin: 0.5rem 1rem;
 }
 
-
-
 /* *********************************************************************SPONSORS */
 
-.sponsorDiv{
+.sponsorDiv {
   text-align: center;
 }
 
-.sponsorDiv h1{
+.sponsorDiv h1 {
   font-family: "Ruda", sans-serif;
-  color: #FF00B8;
+  color: #ff00b8;
 }
-.sponsors{
-
+.sponsors {
   height: 9rem;
   padding: 0;
   margin: 0.5rem 0;
 }
 
-.sponsorData{
+.sponsorData {
   width: 70%;
-  border: 3px #B1BE17  solid;
+  border: 3px #b1be17 solid;
   height: 9rem;
   margin: auto;
 }
 
-.sponsorData img{
+.sponsorData img {
   height: 6rem;
-  margin: 0.3rem
+  margin: 0.3rem;
 }
-.sponsorData h4{
-  color: #00E0FF;
-
+.sponsorData h4 {
+  color: #00e0ff;
 }
-@media screen and (min-width:992px){
-  .one{
+@media screen and (min-width: 992px) {
+  .one {
     border-top-left-radius: 2rem;
   }
-  .four{
+  .four {
     border-top-right-radius: 2rem;
   }
-  .nine{
+  .nine {
     border-bottom-left-radius: 2rem;
   }
-  .twelve{
+  .twelve {
     border-bottom-right-radius: 2rem;
   }
-
 }
-@media screen and (min-width:768px) and (max-width:991px){
-  .one{
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .one {
     border-top-left-radius: 2rem;
   }
-  .three{
+  .three {
     border-top-right-radius: 2rem;
   }
-  .ten{
+  .ten {
     border-bottom-left-radius: 2rem;
   }
-  .twelve{
+  .twelve {
     border-bottom-right-radius: 2rem;
   }
-
 }
 
-@media screen and (max-width:767px){
-  .one, .five, .nine{
+@media screen and (max-width: 767px) {
+  .one,
+  .five,
+  .nine {
     border-top-left-radius: 2rem;
   }
-  .two, .six, .ten{
+  .two,
+  .six,
+  .ten {
     border-top-right-radius: 2rem;
   }
-  .three, .seven, .eleven{
+  .three,
+  .seven,
+  .eleven {
     border-bottom-left-radius: 2rem;
   }
-  .four,.eight,.twelve{
+  .four,
+  .eight,
+  .twelve {
     border-bottom-right-radius: 2rem;
   }
-
 }
 
 /* SPonsors ENDED********************************************************************************************/
