@@ -3,9 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ruda:wght@500&display=swap");
 
-body {
-  background-color: black;
-}
 
 /* ----------NavBar hackathon page ---------- */
 
@@ -42,7 +39,7 @@ body {
 
 /* -----------Hero ------------*/
 
-canvas {
+.hero-canvas {
   position: absolute;
   height: 100vh;
   width: 98.5vw;
@@ -108,6 +105,13 @@ canvas {
   display: block;
 }
 
+.backgroundcanvas{
+  width: 100%;
+  min-height: 100vh;
+  z-index: -2;
+
+}
+
 #countdown {
   margin-top: 3%;
   text-align: center;
@@ -145,7 +149,7 @@ canvas {
 /* ----------theme hackathon page ----------*/
 
 .themeHackhathon {
-  background-color: black;
+  /* background-color: black; */
   font-family: "Ruda", sans-serif;
 }
 
@@ -168,7 +172,7 @@ canvas {
 .themeBoxContent {
   border: #00ff47 solid 3.5px;
   border-radius: 4%;
-  background-color: black;
+  /* background-color: black; */
   color: white;
   width: 85%;
   margin: 30px;
@@ -316,7 +320,7 @@ canvas {
 
 .prizes {
   margin-top: 100px;
-  background-color: black;
+  /* background-color: black; */
   text-align: center;
   font-family: "Ruda", sans-serif;
 }
@@ -902,7 +906,7 @@ body {
 .tab-header-icon-div {
   width: 100px !important;
   height: 65px !important;
-  background-color: #000;
+  /* background-color: #000; */
   border-radius: 10px;
   margin: auto 10px;
 }
@@ -1319,7 +1323,7 @@ body {
         padding: 0;
         border-radius: 0;
         color: white;
-        background-color: black;
+        /* background-color: black; */
         border: 3px solid green;
         border-radius: 1rem;
         margin: 0.5rem 0;
