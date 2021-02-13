@@ -156,7 +156,7 @@ body {
 
 #themeHackhathonHeader {
   color: #ff00b8;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   padding: 0.7rem;
   padding-top: 3rem;
   text-align: center;
@@ -991,6 +991,10 @@ body {
   width:98%;
 }
 
+.show_below_786{
+  display: none;
+}
+
 @media (max-width:786px) {
   .aboutHackUsict h2{
     font-size: 1.3rem;
@@ -1002,6 +1006,10 @@ body {
 
   .aboutUsHead{
     font-size: 1.5rem;
+  }
+
+  .show_below_786{
+    display: block;
   }
 }
 
