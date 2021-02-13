@@ -1652,9 +1652,6 @@ body {
 
 /* *********************************************************************SPONSORS */
 
-.container-fluid{
-  height: 100vh;
-}
 .sponsorDiv{
   text-align: center;
 }
