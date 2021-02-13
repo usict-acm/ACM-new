@@ -2,9 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ruda:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 /* ----------NavBar hackathon page ---------- */
-
+body {
+  background-color: #000;
+}
 .nav {
   font-size: 1.1rem;
 }
@@ -1147,7 +1150,7 @@ span.team-text {
   }
 }
 /* ******************************Registration****************************** */
-
+/* 
 * {
   box-sizing: border-box;
 }
@@ -1160,7 +1163,6 @@ body {
   padding: 30px 20px;
   background: linear-gradient(180deg, #070707 0%, rgba(33, 33, 33, 0.92) 100%);
   margin: 0 auto;
-  /* box-shadow: 5px 5px 10px 5px #ccc; */
   filter: drop-shadow(0 0 20px #70ff00);
   overflow: hidden;
 }
@@ -1178,7 +1180,6 @@ body {
 .tab-header-icon-div {
   width: 100px !important;
   height: 65px !important;
-  /* background-color: #000; */
   border-radius: 10px;
   margin: auto 10px;
 }
@@ -1239,10 +1240,9 @@ body {
   width: 7px;
   height: 120px;
   background: #70ff00;
-  /* left: 40%; */
   top: 70px;
   transition: all 500ms ease-in-out;
-}
+} */
 
 /*
     Common
@@ -1345,7 +1345,7 @@ body {
 .wizard > .steps .current a,
 .wizard > .steps .current a:hover,
 .wizard > .steps .current a:active {
-  background: #70ff00;
+  background: #08b339;
   /* filter: drop-shadow(0 0 10px #70ff00); */
   color: #fff;
   cursor: default;
@@ -1463,7 +1463,7 @@ body {
 .wizard > .actions a,
 .wizard > .actions a:hover,
 .wizard > .actions a:active {
-  background: #70ff00;
+  background: #08b339;
   color: #000;
   display: block;
   padding: 0.5em 1em;
@@ -1474,7 +1474,7 @@ body {
 }
 
 .wizard > .actions:hover {
-  filter: drop-shadow(0 0 10px #70ff00);
+  filter: drop-shadow(0 0 10px #08b339);
   /* color: #000;
   display: block;
   padding: 0.5em 1em;
@@ -1585,10 +1585,23 @@ body {
   background-color: #000;
   margin-top: 6rem;
   padding: 3rem 1rem;
-  /* border: 5px solid #70ff00; */
-  filter: drop-shadow(0 0 20px #70ff00);
+  /* border: 5px solid #08b339; */
+  filter: drop-shadow(0 0 20px #08b339);
 }
+.registration-heading {
+  text-align: left;
+}
+.registration-heading h1 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 41px;
 
+  color: #ffffff;
+}
+.registration-heading p {
+}
 /* ****************************FAQ*********************************************** */
 
 .panel-group .panel {
@@ -1648,85 +1661,86 @@ body {
   margin: 0.5rem 1rem;
 }
 
-
-
 /* *********************************************************************SPONSORS */
 
-.sponsorDiv{
+.sponsorDiv {
   text-align: center;
 }
 
-.sponsorDiv h1{
+.sponsorDiv h1 {
   font-family: "Ruda", sans-serif;
-  color: #FF00B8;
+  color: #ff00b8;
 }
-.sponsors{
-
+.sponsors {
   height: 9rem;
   padding: 0;
   margin: 0.5rem 0;
 }
 
-.sponsorData{
+.sponsorData {
   width: 70%;
-  border: 3px #B1BE17  solid;
+  border: 3px #b1be17 solid;
   height: 9rem;
   margin: auto;
 }
 
-.sponsorData img{
+.sponsorData img {
   height: 6rem;
-  margin: 0.3rem
+  margin: 0.3rem;
 }
-.sponsorData h4{
-  color: #00E0FF;
-
+.sponsorData h4 {
+  color: #00e0ff;
 }
-@media screen and (min-width:992px){
-  .one{
+@media screen and (min-width: 992px) {
+  .one {
     border-top-left-radius: 2rem;
   }
-  .four{
+  .four {
     border-top-right-radius: 2rem;
   }
-  .nine{
+  .nine {
     border-bottom-left-radius: 2rem;
   }
-  .twelve{
+  .twelve {
     border-bottom-right-radius: 2rem;
   }
-
 }
-@media screen and (min-width:768px) and (max-width:991px){
-  .one{
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .one {
     border-top-left-radius: 2rem;
   }
-  .three{
+  .three {
     border-top-right-radius: 2rem;
   }
-  .ten{
+  .ten {
     border-bottom-left-radius: 2rem;
   }
-  .twelve{
+  .twelve {
     border-bottom-right-radius: 2rem;
   }
-
 }
 
-@media screen and (max-width:767px){
-  .one, .five, .nine{
+@media screen and (max-width: 767px) {
+  .one,
+  .five,
+  .nine {
     border-top-left-radius: 2rem;
   }
-  .two, .six, .ten{
+  .two,
+  .six,
+  .ten {
     border-top-right-radius: 2rem;
   }
-  .three, .seven, .eleven{
+  .three,
+  .seven,
+  .eleven {
     border-bottom-left-radius: 2rem;
   }
-  .four,.eight,.twelve{
+  .four,
+  .eight,
+  .twelve {
     border-bottom-right-radius: 2rem;
   }
-
 }
 
 /* SPonsors ENDED********************************************************************************************/
