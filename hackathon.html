@@ -241,7 +241,7 @@
 
     <!-- theme hackathon page -->
 
-    <div class="themeHackhathon">
+    <div class="themeHackhathon" id="themesHack">
       <div id="themeHackhathonHeaderDiv">
         <h1 id="themeHackhathonHeader">get(ProblemStatement);</h1>
       </div>
@@ -344,7 +344,7 @@
 
     <!-- prizes hackathon  -->
 
-  <div class="prizes">
+  <div class="prizes" id="perks">
     <!-- podium and medals -->
     <!-- <div class="prizeSecond">prize</div>
     <div class="prizeFirst">prize</div>
@@ -796,20 +796,32 @@
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
   <script>
   VANTA.NET({
-    el: "#your-element-selector",
+    el: "#about",
     mouseControls: true,
-    touchControls: true,
-    gyroControls: false,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    scale: 1.00,
-    scaleMobile: 1.00,
-    color: 0xcfc9ea,
-    backgroundColor: 0x0,
-    points: 15.00,
-    maxDistance: 25.00,
-    spacing: 11.00
-  })
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  backgroundColor: 0x0,
+  spacing: 19.00
+
+});
+VANTA.NET({
+  el: "#perks",
+  mouseControls: true,
+touchControls: true,
+gyroControls: false,
+minHeight: 200.00,
+minWidth: 200.00,
+scale: 1.00,
+scaleMobile: 1.00,
+backgroundColor: 0x0,
+spacing: 19.00
+
+});
+
   </script>
 
 </html>

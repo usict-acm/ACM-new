@@ -1353,7 +1353,7 @@ body {
   color: white;
   font-family: 'Lato', sans-serif;
   font-weight: lighter;
-
+  text-align: justify;
 }
 .panel-heading:hover{
   background-color: green;
