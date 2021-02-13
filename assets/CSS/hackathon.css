@@ -984,7 +984,25 @@ body {
 
 .aboutHackUsict h2 {
   font-weight: 900;
-  font-size: 40px;
+  font-size: 3rem;
+}
+
+#about{
+  width:98%;
+}
+
+@media (max-width:786px) {
+  .aboutHackUsict h2{
+    font-size: 1.3rem;
+  }
+
+  .aboutHackUsict p{
+    font-size: 10px;
+  }
+
+  .aboutUsHead{
+    font-size: 1.5rem;
+  }
 }
 
 /**********Contact form start***********************/
@@ -1151,7 +1169,7 @@ span.team-text {
   }
 }
 /* ******************************Registration****************************** */
-/* 
+/*
 * {
   box-sizing: border-box;
 }
