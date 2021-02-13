@@ -1647,3 +1647,89 @@ body {
 .panel-heading h4 {
   margin: 0.5rem 1rem;
 }
+
+
+
+/* *********************************************************************SPONSORS */
+
+.container-fluid{
+  height: 100vh;
+}
+.sponsorDiv{
+  text-align: center;
+}
+
+.sponsorDiv h1{
+  font-family: "Ruda", sans-serif;
+  color: #FF00B8;
+}
+.sponsors{
+
+  height: 9rem;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.sponsorData{
+  width: 70%;
+  border: 3px #B1BE17  solid;
+  height: 9rem;
+  margin: auto;
+}
+
+.sponsorData img{
+  height: 6rem;
+  margin: 0.3rem
+}
+.sponsorData h4{
+  color: #00E0FF;
+
+}
+@media screen and (min-width:992px){
+  .one{
+    border-top-left-radius: 2rem;
+  }
+  .four{
+    border-top-right-radius: 2rem;
+  }
+  .nine{
+    border-bottom-left-radius: 2rem;
+  }
+  .twelve{
+    border-bottom-right-radius: 2rem;
+  }
+
+}
+@media screen and (min-width:768px) and (max-width:991px){
+  .one{
+    border-top-left-radius: 2rem;
+  }
+  .three{
+    border-top-right-radius: 2rem;
+  }
+  .ten{
+    border-bottom-left-radius: 2rem;
+  }
+  .twelve{
+    border-bottom-right-radius: 2rem;
+  }
+
+}
+
+@media screen and (max-width:767px){
+  .one, .five, .nine{
+    border-top-left-radius: 2rem;
+  }
+  .two, .six, .ten{
+    border-top-right-radius: 2rem;
+  }
+  .three, .seven, .eleven{
+    border-bottom-left-radius: 2rem;
+  }
+  .four,.eight,.twelve{
+    border-bottom-right-radius: 2rem;
+  }
+
+}
+
+/* SPonsors ENDED********************************************************************************************/
