@@ -1025,6 +1025,7 @@ body {
   display: inline;
   float: left;
   width: 30%;
+  margin-top: 45px;
 }
 
 .wizard > .steps .number {
@@ -1062,14 +1063,14 @@ body {
 .wizard > .steps .disabled a:hover,
 .wizard > .steps .disabled a:active {
   background: #eee;
-  color: #aaa;
+  color: #555353;
   cursor: default;
 }
-
 .wizard > .steps .current a,
 .wizard > .steps .current a:hover,
 .wizard > .steps .current a:active {
-  background: #2184be;
+  background: #70ff00;
+  /* filter: drop-shadow(0 0 10px #70ff00); */
   color: #fff;
   cursor: default;
 }
@@ -1077,8 +1078,8 @@ body {
 .wizard > .steps .done a,
 .wizard > .steps .done a:hover,
 .wizard > .steps .done a:active {
-  background: #9dc8e2;
-  color: #fff;
+  background: #d0ffad;
+  color: #000;
 }
 
 .wizard > .steps .error a,
@@ -1089,13 +1090,13 @@ body {
 }
 
 .wizard > .content {
-  background: #eee;
   display: block;
   margin: 0.5em;
-  min-height: 35em;
+  min-height: 25em;
   overflow: hidden;
   position: relative;
   width: auto;
+  color: #fff;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -1111,8 +1112,8 @@ body {
 .wizard > .content > .body {
   float: left;
   position: absolute;
-  width: 95%;
-  height: 95%;
+  width: 100%;
+  height: 100%;
   padding: 2.5%;
 }
 
@@ -1167,7 +1168,7 @@ body {
   display: inline;
   float: right;
   margin: 0 2.5%;
-  width: 95%;
+  width: 20%;
 }
 
 .wizard > .actions > ul {
@@ -1186,8 +1187,8 @@ body {
 .wizard > .actions a,
 .wizard > .actions a:hover,
 .wizard > .actions a:active {
-  background: #2184be;
-  color: #fff;
+  background: #70ff00;
+  color: #000;
   display: block;
   padding: 0.5em 1em;
   text-decoration: none;
@@ -1196,11 +1197,21 @@ body {
   border-radius: 5px;
 }
 
+.wizard > .actions:hover {
+  filter: drop-shadow(0 0 10px #70ff00);
+  /* color: #000;
+  display: block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; */
+}
 .wizard > .actions .disabled a,
 .wizard > .actions .disabled a:hover,
 .wizard > .actions .disabled a:active {
   background: #eee;
-  color: #aaa;
+  color: #555353;
 }
 
 .wizard > .loading {
@@ -1293,4 +1304,10 @@ body {
 
 .tabcontrol > .content > .body ul > li {
   display: list-item;
+}
+.registration-div {
+  background-color: #000;
+  padding: 3rem 1rem;
+  /* border: 5px solid #70ff00; */
+  filter: drop-shadow(0 0 20px #70ff00);
 }
