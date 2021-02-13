@@ -3,10 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ruda:wght@500&display=swap");
 
-body {
-  background-color: black;
-}
-
 /* ----------NavBar hackathon page ---------- */
 
 .nav {
@@ -42,7 +38,7 @@ body {
 
 /* -----------Hero ------------*/
 
-canvas {
+.hero-canvas {
   position: absolute;
   height: 100vh;
   width: 98.5vw;
@@ -108,6 +104,12 @@ canvas {
   display: block;
 }
 
+.backgroundcanvas {
+  width: 100%;
+  min-height: 100vh;
+  z-index: -2;
+}
+
 #countdown {
   margin-top: 3%;
   text-align: center;
@@ -145,7 +147,7 @@ canvas {
 /* ----------theme hackathon page ----------*/
 
 .themeHackhathon {
-  background-color: black;
+  /* background-color: black; */
   font-family: "Ruda", sans-serif;
 }
 
@@ -168,7 +170,7 @@ canvas {
 .themeBoxContent {
   border: #00ff47 solid 3.5px;
   border-radius: 4%;
-  background-color: black;
+  /* background-color: black; */
   color: white;
   width: 85%;
   margin: 30px;
@@ -316,7 +318,7 @@ canvas {
 
 .prizes {
   margin-top: 100px;
-  background-color: black;
+  /* background-color: black; */
   text-align: center;
   font-family: "Ruda", sans-serif;
 }
@@ -902,7 +904,7 @@ body {
 .tab-header-icon-div {
   width: 100px !important;
   height: 65px !important;
-  background-color: #000;
+  /* background-color: #000; */
   border-radius: 10px;
   margin: auto 10px;
 }
@@ -969,7 +971,7 @@ body {
 }
 
 /*
-    Common 
+    Common
 */
 
 .wizard,
@@ -1307,7 +1309,67 @@ body {
 }
 .registration-div {
   background-color: #000;
+  margin-top: 6rem;
   padding: 3rem 1rem;
   /* border: 5px solid #70ff00; */
   filter: drop-shadow(0 0 20px #70ff00);
+}
+
+/* ****************************FAQ*********************************************** */
+
+.panel-group .panel {
+  border-radius: 0;
+  box-shadow: none;
+  border-color: #eeeeee;
+}
+
+.faq h1 {
+  font-family: "Ruda", sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.panel-default .panel-heading {
+  padding: 0;
+  border-radius: 0;
+  color: white;
+  /* background-color: black; */
+  border: 3px solid green;
+  border-radius: 1rem;
+  margin: 0.5rem 0;
+}
+
+.panel-title {
+  font-size: 1rem;
+}
+
+.panel-title a {
+  text-align: left;
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.more-less {
+  float: right;
+  color: white;
+}
+
+.panel-body {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-weight: lighter;
+  text-align: justify;
+}
+.panel-heading:hover {
+  background-color: green;
+}
+
+.panel-heading h4 {
+  margin: 0.5rem 1rem;
 }
