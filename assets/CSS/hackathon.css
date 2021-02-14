@@ -1143,7 +1143,7 @@ span.team-text {
   .p-md-5 {
     padding: 3rem !important;
   }
-
+}
   /**********Contact form ends***********************/
 
   /**********FOOTER***********************/
@@ -1157,6 +1157,11 @@ span.team-text {
   .foot i {
     color: white;
   }
+
+
+    .foot li a {
+      color: #ffda29;
+    }
   .foot li a:hover {
     color: #ffda29;
   }
@@ -1173,9 +1178,9 @@ span.team-text {
 
   .footPara {
     color: black;
-    font-weight: 400;
+    font-weight: 600;
   }
-}
+
 /* ******************************Registration****************************** */
 /*
 * {
@@ -1679,9 +1684,10 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: lighter;
   text-align: justify;
+  text-shadow: 1px 1px green;
 }
 .panel-heading:hover {
-  background-color: green;
+  background-color: gree;
 }
 
 .panel-heading h4 {
@@ -1753,21 +1759,26 @@ body {
   .five,
   .nine {
     border-top-left-radius: 2rem;
+    margin-top: 1rem;
   }
   .two,
   .six,
   .ten {
     border-top-right-radius: 2rem;
+    margin-top: 1rem;
   }
   .three,
   .seven,
   .eleven {
+    margin-top: 0.5rem;
     border-bottom-left-radius: 2rem;
+
   }
   .four,
   .eight,
   .twelve {
     border-bottom-right-radius: 2rem;
+  margin-top: 0.5rem;
   }
 }
 
