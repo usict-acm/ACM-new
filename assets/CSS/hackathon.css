@@ -1697,6 +1697,7 @@ body {
 .sponsorDiv h1 {
   font-family: "Ruda", sans-serif;
   color: #ff00b8;
+  margin: 0.5rem;
 }
 .sponsors {
   height: 9rem;
@@ -1705,7 +1706,7 @@ body {
 }
 
 .sponsorData {
-  width: 70%;
+  width: 80%;
   border: 3px #b1be17 solid;
   height: 9rem;
   margin: auto;
