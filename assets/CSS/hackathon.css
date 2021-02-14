@@ -1905,7 +1905,10 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: lighter;
   text-align: justify;
+  box-shadow: 2px -3px 11px 0px green;
+  padding: 1rem;
   text-shadow: 1px 1px green;
+  border-radius: 1rem;
 }
 .panel-heading:hover {
   background-color: green;
