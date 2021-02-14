@@ -10,7 +10,7 @@ body {
 }
 
 html {
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
 }
 
 .nav {
@@ -1703,7 +1703,7 @@ body {
   text-shadow: 1px 1px green;
 }
 .panel-heading:hover {
-  background-color: gree;
+  background-color: green;
 }
 
 .panel-heading h4 {
