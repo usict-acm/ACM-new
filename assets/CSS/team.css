@@ -124,14 +124,16 @@ section {
 .uheading {
   font-size: 36px;
   font-weight: bold;
+  color: #0776ad;
 }
 .lheading {
   font-size: 36px;
 }
 @media (min-width: 300px) and (max-width: 580px) {
   .uheading {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: bold;
+    color: #0776ad;
   }
   .lheading {
     font-size: 20px;
@@ -147,6 +149,7 @@ section {
   .uheading {
     font-size: 26px;
     font-weight: bold;
+    color: #0776ad;
   }
   .lheading {
     font-size: 26px;
@@ -183,6 +186,16 @@ section {
 }
 
 .flip-card {
+  width: 260px !important;
+  height: 300px;
+  margin: 3% 1%;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+  perspective: 1000px;
+}
+
+.flip-card-without-hover {
   width: 260px !important;
   height: 300px;
   margin: 3% 1%;
@@ -581,8 +594,9 @@ section {
 
 @media (min-width: 200px) and (max-width: 580px) {
   .uheading {
-    font-size: 16px;
+    font-size: 22px;
     font-weight: bold;
+    color: #0776ad;
   }
   .lheading {
     font-size: 16px;
@@ -593,6 +607,12 @@ section {
   .pt-card {
     margin-top: 7%;
     margin-bottom: -40%;
+  }
+  .collab-main-heading {
+    font-size: 26px;
+  }
+  .card-name {
+    font-size: 20px;
   }
 }
 
