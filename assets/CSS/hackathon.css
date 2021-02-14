@@ -727,6 +727,7 @@ html {
   font-size: 2.7rem;
   line-height: 73px;
   text-align: center;
+  /* margin-bottom: 7%; */
 
   color: #70ff00;
 }
@@ -773,7 +774,7 @@ html {
   font-family: Ruda;
 }
 .orgainisingTeamCard {
-  margin: 1.5% 0%;
+  /* margin-top: -10%; */
 }
 .orgainisingTeamMember {
   width: 80%;
@@ -904,14 +905,15 @@ html {
     margin: 12% 0;
   }
   .organisingTeamMainHeading {
-    font-family: Ruda;
+    display: none;
+    /* font-family: Ruda;
     font-style: normal;
     font-weight: normal;
     font-size: 1.7rem;
     line-height: 50px;
     text-align: center;
 
-    color: #70ff00;
+    color: #70ff00; */
   }
   .leftHeadingDiv {
     display: flex !important;
@@ -919,14 +921,14 @@ html {
   }
   .orgainisingTeamLeftHeadingCard {
     display: inline-block;
-    border: 3px solid #ff00b8;
+    border: 3px solid #70ff00;
     border-radius: 10px;
     margin-bottom: 7%;
   }
   .orgainisingTeamLeftHeading {
     height: 20%;
-    color: #ff00b8;
-    font-size: 1.2rem;
+    color: #70ff00;
+    font-size: 1rem;
     font-weight: bold;
     padding: 0.5rem 1rem;
     text-align: center;
@@ -938,14 +940,14 @@ html {
   }
   .orgainisingTeamRightHeadingCard {
     display: inline-block;
-    border: 3px solid #ff00b8;
+    border: 3px solid #70ff00;
     border-radius: 10px;
     margin-bottom: 7%;
   }
   .orgainisingTeamRightHeading {
     height: 20%;
-    color: #ff00b8;
-    font-size: 1.2rem;
+    color: #70ff00;
+    font-size: 1rem;
     font-weight: bold;
     padding: 0.5rem 1rem;
     text-align: center;
@@ -1299,7 +1301,7 @@ span.team-text {
 
 @media (max-width: 600px) {
   .team-text {
-    font-size: 1em;
+    font-size: 0.8em;
   }
   .team-img {
     width: 30vw;

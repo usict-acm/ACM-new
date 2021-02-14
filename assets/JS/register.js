@@ -23,10 +23,50 @@
 
 $( document ).ready(function() {
   console.log( "ready!" );
-  $("#example-vertical").steps({
+  $("#my-form").steps({
     headerTag: "h3",
     bodyTag: "section",
     transitionEffect: "slideLeft",
-    stepsOrientation: "vertical"
+    stepsOrientation: "vertical",
+    onFinished: function (event, currentIndex)
+    {
+      // console.log(form.serialize());
+        $("#my-form").submit();
+        console.log("done");
+    }
   });
 });
+
+
+
+
+// var form = $("#my-form");
+// form.validate({
+//     errorPlacement: function errorPlacement(error, element) { element.before(error); },
+//     rules: {
+//         confirm: {
+//             equalTo: "#password"
+//         }
+//     }
+// });
+// form.children("div").steps({
+//     headerTag: "h3",
+//     bodyTag: "section",
+//     transitionEffect: "slideLeft",
+//     onStepChanging: function (event, currentIndex, newIndex)
+//     {
+//         form.validate().settings.ignore = ":disabled,:hidden";
+//         return form.valid();
+//     },
+//     onFinishing: function (event, currentIndex)
+//     {
+//         form.validate().settings.ignore = ":disabled";
+//         return form.valid();
+//     },
+//     onFinished: function (event, currentIndex)
+//     {
+//         form.submit();
+//     }
+// });
+
+
