@@ -95,7 +95,7 @@ html {
   padding-left: 2rem;
   padding-right: 2rem;
   font-size: 2rem;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .blink_me {
@@ -717,15 +717,22 @@ html {
 }
 
 /* ************************************ Organising Team ******************************************** */
+.orgainisingTeamContainer {
+  margin: 7% 0;
+}
 .organisingTeamMainHeading {
   font-family: Ruda;
   font-style: normal;
   font-weight: normal;
-  font-size: 60px;
+  font-size: 2.7rem;
   line-height: 73px;
   text-align: center;
 
   color: #70ff00;
+}
+.leftHeadingDiv {
+  display: flex !important;
+  justify-content: flex-start !important;
 }
 .orgainisingTeamLeftHeadingCard {
   display: inline-block;
@@ -738,11 +745,15 @@ html {
 .orgainisingTeamLeftHeading {
   height: 20%;
   color: #70ff00;
-  font-size: 32px;
+  font-size: 1.5rem;
   font-weight: bold;
-  padding: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
   text-align: right;
   font-family: Ruda;
+}
+.rightHeadingDiv {
+  display: flex !important;
+  justify-content: flex-end !important;
 }
 .orgainisingTeamRightHeadingCard {
   display: inline-block;
@@ -751,31 +762,226 @@ html {
   border-radius: 10px;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-  text-align: right;
-  /* float: inline-end; */
 }
 .orgainisingTeamRightHeading {
   height: 20%;
   color: #70ff00;
-  font-size: 32px;
+  font-size: 1.5rem;
   font-weight: bold;
-  padding: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
   text-align: left;
   font-family: Ruda;
 }
 .orgainisingTeamCard {
-  margin: 3% 0%;
-  border-radius: 50%;
+  margin: 1.5% 0%;
 }
 .orgainisingTeamMember {
   width: 80%;
-  /* background-color: #70ff00; */
-  /* filter: drop-shadow(0 0 20px #fff); */
   border-radius: 50%;
 }
-/* @media (min-width: 300px) and (max-width: 580px) {
+.images img {
+  width: 60%;
+  height: 60%;
+  border-radius: 100%;
+  border-bottom-right-radius: 0;
+  transform: rotate(45deg);
+  border: solid 5px #0297ff;
+  box-shadow: 2px 2px 4px grey;
+  transition: all 0.5s ease;
+}
 
-} */
+.images {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+
+.images h4 {
+  margin-top: 2.5rem;
+  color: #0297ff;
+  text-shadow: 1px 1px 2px grey;
+  font-size: 1.4rem;
+}
+
+.images h5 {
+  font-size: 1rem;
+}
+@media (min-width: 580px) and (max-width: 780px) {
+  .orgainisingTeamContainer {
+    margin: 7% 0;
+  }
+  .organisingTeamMainHeading {
+    font-family: Ruda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.2rem;
+    line-height: 73px;
+    text-align: center;
+
+    color: #70ff00;
+  }
+  .leftHeadingDiv {
+    display: flex !important;
+    justify-content: flex-start !important;
+  }
+  .orgainisingTeamLeftHeadingCard {
+    display: inline-block;
+    border: 4px solid #70ff00;
+    border-left: none;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    margin-bottom: 4%;
+  }
+  .orgainisingTeamLeftHeading {
+    height: 20%;
+    color: #70ff00;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.8rem 1.2rem;
+    text-align: right;
+    font-family: Ruda;
+  }
+  .rightHeadingDiv {
+    display: flex !important;
+    justify-content: flex-end !important;
+  }
+  .orgainisingTeamRightHeadingCard {
+    display: inline-block;
+    border: 4px solid #70ff00;
+    border-right: none;
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    margin-bottom: 4%;
+  }
+  .orgainisingTeamRightHeading {
+    height: 20%;
+    color: #70ff00;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.8rem 1.2rem;
+    text-align: left;
+    font-family: Ruda;
+  }
+  .orgainisingTeamCard {
+    margin: 1.5% 0%;
+  }
+  .orgainisingTeamMember {
+    width: 80%;
+    border-radius: 50%;
+  }
+  .images img {
+    width: 60%;
+    height: 60%;
+    border-radius: 100%;
+    border-bottom-right-radius: 0;
+    transform: rotate(45deg);
+    border: solid 5px #0297ff;
+    box-shadow: 2px 2px 4px grey;
+    transition: all 0.5s ease;
+  }
+
+  .images {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .images h4 {
+    margin-top: 2.5rem;
+    color: #0297ff;
+    text-shadow: 1px 1px 2px grey;
+    font-size: 1.4rem;
+  }
+
+  .images h5 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 300px) and (max-width: 580px) {
+  .orgainisingTeamContainer {
+    margin: 12% 0;
+  }
+  .organisingTeamMainHeading {
+    font-family: Ruda;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.7rem;
+    line-height: 50px;
+    text-align: center;
+
+    color: #70ff00;
+  }
+  .leftHeadingDiv {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .orgainisingTeamLeftHeadingCard {
+    display: inline-block;
+    border: 3px solid #ff00b8;
+    border-radius: 10px;
+    margin-bottom: 7%;
+  }
+  .orgainisingTeamLeftHeading {
+    height: 20%;
+    color: #ff00b8;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-family: Ruda;
+  }
+  .rightHeadingDiv {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .orgainisingTeamRightHeadingCard {
+    display: inline-block;
+    border: 3px solid #ff00b8;
+    border-radius: 10px;
+    margin-bottom: 7%;
+  }
+  .orgainisingTeamRightHeading {
+    height: 20%;
+    color: #ff00b8;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-family: Ruda;
+  }
+  .orgainisingTeamCard {
+    margin: 1.5% 0%;
+  }
+  .images img {
+    width: 60%;
+    height: 60%;
+    border-radius: 100%;
+    border-bottom-right-radius: 0;
+    transform: rotate(45deg);
+    border: solid 5px #0297ff;
+    box-shadow: 2px 2px 4px grey;
+    transition: all 0.5s ease;
+  }
+
+  .images {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .images h4 {
+    margin-top: 2.5rem;
+    color: #0297ff;
+    text-shadow: 1px 1px 2px grey;
+    font-size: 1.4rem;
+  }
+
+  .images h5 {
+    font-size: 1rem;
+  }
+}
 
 /*
   Timeline Pranav starts here till 649
@@ -1003,28 +1209,28 @@ html {
   font-size: 3rem;
 }
 
-#about{
-  width:98%;
+#about {
+  width: 98%;
 }
 
-.show_below_786{
+.show_below_786 {
   display: none;
 }
 
-@media (max-width:786px) {
-  .aboutHackUsict h2{
+@media (max-width: 786px) {
+  .aboutHackUsict h2 {
     font-size: 1.3rem;
   }
 
-  .aboutHackUsict p{
+  .aboutHackUsict p {
     font-size: 10px;
   }
 
-  .aboutUsHead{
+  .aboutUsHead {
     font-size: 1.5rem;
   }
 
-  .show_below_786{
+  .show_below_786 {
     display: block;
   }
 }
@@ -1160,42 +1366,41 @@ span.team-text {
     padding: 3rem !important;
   }
 }
-  /**********Contact form ends***********************/
+/**********Contact form ends***********************/
 
-  /**********FOOTER***********************/
+/**********FOOTER***********************/
 
-  .foot {
-    /* color: black; */
-    color: #ffda29;
-    background-color: #b90b0b;
-  }
+.foot {
+  /* color: black; */
+  color: #ffda29;
+  background-color: #b90b0b;
+}
 
-  .foot i {
-    color: white;
-  }
+.foot i {
+  color: white;
+}
 
+.foot li a {
+  color: #ffda29;
+}
+.foot li a:hover {
+  color: #ffda29;
+}
 
-    .foot li a {
-      color: #ffda29;
-    }
-  .foot li a:hover {
-    color: #ffda29;
-  }
+.concept {
+  font-weight: 500;
+  color: white;
+}
 
-  .concept {
-    font-weight: 500;
-    color: white;
-  }
+.foot-head {
+  color: black;
+  font-weight: 700 !important;
+}
 
-  .foot-head {
-    color: black;
-    font-weight: 700 !important;
-  }
-
-  .footPara {
-    color: black;
-    font-weight: 600;
-  }
+.footPara {
+  color: black;
+  font-weight: 600;
+}
 
 /* ******************************Registration****************************** */
 /*
@@ -1788,13 +1993,12 @@ body {
   .eleven {
     margin-top: 0.5rem;
     border-bottom-left-radius: 2rem;
-
   }
   .four,
   .eight,
   .twelve {
     border-bottom-right-radius: 2rem;
-  margin-top: 0.5rem;
+    margin-top: 0.5rem;
   }
 }
 
