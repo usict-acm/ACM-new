@@ -8,6 +8,11 @@
 body {
   background-color: #000;
 }
+
+html {
+  scroll-behavior: smooth; 
+}
+
 .nav {
   font-size: 1.1rem;
 }
@@ -31,7 +36,7 @@ body {
 
 .black {
   background-color: black !important;
-  box-shadow: 0 2px 3px 0 red, 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 2px 2px 14px #70ff00;
 }
 
 .nav-item {
@@ -90,6 +95,17 @@ body {
   padding-left: 2rem;
   padding-right: 2rem;
   font-size: 2rem;
+  cursor:pointer;
+}
+
+.blink_me {
+  animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.3;
+  }
 }
 
 .font-red {
