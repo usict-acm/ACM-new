@@ -173,7 +173,6 @@ html {
 /* ----------theme hackathon page ----------*/
 
 .themeHackhathon {
-  /* background-color: black; */
   font-family: "Ruda", sans-serif;
 }
 
@@ -184,7 +183,6 @@ html {
   padding-top: 3rem;
   text-align: center;
   margin-bottom: 0;
-  /* margin-top: 100px; */
 }
 
 .themeBox {
@@ -196,11 +194,16 @@ html {
 .themeBoxContent {
   border: #00ff47 solid 2px;
   border-radius: 4%;
-  /* background-color: black; */
   color: white;
   width: 80%;
   margin: 15px;
   padding: 10px;
+  box-shadow: 0.6px 0.6px 3.5px 3.5px #ccf5d7;
+  cursor: pointer;
+}
+
+.themeBoxContent:hover {
+  box-shadow: 0.4px 0.4px 5.5px 5.5px #ccf5d7;
 }
 
 .themeBoxContentHeader {
@@ -232,7 +235,6 @@ html {
   #themeHackhathonHeader {
     font-size: 1.5rem;
     margin-bottom: 0;
-    /* margin-top: 100px; */
   }
 
   .themeBox {
@@ -243,6 +245,11 @@ html {
     margin: 15px;
     padding: 10px;
     width: 90%;
+    box-shadow: 0.6px 0.6px 3.5px 3.5px #ccf5d7;
+  }
+
+  .themeBoxContent:hover {
+    box-shadow: 0.4px 0.4px 5.5px 5.5px #ccf5d7;
   }
 
   .themeBoxContentHeader {
@@ -273,26 +280,21 @@ html {
   .themeBox {
     margin-left: 0px;
   }
-  /*
-  .col-lg-4,
-  .col-md-6 {
-    padding-right: 0;
-    padding-left: 0;
-  } */
-
-  /* .themeBoxContent {
-    width: 90%;
-    border: #00ff47 solid 5px;
-  } */
 
   .themeBoxContent {
     width: 90%;
     border: #00ff47 solid 3.5px;
     margin: 15px;
-    margin-left: 5px;
+    margin-left: 10px;
     margin-right: 5px;
     padding: 10px;
+    box-shadow: 0.6px 0.6px 3.5px 3.5px #ccf5d7;
   }
+
+  .themeBoxContent:hover {
+    box-shadow: 0.4px 0.4px 5.5px 5.5px #ccf5d7;
+  }
+
   .themeBoxContentHeader {
     font-size: 1.8rem;
     margin-top: 5px;
@@ -311,24 +313,6 @@ html {
     margin-top: 3px;
     padding-left: 8px;
   }
-
-  /* .themeBoxContentHeader {
-    font-size: 2.5rem;
-    margin-top: 10px;
-    padding: 0.7rem;
-  }
-
-  .themeBoxContentImage {
-    margin-top: 10px;
-    width: 14rem;
-    height: 12rem;
-  }
-
-  .themeBoxContentDescription {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    margin-top: 0px;
-  } */
 }
 
 @media (min-device-width: 1440px) {
@@ -343,18 +327,19 @@ html {
     margin-left: 0px;
   }
 
-  /* .themeBoxRow {
-    width: 100%;
-  } */
-
   .themeBoxContent {
     width: 89%;
-    border: #00ff47 solid 3.5px;
+    border: #00ff47 solid 3.4px;
     margin: 15px;
     margin-top: 12px;
     margin-left: 5px;
-    margin-right: 5px;
+    margin-right: -20px;
     padding: 10px;
+    box-shadow: 0.3px 0.3px 3.5px 3.5px #ccf5d7;
+  }
+
+  .themeBoxContent:hover {
+    box-shadow: 0.5px 0.5px 6px 6px #ccf5d7;
   }
 
   .themeBoxContentHeader {
@@ -380,8 +365,8 @@ html {
 /* ---------modal for theme section---------*/
 
 .modal-box {
-  font-family: "Nunito", sans-serif;
-  cursor: pointer;
+  font-family: "Source Sans Pro", sans-serif;
+  cursor: default;
 }
 
 .modal-backdrop.in {
@@ -467,11 +452,12 @@ html {
 .modal-box .modal-dialog .modal-content .modal-body .title {
   color: white;
   margin: 0 0 10px 0;
+  font-size: 2rem;
 }
 
 .modal-box .modal-dialog .modal-content .modal-body .description {
   color: white;
-  font-size: 1.03rem;
+  font-size: 1rem;
   margin: 0 0 10px;
 }
 
@@ -556,16 +542,35 @@ html {
 
 /* ------prizes hackathon-------- */
 
+#allExceptLaptop {
+  display: none;
+}
+
 .prizes {
   margin-top: 100px;
-  /* background-color: black; */
   text-align: center;
   font-family: "Ruda", sans-serif;
 }
 
+.trafficLight1 {
+  width: 5%;
+  height: 5%;
+  margin-left: 70px;
+  margin-right: 40px;
+  margin-top: 40px;
+}
+
+.trafficLight2 {
+  width: 5%;
+  height: 5%;
+  margin-right: 90px;
+  margin-left: -20px;
+  margin-top: 40px;
+}
+
 .priceImage {
-  width: 40%;
-  height: 50%;
+  width: 33%;
+  height: 33%;
 }
 
 .perksBox {
@@ -573,61 +578,80 @@ html {
 }
 
 .otherPerksContent {
-  border-top-left-radius: 65px;
-  border-top-right-radius: 65px;
+  cursor: default;
+  border-radius: 44%;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  width: 95%;
+  background: linear-gradient(to bottom, yellow 48%, white 0%);
+  width: 80%;
+  height: 99%;
   margin-top: 8px;
   padding: 2px;
   padding-top: 10px;
-  color: #ebff00;
-  border-color: #00e0ff;
+  color: #000;
+  border: rgb(122, 122, 3) solid 4px;
+  box-shadow: none;
+}
+
+.otherPerksContent:hover {
+  box-shadow: none;
 }
 
 #otherPerksHeader {
   text-align: left;
-  margin-left: 13%;
-  color: white;
-  font-size: 2.7rem;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: 15%;
+  color: #ff00b8;
+  font-size: 2.4rem;
   padding-bottom: 0px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Ruda", sans-serif;
 }
 
 .otherPerksContentImage {
   border-radius: 50%;
-  width: 7rem;
-  height: 6rem;
+  width: 6.5rem;
+  height: 5.5rem;
   text-align: center;
-  margin-left: -6px;
-  margin-top: 10px;
+  margin-left: -2px;
+  margin-top: 5px;
   /* padding: 10px; */
 }
 
 .otherPerksContentDescription {
   text-align: left;
-  font-size: 0.9rem;
-  line-height: 1.3;
+  font-size: 1rem;
+  line-height: 1.2;
   font-family: "Source Sans Pro", sans-serif;
   padding: 2px;
-  padding-left: 13px;
-  margin-top: 15px;
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: -10px;
 }
 
 @media (max-device-width: 767px) {
+  #onlyForLaptop {
+    display: none;
+  }
+
+  #allExceptLaptop {
+    display: block;
+  }
+
   .priceImage {
     width: 90%;
     height: 90%;
+    margin-left: -21px;
   }
 
   .otherPerksContentImage {
-    width: 6rem;
-    height: 5rem;
+    width: 4rem;
+    height: 3rem;
   }
 
   #otherPerksHeader {
     font-size: 2rem;
-    margin-left: 4%;
+    margin-left: 8%;
   }
 
   .perksBox {
@@ -635,11 +659,22 @@ html {
   }
 
   .otherPerksContent {
-    margin-left: 30px;
-    width: 90%;
-    border-color: #00e0ff;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    cursor: default;
+    border-radius: 46%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: linear-gradient(to bottom, yellow 47%, white 0%);
+    width: 85%;
+    height: 92%;
+    margin-top: 20px;
+    margin-left: 35px;
+    padding-bottom: 40px;
+    /* margin-bottom: 40px; */
+    padding: 2px;
+    padding-top: 10px;
+    color: #000;
+    border: rgb(122, 122, 3) solid 4px;
+    box-shadow: none;
   }
 
   .otherPerksContentDescription {
@@ -647,79 +682,118 @@ html {
     line-height: 1.2;
     margin-top: 9px;
     padding-left: 7px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
 }
 
 @media (min-device-width: 768px) and (max-device-width: 1439px) {
+  #onlyForLaptop {
+    display: none;
+  }
+
+  #allExceptLaptop {
+    display: block;
+  }
+
   .priceImage {
-    width: 70%;
-    height: 80%;
+    width: 55%;
+    height: 55%;
+    margin-left: -21px;
   }
 
   #otherPerksHeader {
-    font-size: 2.7rem;
-    margin-left: 4%;
+    font-size: 2.2rem;
+    margin-left: 6%;
     margin-bottom: 10px;
   }
 
   .otherPerksContentImage {
     border-radius: 50%;
-    width: 8rem;
-    height: 7rem;
+    width: 6rem;
+    height: 5rem;
     text-align: center;
-    margin-left: -8px;
+    margin-left: -2px;
     margin-top: 10px;
   }
-
   .otherPerksContent {
-    margin-left: 12px;
-    width: 95%;
-    border-color: #00e0ff;
+    cursor: default;
+    border-radius: 46%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: linear-gradient(to bottom, yellow 47%, white 0%);
+    width: 94%;
+    height: 92%;
+    margin-top: 8px;
+    padding: 2px;
+    padding-top: 10px;
+    color: #000;
+    border: rgb(122, 122, 3) solid 4px;
+    box-shadow: none;
+    margin-left: 15px;
   }
 
   .otherPerksContentDescription {
     font-size: 0.9rem;
     line-height: 1.5;
-    margin-top: 10px;
+    margin-top: 0px;
+    padding-top: -40px;
   }
 }
 
 @media (max-device-width: 320px) {
+  #onlyForLaptop {
+    display: none;
+  }
+
+  #allExceptLaptop {
+    display: block;
+  }
+
   .priceImage {
     width: 100%;
-    height: 160px;
+    height: 180px;
+    margin-left: -13px;
   }
 
   .otherPerksContentImage {
-    width: 5.5rem;
-    height: 4.5rem;
+    width: 4.5rem;
+    height: 3.5rem;
     margin-left: -1px;
+    margin-top: 0;
   }
 
   #otherPerksHeader {
-    font-size: 2rem;
-    margin-left: 4%;
+    font-size: 1.8rem;
+    margin-left: 6%;
   }
 
   .perksBox {
-    margin-left: -18px;
+    margin-left: -25px;
   }
 
   .otherPerksContent {
-    margin-left: 30px;
-    width: 95%;
-    border-color: #00e0ff;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    cursor: default;
+    border-radius: 43%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: linear-gradient(to bottom, yellow 45%, white 0%);
+    width: 98%;
+    height: 92%;
+    margin-top: 8px;
+    padding: 2px;
+    padding-top: 10px;
+    color: #000;
+    border: rgb(122, 122, 3) solid 4px;
+    box-shadow: none;
   }
 
   .otherPerksContentDescription {
     font-size: 0.7rem;
     line-height: 1.2;
-    margin-top: 7px;
     padding-left: 5px;
     margin-bottom: 5px;
+    padding-top: 10px;
+    margin-bottom: 0;
   }
 }
 

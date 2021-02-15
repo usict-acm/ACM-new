@@ -245,6 +245,7 @@ section {
   background-image: linear-gradient(to bottom right, white, #e6ffff);
   color: black;
   transform: rotateY(180deg);
+  overflow: auto;
 }
 
 .card-2 {
@@ -622,10 +623,19 @@ section {
   width: 50px;
   text-align: center;
   text-decoration: none;
-  margin: 70px 2px;
+  margin: 5px 2px;
   border-radius: 50%;
 }
 
 .fab:hover {
     opacity: 0.7;
+}
+
+.bio {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.overflow-control {
+  font-size: 14px;
 }
