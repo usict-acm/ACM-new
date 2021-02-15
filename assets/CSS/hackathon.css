@@ -740,6 +740,51 @@ html {
   }
 }
 
+@media (min-device-width: 1024px) and (max-device-width: 1439px) {
+  #onlyForLaptop {
+    display: block;
+  }
+
+  #allExceptLaptop {
+    display: none;
+  }
+
+  .otherPerksContent {
+    width: 100%;
+  }
+
+  .otherPerksContentImage {
+    height: 4rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #perks .container {
+    max-width: 830px;
+  }
+
+  .trafficLight1 {
+    width: 5.2%;
+    height: 5.2%;
+    margin-left: 28px;
+    margin-right: 0px;
+    margin-top: 50px;
+  }
+
+  .trafficLight2 {
+    width: 5.2%;
+    height: 5.2%;
+    margin-right: 28px;
+    margin-left: 0px;
+    margin-top: 50px;
+  }
+
+  .otherPerksContentDescription {
+    line-height: 1.25;
+    margin-top: 5px;
+  }
+}
+
 @media (max-device-width: 320px) {
   #onlyForLaptop {
     display: none;
