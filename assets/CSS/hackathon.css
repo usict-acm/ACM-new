@@ -630,7 +630,7 @@ html {
   }
 }
 
-@media (max-width: 1550px) {
+@media (max-width: 2000px) {
   #allExceptLaptop {
     display: none;
   }
