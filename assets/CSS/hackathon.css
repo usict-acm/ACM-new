@@ -1337,8 +1337,11 @@ html {
 
 .page-section {
   padding: 0px 0px 40px 0px;
+  margin-bottom: 70px;
+  margin-top: 40px;
 }
 .timeline {
+  margin-top: 40px;
   position: relative;
   padding: 0px;
   list-style: none;
@@ -1475,14 +1478,14 @@ html {
     padding: 0 20px 20px;
   }
   .timeline > li .timeline-image {
-    width: 150px;
-    height: 150px;
-    margin-left: -75px;
+    width: 120px;
+    height: 120px;
+    margin-left: -60px;
   }
   .timeline > li .timeline-image h4 {
-    font-size: 18px;
-    line-height: 26px;
-    margin-top: 30px;
+    font-size: 13px;
+    line-height: 23px;
+    margin-top: 20px;
   }
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 20px 20px;
@@ -1496,12 +1499,12 @@ html {
     padding: 0 20px 20px 100px;
   }
   .timeline > li .timeline-image {
-    width: 180px;
-    height: 180px;
-    margin-left: -85px;
+    width: 140px;
+    height: 140px;
+    margin-left: -66px;
   }
   .timeline > li .timeline-image h4 {
-    margin-top: 40px;
+    margin-top: 30px;
   }
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 100px 20px 20px;
@@ -1514,6 +1517,7 @@ html {
 
 .AboutUs {
   height: 90vh;
+  margin-top: 50px;
 }
 
 .aboutUsHead {
@@ -2624,6 +2628,7 @@ body {
 
 .sponsorDiv {
   text-align: center;
+  margin-top: 80px;
 }
 
 .sponsorDiv h1 {
