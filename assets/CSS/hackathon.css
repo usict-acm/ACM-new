@@ -192,6 +192,7 @@ html {
 }
 
 .themeBoxContent {
+  background-color: #000;
   border: #00ff47 solid 2px;
   border-radius: 4%;
   color: white;
