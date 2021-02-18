@@ -542,91 +542,265 @@ html {
 
 /* ------prizes hackathon-------- */
 
-#allExceptLaptop {
-  display: none;
+@media (max-width: 3000px) {
+  #allExceptLaptop {
+    display: none;
+  }
+
+  .prizes {
+    margin-top: 100px;
+    text-align: center;
+    font-family: "Ruda", sans-serif;
+  }
+
+  .trafficLight1 {
+    width: 5rem;
+    height: 11rem;
+    margin-left: 550px;
+    margin-top: 45px;
+  }
+
+  .trafficLight2 {
+    width: 5rem;
+    height: 11rem;
+    margin-right: 550px;
+    margin-top: 45px;
+  }
+
+  .priceImage {
+    height: 33%;
+    width: 33%;
+  }
+
+  .perksBox {
+    margin-left: -5px;
+  }
+
+  .otherPerksContent {
+    cursor: default;
+    border-radius: 44%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: linear-gradient(to bottom, yellow 48%, white 0%);
+    width: 80%;
+    height: 99%;
+    margin-top: 8px;
+    padding: 2px;
+    padding-top: 10px;
+    color: #000;
+    border: rgb(122, 122, 3) solid 4px;
+    box-shadow: none;
+    margin-left: 40px;
+  }
+
+  .otherPerksContent:hover {
+    box-shadow: none;
+  }
+
+  #otherPerksHeader {
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 15%;
+    color: #ff00b8;
+    font-size: 2.4rem;
+    padding-bottom: 0px;
+    font-family: "Ruda", sans-serif;
+  }
+
+  .otherPerksContentImage {
+    border-radius: 50%;
+    width: 6.5rem;
+    height: 5.5rem;
+    text-align: center;
+    margin-left: -2px;
+    margin-top: 5px;
+  }
+
+  .otherPerksContentDescription {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 2px;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+  }
 }
 
-.prizes {
-  margin-top: 100px;
-  text-align: center;
-  font-family: "Ruda", sans-serif;
+@media (max-width: 1550px) {
+  #allExceptLaptop {
+    display: none;
+  }
+
+  .prizes {
+    margin-top: 100px;
+    text-align: center;
+    font-family: "Ruda", sans-serif;
+  }
+
+  .trafficLight1 {
+    width: 4.5%;
+    height: 4.5%;
+    margin-left: 6%;
+    margin-top: 45px;
+  }
+
+  .trafficLight2 {
+    width: 4.5%;
+    height: 4.5%;
+    margin-right: 6%;
+    margin-top: 45px;
+  }
+
+  .priceImage {
+    height: 33%;
+    width: 33%;
+  }
+
+  .perksBox {
+    margin-left: -5px;
+  }
+
+  .otherPerksContent {
+    cursor: default;
+    border-radius: 44%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: linear-gradient(to bottom, yellow 48%, white 0%);
+    width: 80%;
+    height: 99%;
+    margin-top: 8px;
+    padding: 2px;
+    padding-top: 10px;
+    color: #000;
+    border: rgb(122, 122, 3) solid 4px;
+    box-shadow: none;
+    margin-left: 40px;
+  }
+
+  .otherPerksContent:hover {
+    box-shadow: none;
+  }
+
+  #otherPerksHeader {
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 15%;
+    color: #ff00b8;
+    font-size: 2.4rem;
+    padding-bottom: 0px;
+    font-family: "Ruda", sans-serif;
+  }
+
+  .otherPerksContentImage {
+    border-radius: 50%;
+    width: 6.5rem;
+    height: 5.5rem;
+    text-align: center;
+    margin-left: -2px;
+    margin-top: 5px;
+  }
+
+  .otherPerksContentDescription {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 2px;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+  }
 }
 
-.trafficLight1 {
-  width: 5%;
-  height: 5%;
-  margin-left: 70px;
-  margin-right: 40px;
-  margin-top: 40px;
-}
+@media (max-width: 1440px) {
+  #allExceptLaptop {
+    display: none;
+  }
 
-.trafficLight2 {
-  width: 5%;
-  height: 5%;
-  margin-right: 90px;
-  margin-left: -20px;
-  margin-top: 40px;
-}
+  .prizes {
+    margin-top: 100px;
+    text-align: center;
+    font-family: "Ruda", sans-serif;
+  }
 
-.priceImage {
-  width: 33%;
-  height: 33%;
-}
+  .trafficLight1 {
+    width: 4.5%;
+    height: 4.5%;
+    margin-left: 5%;
+    margin-top: 60px;
+  }
 
-.perksBox {
-  margin-left: -5px;
-}
+  .trafficLight2 {
+    width: 4.5%;
+    height: 4.5%;
+    margin-right: 5%;
+    margin-top: 60px;
+  }
 
-.otherPerksContent {
-  cursor: default;
-  border-radius: 44%;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  background: linear-gradient(to bottom, yellow 48%, white 0%);
-  width: 80%;
-  height: 99%;
-  margin-top: 8px;
-  padding: 2px;
-  padding-top: 10px;
-  color: #000;
-  border: rgb(122, 122, 3) solid 4px;
-  box-shadow: none;
-}
+  .priceImage {
+    width: 33%;
+    height: 33%;
+  }
 
-.otherPerksContent:hover {
-  box-shadow: none;
-}
+  .perksBox {
+    margin-left: -5px;
+  }
 
-#otherPerksHeader {
-  text-align: left;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  margin-left: 15%;
-  color: #ff00b8;
-  font-size: 2.4rem;
-  padding-bottom: 0px;
-  font-family: "Ruda", sans-serif;
-}
+  .otherPerksContent {
+    cursor: default;
+    border-radius: 44%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: linear-gradient(to bottom, yellow 48%, white 0%);
+    width: 80%;
+    height: 99%;
+    margin-top: 8px;
+    padding: 2px;
+    padding-top: 10px;
+    color: #000;
+    border: rgb(122, 122, 3) solid 4px;
+    box-shadow: none;
+    margin-left: 35px;
+  }
 
-.otherPerksContentImage {
-  border-radius: 50%;
-  width: 6.5rem;
-  height: 5.5rem;
-  text-align: center;
-  margin-left: -2px;
-  margin-top: 5px;
-  /* padding: 10px; */
-}
+  .otherPerksContent:hover {
+    box-shadow: none;
+  }
 
-.otherPerksContentDescription {
-  text-align: left;
-  font-size: 1rem;
-  line-height: 1.2;
-  font-family: "Source Sans Pro", sans-serif;
-  padding: 2px;
-  padding-left: 10px;
-  margin-top: 10px;
-  margin-bottom: -10px;
+  #otherPerksHeader {
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 15%;
+    color: #ff00b8;
+    font-size: 2.4rem;
+    padding-bottom: 0px;
+    font-family: "Ruda", sans-serif;
+  }
+
+  .otherPerksContentImage {
+    border-radius: 50%;
+    width: 6.5rem;
+    height: 5.5rem;
+    text-align: center;
+    margin-left: -2px;
+    margin-top: 5px;
+  }
+
+  .otherPerksContentDescription {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 2px;
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+  }
 }
 
 @media (max-device-width: 767px) {
@@ -740,7 +914,7 @@ html {
   }
 }
 
-@media (min-device-width: 1024px) and (max-device-width: 1439px) {
+@media (min-device-width: 1024px) and (max-device-width: 1200px) {
   #onlyForLaptop {
     display: block;
   }
@@ -777,6 +951,51 @@ html {
     margin-right: 28px;
     margin-left: 0px;
     margin-top: 50px;
+  }
+
+  .otherPerksContentDescription {
+    line-height: 1.25;
+    margin-top: 5px;
+  }
+}
+
+@media (min-device-width: 1201px) and (max-device-width: 1439px) {
+  #onlyForLaptop {
+    display: block;
+  }
+
+  #allExceptLaptop {
+    display: none;
+  }
+
+  .otherPerksContent {
+    width: 100%;
+  }
+
+  .otherPerksContentImage {
+    height: 4rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #perks .container {
+    max-width: 830px;
+  }
+
+  .trafficLight1 {
+    width: 4.5%;
+    height: 4.5%;
+    margin-left: 8%;
+    margin-right: 0px;
+    margin-top: 40px;
+  }
+
+  .trafficLight2 {
+    width: 4.5%;
+    height: 4.5%;
+    margin-right: 8%;
+    margin-left: 0px;
+    margin-top: 40px;
   }
 
   .otherPerksContentDescription {
