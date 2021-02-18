@@ -2112,36 +2112,38 @@ window.addEventListener('load', function(){
   })
 });
 
-//
-// var countDownDate = new Date("Dec 28, 2020 15:00:00").getTime();
-//
-// // Update the count down every 1 second
-// var x = setInterval(function() {
-//
-//   // Get today's date and time
-//   var now = new Date().getTime();
-//
-//   // Find the distance between now and the count down date
-//   var distance = countDownDate - now;
-//
-//   // Time calculations for days, hours, minutes and seconds
-//   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-//
-//   // Display the result in the element with id="demo"
-//   document.getElementById("demoDay").innerHTML = days + "<br/><div class = countdown>DAYS</div> ";
-//   document.getElementById("demoHour").innerHTML = hours + "<br/><div class = countdown>H0URS</div> ";
-//   document.getElementById("demoMin").innerHTML = minutes + "<br/><div class = countdown>MIN(s)</div> ";
-//   document.getElementById("demoSec").innerHTML = seconds + "<br/><div class = countdown>SEC(s)</div> ";
-//
-//
-// //   if (distance < 0) {
-// //     clearInterval(x);
-// //     document.getElementById("demo").innerHTML = `<div class="butn">
-// //     <button id="links" class="team_ded_page" type="button" name="button"><a href="https://youtu.be/PNsWlQDyjiY">JOIN NOW</a></button>
-// //   </div>`;
-// //
-// //   }
-// // }, 1000);
+
+var countDownDate = new Date("March 8, 2021 15:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demoDay").innerHTML = days + "<br/><div class = countdown>DAYS</div> ";
+  document.getElementById("demoHour").innerHTML = hours + "<br/><div class = countdown>H0URS</div> ";
+  document.getElementById("demoMin").innerHTML = minutes + "<br/><div class = countdown>MIN(s)</div> ";
+  document.getElementById("demoSec").innerHTML = seconds + "<br/><div class = countdown>SEC(s)</div> ";
+
+
+  if (distance < 0) {
+    clearInterval(x);
+     document.getElementById("demo").innerHTML = "EXPIRED";
+  //
+  //   document.getElementById("demo").innerHTML = `<div class="butn">
+  //   <button id="links" class="team_ded_page" type="button" name="button"><a href="https://youtu.be/PNsWlQDyjiY">JOIN NOW</a></button>
+  // </div>`;
+
+  }
+}, 1000);
