@@ -2637,7 +2637,7 @@ body {
   margin: 0.5rem;
 }
 .sponsors {
-  height: 9rem;
+  /* height: 9rem; */
   padding: 0;
   margin: 0.5rem 0;
 }
@@ -2645,18 +2645,51 @@ body {
 .sponsorData {
   width: 80%;
   border: 3px #b1be17 solid;
-  height: 9rem;
+  height: 12rem;
   margin: auto;
 }
 
 .sponsorData img {
-  height: 6rem;
+  height: 9rem;
   margin: 0.3rem;
 }
 .sponsorData h4 {
   color: #00e0ff;
 }
-@media screen and (min-width: 992px) {
+
+@media screen and (min-width: 768px) {
+  .one {
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+  }
+  .three {
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+  }
+  /* .ten {
+    border-bottom-left-radius: 2rem;
+  }
+  .twelve {
+    border-bottom-right-radius: 2rem;
+  } */
+}
+
+@media screen and (max-width: 767px) {
+  .one{
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+  }
+
+  .three {
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+
+  }
+
+}
+
+/* SPonsors ENDED********************************************************************************************/
+/* @media screen and (min-width: 992px) {
   .one {
     border-top-left-radius: 2rem;
   }
@@ -2669,47 +2702,4 @@ body {
   .twelve {
     border-bottom-right-radius: 2rem;
   }
-}
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .one {
-    border-top-left-radius: 2rem;
-  }
-  .three {
-    border-top-right-radius: 2rem;
-  }
-  .ten {
-    border-bottom-left-radius: 2rem;
-  }
-  .twelve {
-    border-bottom-right-radius: 2rem;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .one,
-  .five,
-  .nine {
-    border-top-left-radius: 2rem;
-    margin-top: 1rem;
-  }
-  .two,
-  .six,
-  .ten {
-    border-top-right-radius: 2rem;
-    margin-top: 1rem;
-  }
-  .three,
-  .seven,
-  .eleven {
-    margin-top: 0.5rem;
-    border-bottom-left-radius: 2rem;
-  }
-  .four,
-  .eight,
-  .twelve {
-    border-bottom-right-radius: 2rem;
-    margin-top: 0.5rem;
-  }
-}
-
-/* SPonsors ENDED********************************************************************************************/
+} */
