@@ -1376,6 +1376,7 @@ html {
   width: 100%;
   padding: 0 20px 0 100px;
   text-align: left;
+  color: #08b439;
 }
 .timeline > li .timeline-panel:before {
   right: auto;
@@ -1585,6 +1586,52 @@ html {
   .show_below_786 {
     display: block;
   }
+}
+
+@media (max-width: 500px){
+  .page-section {
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: 900px){
+  .aboutUsHead {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 1000px){
+  .container1 {
+    width: 70%;
+    height: 95%;
+    position: relative;
+    margin-left: 15%;
+}
+  .box {
+    width: 100%;
+    height: 50%;
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+.stack-top {
+  width: 95%;
+  height: 50%;
+  z-index: 9;
+  left: 12%;
+  margin-top: -16%;
+  border: 7px solid red;
+}
+
+.aboutHackUsict {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  z-index: 20;
+  color: white;
+}
+  
 }
 
 /**********Contact form start***********************/
