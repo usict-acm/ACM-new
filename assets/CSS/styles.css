@@ -159,9 +159,11 @@ section {
 /*Swiper*/
 .swiper-container {
   width: 100%;
-  height: 80vh;
 }
 
+.top-header > .swiper-container{
+  height: 80vh;
+}
 .swiper-slide {
   text-align: center;
   font-size: 14px;
