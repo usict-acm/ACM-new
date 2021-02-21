@@ -51,6 +51,12 @@ html {
     height: 60px;
   }
 }
+
+@media (max-width: 986px) {
+  .navbar{
+    background-color: black;
+  }
+}
 /* -----------Hero ------------*/
 
 .hero-canvas {
@@ -1631,7 +1637,7 @@ html {
   z-index: 20;
   color: white;
 }
-  
+
 }
 
 /**********Contact form start***********************/
@@ -2750,3 +2756,9 @@ body {
     border-bottom-right-radius: 2rem;
   }
 } */
+
+@media (max-width:1200px){
+  .hide_below_960{
+    display: none;
+  }
+}
