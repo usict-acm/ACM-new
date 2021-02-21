@@ -1530,13 +1530,15 @@ body{
   height: 100%;
   width: 100%;
   border-radius: 100%;
+  border: 5px solid #1E90FF;
 
 }
 
 .dean-sir{
   height: 100%;
   width: 100%;
-  border-radius: 1rem;
+  border-radius: 2rem;
+  border: 5px solid #1E90FF;
 }
 
 .head-office{
@@ -1561,8 +1563,37 @@ h1{
 .col-md-3{
   padding: 1px;
 }
+.content {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -110%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
 
-.content{
+.team-profile {
+  padding: 10px;
+  font-size: 35px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  color: blue;
+}
+
+.team-mem:hover .dean {
+  opacity: 0.3;
+}
+
+.team-mem:hover .content {
+  opacity: 1;
+}
+
+/*.content{
   height: 100%;
   width: 100%;
   border-radius: 100%;
@@ -1573,7 +1604,7 @@ h1{
   top: 0;
   left: 0;
   opacity: 0;
-}
+}*/
 .team-mem:hover{
   opacity: 0.7;
 }
@@ -1581,9 +1612,9 @@ h1{
   opacity: 1;
 }
 
-.team-lead:hover{
+/*.team-lead:hover{
   opacity: 0.7;
-}
+}*/
 .team-lead:hover .content{
   opacity: 1;
 }
@@ -1644,6 +1675,8 @@ font-weight: 500;
 .te{
   padding: 2rem 0;
 }
+
+
 @media only screen and (max-width: 775px) {
   .hid{
     visibility: hidden;
