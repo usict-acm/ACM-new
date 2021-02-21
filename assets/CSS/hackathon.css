@@ -53,7 +53,7 @@ html {
 }
 
 @media (max-width: 986px) {
-  .navbar{
+  .navbar {
     background-color: black;
   }
 }
@@ -178,6 +178,32 @@ html {
 
 /* ----------theme hackathon page ----------*/
 
+.jumboStyle {
+  padding-left: 100px;
+  margin-top: 20px;
+  background-color: rgb(17, 17, 17);
+  margin-bottom: 50px;
+  filter: drop-shadow(0 0 15px #0297ff);
+}
+
+.verticalLineTheme {
+  display: none;
+}
+
+.waitTextTheme {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 4px;
+  margin-bottom: -5px;
+  margin-left: -45px;
+  line-height: 1.5;
+  color: #0297ff;
+}
+
+#themesHack {
+  padding-bottom: 20px;
+}
+
 .themeHackhathon {
   font-family: "Ruda", sans-serif;
 }
@@ -194,7 +220,7 @@ html {
 .themeBox {
   display: inline-block;
   text-align: center;
-  margin-left: 35px;
+  margin-left: 32px;
 }
 
 .themeBoxContent {
@@ -239,6 +265,32 @@ html {
 }
 
 @media (max-device-width: 320px) {
+  .jumboStyle {
+    padding-left: 100px;
+    margin-top: 20px;
+    background-color: rgb(17, 17, 17);
+    margin-bottom: 50px;
+    filter: drop-shadow(0 0 15px #0297ff);
+  }
+
+  .verticalLineTheme {
+    display: none;
+  }
+
+  .waitTextTheme {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: -5px;
+    margin-left: -45px;
+    line-height: 1.5;
+    color: #0297ff;
+  }
+
+  #themesHack {
+    padding-bottom: 20px;
+  }
+
   #themeHackhathonHeader {
     font-size: 1.5rem;
     margin-bottom: 0;
@@ -278,8 +330,36 @@ html {
 }
 
 @media (min-device-width: 768px) and (max-device-width: 1439px) {
+  .jumboStyle {
+    padding-left: 100px;
+    margin-top: 20px;
+    background-color: rgb(17, 17, 17);
+    margin-bottom: 50px;
+    filter: drop-shadow(0 0 15px #0297ff);
+  }
+
+  .verticalLineTheme {
+    display: inline-block;
+    height: 160px;
+    border-left: 5px solid #0297ff;
+  }
+
+  .waitTextTheme {
+    font-size: 2.2rem;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: -5px;
+    margin-left: -25px;
+    line-height: 1.5;
+    color: #0297ff;
+  }
+
+  #themesHack {
+    padding-bottom: 30px;
+  }
+
   #themeHackhathonHeader {
-    font-size: 2.8rem;
+    font-size: 2.9rem;
     text-align: center;
     padding: 1.5rem;
   }
@@ -289,10 +369,10 @@ html {
   }
 
   .themeBoxContent {
-    width: 90%;
+    width: 82%;
     border: #00ff47 solid 3.5px;
     margin: 15px;
-    margin-left: 10px;
+    margin-left: 43px;
     margin-right: 5px;
     padding: 10px;
     box-shadow: 0.6px 0.6px 3.5px 3.5px #ccf5d7;
@@ -303,31 +383,117 @@ html {
   }
 
   .themeBoxContentHeader {
-    font-size: 1.8rem;
-    margin-top: 5px;
+    font-size: 2.5rem;
+    margin-top: 18px;
     padding: 0.2rem;
   }
 
   .themeBoxContentImage {
-    margin-top: 5px;
-    width: 7.5rem;
-    height: 6.5rem;
+    margin-top: 20px;
+    width: 13rem;
+    height: 11rem;
   }
 
   .themeBoxContentDescription {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     line-height: 1.3;
-    margin-top: 3px;
-    padding-left: 8px;
+    margin-top: 16px;
+    padding-left: 15px;
+    padding-bottom: 35px;
+  }
+}
+
+@media (min-device-width: 768px) and (max-width: 1023px) {
+  .themeBoxContentHeader {
+    font-size: 2.3rem;
+    margin-top: 12px;
+    padding: 0.2rem;
+  }
+
+  .jumboStyle {
+    width: 75%;
+    margin-left: 70px;
+    padding-top: 35px;
+    padding-bottom: 40px;
+  }
+
+  .waitTextTheme {
+    text-align: center;
+    margin-left: -35px;
+  }
+
+  .verticalLineTheme {
+    display: none;
+  }
+
+  .themeBoxContent {
+    margin: 15px;
+    margin-left: 30px;
+  }
+
+  .themeBoxContentImage {
+    margin-top: 15px;
+    width: 9rem;
+    height: 7rem;
+  }
+
+  .themeBoxContentDescription {
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-top: 12px;
+    padding-left: 9px;
+    padding-bottom: 35px;
+  }
+}
+
+@media (min-device-width: 1140px) and (max-device-width: 1321px) {
+  .jumboStyle {
+    padding-left: 100px;
+    margin-top: 50px;
+    width: 80%;
+    background-color: rgb(17, 17, 17);
+    margin-bottom: 50px;
+    margin-left: 90px;
+    filter: drop-shadow(0 0 15px #0297ff);
+  }
+  .containerThemeJumboStyle {
+    text-align: center;
   }
 }
 
 @media (min-device-width: 1440px) {
+  .jumboStyle {
+    padding-left: 100px;
+    margin-top: 50px;
+    background-color: rgb(17, 17, 17);
+    margin-bottom: 50px;
+    filter: drop-shadow(0 0 15px #0297ff);
+  }
+
+  .verticalLineTheme {
+    display: block;
+    height: 200px;
+    border-left: 8px solid #0297ff;
+  }
+
+  .waitTextTheme {
+    text-align: left;
+    font-size: 3.2rem;
+    margin-top: 20px;
+    margin-left: -35px;
+    line-height: 1.5;
+    color: #0297ff;
+  }
+
   #themeHackhathonHeader {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
     text-align: center;
     padding: 1.5rem;
-    padding-top: 7rem;
+    padding-top: 3rem;
+  }
+
+  #themesHack {
+    padding-bottom: 50px;
   }
 
   .themeBox {
@@ -335,12 +501,9 @@ html {
   }
 
   .themeBoxContent {
-    width: 89%;
+    width: 73%;
     border: #00ff47 solid 3.4px;
-    margin: 15px;
-    margin-top: 12px;
-    margin-left: 5px;
-    margin-right: -20px;
+    margin: 25px -20px 90px 65px;
     padding: 10px;
     box-shadow: 0.3px 0.3px 3.5px 3.5px #ccf5d7;
   }
@@ -350,22 +513,23 @@ html {
   }
 
   .themeBoxContentHeader {
-    font-size: 1.8rem;
-    margin-top: 5px;
+    font-size: 2.5rem;
+    margin-top: 18px;
     padding: 0.2rem;
   }
 
   .themeBoxContentImage {
-    margin-top: 5px;
-    width: 7.5rem;
-    height: 6.5rem;
+    margin-top: 20px;
+    width: 13rem;
+    height: 11rem;
   }
 
   .themeBoxContentDescription {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     line-height: 1.3;
-    margin-top: 3px;
-    padding-left: 8px;
+    margin-top: 16px;
+    padding-left: 15px;
+    padding-bottom: 35px;
   }
 }
 
@@ -554,33 +718,21 @@ html {
     display: none;
   }
 
+  #onlyForLaptop {
+    display: block;
+  }
+
   .prizes {
     margin-top: 100px;
     text-align: center;
     font-family: "Ruda", sans-serif;
   }
 
-  .trafficLight1 {
-    width: 5rem;
-    height: 11rem;
-    margin-left: 550px;
-    margin-top: 45px;
-  }
-
-  .trafficLight2 {
-    width: 5rem;
-    height: 11rem;
-    margin-right: 550px;
-    margin-top: 45px;
-  }
-
   .priceImage {
-    height: 33%;
-    width: 33%;
-  }
-
-  .perksBox {
-    margin-left: -5px;
+    height: 28rem;
+    width: 35rem;
+    margin-top: 100px;
+    margin-left: -20px;
   }
 
   .otherPerksContent {
@@ -590,14 +742,16 @@ html {
     border-bottom-right-radius: 0;
     background: linear-gradient(to bottom, yellow 48%, white 0%);
     width: 80%;
-    height: 99%;
-    margin-top: 8px;
+    height: 15rem;
+    margin-bottom: 25px;
     padding: 2px;
     padding-top: 10px;
+    margin-top: 15px;
     color: #000;
     border: rgb(122, 122, 3) solid 4px;
     box-shadow: none;
-    margin-left: 40px;
+    filter: drop-shadow(0 0 5px yellow);
+    margin-left: 45px;
   }
 
   .otherPerksContent:hover {
@@ -605,12 +759,12 @@ html {
   }
 
   #otherPerksHeader {
-    text-align: left;
+    text-align: center;
     margin-top: 30px;
     margin-bottom: 20px;
-    margin-left: 15%;
+    margin-left: 0;
     color: #ff00b8;
-    font-size: 2.4rem;
+    font-size: 2.9rem;
     padding-bottom: 0px;
     font-family: "Ruda", sans-serif;
   }
@@ -620,25 +774,28 @@ html {
     width: 6.5rem;
     height: 5.5rem;
     text-align: center;
-    margin-left: -2px;
+    margin-left: 40px;
     margin-top: 5px;
   }
 
   .otherPerksContentDescription {
-    text-align: left;
-    font-size: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
     line-height: 1.2;
     font-family: "Source Sans Pro", sans-serif;
-    padding: 2px;
-    padding-left: 10px;
-    margin-top: 10px;
+    padding: 7px;
+    margin-top: 13px;
     margin-bottom: -10px;
   }
 }
 
-@media (max-width: 2000px) {
+@media (max-width: 1024px) {
   #allExceptLaptop {
     display: none;
+  }
+
+  #onlyForLaptop {
+    display: block;
   }
 
   .prizes {
@@ -647,27 +804,11 @@ html {
     font-family: "Ruda", sans-serif;
   }
 
-  .trafficLight1 {
-    width: 4.5%;
-    height: 4.5%;
-    margin-left: 6%;
-    margin-top: 45px;
-  }
-
-  .trafficLight2 {
-    width: 4.5%;
-    height: 4.5%;
-    margin-right: 6%;
-    margin-top: 45px;
-  }
-
   .priceImage {
-    height: 33%;
-    width: 33%;
-  }
-
-  .perksBox {
-    margin-left: -5px;
+    height: 35rem;
+    width: 81rem;
+    margin-top: 100px;
+    margin-left: -100px;
   }
 
   .otherPerksContent {
@@ -676,125 +817,38 @@ html {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     background: linear-gradient(to bottom, yellow 48%, white 0%);
-    width: 80%;
-    height: 99%;
-    margin-top: 8px;
+    width: 60%;
+    height: 12rem;
+    margin-bottom: 25px;
     padding: 2px;
     padding-top: 10px;
     color: #000;
     border: rgb(122, 122, 3) solid 4px;
     box-shadow: none;
+    margin-left: 45px;
+  }
+
+  .otherPerksContent:hover {
+    box-shadow: none;
+  }
+
+  #otherPerksHeader {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    color: #ff00b8;
+    font-size: 2.9rem;
+    padding-bottom: 0px;
+    font-family: "Ruda", sans-serif;
+  }
+
+  .otherPerksContentImage {
+    border-radius: 50%;
+    width: 6.5rem;
+    height: 5.5rem;
+    text-align: cxenter;
     margin-left: 40px;
-  }
-
-  .otherPerksContent:hover {
-    box-shadow: none;
-  }
-
-  #otherPerksHeader {
-    text-align: left;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    margin-left: 15%;
-    color: #ff00b8;
-    font-size: 2.4rem;
-    padding-bottom: 0px;
-    font-family: "Ruda", sans-serif;
-  }
-
-  .otherPerksContentImage {
-    border-radius: 50%;
-    width: 6.5rem;
-    height: 5.5rem;
-    text-align: center;
-    margin-left: -2px;
-    margin-top: 5px;
-  }
-
-  .otherPerksContentDescription {
-    text-align: left;
-    font-size: 1rem;
-    line-height: 1.2;
-    font-family: "Source Sans Pro", sans-serif;
-    padding: 2px;
-    padding-left: 10px;
-    margin-top: 10px;
-    margin-bottom: -10px;
-  }
-}
-
-@media (max-width: 1440px) {
-  #allExceptLaptop {
-    display: none;
-  }
-
-  .prizes {
-    margin-top: 100px;
-    text-align: center;
-    font-family: "Ruda", sans-serif;
-  }
-
-  .trafficLight1 {
-    width: 4.5%;
-    height: 4.5%;
-    margin-left: 5%;
-    margin-top: 60px;
-  }
-
-  .trafficLight2 {
-    width: 4.5%;
-    height: 4.5%;
-    margin-right: 5%;
-    margin-top: 60px;
-  }
-
-  .priceImage {
-    width: 33%;
-    height: 33%;
-  }
-
-  .perksBox {
-    margin-left: -5px;
-  }
-
-  .otherPerksContent {
-    cursor: default;
-    border-radius: 44%;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    background: linear-gradient(to bottom, yellow 48%, white 0%);
-    width: 80%;
-    height: 99%;
-    margin-top: 8px;
-    padding: 2px;
-    padding-top: 10px;
-    color: #000;
-    border: rgb(122, 122, 3) solid 4px;
-    box-shadow: none;
-    margin-left: 35px;
-  }
-
-  .otherPerksContent:hover {
-    box-shadow: none;
-  }
-
-  #otherPerksHeader {
-    text-align: left;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    margin-left: 15%;
-    color: #ff00b8;
-    font-size: 2.4rem;
-    padding-bottom: 0px;
-    font-family: "Ruda", sans-serif;
-  }
-
-  .otherPerksContentImage {
-    border-radius: 50%;
-    width: 6.5rem;
-    height: 5.5rem;
-    text-align: center;
-    margin-left: -2px;
     margin-top: 5px;
   }
 
@@ -850,7 +904,6 @@ html {
     margin-top: 20px;
     margin-left: 35px;
     padding-bottom: 40px;
-    /* margin-bottom: 40px; */
     padding: 2px;
     padding-top: 10px;
     color: #000;
@@ -867,60 +920,6 @@ html {
   }
 }
 
-@media (min-device-width: 768px) and (max-device-width: 1439px) {
-  #onlyForLaptop {
-    display: none;
-  }
-
-  #allExceptLaptop {
-    display: block;
-  }
-
-  .priceImage {
-    width: 55%;
-    height: 55%;
-    margin-left: -21px;
-  }
-
-  #otherPerksHeader {
-    font-size: 2.2rem;
-    margin-left: 6%;
-    margin-bottom: 10px;
-  }
-
-  .otherPerksContentImage {
-    border-radius: 50%;
-    width: 6rem;
-    height: 5rem;
-    text-align: center;
-    margin-left: -2px;
-    margin-top: 10px;
-  }
-  .otherPerksContent {
-    cursor: default;
-    border-radius: 46%;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    background: linear-gradient(to bottom, yellow 47%, white 0%);
-    width: 94%;
-    height: 92%;
-    margin-top: 8px;
-    padding: 2px;
-    padding-top: 10px;
-    color: #000;
-    border: rgb(122, 122, 3) solid 4px;
-    box-shadow: none;
-    margin-left: 15px;
-  }
-
-  .otherPerksContentDescription {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-top: 0px;
-    padding-top: -40px;
-  }
-}
-
 @media (min-device-width: 1024px) and (max-device-width: 1200px) {
   #onlyForLaptop {
     display: block;
@@ -930,39 +929,49 @@ html {
     display: none;
   }
 
-  .otherPerksContent {
-    width: 100%;
+  .priceImage {
+    width: 25rem;
+    height: 20rem;
+    margin-left: 10px;
+    margin-top: 60px;
+  }
+
+  #otherPerksHeader {
+    font-size: 2.7rem;
+    text-align: center;
+    margin-bottom: 10px;
   }
 
   .otherPerksContentImage {
+    border-radius: 50%;
+    width: 5rem;
     height: 4rem;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    text-align: center;
+    margin-left: 40px;
+    margin-top: 3px;
   }
-
-  #perks .container {
-    max-width: 830px;
-  }
-
-  .trafficLight1 {
-    width: 5.2%;
-    height: 5.2%;
-    margin-left: 28px;
-    margin-right: 0px;
-    margin-top: 50px;
-  }
-
-  .trafficLight2 {
-    width: 5.2%;
-    height: 5.2%;
-    margin-right: 28px;
-    margin-left: 0px;
-    margin-top: 50px;
+  .otherPerksContent {
+    cursor: default;
+    border-radius: 46%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: linear-gradient(to bottom, yellow 47%, white 0%);
+    width: 85%;
+    margin: 8px -70px 20px 15px;
+    padding-right: 30px;
+    padding: 2px;
+    padding-top: 10px;
+    color: #000;
+    border: rgb(122, 122, 3) solid 4px;
+    box-shadow: none;
   }
 
   .otherPerksContentDescription {
-    line-height: 1.25;
-    margin-top: 5px;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    margin-top: 0px;
+    padding: 10px;
+    padding-top: 15px;
   }
 }
 
@@ -976,38 +985,163 @@ html {
   }
 
   .otherPerksContent {
-    width: 100%;
+    background: linear-gradient(to bottom, yellow 44%, white 0%);
   }
 
   .otherPerksContentImage {
     height: 4rem;
-    margin-top: 5px;
+    margin-left: 42px;
+    margin-top: 10px;
     margin-bottom: 5px;
-  }
-
-  #perks .container {
-    max-width: 830px;
-  }
-
-  .trafficLight1 {
-    width: 4.5%;
-    height: 4.5%;
-    margin-left: 8%;
-    margin-right: 0px;
-    margin-top: 40px;
-  }
-
-  .trafficLight2 {
-    width: 4.5%;
-    height: 4.5%;
-    margin-right: 8%;
-    margin-left: 0px;
-    margin-top: 40px;
   }
 
   .otherPerksContentDescription {
     line-height: 1.25;
+    margin-top: 15px;
+  }
+}
+
+@media (max-device-width: 768px) {
+  #onlyForLaptop {
+    display: none;
+  }
+
+  #allExceptLaptop {
+    display: block;
+  }
+
+  .priceImage {
+    width: 50%;
+    height: 250px;
+    margin-left: 180px;
+    margin-top: 7px;
+    margin-bottom: 30px;
+  }
+
+  .otherPerksContentImage {
+    width: 5rem;
+    height: 4rem;
+    margin-left: 38px;
     margin-top: 5px;
+  }
+
+  #otherPerksHeader {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-left: 0%;
+  }
+
+  .perksBox {
+    margin-left: -25px;
+  }
+
+  .otherPerksContent {
+    cursor: default;
+    border-radius: 43%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: linear-gradient(to bottom, yellow 47%, white 0%);
+    width: 80%;
+    margin-top: 8px;
+    margin-left: 65px;
+    padding: 2px;
+    padding-top: 5px;
+    color: #000;
+    border: rgb(122, 122, 3) solid 4px;
+    box-shadow: none;
+  }
+
+  .otherPerksContentDescription {
+    font-size: 1.1rem;
+    line-height: 1.2;
+    padding: 7px;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    margin-bottom: 0;
+    margin-top: 12px;
+  }
+}
+
+@media (max-device-width: 425px) {
+  #onlyForLaptop {
+    display: none;
+  }
+
+  #allExceptLaptop {
+    display: block;
+  }
+
+  .priceImage {
+    width: 80%;
+    height: 200px;
+    margin-left: 35px;
+    margin-top: 7px;
+    margin-bottom: 30px;
+  }
+
+  .otherPerksContentImage {
+    width: 4.5rem;
+    height: 3.5rem;
+    margin-left: 30px;
+    margin-top: 2px;
+    margin-bottom: -5px;
+  }
+
+  #otherPerksHeader {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-left: 0%;
+  }
+
+  .perksBox {
+    margin-left: -25px;
+  }
+
+  .otherPerksContent {
+    cursor: default;
+    border-radius: 43%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: linear-gradient(to bottom, yellow 46%, white 0%);
+    filter: drop-shadow(0px 0px 2.5px yellow);
+    width: 85%;
+    height: 75%;
+    margin-top: 8px;
+    margin-bottom: 70px;
+    margin-left: 50px;
+    padding: 2px;
+    padding-top: 10px;
+    color: #000;
+    border: rgb(122, 122, 3) solid 4px;
+    box-shadow: none;
+  }
+
+  .otherPerksContentDescription {
+    font-size: 1rem;
+    line-height: 1.2;
+    padding-left: 7px;
+    margin-bottom: 5px;
+    padding-top: 30px;
+    margin-bottom: 0;
+    margin-top: 0px;
+  }
+}
+
+@media (max-device-width: 375px) {
+  .otherPerksContentImage {
+    width: 4rem;
+    height: 3rem;
+    margin-left: 28px;
+    margin-top: 6px;
+  }
+
+  .otherPerksContentDescription {
+    padding-top: 30px;
+  }
+
+  .otherPerksContent {
+    margin-left: 49px;
+    background: linear-gradient(to bottom, yellow 43%, white 0%);
   }
 }
 
@@ -1021,21 +1155,25 @@ html {
   }
 
   .priceImage {
-    width: 100%;
+    width: 80%;
     height: 180px;
-    margin-left: -13px;
+    margin-left: 30px;
+    margin-top: 7px;
+    margin-bottom: 30px;
   }
 
   .otherPerksContentImage {
-    width: 4.5rem;
-    height: 3.5rem;
-    margin-left: -1px;
-    margin-top: 0;
+    width: 4rem;
+    height: 3rem;
+    margin-left: 14px;
+    margin-top: -4px;
+    margin-bottom: 5px;
   }
 
   #otherPerksHeader {
-    font-size: 1.8rem;
-    margin-left: 6%;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-left: 0%;
   }
 
   .perksBox {
@@ -1047,24 +1185,27 @@ html {
     border-radius: 43%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    background: linear-gradient(to bottom, yellow 45%, white 0%);
-    width: 98%;
-    height: 92%;
+    background: linear-gradient(to bottom, yellow 48%, white 0%);
+    width: 88%;
+    height: 65%;
     margin-top: 8px;
-    padding: 2px;
-    padding-top: 10px;
+    margin-left: 45px;
+    padding: 8px;
+    padding-top: 18px;
     color: #000;
-    border: rgb(122, 122, 3) solid 4px;
+    filter: drop-shadow(0 0 2.5px yellow);
+    border: rgb(66, 66, 36) solid 4px;
     box-shadow: none;
   }
 
   .otherPerksContentDescription {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     line-height: 1.2;
-    padding-left: 5px;
+    padding-left: 2px;
     margin-bottom: 5px;
-    padding-top: 10px;
+    padding-top: 0px;
     margin-bottom: 0;
+    margin-top: 12px;
   }
 }
 
@@ -1594,25 +1735,25 @@ html {
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
   .page-section {
     margin-top: 60px;
   }
 }
 
-@media (min-width: 900px){
+@media (min-width: 900px) {
   .aboutUsHead {
     font-size: 2.8rem;
   }
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1000px) {
   .container1 {
     width: 70%;
     height: 95%;
     position: relative;
     margin-left: 15%;
-}
+  }
   .box {
     width: 100%;
     height: 50%;
@@ -1620,24 +1761,23 @@ html {
     top: 0;
     left: 0;
     opacity: 1;
-}
-.stack-top {
-  width: 95%;
-  height: 50%;
-  z-index: 9;
-  left: 12%;
-  margin-top: -16%;
-  border: 7px solid red;
-}
+  }
+  .stack-top {
+    width: 95%;
+    height: 50%;
+    z-index: 9;
+    left: 12%;
+    margin-top: -16%;
+    border: 7px solid red;
+  }
 
-.aboutHackUsict {
-  height: 100%;
-  width: 100%;
-  padding: 10px;
-  z-index: 20;
-  color: white;
-}
-
+  .aboutHackUsict {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    z-index: 20;
+    color: white;
+  }
 }
 
 /**********Contact form start***********************/
@@ -2698,12 +2838,12 @@ body {
 .sponsorData {
   width: 80%;
   border: 3px #b1be17 solid;
-  height: 12rem;
+  height: 15rem;
   margin: auto;
 }
 
 .sponsorData img {
-  height: 9rem;
+  height: 12rem;
   margin: 0.3rem;
 }
 .sponsorData h4 {
@@ -2728,7 +2868,7 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .one{
+  .one {
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
   }
@@ -2736,9 +2876,7 @@ body {
   .three {
     border-bottom-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
-
   }
-
 }
 
 /* SPonsors ENDED********************************************************************************************/
@@ -2757,8 +2895,8 @@ body {
   }
 } */
 
-@media (max-width:1200px){
-  .hide_below_960{
+@media (max-width: 1200px) {
+  .hide_below_960 {
     display: none;
   }
 }
