@@ -254,8 +254,12 @@
         <div class="row">
           <div class="col-lg-1 verticalLineTheme"></div>
           <h1 class="col-lg-11 waitTextTheme" >
-            <span class="blink_me">Themes will be available on 27th of February,2021. Kindly Register</span>
+            <span class="blink_me">Themes will be available on 27th of February,2021.
+            </span>
           </h1>
+          <button onclick="topFunction()" id="myBtnInsideTheme" >
+            <p class="registerInsideTheme blink_me">Kindly Register</p>
+          </button>
         </div>
       </div>
     </div>
@@ -364,10 +368,11 @@
             <div class="themeBoxContent otherPerksContent ">
               <img
                 class="otherPerksContentImage"
-                src="./assets/images/acm_chapter.jpg"
+                src="./assets/images/handshake.jpg"
               />
               <p class="otherPerksContentDescription">
-                Free ACM membership worth 1500 to top 3 teams
+                Internship and PPO offer with trell
+                
               </p>
             </div>
           </div>
@@ -388,10 +393,10 @@
             <div class="themeBoxContent otherPerksContent perksBox">
               <img
                 class="otherPerksContentImage"
-                src="./assets/images/handshake.jpg"
+                src="./assets/images/acm_chapter.jpg "
               />
               <p class="otherPerksContentDescription">
-                Internship and PPO offer with trell
+                Free ACM membership worth 1500 to top 3 teams
               </p>
             </div>
           </div>
@@ -425,10 +430,10 @@
         <div class="themeBoxContent otherPerksContent">
           <img
             class="otherPerksContentImage"
-            src="./assets/images/acm_chapter.jpg"
+            src="./assets/images/handshake.jpg"
           />
           <p class="otherPerksContentDescription">
-            Free ACM membership worth 1500 to top 3 teams
+            Internship and PPO offer with trell
           </p>
         </div>
       </div>
@@ -447,10 +452,10 @@
         <div class="themeBoxContent otherPerksContent">
           <img
             class="otherPerksContentImage"
-            src="./assets/images/handshake.jpg"
+            src="./assets/images/acm_chapter.jpg"
           />
           <p class="otherPerksContentDescription">
-            Internship and PPO offer with trell
+            Free ACM membership worth 1500 to top 3 teams
           </p>
         </div>
       </div>
@@ -1199,6 +1204,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
 <script>
+ function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 VANTA.WAVES({
   el: "#themesHack",
   mouseControls: true,

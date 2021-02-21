@@ -179,6 +179,25 @@ html {
 
 /* ----------theme hackathon page ----------*/
 
+#myBtnInsideTheme {
+  outline: none;
+  cursor: pointer;
+  background-color: #0297ff;
+  color: white;
+  border-radius: 5%;
+  margin-left: -10px;
+  margin-top: 30px;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.registerInsideTheme {
+  text-align: center;
+  padding-top: 3px;
+  font-size: 1.2rem;
+}
+
 .jumboStyle {
   padding-left: 100px;
   margin-top: 20px;
@@ -192,7 +211,7 @@ html {
 }
 
 .waitTextTheme {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-align: center;
   margin-top: 4px;
   margin-bottom: -5px;
@@ -265,7 +284,41 @@ html {
   padding-left: 8px;
 }
 
+@media (max-device-width: 375px) {
+  #myBtnInsideTheme {
+    outline: none;
+    cursor: pointer;
+    background-color: #0297ff;
+    color: white;
+    border-radius: 5%;
+    margin-left: -30px;
+    margin-top: 30px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 @media (max-device-width: 320px) {
+  #myBtnInsideTheme {
+    outline: none;
+    cursor: pointer;
+    background-color: #0297ff;
+    color: white;
+    border-radius: 5%;
+    margin-left: -48px;
+    margin-top: 30px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .registerInsideTheme {
+    text-align: center;
+    padding-top: 3px;
+    font-size: 1.2rem;
+  }
+
   .jumboStyle {
     padding-left: 100px;
     margin-top: 20px;
@@ -331,6 +384,25 @@ html {
 }
 
 @media (min-device-width: 768px) and (max-device-width: 1439px) {
+  #myBtnInsideTheme {
+    outline: none;
+    cursor: pointer;
+    background-color: #0297ff;
+    color: white;
+    border-radius: 5%;
+    margin-left: 50px;
+    margin-top: -70px;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .registerInsideTheme {
+    text-align: center;
+    padding-top: 3px;
+    font-size: 1.5rem;
+  }
+
   .jumboStyle {
     padding-left: 100px;
     margin-top: 20px;
@@ -341,17 +413,17 @@ html {
 
   .verticalLineTheme {
     display: inline-block;
-    height: 160px;
+    height: 180px;
     border-left: 5px solid #0297ff;
   }
 
   .waitTextTheme {
     font-size: 2.2rem;
     text-align: left;
-    margin-top: 15px;
+    margin-top: 5px;
     margin-bottom: -5px;
     margin-left: -25px;
-    line-height: 1.5;
+    line-height: 1.4;
     color: #0297ff;
   }
 
@@ -405,6 +477,25 @@ html {
 }
 
 @media (min-device-width: 768px) and (max-width: 1023px) {
+  #myBtnInsideTheme {
+    outline: none;
+    cursor: pointer;
+    background-color: #0297ff;
+    color: white;
+    border-radius: 5%;
+    margin-left: 40px;
+    margin-top: 30px;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .registerInsideTheme {
+    text-align: center;
+    padding-top: 3px;
+    font-size: 1.5rem;
+  }
+
   .themeBoxContentHeader {
     font-size: 2.3rem;
     margin-top: 12px;
@@ -463,6 +554,25 @@ html {
 }
 
 @media (min-device-width: 1440px) {
+  #myBtnInsideTheme {
+    outline: none;
+    cursor: pointer;
+    background-color: #0297ff;
+    color: white;
+    border-radius: 5%;
+    margin-left: 70px;
+    margin-top: -70px;
+    height: 55px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .registerInsideTheme {
+    text-align: center;
+    padding-top: 3px;
+    font-size: 1.8rem;
+  }
+
   .jumboStyle {
     padding-left: 100px;
     margin-top: 50px;
@@ -473,16 +583,16 @@ html {
 
   .verticalLineTheme {
     display: block;
-    height: 200px;
+    height: 230px;
     border-left: 8px solid #0297ff;
   }
 
   .waitTextTheme {
     text-align: left;
     font-size: 3.2rem;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: -35px;
-    line-height: 1.5;
+    line-height: 1.3;
     color: #0297ff;
   }
 
@@ -1060,6 +1170,26 @@ html {
     padding-top: 20px;
     margin-bottom: 0;
     margin-top: 12px;
+  }
+}
+
+@media (min-device-width: 426px) and (max-device-width: 590px) {
+  .priceImage {
+    width: 70%;
+    height: 200px;
+    margin-left: 70px;
+    margin-top: 7px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-device-width: 590px) and (max-device-width: 690px) {
+  .priceImage {
+    width: 60%;
+    height: 200px;
+    margin-left: 120px;
+    margin-top: 7px;
+    margin-bottom: 30px;
   }
 }
 
