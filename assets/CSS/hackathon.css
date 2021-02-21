@@ -2838,12 +2838,12 @@ body {
 .sponsorData {
   width: 80%;
   border: 3px #b1be17 solid;
-  height: 12rem;
+  height: 15rem;
   margin: auto;
 }
 
 .sponsorData img {
-  height: 9rem;
+  height: 12rem;
   margin: 0.3rem;
 }
 .sponsorData h4 {
