@@ -46,6 +46,7 @@ html {
 .hackusict-logo {
   height: 80px;
 }
+
 @media (min-width: 300px) and (max-width: 580px) {
   .hackusict-logo {
     height: 60px;
