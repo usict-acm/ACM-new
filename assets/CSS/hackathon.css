@@ -1227,6 +1227,7 @@ html {
 .leftHeadingDiv {
   display: flex !important;
   justify-content: flex-start !important;
+  margin-bottom: 1rem;
 }
 .orgainisingTeamLeftHeadingCard {
   display: inline-block;
@@ -1918,7 +1919,7 @@ span.team-text {
 .foot {
   /* color: black; */
   color: #ffda29;
-  background-color: #105A09;
+  background-color: #105a09;
 }
 
 .foot i {
