@@ -53,8 +53,9 @@
 <body>
   <!-- NavBar -->
   <nav id="nav" class="navbar nav navbar-expand-lg sticky-top">
-    <div class="nav-brand" style=" padding:7px;">
-      <img class="hackusict-logo mw-100" src="./assets/images/hackUsictLogo.jpeg" alt="HackUSICT logo">
+    <div class="nav-brand">
+      <img class="hackusict-logo mw-100" src="./assets/images/acm1.png" alt="HackUSICT logo">
+      <img class="" src="https://res-2.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/sjcmigra2nk4slozmfnu" width="60px" style="margin-left:10px;"/>
     </div>
     <button style="color:#fff;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="fa fa-bars"></span>
@@ -97,9 +98,15 @@
     <div class="hero-container">
       <div class="row">
         <div class="col col-xl-6 hero-left-div">
-          <p>TRELLATHON</p>
+          <!-- <p><img src="https://res-2.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/sjcmigra2nk4slozmfnu" width="60px" style="margin-top:-10px; margin-right:10px;"/>ATHON</p> -->
+          <p>
+            TRELLATHON
+          </p>
           <h2 style="margin-left:1%;"><b>24-HOUR HACKATHON <br>
               20TH FEB 2020 </b><br></h2>
+              <a href="#registration">
+                <button class="hero-register-button" type="button" name="button"><span class="blink_me">REGISTER NOW</span></button>
+              </a>
         </div>
         <div class="col col-xl-2 hide_below_960">
 
@@ -112,9 +119,7 @@
       <br>
       <div class="row">
         <div class="col">
-          <a href="#registration">
-            <button class="hero-register-button" type="button" name="button"><span class="blink_me">REGISTER NOW</span></button>
-          </a>
+
         </div>
       </div>
     </div>
@@ -166,7 +171,7 @@
       </div>
       <ul class="timeline">
         <li>
-          <div class="timeline-image"><img class="rounded-circle img-fluid" src="../ACM-new/assets/images/timeline/register.png" alt="" /></div>
+          <div class="timeline-image"><img class="rounded-circle img-fluid" src="./assets/images/timeline/register.png" alt="" /></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4>23 February - 7 March 2021</h4>
@@ -178,7 +183,7 @@
           </div>
         </li>
         <li class="timeline-inverted">
-          <div class="timeline-image"><img class="rounded-circle img-fluid" src="../ACM-new/assets/images/timeline/ideation.png" alt="" /></div>
+          <div class="timeline-image"><img class="rounded-circle img-fluid" src="./assets/images/timeline/ideation.png" alt="" /></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4>28 February - 7 March 2021</h4>
@@ -190,7 +195,7 @@
           </div>
         </li>
         <li>
-          <div class="timeline-image"><img class="rounded-circle img-fluid" src="../ACM-new/assets/images/timeline/resultdec.png" alt="" /></div>
+          <div class="timeline-image"><img class="rounded-circle img-fluid" src="./assets/images/timeline/resultdec.png" alt="" /></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4>12th March 2021</h4>
@@ -202,7 +207,7 @@
           </div>
         </li>
         <li class="timeline-inverted">
-          <div class="timeline-image"><img class="rounded-circle img-fluid" src="../ACM-new/assets/images/timeline/prototype.png" alt="" /></div>
+          <div class="timeline-image"><img class="rounded-circle img-fluid" src="./assets/images/timeline/prototype.png" alt="" /></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4>12 -14th March 2021</h4>
@@ -214,7 +219,7 @@
           </div>
         </li>
         <li>
-          <div class="timeline-image"><img class="rounded-circle img-fluid" src="../ACM-new/assets/images/timeline/dday.png" alt="" /></div>
+          <div class="timeline-image"><img class="rounded-circle img-fluid" src="./assets/images/timeline/dday.png" alt="" /></div>
           <div class="timeline-panel">
             <div class="timeline-heading">
               <h4>15th March 2021</h4>
@@ -249,8 +254,12 @@
         <div class="row">
           <div class="col-lg-1 verticalLineTheme"></div>
           <h1 class="col-lg-11 waitTextTheme" >
-            <span class="blink_me">Themes will be available on 27th of February,2021. Kindly Register</span>
+            <span class="blink_me">Themes will be available on 27th of February,2021.
+            </span>
           </h1>
+          <button onclick="topFunction()" id="myBtnInsideTheme" >
+            <p class="registerInsideTheme blink_me">Kindly Register</p>
+          </button>
         </div>
       </div>
     </div>
@@ -359,10 +368,11 @@
             <div class="themeBoxContent otherPerksContent ">
               <img
                 class="otherPerksContentImage"
-                src="./assets/images/acm_chapter.jpg"
+                src="./assets/images/handshake.jpg"
               />
               <p class="otherPerksContentDescription">
-                Free ACM membership worth 1500 to top 3 teams
+                Internship and PPO offer with trell
+                
               </p>
             </div>
           </div>
@@ -383,10 +393,10 @@
             <div class="themeBoxContent otherPerksContent perksBox">
               <img
                 class="otherPerksContentImage"
-                src="./assets/images/handshake.jpg"
+                src="./assets/images/acm_chapter.jpg "
               />
               <p class="otherPerksContentDescription">
-                Internship and PPO offer with trell
+                Free ACM membership worth 1500 to top 3 teams
               </p>
             </div>
           </div>
@@ -420,10 +430,10 @@
         <div class="themeBoxContent otherPerksContent">
           <img
             class="otherPerksContentImage"
-            src="./assets/images/acm_chapter.jpg"
+            src="./assets/images/handshake.jpg"
           />
           <p class="otherPerksContentDescription">
-            Free ACM membership worth 1500 to top 3 teams
+            Internship and PPO offer with trell
           </p>
         </div>
       </div>
@@ -442,10 +452,10 @@
         <div class="themeBoxContent otherPerksContent">
           <img
             class="otherPerksContentImage"
-            src="./assets/images/handshake.jpg"
+            src="./assets/images/acm_chapter.jpg"
           />
           <p class="otherPerksContentDescription">
-            Internship and PPO offer with trell
+            Free ACM membership worth 1500 to top 3 teams
           </p>
         </div>
       </div>
@@ -1109,25 +1119,33 @@
         <div class="half p-3 p-md-5 ftco-animate fadeInUp ftco-animated">
           <h3 class="mb-4 white">Leave a Message
           </h3>
-          <form class="widget-contact-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdUSBZRV4WRNDQVvoiyYcNwZuM8qQke-I8xx20ZDd-DQdvbhg/formResponse" role="form" method="post" target="_self" novalidate="novalidate">
+          <form class="widget-contact-form"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse"
+            role="form" method="post" target="_self" novalidate="novalidate">
             <div class="row" style="margin-top:2rem">
               <div class="form-group col-md-6">
-                <input type="text" aria-required="true" name="entry.994897843" class="form-input-boxes-manual form-control required name" placeholder="Name" style="color: grey;">
+                <input type="text" aria-required="true" name="entry.360262149"
+                  class="form-input-boxes-manual form-control required name" placeholder="Name" style="color: grey;">
               </div>
               <div class="form-group col-md-6">
-                <input type="email" aria-required="true" name="entry.1530059379" class="form-input-boxes-manual form-control required email" placeholder="Email" style="color: grey;">
+                <input type="email" aria-required="true" name="entry.1979735424"
+                  class="form-input-boxes-manual form-control required email" placeholder="Email" style="color: grey;">
               </div>
             </div>
             <div class="row">
               <div class="form-group col-md-6">
-                <input type="text" name="entry.639332292" class="form-input-boxes-manual form-control" placeholder="Phone Number" style="color: grey;">
+                <input type="text" name="entry.1199769641" class="form-input-boxes-manual form-control"
+                  placeholder="Phone Number" style="color: grey;">
               </div>
               <div class="form-group col-md-6">
-                <input type="text" name="entry.1323550433" class="form-input-boxes-manual form-control" placeholder="Company Name" style="color: grey;">
+                <input type="text" name="entry.154355220" class="form-input-boxes-manual form-control"
+                  placeholder="Company Name" style="color: grey;">
               </div>
             </div>
             <div class="form-group">
-              <textarea type="text" name="entry.2135729860" rows="5" class="form-control form-input-boxes-manual required" placeholder="Message" style="color: grey;" aria-required="true"></textarea>
+              <textarea type="text" name="entry.1544463438" rows="5"
+                class="form-control form-input-boxes-manual required" placeholder="Message" style="color: grey;"
+                aria-required="true"></textarea>
             </div>
             <div class="row">
               <div class="form-group col-md-6"></div>
@@ -1228,6 +1246,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
 <script>
+ function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 VANTA.WAVES({
   el: "#themesHack",
   mouseControls: true,
