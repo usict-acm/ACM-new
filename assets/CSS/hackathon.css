@@ -24,6 +24,15 @@ html {
   border-bottom: 3px solid transparent;
 }
 
+/* .navLinks {
+  cursor: pointer;
+  color: white;
+} */
+
+/* .navLinks:hover {
+  color: red;
+} */
+
 .nav-link:hover {
   color: red;
   border-bottom: 3px solid red;
@@ -48,12 +57,30 @@ html {
 }
 
 @media (min-width: 300px) and (max-width: 580px) {
+  .navLinks {
+    cursor: pointer;
+    color: white;
+  }
+
+  .navLinks:hover {
+    color: red;
+  }
+
   .hackusict-logo {
     height: 60px;
   }
 }
 
 @media (max-width: 986px) {
+  .navLinks {
+    cursor: pointer;
+    color: white;
+  }
+
+  .navLinks:hover {
+    color: red;
+  }
+
   .navbar {
     background-color: black;
   }
