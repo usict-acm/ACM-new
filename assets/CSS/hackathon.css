@@ -1237,6 +1237,20 @@ html {
   }
 }
 
+@media (min-device-width: 770px) and (max-device-width: 1023px) {
+  .priceImage {
+    width: 70%;
+    height: 300px;
+    margin-left: 95px;
+    margin-top: 7px;
+    margin-bottom: 30px;
+  }
+
+  .otherPerksContent {
+    margin-left: 60px;
+  }
+}
+
 @media (min-device-width: 426px) and (max-device-width: 590px) {
   .priceImage {
     width: 70%;
