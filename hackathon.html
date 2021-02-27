@@ -221,7 +221,7 @@
               console.log(screenWidth);
               if (screenWidth <= 520) {
                 // document.body.scrollTop = 2590;
-                document.documentElement.scrollTop = 2590;
+                document.documentElement.scrollTop = 2720;
               }
               if (screenWidth <= 537 && screenWidth > 520) {
                 // document.body.scrollTop = 2300;
@@ -234,7 +234,7 @@
               }
               if (screenWidth <= 1500 && screenWidth > 800) {
                 // document.body.scrollTop = 3000;
-                document.documentElement.scrollTop = 3000;
+                document.documentElement.scrollTop = 2850;
               }
               if (screenWidth <= 1800 && screenWidth > 1500) {
                 // document.body.scrollTop = 2950;
@@ -260,8 +260,7 @@
               var screenWidth = window.innerWidth;
               console.log(screenWidth);
               if (screenWidth <= 520) {
-                document.body.scrollTop = 3880;
-                document.documentElement.scrollTop = 3880;
+                document.documentElement.scrollTop = 3950;
               }
               if (screenWidth <= 537 && screenWidth > 520) {
                 // document.body.scrollTop = 3400;
@@ -274,7 +273,7 @@
               }
               if (screenWidth <= 1500 && screenWidth > 800) {
                 // document.body.scrollTop = 4200;
-                document.documentElement.scrollTop = 4200;
+                document.documentElement.scrollTop = 4000;
               }
               if (screenWidth <= 1800 && screenWidth > 1500) {
                 // document.body.scrollTop = 4050;
@@ -302,7 +301,7 @@
               console.log(screenWidth);
               if (screenWidth <= 520) {
                 // document.body.scrollTop = 4480;
-                document.documentElement.scrollTop = 4480;
+                document.documentElement.scrollTop = 4520;
               }
               if (screenWidth <= 537 && screenWidth > 520) {
                 // document.body.scrollTop = 4100;
@@ -311,15 +310,15 @@
 
               if (screenWidth <= 800 && screenWidth > 537) {
                 // document.body.scrollTop = 4500;
-                document.documentElement.scrollTop = 4500;
+                document.documentElement.scrollTop = 4550;
               }
               if (screenWidth <= 1500 && screenWidth > 800) {
                 // document.body.scrollTop = 4650;
-                document.documentElement.scrollTop = 4650;
+                document.documentElement.scrollTop = 4430;
               }
               if (screenWidth <= 1800 && screenWidth > 1500) {
                 // document.body.scrollTop = 5000;
-                document.documentElement.scrollTop = 5000;
+                document.documentElement.scrollTop = 4800;
               }
               if (screenWidth <= 3000 && screenWidth > 1800) {
                 // document.body.scrollTop = 5350;
@@ -342,7 +341,7 @@
               console.log(screenWidth);
               if (screenWidth <= 520) {
                 // document.body.scrollTop = 6000;
-                document.documentElement.scrollTop = 6000;
+                document.documentElement.scrollTop = 6060;
               }
               if (screenWidth <= 537 && screenWidth > 520) {
                 // document.body.scrollTop = 6000;
@@ -351,11 +350,11 @@
 
               if (screenWidth <= 800 && screenWidth > 537) {
                 // document.body.scrollTop = 5200;
-                document.documentElement.scrollTop = 5200;
+                document.documentElement.scrollTop = 5300;
               }
               if (screenWidth <= 1500 && screenWidth > 800) {
                 // document.body.scrollTop = 4650;
-                document.documentElement.scrollTop = 5600;
+                document.documentElement.scrollTop = 5200;
               }
               if (screenWidth <= 1800 && screenWidth > 1500) {
                 // document.body.scrollTop = 5500;
@@ -363,20 +362,46 @@
               }
               if (screenWidth <= 3000 && screenWidth > 1800) {
                 // document.body.scrollTop = 5350;
-                document.documentElement.scrollTop = 5350;
+                document.documentElement.scrollTop = 6050;
               }
             }
           </script>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#faq">FAQ</a>
-          </li> -->
-
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact Us</a>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact Us</a>
+          <li class="nav-item" onclick="contactFunction()">
+            <a
+              class="nav-link"
+              onmouseover="this.style.color='red'"
+              style="cursor: pointer; color: #e8e3e3"
+              onmouseout="this.style.color='#e8e3e3'"
+              >Contact Us</a
+            >
           </li>
+          <script>
+            function contactFunction() {
+              var screenWidth = window.innerWidth;
+              console.log(window.innerHeight);
+              if (screenWidth <= 520) {
+                document.documentElement.scrollTop = 6810;
+              }
+              if (screenWidth <= 537 && screenWidth > 520) {
+                document.documentElement.scrollTop = 6500;
+              }
+              if (screenWidth <= 800 && screenWidth > 537) {
+                document.documentElement.scrollTop = 5800;
+              }
+              if (screenWidth <= 1500 && screenWidth > 800) {
+                document.documentElement.scrollTop = 5750;
+              }
+              if (screenWidth <= 1500 && screenWidth > 800) {
+                document.documentElement.scrollTop = 5650;
+              }
+              if (screenWidth <= 1800 && screenWidth > 1500) {
+                document.documentElement.scrollTop = 5950;
+              }
+              if (screenWidth <= 3000 && screenWidth > 1800) {
+                document.documentElement.scrollTop = 6600;
+              }
+            }
+          </script>
         </ul>
       </div>
     </nav>
