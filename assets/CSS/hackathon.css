@@ -48,6 +48,10 @@ html {
   box-shadow: 2px 2px 14px #70ff00;
 }
 
+.ff-powered-img{
+  display: none;
+}
+
 .nav-item {
   padding-left: 25px;
   padding-right: 10px;
