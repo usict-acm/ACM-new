@@ -64,6 +64,32 @@
       crossorigin="anonymous"
     ></script>
     <link href="./assets/CSS/hackathon.css" rel="stylesheet" />
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyA_pYnOglxiRzv4Dk7dIeRVVIRdRiFBa0M",
+    authDomain: "hackathon-4a008.firebaseapp.com",
+    databaseURL: "https://hackathon-4a008-default-rtdb.firebaseio.com",
+    projectId: "hackathon-4a008",
+    storageBucket: "hackathon-4a008.appspot.com",
+    messagingSenderId: "151067046762",
+    appId: "1:151067046762:web:46acd7e3deca9de34eeb13",
+    measurementId: "G-5VC1N3RY0Y"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
   </head>
 
   <body>
@@ -1336,8 +1362,8 @@
             <input type="text" name="leaderNumber" class="form-input-boxes-manual form-control" placeholder="Leader Number" style="color: grey;">
           </div>
         </div>
-        <div class="form-group col-12">
-          <textarea type="text" name="leaderEmail" class="form-control form-input-boxes-manual required" placeholder="Team Leader Email" style="color: grey;" aria-required="true"></textarea>
+        <div class="form-group">
+          <input type="text" row="1" name="leaderEmail" class="form-control form-input-boxes-manual required" placeholder="Team Leader Email" style="color: grey;" aria-required="true"></textarea>
         </div>
 
       </section>
@@ -1423,7 +1449,7 @@
         </div>
         <div class="row">
           <div class="form-group col-md-6">
-            <input type="number" name="memberThreeCollege" class="form-input-boxes-manual form-control required" placeholder="Contact Number" style="color: grey;">
+            <input type="number" name="memberThreeNumber" class="form-input-boxes-manual form-control required" placeholder="Contact Number" style="color: grey;">
           </div>
           <div class="form-group col-md-6">
             <input type="email" name="memberThreeEmail" class="form-input-boxes-manual form-control required" placeholder="Email" style="color: grey;">
@@ -1830,26 +1856,6 @@
       <br />
     </div>
   </footer>
-  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js%22%3E"</script>
-  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js%22%3E"</script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-       https://firebase.google.com/docs/web/setup#available-libraries -->
-
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyAhiB33V6BQ7MyPFuwb7CiotB_1plHeJeg",
-      authDomain: "hackathon-register.firebaseapp.com",
-      databaseURL: "https://hackathon-register-default-rtdb.firebaseio.com/",
-      projectId: "hackathon-register",
-      storageBucket: "hackathon-register.appspot.com",
-      messagingSenderId: "943629422637",
-      appId: "1:943629422637:web:79ad751ff027cc416b28a4"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-  </script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
