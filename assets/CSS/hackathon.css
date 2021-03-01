@@ -48,7 +48,7 @@ html {
   box-shadow: 2px 2px 14px #70ff00;
 }
 
-.ff-powered-img{
+.ff-powered-img {
   display: none;
 }
 
@@ -2968,6 +2968,35 @@ body {
     color: #ffffff;
   }
 }
+
+.modal-content {
+  margin: auto;
+  width: 70%;
+  border-radius: 10px;
+}
+.modal-header {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.modal-footer {
+  border-top: 0;
+}
+.modal-body h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.modal-body span {
+  text-align: left;
+}
+.modal-header > .fas {
+  margin-top: -15% !important;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin: 2% 43%;
+  margin-bottom: 0;
+}
+
 /* ****************************FAQ*********************************************** */
 
 .panel-group .panel {

@@ -1492,6 +1492,62 @@
   </div>
   </form>
   </div>
+  
+
+
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#successModal">
+  Launch demo modal
+</button>
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i class="fas fa-check-circle fa-3x" style="color: #08b439;"></i>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-left: -14%;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3 class="modal-title" id="exampleModalCenterTitle">Congratulations</h3>
+        Thank you for registrating.<br>
+        Your registration details are:-<br>
+        <span style="font-weight: bold;text-align: left !important;">Team name:- XYZ <br>
+          Registration no. :-xy98457<br>
+          Email id:-xyz@abc.com<br></span>
+        Kindly note down the details, for round 1 submissions.
+        For any queries feel feel to contact acmusit@gmail.com.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success btn-block" data-dismiss="modal">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Error Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i class="fas fa-exclamation-circle fa-3x" style="color: #fc1534;"></i>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-left: -14%;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3 class="modal-title" id="exampleModalCenterTitle">ERROR</h3>
+        You have already register for hackhthon,
+Kindly submit your submission for round 1 on or before {last date of submission}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-block" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- <div class="tabs row">
   <div class="tab-header col-lg-6 col-md-6 col-sm-12 col-12">

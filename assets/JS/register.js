@@ -43,7 +43,13 @@ $(document).ready(function() {
         registerRef.get()
         .then((docSnapshot)=>{
           if(docSnapshot.exists){
-            alert("USER EMAIL ALREADY EXISTS")
+            var x = document.getElementById("exampleModalCenter");
+            if (x.style.display === 'none') {
+              x.style.display = 'block';
+            } else {
+              x.style.display = 'none';
+            }
+            // alert("USER EMAIL ALREADY EXISTS")
           }
           else
           {
@@ -88,4 +94,19 @@ $(document).ready(function() {
 
 }
 });
+});
+
+
+
+
+feather.replace();
+
+$(document).ready(function() {
+  setTimeout(function(){
+      $('.modal').addClass('modal--open');
+  }, 1700);
+  
+  setTimeout(function(){
+      $('.modal__icon').addClass('modal__icon--visible');
+  }, 2200);
 });
