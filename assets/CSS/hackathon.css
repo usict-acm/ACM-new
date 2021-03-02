@@ -3143,3 +3143,7 @@ body {
     display: none;
   }
 }
+
+#errorModal {
+  display: none;
+}

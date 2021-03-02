@@ -43,13 +43,9 @@ $(document).ready(function() {
         registerRef.get()
         .then((docSnapshot)=>{
           if(docSnapshot.exists){
-            var x = document.getElementById("exampleModalCenter");
-            if (x.style.display === 'none') {
-              x.style.display = 'block';
-            } else {
-              x.style.display = 'none';
-            }
-            // alert("USER EMAIL ALREADY EXISTS")
+            $("#errorMessage").html("You have already register for hackathon,\
+             Kindly submit your submission for round 1 on or before {last date of submission}")
+             $("#errorModal").modal();        
           }
           else
           {
@@ -86,6 +82,14 @@ $(document).ready(function() {
               registration: regNo,
               file: ""
             })
+            .then(() => {
+                $("#successfulMessage").html("Team name:-"+det.teamName.value+" <br>Registration no. :-" + regNo+"<br>Email id:-"+det.leaderEmail.value)
+                $("#successModal").modal();
+              })
+          .catch((error) => {
+            $("#errorMessage").html(error);
+            $("#errorModal").modal();        
+          });
           }
         })
 
@@ -99,7 +103,7 @@ $(document).ready(function() {
 
 
 
-feather.replace();
+// feather.replace();
 
 $(document).ready(function() {
   setTimeout(function(){

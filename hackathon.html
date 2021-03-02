@@ -1339,27 +1339,27 @@
       <section>
         <div class="registration-heading">
           <h1>Register For</h1>
-          <h1 style="color: #08b339;"><strong>HackUSICT</strong></h1>
+          <h1 style="color: #08b339;"><strong>Trellathon</strong></h1>
         </div>
 
         <div class="row" style="margin-top:2rem">
           <div class="form-group col-md-6">
-            <input type="text" name="teamName" class="form-input-boxes-manual form-control required" placeholder="Team Name" style="color: grey;">
+            <input type="text" name="teamName" class="form-input-boxes-manual form-control required" placeholder="Team Name" style="color: grey;" required>
           </div>
           <div class="form-group col-md-6">
-            <input type="number" aria-required="true" name="numberOfMembers" class="form-input-boxes-manual form-control required" placeholder="Number of Members" style="color: grey;">
+            <input type="number" aria-required="true" name="numberOfMembers" class="form-input-boxes-manual form-control required" placeholder="Number of Members" style="color: grey;" required>
           </div>
         </div>
         <div class="row">
           <div class="form-group col-md-6">
-            <input type="text" name="leaderName" class="form-input-boxes-manual form-control" placeholder="Team Leader Name" style="color: grey;">
+            <input type="text" name="leaderName" class="form-input-boxes-manual form-control" placeholder="Team Leader Name" style="color: grey;" required>
           </div>
           <div class="form-group col-md-6">
-            <input type="text" name="leaderNumber" class="form-input-boxes-manual form-control" placeholder="Leader Number" style="color: grey;">
+            <input type="number" name="leaderNumber" class="form-input-boxes-manual form-control" placeholder="Leader Number" style="color: grey;" required>
           </div>
         </div>
         <div class="form-group">
-          <input type="text" row="1" name="leaderEmail" class="form-control form-input-boxes-manual required" placeholder="Team Leader Email" style="color: grey;" aria-required="true"></textarea>
+          <input type="email" row="1" name="leaderEmail" class="form-control form-input-boxes-manual required" placeholder="Team Leader Email" style="color: grey;" aria-required="true" required></textarea>
         </div>
 
       </section>
@@ -1496,9 +1496,9 @@
 
 
   <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#successModal">
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#successModal">
   Launch demo modal
-</button>
+</button> -->
 <!-- Success Modal -->
 <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -1514,10 +1514,8 @@
         <h3 class="modal-title" id="exampleModalCenterTitle">Congratulations</h3>
         Thank you for registrating.<br>
         Your registration details are:-<br>
-        <span style="font-weight: bold;text-align: left !important;">Team name:- XYZ <br>
-          Registration no. :-xy98457<br>
-          Email id:-xyz@abc.com<br></span>
-        Kindly note down the details, for round 1 submissions.
+        <span id="successfulMessage" style="font-weight: bold;text-align: left !important;"></span>
+        <b></b>Kindly note down the details, for round 1 submissions.
         For any queries feel feel to contact acmusit@gmail.com.
       </div>
       <div class="modal-footer">
@@ -1538,9 +1536,8 @@
         </button>
       </div>
       <div class="modal-body">
-        <h3 class="modal-title" id="exampleModalCenterTitle">ERROR</h3>
-        You have already register for hackhthon,
-Kindly submit your submission for round 1 on or before {last date of submission}
+        <h3 id="errorMessage" class="modal-title" id="exampleModalCenterTitle">ERROR</h3>
+     
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger btn-block" data-dismiss="modal">Close</button>
