@@ -45,7 +45,7 @@ $(document).ready(function() {
           if(docSnapshot.exists){
             $("#errorMessage").html("You have already register for hackathon,\
              Kindly submit your submission for round 1 on or before {last date of submission}")
-             $("#errorModal").modal();        
+             $("#errorModal").modal();
           }
           else
           {
@@ -88,7 +88,7 @@ $(document).ready(function() {
               })
           .catch((error) => {
             $("#errorMessage").html(error);
-            $("#errorModal").modal();        
+            $("#errorModal").modal();
           });
           }
         })
@@ -109,7 +109,7 @@ $(document).ready(function() {
   setTimeout(function(){
       $('.modal').addClass('modal--open');
   }, 1700);
-  
+
   setTimeout(function(){
       $('.modal__icon').addClass('modal__icon--visible');
   }, 2200);
@@ -157,7 +157,7 @@ $(function() {
         $("#teaName_error_message").hide();
         $("#teamName").css("border","3px solid #34F458");
      } else {
-        $("#teamName_error_message").html("Should contain only Characters");
+        $("#teamName_error_message").html("Should contain only letters");
         $("#teamName_error_message").show();
         $("#teamName").css("border","3px solid #F90A0A");
         error_teamName = true;
@@ -170,7 +170,7 @@ $(function() {
       $("#member_error_message").hide();
        $("#member").css("border","3px solid #34F458");
     } else {
-      $("#member_error_message").html("Members Should be 4 or less than 4");
+      $("#member_error_message").html("Members Should be from 2 to 4");
       $("#member_error_message").show();
       $("#member").css("border","3px solid #F90A0A");
       error_member = true;
@@ -184,16 +184,16 @@ $(function() {
      $("#leaderName_error_message").hide();
      $("#leaderName").css("border","3px solid #34F458");
   } else {
-     $("#leaderName_error_message").html("Should contain only Characters");
+     $("#leaderName_error_message").html("Should contain only letters");
      $("#leaderName_error_message").show();
      $("#leaderName").css("border","3px solid #F90A0A");
      error_leaderName = true;
   }
-} 
+}
 
 function check_leaderNumber() {
   var leaderNumber_length = $("#leaderNumber").val().length;
-  if ((leaderNumber_length == 9)) {
+  if ((leaderNumber_length != 10)) {
      $("#leaderNumber_error_message").html("Number Should have 10 digits");
      $("#leaderNumber_error_message").show();
      $("#leaderNumber").css("border","3px solid #F90A0A");
