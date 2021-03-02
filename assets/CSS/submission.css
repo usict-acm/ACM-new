@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ruda:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+/* ----------NavBar hackathon page ---------- */
+body {
+  background-color: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav {
+  font-size: 1.1rem;
+}
+
+.nav-link {
+  color: #e8e3e3;
+  padding: 20px;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+}
+
+/* .navLinks {
+  cursor: pointer;
+  color: white;
+} */
+
+/* .navLinks:hover {
+  color: red;
+} */
+
+.nav-link:hover {
+  color: red;
+  border-bottom: 3px solid red;
+}
+
+.nav-link.active::after {
+  color: red;
+  border-bottom: 3px solid red;
+}
+
+.black {
+  background-color: black !important;
+  box-shadow: 2px 2px 14px #70ff00;
+}
+
+.ff-powered-img{
+  display: none;
+}
+
+.nav-item {
+  padding-left: 25px;
+  padding-right: 10px;
+}
+.hackusict-logo {
+  height: 80px;
+}
+
+@media (min-width: 300px) and (max-width: 580px) {
+  .navLinks {
+    cursor: pointer;
+    color: white;
+  }
+
+  .navLinks:hover {
+    color: red;
+  }
+
+  .hackusict-logo {
+    height: 60px;
+  }
+}
+
+@media (max-width: 986px) {
+  .navLinks {
+    cursor: pointer;
+    color: white;
+  }
+
+  .navLinks:hover {
+    color: red;
+  }
+
+  .navbar {
+    background-color: black;
+  }
+}
+/* -----------Hero ------------*/
+
+.hero-canvas {
+  position: absolute;
+  height: 100vh;
+  width: 98.5vw;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero-hackathon {
+  min-height: 75vh;
+  width: 98.5vw;
+}
+
+.hero-container {
+  margin-left: 10%;
+  width: 80%;
+  margin-right: 10%;
+  margin-top: 7%;
+}
+
+.hero-left-div {
+  font-family: "Ruda", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  color: #70ff00;
+  font-size: 5rem;
+}
+
+.hero-right-div {
+  margin-top: 50px;
+  font-family: Ruda;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+}
+
+.hero-register-button {
+  background: #000000;
+  border: 3px solid #70ff00;
+  box-sizing: border-box;
+  color: white;
+  margin: 10px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.blink_me {
+  animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.font-red {
+  color: red;
+}
+
+.countdown-item {
+  display: inline-block;
+  list-style-type: none;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.countdown-span {
+  display: block;
+}
+
+.backgroundcanvas {
+  width: 100%;
+  min-height: 100vh;
+  z-index: -2;
+}
+
+#countdown {
+  margin-top: 3%;
+  text-align: center;
+  align-self: center;
+  color: #fff;
+  font-size: 2rem;
+}
+
+@media (max-width: 786px) {
+  .hero-left-div {
+    font-size: 3rem;
+  }
+
+  .hide-below-lg {
+    display: none;
+  }
+
+  .hero-right-div {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero-register-button {
+    font-size: 1.2rem;
+  }
+}
+
+
+.dabba-number-ek{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.heading{
+    color: #70ff70;
+    font-size: 3rem;
+}
+
+.submission-wala-dabba{
+    color:#fff;
+}
+
+
+
+/* ==========FOOTER=========== */
+
+.foot {
+    /* color: black; */
+    color: #ffda29;
+    background-color: #105a09;
+  }
+  
+  .foot i {
+    color: white;
+  }
+  
+  .foot li a {
+    color: #ffda29;
+  }
+  .foot li a:hover {
+    color: #ffda29;
+  }
+  
+  .concept {
+    font-weight: 500;
+    color: white;
+  }
+  
+  .foot-head {
+    color: black;
+    font-weight: 700 !important;
+  }
+  
+  .footPara {
+    color: black;
+    font-weight: 600;
+  }
