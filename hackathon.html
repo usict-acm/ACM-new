@@ -90,6 +90,8 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -1344,22 +1346,27 @@
 
         <div class="row" style="margin-top:2rem">
           <div class="form-group col-md-6">
-            <input type="text" name="teamName" class="form-input-boxes-manual form-control required" placeholder="Team Name" style="color: grey;" required>
+            <input id="teamName" type="text" name="teamName" class="form-input-boxes-manual form-control required" placeholder="Team Name" style="color: grey;" required>
+            <span class="error_form" id="teamName_error_message"></span>
           </div>
           <div class="form-group col-md-6">
-            <input type="number" aria-required="true" name="numberOfMembers" class="form-input-boxes-manual form-control required" placeholder="Number of Members" style="color: grey;" required>
+            <input id="member" type="number" aria-required="true" name="numberOfMembers" class="form-input-boxes-manual form-control required" placeholder="Number of Members" style="color: grey;" required>
+            <span class="error_form" id="member_error_message"></span>
           </div>
         </div>
         <div class="row">
           <div class="form-group col-md-6">
-            <input type="text" name="leaderName" class="form-input-boxes-manual form-control" placeholder="Team Leader Name" style="color: grey;" required>
+            <input id="leaderName" type="text" name="leaderName" class="form-input-boxes-manual form-control" placeholder="Team Leader Name" style="color: grey;" required>
+            <span class="error_form" id="leaderName_error_message"></span>
           </div>
           <div class="form-group col-md-6">
-            <input type="number" name="leaderNumber" class="form-input-boxes-manual form-control" placeholder="Leader Number" style="color: grey;" required>
+            <input id="leaderNumber" type="number" name="leaderNumber" class="form-input-boxes-manual form-control phoneValidate" placeholder="Leader Number" style="color: grey;" required>
+            <span class="error_form" id="leaderNumber_error_message"></span>
           </div>
         </div>
         <div class="form-group">
-          <input type="email" row="1" name="leaderEmail" class="form-control form-input-boxes-manual required" placeholder="Team Leader Email" style="color: grey;" aria-required="true" required></textarea>
+          <input id="leaderEmail" type="email" name="leaderEmail" class="form-control form-input-boxes-manual required" placeholder="Team Leader Email" style="color: grey;" aria-required="true" required>
+          <span class="error_form" id="leaderEmail_error_message"></span>
         </div>
 
       </section>

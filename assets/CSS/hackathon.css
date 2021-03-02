@@ -2996,7 +2996,12 @@ body {
   margin: 2% 43%;
   margin-bottom: 0;
 }
-
+.error_form {
+  top: 12px;
+  color: #f32013;
+  font-size: 15px;
+  font-family: Helvetica;
+}
 /* ****************************FAQ*********************************************** */
 
 .panel-group .panel {

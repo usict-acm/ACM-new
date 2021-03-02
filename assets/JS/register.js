@@ -114,3 +114,131 @@ $(document).ready(function() {
       $('.modal__icon').addClass('modal__icon--visible');
   }, 2200);
 });
+
+
+
+
+
+
+$(function() {
+
+  $("#teamName_error_message").hide();
+  $("#member_error_message").hide();
+  $("#leaderName_error_message").hide();
+  $("#leaderNumber_error_message").hide();
+  $("#leaderEmail_error_message").hide();
+
+  var error_teamName = false;
+  var error_member = false;
+  var error_leaderName = false;
+  var error_leaderNumber = false;
+  var error_leaderEmail = false;
+
+  $("#teamName").focusout(function(){
+     check_teamName();
+  });
+  $("#member").focusout(function() {
+     check_member();
+  });
+  $("#leaderName").focusout(function() {
+     check_leaderName();
+  });
+  $("#leaderNumber").focusout(function() {
+     check_leaderNumber();
+  });
+  $("#leaderEmail").focusout(function() {
+     check_leaderEmail();
+  });
+
+  function check_teamName() {
+     var pattern = /^[a-zA-Z]*$/;
+     var teamName = $("#teamName").val();
+     if (pattern.test(teamName) && teamName !== '') {
+        $("#teaName_error_message").hide();
+        $("#teamName").css("border","3px solid #34F458");
+     } else {
+        $("#teamName_error_message").html("Should contain only Characters");
+        $("#teamName_error_message").show();
+        $("#teamName").css("border","3px solid #F90A0A");
+        error_teamName = true;
+     }
+  }
+
+  function check_member() {
+    var member = $("#member").val();
+    if ((member <= 4) && (member > 0)) {
+      $("#member_error_message").hide();
+       $("#member").css("border","3px solid #34F458");
+    } else {
+      $("#member_error_message").html("Members Should be 4 or less than 4");
+      $("#member_error_message").show();
+      $("#member").css("border","3px solid #F90A0A");
+      error_member = true;
+    }
+ }
+
+ function check_leaderName() {
+  var pattern = /^[a-zA-Z]*$/;
+  var leaderName = $("#leaderName").val();
+  if (pattern.test(leaderName) &&leaderName !== '') {
+     $("#leaderName_error_message").hide();
+     $("#leaderName").css("border","3px solid #34F458");
+  } else {
+     $("#leaderName_error_message").html("Should contain only Characters");
+     $("#leaderName_error_message").show();
+     $("#leaderName").css("border","3px solid #F90A0A");
+     error_leaderName = true;
+  }
+} 
+
+function check_leaderNumber() {
+  var leaderNumber_length = $("#leaderNumber").val().length;
+  if ((leaderNumber_length == 9)) {
+     $("#leaderNumber_error_message").html("Number Should have 10 digits");
+     $("#leaderNumber_error_message").show();
+     $("#leaderNumber").css("border","3px solid #F90A0A");
+     error_leaderNumber = true;
+  } else {
+     $("#leaderNumber_error_message").hide();
+     $("#leaderNumber").css("border","3px solid #34F458");
+  }
+}
+
+  function check_leaderEmail() {
+     var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+     var leaderEmail = $("#leaderEmail").val();
+     if (pattern.test(leaderEmail) && leaderEmail !== '') {
+        $("#leaderEmail_error_message").hide();
+        $("#leaderEmail").css("border","3px solid #34F458");
+     } else {
+        $("#leaderEmail_error_message").html("Invalid Email");
+        $("#leaderEmail_error_message").show();
+        $("#leaderEmail").css("border","3px solid #F90A0A");
+        error_leaderEmail = true;
+     }
+  }
+
+  $("#my_form").submit(function() {
+     error_teamName = false;
+     error_member = false;
+     error_leaderName = false;
+     error_leaderNumber = false;
+     error_leaderEmail = false;
+
+     check_teamName();
+     check_member();
+     check_leaderName();
+     check_leaderNumber();
+     check_leaderEmail();
+
+     if (error_teamName === false && error_member === false && error_leaderName === false && error_leaderNumber === false && error_leaderEmail === false) {
+        alert("Registration Successfull");
+        return true;
+     } else {
+        alert("Please Fill the form Correctly");
+        return false;
+     }
+
+
+  });
+});
