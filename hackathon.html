@@ -90,6 +90,8 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -247,7 +249,7 @@
               console.log(screenWidth);
               if (screenWidth <= 520) {
                 // document.body.scrollTop = 2590;
-                document.documentElement.scrollTop = 2720;
+                document.documentElement.scrollTop = 2650;
               }
               if (screenWidth <= 537 && screenWidth > 520) {
                 // document.body.scrollTop = 2300;
@@ -286,7 +288,7 @@
               var screenWidth = window.innerWidth;
               console.log(screenWidth);
               if (screenWidth <= 520) {
-                document.documentElement.scrollTop = 3950;
+                document.documentElement.scrollTop = 4050;
               }
               if (screenWidth <= 537 && screenWidth > 520) {
                 // document.body.scrollTop = 3400;
@@ -327,7 +329,7 @@
               console.log(screenWidth);
               if (screenWidth <= 520) {
                 // document.body.scrollTop = 4480;
-                document.documentElement.scrollTop = 4520;
+                document.documentElement.scrollTop = 4690;
               }
               if (screenWidth <= 537 && screenWidth > 520) {
                 // document.body.scrollTop = 4100;
@@ -367,7 +369,7 @@
               console.log(screenWidth);
               if (screenWidth <= 520) {
                 // document.body.scrollTop = 6000;
-                document.documentElement.scrollTop = 6060;
+                document.documentElement.scrollTop = 6160;
               }
               if (screenWidth <= 537 && screenWidth > 520) {
                 // document.body.scrollTop = 6000;
@@ -380,11 +382,11 @@
               }
               if (screenWidth <= 1500 && screenWidth > 800) {
                 // document.body.scrollTop = 4650;
-                document.documentElement.scrollTop = 5200;
+                document.documentElement.scrollTop = 5060;
               }
               if (screenWidth <= 1800 && screenWidth > 1500) {
                 // document.body.scrollTop = 5500;
-                document.documentElement.scrollTop = 5500;
+                document.documentElement.scrollTop = 5600;
               }
               if (screenWidth <= 3000 && screenWidth > 1800) {
                 // document.body.scrollTop = 5350;
@@ -406,25 +408,22 @@
               var screenWidth = window.innerWidth;
               console.log(window.innerHeight);
               if (screenWidth <= 520) {
-                document.documentElement.scrollTop = 6810;
+                document.documentElement.scrollTop = 7610;
               }
               if (screenWidth <= 537 && screenWidth > 520) {
                 document.documentElement.scrollTop = 6500;
               }
               if (screenWidth <= 800 && screenWidth > 537) {
-                document.documentElement.scrollTop = 5800;
+                document.documentElement.scrollTop = 6500;
               }
               if (screenWidth <= 1500 && screenWidth > 800) {
-                document.documentElement.scrollTop = 5750;
-              }
-              if (screenWidth <= 1500 && screenWidth > 800) {
-                document.documentElement.scrollTop = 5650;
+                document.documentElement.scrollTop = 6250;
               }
               if (screenWidth <= 1800 && screenWidth > 1500) {
-                document.documentElement.scrollTop = 5950;
+                document.documentElement.scrollTop = 6800;
               }
               if (screenWidth <= 3000 && screenWidth > 1800) {
-                document.documentElement.scrollTop = 6600;
+                document.documentElement.scrollTop = 7300;
               }
             }
           </script>
@@ -1341,27 +1340,32 @@
       <section>
         <div class="registration-heading">
           <h1>Register For</h1>
-          <h1 style="color: #08b339;"><strong>HackUSICT</strong></h1>
+          <h1 style="color: #08b339;"><strong>Trellathon</strong></h1>
         </div>
 
         <div class="row" style="margin-top:2rem">
           <div class="form-group col-md-6">
-            <input type="text" name="teamName" class="form-input-boxes-manual form-control required" placeholder="Team Name" style="color: grey;">
+            <input id="teamName" type="text" name="teamName" class="form-input-boxes-manual form-control required" placeholder="Team Name" style="color: grey;" required>
+            <span class="error_form" id="teamName_error_message"></span>
           </div>
           <div class="form-group col-md-6">
-            <input type="number" aria-required="true" name="numberOfMembers" class="form-input-boxes-manual form-control required" placeholder="Number of Members" style="color: grey;">
+            <input id="member" type="number" aria-required="true" name="numberOfMembers" class="form-input-boxes-manual form-control required" placeholder="Number of Members" style="color: grey;" required>
+            <span class="error_form" id="member_error_message"></span>
           </div>
         </div>
         <div class="row">
           <div class="form-group col-md-6">
-            <input type="text" name="leaderName" class="form-input-boxes-manual form-control" placeholder="Team Leader Name" style="color: grey;">
+            <input id="leaderName" type="text" name="leaderName" class="form-input-boxes-manual form-control" placeholder="Team Leader Name" style="color: grey;" required>
+            <span class="error_form" id="leaderName_error_message"></span>
           </div>
           <div class="form-group col-md-6">
-            <input type="text" name="leaderNumber" class="form-input-boxes-manual form-control" placeholder="Leader Number" style="color: grey;">
+            <input id="leaderNumber" type="number" name="leaderNumber" class="form-input-boxes-manual form-control phoneValidate" placeholder="Leader Number" style="color: grey;" required>
+            <span class="error_form" id="leaderNumber_error_message"></span>
           </div>
         </div>
         <div class="form-group">
-          <input type="text" row="1" name="leaderEmail" class="form-control form-input-boxes-manual required" placeholder="Team Leader Email" style="color: grey;" aria-required="true"></textarea>
+          <input id="leaderEmail" type="email" name="leaderEmail" class="form-control form-input-boxes-manual required" placeholder="Team Leader Email" style="color: grey;" aria-required="true" required>
+          <span class="error_form" id="leaderEmail_error_message"></span>
         </div>
 
       </section>
@@ -1494,6 +1498,59 @@
   </div>
   </form>
   </div>
+  
+
+
+  <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#successModal">
+  Launch demo modal
+</button> -->
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i class="fas fa-check-circle fa-3x" style="color: #08b439;"></i>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-left: -14%;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3 class="modal-title" id="exampleModalCenterTitle">Congratulations</h3>
+        Thank you for registrating.<br>
+        Your registration details are:-<br>
+        <span id="successfulMessage" style="font-weight: bold;text-align: left !important;"></span>
+        <b></b>Kindly note down the details, for round 1 submissions.
+        For any queries feel feel to contact acmusit@gmail.com.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success btn-block" data-dismiss="modal">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Error Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <i class="fas fa-exclamation-circle fa-3x" style="color: #fc1534;"></i>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-left: -14%;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3 id="errorMessage" class="modal-title" id="exampleModalCenterTitle">ERROR</h3>
+     
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-block" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- <div class="tabs row">
   <div class="tab-header col-lg-6 col-md-6 col-sm-12 col-12">
