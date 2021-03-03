@@ -34,9 +34,13 @@ document.getElementById("merabutton").addEventListener("click", function(event){
     docRef.get().then((doc) => {
         if (!doc.exists) {
             // doc.data() will be undefined in this case
-            alert("Pehle Register toh karlo Uncle");
+            alert("You Have not Registered Yet!");
         } else {
             console.log("Document data:", doc.data());
+            if(doc.data().file != ''){
+                alert('You have already submitted the thing');
+            }
+            else{
             if(teamCode === doc.data().registration){
                 console.log(doc.data().registration); 
                 const ref = firebase.storage().ref();
@@ -50,7 +54,11 @@ document.getElementById("merabutton").addEventListener("click", function(event){
                 .then(snapshot => snapshot.ref.getDownloadURL())
                 .then((url) => {
                     console.log(url);
+                    docRef.update({
+                        file:url,
+                    });
                     document.querySelector('#pdf').src = url;
+                    alert("You have Submitted it successfully!")
                 })
                 .catch(console.error);
             }
@@ -58,6 +66,7 @@ document.getElementById("merabutton").addEventListener("click", function(event){
                 alert("Bhai Team Code yaad kar");
             }
         }
+    }
     }).catch((error) => {
         console.log("Error getting document:", error);
     });
