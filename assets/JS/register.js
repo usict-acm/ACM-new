@@ -68,8 +68,8 @@ $(document).ready(function() {
         registerRef.get()
         .then((docSnapshot)=>{
           if(docSnapshot.exists){
-            $("#errorMessage").html("You have already register for hackathon,\
-             Kindly submit your submission for round 1 on or before {last date of submission}")
+            $("#errorMessage").html("Email already registered,\
+             Submit your entries before 6 march, 2021, 11:59 PM to proceed")
              $("#errorModal").modal();
           }
           else
