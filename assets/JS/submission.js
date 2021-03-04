@@ -13,12 +13,16 @@ function isPDF(filename) {
 
 uploadField.onchange = function() {
     if(this.files[0].size > 10485760){
-       alert("File is too big!");
+        $("#errorModal").modal();
+        $("#errorMessage").html("The file is too Big!");
+        $('#loadingModal').modal('hide');
        this.value = "";
     }
     else {
         if(!isPDF(this.files[0].name)){
-           alert("Your submission has to be in .pdf format");
+            $("#errorModal").modal();
+            $("#errorMessage").html("Your Submission has to be in PDF format only.");
+            $('#loadingModal').modal('hide');
             this.value = '';
         }
     }
@@ -26,6 +30,7 @@ uploadField.onchange = function() {
 
 document.getElementById("merabutton").addEventListener("click", function(event){
     event.preventDefault();
+    $("#loadingModal").modal();
     var db = firebase.firestore();
     var leaderEmail = document.getElementById('leaderEmail').value;
     const docRef = db.collection("registration").doc(leaderEmail);
@@ -34,11 +39,15 @@ document.getElementById("merabutton").addEventListener("click", function(event){
     docRef.get().then((doc) => {
         if (!doc.exists) {
             // doc.data() will be undefined in this case
-            alert("You Have not Registered Yet!");
+            $("#errorModal").modal();
+            $("#errorMessage").html("You need to register for the Hackathon first!");
+            $('#loadingModal').modal('hide');
         } else {
             console.log("Document data:", doc.data());
             if(doc.data().file != ''){
-                alert('You have already submitted your document');
+                $("#errorModal").modal();
+                $("#errorMessage").html("You submission has already been recorded and it can not be updated.");
+                $('#loadingModal').modal('hide');
             }
             else{
             if(teamCode === doc.data().registration){
@@ -58,16 +67,54 @@ document.getElementById("merabutton").addEventListener("click", function(event){
                         file:url,
                     });
                     document.querySelector('#pdf').src = url;
-                    alert("You have Submitted it successfully!")
+                    $("#successModal").modal();
+                    $('#loadingModal').modal('hide');
                 })
                 .catch(console.error);
             }
             else{
-                alert("You have entered the wrong team code");
+                $('#loadingModal').modal('hide');
+                $("#errorModal").modal();
+                $("#errorMessage").html("Please enter the correct Registration Number.");
             }
         }
     }
     }).catch((error) => {
         console.log("Error getting document:", error);
+        $("#errorModal").modal();
+        $("#errorMessage").html("Error getting document <br> please try again.", error);
+        $('#loadingModal').modal('hide');
     });
 });
+
+$(window).on("scroll", function() {
+    if($(window).scrollTop()) {
+          $('nav').addClass('black');
+    }
+
+    else {
+          $('nav').removeClass('black');
+    }
+})
+
+
+function toggleIcon(e) {
+  $(e.target)
+      .prev('.panel-heading')
+      .find(".more-less")
+      .toggleClass('fas-plus fas-minus');
+}
+$('.panel-group').on('hidden.bs.collapse', toggleIcon);
+$('.panel-group').on('shown.bs.collapse', toggleIcon);
+$(document).ready(function () {
+$(document).click(
+ function (event) {
+     var target = $(event.target);
+     var _mobileMenuOpen = $(".navbar-collapse").hasClass("show");
+     if (_mobileMenuOpen === true && !target.hasClass("navbar-toggler")) {
+         $("button.navbar-toggler").click();
+     }
+ }
+);
+});
+

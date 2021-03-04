@@ -90,6 +90,7 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
   <body>
@@ -261,6 +262,59 @@
                 </div>
               </div>
             </form>
+          </div>
+        </div>
+
+
+        <!-- =======MODALS====== -->
+        <div class="modal fade" id="loadingModal" tabindex="-1" role="dialog" style="overflow:hidden; height: 100vh; width:100vw" aria-labelledby="successModalTitle" aria-hidden="true"> 
+          <div class="modal-dialog modal-dialog-centered" role="document">
+                <div id="building" >
+                  <div id="blocks">
+                    <div class="b" id="b1"></div>
+                    <div class="b" id="b2"></div>
+                    <div class="b" id="b3"></div>
+                    <div class="b" id="b4"></div>
+                  </div>
+                </div>
+          </div>
+        </div>
+        <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <i class="fas fa-check-circle fa-3x" style="color: #08b439;"></i>
+                
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-left: -14%;">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h3 class="modal-title" id="exampleModalCenterTitle">Your Submission has been recorded sucessfully.</h3>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success btn-block" data-dismiss="modal">Done</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Error Modal -->
+        <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <i class="fas fa-exclamation-circle fa-3x" style="color: #fc1534;"></i>
+                
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-left: -14%;">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h3 id="errorMessage" class="modal-title" id="exampleModalCenterTitle">ERROR</h3>
+                <p id="errormsg"></p>
+              </div>
+              
+            </div>
           </div>
         </div>
 
