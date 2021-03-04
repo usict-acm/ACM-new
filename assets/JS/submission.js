@@ -18,7 +18,7 @@ uploadField.onchange = function() {
     }
     else {
         if(!isPDF(this.files[0].name)){
-           alert("Yeh theek nahi hai, pdf daal na bhai");
+           alert("Your submission has to be in .pdf format");
             this.value = '';
         }
     }
@@ -38,7 +38,7 @@ document.getElementById("merabutton").addEventListener("click", function(event){
         } else {
             console.log("Document data:", doc.data());
             if(doc.data().file != ''){
-                alert('You have already submitted the thing');
+                alert('You have already submitted your document');
             }
             else{
             if(teamCode === doc.data().registration){
@@ -63,7 +63,7 @@ document.getElementById("merabutton").addEventListener("click", function(event){
                 .catch(console.error);
             }
             else{
-                alert("Bhai Team Code yaad kar");
+                alert("You have entered the wrong team code");
             }
         }
     }
