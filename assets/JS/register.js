@@ -110,6 +110,17 @@ $(document).ready(function() {
             .then(() => {
                 $("#successfulMessage").html("Team name:-"+det.teamName.value+" <br>Registration no. :-" + regNo+"<br>Email id:-"+det.leaderEmail.value)
                 $("#successModal").modal();
+                Email.send({
+                  // SecureToken: "",
+                  // Host : "smtp.yourisp.com",
+                  // Username : "username",
+                  // Password : "password",
+                  To : det.leaderEmail.value,
+                  //From : "",
+                  Subject : "Trellathon Registration Details",
+                  Body : "Thank you for regitering for Trellathon. Following are the details for your registration.\n Email: - "+det.leaderEmail.value+"\n Registration no.: - "+ regNo+"\n Keep these details with you for submissions.",
+              }).then(
+              );
               })
           .catch((error) => {
             $("#errorMessage").html(error);
