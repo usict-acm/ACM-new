@@ -49,7 +49,6 @@ var leftrocketmeluncur = parseInt(fetchOffset(ftrocketmeluncur)['left']);
 leftrocketmeluncur = leftrocketmeluncur < swrocketmeluncur ? leftrocketmeluncur * 2 - swrocketmeluncur : leftrocketmeluncur;
 scrolltoprocketmeluncur.style.left = ( basewrocketmeluncur + leftrocketmeluncur ) + 'px';
 } else {
-scrolltoprocketmeluncur.style.left = 'auto';
 scrolltoprocketmeluncur.style.right = '10px';
 }
 })
