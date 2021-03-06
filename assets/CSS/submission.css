@@ -202,22 +202,69 @@ html {
   }
 }
 
+@media (max-width: 1000px) {
+  .upsub {
+    font-size: 12px;
+  }
+  .upsub1 {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+}
+
+
+.btnsubmit{
+    position: absolute;
+    left: 45%;
+}
 
 .dabba-number-ek{
+    background: #ffffff4d;
     width: 60%;
-    margin: auto;
-    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    margin: auto auto 10px auto;
+    padding-right: 10%;
 }
 
 .heading{
     color: #70ff70;
     font-size: 3rem;
+    text-align: center;
 }
 
 .submission-wala-dabba{
     color:#fff;
 }
 
+@media (min-width: 601px) and (max-width: 1000px) {
+  
+  .dabba-number-ek{
+    background: #ffffff4d;
+    width: 80%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    margin: auto auto 10px auto;
+    padding-right: 10%;
+}
+}
+
+@media (max-width: 600px) {
+  .heading{
+    font-size: 35px;
+  }
+  .dabba-number-ek{
+    background: #ffffff4d;
+    width: 90%;
+    padding-top: 3%;
+    padding-bottom: 13%;
+    padding-left: 10%;
+    margin: auto auto 10px auto;
+    padding-right: 10%;
+}
+}
 
 
 /* ==========FOOTER=========== */
@@ -452,12 +499,6 @@ html {
     width: 100%;
   }
   #caption {
-    display: none;
-  }
-}
-
-@media (max-width: 1200px) {
-  .hide_below_960 {
     display: none;
   }
 }
