@@ -216,7 +216,7 @@
             >
               <div class="row" style="margin-top: 2rem">
               
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-12">
                   <input
                     name="email"
                     id="leaderEmail"
@@ -228,12 +228,12 @@
                     required="true"
                   />
                 </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-12">
                   <input
                     type="text"
                     id='teamCode'
                     class="form-input-boxes-manual form-control"
-                    placeholder="Team Code"
+                    placeholder="Registration Number"
                     style="color: grey"
                     name="teamCode"
                     required="true"
@@ -241,13 +241,15 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col col-md-6">
-                  <p style="text-align: right;">Upload Your Submission in pdf form <br>(max limit is 10MB)</p>
-                </div>
-                <div class="col col-md-4">
+                <div class="col col-md-6 upsub1">
                   <input name="submission" type="file" id="pdf" name="Upload PDF" accept=".pdf" required="true">
                 </div>
-                <div class="form-group col-md-2 button-center">
+                <div class="col col-md-6">
+                  <p class="upsub" style="text-align: right;">Upload Your Submission in pdf form <br>(max limit is 5MB)</p>
+                </div>
+              </div>
+                <div class="row btnsubmit">
+                <div class="form-group button-center">
                   <div class="form-group">
                     <button
                       class="btn signin"
@@ -263,7 +265,7 @@
               </div>
             </form>
           </div>
-        </div>
+          
 
 
         <!-- =======MODALS====== -->
