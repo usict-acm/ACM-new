@@ -202,23 +202,9 @@ html {
   }
 }
 
-@media (max-width: 1000px) {
-  .upsub {
-    font-size: 12px;
-  }
-  .upsub1 {
-    font-size: 12px;
-    margin-bottom: 20px;
-  }
-}
-
-
-.btnsubmit{
-    position: absolute;
-    left: 45%;
-}
 
 .dabba-number-ek{
+<<<<<<< HEAD:assets/CSS/submission.css
     background: black;
     filter: drop-shadow(0 0 20px #08b339);
     width: 60%;
@@ -227,18 +213,23 @@ html {
     padding-left: 10%;
     margin: auto auto 20px auto;
     padding-right: 10%;
+=======
+    width: 60%;
+    margin: auto;
+    text-align: center;
+>>>>>>> 76a08b220cacf0d26f9ce850543084cd0d735686:hackathon/CSS/submission.css
 }
 
 .heading{
     color: #08b439;
     font-size: 3rem;
-    text-align: center;
 }
 
 .submission-wala-dabba{
     color:#fff;
 }
 
+<<<<<<< HEAD:assets/CSS/submission.css
 @media (min-width: 601px) and (max-width: 1000px) {
   
   .dabba-number-ek{
@@ -268,6 +259,8 @@ html {
     padding-right: 10%;
 }
 }
+=======
+>>>>>>> 76a08b220cacf0d26f9ce850543084cd0d735686:hackathon/CSS/submission.css
 
 
 /* ==========FOOTER=========== */
@@ -502,6 +495,12 @@ html {
     width: 100%;
   }
   #caption {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hide_below_960 {
     display: none;
   }
 }
