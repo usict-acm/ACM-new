@@ -2129,39 +2129,49 @@ span.team-text {
 /**********Contact form ends***********************/
 
 /**********FOOTER***********************/
-
 .foot {
-  /* color: black; */
-  color: #ffda29;
-  background-color: #105a09;
+  text-align: center;
+  padding-top: 1rem;
 }
 
-.foot i {
-  color: white;
+.redirect {
+  height: 10rem;
 }
 
-.foot li a {
-  color: #ffda29;
-}
-.foot li a:hover {
-  color: #ffda29;
-}
-
-.concept {
+.foot p {
+  padding-bottom: 1rem;
+  font-size: 1rem;
   font-weight: 500;
+  color: #08af37;
+}
+.footerContent {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: white;
 }
 
-.foot-head {
-  color: black;
-  font-weight: 700 !important;
+.icos {
+  padding: 1rem;
+  color: white;
 }
 
-.footPara {
-  color: black;
-  font-weight: 600;
+.fb:hover {
+  color: #1298f6;
 }
 
+.youtube:hover {
+  color: #ff0000;
+}
+
+.instagram:hover {
+  color: #b530b8;
+}
+
+.copyright-text {
+  padding: 3rem;
+  color: white;
+}
 /* ******************************Registration****************************** */
 /*
 * {
