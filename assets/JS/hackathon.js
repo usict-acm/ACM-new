@@ -56,7 +56,7 @@ scrolltoprocketmeluncur.style.right = '10px';
 
 jQuery('#rocketmeluncur').click(function(){
     jQuery("html, body").animate({ scrollTop: '0px',display:'none'},{
-            duration: 600,  
+            duration: 300,  
             easing: 'linear'
         });
     
@@ -64,5 +64,5 @@ jQuery('#rocketmeluncur').click(function(){
     this.className += ' '+"launchrocket";
     setTimeout(function(){
       self.className = 'showrocket';
-    },800)
+    },1800)
 });
