@@ -455,3 +455,9 @@ html {
     display: none;
   }
 }
+
+@media (max-width: 1200px) {
+  .hide_below_960 {
+    display: none;
+  }
+}
