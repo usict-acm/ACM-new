@@ -219,17 +219,18 @@ html {
 }
 
 .dabba-number-ek{
-    background: #ffffff4d;
+    background: black;
+    filter: drop-shadow(0 0 20px #08b339);
     width: 60%;
     padding-top: 3%;
     padding-bottom: 5%;
     padding-left: 10%;
-    margin: auto auto 10px auto;
+    margin: auto auto 20px auto;
     padding-right: 10%;
 }
 
 .heading{
-    color: #70ff70;
+    color: #08b439;
     font-size: 3rem;
     text-align: center;
 }
@@ -241,7 +242,8 @@ html {
 @media (min-width: 601px) and (max-width: 1000px) {
   
   .dabba-number-ek{
-    background: #ffffff4d;
+    background: black;
+    filter: drop-shadow(0 0 20px #08b339);
     width: 80%;
     padding-top: 3%;
     padding-bottom: 5%;
@@ -256,7 +258,8 @@ html {
     font-size: 35px;
   }
   .dabba-number-ek{
-    background: #ffffff4d;
+    background: black;
+    filter: drop-shadow(0 0 20px #08b339);
     width: 90%;
     padding-top: 3%;
     padding-bottom: 13%;
