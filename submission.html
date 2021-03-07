@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>ACM USICT</title>
-    <link rel="icon" href="../assets/images/acm1.png" type="image/x-icon" />
+    <link rel="icon" href="./assets/images/acm1.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
@@ -16,7 +16,7 @@
       itemprop="description"
       content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc"
     />
-    <meta itemprop="image" content="../assets/images/acm1.png" />
+    <meta itemprop="image" content="./assets/images/acm1.png" />
 
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="http://usict.acm.org/ACM_New" />
@@ -26,7 +26,7 @@
       property="og:description"
       content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc"
     />
-    <meta property="og:image" content="../assets/images/acm1.png" />
+    <meta property="og:image" content="./assets/images/acm1.png" />
 
     <!-- Twitter Meta Tags -->
     <!-- <meta name="twitter:card" content="summary_large_image" />
@@ -44,7 +44,7 @@
       name="twitter:description"
       content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc"
     />
-    <meta name="twitter:image" content="../assets/images/acm1.png" />
+    <meta name="twitter:image" content="./assets/images/acm1.png" />
 
     <link
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -63,8 +63,9 @@
       src="https://kit.fontawesome.com/d459eda8d9.js"
       crossorigin="anonymous"
     ></script>
-    <link href="../assets/CSS/submission.css" rel="stylesheet" />
-    <link href="../assets/CSS/benefits.css" rel="stylesheet" />
+    <link href="./assets/CSS/submission.css" rel="stylesheet" />
+      <link href='./assets/CSS/benefits.css' rel="stylesheet" />
+
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
@@ -97,10 +98,10 @@
   <body>
     <!-- NavBar -->
     <nav id="nav" class="navbar nav navbar-expand-lg sticky-top">
-      <a href = "../hackathon.html"><div class="nav-brand">
+      <div class="nav-brand">
         <img
           class="hackusict-logo mw-100"
-          src="../assets/images/acm1.png"
+          src="./assets/images/acm1.png"
           alt="HackUSICT logo"
         />
         <img
@@ -110,7 +111,6 @@
           style="margin-left: 10px"
         />
       </div>
-    </a>
       <button
         style="color: #fff"
         class="navbar-toggler"
@@ -167,7 +167,7 @@
             </h2>
             <a href="#registration">
               <button class="hero-register-button" type="button" name="button">
-                <span class="blink_me">ROUND 1 SUBMSSION</span>
+                <span class="blink_me">REGISTER NOW</span>
               </button>
             </a>
           </div>
@@ -175,9 +175,7 @@
           <div class="col col-xl-4 hero-right-div">
             <br />
             if(problem)<br />{<br />
-            &emsp;codeTosolve( );
-            <br/>
-            &emsp;round1(submission.pdf);<br />}
+            &emsp;codeTosolve( );<br />}
           </div>
         </div>
         <br />
@@ -204,87 +202,94 @@
       </div>
     </div>
 
+  
+
+        <div class="dabba-number-ek">
+          <h1 class="heading">
+            Round 1 Submissions
+          </h1>
+          <div class="submission-wala-dabba">
+            <form
+              class="widget-contact-form"
+              role="form"
+              method="post"
+              target="_self"
+              novalidate="novalidate"
+            >
+              <div class="row" style="margin-top: 2rem">
+              
+                <div class="form-group col-md-12">
+                  <input
+                    name="email"
+                    id="leaderEmail"
+                    type="email"
+                    aria-required="true"
+                    class="form-input-boxes-manual form-control required email"
+                    placeholder="Team Leader's E-mail Address"
+                    style="color: grey"
+                    required="true"
+                  />
+                </div>
+                <div class="form-group col-md-12">
+                  <input
+                    type="text"
+                    id='teamCode'
+                    class="form-input-boxes-manual form-control"
+                    placeholder="Registration Number"
+                    style="color: grey"
+                    name="teamCode"
+                    required="true"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col-md-6 upsub1">
+                  <input name="submission" type="file" id="pdf" name="Upload PDF" accept=".pdf" required="true">
+                </div>
+                <div class="col col-md-6">
+                  <p class="upsub" style="text-align: right;">Upload Your Submission in pdf form <br>(max limit is 5MB)</p>
+                </div>
+              </div>
+                <div class="row btnsubmit">
+                <div class="form-group button-center">
+                  <div class="form-group">
+                    <button
+                      class="btn signin"
+                      type="submit"
+                      style="background-color: #08b439; color: #fff"
+                      id="merabutton"
+                    >
+                      <i class="fa fa-paper-plane"></i>&nbsp;Submit
+                    </button>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          
+
+          
     <div class="alert alert-info new2 p-4" style="margin-top: 5%;background: black;filter: drop-shadow(0 0 5px #08b339);border-left: 4px solid #08b339; margin-bottom: 5%;">
       <span class="alert-body">
         <div class="row" style="align-items: center;">
           <i class="fa fa-info-circle" aria-hidden="true" style="color: #08b339;"></i>
           <div class="col-lg-10 col-md-9 col-sm-8 col-7">
             <p class="mb-0" style="color: white;">Only registered team can submit. If you haven't registered, <a href="" style="color: #08b339;">Regsiter here</a></p>
-            <p class="mb-0" style="color: white;">A team can submit a file only once, so double-check before submitting.</p>          
-            <p class="mb-0" style="color: white;">Only pdfs are accepted!</p>            
-            <p class="mb-0" style="color: white;">For submission guidelines, <a href="" style="color: #08b339;">Click here!</a></p>
-            <p class="mb-0" style="color: white;">Check your mail spam/inbox for registration details!</p>
+            <p class="mb-0" style="color: white;">Only registered team can submit. If you haven't registered, <a href="" style="color: #08b339;">Regsiter here</a></p>
+            <p class="mb-0" style="color: white;">Only registered team can submit. If you haven't registered, <a href="" style="color: #08b339;">Regsiter here</a></p>
+            <p class="mb-0" style="color: white;">Only registered team can submit. If you haven't registered, <a href="" style="color: #08b339;">Regsiter here</a></p>
+            <p class="mb-0" style="color: white;">Only registered team can submit. If you haven't registered, <a href="" style="color: #08b339;">Regsiter here</a></p>
+
           </div class="col-md-1 col-sm-1 col-1">
           <div>
           </div>
         </div>
       </span>
     </div>
-  
 
-    <div class="dabba-number-ek">
-      <h1 class="heading">
-        Round 1 Submissions
-      </h1>
-      <div class="submission-wala-dabba">
-        <form
-          class="widget-contact-form"
-          role="form"
-          method="post"
-          target="_self"
-          novalidate="novalidate"
-        >
-          <div class="row" style="margin-top: 2rem">
-          
-            <div class="form-group col-md-12">
-              <input
-                name="email"
-                id="leaderEmail"
-                type="email"
-                aria-required="true"
-                class="form-input-boxes-manual form-control required email"
-                placeholder="Team Leader's E-mail Address"
-                style="color: grey"
-                required="true"
-              />
-            </div>
-            <div class="form-group col-md-12">
-              <input
-                type="text"
-                id='teamCode'
-                class="form-input-boxes-manual form-control"
-                placeholder="Registration Number"
-                style="color: grey"
-                name="teamCode"
-                required="true"
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col col-md-6 upsub1">
-              <input name="submission" type="file" id="pdf" name="Upload PDF" accept=".pdf" required="true">
-            </div>
-            <div class="col col-md-6">
-              <p class="upsub" style="text-align: right;">Upload Your Submission in pdf form <br>(max limit is 5MB)</p>
-            </div>
-          </div>
-            <div class="row btnsubmit">
-            <div class="form-group button-center">
-              <div class="form-group">
-                <button
-                  class="btn signin"
-                  type="submit"
-                  style="background-color: #08b439; color: #fff"
-                  id="merabutton"
-                >
-                  <i class="fa fa-paper-plane"></i>&nbsp;Submit
-                </button>
-              </div>
-            </div>
-            </div>
-          </div>
-        </form>
-      </div>
+    
+    
 
 
         <!-- =======MODALS====== -->
@@ -339,56 +344,16 @@
           </div>
         </div>
 
-        <footer class="foot" id="footer">
-
-          <a href="http://usict.acm.org">
-          <img class="redirect" src="../assets/images/acm1.png" alt="">
-          </a>
-      
-          <h2 class="footerContent">USICT ACM Student Chapter</h2>
-          <p>Email: info@usict.acm.org</p>
-      
-          <div >
-                                <a href="https://www.facebook.com/acmusict" class="facebook icos"
-                    ><i class="fa fa-2x fa-facebook fb"></i
-                  ></a>
-                  
-                    <a
-                      href="https://www.youtube.com/channel/UCI7her-mYrb7QM0t9S_nA_Q"
-                      class="youtube icos"
-                      ><i class="fa fa-2x fa-youtube yt"></i
-                    ></a>
-                    <a href="https://www.instagram.com/acmusict/" class="instagram icos"
-                      ><i class="fa fa-2x fa-instagram insta"></i
-                    ></a>
-                    <a href="mailto:acmusit@gmail.com" class="envelope icos"
-                      ><i class="fa fa-2x fa-envelope-o mail"></i
-                    ></a>
-                  </div>
-                  <div class="copyright-text text-center">
-                    © Conceptualized,Designed and Developed by Office Bearers of ACM USICT
-                    chapter.
-                  </div>
-          
-            </footer>
-      
 
 
-
-
-
-
-
-
-
-  <!-- <footer class="foot" id="footer">
+  <footer class="foot" id="footer">
     <div class="footer-top">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-6 footer-info">
             <div class="footer-info">
-              <!-- Uncomment below if you prefer to use a text logo 
-                <!-- <h1><a href="#main"><span>LOGO </span>-ACM USICT</a></h1> 
+              <!-- Uncomment below if you prefer to use a text logo -->
+              <!-- <h1><a href="#main"><span>LOGO </span>-ACM USICT</a></h1> -->
 
               <a href="#about" class="scrollto"
                 ><img
@@ -454,7 +419,7 @@
               </li>
               <li>
                 <i class="fa fa-angle-right"></i>
-                <a href="../clubs.html">Our Clubs</a>
+                <a href="./clubs.html">Our Clubs</a>
               </li>
             </ul>
           </div>
@@ -506,18 +471,18 @@
       </div>
       <br />
     </div>
-  </footer> -->
+  </footer>
 </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
-  <script src="../assets/JS/canvas.js"></script>
-  <script src="../assets/JS/submission.js"></script>
-  <script src="../assets/JS/submission-timer.js"></script>
-  <script src="../assets/JS/hackathon.js"></script>
-  <script src="../assets/JS/jquery.steps.js"></script>
+  <script src="./assets/JS/canvas.js"></script>
+  <script src="./assets/JS/submission.js"></script>
+  <script src="./assets/JS/hack-timer.js"></script>
+  <script src="./assets/JS/hackathon.js"></script>
+  <script src="./assets/JS/jquery.steps.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script>
     function topFunction() {
