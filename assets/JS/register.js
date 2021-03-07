@@ -114,19 +114,19 @@ $(document).ready(function () {
               );
               $("#successModal").modal();
               Email.send({
-                // SecureToken: "",
-                // Host : "smtp.yourisp.com",
-                // Username : "username",
-                // Password : "password",
+                //  SecureToken: "db2b1875-d281-44aa-a6de-72914f5981d6",
+                Host : "smtp.elasticemail.com",
+                Username : "hackathon@usict.acm.org",
+                Password : "77F7DF118974095C8250F0B2CC2850C23DBB",
                 To: det.leaderEmail.value,
-                //From : "",
+                From : "hackathon@usict.acm.org",
                 Subject: "Trellathon Registration Details",
                 Body:
-                  "Thank you for registering for Trellathon. Following are the details for your registration.\n Email: - " +
+                  "Thank you for registering for Trellathon. Following are the details for your registration.<br> Email: - " +
                   det.leaderEmail.value +
-                  "\n Registration no.: - " +
+                  "<br> Registration no.: - " +
                   regNo +
-                  "\n Keep these details with you for submissions.",
+                  "<br> Keep these details with you for submissions.",
               }).then();
             })
             .catch((error) => {
