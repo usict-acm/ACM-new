@@ -2145,15 +2145,16 @@ span.team-text {
   color: #08af37;
 }
 .footerContent {
-  padding: 1rem;
+  padding: 0.5rem;
   font-size: 1.5rem;
   font-weight: 700;
   color: white;
 }
 
 .icos {
-  padding: 1rem;
   color: white;
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 
 .fb:hover {

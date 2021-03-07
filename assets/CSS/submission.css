@@ -48,7 +48,7 @@ html {
   box-shadow: 2px 2px 14px #70ff00;
 }
 
-.ff-powered-img{
+.ff-powered-img {
   display: none;
 }
 
@@ -212,35 +212,33 @@ html {
   }
 }
 
-
-.btnsubmit{
-    position: absolute;
-    left: 45%;
+.btnsubmit {
+  position: absolute;
+  left: 45%;
 }
 
-.dabba-number-ek{
-    background: #ffffff4d;
-    width: 60%;
-    padding-top: 3%;
-    padding-bottom: 5%;
-    padding-left: 10%;
-    margin: auto auto 10px auto;
-    padding-right: 10%;
+.dabba-number-ek {
+  background: #ffffff4d;
+  width: 60%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+  padding-left: 10%;
+  margin: auto auto 10px auto;
+  padding-right: 10%;
 }
 
-.heading{
-    color: #70ff70;
-    font-size: 3rem;
-    text-align: center;
+.heading {
+  color: #70ff70;
+  font-size: 3rem;
+  text-align: center;
 }
 
-.submission-wala-dabba{
-    color:#fff;
+.submission-wala-dabba {
+  color: #fff;
 }
 
 @media (min-width: 601px) and (max-width: 1000px) {
-  
-  .dabba-number-ek{
+  .dabba-number-ek {
     background: #ffffff4d;
     width: 80%;
     padding-top: 3%;
@@ -248,14 +246,14 @@ html {
     padding-left: 10%;
     margin: auto auto 10px auto;
     padding-right: 10%;
-}
+  }
 }
 
 @media (max-width: 600px) {
-  .heading{
+  .heading {
     font-size: 35px;
   }
-  .dabba-number-ek{
+  .dabba-number-ek {
     background: #ffffff4d;
     width: 90%;
     padding-top: 3%;
@@ -263,14 +261,13 @@ html {
     padding-left: 10%;
     margin: auto auto 10px auto;
     padding-right: 10%;
+  }
 }
-}
-
 
 /* ==========FOOTER=========== */
 
-.foot {
-    /* color: black; */
+/* .foot {
+    /* color: black; 
     color: #ffda29;
     background-color: #105a09;
   }
@@ -334,6 +331,51 @@ html {
   color: #f32013;
   font-size: 15px;
   font-family: Helvetica;
+} */
+
+/**********FOOTER***********************/
+.foot {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.redirect {
+  height: 10rem;
+}
+.foot p {
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #08af37;
+}
+.footerContent {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.icos {
+  color: white;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.fb:hover {
+  color: #1298f6;
+}
+
+.youtube:hover {
+  color: #ff0000;
+}
+
+.instagram:hover {
+  color: #b530b8;
+}
+
+.copyright-text {
+  padding: 3rem;
+  color: white;
 }
 /* ****************************FAQ*********************************************** */
 
@@ -397,8 +439,6 @@ html {
 .panel-heading h4 {
   margin: 0.5rem 1rem;
 }
-
-
 
 /* ===========LOADING MODAL================= */
 
