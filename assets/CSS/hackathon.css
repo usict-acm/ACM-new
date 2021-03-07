@@ -3241,3 +3241,21 @@ body {
   -moz-transform: scale(1.4, 3.2);
   transform: scale(1.4, 3.2);
 }
+
+@media (max-device-width: 375px) {
+  .visibleForUnder375 {
+    display: block;
+  }
+  .visibleForRestAndNotUnder375 {
+    display: none;
+  }
+}
+
+@media (min-device-width: 376px) {
+  .visibleForUnder375 {
+    display: none;
+  }
+  .visibleForRestAndNotUnder375 {
+    display: block;
+  }
+}
