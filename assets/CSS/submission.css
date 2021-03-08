@@ -265,6 +265,9 @@ html {
     margin: auto auto 10px auto;
     padding-right: 10%;
   }
+  .mb-0{
+      margin-bottom: 4% !important;
+  }
 }
 
 /* ==========FOOTER=========== */
