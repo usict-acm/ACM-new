@@ -3259,3 +3259,12 @@ body {
     display: block;
   }
 }
+
+.divider {
+  height: 3px;
+  background-color: #08b439;
+  width: 75%;
+  margin: auto;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}

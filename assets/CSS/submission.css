@@ -265,8 +265,8 @@ html {
     margin: auto auto 10px auto;
     padding-right: 10%;
   }
-  .mb-0{
-      margin-bottom: 4% !important;
+  .mb-0 {
+    margin-bottom: 4% !important;
   }
 }
 
@@ -547,4 +547,12 @@ html {
   #caption {
     display: none;
   }
+}
+
+.divider {
+  height: 3px;
+  background-color: #08b439;
+  width: 75%;
+  margin: 3rem auto 1rem auto;
+  border-radius: 1rem;
 }
