@@ -908,9 +908,9 @@ html {
   }
 
   .priceImage {
-    height: 28rem;
-    width: 35rem;
-    margin-top: 100px;
+    height: 25rem;
+    width: 30rem;
+    margin-top: 75px;
     margin-left: -20px;
   }
 
@@ -959,22 +959,51 @@ html {
 
   .otherPerksContentDescription {
     text-align: center;
-    font-size: 1.4rem;
-    line-height: 1.2;
+    font-size: 1.35rem;
+    line-height: 1.3;
     font-family: "Source Sans Pro", sans-serif;
-    padding: 7px;
-    margin-top: 13px;
-    margin-bottom: -10px;
+  }
+
+  .prizesDiv {
+    max-width: 20%;
+    margin-left: 2.5%;
+    margin-right: 1.5%;
+    margin-top: 5%;
+    background: black;
+    filter: drop-shadow(0 0 11px #08b339);
+    border-left: 8px solid #08b339;
+    margin-bottom: 5%;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+  }
+
+  .trophyPrizes {
+    margin-top: 2px;
+    width: 5.1rem;
+    height: 4.9rem;
+    padding-left: -5px;
+  }
+
+  #perksContent {
+    width: 97%;
+    margin-left: 35px;
+    margin-right: auto;
+  }
+
+  .cert {
+    padding-left: 10px;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1274px) {
   #allExceptLaptop {
-    display: none;
+    display: block;
   }
 
   #onlyForLaptop {
-    display: block;
+    display: none;
   }
 
   .prizes {
@@ -1032,14 +1061,48 @@ html {
   }
 
   .otherPerksContentDescription {
-    text-align: left;
-    font-size: 1rem;
+    text-align: center;
+    font-size: 1.3rem;
     line-height: 1.2;
     font-family: "Source Sans Pro", sans-serif;
-    padding: 2px;
+    padding: 5px;
+  }
+
+  .prizesDiv {
+    max-width: 20%;
+    margin-left: 2.5%;
+    margin-right: 1.5%;
+    margin-top: 5%;
+    background: black;
+    filter: drop-shadow(0 0 9px #08b339);
+    border-top: 6px solid #08b339;
+    border-left: 1px solid white;
+    margin-bottom: 5%;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+  }
+
+  .trophyPrizes {
+    /* margin-top: 2px; */
+    margin-bottom: 10px;
+    width: 4.7rem;
+    height: 4rem;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  #perksContent {
+    width: 97%;
+    margin-left: 35px;
+    margin-right: auto;
+  }
+
+  .cert {
     padding-left: 10px;
-    margin-top: 10px;
-    margin-bottom: -10px;
   }
 }
 
@@ -1099,7 +1162,7 @@ html {
   }
 }
 
-@media (min-device-width: 1024px) and (max-device-width: 1200px) {
+/* @media (min-device-width: 1024px) and (max-device-width: 1200px) {
   #onlyForLaptop {
     display: block;
   }
@@ -1152,9 +1215,9 @@ html {
     padding: 10px;
     padding-top: 15px;
   }
-}
+} */
 
-@media (min-device-width: 1201px) and (max-device-width: 1439px) {
+@media (min-device-width: 1275px) and (max-device-width: 1439px) {
   #onlyForLaptop {
     display: block;
   }
@@ -1175,19 +1238,53 @@ html {
   }
 
   .otherPerksContentDescription {
-    line-height: 1.25;
-    margin-top: 15px;
+    line-height: 1.3;
+    margin-top: 0px;
+    font-size: 1.3rem;
+    margin-left: 15px;
+  }
+
+  .prizesDiv {
+    max-width: 20%;
+    margin-left: 2.5%;
+    margin-right: 1.5%;
+    margin-top: 5%;
+    background: black;
+    filter: drop-shadow(0 0 11px #08b339);
+    border-left: 8px solid #08b339;
+    margin-bottom: 5%;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+  }
+
+  .trophyPrizes {
+    margin-top: 2px;
+    width: 5.2rem;
+    height: 4.7rem;
+    padding-left: -5px;
+  }
+
+  #perksContent {
+    width: 97%;
+    margin-left: 35px;
+    margin-right: auto;
+  }
+
+  .cert {
+    padding-left: 10px;
   }
 }
 
 @media (max-device-width: 768px) {
-  #onlyForLaptop {
+  /* #onlyForLaptop {
     display: none;
   }
 
   #allExceptLaptop {
     display: block;
-  }
+  } */
 
   .priceImage {
     width: 50%;
@@ -1232,17 +1329,51 @@ html {
 
   .otherPerksContentDescription {
     font-size: 1.1rem;
-    line-height: 1.2;
+    line-height: 1.45;
     padding: 7px;
-    margin-bottom: 0px;
-    padding-top: 20px;
-    margin-bottom: 0;
-    margin-top: 12px;
+  }
+
+  .prizesDiv {
+    max-width: 21%;
+    max-height: 10%;
+    margin-left: 2.5%;
+    margin-right: 1.5%;
+    margin-top: 5%;
+    background: black;
+    filter: drop-shadow(0 0 7px #08b339);
+    border-top: 6px solid #08b339;
+    border-left: 1px solid white;
+    margin-bottom: 0%;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }
+
+  .trophyPrizes {
+    margin-top: -10px;
+    margin-bottom: 4px;
+    width: 4rem;
+    height: 3.6rem;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  #perksContent {
+    width: 97%;
+    margin-left: 10px;
+    margin-right: auto;
+  }
+
+  .cert {
+    padding-left: 10px;
   }
 }
 
-@media (min-device-width: 770px) and (max-device-width: 1023px) {
-  .priceImage {
+/* @media (min-device-width: 770px) and (max-device-width: 1023px) { */
+/* .priceImage {
     width: 70%;
     height: 300px;
     margin-left: 95px;
@@ -1253,19 +1384,49 @@ html {
   .otherPerksContent {
     margin-left: 60px;
   }
-}
+} */
 
-@media (min-device-width: 426px) and (max-device-width: 590px) {
-  .priceImage {
-    width: 70%;
-    height: 200px;
-    margin-left: 70px;
-    margin-top: 7px;
-    margin-bottom: 30px;
+@media (min-device-width: 426px) and (max-device-width: 700px) {
+  .prizesDiv {
+    max-width: 40%;
+    max-height: 10%;
+    margin-left: 4.5%;
+    margin-right: 4%;
+    margin-top: 5%;
+    background: black;
+    filter: drop-shadow(0 0 7px #08b339);
+    border-top: 6px solid #08b339;
+    border-left: 1px solid white;
+    margin-bottom: 0%;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }
+
+  .trophyPrizes {
+    margin-top: -10px;
+    margin-bottom: 4px;
+    width: 4rem;
+    height: 3.6rem;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  #perksContent {
+    width: 97%;
+    margin-left: 10px;
+    margin-right: auto;
+  }
+
+  .cert {
+    padding-left: 10px;
   }
 }
 
-@media (min-device-width: 590px) and (max-device-width: 690px) {
+/* @media (min-device-width: 590px) and (max-device-width: 690px) {
   .priceImage {
     width: 60%;
     height: 200px;
@@ -1273,7 +1434,7 @@ html {
     margin-top: 7px;
     margin-bottom: 30px;
   }
-}
+} */
 
 @media (max-device-width: 425px) {
   #onlyForLaptop {
@@ -1329,33 +1490,98 @@ html {
     box-shadow: none;
   }
 
-  .otherPerksContentDescription {
-    font-size: 1rem;
-    line-height: 1.2;
-    padding-left: 7px;
-    margin-bottom: 5px;
+  .prizesDiv {
+    max-width: 40%;
+    max-height: 10%;
+    margin-left: 4.5%;
+    margin-right: 4%;
+    margin-top: 5%;
+    background: black;
+    filter: drop-shadow(0 0 7px #08b339);
+    border-top: 6px solid #08b339;
+    border-left: 1px solid white;
+    margin-bottom: 0%;
+    padding-left: 15px;
     padding-top: 30px;
-    margin-bottom: 0;
-    margin-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }
+
+  .trophyPrizes {
+    margin-top: -10px;
+    margin-bottom: 4px;
+    width: 4rem;
+    height: 3.6rem;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  #perksContent {
+    width: 97%;
+    margin-left: 10px;
+    margin-right: auto;
+  }
+
+  .cert {
+    padding-left: 10px;
   }
 }
 
 @media (max-device-width: 375px) {
-  .otherPerksContentImage {
+  .prizesDiv {
+    max-width: 40%;
+    max-height: 10%;
+    margin-left: 4.5%;
+    margin-right: 4%;
+    margin-top: 5%;
+    background: black;
+    filter: drop-shadow(0 0 7px #08b339);
+    border-top: 6px solid #08b339;
+    border-left: 1px solid white;
+    margin-bottom: 0%;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }
+
+  .trophyPrizes {
+    margin-top: -10px;
+    margin-bottom: 4px;
+    width: 4rem;
+    height: 3.3rem;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  #perksContent {
+    width: 97%;
+    margin-left: 10px;
+    margin-right: auto;
+  }
+
+  .cert {
+    padding-left: 10px;
+  }
+  /* .otherPerksContentImage {
     width: 4rem;
     height: 3rem;
     margin-left: 28px;
     margin-top: 6px;
-  }
+  } */
 
   .otherPerksContentDescription {
-    padding-top: 30px;
+    font-size: 1rem;
   }
 
-  .otherPerksContent {
+  /* .otherPerksContent {
     margin-left: 49px;
     background: linear-gradient(to bottom, yellow 43%, white 0%);
-  }
+  } */
 }
 
 @media (max-device-width: 320px) {

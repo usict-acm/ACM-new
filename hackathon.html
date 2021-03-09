@@ -294,24 +294,24 @@
               var screenWidth = window.innerWidth;
               console.log(screenWidth);
               if (screenWidth <= 520) {
-                document.documentElement.scrollTop = 4050;
+                document.documentElement.scrollTop = 3600;
               }
               if (screenWidth <= 537 && screenWidth > 520) {
                 // document.body.scrollTop = 3400;
-                document.documentElement.scrollTop = 3400;
+                document.documentElement.scrollTop = 3200;
               }
 
               if (screenWidth <= 800 && screenWidth > 537) {
                 // document.body.scrollTop = 4200;
-                document.documentElement.scrollTop = 4200;
+                document.documentElement.scrollTop = 4100;
               }
               if (screenWidth <= 1500 && screenWidth > 800) {
                 // document.body.scrollTop = 4200;
-                document.documentElement.scrollTop = 4000;
+                document.documentElement.scrollTop = 3900;
               }
               if (screenWidth <= 1800 && screenWidth > 1500) {
                 // document.body.scrollTop = 4050;
-                document.documentElement.scrollTop = 4350;
+                document.documentElement.scrollTop = 4150;
               }
               if (screenWidth <= 3000 && screenWidth > 1800) {
                 // document.body.scrollTop = 4700;
@@ -335,16 +335,16 @@
               console.log(screenWidth);
               if (screenWidth <= 520) {
                 // document.body.scrollTop = 4480;
-                document.documentElement.scrollTop = 4690;
+                document.documentElement.scrollTop = 4220;
               }
               if (screenWidth <= 537 && screenWidth > 520) {
                 // document.body.scrollTop = 4100;
-                document.documentElement.scrollTop = 4100;
+                document.documentElement.scrollTop = 3970;
               }
 
               if (screenWidth <= 800 && screenWidth > 537) {
                 // document.body.scrollTop = 4500;
-                document.documentElement.scrollTop = 4550;
+                document.documentElement.scrollTop = 4450;
               }
               if (screenWidth <= 1500 && screenWidth > 800) {
                 // document.body.scrollTop = 4650;
@@ -356,7 +356,7 @@
               }
               if (screenWidth <= 3000 && screenWidth > 1800) {
                 // document.body.scrollTop = 5350;
-                document.documentElement.scrollTop = 5350;
+                document.documentElement.scrollTop = 5150;
               }
             }
           </script>
@@ -375,28 +375,28 @@
               console.log(screenWidth);
               if (screenWidth <= 520) {
                 // document.body.scrollTop = 6000;
-                document.documentElement.scrollTop = 6160;
+                document.documentElement.scrollTop = 5900;
               }
               if (screenWidth <= 537 && screenWidth > 520) {
                 // document.body.scrollTop = 6000;
-                document.documentElement.scrollTop = 6000;
+                document.documentElement.scrollTop = 5750;
               }
 
               if (screenWidth <= 800 && screenWidth > 537) {
                 // document.body.scrollTop = 5200;
-                document.documentElement.scrollTop = 5300;
+                document.documentElement.scrollTop = 4900;
               }
               if (screenWidth <= 1500 && screenWidth > 800) {
                 // document.body.scrollTop = 4650;
-                document.documentElement.scrollTop = 5060;
+                document.documentElement.scrollTop = 5160;
               }
               if (screenWidth <= 1800 && screenWidth > 1500) {
                 // document.body.scrollTop = 5500;
-                document.documentElement.scrollTop = 5600;
+                document.documentElement.scrollTop = 5500;
               }
               if (screenWidth <= 3000 && screenWidth > 1800) {
                 // document.body.scrollTop = 5350;
-                document.documentElement.scrollTop = 6050;
+                document.documentElement.scrollTop = 5950;
               }
             }
           </script>
@@ -414,22 +414,22 @@
               var screenWidth = window.innerWidth;
               console.log(window.innerHeight);
               if (screenWidth <= 520) {
-                document.documentElement.scrollTop = 7610;
+                document.documentElement.scrollTop = 7370;
               }
               if (screenWidth <= 537 && screenWidth > 520) {
-                document.documentElement.scrollTop = 6500;
+                document.documentElement.scrollTop = 7200;
               }
               if (screenWidth <= 800 && screenWidth > 537) {
-                document.documentElement.scrollTop = 6500;
+                document.documentElement.scrollTop = 6700;
               }
               if (screenWidth <= 1500 && screenWidth > 800) {
-                document.documentElement.scrollTop = 6250;
+                document.documentElement.scrollTop = 6380;
               }
               if (screenWidth <= 1800 && screenWidth > 1500) {
-                document.documentElement.scrollTop = 6800;
+                document.documentElement.scrollTop = 6600;
               }
               if (screenWidth <= 3000 && screenWidth > 1800) {
-                document.documentElement.scrollTop = 7300;
+                document.documentElement.scrollTop = 7100;
               }
             }
           </script>
@@ -750,18 +750,32 @@
     <div id="otherPerksHeaderDiv">
       <h1 id="otherPerksHeader">@import(AllPrizes);</h1>
     </div>
-    <div class="container" id="onlyForLaptop">
-      <div class="row d-flex">
-        <div class="prizeSecond col-lg-6 col-sm-12">
+    <div class="container-fluid" id="onlyForLaptop" >
+      <div class="row" id="perksContent">
+        <!-- <div class="prizeSecond col-lg-5 col-sm-12">
           <img
             src="./assets/images/perks/prize.png"
             alt="prize"
             class="priceImage"
           />
-        </div>
-        <div class="col-lg-6">
-          <div class="row">
-            <div class="col-md-6 perksBox">
+        </div> -->
+        <!-- <div class="col-lg-7"> -->
+          <!-- <div class="row" style="margin-top: 20px"> -->
+            <div class="alert alert-info new2 col-md-3 prizesDiv">
+              <span class="alert-body">
+                <div style="align-items:center" class="container">
+                  <div class="row">
+                    <div class="col-md-4 cert">
+                    <img src="./assets/images/money_30k.png" alt="trophy" class="trophyPrizes"/>
+                  </div>
+                <div class="col-md-8">
+                    <p class="mb-0 otherPerksContentDescription" style="color: white;font-size: 1.5rem;">Prizes worth 30K</p>             
+                  </div>
+                </div>
+                </div>
+              </span>
+            </div>
+            <!-- <div class="col-md-6 perksBox">
               <div class="themeBoxContent otherPerksContent">
                 <img
                   style="background-color: white"
@@ -770,8 +784,8 @@
                 />
                 <p class="otherPerksContentDescription">Prizes worth 30K</p>
               </div>
-            </div>
-            <div class="col-md-6 perksBox">
+            </div> -->
+            <!-- <div class="col-md-6 perksBox">
               <div class="themeBoxContent otherPerksContent">
                 <img
                   class="otherPerksContentImage"
@@ -782,8 +796,36 @@
                 </p>
               </div>
             </div>
+          </div> -->
+          <div class="alert alert-info new2 col-md-3 prizesDiv" >
+            <span class="alert-body">
+              <div style="align-items:center" class="container">
+                <div class="row">
+                  <div class="col-md-4 cert">
+                  <img src="./assets/images/perks/hand.jpg" alt="trophy" class="trophyPrizes" />
+                </div>
+                <div class="col-md-8">
+                  <p class="mb-0 otherPerksContentDescription" style="color: white;">Internship and PPO offer with Trell</p>             
+                </div>
+              </div>
+              </div>
+            </span>
           </div>
-          <div class="row">
+          <div class="alert alert-info new2 col-md-3 prizesDiv" >
+            <span class="alert-body">
+              <div style="align-items:center" class="container">
+                <div class="row">
+                  <div class="col-md-4 cert">
+                  <img src="./assets/images/perks/certificate.jpg" alt="trophy" class="trophyPrizes"/>
+                </div>
+                <div class="col-md-8">
+                  <p class="mb-0 otherPerksContentDescription" style="color: white;">E-Certificates to top 5 teams</p>             
+                </div>
+              </div>
+              </div>
+            </span>
+          </div>
+          <!-- <div class="row">
             <div class="col-md-6 perksBox">
               <div class="themeBoxContent otherPerksContent">
                 <img
@@ -794,8 +836,23 @@
                   E-Certificates to top 5 teams
                 </p>
               </div>
+            </div> -->
+            <div class="alert alert-info new2 col-md-3 prizesDiv">
+              <span class="alert-body">
+                <div style="align-items:center" class="container">
+                  <div class="row">
+                    <div class="col-md-4 cert">
+                    <img src="./assets/images/acm1.png" alt="trophy" class="trophyPrizes" />
+                  </div>
+                  <div class="col-md-8">
+                    <p class="mb-0 otherPerksContentDescription" style="color: white;">Free ACM membership worth 1500 to top 3 teams</p>             
+                  </div>
+                </div>
+                </div>
+              </span>
             </div>
-            <div class="col-md-6 perksBox">
+            
+            <!-- <div class="col-md-6 perksBox">
               <div class="themeBoxContent otherPerksContent perksBox">
                 <img
                   class="otherPerksContentImage"
@@ -805,14 +862,48 @@
                   Free ACM membership worth 1500 to top 3 teams
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
+            </div> -->
+          <!-- </div> -->
+        <!-- </div> -->
       </div>
     </div>
 
     <div id="allExceptLaptop">
-      <div class="prizeSecond col-lg-6 col-sm-12">
+      <div class="row" id="perksContent">
+            <div class="alert alert-info new2 col-md-3 prizesDiv">
+              <span class="alert-body">
+                <div style="align-items:center" class="container">
+                    <img src="./assets/images/money_30k.png" alt="trophy" class="trophyPrizes"/>
+                    <p class="mb-0 otherPerksContentDescription" style="color: white">Prizes worth 30K</p>             
+                </div>
+              </span>
+            </div>
+          <div class="alert alert-info new2 col-md-3 prizesDiv" >
+            <span class="alert-body">
+              <div style="align-items:center" class="container">
+                  <img src="./assets/images/perks/hand.jpg" alt="trophy" class="trophyPrizes" />
+                  <p class="mb-0 otherPerksContentDescription" style="color: white;">Internship and PPO offer with Trell</p>             
+              </div>
+            </span>
+          </div>
+          <div class="alert alert-info new2 col-md-3 prizesDiv" >
+            <span class="alert-body">
+              <div style="align-items:center" class="container">
+                  <img src="./assets/images/perks/certificate.jpg" alt="trophy" class="trophyPrizes"/>
+                  <p class="mb-0 otherPerksContentDescription" style="color: white;">E-Certificates to top 5 teams</p>                             
+              </div>
+            </span>
+          </div>
+            <div class="alert alert-info new2 col-md-3 prizesDiv">
+              <span class="alert-body">
+                <div style="align-items:center;" class="container">
+                    <img src="./assets/images/acm1.png" alt="trophy" class="trophyPrizes" />
+                    <p class="mb-0 otherPerksContentDescription" style="color: white;">Free ACM membership worth 1500 to top 3 teams</p>             
+                </div>
+              </span>
+            </div>
+      </div>
+      <!-- <div class="prizeSecond col-lg-6 col-sm-12">
         <img
           src="./assets/images/perks/prize.png"
           alt="prize"
@@ -864,7 +955,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <!-- ********************************************SPONSORS*********************************** -->
