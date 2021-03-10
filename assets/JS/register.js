@@ -17,11 +17,16 @@
 //     });
 //   }
 
+
+
+
 $(document).ready(function () {
   var count = 0;
   var det = document.getElementById("my-form");
   var db = firebase.firestore();
   var form = $("#my-form");
+
+  
 
   form.validate({
     errorPlacement: function errorPlacement(error, element) {
@@ -82,24 +87,28 @@ $(document).ready(function () {
               memberOneNumber: det.memberOneNumber.value,
               memberOneEmail: det.memberOneEmail.value,
               memberOneGithub: det.memberOneGithub.value,
+              memberOneMembership: det.memberOneMembership.checked,
               memberTwoFirstName: det.memberTwoFirstName.value,
               memberTwoLastName: det.memberTwoLastName.value,
               memberTwoCollege: det.memberTwoCollege.value,
               memberTwoNumber: det.memberTwoNumber.value,
               memberTwoEmail: det.memberTwoEmail.value,
               memberTwoGithub: det.memberTwoGithub.value,
+              memberTwoMembership: det.memberTwoMembership.checked,
               memberThreeFirstName: det.memberThreeFirstName.value,
               memberThreeLastName: det.memberThreeLastName.value,
               memberThreeCollege: det.memberThreeCollege.value,
               memberThreeNumber: det.memberThreeNumber.value,
               memberThreeEmail: det.memberThreeEmail.value,
               memberThreeGithub: det.memberThreeGithub.value,
+              memberThreeMembership: det.memberThreeMembership.checked,
               memberFourFirstName: det.memberFourFirstName.value,
               memberFourLastName: det.memberFourLastName.value,
               memberFourCollege: det.memberFourCollege.value,
               memberFourNumber: det.memberFourNumber.value,
               memberFourEmail: det.memberFourEmail.value,
               memberFourGithub: det.memberFourGithub.value,
+              memberFourMembership: det.memberFourMembership.checked,
               registration: regNo,
               file: "",
             })
