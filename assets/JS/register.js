@@ -17,16 +17,11 @@
 //     });
 //   }
 
-
-
-
 $(document).ready(function () {
   var count = 0;
   var det = document.getElementById("my-form");
   var db = firebase.firestore();
   var form = $("#my-form");
-
-  
 
   form.validate({
     errorPlacement: function errorPlacement(error, element) {
@@ -70,7 +65,7 @@ $(document).ready(function () {
         if (docSnapshot.exists) {
           $("#errorMessage").html(
             "Email already registered,\
-             Submit your entries before 6 march, 2021, 11:59 PM to proceed"
+             Submit your entries before 19 march, 2021, 8:00 PM to proceed"
           );
           $("#errorModal").modal();
         } else {
@@ -124,11 +119,11 @@ $(document).ready(function () {
               $("#successModal").modal();
               Email.send({
                 //  SecureToken: "db2b1875-d281-44aa-a6de-72914f5981d6",
-                Host : "smtp.elasticemail.com",
-                Username : "hackathon@usict.acm.org",
-                Password : "77F7DF118974095C8250F0B2CC2850C23DBB",
+                Host: "smtp.elasticemail.com",
+                Username: "hackathon@usict.acm.org",
+                Password: "77F7DF118974095C8250F0B2CC2850C23DBB",
                 To: det.leaderEmail.value,
-                From : "hackathon@usict.acm.org",
+                From: "hackathon@usict.acm.org",
                 Subject: "Trellathon Registration Details",
                 Body:
                   "Thank you for registering for Trellathon. Following are the details for your registration.<br> Email: - " +
