@@ -130,7 +130,9 @@ $(document).ready(function () {
                   det.leaderEmail.value +
                   "<br> Registration no.: - " +
                   regNo +
-                  "<br> Keep these details with you for submissions.",
+                  "<br> Keep these details with you for submissions."+
+                  "<br> For more details, visit our website (http://usict.acm.org)<br>"+
+                  "Follow us on instagram (https://www.instagram.com/acmusict/)<br>",
               }).then();
             })
             .catch((error) => {

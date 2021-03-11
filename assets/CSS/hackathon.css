@@ -2109,6 +2109,10 @@ html {
   margin-top: 50px;
 }
 
+.posterimg{
+  object-fit: contain;
+}
+
 .aboutUsHead {
   color: yellow;
   font-weight: 900;
@@ -2138,6 +2142,10 @@ html {
 }
 
 .aboutHackUsict {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   height: 100%;
   width: 100%;
   padding: 20px;
@@ -2195,8 +2203,11 @@ html {
     position: relative;
     margin-left: 15%;
   }
+  .posterimg{
+    object-fit: fill;
+  }
   .box {
-    width: 100%;
+    width: 80%;
     height: 50%;
     position: relative;
     top: 0;
