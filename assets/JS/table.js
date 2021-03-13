@@ -1,5 +1,14 @@
 var db = firebase.firestore();
 var data =[["Team Code", "Team Name", "Leader E-mail", "M1 E-mail", "M2 E-mail", "M3 E-Mail", "M4 E-Mail", "M1 First Name", "M1 Last Name","M2 First Name", "M2 Last Name","M3 First Name", "M3 Last Name","M4 First Name", "M4 Last Name", "M1 GitHub", "M2 GitHub", "M3 GitHub", "M4 GitHub", "M1 College", "M2 College", "M3 College", "M4 College", "M1 Premium", "M2 Premium", "M3 Premium", "M4 Premium", "M1 Phone Number","M2 Phone Number","M3 Phone Number","M4 Phone Number","Submission"]];
+
+const submissionViewer = function(file){
+  var val = "Not Submitted";
+  if(file!=''){
+    val ='<a target="_blank" href="' + file + '"> View Submission </a>';
+  }
+  return val;
+}
+
 var download = function(content, fileName, mimeType) {
   var a = document.createElement('a');
   mimeType = mimeType || 'application/octet-stream';
@@ -33,6 +42,7 @@ firebase.auth().signInWithEmailAndPassword(document.getElementById('email').valu
         console.log(x.data());
         var pusher = [x.data().registration,x.data().teamName, x.data().leaderEmail, x.data().memberOneEmail,  x.data().memberTwoEmail, x.data().memberThreeEmail, x.data().memberFourEmail, x.data().memberOneFirstName, x.data().memberOneLastName,  x.data().memberTwoFirstName, x.data().memberTwoLastName, x.data().memberThreeFirstName, x.data().memberThreeLastName, x.data().memberFourFirstName, x.data().memberFourLastName,  x.data().memberOneGithub, x.data().memberTwoGithub, x.data().memberThreeGithub, x.data().memberFourGithub, x.data().memberOneCollege.replace(',', ' '), x.data().memberTwoCollege.replace(',', ' '), x.data().memberThreeCollege.replace(',', ' ') , x.data().memberFourCollege.replace(',', ' '), x.data().memberOneMembership, x.data().memberTwoMembership, x.data().memberThreeMembership, x.data().memberFourMembership, x.data().memberOneNumber, x.data().memberTwoNumber, x.data().memberThreeNumber, x.data().memberFourNumber, x.data().file];
         data.push(pusher);
+        var file = x.data().file;
         $("#table").append(`
     <tr class="row">
     <td class="col">
@@ -60,9 +70,7 @@ firebase.auth().signInWithEmailAndPassword(document.getElementById('email').valu
         `+ x.data().memberOneNumber +` <br /> `+ x.data().memberTwoNumber +` <br /> `+ x.data().memberThreeNumber +` <br /> `+ x.data().memberFourNumber +`
       </td>
       <td class="col">
-        <a target="_blank" href="`+ x.data().file +` ">
-          View Submission
-        </a>
+        `+ submissionViewer(file) +`
       </td>
     </tr>
     `);
