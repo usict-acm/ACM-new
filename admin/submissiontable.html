@@ -70,6 +70,7 @@
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-analytics.js"></script>
@@ -178,12 +179,15 @@
       </div>
       </nav>
       <div style="width:90%; margin: 5% auto auto auto;">
+        <input id="email" name="email" type="email" placeholder="email"></input>
+        <input id="password" name="password" type="password" placeholder="password"></input>
+        <button id="logger" type="submit">Log In</button>
         <h1>
           Registrations and Submissions
-          <button id="csv">CSV</button>
+          <button class="data-hider" id="csv">CSV</button>
         </h1>
         <br />
-      <table class="table" id="table" style="text-align: center; width:98%; color:#fff; margin:auto;">
+      <table class="data-hider" class="table" id="table" style="text-align: center; width:98%; color:#fff; margin:auto;">
         <tr class="row">
             <td class="col">
                 Team Code
