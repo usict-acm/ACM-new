@@ -223,9 +223,24 @@ html {
   padding-right: 10px;
 }
 
+#myBtnInsideTheme2 {
+  outline: none;
+  cursor: pointer;
+  background-color: #0297ff;
+  color: white;
+  border-radius: 5%;
+  width: 75%;
+  margin-left: -15px;
+  margin-top: 20px;
+  height: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .registerInsideTheme {
   text-align: center;
   padding-top: 3px;
+  line-height: 1.3;
   font-size: 1.2rem;
 }
 
@@ -360,6 +375,20 @@ html {
     padding-right: 10px;
   }
 
+  #myBtnInsideTheme2 {
+    outline: none;
+    cursor: pointer;
+    background-color: #0297ff;
+    color: white;
+    border-radius: 5%;
+    width: 90%;
+    margin-left: -29px;
+    margin-top: 15px;
+    height: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .getStatementButton {
     height: 45px;
     padding-left: 13px;
@@ -385,9 +414,25 @@ html {
     padding-right: 10px;
   }
 
+  #myBtnInsideTheme2 {
+    outline: none;
+    cursor: pointer;
+    background-color: #0297ff;
+    color: white;
+    border-radius: 5%;
+    width: 90%;
+    margin-left: -33px;
+    margin-top: 15px;
+    height: 70px;
+    padding-bottom: -5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .registerInsideTheme {
     text-align: center;
     padding-top: 3px;
+    margin-bottom: 0;
     font-size: 1.2rem;
   }
 
@@ -467,6 +512,14 @@ html {
     height: 50px;
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  #myBtnInsideTheme2 {
+    width: 38%;
+    height: 50px;
+    margin-top: -70px;
+    margin-left: 20px;
+    padding-bottom: 0;
   }
 
   .registerInsideTheme {
@@ -549,18 +602,24 @@ html {
   }
 }
 
-@media (min-device-width: 768px) and (max-width: 1023px) {
+@media (min-device-width: 768px) and (max-device-width: 1023px) {
   #myBtnInsideTheme {
     outline: none;
     cursor: pointer;
     background-color: #0297ff;
     color: white;
     border-radius: 5%;
-    margin-left: 70px;
+    margin-left: 23%;
     margin-top: 30px;
     height: 50px;
     padding-left: 10px;
     padding-right: 10px;
+  }
+  #myBtnInsideTheme2 {
+    margin-left: 10%;
+    margin-top: 20px;
+    height: 55px;
+    width: fit-content;
   }
 
   .registerInsideTheme {
@@ -613,6 +672,28 @@ html {
   }
 }
 
+@media (min-device-width: 500px) and (max-device-width: 790px) {
+  #myBtnInsideTheme {
+    outline: none;
+    cursor: pointer;
+    background-color: #0297ff;
+    color: white;
+    border-radius: 5%;
+    margin-left: 1%;
+    margin-top: 30px;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #myBtnInsideTheme2 {
+    margin-left: 2%;
+    margin-top: 30px;
+    width: fit-content;
+    height: 50px;
+    padding-bottom: 0;
+  }
+}
+
 @media (min-device-width: 1323px) and (max-device-width: 1439px) {
   #myBtnInsideTheme {
     outline: none;
@@ -625,6 +706,11 @@ html {
     height: 50px;
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  #myBtnInsideTheme2 {
+    margin-top: -60px;
+    width: 29%;
   }
 
   .registerInsideTheme {
@@ -672,9 +758,25 @@ html {
     background-color: #0297ff;
     color: white;
     border-radius: 5%;
-    margin-left: 70px;
-    margin-top: -70px;
     height: 55px;
+    /* margin: auto; */
+    margin-top: -70px;
+    margin-left: 25%;
+    margin-right: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #myBtnInsideTheme2 {
+    outline: none;
+    cursor: pointer;
+    background-color: #0297ff;
+    color: white;
+    border-radius: 5%;
+    height: 55px;
+    width: fit-content;
+    /* margin: auto; */
+    margin-top: -70px;
     padding-left: 10px;
     padding-right: 10px;
   }
