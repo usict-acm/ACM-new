@@ -551,8 +551,10 @@ html {
   }
 
   .themeBoxContent {
-    margin: 15px;
-    margin-left: 30px;
+    margin: auto;
+    margin-top: 15px;
+    width: 80%;
+    /* margin-left: 30px; */
   }
 
   .themeBoxContentImage {
