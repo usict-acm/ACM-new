@@ -473,11 +473,12 @@ html {
   }
 
   .themeBoxContent {
-    width: 82%;
+    width: 68%;
     border: #00ff47 solid 3.5px;
-    margin: 15px;
-    margin-left: 43px;
-    margin-right: 5px;
+    /*margin-left: 43px;
+    margin-right: 5px; */
+    margin: auto;
+    margin-top: 35px;
     padding: 10px;
     box-shadow: 0.6px 0.6px 3.5px 3.5px #ccf5d7;
   }
