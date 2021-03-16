@@ -680,12 +680,12 @@
     <!-- Timeline ends here-->
 
     <!-- theme hackathon page -->
-    <div class="themeHackhathon" id="themesHack">
+     <div class="themeHackhathon bf" id="themesHack">
       <div id="themeHackhathonHeaderDiv">
         <h1 id="themeHackhathonHeader">get(ProblemStatement);</h1>
       </div>
 
-      <div class="container containerThemeJumboStyle" style="width: 80%">
+    <!--  <div class="container containerThemeJumboStyle" style="width: 80%">
         <div class="jumbotron jumboStyle">
           <div class="container-flex">
             <div class="row">
@@ -701,11 +701,11 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <!-- <div class="container">
+      <div class="container">
       <div class="row d-flex" id="themeBoxRow">
-        <div class="col-md-6 col-lg-6 col-sm-12 themeBox">
+        <!-- <div class="col-md-4 col-lg-4 col-sm-12 themeBox">
           <div class="modal-box">
             <div data-toggle="modal" data-target="#myModal1">
               <div class="themeBoxContent">
@@ -735,7 +735,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="col-md-6 col-lg-6 col-sm-12 themeBox">
           <div class="modal-box">
             <div data-toggle="modal" data-target="#myModal2">
@@ -767,9 +767,40 @@
             </div>
           </div>
         </div>
+        <div class="col-md-6 col-lg-6 col-sm-12 themeBox">
+          <div class="modal-box">
+            <div data-toggle="modal" data-target="#myModal3">
+              <div class="themeBoxContent">
+                <img class="themeBoxContentImage" src="./assets/images/Events/acm-orientation.jpg" />
+                <h1 class="themeBoxContentHeader">EdTech</h1>
+                <p class="themeBoxContentDescription">
+                  Partnered by: Docker Delhi, Lenskar Partnered by: Docker Delhi,
+                  LenskarPartnered by: Docker Delhi, Lenskar
+                </p>
+              </div>
+            </div>
+            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  <div class="modal-body">
+                    <!-- <img class="themeBoxContentImage" src="./assets/images/Events/acm-orientation.jpg" /> -->
+                    <h3 class="title">EdTech</h3>
+                    <p class="description">You are supposed to make a mobile app/web app/hybrid app that eases the
+                      coding experience for high school students. You need to make this hack keeping in
+                      mind that it is specifically meant for school going kids.
+                      For example, you may use AR/VR/MR to explain the compilation process happening
+                      under the hood or apply some AI/ML/DL to personalize the experience, determining
+                      areas that need improvement etc.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
     </div>
-  </div> -->
+  </div>
     </div>
 
     <!-- prizes hackathon  -->
@@ -1997,7 +2028,19 @@
       document.documentElement.scrollTop = 50;
     }
   </script>
-  <script>
+  <!-- <script>
+  const colors = {
+    blue: '#005588',
+    green: '#1a913b',
+    black: '#000000'
+  };
+  
+  VANTA.WAVES({
+    el: "#themesHack",
+    color: colors['blue']
+  });</script>
+   -->
+  <!-- <script>
     VANTA.WAVES({
       el: "#themesHack",
       mouseControls: true,
@@ -2013,5 +2056,17 @@
       waveSpeed: 1.25,
       zoom: 0.97,
     });
+  </script> -->
+  <!-- <script src="https://unpkg.com/thpace">
+   const canvas = document.getElementById("themesHack");
+
+    const settings = {
+      colors: ['#4CB1EF',  '#424959',  '#FF4B44'],
+      triangleSize: 100
+    };
+    
+    Thpace.create(canvas, settings);</script>
+  <script> -->
+   
   </script>
 </html>
