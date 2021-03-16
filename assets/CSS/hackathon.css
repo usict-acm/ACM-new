@@ -216,7 +216,7 @@ html {
   background-color: #0297ff;
   color: white;
   border-radius: 5%;
-  margin-left: -10px;
+  margin-left: 10px;
   margin-top: 30px;
   height: 40px;
   padding-left: 10px;
@@ -227,6 +227,25 @@ html {
   text-align: center;
   padding-top: 3px;
   font-size: 1.2rem;
+}
+
+.getStatementButton {
+  outline: none;
+  cursor: pointer;
+  background-color: #0297ff;
+  color: white;
+  border-radius: 11px;
+  margin-top: 25px;
+  margin-bottom: 28px;
+  height: 55px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.getStatement {
+  text-align: center;
+  padding-top: 3px;
+  font-size: 1.75rem;
 }
 
 .jumboStyle {
@@ -315,6 +334,18 @@ html {
   padding-left: 8px;
 }
 
+@media (max-device-width: 990px) {
+  .getStatementButton {
+    height: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .getStatement {
+    font-size: 1.5rem;
+  }
+}
+
 @media (max-device-width: 375px) {
   #myBtnInsideTheme {
     outline: none;
@@ -322,22 +353,32 @@ html {
     background-color: #0297ff;
     color: white;
     border-radius: 5%;
-    margin-left: -30px;
+    margin-left: -6px;
     margin-top: 30px;
     height: 40px;
     padding-left: 10px;
     padding-right: 10px;
   }
+
+  .getStatementButton {
+    height: 45px;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .getStatement {
+    font-size: 1.3rem;
+  }
 }
 
-@media (max-device-width: 320px) {
+@media (max-device-width: 345px) {
   #myBtnInsideTheme {
     outline: none;
     cursor: pointer;
     background-color: #0297ff;
     color: white;
     border-radius: 5%;
-    margin-left: -48px;
+    margin-left: -28px;
     margin-top: 30px;
     height: 40px;
     padding-left: 10px;
@@ -444,7 +485,7 @@ html {
 
   .verticalLineTheme {
     display: inline-block;
-    height: 180px;
+    height: 140px;
     border-left: 5px solid #0297ff;
   }
 
@@ -515,7 +556,7 @@ html {
     background-color: #0297ff;
     color: white;
     border-radius: 5%;
-    margin-left: 40px;
+    margin-left: 70px;
     margin-top: 30px;
     height: 50px;
     padding-left: 10px;
@@ -594,7 +635,7 @@ html {
 
   .verticalLineTheme {
     display: inline-block;
-    height: 190px;
+    height: 140px;
     border-left: 5px solid #0297ff;
   }
 
@@ -654,7 +695,7 @@ html {
 
   .verticalLineTheme {
     display: block;
-    height: 230px;
+    height: 165px;
     border-left: 8px solid #0297ff;
   }
 
