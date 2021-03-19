@@ -65,7 +65,8 @@
     ></script>
     <link href="../assets/CSS/submission.css" rel="stylesheet" />
     <link href="../assets/CSS/benefits.css" rel="stylesheet" />
-
+    <link href="../assets/CSS/submissionClosed.css" rel="stylesheet" />
+    
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
@@ -167,7 +168,7 @@
             </h2>
             <a href="#registration">
               <button class="hero-register-button" type="button" name="button">
-                <span class="blink_me">ROUND 1 SUBMSSION</span>
+                <span class="blink_me">SUBMISSIONS ARE CLOSED</span>
               </button>
             </a>
           </div>
@@ -221,72 +222,20 @@
       </span>
     </div>
   
-
-    <div class="dabba-number-ek">
-      <h1 class="heading">
-        Round 1 Submissions
-      </h1>
-      <div class="submission-wala-dabba">
-        <form
-          class="widget-contact-form"
-          role="form"
-          method="post"
-          target="_self"
-          novalidate="novalidate"
-        >
-          <div class="row" style="margin-top: 2rem">
-          
-            <div class="form-group col-md-12">
-              <input
-                name="email"
-                id="leaderEmail"
-                type="email"
-                aria-required="true"
-                class="form-input-boxes-manual form-control required email"
-                placeholder="Team Leader's E-mail Address"
-                style="color: grey"
-                required="true"
-              />
-            </div>
-            <div class="form-group col-md-12">
-              <input
-                type="text"
-                id='teamCode'
-                class="form-input-boxes-manual form-control"
-                placeholder="Registration Number"
-                style="color: grey"
-                name="teamCode"
-                required="true"
-              />
-            </div>
-          </div>
+    <div class="container containerThemeJumboStyle" style="width: 80%">
+      <div class="jumbotron jumboStyle">
+        <div class="container-flex">
           <div class="row">
-            <div class="col col-md-6 upsub1">
-              <input name="submission" type="file" id="pdf" name="Upload PDF" accept=".pdf" required="true">
-            </div>
-            <div class="col col-md-6">
-              <p class="upsub" style="text-align: right;">Upload Your Submission in pdf form <br>(max limit is 5MB)</p>
-            </div>
+            <div class="col-lg-1 verticalLineTheme"></div>
+            <h1 class="col-lg-11 waitTextTheme">
+              <span class="blink_me"  
+                >Submissions are closed, thanks for participating, Results of round 1 will be declared soon.
+              </span>
+            </h1>
           </div>
-            <div class="row btnsubmit">
-            <div class="form-group button-center">
-              <div class="form-group">
-                <button
-                  class="btn signin"
-                  type="submit"
-                  style="background-color: #08b439; color: #fff"
-                  id="merabutton"
-                >
-                  <i class="fa fa-paper-plane"></i>&nbsp;Submit
-                </button>
-              </div>
-            </div>
-            </div>
-          </div>
-        </form>
+        </div>
       </div>
-
-
+    </div>
         <!-- =======MODALS====== -->
         <div class="modal fade" id="loadingModal" tabindex="-1" role="dialog" style="overflow:hidden; height: 100vh; width:100vw" aria-labelledby="successModalTitle" aria-hidden="true"> 
           <div class="modal-dialog modal-dialog-centered" role="document">

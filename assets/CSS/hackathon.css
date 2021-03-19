@@ -281,6 +281,7 @@ html {
   margin-top: 4px;
   margin-bottom: -5px;
   margin-left: -45px;
+  font-family: "Ruda", sans-serif;
   line-height: 1.5;
   color: #0297ff;
 }
@@ -538,7 +539,7 @@ html {
 
   .verticalLineTheme {
     display: inline-block;
-    height: 140px;
+    height: 160px;
     border-left: 5px solid #0297ff;
   }
 
@@ -549,6 +550,7 @@ html {
     margin-bottom: -5px;
     margin-left: -25px;
     line-height: 1.4;
+    font-family: "Ruda", sans-serif;
     color: #0297ff;
   }
 
@@ -644,6 +646,7 @@ html {
   .waitTextTheme {
     text-align: center;
     margin-left: -35px;
+    font-family: "Ruda", sans-serif;
   }
 
   .verticalLineTheme {
@@ -721,8 +724,8 @@ html {
 
   .verticalLineTheme {
     display: inline-block;
-    height: 140px;
-    border-left: 5px solid #0297ff;
+    height: 180px;
+    border-left: 6px solid #0297ff;
   }
 
   .waitTextTheme {
@@ -797,16 +800,17 @@ html {
 
   .verticalLineTheme {
     display: block;
-    height: 165px;
+    height: 120px;
     border-left: 8px solid #0297ff;
   }
 
   .waitTextTheme {
     text-align: left;
-    font-size: 3.2rem;
+    font-size: 2.4rem;
     margin-top: 10px;
     margin-left: -35px;
-    line-height: 1.3;
+    line-height: 1.4;
+    font-family: "Ruda", sans-serif;
     color: #0297ff;
   }
 

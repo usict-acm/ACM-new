@@ -479,5 +479,254 @@
         </div>
       </div>
     </div>
+
+    <!-- round 1 submission -->
+
+    <!-- <div class="dabba-number-ek">
+      <h1 class="heading">
+        Round 1 Submissions
+      </h1>
+      <div class="submission-wala-dabba">
+        <form
+          class="widget-contact-form"
+          role="form"
+          method="post"
+          target="_self"
+          novalidate="novalidate"
+        >
+          <div class="row" style="margin-top: 2rem">
+          
+            <div class="form-group col-md-12">
+              <input
+                name="email"
+                id="leaderEmail"
+                type="email"
+                aria-required="true"
+                class="form-input-boxes-manual form-control required email"
+                placeholder="Team Leader's E-mail Address"
+                style="color: grey"
+                required="true"
+              />
+            </div>
+            <div class="form-group col-md-12">
+              <input
+                type="text"
+                id='teamCode'
+                class="form-input-boxes-manual form-control"
+                placeholder="Registration Number"
+                style="color: grey"
+                name="teamCode"
+                required="true"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-md-6 upsub1">
+              <input name="submission" type="file" id="pdf" name="Upload PDF" accept=".pdf" required="true">
+            </div>
+            <div class="col col-md-6">
+              <p class="upsub" style="text-align: right;">Upload Your Submission in pdf form <br>(max limit is 5MB)</p>
+            </div>
+          </div>
+            <div class="row btnsubmit">
+            <div class="form-group button-center">
+              <div class="form-group">
+                <button
+                  class="btn signin"
+                  type="submit"
+                  style="background-color: #08b439; color: #fff"
+                  id="merabutton"
+                >
+                  <i class="fa fa-paper-plane"></i>&nbsp;Submit
+                </button>
+              </div>
+            </div>
+            </div>
+          </div>
+        </form>
+      </div> -->
+
+    <!-- registration form -->
+
+    <!-- <div id="registration" class="container" style="margin-top: 70px;margin-bottom: 70px;">
+    <form id="my-form" class="registration-div">
+      <h3>Team</h3>
+      <section>
+        <div class="registration-heading">
+          <h1>Register For</h1>
+          <h1 style="color: #08b339;"><strong>Trellathon</strong></h1>
+        </div>
+
+        <div class="row" style="margin-top:2rem">
+          <div class="form-group col-md-6">
+            <input id="teamName" type="text" name="teamName" class="form-input-boxes-manual form-control" placeholder="* Team Name" style="color: grey;" required>
+            <span class="error_form" id="teamName_error_message"></span>
+          </div>
+          <div class="form-group col-md-6">
+            <input id="member" type="number" aria-required="true" name="numberOfMembers" class="form-input-boxes-manual form-control" placeholder="* Number of Members" style="color: grey;" required  min="1"  max="4">
+            <span class="error_form" id="member_error_message"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <input id="leaderName" type="text" name="leaderName" class="form-input-boxes-manual form-control" placeholder="* Team Leader Name" style="color: grey;" required>
+            <span class="error_form" id="leaderName_error_message"></span>
+          </div>
+          <div class="form-group col-md-6">
+            <label class="error_form" id="leaderNumber_error_message"></label>
+            <input id="leaderNumber" type="number" name="leaderNumber" class="form-input-boxes-manual form-control phoneValidate" placeholder="* Team Leader Contact Number" style="color: grey;" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <input id="leaderEmail" type="email" name="leaderEmail" class="form-control form-input-boxes-manual" placeholder="* Team Leader Email" style="color: grey;" aria-required="true" required>
+          <span class="error_form" id="leaderEmail_error_message"></span>
+        </div>
+
+      </section>
+
+      <h3>Hacker1</h3>
+      <section>
+        <div class="registration-heading">
+          <h1 style="color: #08b339;">Hacker 1</h1>
+        </div>
+
+        <div class="row" style="margin-top:2rem">
+          <div class="form-group col-md-6">
+            <input type="text" aria-required="true" name="memberOneFirstName" class="form-input-boxes-manual form-control" placeholder="* First Name" style="color: grey;"  required>
+          </div>
+          <div class="form-group col-md-6">
+            <input type="text" aria-required="true" name="memberOneLastName" class="form-input-boxes-manual form-control" placeholder="* Last Name" style="color: grey;" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" name="memberOneCollege" class="form-input-boxes-manual form-control" placeholder="* Name Of College" style="color: grey;" required>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label class="error_form" id="memberOneNumber_error_message"></label>
+            <input id="memberOneNumber" type="number" name="memberOneNumber" class="form-input-boxes-manual form-control" placeholder="* Contact Number" style="color: grey;" required>
+          </div>
+          <div class="form-group col-md-6">
+            <input type="email" name="memberOneEmail" class="form-input-boxes-manual form-control" placeholder="* Email" style="color: grey;" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="url" name="memberOneGithub" class="form-input-boxes-manual form-control" placeholder="* Github Link" style="color: grey;" required>
+        </div>
+        <div>
+          <input type="checkbox" id="memberOneMembership" name="memberOneMembership">
+          <label for="memberOneMembership">Is Hacker 1 an Ensvee Premium Member?</label>
+        </div>
+      </section>
+
+      <h3>Hacker2</h3>
+      <section>
+        <div class="registration-heading">
+          <h1 style="color: #08b339;">Hacker 2</h1>
+        </div>
+
+        <div class="row" style="margin-top:2rem">
+          <div class="form-group col-md-6">
+            <input type="text"  name="memberTwoFirstName" class="form-input-boxes-manual form-control" placeholder="First Name" style="color: grey;">
+          </div>
+          <div class="form-group col-md-6">
+            <input type="text" name="memberTwoLastName" class="form-input-boxes-manual form-control" placeholder="Last Name" style="color: grey;">
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" name="memberTwoCollege" class="form-input-boxes-manual form-control" placeholder="Name Of College" style="color: grey;">
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label class="error_form" id="memberTwoNumber_error_message"></label>
+            <input id="memberTwoNumber" type="number" name="memberTwoNumber" class="form-input-boxes-manual form-control" placeholder="Contact Number" style="color: grey;">
+          </div>
+          <div class="form-group col-md-6">
+            <input type="email" name="memberTwoEmail" class="form-input-boxes-manual form-control" placeholder="Email" style="color: grey;">
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="url" name="memberTwoGithub" class="form-input-boxes-manual form-control" placeholder="Github Link" style="color: grey;">
+        </div>
+        <div>
+          <input type="checkbox" id="memberTwoMembership" name="memberTwoMembership">
+          <label for="memberOneMembership">Is Hacker 2 an Ensvee Premium Member?</label>
+        </div>
+
+      </section>
+
+      <h3>Hacker3</h3>
+      <section>
+        <div class="registration-heading">
+          <h1 style="color: #08b339;">Hacker 3</h1>
+        </div>
+
+        <div class="row" style="margin-top:2rem">
+          <div class="form-group col-md-6">
+            <input type="text" aria-required="true" name="memberThreeFirstName" class="form-input-boxes-manual form-control" placeholder="First Name" style="color: grey;">
+          </div>
+          <div class="form-group col-md-6">
+            <input type="text" aria-required="true" name="memberThreeLastName" class="form-input-boxes-manual form-control" placeholder="Last Name" style="color: grey;">
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" name="memberThreeCollege" class="form-input-boxes-manual form-control" placeholder="Name Of College" style="color: grey;">
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label class="error_form" id="memberThreeNumber_error_message"></label>
+            <input id="memberThreeNumber" type="number" name="memberThreeNumber" class="form-input-boxes-manual form-control" placeholder="Contact Number" style="color: grey;">
+          </div>
+          <div class="form-group col-md-6">
+            <input type="email" name="memberThreeEmail" class="form-input-boxes-manual form-control" placeholder="Email" style="color: grey;">
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="url" name="memberThreeGithub" class="form-input-boxes-manual form-control" placeholder="Github Link" style="color: grey;">
+        </div>
+        <div>
+          <input type="checkbox" id="memberThreeMembership" name="memberThreeMembership">
+          <label for="memberOneMembership">Is Hacker 3 an Ensvee Premium Member?</label>
+        </div>
+
+      </section>
+
+      <h3>Hacker4</h3>
+      <section>
+        <div class="registration-heading">
+          <h1 style="color: #08b339;">Hacker 4</h1>
+        </div>
+
+        <div class="row" style="margin-top:2rem">
+          <div class="form-group col-md-6">
+            <input type="text" aria-required="true" name="memberFourFirstName" class="form-input-boxes-manual form-control" placeholder="First Name" style="color: grey;">
+          </div>
+          <div class="form-group col-md-6">
+            <input type="text" aria-required="true" name="memberFourLastName" class="form-input-boxes-manual form-control" placeholder="Last Name" style="color: grey;">
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" name="memberFourCollege" class="form-input-boxes-manual form-control" placeholder="Name Of College" style="color: grey;">
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label class="error_form" id="memberFourNumber_error_message"></label>
+            <input id="memberFourNumber" type="number" name="memberFourNumber" class="form-input-boxes-manual form-control" placeholder="Contact Number" style="color: grey;">
+          </div>
+          <div class="form-group col-md-6">
+            <input type="email" name="memberFourEmail" class="form-input-boxes-manual form-control" placeholder="Email" style="color: grey;">
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="url" name="memberFourGithub" class="form-input-boxes-manual form-control" placeholder="Github Link" style="color: grey;">
+        </div>
+        <div>
+          <input type="checkbox" id="memberFourMembership" name="memberFourMembership">
+          <label for="memberOneMembership">Is Hacker 4 an Ensvee Premium Member?</label>
+        </div>
+
+      </section>
+
+  </div> -->
   </body>
 </html>
