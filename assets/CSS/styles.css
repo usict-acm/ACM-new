@@ -1852,4 +1852,17 @@ align-items: center; */
 }
 
 
-
+@media only screen and (max-width:500px) {
+  .slider1 {
+    background: url('assets/images/banner-high-mobile.png');
+  }
+  .slider2 {
+    background: url('assets/images/img2-mobile.png');
+  }
+  .slider3 {
+    background: url('assets/images/img1-mobile.png');
+  }
+  .slider4 {
+    background: url('assets/images/img3-mobile.png');
+  }
+}
