@@ -1838,3 +1838,18 @@ align-items: center; */
   font-weight: 500;
   opacity: 0.7;
 }
+
+@media(max-device-width:575px){
+  .btnForNewsletter400px{
+    margin-left: 30%;
+  }
+}
+
+@media(max-device-width:425px){
+  .btnForNewsletter400px{
+    margin-left: 26%;
+  }
+}
+
+
+
