@@ -1866,3 +1866,15 @@ align-items: center; */
     background: url('assets/images/img3-mobile.png');
   }
 }
+
+@media only screen and (max-width:500px) and (min-width: 400px) {
+  .button-two {
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width:374px) {
+  .button-two {
+    margin-top: 15px;
+  }
+}
