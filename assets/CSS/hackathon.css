@@ -3685,3 +3685,40 @@ body {
   background: url("../images/perks/www.jpeg") no-repeat;
   background-size: cover;
 }
+
+
+.submission-button {
+  background: #000000;
+  border: 3px solid #0297ff;
+  box-sizing: border-box;
+  color: white;
+  margin-top: 50px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width:500px) and (min-width: 400px) {
+  .submission-button {
+    margin-left: -10px;
+  }
+}
+
+@media only screen and (max-width:400px) and (min-width: 375px) {
+  .submission-button {
+    margin-left: -20px;
+  }
+  .guide-text {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width:374px) {
+  .submission-button {
+    margin-left: -30px;
+  }
+  .guide-text {
+    font-size: 20px;
+  }
+}
