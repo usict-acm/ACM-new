@@ -1892,13 +1892,7 @@ align-items: center; */
     width: 100%;
   }
   
-  .top-header > .swiper-container{
-    height: 30vh;
-  }
   
-  .slider-text {
-    display: none;
-  }
   .image1 {
     background: url('../images/banner-high-mobile.png');
   }
