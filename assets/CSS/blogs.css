@@ -86,3 +86,57 @@
 .a-block:hover:before {
   opacity: 0.4;
 }
+
+.lower {
+  display: flex;
+  flex-direction: row;
+}
+.left-side {
+  width: 70%;
+  display: inline-block;
+}
+.right-side {
+  padding-left: 5%;
+  width: 30%;
+  display: inline-block;
+}
+.card-text {
+  margin-top: 7%;
+}
+.card-span {
+  color: #b3b3b3;
+}
+.card-span-dot {
+  font-size: 3px;
+  margin: auto 5px auto 5px;
+}
+.card {
+  margin: 5% 2%;
+}
+@media (min-width: 300px) and (max-width: 993px) {
+  .lower {
+    display: block;
+  }
+  .left-side {
+    width: 100%;
+    display: block;
+  }
+  .right-side {
+    padding-left: 0%;
+    width: 100%;
+    display: block;
+  }
+  .card-text {
+    margin-top: 7%;
+  }
+  .card-span {
+    color: #b3b3b3;
+  }
+  .card-span-dot {
+    font-size: 3px;
+    margin: auto 5px auto 5px;
+  }
+  .card {
+    margin: 5% 2%;
+  }
+}

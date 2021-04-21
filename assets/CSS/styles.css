@@ -1890,9 +1890,11 @@ align-items: center; */
 @media (min-width: 300px) and (max-width: 580px) {
   .swiper-container {
     width: 100%;
+    height: 30vh !important;
   }
-  
-  
+  .slider-text{
+    display: none;
+  }
   .image1 {
     background: url('../images/banner-high-mobile.png');
   }
