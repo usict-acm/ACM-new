@@ -111,7 +111,8 @@
   margin: auto 5px auto 5px;
 }
 .card {
-  margin: 5% 2%;
+  margin: 0 2%;
+  margin-bottom: 5%;
 }
 @media (min-width: 300px) and (max-width: 993px) {
   .lower {
@@ -139,4 +140,76 @@
   .card {
     margin: 5% 2%;
   }
+  .right-side {
+    display: none;
+  }
+}
+
+.rightImage {
+  width: 100%;
+}
+
+.rightImage img {
+  width: 100%;
+}
+
+.rightText h5 {
+  font-size: 1rem;
+  color: #000;
+}
+
+.cardDown {
+  font-size: 0.8rem;
+}
+
+.rightCard {
+  margin-bottom: 1rem;
+}
+
+.categoryLeft {
+  color: #007bff;
+}
+.categoryRight {
+  text-align: right;
+}
+
+.categories {
+  padding: 0;
+}
+
+.categoryCards {
+  margin: 2rem 0;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.right-side a:hover {
+  text-decoration: none;
+}
+.categoryCards .col {
+  padding: 0;
+}
+
+.tags {
+  margin: 4rem 0;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.tags .col {
+  padding: 0;
+}
+
+.tag {
+  background-color: #f2f2f2;
+  border-radius: 0.3rem;
+  padding: 0.2rem;
+  margin: 0.1rem;
+  margin-bottom: 0.3rem;
+  display: inline-block;
+}
+
+.tag:hover {
+  background-color: #007bff;
+  color: white;
 }
