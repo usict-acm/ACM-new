@@ -39,7 +39,7 @@
 .a-block:before {
   background: #000;
   position: absolute;
-  content: "";
+  content: '';
   z-index: 1;
   opacity: 0.25;
   -webkit-transition: 0.3s all ease;
@@ -89,7 +89,6 @@
 
 .lower {
   display: flex;
-  flex-direction: row;
 }
 .left-side {
   width: 70%;
@@ -113,6 +112,10 @@
 .card {
   margin: 0 2%;
   margin-bottom: 5%;
+}
+.category-heading {
+  color: #000;
+  margin: 15px 10px 25px 0;
 }
 @media (min-width: 300px) and (max-width: 993px) {
   .lower {
@@ -139,6 +142,11 @@
   }
   .card {
     margin: 5% 2%;
+  }
+  .category-heading {
+    color: #000;
+    margin: 10px 5px 20px 0;
+    font-size: 28px;
   }
   .right-side {
     display: none;
