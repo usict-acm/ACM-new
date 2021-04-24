@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
     <title>Events</title>
     <link rel="icon" href="./assets/images/acm1.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,8 +36,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" type="text/css" href="assets/CSS/glider.css">
     <script src="https://kit.fontawesome.com/d459eda8d9.js" crossorigin="anonymous"></script>
 
 </head>
@@ -96,6 +93,7 @@
                     </div>
                 </div>
                 <div class="event-card">
+                    <a href="#modal1" data-toggle="modal">
                     <div class="event-card-inner">
                         <img src="./assets/images/ai-iot.jpeg" class="event-img" alt="Avatar">
                         <div class="event-details">
@@ -103,7 +101,41 @@
                             <p class="event-desc">Event Date/Time</p>
                         </div>
                     </div>
+                    </a>
                 </div>
+                <!-- Modal1 -->
+                <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" style="padding:0" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h4 style="float:left" class="modal-title">Event Name</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <div> 
+                                    <img style="float: left; margin: 10px; margin-left:0px" width="40%" src= "./assets/images/ai-iot.jpeg" alt="Event Image"> 
+                                </div>
+                                
+                                <p style="text-align:justify">
+                                    USICT ACM Student Chapter conducted a Webinar on "Explainable Artificial Intelligence for Internet of Things" by Dr. Utku Kose. He is a Ph.D. from Selcuk University, Turkey in the field of computer engineering. He has more than 100 publications including articles, authored and edited books, proceedings, and reports. He is also one of the series editors of the Biomedical and Robotics Healthcare Series by CRC Press.USICT ACM Student Chapter conducted a Webinar on "Explainable Artificial Intelligence for Internet of Things" by Dr. Utku Kose. He is a Ph.D. from Selcuk University, Turkey in the field of computer engineering. He has more than 100 publications including articles, authored and edited books, proceedings, and reports. He is also one of the series editors of the Biomedical and Robotics Healthcare Series by CRC Press.
+                                </p>
+                            </div>
+                            <div class="modal-buttons-div">
+                                <a href="https://www.youtube.com/watch?v=c97rSMEKXzc" target="_blank"><button class="dateTime-para btn form-input-boxes-manual" style="background-color: #4169E1; color:#fff;">
+                                    Watch Recording</button></a>
+                                <a href="./assets/ACM-USICT-GGSIP_XAI-IoT_Dr.UKose.pdf" target="_blank"><button class="dateTime-para btn form-input-boxes-manual" style="background-color: #4169E1; color:#fff; margin-left:5px;">
+                                Download PPT</button></a>
+                            </div>
+                        </div>
+                        <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                        </div> -->
+                    </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal1 -->
                 <div class="event-card">
                     <div class="event-card-inner">
                         <img src="./assets/images/ai-iot.jpeg" class="event-img" alt="Avatar">

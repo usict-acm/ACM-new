@@ -173,6 +173,10 @@ section {
   margin-top: 3%;
 }
 
+.modal-buttons-div{
+  float:right;
+}
+
 @media (min-width: 300px) and (max-width: 580px) {
   .uheading {
     font-size: 26px;
