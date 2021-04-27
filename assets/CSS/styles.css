@@ -1937,3 +1937,33 @@ align-items: center; */
     margin-left: -40px;
   }
 }
+
+/* *************************Blog Section****************************** */
+
+.img-fluid{
+  border-radius: 3px;
+}
+.pink-text{
+  color: #ec407a;
+}
+.pink-btn{
+  background-color: #ec407a;
+  border-radius: 20px;
+  color: #fff;
+}
+.orange-text{
+  color: #ff7043;
+}
+.orange-btn{
+  background-color: #ff7043;
+  border-radius: 20px;
+  color: #fff;
+}
+.blue-text{
+  color: #33b5e5;
+}
+.blue-btn{
+  background-color: #33b5e5;
+  border-radius: 20px;
+  color: #fff;
+}
