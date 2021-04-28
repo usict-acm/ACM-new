@@ -39,36 +39,7 @@
 
   <link rel="stylesheet" type="text/css" href="./assets/CSS/glider.css">
   <script src="https://kit.fontawesome.com/d459eda8d9.js" crossorigin="anonymous"></script>
-<!-- Font Awesome -->
-<script
-src="https://kit.fontawesome.com/3fd0eea9c6.js"
-crossorigin="anonymous"
-></script>
-<!-- Material Design Bootstrap -->
-<link
-href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
-rel="stylesheet"
-/>
-<!-- JQuery -->
-<script
-type="text/javascript"
-src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-></script>
-<!-- Bootstrap tooltips -->
-<script
-type="text/javascript"
-src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
-></script>
-<!-- Bootstrap core JavaScript -->
-<script
-type="text/javascript"
-src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
-></script>
-<!-- MDB core JavaScript -->
-<script
-type="text/javascript"
-src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
-></script>
+
   <style>
     @media (min-width: 0px) and (max-width: 500px) {
       section {
@@ -477,7 +448,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
 
 <!-- ******************************************Blogs******************************************* -->
 
-  <section>
+  <!-- <section>
     <div class="container">
       <div class="text-center my-5">
         <h2 class="h1-responsive font-weight-bold my-5">Recent posts</h2>
@@ -566,13 +537,21 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
-<!-- <section class="text-center">
+<section class="text-center">
   <div class="container">
+    <h2 class="display-4 font-weight-bold my-3">Recent posts</h2>
+        <p class="text-dark mx-auto mb-5">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </p>
     <div class="row">
-      <div class="col-lg-4 col-md-6 col-12">
+
+      <div class="col-lg-4 col-md-6 col-12 my-3">
         <div class="mb-4">
           <img class="img-fluid" src="./assets/images/blog-img.jpg" alt="Sample image">
           <a>
@@ -580,15 +559,15 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
           </a>
         </div>
         <a href="#!" class="pink-text">
-          <h6 class="fs-1 fw-bold mb-3"><i class="fas fa-map pr-2"></i>Adventure</h6>
+          <h6 class="font-weight-bold mb-3"><i class="fas fa-map pr-2"></i>Adventure</h6>
         </a>
-        <h4 class="fw-bolder mb-3" style="color: black;"><strong>Title of the new article</strong></h4>
-        <p>by <a class="" style="color: black;">Billy Forester</a>, 15/07/2018</p>
-        <p class="">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-          quo minus id quod maxime placeat facere possimus voluptas.</p>
-        <a href="https://www.google.com/"><button class="btn pink-btn">Read More</button></a>
+        <h4 class="font-weight-bold mb-3" style="color: black;"><strong>Title of the new article</strong></h4>
+        <p>by <a class="font-weight-bold" style="color: black;">Billy Forester</a>, 15/07/2018</p>
+        <p id="first-blog"></p>
+        <a href="#"><button class="btn pink-btn">Read More</button></a>
       </div>
-      <div class="col-lg-4 col-md-6 col-12">
+
+      <div class="col-lg-4 col-md-6 col-12 my-3">
         <div class="mb-4">
           <img class="img-fluid" src="./assets/images/blog-img.jpg" alt="Sample image">
           <a>
@@ -596,15 +575,15 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
           </a>
         </div>
         <a href="#!" class="orange-text">
-          <h6 class="fs-1 fw-bold mb-3"><i class="fas fa-map pr-2"></i>Adventure</h6>
+          <h6 class="font-weight-bold mb-3"><i class="fas fa-map pr-2"></i>Adventure</h6>
         </a>
-        <h4 class="fw-bolder mb-3" style="color: black;"><strong>Title of the new article</strong></h4>
-        <p>by <a class="" style="color: black;">Billy Forester</a>, 15/07/2018</p>
-        <p class="">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-          quo minus id quod maxime placeat facere possimus voluptas.</p>
-        <a href="https://www.google.com/"><button class="btn orange-btn">Read More</button></a>
+        <h4 class="font-weight-bold mb-3" style="color: black;"><strong>Title of the new article</strong></h4>
+        <p>by <a class="font-weight-bold" style="color: black;">Billy Forester</a>, 15/07/2018</p>
+        <p id="second-blog"></p>
+        <a href="#"><button class="btn orange-btn">Read More</button></a>
       </div>
-      <div class="col-lg-4 col-md-6 col-12">
+
+      <div class="col-lg-4 col-md-6 col-12 my-3">
         <div class="mb-4">
           <img class="img-fluid" src="./assets/images/blog-img.jpg" alt="Sample image">
           <a>
@@ -612,20 +591,19 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"
           </a>
         </div>
         <a href="#!" class="blue-text">
-          <h6 class="fs-1 fw-bold mb-3"><i class="fas fa-map pr-2"></i>Adventure</h6>
+          <h6 class="font-weight-bold mb-3"><i class="fas fa-map pr-2"></i>Adventure</h6>
         </a>
-        <h4 class="fw-bolder mb-3" style="color: black;"><strong>Title of the new article</strong></h4>
-        <p>by <a class="" style="color: black;">Billy Forester</a>, 15/07/2018</p>
-        <p class="">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-          quo minus id quod maxime placeat facere possimus voluptas.</p>
-        <a href="https://www.google.com/"><button class="btn blue-btn">Read More</button></a>
+        <h4 class="font-weight-bold mb-3" style="color: black;"><strong>Title of the new article</strong></h4>
+        <p>by <a class="font-weight-bold" style="color: black;">Billy Forester</a>, 15/07/2018</p>
+        <p id="third-blog"></p>
+        <a href="#"><button class="btn blue-btn">Read More</button></a>
       </div>
     </div>
   </div>
   
   
 
-</section> -->
+</section>
 
 
   <!--  *******************************************************************EVENTS*********************************************-->
