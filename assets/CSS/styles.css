@@ -212,7 +212,8 @@ section {
 .slider-text {
   color: #fff;
   position: absolute;
-  top: 15%;
+  top: 45%;
+  left: 14%;
   font-weight: bolder;
   font-size: 54px;
   line-height: 59px;
