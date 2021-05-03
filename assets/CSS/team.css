@@ -135,6 +135,7 @@ section {
     font-weight: bold;
     color: #0776ad;
   }
+
   .lheading {
     font-size: 20px;
   }
@@ -639,4 +640,18 @@ section {
 
 .overflow-control {
   font-size: 14px;
+}
+.text-and-logo {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.outstanding-logo {
+  width: 160px;
+}
+@media (min-width: 350px) and (max-width: 1200px) {
+  .footer-info {
+    display: flex;
+    flex-direction: column !important;
+  }
 }
