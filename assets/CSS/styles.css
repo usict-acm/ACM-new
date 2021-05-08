@@ -1942,29 +1942,27 @@ align-items: center; */
 /* *************************Blog Section****************************** */
 
 .img-fluid{
-  border-radius: 3px;
+  border-radius: 12px;
 }
 .pink-text{
   color: #ec407a;
 }
-.pink-btn{
-  background-color: #ec407a;
-  border-radius: 20px;
-  color: #fff;
-}
+
 .orange-text{
   color: #ff7043;
 }
-.orange-btn{
-  background-color: #ff7043;
-  border-radius: 20px;
-  color: #fff;
-}
+
 .blue-text{
-  color: #33b5e5;
+  color: #0eb5f1;
 }
 .blue-btn{
-  background-color: #33b5e5;
+  margin-top: 3.5%;
+  background-color: #8d5024;
   border-radius: 20px;
   color: #fff;
+  transition: filter 1000ms;
+}
+.blue-btn:hover{
+  color: #fff;
+  filter: drop-shadow(0 0 10px rgb(46, 28, 28));
 }
