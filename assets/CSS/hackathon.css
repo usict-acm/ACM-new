@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ruda:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 /* ----------NavBar hackathon page ---------- */
 body {
@@ -113,7 +113,7 @@ html {
 }
 
 .hero-left-div {
-  font-family: "Ruda", sans-serif;
+  font-family: 'Ruda', sans-serif;
   font-style: normal;
   font-weight: bold;
   color: #70ff00;
@@ -281,7 +281,7 @@ html {
   margin-top: 4px;
   margin-bottom: -5px;
   margin-left: -45px;
-  font-family: "Ruda", sans-serif;
+  font-family: 'Ruda', sans-serif;
   line-height: 1.5;
   color: #0297ff;
 }
@@ -291,7 +291,7 @@ html {
 }
 
 .themeHackhathon {
-  font-family: "Ruda", sans-serif;
+  font-family: 'Ruda', sans-serif;
 }
 
 #themeHackhathonHeader {
@@ -326,7 +326,7 @@ html {
 }
 
 .themeBoxContentHeader {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.5rem;
   margin-top: 3px;
   padding: 0.2rem;
@@ -344,7 +344,7 @@ html {
 .themeBoxContentDescription {
   font-size: 0.8rem;
   line-height: 1.3;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   text-align: left;
   margin-top: 0px;
   padding-left: 8px;
@@ -550,7 +550,7 @@ html {
     margin-bottom: -5px;
     margin-left: -25px;
     line-height: 1.4;
-    font-family: "Ruda", sans-serif;
+    font-family: 'Ruda', sans-serif;
     color: #0297ff;
   }
 
@@ -646,7 +646,7 @@ html {
   .waitTextTheme {
     text-align: center;
     margin-left: -35px;
-    font-family: "Ruda", sans-serif;
+    font-family: 'Ruda', sans-serif;
   }
 
   .verticalLineTheme {
@@ -810,7 +810,7 @@ html {
     margin-top: 10px;
     margin-left: -35px;
     line-height: 1.4;
-    font-family: "Ruda", sans-serif;
+    font-family: 'Ruda', sans-serif;
     color: #0297ff;
   }
 
@@ -865,7 +865,7 @@ html {
 /* ---------modal for theme section---------*/
 
 .modal-box {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   cursor: default;
 }
 
@@ -891,7 +891,7 @@ html {
   position: relative;
 }
 .modal-box .modal-dialog .modal-content:before {
-  content: "";
+  content: '';
   background: rgb(158, 139, 139);
   width: 100%;
   height: 110px;
@@ -1079,7 +1079,7 @@ html {
   .prizes {
     margin-top: 100px;
     text-align: center;
-    font-family: "Ruda", sans-serif;
+    font-family: 'Ruda', sans-serif;
   }
 
   .priceImage {
@@ -1120,7 +1120,7 @@ html {
     color: #ff00b8;
     font-size: 2.9rem;
     padding-bottom: 0px;
-    font-family: "Ruda", sans-serif;
+    font-family: 'Ruda', sans-serif;
   }
 
   .otherPerksContentImage {
@@ -1136,7 +1136,7 @@ html {
     text-align: center;
     font-size: 1.35rem;
     line-height: 1.3;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
   }
 
   .prizesDiv {
@@ -1184,7 +1184,7 @@ html {
   .prizes {
     margin-top: 100px;
     text-align: center;
-    font-family: "Ruda", sans-serif;
+    font-family: 'Ruda', sans-serif;
   }
 
   .priceImage {
@@ -1223,7 +1223,7 @@ html {
     color: #ff00b8;
     font-size: 2.9rem;
     padding-bottom: 0px;
-    font-family: "Ruda", sans-serif;
+    font-family: 'Ruda', sans-serif;
   }
 
   .otherPerksContentImage {
@@ -1239,7 +1239,7 @@ html {
     text-align: center;
     font-size: 1.3rem;
     line-height: 1.2;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     padding: 5px;
   }
 
@@ -2117,7 +2117,7 @@ html {
   left: 40px;
   width: 2px;
   margin-left: -1.5px;
-  content: "";
+  content: '';
   background-color: #e9ecef;
 }
 .timeline > li {
@@ -2128,7 +2128,7 @@ html {
 .timeline > li:after,
 .timeline > li:before {
   display: table;
-  content: " ";
+  content: ' ';
 }
 .timeline > li:after {
   clear: both;
@@ -2507,7 +2507,7 @@ span.team-text {
   left: 50px;
   right: 50px;
   bottom: 50px;
-  content: "";
+  content: '';
   z-index: -1;
   opacity: 0.4;
   border: 1px solid #08b439;
@@ -2518,7 +2518,7 @@ span.team-text {
   left: 0;
   right: 0;
   bottom: 0;
-  content: "";
+  content: '';
   opacity: 0.7;
   z-index: -1;
   background: #16181d;
@@ -2526,7 +2526,7 @@ span.team-text {
 .ftco-consultation .half.img .desc h1 a span {
   display: block;
   font-size: 16px;
-  font-family: "MyWebFont";
+  font-family: 'MyWebFont';
 }
 .ftco-consultation .half.img .desc .icon span {
   font-size: 50px;
@@ -2580,7 +2580,9 @@ span.team-text {
 .instagram:hover {
   color: #b530b8;
 }
-
+.github:hover {
+  color: grey;
+}
 .copyright-text {
   padding: 3rem;
   color: white;
@@ -2853,7 +2855,7 @@ body {
   display: block;
   border: 1px solid #ccc;
 }
-.wizard > .content > .body input[type="checkbox"] {
+.wizard > .content > .body input[type='checkbox'] {
   display: inline-block;
 }
 
@@ -3101,7 +3103,7 @@ body {
     font-size: 1.2em;
   }
   .wizard > .steps .number::after {
-    content: "\a";
+    content: '\a';
     white-space: pre;
   }
   .wizard > .steps > ul > li {
@@ -3212,7 +3214,7 @@ body {
     display: block;
     border: 1px solid #ccc;
   }
-  .wizard > .content > .body input[type="checkbox"] {
+  .wizard > .content > .body input[type='checkbox'] {
     display: inline-block;
   }
 
@@ -3437,7 +3439,7 @@ body {
 }
 
 .faq h1 {
-  font-family: "Ruda", sans-serif;
+  font-family: 'Ruda', sans-serif;
   font-size: 2.5rem;
   color: white;
   text-align: center;
@@ -3475,7 +3477,7 @@ body {
 
 .panel-body {
   color: white;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: lighter;
   text-align: justify;
   box-shadow: 2px -3px 11px 0px green;
@@ -3499,7 +3501,7 @@ body {
 }
 
 .sponsorDiv h1 {
-  font-family: "Ruda", sans-serif;
+  font-family: 'Ruda', sans-serif;
   color: #ff00b8;
   margin: 0.5rem;
 }
@@ -3682,10 +3684,9 @@ body {
 }
 
 .bf {
-  background: url("../images/perks/www.jpeg") no-repeat;
+  background: url('../images/perks/www.jpeg') no-repeat;
   background-size: cover;
 }
-
 
 .submission-button {
   background: #000000;
@@ -3699,13 +3700,13 @@ body {
   cursor: pointer;
 }
 
-@media only screen and (max-width:500px) and (min-width: 400px) {
+@media only screen and (max-width: 500px) and (min-width: 400px) {
   .submission-button {
     margin-left: -10px;
   }
 }
 
-@media only screen and (max-width:400px) and (min-width: 375px) {
+@media only screen and (max-width: 400px) and (min-width: 375px) {
   .submission-button {
     margin-left: -20px;
   }
@@ -3714,7 +3715,7 @@ body {
   }
 }
 
-@media only screen and (max-width:374px) {
+@media only screen and (max-width: 374px) {
   .submission-button {
     margin-left: -30px;
   }

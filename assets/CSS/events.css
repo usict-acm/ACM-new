@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+body {
+  color: #5a5a5a;
+  font-family: "Lato", sans-serif;
+  margin-left: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+section {
+  width: 100%;
+  padding: 80px 0;
+}
+
+/* TOP HEADER
+-------------------------------------------------- */
+.navbar.top-bar {
+  border-radius: 0;
+  padding: 16px 0;
+  z-index: 16;
+}
+
+.navbar-toggler {
+  border: 1px solid #fff;
+  color: #000;
+  position: absolute;
+  right: 21px;
+}
+
+.sps {
+  padding: 1em 0.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.25s ease;
+  width: 100%;
+}
+
+.sps--abv {
+  background-color: white;
+  color: #000;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sps--blw {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.top-bar a.navbar-brand {
+  color: #000;
+  font-size: 26px;
+  font-weight: 800;
+  padding: 5px 0 0 10px;
+  text-transform: uppercase;
+}
+
+.sps--blw.top-bar a.navbar-brand {
+  color: #000;
+}
+
+.top-bar a.navbar-brand span {
+  color: #0297ff;
+}
+
+.top-bar .nav-link {
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 18px !important;
+}
+
+.sps--blw.top-bar .nav-link {
+  color: #000;
+}
+
+.top-bar .navbar-nav .nav-item {
+  margin: 0;
+}
+
+.top-bar .nav-link:hover,
+.top-bar .nav-item.active a {
+  color: #000;
+  border-bottom: 2px solid #fff;
+  border-radius: 0;
+}
+
+.sps--blw.top-bar .nav-link:hover,
+.sps--blw.top-bar .nav-item.active a {
+  color: #0297ff;
+  border-bottom: none;
+  border-radius: 0;
+}
+
+.pt-card {
+  padding: 8%;
+  border-radius: 30px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 0 3.5px #0297ff;
+  margin-bottom: -13%;
+}
+.uheading {
+  font-size: 36px;
+  font-weight: bold;
+  color: #0776ad;
+}
+
+.lheading {
+  font-size: 36px;
+}
+
+#event {
+  margin-top: 3%;
+}
+
+.event-card {
+    width: 350px;
+    height: 350px;
+    margin: 3% 1%;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+    perspective: 1000px;
+    border-bottom: 5px solid #0297ff;
+}
+
+.event-card-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+    position: absolute;
+    color: black;
+}
+
+.event-img {
+    width: 100%;
+    height: 60%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.event-details {
+    margin-top: 5%;
+}
+
+.event-title {
+  font-weight: 500;
+}
+
+.event-desc {
+  margin-top: 3%;
+}
+
+.modal-buttons-div{
+  float:right;
+}
+
+@media (min-width: 300px) and (max-width: 580px) {
+  .uheading {
+    font-size: 26px;
+    font-weight: bold;
+    color: #0776ad;
+  }
+  .lheading {
+    font-size: 20px;
+  }
+  .acm-logo-navbar {
+    margin-left: 10px;
+  }
+  .pt-card {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 580px) and (max-width: 780px) {
+  .uheading {
+    font-size: 26px;
+    font-weight: bold;
+    color: #0776ad;
+  }
+  .lheading {
+    font-size: 26px;
+  }
+  .event-card {
+    width: 300px;
+    height: 300px;
+  }
+  .event-title {
+    font-size: 1.4rem;
+  }  
+  .event-desc {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 580px) {
+    .uheading {
+      font-size: 22px;
+      font-weight: bold;
+      color: #0776ad;
+    }
+    .lheading {
+      font-size: 16px;
+    }
+    .acm-logo-navbar {
+      margin-left: 10px;
+    }
+    .pt-card {
+      margin-top: 7%;
+      margin-bottom: -40%;
+    }
+    .collab-main-heading {
+      font-size: 26px;
+    }
+    .card-name {
+      font-size: 20px;
+    }
+    .event-card {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+@media (max-width: 350px) {
+  .event-card {
+    width: 250px;
+    height: 250px;
+  }
+  .event-title {
+    font-size: 1.2rem;
+  }  
+  .event-desc {
+    font-size: 0.8rem;
+  }
+}
