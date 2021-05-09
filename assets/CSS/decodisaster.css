@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 body {
   color: #5a5a5a;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   margin-left: 1px;
 }
 
@@ -14,7 +14,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 ul {
@@ -173,17 +173,23 @@ section {
   margin-top: 1rem;
   font-weight: 600;
   font-size: 36px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .highlight {
   color: #0297ff;
 }
 
-.card-1, .card-2, .card-3, .card-4, .card-5, .card-6, .card-7{
-   margin-top: 15%; 
+.card-1,
+.card-2,
+.card-3,
+.card-4,
+.card-5,
+.card-6,
+.card-7 {
+  margin-top: 15%;
 }
 .card-1 {
-  background: url("../images/DecoDisaster/PDF.svg") no-repeat;
+  background: url('../images/DecoDisaster/PDF.svg') no-repeat;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -194,7 +200,7 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-1:hover {
-  background: url("../images/DecoDisaster/PDF.svg") no-repeat;
+  background: url('../images/DecoDisaster/PDF.svg') no-repeat;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -205,7 +211,7 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-2 {
-  background: url("../images/DecoDisaster/PDF.svg") no-repeat;
+  background: url('../images/DecoDisaster/PDF.svg') no-repeat;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -216,7 +222,7 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-2:hover {
-  background: url("../images/DecoDisaster/PDF.svg") no-repeat;
+  background: url('../images/DecoDisaster/PDF.svg') no-repeat;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -227,7 +233,7 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-3 {
-  background: url("../images/DecoDisaster/PDF.svg") no-repeat;
+  background: url('../images/DecoDisaster/PDF.svg') no-repeat;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -238,7 +244,7 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-3:hover {
-  background: url("../images/DecoDisaster/PDF.svg") no-repeat;
+  background: url('../images/DecoDisaster/PDF.svg') no-repeat;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -249,7 +255,7 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-4 {
-  background: url("../images/DecoDisaster/PDF.svg") no-repeat;
+  background: url('../images/DecoDisaster/PDF.svg') no-repeat;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -260,7 +266,7 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-4:hover {
-  background: url("../images/DecoDisaster/PDF.svg") no-repeat;
+  background: url('../images/DecoDisaster/PDF.svg') no-repeat;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -271,7 +277,7 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-5 {
-  background: url("../images/DecoDisaster/PDF.svg") no-repeat;
+  background: url('../images/DecoDisaster/PDF.svg') no-repeat;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -282,7 +288,7 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-5:hover {
-  background: url("../images/DecoDisaster/PDF.svg") no-repeat;
+  background: url('../images/DecoDisaster/PDF.svg') no-repeat;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -293,8 +299,7 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-6 {
-  background: url("../images/DecoDisaster/PDF.svg")
-    no-repeat;
+  background: url('../images/DecoDisaster/PDF.svg') no-repeat;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -305,7 +310,7 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-6:hover {
-  background: url("../images/DecoDisaster/PDF.svg") no-repeat;
+  background: url('../images/DecoDisaster/PDF.svg') no-repeat;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -316,7 +321,7 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-7 {
-  background: url("../images/DecoDisaster/PDF.svg") no-repeat;
+  background: url('../images/DecoDisaster/PDF.svg') no-repeat;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -327,7 +332,7 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-7:hover {
-  background: url("../images/DecoDisaster/PDF.svg") no-repeat;
+  background: url('../images/DecoDisaster/PDF.svg') no-repeat;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -363,5 +368,19 @@ section {
   .pt-card {
     margin-top: 7%;
     margin-bottom: -40%;
+  }
+}
+.text-and-logo {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.outstanding-logo {
+  width: 160px;
+}
+@media (min-width: 350px) and (max-width: 1200px) {
+  .footer-info {
+    display: flex;
+    flex-direction: column !important;
   }
 }
