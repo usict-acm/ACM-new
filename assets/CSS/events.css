@@ -177,7 +177,6 @@ section {
   float:right;
 }
 
-
 section{
   width: 100%;
   height: 125vh;
@@ -189,13 +188,13 @@ section .leftBox{
   height: 100%;
   float: left;
   padding: 20px;
-  padding-top: 0;
   box-sizing: border-box;
 }
 section .leftBox .content{
+  height: 30%;
   color: #fff;
   background: rgba(0,0,0,.5);
-  padding: 40px;
+  padding: 20px 40px;
   transition: .5s;
 }
 section .leftBox .content:hover
@@ -214,11 +213,11 @@ section .leftBox .content p{
 }
 
 section .leftBox .live-event {
+  height: 70%;
   margin-top: 2%;
   padding: 0px;
   width: 100%;
   text-align: right;
-  height: 25rem;
 }
 
 section .leftBox .live-event .live-event-img {
@@ -226,7 +225,6 @@ section .leftBox .live-event .live-event-img {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  margin: auto;
   width: 100%;
   height: 100%;
 }
@@ -404,7 +402,11 @@ section .events ul li .details a:hover{
       padding: 0px 0px 10px 0px;
       box-sizing: border-box;
   }
-
+  
+  section .leftBox .live-event {
+    height: 20rem;
+  }
+  
   section .events {
     position: relative;
     width: 100%;
@@ -425,6 +427,10 @@ section .events ul li .details a:hover{
       width: 100%;
       padding: 0px 0px 10px 0px;
       box-sizing: border-box;
+  }
+
+  section .leftBox .live-event {
+    height: 20rem;
   }
 
   section .events {
@@ -466,6 +472,10 @@ section .events ul li .time h2 {
       width: 100%;
       padding: 0px 0px 10px 0px;
       box-sizing: border-box;
+  }
+
+  section .leftBox .live-event {
+    height: 20rem;
   }
 
   section .events {
