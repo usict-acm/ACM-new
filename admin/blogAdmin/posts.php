@@ -35,7 +35,21 @@
       return $stmt;
     }
 
-    
+    public function readThree() {
+      // Create query
+      $query = 'SELECT b.Sno, b.Title, b.Author, b.Content, b.Category, b.Event, b.Image, b.Date
+                                FROM ' . $this->table . ' b
+                                ORDER BY Sno Desc LIMIT 3';
+                                
+      
+      // Prepare statement
+      $stmt = $this->conn->prepare($query);
+
+      // Execute query
+      $stmt->execute();
+
+      return $stmt;
+    }
   }
 
   ?>

@@ -14,7 +14,7 @@ include_once './posts.php';
  $post = new Post($db);
 
  // Blog post query
- $result = $post->read();
+ $result = $post->readThree();
  // Get row count
  $num = $result->rowCount();
 
