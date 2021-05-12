@@ -308,7 +308,6 @@ section .events
 section .events ul{
   position: absolute;
   top: 50%;
-  height: inherit;
   overflow: auto;
   transform: translateY(-50%);
   margin:0;
