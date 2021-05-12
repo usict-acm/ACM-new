@@ -231,7 +231,7 @@ section .leftBox .live-event .live-event-img {
 
 .badge {
   display: inline-block;
-  padding: 2px 6px;
+  padding: 10px 20px;
   color: #fff;
   background: #ff334b;
   border-radius: 4px;
@@ -264,7 +264,7 @@ section .leftBox .live-event .live-event-img {
   .badge-text {
   display: -webkit-inline-box;
   display: inline-flex;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 14px;
   }
   
@@ -483,7 +483,7 @@ section .events ul li .time h2 {
     width: 100%;
     height: 140vh;
     margin: 0px 0px 10px 0px;
-    background-image: url(/assets/images/eventsbackground.jfif);
+    background-image: url('../images/eventsbackground.jfif');
     box-sizing: border-box;
 }
 section .events ul {
@@ -613,7 +613,7 @@ section .events ul li .time h2 {
   object-fit: contain;
   margin-right: 20px;
   width: 100%;
-  transition: transform 450ms;
+  /* transition: transform 450ms; */
   border: 3px solid white;
 }
 
@@ -630,6 +630,7 @@ section .events ul li .time h2 {
     width: 100%;
     transition: transform 450ms;
     border: 3px solid white;
+    pointer-events: none;
   }
   .quote-img:hover {
     transform: scale(1.1);
