@@ -40,7 +40,6 @@ include_once './posts.php';
 
      // Push to "data"
      array_push($posts_arr, $post_item);
-     // array_push($posts_arr['data'], $post_item);
    }
 
    // Turn to JSON & output
