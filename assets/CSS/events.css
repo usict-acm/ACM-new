@@ -112,6 +112,15 @@ section {
   border-radius: 0;
 }
 
+.text-and-logo {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.outstanding-logo {
+  width: 160px;
+}
+
 .pt-card {
   padding: 8%;
   border-radius: 30px;
