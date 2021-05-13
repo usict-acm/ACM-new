@@ -1053,6 +1053,7 @@ ul {
 }
 
 .badge {
+  vertical-align: middle;
   display: inline-block;
   padding: 10px 20px;
   color: #fff;
