@@ -33,6 +33,8 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
   <link href='./assets/CSS/styles.css' rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="jquery-3.5.1.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -476,6 +478,99 @@
 
 
   </section>
+
+
+  <script>
+    $(document).ready(function(){
+      $.ajax({
+        url: "./admin/blogAdmin/read_home.php",
+        method: "GET",
+        dataType: "JSON",
+        success: function(data){
+          // for(i=0;i<3;i++){
+            console.log(data)
+            $("#blog1_image").attr("src","admin/blogAdmin/" + data[0].Image);
+            $("#blog1_category").text(data[0].Category);
+            $("#blog1_title").text(data[0].Title);
+            $("#blog1_author").text(data[0].Author);
+            $("#blog1_date").text(data[0].Date);
+
+            $("#blog2_image").attr("src","admin/blogAdmin/" + data[1].Image);
+            $("#blog2_category").text(data[1].Category);
+            $("#blog2_title").text(data[1].Title);
+            $("#blog2_author").text(data[1].Author);
+            $("#blog2_date").text(data[1].Date);
+
+            $("#blog3_image").attr("src","admin/blogAdmin/" + data[2].Image);
+            $("#blog3_category").text(data[2].Category);
+            $("#blog3_title").text(data[2].Title);
+            $("#blog3_author").text(data[2].Author);
+            $("#blog3_date").text(data[2].Date);
+          // }
+        }
+      });
+    });
+  </script>
+
+  <section class="text-center">
+    <div class="container">
+      <h2 class="display-4 font-weight-bold my-3">Recent Blogs</h2>
+      <div class="row">
+  
+        <div class="col-lg-4 col-md-6 col-12 my-3">
+          <div class="mb-4">
+            <img id="blog1_image" class="img-fluid" alt="Sample image">
+            <a>
+              <div class=""></div>
+            </a>
+          </div>
+          <a href="#!" class="pink-text">
+            <h6 class="font-weight-bold mb-3">
+              <i id="blog1_category" class="fas fa-map pr-2"></i>
+            </h6>
+          </a>
+          <h4 id="blog1_title" class="font-weight-bold mb-3" style="color: black;"><strong></strong></h4>
+          <p >by <a id="blog1_author" class="font-weight-bold" style="color: black;"></a>, <p id="blog1_date"></p></p>
+          <p class="d-inline" id="first-blog"></p>
+          <a class="d-inline" style="color: #2250fc;" href="">Read More</a>
+        </div>
+  
+        <div class="col-lg-4 col-md-6 col-12 my-3">
+          <div class="mb-4">
+            <img id="blog2_image" class="img-fluid" src="./assets/images/blog-img.jpg" alt="Sample image">
+            <a>
+              <div class=""></div>
+            </a>
+          </div>
+          <a href="#!" class="orange-text">
+            <h6 class="font-weight-bold mb-3"><i id="blog2_category" class="fas fa-graduation-cap pr-2"></i></h6>
+          </a>
+          <h4 id="blog2_title" class="font-weight-bold mb-3" style="color: black;"><strong></strong></h4>
+          <p >by <a id="blog2_author" class="font-weight-bold" style="color: black;"></a>, <p id="blog2_date"></p></p>
+          <p class="d-inline" id="second-blog"></p>
+          <a class="d-inline" style="color: #2250fc;" href="">Read More</a>
+        </div>
+  
+        <div class="col-lg-4 col-md-6 col-12 my-3">
+          <div class="mb-4">
+            <img id="blog3_image" class="img-fluid" src="./assets/images/blog-img.jpg" alt="Sample image">
+            <a>
+              <div class=""></div>
+            </a>
+          </div>
+          <a href="#!" class="blue-text">
+            <h6 class="font-weight-bold mb-3"><i id="blog3_category" class="fas fa-fire pr-2"></i></h6>
+          </a>
+          <h4 id="blog3_title" class="font-weight-bold mb-3" style="color: black;"><strong></strong></h4>
+          <p >by <a id="blog3_author" class="font-weight-bold" style="color: black;"></a>, <p id="blog3_date"></p></p>
+          <p class="d-inline" id="third-blog"></p>
+          <a class="d-inline" style="color: #2250fc;" href="">Read More</a>
+        </div>
+      </div>
+      <a href="blogs.html" type="button" class="btn blue-btn">More Blogs</a>
+    </div>
+  </section>
+
 
 
 
