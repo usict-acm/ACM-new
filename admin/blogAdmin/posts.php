@@ -25,13 +25,13 @@
       $query = 'SELECT b.Sno, b.Title, b.Author, b.Content, b.Category, b.Event, b.Image, b.Date
                                 FROM ' . $this->table . ' b';
                                 
-      
+      $stmt = $this->conn->query($query);
       // Prepare statement
-      $stmt = $this->conn->prepare($query);
-
+      // $stmt = $this->conn->prepare($query);
+                          
       // Execute query
-      $stmt->execute();
-
+      // $stmt->execute();
+                          
       return $stmt;
     }
 
@@ -39,14 +39,14 @@
       // Create query
       $query = 'SELECT b.Sno, b.Title, b.Author, b.Content, b.Category, b.Event, b.Image, b.Date
                                 FROM ' . $this->table . ' b
-                                ORDER BY Sno Desc LIMIT 3';
+                                ORDER BY Sno DESC LIMIT 3';
                                 
-      
+      $stmt = $this->conn->query($query);
       // Prepare statement
-      $stmt = $this->conn->prepare($query);
+      // $stmt = $this->conn->prepare($query);
 
       // Execute query
-      $stmt->execute();
+      // $stmt->execute();
 
       return $stmt;
     }

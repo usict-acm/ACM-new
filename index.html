@@ -34,7 +34,7 @@
   <link href='./assets/CSS/styles.css' rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="jquery-3.5.1.min.js"></script>
+  <!-- <script src="jquery-3.5.1.min.js"></script> -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -481,9 +481,11 @@
 
 
   <script>
+    let url = "./admin/blogAdmin/api.php/?token=readHome"
+
     $(document).ready(function(){
       $.ajax({
-        url: "./admin/blogAdmin/read_home.php",
+        url: url,
         method: "GET",
         dataType: "JSON",
         success: function(data){
@@ -493,18 +495,21 @@
             $("#blog1_category").text(data[0].Category);
             $("#blog1_title").text(data[0].Title);
             $("#blog1_author").text(data[0].Author);
+            $("#first-blog").text(data[0].Content);
             $("#blog1_date").text(data[0].Date);
 
             $("#blog2_image").attr("src","admin/blogAdmin/" + data[1].Image);
             $("#blog2_category").text(data[1].Category);
             $("#blog2_title").text(data[1].Title);
             $("#blog2_author").text(data[1].Author);
+            $("#second-blog").text(data[1].Content);
             $("#blog2_date").text(data[1].Date);
 
             $("#blog3_image").attr("src","admin/blogAdmin/" + data[2].Image);
             $("#blog3_category").text(data[2].Category);
             $("#blog3_title").text(data[2].Title);
             $("#blog3_author").text(data[2].Author);
+            $("#third-blog").text(data[2].Content);
             $("#blog3_date").text(data[2].Date);
           // }
         }

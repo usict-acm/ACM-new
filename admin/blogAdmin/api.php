@@ -17,31 +17,46 @@
         // Blog post query
         $result = $post->read();
         // Get row count
-        $num = $result->rowCount();
+        // $num = $result->rowCount();
 
         // Check if any posts
-        if($num > 0) {
+        if($result) {
         // Post array
         $posts_arr = array();
 
-
-        while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-            extract($row);
-
+        while($row=$result->fetch_assoc()){
             $post_item = array(
-            'Sno' => $Sno,
-            'Title' => $Title,
-            'Author' => $Author,
-            'Content' => html_entity_decode($Content),
-            'Category' => $Category,
-            'Event' => $Event,
-            'Image' => $Image,
-            'Date' => $Date,
+                'Sno' => $row["Sno"],
+                'Title' => $row["Title"],
+                'Author' => $row["Author"],
+                'Content' => $row["Content"],
+                'Category' => $row["Category"],
+                'Event' => $row["Event"],
+                'Image' => $row["Image"],
+                'Date' => $row["Date"],
             );
-
-            // Push to "data"
-            array_push($posts_arr, $post_item);
+                // Push to "data"
+                array_push($posts_arr, $post_item);
+                // array_push($posts_arr['data'], $post_item);
         }
+
+        // while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+        //     extract($row);
+
+        //     $post_item = array(
+        //     'Sno' => $Sno,
+        //     'Title' => $Title,
+        //     'Author' => $Author,
+        //     'Content' => html_entity_decode($Content),
+        //     'Category' => $Category,
+        //     'Event' => $Event,
+        //     'Image' => $Image,
+        //     'Date' => $Date,
+        //     );
+
+        //     // Push to "data"
+        //     array_push($posts_arr, $post_item);
+        // }
 
         // Turn to JSON & output
         echo json_encode($posts_arr);
@@ -60,38 +75,55 @@
         $database = new Database();
         $db = $database->connect();
 
+        // echo $db;
+
         // Instantiate blog post object
         $post = new Post($db);
 
         // Blog post query
         $result = $post->readThree();
         // Get row count
-        $num = $result->rowCount();
+        // $num = $result->rowCount();
 
         // Check if any posts
-        if($num > 0) {
+        if($result) {
         // Post array
         $posts_arr = array();
 
-
-        while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-            extract($row);
-
+        while($row=$result->fetch_assoc()){
             $post_item = array(
-            'Sno' => $Sno,
-            'Title' => $Title,
-            'Author' => $Author,
-            'Content' => html_entity_decode($Content),
-            'Category' => $Category,
-            'Event' => $Event,
-            'Image' => $Image,
-            'Date' => $Date,
+                'Sno' => $row["Sno"],
+                'Title' => $row["Title"],
+                'Author' => $row["Author"],
+                'Content' => $row["Content"],
+                'Category' => $row["Category"],
+                'Event' => $row["Event"],
+                'Image' => $row["Image"],
+                'Date' => $row["Date"],
             );
-
-            // Push to "data"
-            array_push($posts_arr, $post_item);
-            // array_push($posts_arr['data'], $post_item);
+                // Push to "data"
+                array_push($posts_arr, $post_item);
+                // array_push($posts_arr['data'], $post_item);
         }
+
+        // while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+        //     extract($row);
+
+        //     $post_item = array(
+        //     'Sno' => $Sno,
+        //     'Title' => $Title,
+        //     'Author' => $Author,
+        //     'Content' => html_entity_decode($Content),
+        //     'Category' => $Category,
+        //     'Event' => $Event,
+        //     'Image' => $Image,
+        //     'Date' => $Date,
+        //     );
+
+        //     // Push to "data"
+        //     array_push($posts_arr, $post_item);
+        //     // array_push($posts_arr['data'], $post_item);
+        // }
 
         // Turn to JSON & output
         echo json_encode($posts_arr);
