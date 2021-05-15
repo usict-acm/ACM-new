@@ -15,7 +15,7 @@
 <script>
     $("#button").click(function(){
         console.log($('#inp').val())
-        let url = './lmao.php/?token=' + $('#inp').val()
+        let url = './api.php/?token=' + $('#inp').val()
         // let url = './read_home.php'
         $('#para').load(url)
     
