@@ -45,6 +45,7 @@
     <link href="./assets/CSS/benefits.css" rel="stylesheet" />
     <link href="./assets/CSS/blogs.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap"
       rel="stylesheet"
@@ -200,6 +201,65 @@
     </section>
 
     <section class="container">
+      <script>
+        let url = './admin/blogAdmin/api.php/?token=readAll';
+
+        $(document).ready(function () {
+          $.ajax({
+            url: url,
+            method: 'GET',
+            dataType: 'JSON',
+            success: function (data) {
+              console.log(data);
+              $('#blog1_image').attr('src', 'admin/blogAdmin/' + data[0].Image);
+              $('#blog1_category').text(data[0].Category);
+              $('#blog1_title').text(data[0].Title);
+              $('#blog1_author').text(data[0].Author);
+              var first = data[0].Content;
+              var firstSub = first.substring(0, 70) + '...';
+              $('#first_blog').text(firstSub);
+              $('#blog1_date').text(data[0].Date);
+
+              $('#blog2_image').attr('src', 'admin/blogAdmin/' + data[1].Image);
+              $('#blog2_category').text(data[1].Category);
+              $('#blog2_title').text(data[1].Title);
+              $('#blog2_author').text(data[1].Author);
+              var second = data[1].Content;
+              var secondSub = second.substring(0, 70) + '...';
+              $('#second_blog').text(secondSub);
+              $('#blog2_date').text(data[1].Date);
+
+              $('#blog3_image').attr('src', 'admin/blogAdmin/' + data[2].Image);
+              $('#blog3_category').text(data[2].Category);
+              $('#blog3_title').text(data[2].Title);
+              $('#blog3_author').text(data[2].Author);
+              var third = data[2].Content;
+              var thirdSub = third.substring(0, 70) + '...';
+              $('#third_blog').text(thirdSub);
+              $('#blog3_date').text(data[2].Date);
+
+              $('#blog4_image').attr('src', 'admin/blogAdmin/' + data[3].Image);
+              $('#blog4_category').text(data[3].Category);
+              $('#blog4_title').text(data[3].Title);
+              $('#blog4_author').text(data[3].Author);
+              var fourth = data[3].Content;
+              var fourthSub = fourth.substring(0, 70) + '...';
+              $('#fourth_blog').text(fourthSub);
+              $('#blog3_date').text(data[3].Date);
+
+              $('#blog5_image').attr('src', 'admin/blogAdmin/' + data[4].Image);
+              $('#blog5_category').text(data[4].Category);
+              $('#blog5_title').text(data[4].Title);
+              $('#blog5_author').text(data[4].Author);
+              var fifth = data[4].Content;
+              var fifthSub = fifth.substring(0, 70) + '...';
+              $('#fifth_blog').text(fifthSub);
+              $('#blog5_date').text(data[4].Date);
+              // }
+            },
+          });
+        });
+      </script>
       <h1 class="category-heading">Lorem ipsum dolor</h1>
       <div class="lower">
         <div class="left-side">
@@ -208,14 +268,14 @@
               <a href="blogs.html" style="text-decoration: none; color: #000">
                 <div class="card">
                   <img
+                    id="blog1_image"
                     class="card-img-top"
-                    src="./assets/images/blog-img.jpg"
                     alt="Card image cap"
                   />
                   <div class="card-body">
                     <div class="post-meta">
-                      <span class="category">FOOD</span>
-                      <span class="mx-2 card-span">March 15, 2018 </span>
+                      <span id="blog1_category" class="category"></span>
+                      <span id="blog1_date" class="mx-2 card-span"> </span>
                       <span class="mx-2 card-span card-span-dot"
                         ><i class="fas fa-circle"></i>
                       </span>
@@ -223,9 +283,7 @@
                         ><i class="fas fa-comments"></i
                       ></span>
                     </div>
-                    <p class="card-text">
-                      There’s a Cool New Way for Men to Wear Socks and Sandals
-                    </p>
+                    <p id="first_blog" class="card-text"></p>
                   </div>
                 </div>
               </a>
@@ -234,14 +292,14 @@
               <a href="blogs.html" style="text-decoration: none; color: #000">
                 <div class="card">
                   <img
+                    id="blog2_image"
                     class="card-img-top"
-                    src="./assets/images/blog-img.jpg"
                     alt="Card image cap"
                   />
                   <div class="card-body">
                     <div class="post-meta">
-                      <span class="category">FOOD</span>
-                      <span class="mx-2 card-span">March 15, 2018 </span>
+                      <span id="blog2_category" class="category"></span>
+                      <span id="blog2_date" class="mx-2 card-span"> </span>
                       <span class="mx-2 card-span card-span-dot"
                         ><i class="fas fa-circle"></i>
                       </span>
@@ -249,9 +307,7 @@
                         ><i class="fas fa-comments"></i
                       ></span>
                     </div>
-                    <p class="card-text">
-                      There’s a Cool New Way for Men to Wear Socks and Sandals
-                    </p>
+                    <p id="second_blog" class="card-text"></p>
                   </div>
                 </div>
               </a>
@@ -260,14 +316,14 @@
               <a href="blogs.html" style="text-decoration: none; color: #000">
                 <div class="card">
                   <img
+                    id="blog3_image"
                     class="card-img-top"
-                    src="./assets/images/blog-img.jpg"
                     alt="Card image cap"
                   />
                   <div class="card-body">
                     <div class="post-meta">
-                      <span class="category">FOOD</span>
-                      <span class="mx-2 card-span">March 15, 2018 </span>
+                      <span id="blog3_category" class="category"></span>
+                      <span id="blog3_date" class="mx-2 card-span"> </span>
                       <span class="mx-2 card-span card-span-dot"
                         ><i class="fas fa-circle"></i>
                       </span>
@@ -275,9 +331,7 @@
                         ><i class="fas fa-comments"></i
                       ></span>
                     </div>
-                    <p class="card-text">
-                      There’s a Cool New Way for Men to Wear Socks and Sandals
-                    </p>
+                    <p id="third_blog" class="card-text"></p>
                   </div>
                 </div>
               </a>
@@ -286,14 +340,14 @@
               <a href="blogs.html" style="text-decoration: none; color: #000">
                 <div class="card">
                   <img
+                    id="blog4_image"
                     class="card-img-top"
-                    src="./assets/images/blog-img.jpg"
                     alt="Card image cap"
                   />
                   <div class="card-body">
                     <div class="post-meta">
-                      <span class="category">FOOD</span>
-                      <span class="mx-2 card-span">March 15, 2018 </span>
+                      <span id="blog4_category" class="category"></span>
+                      <span id="blog4_date" class="mx-2 card-span"> </span>
                       <span class="mx-2 card-span card-span-dot"
                         ><i class="fas fa-circle"></i>
                       </span>
@@ -301,9 +355,7 @@
                         ><i class="fas fa-comments"></i
                       ></span>
                     </div>
-                    <p class="card-text">
-                      There’s a Cool New Way for Men to Wear Socks and Sandals
-                    </p>
+                    <p id="fourth_blog" class="card-text"></p>
                   </div>
                 </div>
               </a>
@@ -312,14 +364,14 @@
               <a href="blogs.html" style="text-decoration: none; color: #000">
                 <div class="card">
                   <img
+                    id="blog5_image"
                     class="card-img-top"
-                    src="./assets/images/blog-img.jpg"
                     alt="Card image cap"
                   />
                   <div class="card-body">
                     <div class="post-meta">
-                      <span class="category">FOOD</span>
-                      <span class="mx-2 card-span">March 15, 2018 </span>
+                      <span id="blog5_category" class="category"></span>
+                      <span id="blog5_date" class="mx-2 card-span"> </span>
                       <span class="mx-2 card-span card-span-dot"
                         ><i class="fas fa-circle"></i>
                       </span>
@@ -327,9 +379,7 @@
                         ><i class="fas fa-comments"></i
                       ></span>
                     </div>
-                    <p class="card-text">
-                      There’s a Cool New Way for Men to Wear Socks and Sandals
-                    </p>
+                    <p id="fifth_blog" class="card-text"></p>
                   </div>
                 </div>
               </a>
@@ -477,7 +527,12 @@
                   /></a>
                 </div>
                 <div
-                  class="col-lg-8 col-12 d-flex justify-content-center align-items-center"
+                  class="
+                    col-lg-8 col-12
+                    d-flex
+                    justify-content-center
+                    align-items-center
+                  "
                 >
                   <a href="#about" class="scrollto"
                     ><img
@@ -585,5 +640,8 @@
         <br />
       </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </body>
 </html>
