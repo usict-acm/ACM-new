@@ -136,13 +136,81 @@
         }
     };
 
+    function read_one(){
+        // Instantiate DB & connect
+       $database = new Database();
+       $db = $database->connect();
+       $id = $_GET['id'];
 
+       // echo $db;
+
+       // Instantiate blog post object
+       $post = new Post($db);
+
+       // Blog post query
+       $result = $post->readOne($id);
+       // Get row count
+       // $num = $result->rowCount();
+
+       // Check if any posts
+       if($result) {
+       // Post array
+       $posts_arr = array();
+
+       while($row=$result->fetch_assoc()){
+           $post_item = array(
+               'Sno' => $row["Sno"],
+               'Title' => $row["Title"],
+               'Author' => $row["Author"],
+               'Content' => $row["Content"],
+               'Category' => $row["Category"],
+               'Event' => $row["Event"],
+               'Image' => $row["Image"],
+               'Date' => $row["Date"],
+           );
+               // Push to "data"
+               array_push($posts_arr, $post_item);
+               // array_push($posts_arr['data'], $post_item);
+       }
+
+       // while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+       //     extract($row);
+
+       //     $post_item = array(
+       //     'Sno' => $Sno,
+       //     'Title' => $Title,
+       //     'Author' => $Author,
+       //     'Content' => html_entity_decode($Content),
+       //     'Category' => $Category,
+       //     'Event' => $Event,
+       //     'Image' => $Image,
+       //     'Date' => $Date,
+       //     );
+
+       //     // Push to "data"
+       //     array_push($posts_arr, $post_item);
+       //     // array_push($posts_arr['data'], $post_item);
+       // }
+
+       // Turn to JSON & output
+       echo json_encode($posts_arr);
+
+       } else {
+       // No Posts
+       echo json_encode(
+           array('message' => 'No Posts Found')
+       );
+       }
+   };
     switch ($token) {
         case 'readAll':
             read();
             break;
         case 'readHome':
             read_home();
+            break;
+        case 'readOne':
+            read_one();
             break;
         default:
           echo "Invalid Token";

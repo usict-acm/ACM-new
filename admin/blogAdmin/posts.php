@@ -50,6 +50,16 @@
 
       return $stmt;
     }
+    public function readOne($Sno) {
+      // Create query
+      $query = 'SELECT b.Sno, b.Title, b.Author, b.Content, b.Category, b.Event, b.Image, b.Date
+                                FROM ' . $this->table . ' b
+                                WHERE Sno='.$Sno;
+                                
+      $stmt = $this->conn->query($query);
+
+      return $stmt;
+    }
   }
 
   ?>
