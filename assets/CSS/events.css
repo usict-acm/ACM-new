@@ -189,7 +189,7 @@ section {
 section{
   width: 100%;
   height: 100vh;
-  background-image: url(/assets/images/eventsbackground.jfif);
+  background-image: url(/assets/images/eventsbackground.jpg);
   background-size:cover;
 }
 section .leftBox{
@@ -423,7 +423,7 @@ section .events ul li .details a:hover{
     width: 100%;
     height: 100vh;
     margin: 0px 0px 10px 0px;
-    background-image: url(/assets/images/eventsbackground.jfif);
+    background-image: url(/assets/images/eventsbackground.jpg);
     box-sizing: border-box;
   }
 }
@@ -449,7 +449,7 @@ section .events ul li .details a:hover{
     width: 100%;
     height: 100vh;
     margin: 0px 0px 10px 0px;
-    background-image: url(/assets/images/eventsbackground.jfif);
+    background-image: url(/assets/images/eventsbackground.jpg);
     box-sizing: border-box;
 }
 
@@ -495,7 +495,7 @@ section .events ul li .time h2 {
     width: 100%;
     height: 100vh;
     margin: 30px 0px 0px 100px;
-    background-image: url('../images/eventsbackground.jfif');
+    background-image: url('../images/eventsbackground.jpg');
     box-sizing: border-box;
 }
 section .events ul {
