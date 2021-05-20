@@ -9,7 +9,7 @@
 
       public function connect(){
 
-         $this->server = "localhost:3307";
+         $this->server = "localhost:3306";
          $this->username = "root";
          $this->password = "";
          $this->database = "acmbackend";

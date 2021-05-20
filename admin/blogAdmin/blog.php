@@ -23,7 +23,7 @@ if(isset($_POST['submit'])){
     $fileextstored = array('png','jpg','jpeg');
 
     if(in_array($filecheck,$fileextstored)){
-        $destinationfile = 'upload/'.$filename;
+        $destinationfile = 'upload/blogs/'.$filename;
         move_uploaded_file($filetemppath,$destinationfile);
 
         $sql = "INSERT INTO `blog` (`Title`, `Author`, `Content`, `Category`, `Event`, `Image`, `Date`) VALUES ('$title', '$author', '$content', '$category','$event', '$destinationfile', current_timestamp());";
