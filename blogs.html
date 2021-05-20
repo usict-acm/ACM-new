@@ -134,65 +134,83 @@
     </nav>
 
     <section>
+      <script>
+        let urlThree = './admin/blogAdmin/api.php/?token=readHome';
+
+        $(document).ready(function () {
+          $.ajax({
+            url: urlThree,
+            method: 'GET',
+            dataType: 'JSON',
+            success: function (data) {
+              console.log(data);
+              data.forEach(myfunc);
+
+              function myfunc(row, index) {
+                var image = `admin/blogAdmin/${row.Image}`;
+                $(`#blogHeader${index}_image`).css(
+                  'background-image',
+                  `url(${image})`
+                );
+                $(`#blogHeader${index}_category`).text(row.Category);
+                $(`#blogHeader${index}_title`).text(row.Title);
+                $(`#blogHeader${index}_author`).text(row.Author);
+                var desc = row.Content;
+                var descSub = desc.substring(0, 70) + '...';
+                $(`#blogHeader${index}_content`).text(descSub);
+                $(`#blogHeader${index}_date`).text(row.Date);
+              }
+            },
+          });
+        });
+      </script>
       <div class="container" style="margin-top: 3%">
         <div class="row">
           <div class="col-md-6 col-lg-4">
             <a
+              id="blogHeader0_image"
               href="blog-single.html"
               class="a-block d-flex align-items-center height-md"
-              style="
-                background-image: url('assets/images/blog_ref_img.jpg');
-                background-repeat: no-repeat;
-              "
+              style="background-repeat: no-repeat; background-size: cover"
             >
               <div class="text">
                 <div class="post-meta">
-                  <span class="category">Lifestyle</span>
-                  <span class="mr-2">March 15, 2018 </span>
+                  <span id="blogHeader0_category" class="category"></span>
+                  <span id="blogHeader0_date" class="mr-2"> </span>
                 </div>
-                <h3>
-                  There’s a Cool New Way for Men to Wear Socks and Sandals
-                </h3>
+                <h3 id="blogHeader0_title"></h3>
               </div>
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
             <a
+              id="blogHeader1_image"
               href="blog-single.html"
               class="a-block d-flex align-items-center height-md"
-              style="
-                background-image: url('assets/images/blog_ref_img.jpg');
-                background-repeat: no-repeat;
-              "
+              style="background-repeat: no-repeat; background-size: cover"
             >
               <div class="text">
                 <div class="post-meta">
-                  <span class="category">Travel</span>
-                  <span class="mr-2">March 15, 2018</span>
+                  <span id="blogHeader1_category" class="category"></span>
+                  <span id="blogHeader1_date" class="mr-2"> </span>
                 </div>
-                <h3>
-                  There’s a Cool New Way for Men to Wear Socks and Sandals
-                </h3>
+                <h3 id="blogHeader1_title"></h3>
               </div>
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
             <a
+              id="blogHeader2_image"
               href="blog-single.html"
               class="a-block d-flex align-items-center height-md"
-              style="
-                background-image: url('assets/images/blog_ref_img.jpg');
-                background-repeat: no-repeat;
-              "
+              style="background-repeat: no-repeat; background-size: cover"
             >
               <div class="text">
                 <div class="post-meta">
-                  <span class="category">Food</span>
-                  <span class="mr-2">March 15, 2018 </span>
+                  <span id="blogHeader2_category" class="category"></span>
+                  <span id="blogHeader2_date" class="mr-2"> </span>
                 </div>
-                <h3>
-                  There’s a Cool New Way for Men to Wear Socks and Sandals
-                </h3>
+                <h3 id="blogHeader2_title"></h3>
               </div>
             </a>
           </div>
@@ -211,50 +229,50 @@
             dataType: 'JSON',
             success: function (data) {
               console.log(data);
-              $('#blog1_image').attr('src', 'admin/blogAdmin/' + data[0].Image);
-              $('#blog1_category').text(data[0].Category);
-              $('#blog1_title').text(data[0].Title);
-              $('#blog1_author').text(data[0].Author);
-              var first = data[0].Content;
-              var firstSub = first.substring(0, 70) + '...';
-              $('#first_blog').text(firstSub);
-              $('#blog1_date').text(data[0].Date);
+              data.forEach(myfunc);
 
-              $('#blog2_image').attr('src', 'admin/blogAdmin/' + data[1].Image);
-              $('#blog2_category').text(data[1].Category);
-              $('#blog2_title').text(data[1].Title);
-              $('#blog2_author').text(data[1].Author);
-              var second = data[1].Content;
-              var secondSub = second.substring(0, 70) + '...';
-              $('#second_blog').text(secondSub);
-              $('#blog2_date').text(data[1].Date);
+              function myfunc(row, index) {
+                // console.log(index);
+                $(`#blog${index}_image`).attr(
+                  'src',
+                  'admin/blogAdmin/' + row.Image
+                );
+                $(`#blog${index}_category`).text(row.Category);
+                $(`#blog${index}_title`).text(row.Title);
+                $(`#blog${index}_author`).text(row.Author);
+                var desc = row.Content;
+                var descSub = desc.substring(0, 70) + '...';
+                $(`#blog${index}_content`).text(descSub);
+                $(`#blog${index}_date`).text(row.Date);
+                //     var card = `<div class="col-md-6 col-lg-6 col-12">
+                //   <a href="blogs.html" style="text-decoration: none; color: #000">
+                //     <div class="card">
+                //       <img
+                //         src="admin/blogAdmin/${row.Image}"
+                //         class="card-img-top"
+                //         alt="Card image cap"
+                //       />
+                //       <div class="card-body">
+                //         <div class="post-meta">
+                //           <span class="category">${row.Category}</span>
+                //           <span class="mx-2 card-span">${row.Date} </span>
+                //           <span class="mx-2 card-span card-span-dot"
+                //             ><i class="fas fa-circle"></i>
+                //           </span>
+                //           <span class="mx-2 card-span"
+                //             ><i class="fas fa-comments"></i
+                //           ></span>
+                //         </div>
+                //         <p class="card-text">${row.descSub}</p>
+                //       </div>
+                //     </div>
+                //   </a>
+                // </div>`;
+                //     const ele = document.getElementById('row1');
+                // document.body.appendChild(ele.card);
+                // document.body.appendChild(ele.firstChild);
+              }
 
-              $('#blog3_image').attr('src', 'admin/blogAdmin/' + data[2].Image);
-              $('#blog3_category').text(data[2].Category);
-              $('#blog3_title').text(data[2].Title);
-              $('#blog3_author').text(data[2].Author);
-              var third = data[2].Content;
-              var thirdSub = third.substring(0, 70) + '...';
-              $('#third_blog').text(thirdSub);
-              $('#blog3_date').text(data[2].Date);
-
-              $('#blog4_image').attr('src', 'admin/blogAdmin/' + data[3].Image);
-              $('#blog4_category').text(data[3].Category);
-              $('#blog4_title').text(data[3].Title);
-              $('#blog4_author').text(data[3].Author);
-              var fourth = data[3].Content;
-              var fourthSub = fourth.substring(0, 70) + '...';
-              $('#fourth_blog').text(fourthSub);
-              $('#blog3_date').text(data[3].Date);
-
-              $('#blog5_image').attr('src', 'admin/blogAdmin/' + data[4].Image);
-              $('#blog5_category').text(data[4].Category);
-              $('#blog5_title').text(data[4].Title);
-              $('#blog5_author').text(data[4].Author);
-              var fifth = data[4].Content;
-              var fifthSub = fifth.substring(0, 70) + '...';
-              $('#fifth_blog').text(fifthSub);
-              $('#blog5_date').text(data[4].Date);
               // }
             },
           });
@@ -263,7 +281,31 @@
       <h1 class="category-heading">Lorem ipsum dolor</h1>
       <div class="lower">
         <div class="left-side">
-          <div class="row">
+          <div class="row" id="row1">
+            <div class="col-md-6 col-lg-6 col-12">
+              <a href="blogs.html" style="text-decoration: none; color: #000">
+                <div class="card">
+                  <img
+                    id="blog0_image"
+                    class="card-img-top"
+                    alt="Card image cap"
+                  />
+                  <div class="card-body">
+                    <div class="post-meta">
+                      <span id="blog0_category" class="category"></span>
+                      <span id="blog0_date" class="mx-2 card-span"> </span>
+                      <span class="mx-2 card-span card-span-dot"
+                        ><i class="fas fa-circle"></i>
+                      </span>
+                      <span class="mx-2 card-span"
+                        ><i class="fas fa-comments"></i
+                      ></span>
+                    </div>
+                    <p id="blog0_content" class="card-text"></p>
+                  </div>
+                </div>
+              </a>
+            </div>
             <div class="col-md-6 col-lg-6 col-12">
               <a href="blogs.html" style="text-decoration: none; color: #000">
                 <div class="card">
@@ -283,7 +325,7 @@
                         ><i class="fas fa-comments"></i
                       ></span>
                     </div>
-                    <p id="first_blog" class="card-text"></p>
+                    <p id="blog1_content" class="card-text"></p>
                   </div>
                 </div>
               </a>
@@ -307,7 +349,7 @@
                         ><i class="fas fa-comments"></i
                       ></span>
                     </div>
-                    <p id="second_blog" class="card-text"></p>
+                    <p id="blog2_content" class="card-text"></p>
                   </div>
                 </div>
               </a>
@@ -331,7 +373,7 @@
                         ><i class="fas fa-comments"></i
                       ></span>
                     </div>
-                    <p id="third_blog" class="card-text"></p>
+                    <p id="blog3_content" class="card-text"></p>
                   </div>
                 </div>
               </a>
@@ -355,7 +397,7 @@
                         ><i class="fas fa-comments"></i
                       ></span>
                     </div>
-                    <p id="fourth_blog" class="card-text"></p>
+                    <p id="blog4_content" class="card-text"></p>
                   </div>
                 </div>
               </a>
@@ -379,7 +421,7 @@
                         ><i class="fas fa-comments"></i
                       ></span>
                     </div>
-                    <p id="fifth_blog" class="card-text"></p>
+                    <p id="blog5_content" class="card-text"></p>
                   </div>
                 </div>
               </a>
