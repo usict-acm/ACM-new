@@ -14,8 +14,8 @@
 </body>
 <script>
     $("#button").click(function(){
-        console.log($('#inp').val())
-        let url = './api.php/?token=' + $('#inp').val()
+        // console.log($('#inp').val())
+        let url = './api.php/?q=' + $('#inp').val()
         // let url = './read_home.php'
         $('#para').load(url)
     

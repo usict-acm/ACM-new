@@ -1,10 +1,12 @@
 <?php
     header('Access-Control-Allow-Origin: *');
     header('Content-Type: application/json');
-    $token =  $_GET['token'];
+    // $token =  $_GET['token'];
 
     include_once './database.php';
     include_once './posts.php';
+
+    $method = $_SERVER['REQUEST_METHOD'];
 
     function read(){
          // Instantiate DB & connect
@@ -202,19 +204,99 @@
        );
        }
    };
-    switch ($token) {
-        case 'readAll':
-            read();
+
+   function postblog(){
+    require("./connection.php");
+    if(isset($_POST['submit'])){
+
+
+        $title = $_POST['title'];
+        $author = $_POST['author'];
+        $category = $_POST['category'];
+        $content = $_POST['content'];
+        $event = $_POST['event'];
+        $file = $_FILES['file'];
+    
+        print_r($file);
+    
+        $filename = $file['name'];
+        $fileerror = $file['error'];
+        $filetemppath= $file['tmp_name'];
+    
+        $fileext = explode('.',$filename);
+        $filecheck = strtolower(end($fileext));
+    
+        $fileextstored = array('png','jpg','jpeg');
+    
+        if(in_array($filecheck,$fileextstored)){
+            $destinationfile = 'upload/blogs/'.$filename;
+            move_uploaded_file($filetemppath,$destinationfile);
+    
+            $sql = "INSERT INTO `blog` (`Title`, `Author`, `Content`, `Category`, `Event`, `Image`, `Date`) VALUES ('$title', '$author', '$content', '$category','$event', '$destinationfile', current_timestamp());";
+            if($con->query($sql) == true){
+            echo '<script type="text/javascript">';
+            echo ' alert("Ho Gaya submit, ja aram kar")';
+            echo '</script>';
+        }
+        else{
+            echo "ERROR: $sql <br> $con->error";
+        }
+    
+        }
+    
+        else{
+            echo '<script type="text/javascript">';
+            echo ' alert("Image submit karo sir")';
+            echo '</script>';
+        }
+    }
+   };
+
+
+    switch ($method) {
+        // case 'readAll':
+        //     read();
+        //     break;
+        // case 'readHome':
+        //     read_home();
+        //     break;
+        // case 'readOne':
+        //     read_one();
+        //     break;
+        // default:
+        //   echo "Invalid Token";
+        case 'POST':
+            postblog();
             break;
-        case 'readHome':
-            read_home();
-            break;
-        case 'readOne':
-            read_one();
+        case 'GET':
+            $q = $_GET['q'];
+            switch ($q){
+                case 'readAll':
+                    read();
+                    break;
+                case 'readHome':
+                    read_home();
+                    break;
+                case 'readOne':
+                    read_one();
+                    break;
+                default:
+                  echo "Invalid Query";
+            }
             break;
         default:
-          echo "Invalid Token";
+            echo 'Invalid Request';
+
+            
     }
+
+    // echo debug_backtrace()[1]['function'];
+
+    // echo $method 
+
+    // $dbt=debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS,2);
+    // $caller = isset($dbt[1]['function']) ? $dbt[1]['function'] : null;
+    // echo $caller
 
 ?>
 
