@@ -555,22 +555,28 @@
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+              var blogId = localStorage.getItem("blogId");
+              console.log(blogId);
+      })
+    </script>
   </body>
-  <!-- <script>
-    $('#button').click(function () {
-      console.log($('#inp').val());
-      var url = './api.php/?token=readOne&id=' + $('#inp').val();
-      // let url = './read_home.php'
-      $('#para').load(url);
+  <!-- // <script>
+  //   $('#button').click(function () {
+  //     console.log($('#inp').val());
+  //     var url = './api.php/?token=readOne&id=' + $('#inp').val();
+  //     // let url = './read_home.php'
+  //     $('#para').load(url);
 
-      $.ajax({
-        url: url,
-        method: 'GET',
-        dataType: 'JSON',
-        success: function (data) {
-          console.log(data, 'Idhar dekhle bhai');
-        },
-      });
-    });
-  </script> -->
+  //     $.ajax({
+  //       url: url,
+  //       method: 'GET',
+  //       dataType: 'JSON',
+  //       success: function (data) {
+  //         console.log(data, 'Idhar dekhle bhai');
+  //       },
+  //     });
+  //   });
+  // </script> -->
 </html>
