@@ -223,78 +223,18 @@
         <div class="left-side">
           <div class="singleBlog">
             <img
+              id="blog_image"
               class="card-img-top"
               src="../../assets/images/banner-high.png"
               alt="Card image cap"
             />
             <div class="content">
-              <h1 class="singleBlog-title">Lorem, ipsum dolor.</h1>
-              <p class="singleBlog-content">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Dignissimos saepe repellendus accusantium nostrum tempora dolor
-                laborum, doloremque veritatis. Voluptatem, pariatur eligendi.
-                Praesentium unde odio minus fugit odit debitis voluptatum.
-                Ducimus enim quibusdam eius nostrum nihil mollitia incidunt
-                dolore. Modi temporibus numquam quod molestias aliquam at
-                aliquid nobis, ut accusamus animi amet exercitationem, minus
-                qui. Inventore, accusantium et corrupti laboriosam laborum
-                possimus in, dolore porro voluptates suscipit quidem laudantium
-                commodi sapiente animi tempora autem quibusdam maxime.
-                Exercitationem quia ipsa itaque quasi iste, aperiam atque minima
-                eveniet tempora molestias pariatur cupiditate consequuntur
-                debitis labore esse tenetur ullam sunt velit non quibusdam et
-                ducimus quis. Recusandae, harum quo? Repellendus id sunt fugiat
-                omnis, et quibusdam! Consectetur, vel itaque autem ex, a unde
-                repudiandae commodi aspernatur cum tempore, deleniti rem
-                mollitia voluptate veniam nisi? Animi molestiae cupiditate rerum
-                velit nostrum dicta illum porro, incidunt, vitae in molestias
-                dolorem fugit, provident reprehenderit. Similique illum
-                perspiciatis quisquam porro, non repellat quae iusto? Inventore
-                magni totam explicabo cum aspernatur ullam odit assumenda
-                dolorum voluptatum. Repudiandae, porro! Minus quo consequuntur,
-                sit non natus nemo assumenda quam ducimus earum doloribus nam
-                asperiores temporibus quos eos officia? Nemo reiciendis rerum
-                fugiat quod eveniet autem consequatur soluta delectus ipsum ex
-                ipsa, fugit illum repudiandae non? Quas itaque corrupti, placeat
-                temporibus, blanditiis laudantium exercitationem maxime quasi
-                tempore quisquam dolorum debitis facere incidunt officia, veniam
-                voluptatibus molestiae voluptatem doloremque non vero alias? A
-                quasi dicta excepturi delectus aut at esse eum, laborum maxime,
-                minima inventore similique quas repudiandae architecto nisi
-                consectetur hic explicabo, vitae unde magnam autem! Culpa
-                distinctio eum error ducimus aperiam voluptatum, consequuntur
-                harum assumenda architecto tenetur ipsa, voluptas pariatur ipsam
-                magnam! Numquam doloribus velit repudiandae inventore. Minus
-                dicta praesentium aspernatur fugiat ipsa et culpa iusto vitae, a
-                voluptatibus quae veritatis enim excepturi itaque laudantium
-                dolores numquam. Facilis libero reprehenderit tenetur fugit
-                saepe esse, officia delectus nisi dolorem. Impedit dicta qui
-                repellat fuga pariatur. Culpa incidunt asperiores animi quam
-                quis quia ut recusandae ad eaque illum, eveniet nihil!
-                Repellendus dolorem natus officia nostrum. Dolorem id eos
-                doloribus veniam dolore ipsum tempore itaque velit consectetur
-                suscipit error eius maxime earum, minima, reprehenderit animi
-                debitis perspiciatis dolorum amet consequatur, voluptate fuga
-                repellendus. Animi ex eaque doloremque voluptates delectus
-                voluptatibus, reprehenderit ipsum voluptate corporis quia unde
-                quis eos sequi nihil suscipit voluptatem eius praesentium
-                exercitationem cumque beatae incidunt ea amet ullam nemo?
-                Architecto similique laboriosam, earum sit alias dignissimos
-                voluptate neque incidunt ipsum corrupti, corporis, placeat
-                laborum aliquid id. In nisi neque adipisci incidunt cupiditate
-                ea aliquid voluptates veritatis inventore perspiciatis ipsam
-                maxime quia quisquam error, molestiae similique perferendis
-                deserunt? Quia sit obcaecati voluptatibus sapiente porro dolores
-                rerum hic fugiat libero deleniti nam, incidunt minima,
-                reprehenderit, suscipit asperiores rem ipsam! Explicabo quas
-                autem consequatur dolor esse, fugit architecto saepe aliquam
-                ullam, vitae quisquam aperiam reprehenderit debitis fugiat
-                soluta quae unde expedita. Possimus impedit explicabo neque
-                perspiciatis magnam numquam eos hic eum corrupti a nulla,
-                debitis aliquid! Tenetur accusantium eos voluptatibus! Nemo
-                aperiam rerum recusandae! Ullam illo eaque quod et possimus?
-                Nihil, vero eos. Ex?
-              </p>
+              <div style="display: flex; justify-content: space-between">
+                <h1 id="blog_title" class="singleBlog-title"></h1>
+                <h5 id="blog_date" class=""></h5>
+              </div>
+
+              <p id="blog_content" class="singleBlog-content"></p>
             </div>
           </div>
         </div>
@@ -556,10 +496,28 @@
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function(){
-              var blogId = localStorage.getItem("blogId");
-              console.log(blogId);
-      })
+      document.addEventListener('DOMContentLoaded', function () {
+        var blogId = localStorage.getItem('blogId');
+        console.log(blogId);
+        let url = './api.php/?q=readOne&id=' + blogId;
+
+        $(document).ready(function () {
+          $.ajax({
+            url: url,
+            method: 'GET',
+            dataType: 'JSON',
+            success: function (data) {
+              console.log(data);
+              $('#blog_image').attr('src', data[0].Image);
+              $('#blog_category').text(data[0].Category);
+              $('#blog_title').text(data[0].Title);
+              $('#blog_author').text(data[0].Author);
+              $('#blog_content').text(data[0].Content);
+              $('#blog_date').text(data[0].Date);
+            },
+          });
+        });
+      });
     </script>
   </body>
   <!-- // <script>

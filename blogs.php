@@ -278,6 +278,9 @@
             data.forEach(myfunc);
 
             function myfunc(row, index) {
+              var desc = row.Content;
+              var descSub = desc.substring(0, 70) + "...";
+
 
               posts.innerHTML += "<div class=col-md-6 col-lg-6 col-12>\
                 <div class=card id=" + row.Sno + " onClick = redirec(" + row.Sno + ") >\
@@ -298,7 +301,7 @@
                         ><i class=fas fa-comments></i\
                       ></span>\
                     </div>\
-                    <p id=blog" + index + "_content class=card-text>" + row.Content + "</p>\
+                    <p id=blog" + index + "_content class=card-text>" + descSub + "</p>\
                   </div>\
                 </div>\
             </div>"
