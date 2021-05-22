@@ -219,70 +219,12 @@
     </section>
 
     <section class="container">
-      <script>
-        let url = './admin/blogAdmin/api.php/?q=readAll';
-
-        $(document).ready(function () {
-          $.ajax({
-            url: url,
-            method: 'GET',
-            dataType: 'JSON',
-            success: function (data) {
-              console.log(data);
-              data.forEach(myfunc);
-
-              function myfunc(row, index) {
-                // console.log(index);
-                $(`#blog${index}_image`).attr(
-                  'src',
-                  'admin/blogAdmin/' + row.Image
-                );
-                $(`#blog${index}_category`).text(row.Category);
-                $(`#blog${index}_title`).text(row.Title);
-                $(`#blog${index}_author`).text(row.Author);
-                var desc = row.Content;
-                var descSub = desc.substring(0, 70) + '...';
-                $(`#blog${index}_content`).text(descSub);
-                $(`#blog${index}_date`).text(row.Date);
-                //     var card = `<div class="col-md-6 col-lg-6 col-12">
-                //   <a href="blogs.html" style="text-decoration: none; color: #000">
-                //     <div class="card">
-                //       <img
-                //         src="admin/blogAdmin/${row.Image}"
-                //         class="card-img-top"
-                //         alt="Card image cap"
-                //       />
-                //       <div class="card-body">
-                //         <div class="post-meta">
-                //           <span class="category">${row.Category}</span>
-                //           <span class="mx-2 card-span">${row.Date} </span>
-                //           <span class="mx-2 card-span card-span-dot"
-                //             ><i class="fas fa-circle"></i>
-                //           </span>
-                //           <span class="mx-2 card-span"
-                //             ><i class="fas fa-comments"></i
-                //           ></span>
-                //         </div>
-                //         <p class="card-text">${row.descSub}</p>
-                //       </div>
-                //     </div>
-                //   </a>
-                // </div>`;
-                //     const ele = document.getElementById('row1');
-                // document.body.appendChild(ele.card);
-                // document.body.appendChild(ele.firstChild);
-              }
-
-              // }
-            },
-          });
-        });
-      </script>
+      
       <h1 class="category-heading">Lorem ipsum dolor</h1>
       <div class="lower">
         <div class="left-side">
-          <div class="row" id="row1">
-            <div class="col-md-6 col-lg-6 col-12">
+           <div class="row" id="row1">
+          <!--  <div class="col-md-6 col-lg-6 col-12">
               <a href="blogs.html" style="text-decoration: none; color: #000">
                 <div class="card">
                   <img
@@ -425,8 +367,8 @@
                   </div>
                 </div>
               </a>
-            </div>
-          </div>
+            </div>-->
+          </div> 
         </div>
         <div class="right-side">
           <a href="#">
@@ -544,6 +486,97 @@
         </div> -->
         </div>
       </div>
+
+      <script>
+        let url = './admin/blogAdmin/api.php/?q=readAll';
+        var posts = document.getElementById("row1");
+        posts.innerHTML = "";
+        $(document).ready(function () {
+          $.ajax({
+            url: url,
+            method: 'GET',
+            dataType: 'JSON',
+            success: function (data) {
+              console.log(data);
+              data.forEach(myfunc);
+
+              function myfunc(row, index) {
+              console.log(row);
+               
+
+               posts.innerHTML+= "<div class=col-md-6 col-lg-6 col-12>\
+              <a href=blogs.html style=text-decoration: none; color: #000>\
+                <div class=card id="+index+">\
+                  <img\
+                  src = ./admin/blogAdmin/"+row.Image+"\
+                    id=blog"+index+"_image\
+                    class=card-img-top\
+                    alt=Card image cap\
+                  />\
+                  <div class=card-body>\
+                    <div class=post-meta>\
+                      <span id=blog"+index+"_category class=category>"+row.Category+"</span>\
+                      <span id=blog"+index+"_date class=mx-2 card-span>"+row.Date+"</span>\
+                      <span class=mx-2 card-span card-span-dot\
+                        ><i class=fas fa-circle></i>\
+                      </span>\
+                      <span class=mx-2 card-span\
+                        ><i class=fas fa-comments></i\
+                      ></span>\
+                    </div>\
+                    <p id=blog"+index+"_content class=card-text>"+row.Content+"</p>\
+                  </div>\
+                </div>\
+              </a>\
+            </div>"
+               
+               
+                // console.log(index);
+                // $(`#blog${index}_image`).attr(
+                //   'src',
+                //   'admin/blogAdmin/' + row.Image
+                // );
+                // $(`#blog${index}_category`).text(row.Category);
+                // $(`#blog${index}_title`).text(row.Title);
+                // $(`#blog${index}_author`).text(row.Author);
+                // var desc = row.Content;
+                // var descSub = desc.substring(0, 70) + '...';
+                // $(`#blog${index}_content`).text(descSub);
+                // $(`#blog${index}_date`).text(row.Date);
+                // //     var card = `<div class="col-md-6 col-lg-6 col-12">
+                //   <a href="blogs.html" style="text-decoration: none; color: #000">
+                //     <div class="card">
+                //       <img
+                //         src="admin/blogAdmin/${row.Image}"
+                //         class="card-img-top"
+                //         alt="Card image cap"
+                //       />
+                //       <div class="card-body">
+                //         <div class="post-meta">
+                //           <span class="category">${row.Category}</span>
+                //           <span class="mx-2 card-span">${row.Date} </span>
+                //           <span class="mx-2 card-span card-span-dot"
+                //             ><i class="fas fa-circle"></i>
+                //           </span>
+                //           <span class="mx-2 card-span"
+                //             ><i class="fas fa-comments"></i
+                //           ></span>
+                //         </div>
+                //         <p class="card-text">${row.descSub}</p>
+                //       </div>
+                //     </div>
+                //   </a>
+                // </div>`;
+                //     const ele = document.getElementById('row1');
+                // document.body.appendChild(ele.card);
+                // document.body.appendChild(ele.firstChild);
+              }
+
+              // }
+            },
+          });
+        });
+      </script>
     </section>
 
     <!-- ***********************************************Footer************************************************************************ -->
