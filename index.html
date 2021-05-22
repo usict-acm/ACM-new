@@ -481,7 +481,25 @@
 
 
   <script>
-    let url = "./admin/blogAdmin/api.php/?token=readHome"
+    function readMoreRedirection(id) {
+      console.log(id)
+      localStorage.setItem("blogId", id); //Transferring data
+      window.document.location = "./admin/blogAdmin/singleBlog.html"; //Connecting Second page
+    }
+  </script>
+  
+  <section class="text-center">
+    <div class="container">
+      <h2 class="display-4 font-weight-bold my-3">Recent Blogs</h2>
+      <div class="row" id="threeBlogsRow"></div>
+    </div>    
+  </section>
+
+  <script>
+    var rwBlogs = document.getElementById("threeBlogsRow");
+    rwBlogs.innerHTML = "";
+
+    let url = "./admin/blogAdmin/api.php/?q=readHome"
 
     $(document).ready(function(){
       $.ajax({
@@ -489,96 +507,34 @@
         method: "GET",
         dataType: "JSON",
         success: function(data){
-          // for(i=0;i<3;i++){
-            console.log(data)
-            $("#blog1_image").attr("src","admin/blogAdmin/" + data[0].Image);
-            $("#blog1_category").text(data[0].Category);
-            $("#blog1_title").text(data[0].Title);
-            $("#blog1_author").text(data[0].Author);
-            $("#first-blog").text(data[0].Content);
-            $("#blog1_date").text(data[0].Date);
+            var i;
+            for(i=1;i<4;i++){
+              myFunc(data[i-1],i)
+            }
 
-            $("#blog2_image").attr("src","admin/blogAdmin/" + data[1].Image);
-            $("#blog2_category").text(data[1].Category);
-            $("#blog2_title").text(data[1].Title);
-            $("#blog2_author").text(data[1].Author);
-            $("#second-blog").text(data[1].Content);
-            $("#blog2_date").text(data[1].Date);
-
-            $("#blog3_image").attr("src","admin/blogAdmin/" + data[2].Image);
-            $("#blog3_category").text(data[2].Category);
-            $("#blog3_title").text(data[2].Title);
-            $("#blog3_author").text(data[2].Author);
-            $("#third-blog").text(data[2].Content);
-            $("#blog3_date").text(data[2].Date);
-          // }
+            function myFunc(row,index){
+              var desc = row.Content;
+              var descSub = desc.substring(0, 70) + '...';
+              rwBlogs.innerHTML += 
+              "<div class=col-lg-4 col-md-6 col-12 my-3>\
+                <div class=mb-4>\
+                <img src=./admin/blogAdmin/" + row.Image + " id=blog1_image class=img-fluid alt=Sample image>\
+                </div>\
+                <a href=#! class=pink-text>\
+                  <h6 class=font-weight-bold mb-3>\
+                    <i id=blog1_category class=fas fa-map pr-2>"+ row.Category +"</i>\
+                  </h6>\
+                </a>\
+                <h4 id=blog1_title class=font-weight-bold mb-3 style=color: black;>"+ row.Title +"<strong></strong></h4>\
+                <p >by <a id=blog1_author class=font-weight-bold style=color: black;>"+ row.Author +"</a>, <p id=blog1_date></p></p>\
+                <p class=d-inline id=blog1_content>"+ descSub +"</p>\
+                <a style=color:blue;cursor:pointer onclick=readMoreRedirection("+ row.Sno +") id=readMore_blog1 class=d-inline style=color: #2250fc;>Read More</a>\
+              </div>"   
+            }
         }
       });
     });
   </script>
-
-  <section class="text-center">
-    <div class="container">
-      <h2 class="display-4 font-weight-bold my-3">Recent Blogs</h2>
-      <div class="row">
-  
-        <div class="col-lg-4 col-md-6 col-12 my-3">
-          <div class="mb-4">
-            <img id="blog1_image" class="img-fluid" alt="Sample image">
-            <a>
-              <div class=""></div>
-            </a>
-          </div>
-          <a href="#!" class="pink-text">
-            <h6 class="font-weight-bold mb-3">
-              <i id="blog1_category" class="fas fa-map pr-2"></i>
-            </h6>
-          </a>
-          <h4 id="blog1_title" class="font-weight-bold mb-3" style="color: black;"><strong></strong></h4>
-          <p >by <a id="blog1_author" class="font-weight-bold" style="color: black;"></a>, <p id="blog1_date"></p></p>
-          <p class="d-inline" id="first-blog"></p>
-          <a class="d-inline" style="color: #2250fc;" href="">Read More</a>
-        </div>
-  
-        <div class="col-lg-4 col-md-6 col-12 my-3">
-          <div class="mb-4">
-            <img id="blog2_image" class="img-fluid" src="./assets/images/blog-img.jpg" alt="Sample image">
-            <a>
-              <div class=""></div>
-            </a>
-          </div>
-          <a href="#!" class="orange-text">
-            <h6 class="font-weight-bold mb-3"><i id="blog2_category" class="fas fa-graduation-cap pr-2"></i></h6>
-          </a>
-          <h4 id="blog2_title" class="font-weight-bold mb-3" style="color: black;"><strong></strong></h4>
-          <p >by <a id="blog2_author" class="font-weight-bold" style="color: black;"></a>, <p id="blog2_date"></p></p>
-          <p class="d-inline" id="second-blog"></p>
-          <a class="d-inline" style="color: #2250fc;" href="">Read More</a>
-        </div>
-  
-        <div class="col-lg-4 col-md-6 col-12 my-3">
-          <div class="mb-4">
-            <img id="blog3_image" class="img-fluid" src="./assets/images/blog-img.jpg" alt="Sample image">
-            <a>
-              <div class=""></div>
-            </a>
-          </div>
-          <a href="#!" class="blue-text">
-            <h6 class="font-weight-bold mb-3"><i id="blog3_category" class="fas fa-fire pr-2"></i></h6>
-          </a>
-          <h4 id="blog3_title" class="font-weight-bold mb-3" style="color: black;"><strong></strong></h4>
-          <p >by <a id="blog3_author" class="font-weight-bold" style="color: black;"></a>, <p id="blog3_date"></p></p>
-          <p class="d-inline" id="third-blog"></p>
-          <a class="d-inline" style="color: #2250fc;" href="">Read More</a>
-        </div>
-      </div>
-      <a href="blogs.html" type="button" class="btn blue-btn">More Blogs</a>
-    </div>
-  </section>
-
-
-
-
 
   <!--  *******************************************************************EVENTS*********************************************-->
 

@@ -1,7 +1,6 @@
 <?php
     header('Access-Control-Allow-Origin: *');
     header('Content-Type: application/json');
-    // $token =  $_GET['token'];
 
     include_once './database.php';
     include_once './posts.php';
@@ -18,8 +17,6 @@
 
         // Blog post query
         $result = $post->read();
-        // Get row count
-        // $num = $result->rowCount();
 
         // Check if any posts
         if($result) {
@@ -39,26 +36,7 @@
             );
                 // Push to "data"
                 array_push($posts_arr, $post_item);
-                // array_push($posts_arr['data'], $post_item);
         }
-
-        // while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-        //     extract($row);
-
-        //     $post_item = array(
-        //     'Sno' => $Sno,
-        //     'Title' => $Title,
-        //     'Author' => $Author,
-        //     'Content' => html_entity_decode($Content),
-        //     'Category' => $Category,
-        //     'Event' => $Event,
-        //     'Image' => $Image,
-        //     'Date' => $Date,
-        //     );
-
-        //     // Push to "data"
-        //     array_push($posts_arr, $post_item);
-        // }
 
         // Turn to JSON & output
         echo json_encode($posts_arr);
@@ -77,15 +55,11 @@
         $database = new Database();
         $db = $database->connect();
 
-        // echo $db;
-
         // Instantiate blog post object
         $post = new Post($db);
 
         // Blog post query
         $result = $post->readThree();
-        // Get row count
-        // $num = $result->rowCount();
 
         // Check if any posts
         if($result) {
@@ -105,27 +79,7 @@
             );
                 // Push to "data"
                 array_push($posts_arr, $post_item);
-                // array_push($posts_arr['data'], $post_item);
         }
-
-        // while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-        //     extract($row);
-
-        //     $post_item = array(
-        //     'Sno' => $Sno,
-        //     'Title' => $Title,
-        //     'Author' => $Author,
-        //     'Content' => html_entity_decode($Content),
-        //     'Category' => $Category,
-        //     'Event' => $Event,
-        //     'Image' => $Image,
-        //     'Date' => $Date,
-        //     );
-
-        //     // Push to "data"
-        //     array_push($posts_arr, $post_item);
-        //     // array_push($posts_arr['data'], $post_item);
-        // }
 
         // Turn to JSON & output
         echo json_encode($posts_arr);
@@ -151,8 +105,6 @@
 
        // Blog post query
        $result = $post->readOne($id);
-       // Get row count
-       // $num = $result->rowCount();
 
        // Check if any posts
        if($result) {
@@ -172,27 +124,7 @@
            );
                // Push to "data"
                array_push($posts_arr, $post_item);
-               // array_push($posts_arr['data'], $post_item);
        }
-
-       // while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-       //     extract($row);
-
-       //     $post_item = array(
-       //     'Sno' => $Sno,
-       //     'Title' => $Title,
-       //     'Author' => $Author,
-       //     'Content' => html_entity_decode($Content),
-       //     'Category' => $Category,
-       //     'Event' => $Event,
-       //     'Image' => $Image,
-       //     'Date' => $Date,
-       //     );
-
-       //     // Push to "data"
-       //     array_push($posts_arr, $post_item);
-       //     // array_push($posts_arr['data'], $post_item);
-       // }
 
        // Turn to JSON & output
        echo json_encode($posts_arr);
@@ -208,8 +140,6 @@
    function postblog(){
     require("./connection.php");
     if(isset($_POST['submit'])){
-
-
         $title = $_POST['title'];
         $author = $_POST['author'];
         $category = $_POST['category'];
@@ -252,19 +182,7 @@
     }
    };
 
-
     switch ($method) {
-        // case 'readAll':
-        //     read();
-        //     break;
-        // case 'readHome':
-        //     read_home();
-        //     break;
-        // case 'readOne':
-        //     read_one();
-        //     break;
-        // default:
-        //   echo "Invalid Token";
         case 'POST':
             postblog();
             break;
@@ -285,19 +203,8 @@
             }
             break;
         default:
-            echo 'Invalid Request';
-
-            
+            echo 'Invalid Request';       
     }
-
-    // echo debug_backtrace()[1]['function'];
-
-    // echo $method 
-
-    // $dbt=debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS,2);
-    // $caller = isset($dbt[1]['function']) ? $dbt[1]['function'] : null;
-    // echo $caller
-
 ?>
 
 

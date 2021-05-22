@@ -1,21 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog entry</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Enter the blog details</h1>
-    <form action="api.php/?q=postblog" method="POST" enctype="multipart/form-data">
-            <input type="text" name="title" id="title" placeholder="Enter the title of the blog">
-            <input type="text" name="author" id="age" placeholder="Who wrote the blog">
-            <input type="text" name="category" id="category" placeholder="Enter Category of blog">
-            <textarea name="content" id="content" rows="10" placeholder="Enter the blog"></textarea>
-            <input type="text" name="event" id="event" placeholder="Enter event, if any">
-            <input type="file" name="file" id="file">
-            <input type="submit" name="submit" value="submit">
-        </form>
-</body>
+    <form
+      action="api.php/?q=postblog"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <input
+        type="text"
+        name="title"
+        id="title"
+        placeholder="Enter the title of the blog"
+      />
+      <input
+        type="text"
+        name="author"
+        id="age"
+        placeholder="Who wrote the blog"
+      />
+      <input
+        type="text"
+        name="category"
+        id="category"
+        placeholder="Enter Category of blog"
+      />
+      <textarea
+        name="content"
+        id="content"
+        rows="10"
+        placeholder="Enter the blog"
+      ></textarea>
+      <input
+        type="text"
+        name="event"
+        id="event"
+        placeholder="Enter event, if any"
+      />
+      <input type="file" name="file" id="file" />
+      <input type="submit" name="submit" value="submit" />
+    </form>
+  </body>
 </html>
