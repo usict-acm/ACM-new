@@ -303,7 +303,7 @@ section .leftBox .live-event {
   
   .live-carousel-img {
     width: 50%;
-    height: 20.2rem;
+    height: 100%;
   }
 
 
@@ -323,6 +323,7 @@ section .events ul{
   position: absolute;
   top: 7%;
   overflow: auto;
+  width: 96%;
   /* transform: translateY(-50%); */
   margin:0;
   padding: 0px;
