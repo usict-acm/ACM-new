@@ -294,16 +294,20 @@ section .leftBox .live-event {
   }
 
   #demo {
-    margin-top: -5%;
+    margin-top: -10%;
   }
   
+.carousel-item {
+  margin-top: 5%;
+}
+
   .carousel-inner {
     text-align: center;
   }
   
   .live-carousel-img {
     width: 50%;
-    height: 100%;
+    height: 50vh;
   }
 
 
