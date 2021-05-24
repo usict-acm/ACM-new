@@ -77,39 +77,10 @@
   </nav>
 
   <section>
-    <script>
-      let urlThree = './admin/blogAdmin/api.php/?q=readHome';
-
-      $(document).ready(function() {
-        $.ajax({
-          url: urlThree,
-          method: 'GET',
-          dataType: 'JSON',
-          success: function(data) {
-            console.log(data);
-            data.forEach(myfunc);
-
-            function myfunc(row, index) {
-              var image = `admin/blogAdmin/${row.Image}`;
-              $(`#blogHeader${index}_image`).css(
-                'background-image',
-                `url(${image})`
-              );
-              $(`#blogHeader${index}_category`).text(row.Category);
-              $(`#blogHeader${index}_title`).text(row.Title);
-              $(`#blogHeader${index}_author`).text(row.Author);
-              var desc = row.Content;
-              var descSub = desc.substring(0, 70) + '...';
-              $(`#blogHeader${index}_content`).text(descSub);
-              $(`#blogHeader${index}_date`).text(row.Date);
-            }
-          },
-        });
-      });
-    </script>
+    
     <div class="container" style="margin-top: 3%">
-      <div class="row">
-        <div class="col-md-6 col-lg-4">
+      <div class="row" id="row2">
+        <!-- <div class="col-md-6 col-lg-4">
           <a id="blogHeader0_image" href="blog-single.html" class="a-block d-flex align-items-center height-md" style="background-repeat: no-repeat; background-size: cover">
             <div class="text">
               <div class="post-meta">
@@ -141,10 +112,54 @@
               <h3 id="blogHeader2_title"></h3>
             </div>
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
+  <script>
+      let urlThree = './admin/blogAdmin/api.php/?q=readHome';
+      var threePosts = document.getElementById("row2");
+      threePosts.innerHTML = "";
+      $(document).ready(function() {
+        $.ajax({
+          url: urlThree,
+          method: 'GET',
+          dataType: 'JSON',
+          success: function(data) {
+            console.log(data);
+            data.forEach(myThreeBlogs);
+
+            function myThreeBlogs(row, index) {
+
+              threePosts.innerHTML += "<div class=col-md-4 col-lg-4>\
+                <div id=" + row.Sno + "onClick = redirectThree(" + row.Sno + ") class=a-block d-flex align-items-center height-md style= background-image :url('./admin/blogAdmin/" + row.Image +"'); background-repeat: no-repeat; background-size: cover;>\
+                  <div class=text>\
+                    <div class=post-meta>\
+                      <span id=blogHeader" + index + "_category class=category>" + row.Category + "</span>\
+                      <span id=blogHeader" + index + "_date class=mr-2>" + row.Date + " </span>\
+                    </div>\
+                    <h3 id=blogHeader" + index + "_title>" + row.Title + "</h3>\
+                  </div>\
+                </div>\
+              </div>"
+            }
+            //   var image = `admin/blogAdmin/${row.Image}`;
+            //   $(`#blogHeader${index}_image`).css(
+            //     'background-image',
+            //     `url(${image})`
+            //   );
+            //   $(`#blogHeader${index}_category`).text(row.Category);
+            //   $(`#blogHeader${index}_title`).text(row.Title);
+            //   $(`#blogHeader${index}_author`).text(row.Author);
+            //   var desc = row.Content;
+            //   var descSub = desc.substring(0, 70) + '...';
+            //   $(`#blogHeader${index}_content`).text(descSub);
+            //   $(`#blogHeader${index}_date`).text(row.Date);
+            // }
+          }
+        });
+      });
+    </script>
 
   <section class="container">
 
@@ -422,6 +437,11 @@
 
   <script>
     function redirec(id) {
+      localStorage.setItem("blogId", id); //Transferring data
+      window.document.location = "./admin/blogAdmin/singleBlog.html"; //Connecting Second page
+
+    }
+    function redirectThree(id) {
       localStorage.setItem("blogId", id); //Transferring data
       window.document.location = "./admin/blogAdmin/singleBlog.html"; //Connecting Second page
 
