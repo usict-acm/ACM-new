@@ -1,31 +1,37 @@
-<?php 
+<?php
 
-  class Database{
-    private $server;
-      private $username;
-      private $password;
-      private $database;
-      // private $port;
+class Database
+{
+  private $server;
+  private $username;
+  private $password;
+  private $database;
+  // private $port;
 
-      public function connect(){
+  public function connect()
+  {
 
-         $this->server = "localhost:3307";
-         $this->username = "root";
-         $this->password = "";
-         $this->database = "acmbackend";
-        //  $this->port = "3307";
+    $this->server = "localhost";
+    $this->username = "root";
+    $this->password = "";
+    $this->database = "acmbackend";
+    //  $this->port = "3307";
 
-         $conn = new mysqli($this->server,$this->username,$this->password,
-                  $this->database);
+    $conn = new mysqli(
+      $this->server,
+      $this->username,
+      $this->password,
+      $this->database
+    );
 
-        //  $conn = new mysqli($this->server,$this->username,$this->password,
-        //           $this->database,$this->port);
-                  
+    //  $conn = new mysqli($this->server,$this->username,$this->password,
+    //           $this->database,$this->port);
 
-        //  echo $conn;
-         return $conn;
-      }
+
+    //  echo $conn;
+    return $conn;
   }
+}
 
 
   // class Database {

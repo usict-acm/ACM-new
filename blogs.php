@@ -77,62 +77,29 @@
   </nav>
 
   <section>
-    
+
     <div class="container" style="margin-top: 3%">
       <div class="row" id="row2">
-        <!-- <div class="col-md-6 col-lg-4">
-          <a id="blogHeader0_image" href="blog-single.html" class="a-block d-flex align-items-center height-md" style="background-repeat: no-repeat; background-size: cover">
-            <div class="text">
-              <div class="post-meta">
-                <span id="blogHeader0_category" class="category"></span>
-                <span id="blogHeader0_date" class="mr-2"> </span>
-              </div>
-              <h3 id="blogHeader0_title"></h3>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a id="blogHeader1_image" href="blog-single.html" class="a-block d-flex align-items-center height-md" style="background-repeat: no-repeat; background-size: cover">
-            <div class="text">
-              <div class="post-meta">
-                <span id="blogHeader1_category" class="category"></span>
-                <span id="blogHeader1_date" class="mr-2"> </span>
-              </div>
-              <h3 id="blogHeader1_title"></h3>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a id="blogHeader2_image" href="blog-single.html" class="a-block d-flex align-items-center height-md" style="background-repeat: no-repeat; background-size: cover">
-            <div class="text">
-              <div class="post-meta">
-                <span id="blogHeader2_category" class="category"></span>
-                <span id="blogHeader2_date" class="mr-2"> </span>
-              </div>
-              <h3 id="blogHeader2_title"></h3>
-            </div>
-          </a>
-        </div> -->
       </div>
     </div>
   </section>
   <script>
-      let urlThree = './admin/blogAdmin/api.php/?q=readHome';
-      var threePosts = document.getElementById("row2");
-      threePosts.innerHTML = "";
-      $(document).ready(function() {
-        $.ajax({
-          url: urlThree,
-          method: 'GET',
-          dataType: 'JSON',
-          success: function(data) {
-            console.log(data);
-            data.forEach(myThreeBlogs);
+    let urlThree = './admin/blogAdmin/api.php/?q=readHome';
+    var threePosts = document.getElementById("row2");
+    threePosts.innerHTML = "";
+    $(document).ready(function() {
+      $.ajax({
+        url: urlThree,
+        method: 'GET',
+        dataType: 'JSON',
+        success: function(data) {
+          console.log(data);
+          data.forEach(myThreeBlogs);
 
-            function myThreeBlogs(row, index) {
+          function myThreeBlogs(row, index) {
 
-              threePosts.innerHTML += "<div class=col-md-4 col-lg-4>\
-                <div id=" + row.Sno + "_image onClick = redirectThree(" + row.Sno + ") class=a-block d-flex align-items-center height-md style= background-image :url('./admin/blogAdmin/" + row.Image +"'); background-repeat: no-repeat; background-size: cover;>\
+            threePosts.innerHTML += "<div class=col-md-4 col-lg-4>\
+                <div id=" + row.Sno + "_image onClick = redirectThree(" + row.Sno + ") class=a-block d-flex align-items-center height-md" + " style= background-repeat: no-repeat; background-size: cover;>\
                   <div class=text>\
                     <div class=post-meta>\
                       <span id=blogHeader" + index + "_category class=category>" + row.Category + "</span>\
@@ -141,25 +108,15 @@
                     <h3 id=blogHeader" + index + "_title>" + row.Title + "</h3>\
                   </div>\
                 </div>\
-              </div>"
-            }
-            //   var image = `admin/blogAdmin/${row.Image}`;
-            //   $(`#blogHeader${index}_image`).css(
-            //     'background-image',
-            //     `url(${image})`
-            //   );
-            //   $(`#blogHeader${index}_category`).text(row.Category);
-            //   $(`#blogHeader${index}_title`).text(row.Title);
-            //   $(`#blogHeader${index}_author`).text(row.Author);
-            //   var desc = row.Content;
-            //   var descSub = desc.substring(0, 70) + '...';
-            //   $(`#blogHeader${index}_content`).text(descSub);
-            //   $(`#blogHeader${index}_date`).text(row.Date);
-            // }
+              </div>";
+
+
+            document.getElementById(row.Sno + "_image").style.backgroundImage = "url(./admin/blogAdmin/" + row.Image + ")"
           }
-        });
+        }
       });
-    </script>
+    });
+  </script>
 
   <section class="container">
 
@@ -233,66 +190,66 @@
         <hr style="width: 100%; text-align: centre" />
 
         <div id="row3"></div>
-        
+
         <script>
-      let categoryUrl = './admin/blogAdmin/api.php/?q=readAll';
-      var categories = document.getElementById("row3");
-      categories.innerHTML = "";
-      $(document).ready(function() {
-        $.ajax({
-          url: categoryUrl,
-          method: 'GET',
-          dataType: 'JSON',
-          success: function(data) {
-            console.log(data);
-            var categoryArray = [];
-            data.forEach((result) => {
-              var cat = result.Category;
-              categoryArray.push(cat);
-            })
-            console.log(categoryArray);
+          let categoryUrl = './admin/blogAdmin/api.php/?q=readAll';
+          var categories = document.getElementById("row3");
+          categories.innerHTML = "";
+          $(document).ready(function() {
+            $.ajax({
+              url: categoryUrl,
+              method: 'GET',
+              dataType: 'JSON',
+              success: function(data) {
+                console.log(data);
+                var categoryArray = [];
+                data.forEach((result) => {
+                  var cat = result.Category;
+                  categoryArray.push(cat);
+                })
+                console.log(categoryArray);
 
-            function foo(arr) {
-              var distinctCategory = [],
-                categoryCount = [],
-                prev;
+                function foo(arr) {
+                  var distinctCategory = [],
+                    categoryCount = [],
+                    prev;
 
-              categoryArray.sort();
-              for (var i = 0; i < categoryArray.length; i++) {
-                if (categoryArray[i] !== prev) {
-                  distinctCategory.push(categoryArray[i]);
-                  categoryCount.push(1);
-                } else {
-                  categoryCount[categoryCount.length - 1]++;
+                  categoryArray.sort();
+                  for (var i = 0; i < categoryArray.length; i++) {
+                    if (categoryArray[i] !== prev) {
+                      distinctCategory.push(categoryArray[i]);
+                      categoryCount.push(1);
+                    } else {
+                      categoryCount[categoryCount.length - 1]++;
+                    }
+                    prev = categoryArray[i];
+                  }
+
+                  return [distinctCategory, categoryCount];
                 }
-                prev = categoryArray[i];
-              }
 
-              return [distinctCategory, categoryCount];
-            }
+                var result = foo(categoryArray);
+                var finalcategoryArray = result[0];
+                console.log(finalcategoryArray);
+                var finalCountArray = result[1];
+                console.log(finalCountArray);
+                console.log('[' + result[0] + ']', '[' + result[1] + ']');
 
-            var result = foo(categoryArray);
-            var finalcategoryArray = result[0];
-            console.log(finalcategoryArray);
-            var finalCountArray = result[1];
-            console.log(finalCountArray);
-            console.log('[' + result[0] + ']','[' + result[1] + ']');
-
-            finalcategoryArray.forEach((c, index) => {
-              const n = finalCountArray[index];
-              console.log(c, n);
-              categories.innerHTML += "<div class= row categories>\
-               <div class= col-6 categoryLeft ><a href= # >"+ c +"</a></div>\
-               <div class= col-6 categoryRight >("+ n +")</div>\
+                finalcategoryArray.forEach((c, index) => {
+                  const n = finalCountArray[index];
+                  console.log(c, n);
+                  categories.innerHTML += "<div class= row categories>\
+               <div class= col-6 categoryLeft ><a href= # >" + c + "</a></div>\
+               <div class= col-6 categoryRight >(" + n + ")</div>\
                </div> \
                <hr style= width: 100%; text-align: centre />"
+                });
+              },
             });
-          },
-        });
 
-      });
-    </script>
-        <div class="row tags">
+          });
+        </script>
+        <!-- <div class="row tags">
           <div class="col">
             <h4>Tags</h4>
           </div>
@@ -323,27 +280,27 @@
           <p class="tag">Web</p>
         </a>
       </div>
-    </div>
+    </div> -->
 
-    <script>
-      let url = './admin/blogAdmin/api.php/?q=readAll';
-      var posts = document.getElementById("row1");
-      posts.innerHTML = "";
-      $(document).ready(function() {
-        $.ajax({
-          url: url,
-          method: 'GET',
-          dataType: 'JSON',
-          success: function(data) {
-            console.log(data);
-            data.forEach(myfunc);
+        <script>
+          let url = './admin/blogAdmin/api.php/?q=readAll';
+          var posts = document.getElementById("row1");
+          posts.innerHTML = "";
+          $(document).ready(function() {
+            $.ajax({
+              url: url,
+              method: 'GET',
+              dataType: 'JSON',
+              success: function(data) {
+                console.log(data);
+                data.forEach(myfunc);
 
-            function myfunc(row, index) {
-              var desc = row.Content;
-              var descSub = desc.substring(0, 70) + "...";
+                function myfunc(row, index) {
+                  var desc = row.Content;
+                  var descSub = desc.substring(0, 70) + "...";
 
 
-              posts.innerHTML += "<div class=col-md-6 col-lg-6 col-12>\
+                  posts.innerHTML += "<div class=col-md-6 col-lg-6 col-12>\
                 <div class=card id=" + row.Sno + " onClick = redirec(" + row.Sno + ") >\
                   <img\
                   src = ./admin/blogAdmin/" + row.Image + "\
@@ -368,12 +325,12 @@
             </div>"
 
 
-            }
-          },
-        });
+                }
+              },
+            });
 
-      });
-    </script>
+          });
+        </script>
   </section>
 
   <!-- ***********************************************Footer************************************************************************ -->
@@ -487,6 +444,7 @@
       window.document.location = "./admin/blogAdmin/singleBlog.html"; //Connecting Second page
 
     }
+
     function redirectThree(id) {
       localStorage.setItem("blogId", id); //Transferring data
       window.document.location = "./admin/blogAdmin/singleBlog.html"; //Connecting Second page
