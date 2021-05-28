@@ -132,7 +132,7 @@
             function myThreeBlogs(row, index) {
 
               threePosts.innerHTML += "<div class=col-md-4 col-lg-4>\
-                <div id=" + row.Sno + "onClick = redirectThree(" + row.Sno + ") class=a-block d-flex align-items-center height-md style= background-image :url('./admin/blogAdmin/" + row.Image +"'); background-repeat: no-repeat; background-size: cover;>\
+                <div id=" + row.Sno + "_image onClick = redirectThree(" + row.Sno + ") class=a-block d-flex align-items-center height-md style= background-image :url('./admin/blogAdmin/" + row.Image +"'); background-repeat: no-repeat; background-size: cover;>\
                   <div class=text>\
                     <div class=post-meta>\
                       <span id=blogHeader" + index + "_category class=category>" + row.Category + "</span>\
@@ -231,21 +231,67 @@
           </div>
         </div>
         <hr style="width: 100%; text-align: centre" />
-        <div class="row categories">
-          <div class="col-6 categoryLeft"><a href="#">React</a></div>
-          <div class="col-6 categoryRight">(12)</div>
-        </div>
-        <hr style="width: 100%; text-align: centre" />
-        <div class="row categories">
-          <div class="col-6 categoryLeft"><a href="#">Competitive</a></div>
-          <div class="col-6 categoryRight">(12)</div>
-        </div>
-        <hr style="width: 100%; text-align: centre" />
-        <div class="row categories">
-          <div class="col-6 categoryLeft"><a href="#">App Dev</a></div>
-          <div class="col-6 categoryRight">(12)</div>
-        </div>
-        <hr style="width: 100%; text-align: centre" />
+
+        <div id="row3"></div>
+        
+        <script>
+      let categoryUrl = './admin/blogAdmin/api.php/?q=readAll';
+      var categories = document.getElementById("row3");
+      categories.innerHTML = "";
+      $(document).ready(function() {
+        $.ajax({
+          url: categoryUrl,
+          method: 'GET',
+          dataType: 'JSON',
+          success: function(data) {
+            console.log(data);
+            var categoryArray = [];
+            data.forEach((result) => {
+              var cat = result.Category;
+              categoryArray.push(cat);
+            })
+            console.log(categoryArray);
+
+            function foo(arr) {
+              var distinctCategory = [],
+                categoryCount = [],
+                prev;
+
+              categoryArray.sort();
+              for (var i = 0; i < categoryArray.length; i++) {
+                if (categoryArray[i] !== prev) {
+                  distinctCategory.push(categoryArray[i]);
+                  categoryCount.push(1);
+                } else {
+                  categoryCount[categoryCount.length - 1]++;
+                }
+                prev = categoryArray[i];
+              }
+
+              return [distinctCategory, categoryCount];
+            }
+
+            var result = foo(categoryArray);
+            var finalcategoryArray = result[0];
+            console.log(finalcategoryArray);
+            var finalCountArray = result[1];
+            console.log(finalCountArray);
+            console.log('[' + result[0] + ']','[' + result[1] + ']');
+
+            finalcategoryArray.forEach((c, index) => {
+              const n = finalCountArray[index];
+              console.log(c, n);
+              categories.innerHTML += "<div class= row categories>\
+               <div class= col-6 categoryLeft ><a href= # >"+ c +"</a></div>\
+               <div class= col-6 categoryRight >("+ n +")</div>\
+               </div> \
+               <hr style= width: 100%; text-align: centre />"
+            });
+          },
+        });
+
+      });
+    </script>
         <div class="row tags">
           <div class="col">
             <h4>Tags</h4>
