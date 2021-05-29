@@ -138,7 +138,8 @@
    };
 
    function postblog(){
-    require("./connection.php");
+    $database = new Database();
+    $db = $database->connect();
     if(isset($_POST['submit'])){
         $title = $_POST['title'];
         $author = $_POST['author'];
@@ -163,13 +164,13 @@
             move_uploaded_file($filetemppath,$destinationfile);
     
             $sql = "INSERT INTO `blog` (`Title`, `Author`, `Content`, `Category`, `Event`, `Image`, `Date`) VALUES ('$title', '$author', '$content', '$category','$event', '$destinationfile', current_timestamp());";
-            if($con->query($sql) == true){
+            if($db->query($sql) == true){
             echo '<script type="text/javascript">';
             echo ' alert("Ho Gaya submit, ja aram kar")';
             echo '</script>';
         }
         else{
-            echo "ERROR: $sql <br> $con->error";
+            echo "ERROR: $sql <br> $db->error";
         }
     
         }
@@ -182,28 +183,23 @@
     }
    };
 
-    switch ($method) {
-        case 'POST':
+
+    $q = $_GET['q'];
+    switch ($q){
+        case 'readAll':
+            read();
+            break;
+        case 'readHome':
+            read_home();
+            break;
+        case 'readOne':
+            read_one();
+            break;
+        case 'postblog':
             postblog();
             break;
-        case 'GET':
-            $q = $_GET['q'];
-            switch ($q){
-                case 'readAll':
-                    read();
-                    break;
-                case 'readHome':
-                    read_home();
-                    break;
-                case 'readOne':
-                    read_one();
-                    break;
-                default:
-                  echo "Invalid Query";
-            }
-            break;
         default:
-            echo 'Invalid Request';       
+            echo "Invalid Query";
     }
 ?>
 
