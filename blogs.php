@@ -87,6 +87,7 @@
     let urlThree = './admin/blogAdmin/api.php/?q=readHome';
     var threePosts = document.getElementById("row2");
     threePosts.innerHTML = "";
+    
     $(document).ready(function() {
       $.ajax({
         url: urlThree,
@@ -109,9 +110,32 @@
                   </div>\
                 </div>\
               </div>";
-
-
             document.getElementById(row.Sno + "_image").style.backgroundImage = "url(./admin/blogAdmin/" + row.Image + ")"
+          }
+
+
+          var rightThreePost = document.getElementById("row4");
+          rightThreePost.innerHTML = "";
+          data.forEach(rightThreeBlogs);
+
+          function rightThreeBlogs(row ,index){
+
+            rightThreePost.innerHTML += "<a href=#>\
+          <div class=row rightCard>\
+            <div class=col-5>\
+              <div class=rightImage>\
+                <img id=rightBlog" + index + "_image src='./admin/blogAdmin/"+ row.Image +"' alt= />\
+              </div>\
+            </div>\
+            <div class=col-7 rightText>\
+              <h5 id= rightBlog" + index + "_title>" + row.Title +"</h5>\
+              <span id=rightBlog" + index + "_date class=card-span cardDown>" + row.Date +"</span>\
+              <span class=card-span card-span-dot><i class=fas fa-circle></i>\
+              </span>\
+              <span class=card-span cardDown><i class=fas fa-comments></i></span>\
+            </div>\
+          </div>\
+        </a>";
           }
         }
       });
@@ -128,7 +152,10 @@
         </div>
       </div>
       <div class="right-side">
-        <a href="#">
+        <div id="row4">
+
+        </div>
+        <!-- <a href="#">
           <div class="row rightCard">
             <div class="col-5">
               <div class="rightImage">
@@ -181,7 +208,7 @@
               <span class="card-span cardDown"><i class="fas fa-comments"></i></span>
             </div>
           </div>
-        </a>
+        </a> -->
         <div class="row categoryCards">
           <div class="col">
             <h4>Categories</h4>
