@@ -567,6 +567,23 @@ section {
 }
 .outstanding-logo {
   width: 160px;
+  animation-name: scale-up-center;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+@keyframes scale-up-center {
+  0%{
+    -webkit-transform: scale(.2);
+    transform: scale(.2);
+  }
+  100%{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 @media (min-width: 350px) and (max-width: 1200px) {
   .footer-info {
