@@ -203,7 +203,7 @@ section .leftBox .content{
   height: 30%;
   color: #fff;
   background: rgba(0,0,0,.5);
-  padding: 10px 40px;
+  padding: 10px 30px;
   transition: .5s;
 }
 section .leftBox .content:hover
@@ -213,13 +213,11 @@ section .leftBox .content:hover
 section .leftBox .content h1{
   margin: 0;
   padding: 0;
-  font-size: 40px;
   text-transform: uppercase;
 }
 section .leftBox .content p{
-  margin: 10px 0 0;
-  padding: 0;
-  font-size: 16px;
+  margin: 5px 0 0 0;
+  padding: 0
 }
 
 section .leftBox .live-event {
@@ -424,14 +422,15 @@ section .events ul li .details a:hover{
   }
   
   section .leftBox .live-event {
-    height: 20rem;
+    /* height: 20rem; */
+    padding-bottom: 10px;
   }
   
   section .events {
     position: relative;
-    width: 100%;
+    width: 105%;
     height: 100vh;
-    margin: 0px 0px 10px 0px;
+    margin: 0px -30px 10px 0px;
     background-image: url(/assets/images/eventsbackground.jpg);
     box-sizing: border-box;
   }
@@ -440,7 +439,8 @@ section .events ul li .details a:hover{
 @media (min-width: 450px) and (max-width: 599px){
   section {
     width: 100%;
-    height: auto;
+    /* height: auto; */
+    background-image: url(/assets/images/eventsbackground.jpg);
   }
 
   section .leftBox {
@@ -450,14 +450,21 @@ section .events ul li .details a:hover{
   }
 
   section .leftBox .live-event {
-    height: 20rem;
+    /* height: 20rem; */
+    padding-bottom: 10px;
+  }
+  section .leftBox .content h1{
+    font-size: 25px;
+  }
+  section .leftBox .content p{
+    font-size: 14px;
   }
 
   section .events {
     position: relative;
-    width: 100%;
+    width: 105%;
     height: 100vh;
-    margin: 0px 0px 10px 0px;
+    margin: 0px -30px 10px 0px;
     background-image: url(/assets/images/eventsbackground.jpg);
     box-sizing: border-box;
 }
@@ -496,7 +503,8 @@ section .events ul li .time h2 {
   }
 
   section .leftBox .live-event {
-    height: 23rem;
+    /* height: 23rem; */
+    padding-bottom: 10px;
   }
   .live-carousel-img {
     width: 100%;
@@ -555,6 +563,7 @@ section .events ul li .time h2 {
   .pt-card {
     margin-top: 10px;
   }
+
 }
 
 @media (min-width: 580px) and (max-width: 780px) {
@@ -644,7 +653,7 @@ section .events ul li .time h2 {
 }
 
 .quote-img:hover {
-  transform: scale(1.5);
+  transform: scale(1.4);
   opacity: 1;
 }
 
@@ -659,7 +668,22 @@ section .events ul li .time h2 {
     pointer-events: none;
   }
   .quote-img:hover {
-    transform: scale(1.1);
+    transform: none;
     opacity: 1;
+  }
+}
+@media (max-width: 1050px) {
+  .quote-img:hover {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1050px) {
+  section .leftBox .content h1{
+    font-size: 35px;
+  }
+  section .leftBox .content p{
+    font-size: 14px;
   }
 }
