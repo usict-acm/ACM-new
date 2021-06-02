@@ -203,8 +203,9 @@ section .leftBox .content{
   height: 30%;
   color: #fff;
   background: rgba(0,0,0,.5);
-  padding: 10px 30px;
+  padding: 7px 30px;
   transition: .5s;
+  /* overflow: auto; */
 }
 section .leftBox .content:hover
 {
@@ -216,7 +217,7 @@ section .leftBox .content h1{
   text-transform: uppercase;
 }
 section .leftBox .content p{
-  margin: 5px 0 0 0;
+  margin: 2px 0 0 0;
   padding: 0
 }
 
@@ -304,8 +305,9 @@ section .leftBox .live-event {
   }
   
   .live-carousel-img {
+    padding-top: 2%;
     width: 50%;
-    height: 50vh;
+    height: 48vh;
   }
 
 
@@ -323,7 +325,7 @@ section .events
 
 section .events ul{
   position: absolute;
-  top: 7%;
+  top: 3%;
   overflow: auto;
   width: 96%;
   /* transform: translateY(-50%); */
@@ -393,7 +395,7 @@ section .events ul li .details a{
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 10px 15px;
+  padding: 8px 15px;
   border: 2px solid #262626;
   margin-top: 10px;
   font-size: 14px;
@@ -431,7 +433,7 @@ section .events ul li .details a:hover{
     width: 105%;
     height: 100vh;
     margin: 0px -30px 10px 0px;
-    background-image: url(/assets/images/eventsbackground.jpg);
+    background-image: url("../images/eventsbackground.jpg");
     box-sizing: border-box;
   }
 }
@@ -440,7 +442,7 @@ section .events ul li .details a:hover{
   section {
     width: 100%;
     /* height: auto; */
-    background-image: url(/assets/images/eventsbackground.jpg);
+    background-image: url("../images/eventsbackground.jpg");
   }
 
   section .leftBox {
@@ -465,7 +467,7 @@ section .events ul li .details a:hover{
     width: 105%;
     height: 100vh;
     margin: 0px -30px 10px 0px;
-    background-image: url(/assets/images/eventsbackground.jpg);
+    background-image: url("../images/eventsbackground.jpg");
     box-sizing: border-box;
 }
 
@@ -516,7 +518,7 @@ section .events ul li .time h2 {
     width: 110%;
     height: 140vh;
     margin: 20px -30px 0px 0px;
-    background-image: url('../images/eventsbackground.jpg');
+    background-image: url("../images/eventsbackground.jpg");
     box-sizing: border-box;
 }
 section .events ul {
