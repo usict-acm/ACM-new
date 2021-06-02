@@ -145,33 +145,33 @@ section {
 }
 
 .event-card {
-    width: 350px;
-    height: 350px;
-    margin: 3% 1%;
-    border-radius: 10px 10px 0px 0px;
-    text-align: center;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
-    perspective: 1000px;
-    border-bottom: 5px solid #0297ff;
+  width: 350px;
+  height: 350px;
+  margin: 3% 1%;
+  border-radius: 10px 10px 0px 0px;
+  text-align: center;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+  perspective: 1000px;
+  border-bottom: 5px solid #0297ff;
 }
 
 .event-card-inner {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
-    position: absolute;
-    color: black;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  color: black;
 }
 
 .event-img {
-    width: 100%;
-    height: 60%;
-    border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  height: 60%;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .event-details {
-    margin-top: 5%;
+  margin-top: 5%;
 }
 
 .event-title {
@@ -182,42 +182,41 @@ section {
   margin-top: 3%;
 }
 
-.modal-buttons-div{
-  float:right;
+.modal-buttons-div {
+  float: right;
 }
 
-section{
+section {
   width: 100%;
   height: 100vh;
-  background-image: url('../images/eventsbackground.jpg');
-  background-size:cover;
+  background-image: url("../images/eventsbackground.jpg");
+  background-size: cover;
 }
-section .leftBox{
+section .leftBox {
   width: 50%;
   height: 100%;
   float: left;
   padding: 0px 20px;
   box-sizing: border-box;
 }
-section .leftBox .content{
+section .leftBox .content {
   height: 30%;
   color: #fff;
-  background: rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, 0.5);
   padding: 10px 30px;
-  transition: .5s;
+  transition: 0.5s;
 }
-section .leftBox .content:hover
-{
+section .leftBox .content:hover {
   background: #e91e63;
 }
-section .leftBox .content h1{
+section .leftBox .content h1 {
   margin: 0;
   padding: 0;
   text-transform: uppercase;
 }
-section .leftBox .content p{
+section .leftBox .content p {
   margin: 5px 0 0 0;
-  padding: 0
+  padding: 0;
 }
 
 section .leftBox .live-event {
@@ -234,20 +233,20 @@ section .leftBox .live-event {
   color: #fff;
   background: #ff334b;
   border-radius: 4px;
-  }
-  .badge-wrap {
+}
+.badge-wrap {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
-        align-items: center;
-  }
-  .badge-icon {
+  align-items: center;
+}
+.badge-icon {
   position: relative;
   display: -webkit-inline-box;
   display: inline-flex;
   margin-right: 2px;
-  }
-  .badge-icon-inner {
+}
+.badge-icon-inner {
   position: absolute;
   top: 0;
   right: 0;
@@ -255,141 +254,137 @@ section .leftBox .live-event {
   left: 0;
   will-change: opacity;
   -webkit-animation: ani-breath 1.8s ease infinite;
-        animation: ani-breath 1.8s ease infinite;
-  }
-  .badge-icon svg {
+  animation: ani-breath 1.8s ease infinite;
+}
+.badge-icon svg {
   fill: currentColor;
-  }
-  .badge-text {
+}
+.badge-text {
   display: -webkit-inline-box;
   display: inline-flex;
   font-size: 16px;
   line-height: 14px;
-  }
-  
-  @-webkit-keyframes ani-breath {
-  0% {
-  opacity: 1;
-  }
-  50% {
-  opacity: 0.4;
-  }
-  100% {
-  opacity: 1;
-  }
-  }
-  
-  @keyframes ani-breath {
-  0% {
-  opacity: 1;
-  }
-  50% {
-  opacity: 0.4;
-  }
-  100% {
-  opacity: 1;
-  }
-  }
+}
 
-  #demo {
-    margin-top: -10%;
+@-webkit-keyframes ani-breath {
+  0% {
+    opacity: 1;
   }
-  
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ani-breath {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#demo {
+  margin-top: -10%;
+}
+
 .carousel-item {
   margin-top: 5%;
 }
 
-  .carousel-inner {
-    text-align: center;
-  }
-  
-  .live-carousel-img {
-    width: 50%;
-    height: 50vh;
-  }
+.carousel-inner {
+  text-align: center;
+}
 
+.live-carousel-img {
+  width: 50%;
+  height: 50vh;
+}
 
-section .events
-{
-  position:relative;
+section .events {
+  position: relative;
   width: 50%;
   height: 100%;
-  background: rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, 0.5);
   float: right;
   box-sizing: border-box;
   padding: 20px;
   overflow: auto;
 }
 
-section .events ul{
+section .events ul {
   position: absolute;
   top: 7%;
   overflow: auto;
   width: 96%;
   /* transform: translateY(-50%); */
-  margin:0;
+  margin: 0;
   padding: 0px;
-  box-sizing: border-box;  
+  box-sizing: border-box;
 }
 
-section .events ul li{
+section .events ul li {
   list-style: none;
   background: #fff;
   box-sizing: border-box;
   height: 24vh;
   /* margin: 15px 0;  */
 }
-section .events ul li .time
-{
+section .events ul li .time {
   position: relative;
   padding: 10px;
   background: #262626;
-  box-sizing:border-box;
+  box-sizing: border-box;
   width: 30%;
   height: 100%;
   float: left;
   text-align: center;
-  transition: .5s;
+  transition: 0.5s;
 }
-section .events ul li:hover .time
-{
+section .events ul li:hover .time {
   background: #e91e63;
 }
-section .events ul li .time h2{
+section .events ul li .time h2 {
   position: absolute;
   margin: 0;
   padding: 0;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   color: #fff;
   font-size: 40px;
   line-height: 30px;
 }
-section .events ul li .time h2 span{
-  font-size: 30px  ;
+section .events ul li .time h2 span {
+  font-size: 30px;
 }
-section .events ul li .details{
-   padding: 0px 10px;
-   background: #fff; 
-   box-sizing: border-box;
-   width: 70%;
-   height: 80%;
-   float: left;
-} 
-section .events ul li .details h3{
+section .events ul li .details {
+  padding: 0px 10px;
+  background: #fff;
+  box-sizing: border-box;
+  width: 70%;
+  height: 80%;
+  float: left;
+}
+section .events ul li .details h3 {
   position: relative;
   margin: 0;
   padding: 10px 0 0 0;
   font-size: 20px;
 }
-section .events ul li .details p{
+section .events ul li .details p {
   position: relative;
   margin: 5px 0 0 0;
   padding: 0;
   font-size: 16px;
 }
-section .events ul li .details a{
+section .events ul li .details a {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
@@ -397,35 +392,33 @@ section .events ul li .details a{
   border: 2px solid #262626;
   margin-top: 10px;
   font-size: 14px;
-  transition: .5s;
+  transition: 0.5s;
   float: right;
-
 }
-section .events ul li .details a:hover{
+section .events ul li .details a:hover {
   background: #e91e63;
   color: #fff;
   border-color: #e91e63;
 }
 
-
-@media (min-width: 600px) and (max-width: 1050px){
+@media (min-width: 600px) and (max-width: 1050px) {
   section {
     width: 100%;
     height: 150vh;
   }
 
   section .leftBox {
-      width: 100%;
-      height: auto;
-      padding: 0px 0px 10px 0px;
-      box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 0px 0px 10px 0px;
+    box-sizing: border-box;
   }
-  
+
   section .leftBox .live-event {
     /* height: 20rem; */
     padding-bottom: 10px;
   }
-  
+
   section .events {
     position: relative;
     width: 105%;
@@ -436,27 +429,27 @@ section .events ul li .details a:hover{
   }
 }
 
-@media (min-width: 450px) and (max-width: 599px){
+@media (min-width: 450px) and (max-width: 599px) {
   section {
     width: 100%;
     /* height: auto; */
-    background-image: url(/assets/images/eventsbackground.jpg);
+    /* background-image: url(/assets/images/eventsbackground.jpg); */
   }
 
   section .leftBox {
-      width: 100%;
-      padding: 0px 0px 10px 0px;
-      box-sizing: border-box;
+    width: 100%;
+    padding: 0px 0px 10px 0px;
+    box-sizing: border-box;
   }
 
   section .leftBox .live-event {
     /* height: 20rem; */
     padding-bottom: 10px;
   }
-  section .leftBox .content h1{
+  section .leftBox .content h1 {
     font-size: 25px;
   }
-  section .leftBox .content p{
+  section .leftBox .content p {
     font-size: 14px;
   }
 
@@ -467,39 +460,39 @@ section .events ul li .details a:hover{
     margin: 0px -30px 10px 0px;
     background-image: url(/assets/images/eventsbackground.jpg);
     box-sizing: border-box;
+  }
+
+  section .events ul li {
+    list-style: none;
+    background: #fff;
+    box-sizing: border-box;
+    height: 250px;
+    /* margin: 15px 0; */
+  }
+  section .events ul li .time h2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 40px;
+    line-height: 30px;
+  }
 }
 
-section .events ul li {
-  list-style: none;
-  background: #fff;
-  box-sizing: border-box;
-  height: 250px;
-  /* margin: 15px 0; */
-}
-section .events ul li .time h2 {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  color: #fff;
-  font-size: 40px;
-  line-height: 30px;
-}
-}
-
-@media (max-width: 449px){
+@media (max-width: 449px) {
   section {
     width: 100%;
     height: 130vh;
   }
 
   section .leftBox {
-      width: 109%;
-      height: auto;
-      padding: 0px 0px 10px 0px;
-      box-sizing: border-box;
+    width: 109%;
+    height: auto;
+    padding: 0px 0px 10px 0px;
+    box-sizing: border-box;
   }
 
   section .leftBox .live-event {
@@ -516,36 +509,36 @@ section .events ul li .time h2 {
     width: 110%;
     height: 140vh;
     margin: 20px -30px 0px 0px;
-    background-image: url('../images/eventsbackground.jpg');
+    background-image: url("../images/eventsbackground.jpg");
     box-sizing: border-box;
-}
-section .events ul {
-  position: absolute;
-  width: 90%;
-  top: 70%;
-  transform: translateY(-70%);
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-section .events ul li {
-  list-style: none;
-  background: #fff;
-  box-sizing: border-box;
-  height: 280px;
-  /* margin: 15px 0; */
-}
-section .events ul li .time h2 {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  color: #fff;
-  font-size: 35px;
-  line-height: 30px;
-}
+  }
+  section .events ul {
+    position: absolute;
+    width: 90%;
+    top: 70%;
+    transform: translateY(-70%);
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  section .events ul li {
+    list-style: none;
+    background: #fff;
+    box-sizing: border-box;
+    height: 280px;
+    /* margin: 15px 0; */
+  }
+  section .events ul li .time h2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 35px;
+    line-height: 30px;
+  }
 }
 
 @media (min-width: 300px) and (max-width: 580px) {
@@ -563,7 +556,6 @@ section .events ul li .time h2 {
   .pt-card {
     margin-top: 10px;
   }
-
 }
 
 @media (min-width: 580px) and (max-width: 780px) {
@@ -581,39 +573,39 @@ section .events ul li .time h2 {
   }
   .event-title {
     font-size: 1.4rem;
-  }  
+  }
   .event-desc {
     font-size: 1rem;
   }
 }
 
 @media (min-width: 200px) and (max-width: 580px) {
-    .uheading {
-      font-size: 22px;
-      font-weight: bold;
-      color: #0776ad;
-    }
-    .lheading {
-      font-size: 16px;
-    }
-    .acm-logo-navbar {
-      margin-left: 10px;
-    }
-    .pt-card {
-      margin-top: 7%;
-      margin-bottom: -40%;
-    }
-    .collab-main-heading {
-      font-size: 26px;
-    }
-    .card-name {
-      font-size: 20px;
-    }
-    .event-card {
-      width: 300px;
-      height: 300px;
-    }
+  .uheading {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0776ad;
   }
+  .lheading {
+    font-size: 16px;
+  }
+  .acm-logo-navbar {
+    margin-left: 10px;
+  }
+  .pt-card {
+    margin-top: 7%;
+    margin-bottom: -40%;
+  }
+  .collab-main-heading {
+    font-size: 26px;
+  }
+  .card-name {
+    font-size: 20px;
+  }
+  .event-card {
+    width: 300px;
+    height: 300px;
+  }
+}
 
 @media (max-width: 350px) {
   .event-card {
@@ -622,7 +614,7 @@ section .events ul li .time h2 {
   }
   .event-title {
     font-size: 1.2rem;
-  }  
+  }
   .event-desc {
     font-size: 0.8rem;
   }
@@ -638,7 +630,6 @@ section .events ul li .time h2 {
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: #000;
-  
 }
 .quotes::-webkit-scrollbar {
   display: none;
@@ -657,7 +648,7 @@ section .events ul li .time h2 {
   opacity: 1;
 }
 
-@media (max-width: 450px){
+@media (max-width: 450px) {
   .quote-img {
     max-height: 200px;
     object-fit: contain;
@@ -680,10 +671,10 @@ section .events ul li .time h2 {
 }
 
 @media (min-width: 1050px) {
-  section .leftBox .content h1{
+  section .leftBox .content h1 {
     font-size: 35px;
   }
-  section .leftBox .content p{
+  section .leftBox .content p {
     font-size: 14px;
   }
 }
