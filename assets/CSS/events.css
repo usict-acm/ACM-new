@@ -424,7 +424,7 @@ section .events ul li .details a:hover {
     width: 105%;
     height: 100vh;
     margin: 0px -30px 10px 0px;
-    background-image: url(/assets/images/eventsbackground.jpg);
+    background-image: url('../images/eventsbackground.jpg');
     box-sizing: border-box;
   }
 }
@@ -458,7 +458,7 @@ section .events ul li .details a:hover {
     width: 105%;
     height: 100vh;
     margin: 0px -30px 10px 0px;
-    background-image: url(/assets/images/eventsbackground.jpg);
+    background-image: url('../images/eventsbackground.jpg');
     box-sizing: border-box;
   }
 
