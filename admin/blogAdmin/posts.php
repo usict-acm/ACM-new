@@ -13,6 +13,7 @@
     public $Event;
     public $Image;
     public $Date;
+    public $catCount;
 
     // Constructor with DB
     public function __construct($db) {
@@ -24,6 +25,23 @@
       // Create query
       $query = 'SELECT b.Sno, b.Title, b.Author, b.Content, b.Category, b.Event, b.Image, b.Date
                                 FROM ' . $this->table . ' b';
+                                
+      $stmt = $this->conn->query($query);
+      // Prepare statement
+      // $stmt = $this->conn->prepare($query);
+                          
+      // Execute query
+      // $stmt->execute();
+                          
+      return $stmt;
+    }
+
+    // Get Posts
+    public function getCategories() {
+      // Create query
+      $query = 'SELECT b.Category, COUNT(Category) AS CatCount
+                                FROM ' . $this->table . ' b 
+                                GROUP BY Category';
                                 
       $stmt = $this->conn->query($query);
       // Prepare statement

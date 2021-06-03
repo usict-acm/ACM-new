@@ -121,18 +121,18 @@
           function rightThreeBlogs(row ,index){
 
             rightThreePost.innerHTML += "<a href=#>\
-          <div class=row rightCard>\
-            <div class=col-5>\
-              <div class=rightImage>\
+          <div class='row rightCard'>\
+            <div class='col-5'>\
+              <div class='rightImage'>\
                 <img id=rightBlog" + index + "_image src='./admin/blogAdmin/"+ row.Image +"' alt= />\
               </div>\
             </div>\
-            <div class=col-7 rightText>\
+            <div class='col-7 rightText'>\
               <h5 id= rightBlog" + index + "_title>" + row.Title +"</h5>\
-              <span id=rightBlog" + index + "_date class=card-span cardDown>" + row.Date +"</span>\
-              <span class=card-span card-span-dot><i class=fas fa-circle></i>\
+              <span id=rightBlog" + index + "_date class='card-span cardDown'>" + row.Date +"</span>\
+              <span class='card-span card-span-dot'><i class='fas fa-circle'></i>\
               </span>\
-              <span class=card-span cardDown><i class=fas fa-comments></i></span>\
+              <span class='card-span cardDown'><i class='fas fa-comments'></i></span>\
             </div>\
           </div>\
         </a>";
@@ -155,60 +155,7 @@
         <div id="row4">
 
         </div>
-        <!-- <a href="#">
-          <div class="row rightCard">
-            <div class="col-5">
-              <div class="rightImage">
-                <img src="./assets/images/blog-img.jpg" alt="" />
-              </div>
-            </div>
-            <div class="col-7 rightText">
-              <h5>
-                There’s a Cool New Way for Men to Wear Socks and Sandals
-              </h5>
-              <span class="card-span cardDown">March 15, 2018 </span>
-              <span class="card-span card-span-dot"><i class="fas fa-circle"></i>
-              </span>
-              <span class="card-span cardDown"><i class="fas fa-comments"></i></span>
-            </div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="row rightCard">
-            <div class="col-5">
-              <div class="rightImage">
-                <img src="./assets/images/blog-img.jpg" alt="" />
-              </div>
-            </div>
-            <div class="col-7 rightText">
-              <h5>
-                There’s a Cool New Way for Men to Wear Socks and Sandals
-              </h5>
-              <span class="card-span cardDown">March 15, 2018 </span>
-              <span class="card-span card-span-dot"><i class="fas fa-circle"></i>
-              </span>
-              <span class="card-span cardDown"><i class="fas fa-comments"></i></span>
-            </div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="row rightCard">
-            <div class="col-5">
-              <div class="rightImage">
-                <img src="./assets/images/blog-img.jpg" alt="" />
-              </div>
-            </div>
-            <div class="col-7 rightText">
-              <h5>
-                There’s a Cool New Way for Men to Wear Socks and Sandals
-              </h5>
-              <span class="card-span cardDown">March 15, 2018 </span>
-              <span class="card-span card-span-dot"><i class="fas fa-circle"></i>
-              </span>
-              <span class="card-span cardDown"><i class="fas fa-comments"></i></span>
-            </div>
-          </div>
-        </a> -->
+        
         <div class="row categoryCards">
           <div class="col">
             <h4>Categories</h4>
@@ -219,7 +166,7 @@
         <div id="row3"></div>
 
         <script>
-          let categoryUrl = './admin/blogAdmin/api.php/?q=readAll';
+          let categoryUrl = './admin/blogAdmin/api.php/?q=showCategory';
           var categories = document.getElementById("row3");
           categories.innerHTML = "";
           $(document).ready(function() {
@@ -229,51 +176,18 @@
               dataType: 'JSON',
               success: function(data) {
                 console.log(data);
-                var categoryArray = [];
-                data.forEach((result) => {
-                  var cat = result.Category;
-                  categoryArray.push(cat);
-                })
-                console.log(categoryArray);
+                
+                data.forEach(categoryCountShow);
 
-                function foo(arr) {
-                  var distinctCategory = [],
-                    categoryCount = [],
-                    prev;
-
-                  categoryArray.sort();
-                  for (var i = 0; i < categoryArray.length; i++) {
-                    if (categoryArray[i] !== prev) {
-                      distinctCategory.push(categoryArray[i]);
-                      categoryCount.push(1);
-                    } else {
-                      categoryCount[categoryCount.length - 1]++;
-                    }
-                    prev = categoryArray[i];
-                  }
-
-                  return [distinctCategory, categoryCount];
+                function categoryCountShow(row ,index){
+                        categories.innerHTML += "<div class= row categories>\
+                    <div class= col-6 categoryLeft ><a href= # >" + row.Category + "</a></div>\
+                    <div class= col-6 categoryRight >(" + row.catCount + ")</div>\
+                    </div> \
+                    <hr style= width: 100%; text-align: centre />"
                 }
-
-                var result = foo(categoryArray);
-                var finalcategoryArray = result[0];
-                console.log(finalcategoryArray);
-                var finalCountArray = result[1];
-                console.log(finalCountArray);
-                console.log('[' + result[0] + ']', '[' + result[1] + ']');
-
-                finalcategoryArray.forEach((c, index) => {
-                  const n = finalCountArray[index];
-                  console.log(c, n);
-                  categories.innerHTML += "<div class= row categories>\
-               <div class= col-6 categoryLeft ><a href= # >" + c + "</a></div>\
-               <div class= col-6 categoryRight >(" + n + ")</div>\
-               </div> \
-               <hr style= width: 100%; text-align: centre />"
-                });
               },
             });
-
           });
         </script>
         <!-- <div class="row tags">
