@@ -382,14 +382,14 @@
 
   <script>
     function redirec(id) {
-      localStorage.setItem("blogId", id); //Transferring data
-      window.document.location = "./admin/blogAdmin/singleBlog.html"; //Connecting Second page
+      // localStorage.setItem("blogId", id); //Transferring data
+      window.document.location = "./admin/blogAdmin/singleBlog.php?Id="+id; //Connecting Second page
 
     }
 
     function redirectThree(id) {
-      localStorage.setItem("blogId", id); //Transferring data
-      window.document.location = "./admin/blogAdmin/singleBlog.html"; //Connecting Second page
+      // localStorage.setItem("blogId", id); //Transferring data
+      window.document.location = "./admin/blogAdmin/singleBlog.php?Id="+id; //Connecting Second page
 
     }
   </script>
