@@ -63,43 +63,54 @@
                             method="POST"
                             enctype="multipart/form-data"
                         >
+                        <div class="form-group">
                         <input
                             type="text"
                             name="title"
                             id="title"
-                            class='form-group'
+                            class='form-control'
                             placeholder="Enter the title of the blog"
                         />
+                        </div>
+                        <div class="form-group">
                         <input
                             type="text"
                             name="author"
                             id="age"
-                            class='form-group'
+                            class='form-control'
                             placeholder="Who wrote the blog"
                         />
+                        </div>
+                        <div class="form-group">
                         <input
                             type="text"
                             name="category"
                             id="category"
-                            class='form-group'
+                            class='form-control'
                             placeholder="Enter Category of blog"
                         />
-                        <textarea
-                            name="content"
-                            id="content"
-                            rows="10"
-                            class='form-group'
-                            placeholder="Enter the blog"
-                        ></textarea>
+                        </div>
+                        <div class="form-group">
                         <input
                             type="text"
                             name="event"
                             id="event"
-                            class='form-group'
+                            class='form-control'
                             placeholder="Enter event, if any"
                         />
+                        </div>
+                        <div class="form-group">
+                        <textarea
+                            name="content"
+                            id="content"
+                            rows="10"
+                            class='form-control'
+                            placeholder="Enter the blog"
+                        ></textarea>
+                        </div>
                         <input class="form-group" type="file" name="file" id="file" />
-                        <input type="submit" name="submit" value="submit" />
+
+                        <input class="btn btn-primary" type="submit" name="submit" value="submit" />
                         <a href="index.php" class="btn btn-default">Cancel</a>
                         </form>
                 </div>
