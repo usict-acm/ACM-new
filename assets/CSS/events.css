@@ -464,9 +464,9 @@ section .events ul li .details a:hover{
 
   section .events {
     position: relative;
-    width: 105%;
+    width: 107%;
     height: 100vh;
-    margin: 0px -30px 10px 0px;
+    margin: 30px -30px 5px 0px;
     background-image: url("../images/eventsbackground.jpg");
     box-sizing: border-box;
 }
