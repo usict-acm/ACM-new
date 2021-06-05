@@ -163,7 +163,9 @@
         </div>
         <hr style="width: 100%; text-align: centre" />
 
-        <div id="row3"></div>
+        <div id="row3">
+          
+        </div>
 
         <script>
           let categoryUrl = './admin/blogAdmin/api.php/?q=showCategory';
@@ -180,48 +182,62 @@
                 data.forEach(categoryCountShow);
 
                 function categoryCountShow(row ,index){
-                        categories.innerHTML += "<div class= row categories>\
-                    <div class= col-6 categoryLeft ><a href= # >" + row.Category + "</a></div>\
-                    <div class= col-6 categoryRight >(" + row.catCount + ")</div>\
-                    </div> \
-                    <hr style= width: 100%; text-align: centre />"
+                        categories.innerHTML += "<div class= 'row categories'>\
+                                  <div id="+ row.Category+ " class= 'col-6 categoryLeft' onClick = setCategory(" + row.Category + ")>" + row.Category + "</div>\
+                                  <div class= 'col-6 categoryRight' >(" + row.catCount + ")</div>\
+                                  </div> \
+                                  <hr style= 'width: 100%; text-align: centre' />";
                 }
               },
             });
           });
+
+
+
+          function setCategory(cat){
+            console.log(cat);
+            let showCategoryURL = './admin/blogAdmin/api.php/?q=getPostByCategory&id=' + cat.innerHTML ;
+            posts.innerHTML = "";
+            $(document).ready(function() {
+              $.ajax({
+                url: showCategoryURL,
+                method: 'GET',
+                dataType: 'JSON',
+                success: function(data) {
+                  console.log(data);
+                //   data.forEach(getpostcategory);
+
+                //   function getpostcategory(row, index) {
+                //       posts.innerHTML += "<div class=col-md-6 col-lg-6 col-12>\
+                //     <div class=card id=" + row.Sno + " onClick = redirec(" + row.Sno + ") >\
+                //       <img\
+                //       src = ./admin/blogAdmin/" + row.Image + "\
+                //         id=blog" + index + "_image\
+                //         class=card-img-top\
+                //         alt=Card image cap\
+                //       />\
+                //       <div class=card-body>\
+                //         <div class=post-meta>\
+                //           <span id=blog" + index + "_category class=category>" + row.Category + "</span>\
+                //           <span id=blog" + index + "_date class=mx-2 card-span>" + row.Date + "</span>\
+                //           <span class=mx-2 card-span card-span-dot\
+                //             ><i class=fas fa-circle></i>\
+                //           </span>\
+                //           <span class=mx-2 card-span\
+                //             ><i class=fas fa-comments></i\
+                //           ></span>\
+                //         </div>\
+                //         <p id=blog" + index + "_content class=card-text>" + descSub + "</p>\
+                //       </div>\
+                //     </div>\
+                // </div>"
+                //   }
+                },
+              });
+            });
+          }
         </script>
-        <!-- <div class="row tags">
-          <div class="col">
-            <h4>Tags</h4>
-          </div>
-        </div>
-        <hr style="width: 100%; text-align: centre" />
-        <a href="#">
-          <p class="tag">React</p>
-        </a>
-        <a href="#">
-          <p class="tag">Competitive</p>
-        </a>
-        <a href="#">
-          <p class="tag">App</p>
-        </a>
-        <a href="#">
-          <p class="tag">Web</p>
-        </a>
-        <a href="#">
-          <p class="tag">React</p>
-        </a>
-        <a href="#">
-          <p class="tag">Competitive</p>
-        </a>
-        <a href="#">
-          <p class="tag">App</p>
-        </a>
-        <a href="#">
-          <p class="tag">Web</p>
-        </a>
-      </div>
-    </div> -->
+       
 
         <script>
           let url = './admin/blogAdmin/api.php/?q=readAll';
@@ -392,6 +408,8 @@
       window.document.location = "./admin/blogAdmin/singleBlog.html"; //Connecting Second page
 
     }
+
+   
   </script>
 </body>
 

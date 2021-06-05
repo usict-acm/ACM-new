@@ -85,6 +85,48 @@
        }
    };
 
+   function showCategory(){
+    // Instantiate DB & connect
+   $database = new Database();
+   $db = $database->connect();
+   $category = $_GET['id'];
+
+   // Instantiate blog post object
+   $post = new Post($db);
+
+   // Blog post query
+   $result = $post->readCategories($category);
+
+   // Check if any posts
+   if($result) {
+   // Post array
+   $posts_arr = array();
+
+   while($row=$result->fetch_assoc()){
+       $post_item = array(
+           'Sno' => $row["Sno"],
+           'Title' => $row["Title"],
+           'Author' => $row["Author"],
+           'Content' => $row["Content"],
+           'Category' => $row["Category"],
+           'Event' => $row["Event"],
+           'Image' => $row["Image"],
+           'Date' => $row["Date"],
+       );
+           // Push to "data"
+           array_push($posts_arr, $post_item);
+   }
+
+   // Turn to JSON & output
+   echo json_encode($posts_arr);
+
+   } else {
+   // No Posts
+   echo json_encode(
+       array('message' => 'No Posts Found')
+   );
+   }
+};
 
     function read_home(){
          // Instantiate DB & connect
@@ -230,6 +272,9 @@
             break;
         case 'readOne':
             read_one();
+            break;
+        case 'getPostByCategory':
+            showCategory();
             break;
         case 'showCategory':
             readCategory();

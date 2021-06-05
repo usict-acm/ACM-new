@@ -53,6 +53,23 @@
       return $stmt;
     }
 
+    // Get Posts
+    public function readCategories($Category) {
+      // Create query
+      $query = 'SELECT b.Sno, b.Title, b.Author, b.Content, b.Category, b.Event, b.Image, b.Date
+                                FROM ' . $this->table . ' b 
+                                WHERE Category='.$Category;
+                                
+      $stmt = $this->conn->query($query);
+      // Prepare statement
+      // $stmt = $this->conn->prepare($query);
+                          
+      // Execute query
+      // $stmt->execute();
+                          
+      return $stmt;
+    }
+
     public function readThree() {
       // Create query
       $query = 'SELECT b.Sno, b.Title, b.Author, b.Content, b.Category, b.Event, b.Image, b.Date

@@ -184,9 +184,11 @@
 
 .categories {
   display: flex;
-  flex-direction: column;
+  flex-direction: row !important;
+  align-items: center;
   justify-content: space-between;
   padding: 0;
+  cursor: pointer;
 }
 
 .categoryCards {
