@@ -11,7 +11,7 @@ class Database
   public function connect()
   {
 
-    $this->server = "localhost:3307";
+    $this->server = "localhost";
     $this->username = "root";
     $this->password = "";
     $this->database = "acmbackend";

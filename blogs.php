@@ -196,7 +196,7 @@
 
           function setCategory(cat){
             console.log(cat);
-            let showCategoryURL = './admin/blogAdmin/api.php/?q=getPostByCategory&id=' + cat.innerHTML ;
+            let showCategoryURL = "./admin/blogAdmin/api.php/?q=getPostByCategory&id='" + cat.innerHTML + "'";
             posts.innerHTML = "";
             $(document).ready(function() {
               $.ajax({
@@ -205,33 +205,36 @@
                 dataType: 'JSON',
                 success: function(data) {
                   console.log(data);
-                //   data.forEach(getpostcategory);
+                  data.forEach(getpostcategory);
+                  
 
-                //   function getpostcategory(row, index) {
-                //       posts.innerHTML += "<div class=col-md-6 col-lg-6 col-12>\
-                //     <div class=card id=" + row.Sno + " onClick = redirec(" + row.Sno + ") >\
-                //       <img\
-                //       src = ./admin/blogAdmin/" + row.Image + "\
-                //         id=blog" + index + "_image\
-                //         class=card-img-top\
-                //         alt=Card image cap\
-                //       />\
-                //       <div class=card-body>\
-                //         <div class=post-meta>\
-                //           <span id=blog" + index + "_category class=category>" + row.Category + "</span>\
-                //           <span id=blog" + index + "_date class=mx-2 card-span>" + row.Date + "</span>\
-                //           <span class=mx-2 card-span card-span-dot\
-                //             ><i class=fas fa-circle></i>\
-                //           </span>\
-                //           <span class=mx-2 card-span\
-                //             ><i class=fas fa-comments></i\
-                //           ></span>\
-                //         </div>\
-                //         <p id=blog" + index + "_content class=card-text>" + descSub + "</p>\
-                //       </div>\
-                //     </div>\
-                // </div>"
-                //   }
+                  function getpostcategory(row, index) {
+                    var desc = row.Content;
+                  var descSub = desc.substring(0, 70) + "...";
+                      posts.innerHTML += "<div class=col-md-6 col-lg-6 col-12>\
+                    <div class=card id=" + row.Sno + " onClick = redirec(" + row.Sno + ") >\
+                      <img\
+                      src = ./admin/blogAdmin/" + row.Image + "\
+                        id=blog" + index + "_image\
+                        class=card-img-top\
+                        alt=Card image cap\
+                      />\
+                      <div class=card-body>\
+                        <div class=post-meta>\
+                          <span id=blog" + index + "_category class=category>" + row.Category + "</span>\
+                          <span id=blog" + index + "_date class=mx-2 card-span>" + row.Date + "</span>\
+                          <span class=mx-2 card-span card-span-dot\
+                            ><i class=fas fa-circle></i>\
+                          </span>\
+                          <span class=mx-2 card-span\
+                            ><i class=fas fa-comments></i\
+                          ></span>\
+                        </div>\
+                        <p id=blog" + index + "_content class=card-text>" + descSub + "</p>\
+                      </div>\
+                    </div>\
+                </div>"
+                  }
                 },
               });
             });
