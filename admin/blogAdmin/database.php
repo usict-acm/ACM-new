@@ -6,7 +6,7 @@ class Database
   private $username;
   private $password;
   private $database;
-  // private $port;
+  private $port;
 
   public function connect()
   {
@@ -15,18 +15,20 @@ class Database
     $this->username = "root";
     $this->password = "";
     $this->database = "acmbackend";
-    //  $this->port = "3307";
+    // $this->port = "3307";
 
-    $conn = new mysqli(
-      $this->server,
-      $this->username,
-      $this->password,
-      $this->database
-    );
+    // $conn = new mysqli(
+    //   $this->server,
+    //   $this->username,
+    //   $this->password,
+    //   $this->database
+    // );
 
     //  $conn = new mysqli($this->server,$this->username,$this->password,
     //           $this->database,$this->port);
 
+    $conn = new mysqli($this->server,$this->username,$this->password,
+              $this->database);
 
     //  echo $conn;
     return $conn;

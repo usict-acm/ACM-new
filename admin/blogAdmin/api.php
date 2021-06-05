@@ -15,13 +15,24 @@
         // Instantiate blog post object
         $post = new Post($db);
 
+        $limit = 4;
+        $page = isset($_GET['page']) ? $_GET["page"]: 1;
+        $start = ($page - 1) * $limit;
+
         // Blog post query
-        $result = $post->read();
+        $result = $post->read($start,$limit);
+        $countBlogs = $post->countBlogs();
+        foreach ($countBlogs as $key => $item) {
+            $count = $item;
+        }
+        $pages = ceil($count/$limit);
+        // echo $pages;
 
         // Check if any posts
         if($result) {
         // Post array
         $posts_arr = array();
+        $multi_array_posts = array();
 
         while($row=$result->fetch_assoc()){
             $post_item = array(
@@ -38,14 +49,16 @@
                 array_push($posts_arr, $post_item);
         }
 
+        array_push($multi_array_posts,$posts_arr);
+        array_push($multi_array_posts,$pages);
+
         // Turn to JSON & output
-        echo json_encode($posts_arr);
+        echo json_encode($multi_array_posts);
+        // echo json_encode($pages);
 
         } else {
         // No Posts
-        echo json_encode(
-            array('message' => 'No Posts Found')
-        );
+        echo json_encode(array('message' => 'No Posts Found'));
         }
     };
 

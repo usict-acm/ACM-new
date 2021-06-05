@@ -28,18 +28,18 @@
   <meta name="twitter:image" content="./assets/images/acm1.png" />
 
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="./assets/CSS/benefits.css" rel="stylesheet" />
-  <link href="./assets/CSS/blogs.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" type="text/css" href="./assets/CSS/glider.css" />
+  <link href="./assets/CSS/benefits.css" rel="stylesheet" />
+  <link href="./assets/CSS/blogs.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/d459eda8d9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <nav id="togglerButton" class="navbar navbar-expand-lg mb-4 top-bar navbar-static-top sps sps-abv">
+  <nav id="togglerButton" class="navbar navbar-expand-lg mb-4 top-bar navbar-static-top sps sps-abv sps--abv" style="background-color:white;">
     <div class="container">
       <button class="navbar-toggler navbar-toggler-right" type="button" onclick="myFunction()" data-toggle="collapse" data-target="#navbarCollapse1" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"><i style="color: black; margin-top: 5px" class="fas fa-bars"></i></span>
@@ -150,6 +150,11 @@
         <div class="row" id="row1">
 
         </div>
+        <div class="row" >
+        <div style="margin:auto;" id="pagination_row">
+
+        </div>
+      </div>
       </div>
       <div class="right-side">
         <div id="row4">
@@ -240,11 +245,14 @@
             });
           }
         </script>
-       
-
+        <?php 
+            $page = isset($_GET["page"]) ? $_GET["page"] : 1;
+            $previous = $page == 1 ? 1 : $page - 1;
+        ?>
         <script>
-          let url = './admin/blogAdmin/api.php/?q=readAll';
+          let url = "./admin/blogAdmin/api.php/?q=readAll&page=<?php echo $page ?>";
           var posts = document.getElementById("row1");
+          var pagination = document.getElementById("pagination_row");
           posts.innerHTML = "";
           $(document).ready(function() {
             $.ajax({
@@ -252,14 +260,11 @@
               method: 'GET',
               dataType: 'JSON',
               success: function(data) {
-                console.log(data);
-                data.forEach(myfunc);
-
+                console.log("data blogs",data);
+                data[0].forEach(myfunc);
                 function myfunc(row, index) {
                   var desc = row.Content;
                   var descSub = desc.substring(0, 70) + "...";
-
-
                   posts.innerHTML += "<div class=col-md-6 col-lg-6 col-12>\
                 <div class=card id=" + row.Sno + " onClick = redirec(" + row.Sno + ") >\
                   <img\
@@ -283,16 +288,59 @@
                   </div>\
                 </div>\
             </div>"
-
-
                 }
+                pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
+          <ul class=pagination>\
+          <li class=page-item>\
+            <a class='page-link pagination-option-next-prev' href=./blogs.php?q=readAll&page=<?php echo $previous ?>>\
+            < Prev\
+            </a>\
+          </li>\
+          </ul>\
+        </nav>"
+              for(var i=1; i<=data[1]; i++){
+                pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
+          <ul class=pagination>\
+          <li class=page-item>\
+            <a class='page-link pagination-numbers pagination-option-next-prev' href=./blogs.php?q=readAll&page=" + i + ">\
+            " + i + "\
+            </a>\
+          </li>\
+          </ul>\
+        </nav></div>"
+              }
+              var next = <?php echo $page ?> === data[1] ? data[1] : <?php echo $page + 1 ?>;
+              pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
+          <ul class=pagination>\
+          <li class=page-item>\
+            <a class='page-link pagination-option-next-prev' href=./blogs.php?q=readAll&page=" + next + ">\
+            Next >\
+            </a>\
+          </li>\
+          </ul>\
+        </nav>"
               },
             });
-
           });
         </script>
   </section>
 
+  <style>
+    /* .pagination-option-next-prev {
+      border: none;
+      color: black;
+      font-size: 23px;
+      margin: 40px 10px 20px 10px !important;
+    }
+
+    .pagination-numbers{
+      border: 2px solid #0297ff;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      border-radius: 50% !important;
+    } */
+
+  </style>
   <!-- ***********************************************Footer************************************************************************ -->
 
   <footer style="background-color: #f7f9fb" id="footer">
