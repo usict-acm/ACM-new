@@ -10,6 +10,7 @@
 }
 
 .a-block {
+  cursor: pointer;
   display: block;
   background-size: cover;
   background-position: center center;
@@ -28,10 +29,6 @@
   box-shadow: 0 5px 22px gray;
 }
 
-.a-block.height-lg {
-  /* height: 500px; */
-}
-
 .a-block.height-md {
   height: 300px;
 }
@@ -39,7 +36,7 @@
 .a-block:before {
   background: #000;
   position: absolute;
-  content: "";
+  content: '';
   z-index: 1;
   opacity: 0.25;
   -webkit-transition: 0.3s all ease;
@@ -173,8 +170,8 @@
 
 .rightCard {
   margin-bottom: 1rem;
+  cursor: pointer !important;
 }
-
 .categoryLeft {
   color: #007bff;
 }

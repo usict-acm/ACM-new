@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
     <title>ACM BLOG</title>
-    <link rel="icon" href="./../../assets/images/acm1.png" type="image/x-icon" />
+    <link rel="icon" href="./assets/images/acm1.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
@@ -43,8 +43,8 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link href="../../assets/CSS/benefits.css" rel="stylesheet" />
-    <link href="../../assets/CSS/singleBlog.css" rel="stylesheet" />
+    <link href="./assets/CSS/benefits.css" rel="stylesheet" />
+    <link href="./assets/CSS/singleBlog.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link
@@ -55,7 +55,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="../../assets/CSS/glider.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/CSS/glider.css" />
     <script
       src="https://kit.fontawesome.com/d459eda8d9.js"
       crossorigin="anonymous"
@@ -84,7 +84,7 @@
         <div class="d-flex">
           <img
             class="acm-logo-navbar"
-            src="../../assets/images/acm1.png"
+            src="./assets/images/acm1.png"
             height="60px"
             alt="acm logo"
           />
@@ -97,7 +97,7 @@
             >
             <img
               class="outstanding-logo"
-              src="../../assets/images/outstanding-website.png"
+              src="./assets/images/outstanding-website.png"
               alt=""
             />
           </div>
@@ -132,239 +132,43 @@
         </div>
       </div>
     </nav>
-
+<!-- =====================================Header Three Blogs============================================ -->
     <section>
-      <div class="container" style="margin-top: 3%">
-        <div class="row" id="row2">
-
-      </div>
+      <div class="container" style="margin-top: 3%;padding-top:80px">
+        <div class="row" id="row2"></div>
     </section>
-    <?php
-include('../../blogHeader.php');
-?>
-    
-    <section class="container">
+      
+    <section class="container" style="margin-top: 60px; margin-bottom:60px">
       <div class="lower">
         <div class="left-side">
-          <div class="singleBlog">
-            <img
-              id="blog_image"
-              class="card-img-top"
-              src="../../assets/images/banner-high.png"
-              alt="Card image cap"
-            />
-            <div class="content">
-              <div style="display: flex; justify-content: space-between">
-                <h1 id="blog_title" class="singleBlog-title"></h1>
-                <h5 id="blog_date" class=""></h5>
-              </div>
-
-              <p id="blog_content" class="singleBlog-content"></p>
-            </div>
-          </div>
+          <!-- =======================================================Single Blog========================= -->
+          <div class="row" id="row1"></div>
         </div>
         <div class="right-side">
+          <div class="row categoryCards mt-0">
+            <div class="col">
+              <h4>Recent Blogs</h4>
+            </div>
+          </div>
+          <!-- =======================================Show right three blogs======================================= -->
         <div id="row4"></div>
-          <!-- <a href="#">
-            <div class="row rightCard">
-              <div class="col-5">
-                <div class="rightImage">
-                  <img src="../../assets/images/blog-img.jpg" alt="" />
-                </div>
-              </div>
-              <div class="col-7 rightText">
-                <h5>
-                  There’s a Cool New Way for Men to Wear Socks and Sandals
-                </h5>
-                <span class="card-span cardDown">March 15, 2018 </span>
-                <span class="card-span card-span-dot"
-                  ><i class="fas fa-circle"></i>
-                </span>
-                <span class="card-span cardDown"
-                  ><i class="fas fa-comments"></i
-                ></span>
-              </div>
-            </div>
-          </a>
-          <a href="#">
-            <div class="row rightCard">
-              <div class="col-5">
-                <div class="rightImage">
-                  <img src="../../assets/images/blog-img.jpg" alt="" />
-                </div>
-              </div>
-              <div class="col-7 rightText">
-                <h5>
-                  There’s a Cool New Way for Men to Wear Socks and Sandals
-                </h5>
-                <span class="card-span cardDown">March 15, 2018 </span>
-                <span class="card-span card-span-dot"
-                  ><i class="fas fa-circle"></i>
-                </span>
-                <span class="card-span cardDown"
-                  ><i class="fas fa-comments"></i
-                ></span>
-              </div>
-            </div>
-          </a>
-          <a href="#">
-            <div class="row rightCard">
-              <div class="col-5">
-                <div class="rightImage">
-                  <img src="../../assets/images/blog-img.jpg" alt="" />
-                </div>
-              </div>
-              <div class="col-7 rightText">
-                <h5>
-                  There’s a Cool New Way for Men to Wear Socks and Sandals
-                </h5>
-                <span class="card-span cardDown">March 15, 2018 </span>
-                <span class="card-span card-span-dot"
-                  ><i class="fas fa-circle"></i>
-                </span>
-                <span class="card-span cardDown"
-                  ><i class="fas fa-comments"></i
-                ></span>
-              </div>
-            </div>
-          </a> -->
           <div class="row categoryCards">
             <div class="col">
               <h4>Categories</h4>
             </div>
           </div>
           <hr style="width: 100%; text-align: centre" />
+  <!-- ==================================================Show Ctgories =================================================-->
+          <div id="row3"></div>
+          <?php
+          include('blogHeader.php');
+          ?>
+          
   
-          <div id="row5"></div>
-  
-          <script>
-            // let categoryUrl = './api.php/?q=readAll';
-            // var categories = document.getElementById("row3");
-            // categories.innerHTML = "";
-            // $(document).ready(function() {
-            //   $.ajax({
-            //     url: categoryUrl,
-            //     method: 'GET',
-            //     dataType: 'JSON',
-            //     success: function(data) {
-            //       console.log(data);
-            //       var categoryArray = [];
-            //       data.forEach((result) => {
-            //         var cat = result.Category;
-            //         categoryArray.push(cat);
-            //       })
-            //       console.log(categoryArray);
-  
-            //       function foo(arr) {
-            //         var distinctCategory = [],
-            //           categoryCount = [],
-            //           prev;
-  
-            //         categoryArray.sort();
-            //         for (var i = 0; i < categoryArray.length; i++) {
-            //           if (categoryArray[i] !== prev) {
-            //             distinctCategory.push(categoryArray[i]);
-            //             categoryCount.push(1);
-            //           } else {
-            //             categoryCount[categoryCount.length - 1]++;
-            //           }
-            //           prev = categoryArray[i];
-            //         }
-  
-            //         return [distinctCategory, categoryCount];
-            //       }
-  
-            //       var result = foo(categoryArray);
-            //       var finalcategoryArray = result[0];
-            //       console.log(finalcategoryArray);
-            //       var finalCountArray = result[1];
-            //       console.log(finalCountArray);
-            //       console.log('[' + result[0] + ']', '[' + result[1] + ']');
-  
-            //       finalcategoryArray.forEach((c, index) => {
-            //         const n = finalCountArray[index];
-            //         console.log(c, n);
-            //         categories.innerHTML += "<div class= row categories>\
-            //      <div class= col-6 categoryLeft ><a href= # >" + c + "</a></div>\
-            //      <div class= col-6 categoryRight >(" + n + ")</div>\
-            //      </div> \
-            //      <hr style= width: 100%; text-align: centre />"
-            //       });
-            //     },
-            //   });
-  
-            // });
-          </script>
-  
-          <!-- <div class="row tags">
-            <div class="col">
-              <h4>Tags</h4>
-            </div>
-          </div>
-          <hr style="width: 100%; text-align: centre" />
-          <a href="#"><p class="tag">React</p></a>
-          <a href="#"><p class="tag">Competitive</p></a>
-          <a href="#"><p class="tag">App</p></a>
-          <a href="#"><p class="tag">Web</p></a>
-          <a href="#"><p class="tag">React</p></a>
-          <a href="#"><p class="tag">Competitive</p></a>
-          <a href="#"><p class="tag">App</p></a>
-          <a href="#"><p class="tag">Web</p></a>
-          <div class="card-body">
-          <div class="post-meta">
-            <span class="category">FOOD</span>
-            <span class="mx-2 card-span">March 15, 2018 </span>
-            <span class="mx-2 card-span card-span-dot"
-              ><i class="fas fa-circle"></i>
-            </span>
-            <span class="mx-2 card-span"
-              ><i class="fas fa-comments"></i
-            ></span>
-          </div>
-          <p class="card-text">
-            There’s a Cool New Way for Men to Wear Socks and Sandals
-          </p>
-        </div> --> 
+         
         </div>
       </div>
     </section>
-
-    <script>
-      // let urlThree = './api.php/?q=readHome';
-      // var threePosts = document.getElementById("row2");
-      // threePosts.innerHTML = "";
-      // $(document).ready(function() {
-      //   $.ajax({
-      //     url: urlThree,
-      //     method: 'GET',
-      //     dataType: 'JSON',
-      //     success: function(data) {
-      //       console.log(data);
-      //       data.forEach(myThreeBlogs);
-  
-      //       function myThreeBlogs(row, index) {
-  
-      //         threePosts.innerHTML += "<div class=col-md-4 col-lg-4>\
-      //             <div id=" + row.Sno + "_image onClick = redirectThree(" + row.Sno + ") class=a-block d-flex align-items-center height-md" + " style= background-repeat: no-repeat; background-size: cover;>\
-      //               <div class=text>\
-      //                 <div class=post-meta>\
-      //                   <span id=blogHeader" + index + "_category class=category>" + row.Category + "</span>\
-      //                   <span id=blogHeader" + index + "_date class=mr-2>" + row.Date + " </span>\
-      //                 </div>\
-      //                 <h3 id=blogHeader" + index + "_title>" + row.Title + "</h3>\
-      //               </div>\
-      //             </div>\
-      //           </div>";
-  
-  
-      //         document.getElementById(row.Sno + "_image").style.backgroundImage = "url(./" + row.Image + ")"
-      //       }
-
-      //     }
-      //   });
-      // });
-    </script>
-
 
     <!-- ***********************************************Footer************************************************************************ -->
 
@@ -377,7 +181,7 @@ include('../../blogHeader.php');
                 <div class="col-lg-4 col-12 d-flex justify-content-center">
                   <a href="#about" class="scrollto"
                     ><img
-                      src="../../assets/images/acm1.png"
+                      src="./assets/images/acm1.png"
                       alt="logo"
                       title=""
                       style="
@@ -398,7 +202,7 @@ include('../../blogHeader.php');
                 >
                   <a href="#about" class="scrollto"
                     ><img
-                      src="../../assets/images/outstanding-website.png"
+                      src="./assets/images/outstanding-website.png"
                       alt="logo"
                       title=""
                       style="
@@ -507,11 +311,12 @@ include('../../blogHeader.php');
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="./../../assets/JS/benefits.js"></script>
     <script>
+      var posts = document.getElementById("row1");
       document.addEventListener('DOMContentLoaded', function () {
         // var blogId = localStorage.getItem('blogId');
         var blogId = <?php echo $_GET['Id'] ?>;
         console.log(blogId);
-        let url = './api.php/?q=readOne&id=' + blogId;
+        let url = './admin/blogAdmin/api.php/?q=readOne&id=' + blogId;
 
         $(document).ready(function () {
           $.ajax({
@@ -520,16 +325,32 @@ include('../../blogHeader.php');
             dataType: 'JSON',
             success: function (data) {
               console.log(data);
-              $('#blog_image').attr('src', data[0].Image);
-              $('#blog_category').text(data[0].Category);
-              $('#blog_title').text(data[0].Title);
-              $('#blog_author').text(data[0].Author);
-              $('#blog_content').text(data[0].Content);
-              $('#blog_date').text(data[0].Date);
+
+              posts.innerHTML = "<div class='singleBlog'>\
+            <img\
+            src='./admin/blogAdmin/" +data[0].Image + "'\
+              id='blog_image'\
+              class='card-img-top'\
+              alt='Card image cap'\
+            />\
+            <div class='content'>\
+              <div style='display: flex; justify-content: space-between'>\
+                <h1 id='blog_title' class='singleBlog-title'>"+ data[0].Title+"</h1>\
+                <h5 id='blog_date'>"+ data[0].Date + "</h5>\
+              </div>\
+              <p id='blog_content' class='singleBlog-content'>"+ data[0].Content+ "</p>\
+            </div>\
+          </div>";
             },
           });
         });
       });
+      function redirec(id) {
+      window.document.location = "./singleBlog.php?Id="+id; //Connecting Second page
+    }
     </script>
+      <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="./assets/JS/benefits.js"></script>
   </body>
 </html>

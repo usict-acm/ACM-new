@@ -12,11 +12,11 @@
 .a-block {
   display: block;
   background-size: cover;
+  cursor: pointer;
   background-position: center center;
   padding: 30px;
   position: relative;
   margin-bottom: 30px;
-  /* height: 100px; */
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
@@ -173,6 +173,7 @@
 
 .rightCard {
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 .categoryLeft {
@@ -184,6 +185,7 @@
 
 .categories {
   padding: 0;
+  cursor: pointer;
 }
 
 .categoryCards {

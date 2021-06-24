@@ -75,91 +75,33 @@
       </div>
     </div>
   </nav>
-
-  <section>
-
-    <div class="container" style="margin-top: 3%">
+<!-- ==============================================header Three Blogs========================================== -->
+  <section style="padding-top: 80px;">
+    <div class="container" style="margin-top: 3%;">
       <div class="row" id="row2">
       </div>
     </div>
   </section>
-  <script>
-    let urlThree = './admin/blogAdmin/api.php/?q=readHome';
-    var threePosts = document.getElementById("row2");
-    threePosts.innerHTML = "";
-    
-    $(document).ready(function() {
-      $.ajax({
-        url: urlThree,
-        method: 'GET',
-        dataType: 'JSON',
-        success: function(data) {
-          console.log(data);
-          data.forEach(myThreeBlogs);
 
-          function myThreeBlogs(row, index) {
+  <section class="container" style="margin-top: 4%;">
 
-            threePosts.innerHTML += "<div class=col-md-4 col-lg-4>\
-                <div id=" + row.Sno + "_image onClick = redirectThree(" + row.Sno + ") class=a-block d-flex align-items-center height-md" + " style= background-repeat: no-repeat; background-size: cover;>\
-                  <div class=text>\
-                    <div class=post-meta>\
-                      <span id=blogHeader" + index + "_category class=category>" + row.Category + "</span>\
-                      <span id=blogHeader" + index + "_date class=mr-2>" + row.Date + " </span>\
-                    </div>\
-                    <h3 id=blogHeader" + index + "_title>" + row.Title + "</h3>\
-                  </div>\
-                </div>\
-              </div>";
-            document.getElementById(row.Sno + "_image").style.backgroundImage = "url(./admin/blogAdmin/" + row.Image + ")"
-          }
-
-
-          var rightThreePost = document.getElementById("row4");
-          rightThreePost.innerHTML = "";
-          data.forEach(rightThreeBlogs);
-
-          function rightThreeBlogs(row ,index){
-
-            rightThreePost.innerHTML += "<a href=#>\
-          <div class='row rightCard'>\
-            <div class='col-5'>\
-              <div class='rightImage'>\
-                <img id=rightBlog" + index + "_image src='./admin/blogAdmin/"+ row.Image +"' alt= />\
-              </div>\
-            </div>\
-            <div class='col-7 rightText'>\
-              <h5 id= rightBlog" + index + "_title>" + row.Title +"</h5>\
-              <span id=rightBlog" + index + "_date class='card-span cardDown'>" + row.Date +"</span>\
-              <span class='card-span card-span-dot'><i class='fas fa-circle'></i>\
-              </span>\
-              <span class='card-span cardDown'><i class='fas fa-comments'></i></span>\
-            </div>\
-          </div>\
-        </a>";
-          }
-        }
-      });
-    });
-  </script>
-
-  <section class="container">
-
-    <h1 class="category-heading">Lorem ipsum dolor</h1>
+    <h1 class="category-heading">Let The Words Speak</h1>
     <div class="lower">
+      <!-- ====================================================Show All Blogs========================================= -->
       <div class="left-side">
-        <div class="row" id="row1">
-
-        </div>
+        <div class="row" id="row1"></div>
         <div class="row" >
-        <div style="margin:auto;" id="pagination_row">
-
+          <div style="margin:auto;" id="pagination_row"></div>
         </div>
-      </div>
       </div>
       <div class="right-side">
-        <div id="row4">
-
-        </div>
+        <!-- ==============================================Show rightside three blogs================================== -->
+        <div class="row categoryCards mt-0">
+            <div class="col">
+              <h4>Recent Blogs</h4>
+            </div>
+          </div>
+        <div id="row4"></div>
         
         <div class="row categoryCards">
           <div class="col">
@@ -167,84 +109,14 @@
           </div>
         </div>
         <hr style="width: 100%; text-align: centre" />
-
+        <!-- ===========================================================Show Ctegories=================================== -->
         <div id="row3">
           
         </div>
-
-        <script>
-          let categoryUrl = './admin/blogAdmin/api.php/?q=showCategory';
-          var categories = document.getElementById("row3");
-          categories.innerHTML = "";
-          $(document).ready(function() {
-            $.ajax({
-              url: categoryUrl,
-              method: 'GET',
-              dataType: 'JSON',
-              success: function(data) {
-                console.log(data);
-                
-                data.forEach(categoryCountShow);
-
-                function categoryCountShow(row ,index){
-                        categories.innerHTML += "<div class= 'row categories'>\
-                                  <div id="+ row.Category+ " class= 'col-6 categoryLeft' onClick = setCategory(" + row.Category + ")>" + row.Category + "</div>\
-                                  <div class= 'col-6 categoryRight' >(" + row.catCount + ")</div>\
-                                  </div> \
-                                  <hr style= 'width: 100%; text-align: centre' />";
-                }
-              },
-            });
-          });
-
-
-
-          function setCategory(cat){
-            console.log(cat);
-            let showCategoryURL = "./admin/blogAdmin/api.php/?q=getPostByCategory&id='" + cat.innerHTML + "'";
-            posts.innerHTML = "";
-            $(document).ready(function() {
-              $.ajax({
-                url: showCategoryURL,
-                method: 'GET',
-                dataType: 'JSON',
-                success: function(data) {
-                  console.log(data);
-                  data.forEach(getpostcategory);
-                  
-
-                  function getpostcategory(row, index) {
-                    var desc = row.Content;
-                  var descSub = desc.substring(0, 70) + "...";
-                      posts.innerHTML += "<div class=col-md-6 col-lg-6 col-12>\
-                    <div class=card id=" + row.Sno + " onClick = redirec(" + row.Sno + ") >\
-                      <img\
-                      src = ./admin/blogAdmin/" + row.Image + "\
-                        id=blog" + index + "_image\
-                        class=card-img-top\
-                        alt=Card image cap\
-                      />\
-                      <div class=card-body>\
-                        <div class=post-meta>\
-                          <span id=blog" + index + "_category class=category>" + row.Category + "</span>\
-                          <span id=blog" + index + "_date class=mx-2 card-span>" + row.Date + "</span>\
-                          <span class=mx-2 card-span card-span-dot\
-                            ><i class=fas fa-circle></i>\
-                          </span>\
-                          <span class=mx-2 card-span\
-                            ><i class=fas fa-comments></i\
-                          ></span>\
-                        </div>\
-                        <p id=blog" + index + "_content class=card-text>" + descSub + "</p>\
-                      </div>\
-                    </div>\
-                </div>"
-                  }
-                },
-              });
-            });
-          }
-        </script>
+        <?php 
+        include('./blogHeader.php');
+        ?>
+        
         <?php 
             $page = isset($_GET["page"]) ? $_GET["page"] : 1;
             $previous = $page == 1 ? 1 : $page - 1;
@@ -325,22 +197,6 @@
         </script>
   </section>
 
-  <style>
-    /* .pagination-option-next-prev {
-      border: none;
-      color: black;
-      font-size: 23px;
-      margin: 40px 10px 20px 10px !important;
-    }
-
-    .pagination-numbers{
-      border: 2px solid #0297ff;
-      padding-left: 15px !important;
-      padding-right: 15px !important;
-      border-radius: 50% !important;
-    } */
-
-  </style>
   <!-- ***********************************************Footer************************************************************************ -->
 
   <footer style="background-color: #f7f9fb" id="footer">
@@ -450,18 +306,11 @@
   <script>
     function redirec(id) {
       // localStorage.setItem("blogId", id); //Transferring data
-      window.document.location = "./admin/blogAdmin/singleBlog.php?Id="+id; //Connecting Second page
-
+      window.document.location = "./singleBlog.php?Id="+id; //Connecting Second page
     }
-
-    function redirectThree(id) {
-      // localStorage.setItem("blogId", id); //Transferring data
-      window.document.location = "./admin/blogAdmin/singleBlog.php?Id="+id; //Connecting Second page
-
-    }
-
    
   </script>
+  
 </body>
 
 </html>
