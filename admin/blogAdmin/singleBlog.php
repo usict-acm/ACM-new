@@ -101,7 +101,7 @@
               alt=""
             />
           </div>
-        </div>
+      </div>
         <div class="collapse navbar-collapse" id="navbarCollapse1">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
