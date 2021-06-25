@@ -80,7 +80,7 @@
                                         echo "<td>" . $row['Title'] . "</td>";
                                         echo "<td>" . substr($row["Author"],0,15) . "</td>";
                                         echo "<td>";
-                                            echo "<a href='../blogAdmin/singleBlog.php?Id=".$row['Sno'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
+                                            echo "<a href='../../singleBlog.php?Id=".$row['Sno'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
                                             // echo "<a href='faqadmin/update.php?Sno=". $row['Sno'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
                                             echo "<a href='faqadmin/delete.php?Sno=". $row['Sno'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                         echo "</td>";
