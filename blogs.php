@@ -163,40 +163,88 @@
                 }
                 pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
           <ul class=pagination>\
-          <li class=page-item>\
-            <a class='page-link pagination-option-next-prev' href=./blogs.php?q=readAll&page=<?php echo $previous ?>>\
+          <li class=page-item >\
+            <a id='previous-pagination' class='page-link pagination-option-next-prev' href=./blogs.php?q=readAll&page=<?php echo $previous ?> disabled>\
             < Prev\
             </a>\
           </li>\
           </ul>\
         </nav>"
-              for(var i=1; i<=data[1]; i++){
-                pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
+        if(<?php echo $page ?> === 1){
+          document.getElementById("previous-pagination").className += " disabled-pagination";
+        }
+          for(var i=1; i<=data[1]; i++){
+          var id = "link_pagination" + i;
+          pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
           <ul class=pagination>\
           <li class=page-item>\
-            <a class='page-link pagination-numbers pagination-option-next-prev' href=./blogs.php?q=readAll&page=" + i + ">\
+            <a id=" + id +" class='page-link pagination-numbers pagination-option-next-prev '" + "href=./blogs.php?q=readAll&page=" + i + ">\
             " + i + "\
             </a>\
           </li>\
           </ul>\
         </nav></div>"
-              }
-              var next = <?php echo $page ?> === data[1] ? data[1] : <?php echo $page + 1 ?>;
-              pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
+        if(<?php echo $page ?> === i){
+              console.log(<?php echo $page ?>);
+              document.getElementById("link_pagination"+i).className += "active_pagination";
+            } 
+          }
+          var next = <?php echo $page ?> === data[1] ? data[1] : <?php echo $page + 1 ?>;
+          pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
           <ul class=pagination>\
           <li class=page-item>\
-            <a class='page-link pagination-option-next-prev' href=./blogs.php?q=readAll&page=" + next + ">\
+            <a id='next-pagination' class='page-link pagination-option-next-prev' href=./blogs.php?q=readAll&page=" + next + ">\
             Next >\
             </a>\
           </li>\
           </ul>\
         </nav>"
-              },
-            });
-          });
+        if(<?php echo $page ?> === data[1]){
+          document.getElementById("next-pagination").className += " disabled-pagination";
+         }
+        },
+      });
+    });
         </script>
   </section>
 
+  <style>
+    .pagination-option-next-prev {
+      border: 0.5px solid gray;
+      color: black;
+      box-shadow: rgb(0 0 0 / 17%) 2px 2px 10px;
+      font-size: 23px;
+      margin: 40px 10px 20px 10px !important;
+    }
+
+    .pagination-numbers{
+      border: 2px solid #0297ff;
+      box-shadow:none;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      border-radius: 50% !important;
+    }
+
+    .active_pagination {
+      border: 2px solid #0297ff;
+      background-color: #0297ff;
+      color: white;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      border-radius: 50% !important;
+      }
+
+    .disabled-pagination {
+        color: lightgray;
+        pointer-events: none;
+        cursor: default;
+        border: none;
+        box-shadow:none;
+        font-size: 23px;
+        margin: 40px 10px 20px 10px !important;
+      }
+
+  </style>
   <!-- ***********************************************Footer************************************************************************ -->
 
   <footer style="background-color: #f7f9fb" id="footer">

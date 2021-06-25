@@ -15,7 +15,7 @@
         // Instantiate blog post object
         $post = new Post($db);
 
-        $limit = 4;
+        $limit = 10;
         $page = isset($_GET['page']) ? $_GET["page"]: 1;
         $start = ($page - 1) * $limit;
 
