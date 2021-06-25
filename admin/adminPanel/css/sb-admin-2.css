@@ -10861,10 +10861,11 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url('../../img/namstey.png');
+  background: url('../../../assets/images/acm1.png');
   background-position: center;
-  background-size: cover;
-  background-color: grey;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #fff;
 }
 
 .bg-register-image {
