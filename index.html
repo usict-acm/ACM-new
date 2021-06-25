@@ -491,6 +491,11 @@
     <div class="container">
       <h2 class="display-4 font-weight-bold my-3">Recent Blogs</h2>
       <div class="row" id="threeBlogsRow"></div>
+      <a href="./blogs.php">
+        <button class="btn meet-us" style="background-color:#2250fc; margin-top: 20px;">
+          <span style="color:#fff; font-size:1rem">SEE MORE Blogs</span>
+        </button>
+      </a>
     </div>    
   </section>
 
@@ -517,7 +522,7 @@
               rwBlogs.innerHTML += 
               "<div class=col-lg-4 col-md-6 col-12 my-3>\
                 <div class=mb-4>\
-                <img src=./admin/blogAdmin/" + row.Image + " id=blog1_image class=img-fluid alt=Sample image>\
+                <img src=./admin/blogAdmin/" + row.Image + " id=blog1_image class=img-fluid alt=Sample image style='height: 12rem'>\
                 </div>\
                 <a href=#! class=pink-text>\
                   <h6 class=font-weight-bold mb-3>\
