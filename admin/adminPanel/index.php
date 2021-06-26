@@ -1,5 +1,6 @@
 <?php 
     // session_start();
+    print_r($_SESSION);
     if(isset($_SESSION['auth'])){
         if(!$_SESSION['auth']){
             // header('location: auth/login.php');

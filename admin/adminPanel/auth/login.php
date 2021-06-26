@@ -54,7 +54,7 @@
             echo $_SESSION['auth'];
             echo $_SESSION['start'];
             echo $_SESSION['expire'];
-            header('location: ../index.php');
+            header("location: '../index.php'");
         }
         else{
             echo 'Wrong email or password';
