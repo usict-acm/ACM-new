@@ -45,37 +45,38 @@
         <span class="navbar-toggler-icon"><i style="color: black; margin-top: 5px" class="fas fa-bars"></i></span>
       </button>
       <div class="d-flex">
-        <img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm logo" />
-        <div class="text-and-logo">
-          <a style="font-size: 16px; padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto" href="#">ACM<span> USICT</span></a>
-          <img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" />
-        </div>
-      </div>
-      <div class="collapse navbar-collapse" id="navbarCollapse1">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./collab.html">Sponsors</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="./benefits.html">Why Join Us?</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./clubs.html">Clubs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./Team.html">Our Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://services.acm.org/public/qj/proflevel/proflevel_control.cfm?level=3&country=India&form_type=Student&promo=LEVEL&pay=DD">ACM Registration</a>
-          </li>
-        </ul>
+        <a href="./index.html"><img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm logo" />
+          <div class="text-and-logo">
+        </a>
+        <a style="font-size: 16px; padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto" href="#">ACM<span> USICT</span></a>
+        <a href="./index.html"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
       </div>
     </div>
+    <div class="collapse navbar-collapse" id="navbarCollapse1">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./collab.html">Sponsors</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="./benefits.html">Why Join Us?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./clubs.html">Clubs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./Team.html">Our Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://services.acm.org/public/qj/proflevel/proflevel_control.cfm?level=3&country=India&form_type=Student&promo=LEVEL&pay=DD">ACM Registration</a>
+        </li>
+      </ul>
+    </div>
+    </div>
   </nav>
-<!-- ==============================================header Three Blogs========================================== -->
+  <!-- ==============================================header Three Blogs========================================== -->
   <section style="padding-top: 80px;">
     <div class="container" style="margin-top: 3%;">
       <div class="row" id="row2">
@@ -90,19 +91,19 @@
       <!-- ====================================================Show All Blogs========================================= -->
       <div class="left-side">
         <div class="row" id="row1"></div>
-        <div class="row" >
+        <div class="row">
           <div style="margin:auto;" id="pagination_row"></div>
         </div>
       </div>
       <div class="right-side">
         <!-- ==============================================Show rightside three blogs================================== -->
         <div class="row categoryCards mt-0">
-            <div class="col">
-              <h4>Recent Blogs</h4>
-            </div>
+          <div class="col">
+            <h4>Recent Blogs</h4>
           </div>
+        </div>
         <div id="row4"></div>
-        
+
         <div class="row categoryCards">
           <div class="col">
             <h4>Categories</h4>
@@ -111,15 +112,15 @@
         <hr style="width: 100%; text-align: centre" />
         <!-- ===========================================================Show Ctegories=================================== -->
         <div id="row3">
-          
+
         </div>
-        <?php 
+        <?php
         include('./blogHeader.php');
         ?>
-        
-        <?php 
-            $page = isset($_GET["page"]) ? $_GET["page"] : 1;
-            $previous = $page == 1 ? 1 : $page - 1;
+
+        <?php
+        $page = isset($_GET["page"]) ? $_GET["page"] : 1;
+        $previous = $page == 1 ? 1 : $page - 1;
         ?>
         <script>
           let url = "./admin/blogAdmin/api.php/?q=readAll&page=<?php echo $page ?>";
@@ -132,8 +133,9 @@
               method: 'GET',
               dataType: 'JSON',
               success: function(data) {
-                console.log("data blogs",data);
+                console.log("data blogs", data);
                 data[0].forEach(myfunc);
+
                 function myfunc(row, index) {
                   var desc = row.Content;
                   var descSub = desc.substring(0, 70) + "...";
@@ -144,6 +146,7 @@
                     id=blog" + index + "_image\
                     class=card-img-top\
                     alt=Card image cap\
+                    style='height: 13rem;'\
                   />\
                   <div class=card-body>\
                     <div class=post-meta>\
@@ -170,27 +173,27 @@
           </li>\
           </ul>\
         </nav>"
-        if(<?php echo $page ?> === 1){
-          document.getElementById("previous-pagination").className += " disabled-pagination";
-        }
-          for(var i=1; i<=data[1]; i++){
-          var id = "link_pagination" + i;
-          pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
+                if (<?php echo $page ?> === 1) {
+                  document.getElementById("previous-pagination").className += " disabled-pagination";
+                }
+                for (var i = 1; i <= data[1]; i++) {
+                  var id = "link_pagination" + i;
+                  pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
           <ul class=pagination>\
           <li class=page-item>\
-            <a id=" + id +" class='page-link pagination-numbers pagination-option-next-prev '" + "href=./blogs.php?q=readAll&page=" + i + ">\
+            <a id=" + id + " class='page-link pagination-numbers pagination-option-next-prev '" + "href=./blogs.php?q=readAll&page=" + i + ">\
             " + i + "\
             </a>\
           </li>\
           </ul>\
         </nav></div>"
-        if(<?php echo $page ?> === i){
-              console.log(<?php echo $page ?>);
-              document.getElementById("link_pagination"+i).className += "active_pagination";
-            } 
-          }
-          var next = <?php echo $page ?> === data[1] ? data[1] : <?php echo $page + 1 ?>;
-          pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
+                  if (<?php echo $page ?> === i) {
+                    console.log(<?php echo $page ?>);
+                    document.getElementById("link_pagination" + i).className += "active_pagination";
+                  }
+                }
+                var next = <?php echo $page ?> === data[1] ? data[1] : <?php echo $page + 1 ?>;
+                pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
           <ul class=pagination>\
           <li class=page-item>\
             <a id='next-pagination' class='page-link pagination-option-next-prev' href=./blogs.php?q=readAll&page=" + next + ">\
@@ -199,12 +202,12 @@
           </li>\
           </ul>\
         </nav>"
-        if(<?php echo $page ?> === data[1]){
-          document.getElementById("next-pagination").className += " disabled-pagination";
-         }
-        },
-      });
-    });
+                if (<?php echo $page ?> === data[1]) {
+                  document.getElementById("next-pagination").className += " disabled-pagination";
+                }
+              },
+            });
+          });
         </script>
   </section>
 
@@ -217,9 +220,9 @@
       margin: 40px 10px 20px 10px !important;
     }
 
-    .pagination-numbers{
+    .pagination-numbers {
       border: 2px solid #0297ff;
-      box-shadow:none;
+      box-shadow: none;
       padding-left: 15px !important;
       padding-right: 15px !important;
       border-radius: 50% !important;
@@ -232,18 +235,17 @@
       padding-left: 15px !important;
       padding-right: 15px !important;
       border-radius: 50% !important;
-      }
+    }
 
     .disabled-pagination {
-        color: lightgray;
-        pointer-events: none;
-        cursor: default;
-        border: none;
-        box-shadow:none;
-        font-size: 23px;
-        margin: 40px 10px 20px 10px !important;
-      }
-
+      color: lightgray;
+      pointer-events: none;
+      cursor: default;
+      border: none;
+      box-shadow: none;
+      font-size: 23px;
+      margin: 40px 10px 20px 10px !important;
+    }
   </style>
   <!-- ***********************************************Footer************************************************************************ -->
 
@@ -354,11 +356,10 @@
   <script>
     function redirec(id) {
       // localStorage.setItem("blogId", id); //Transferring data
-      window.document.location = "./singleBlog.php?Id="+id; //Connecting Second page
+      window.document.location = "./singleBlog.php?Id=" + id; //Connecting Second page
     }
-   
   </script>
-  
+
 </body>
 
 </html>

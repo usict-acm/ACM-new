@@ -109,6 +109,7 @@
 .card {
   margin: 0 2%;
   margin-bottom: 5%;
+  cursor: pointer;
 }
 .category-heading {
   color: #000;
