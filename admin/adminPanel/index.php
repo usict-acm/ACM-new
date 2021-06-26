@@ -1,5 +1,5 @@
 <?php 
-    // session_start();
+    session_start();
     echo "In index.php";
     print_r($_SESSION);
     var_dump($_SESSION);
