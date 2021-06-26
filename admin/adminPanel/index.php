@@ -1,14 +1,20 @@
 <?php 
-    session_start();
-    if(!$_SESSION['auth']){
-        header('location: auth/login.php');
-    }
-    $now = time(); // Checking the time now when home page starts.
+    // session_start();
+    if(isset($_SESSION['auth'])){
+        if(!$_SESSION['auth']){
+            header('location: auth/login.php');
+        }
+        $now = time(); // Checking the time now when home page starts.
 
-    if ($now > $_SESSION['expire']) {
-        session_destroy();
+        if ($now > $_SESSION['expire']) {
+            session_destroy();
+            header('location: auth/login.php');
+        }
+    }
+    else{
         header('location: auth/login.php');
     }
+
 ?>
 
 <?php	 include('includes/header.php');
