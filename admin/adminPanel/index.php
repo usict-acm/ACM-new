@@ -1,5 +1,6 @@
 <?php 
     // session_start();
+    echo "In index.php";
     print_r($_SESSION);
     if(isset($_SESSION['auth'])){
         if(!$_SESSION['auth']){
