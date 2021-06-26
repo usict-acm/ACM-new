@@ -1,15 +1,14 @@
-<?php 
-    session_start();
+<?php session_start(); 
     echo "In index.php";
-    print_r($_session);
-    var_dump($_session);
-    if(isset($_session['auth'])){
-        if(!$_session['auth']){
+    print_r($_SESSION);
+    var_dump($_SESSION);
+    if(isset($_SESSION['auth'])){
+        if(!$_SESSION['auth']){
             // header('location: auth/login.php');
         }
         $now = time(); // Checking the time now when home page starts.
 
-        if ($now > $_session['expire']) {
+        if ($now > $_SESSION['expire']) {
             session_destroy();
             header('location: auth/login.php');
         }
