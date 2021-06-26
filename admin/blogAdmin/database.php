@@ -11,11 +11,15 @@ class Database
   public function connect()
   {
 
-    $this->server = "localhost:3306";
-    $this->username = "root";
-    $this->password = "";
-    $this->database = "acmbackend";
-
+    // $this->server = "localhost:3307";
+    // $this->username = "root";
+    // $this->password = "";
+    // $this->database = "acmbackend";
+    $this->server = "usict.hosting2.acm.org";
+    $this->username = "usicthosting_websiteTeam";
+    $this->password = "}Ma_,l*(pcI5";
+    $this->database = "usicthosting_acmbackend";
+    $this->port = "2083";
     // $this->port = "3307";
 
     // $conn = new mysqli(
