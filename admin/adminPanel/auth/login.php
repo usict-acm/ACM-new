@@ -47,6 +47,8 @@
         }        
         if(mysqli_num_rows($result)==1){
             echo "Login Success, creating session variables";
+            session_save_path('/home/usicthosting/public_html/cgi-bin/tmp');
+            session_start();
             $_SESSION['auth']='true';
             $_SESSION['start'] = time();
             $_SESSION['expire'] = $_SESSION['start'] + (60 * 60);
