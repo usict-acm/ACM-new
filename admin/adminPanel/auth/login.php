@@ -49,12 +49,12 @@
             echo "Login Success, creating session variables";
             // session_save_path('/home/usicthosting/public_html/cgi-bin/tmp');
             session_start();
-            $_SESSION['auth']='true';
-            $_SESSION['start'] = time();
-            $_SESSION['expire'] = $_SESSION['start'] + (60 * 60);
-            echo $_SESSION['auth'];
-            echo $_SESSION['start'];
-            echo $_SESSION['expire'];
+            $_SERVER['auth']='true';
+            $_SERVER['start'] = time();
+            $_SERVER['expire'] = $_SERVER['start'] + (60 * 60);
+            echo $_SERVER['auth'];
+            echo $_SERVER['start'];
+            echo $_SERVER['expire'];
             header("location: ../index.php");
         }
         else{
