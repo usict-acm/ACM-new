@@ -36,7 +36,14 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
         $query = "SELECT * from users where username='$username' and password='$password'";
-        $result = mysqli_query($connection,$query);
+        // $result = mysqli_query($connection,$query);
+        try {
+            $result = mysqli_query($connection,$query);
+            // $this->conn = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->db_name, $this->username, $this->password);
+            // $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch(PDOException $e) {
+            echo 'Connection Error: ' . $e->getMessage();
+        }        
         if(mysqli_num_rows($result)==1){
             session_start();
             $_SESSION['auth']='true';
