@@ -2,6 +2,7 @@
     // session_start();
     echo "In index.php";
     print_r($_SESSION);
+    var_dump($_SESSION);
     if(isset($_SESSION['auth'])){
         if(!$_SESSION['auth']){
             // header('location: auth/login.php');
