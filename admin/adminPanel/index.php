@@ -4,7 +4,7 @@
     var_dump($_SESSION);
     if(isset($_SESSION['auth'])){
         if(!$_SESSION['auth']){
-            // header('location: auth/login.php');
+            header('location: auth/login.php');
         }
         $now = time(); // Checking the time now when home page starts.
 
