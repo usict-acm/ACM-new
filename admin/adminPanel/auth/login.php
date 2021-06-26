@@ -46,10 +46,14 @@
             echo 'Connection Error: ' . $e->getMessage();
         }        
         if(mysqli_num_rows($result)==1){
+            echo "Login Success, creating session variables";
             session_start();
             $_SESSION['auth']='true';
             $_SESSION['start'] = time();
             $_SESSION['expire'] = $_SESSION['start'] + (60 * 60);
+            echo $_SESSION['auth'];
+            echo $_SESSION['start'];
+            echo $_SESSION['expire'];
             header('location: ../index.php');
         }
         else{
