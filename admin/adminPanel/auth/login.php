@@ -51,10 +51,8 @@
             session_start();
             $_SERVER['auth']='true';
             $_SERVER['start'] = time();
-            $_SERVER['expire'] = $_SERVER['start'] + (60 * 60);
             echo $_SERVER['auth'];
             echo $_SERVER['start'];
-            echo $_SERVER['expire'];
             header("location: ../index.php");
         }
         else{

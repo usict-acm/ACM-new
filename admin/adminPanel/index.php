@@ -8,10 +8,10 @@
         }
         $now = time(); // Checking the time now when home page starts.
 
-        if ($now > $_SERVER['expire']) {
-            session_destroy();
-            header('location: auth/login.php');
-        }
+        // if ($now > $_SERVER['expire']) {
+        //     session_destroy();
+        //     header('location: auth/login.php');
+        // }
     }
     else{
         // header('location: auth/login.php');
