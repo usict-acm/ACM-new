@@ -48,12 +48,12 @@
         if(mysqli_num_rows($result)==1){
             echo "Login Success, creating session variables";
             session_start();
-            $_SESSION['auth']='true';
-            $_SESSION['start'] = time();
-            $_SESSION['expire'] = $_SESSION['start'] + (60 * 60);
-            echo $_SESSION['auth'];
-            echo $_SESSION['start'];
-            echo $_SESSION['expire'];
+            $_session['auth']='true';
+            $_session['start'] = time();
+            $_session['expire'] = $_session['start'] + (60 * 60);
+            echo $_session['auth'];
+            echo $_session['start'];
+            echo $_session['expire'];
             header("location: '../index.php'");
         }
         else{
