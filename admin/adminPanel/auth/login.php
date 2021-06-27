@@ -25,22 +25,40 @@
 <body class="bg-gradient-primary">
 
 <?php 
-    if($_POST){
-        include('../faqadmin/config.php');
+    echo "Before Post";
+    if(isset($_POST['submit'])){
+        // include('../faqadmin/config.php');
+        require('../../blogAdmin/database.php');
+        $database = new Database();
+        $link = $database->connect();
+        $connection = $link;
+        echo "Coming to Post";
         $username = $_POST['username'];
         $password = $_POST['password'];
         $query = "SELECT * from users where username='$username' and password='$password'";
-        $result = mysqli_query($connection,$query);
+        // $result = mysqli_query($connection,$query);
+        try {
+            $result = mysqli_query($connection,$query);
+            // $this->conn = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->db_name, $this->username, $this->password);
+            // $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            var_dump($result);
+        } catch(PDOException $e) {
+            echo 'Connection Error: ' . $e->getMessage();
+        }        
         if(mysqli_num_rows($result)==1){
+            echo "Login Success, creating session variables";
+            // session_save_path('/home/usicthosting/public_html/cgi-bin/tmp');
             session_start();
-            $_SESSION['auth']='true';
-            $_SESSION['start'] = time();
-            $_SESSION['expire'] = $_SESSION['start'] + (60 * 60);
-            header('location: ../index.php');
+            $_SERVER['auth']='true';
+            $_SERVER['start'] = time();
+            echo $_SERVER['auth'];
+            echo $_SERVER['start'];
+            header("location: ../index.php");
         }
         else{
             echo 'Wrong email or password';
         }
+        echo "After Post";
     }
 ?>
 
@@ -71,7 +89,7 @@
                                             <input type="password" class="form-control form-control-user"
                                                 id="exampleInputPassword" name="password" placeholder="Password">
                                         </div>
-                                        <button class="btn btn-primary btn-user btn-block">
+                                        <button name="submit" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </button>
                                         <hr>
