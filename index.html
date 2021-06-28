@@ -33,6 +33,8 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
   <link href='./assets/CSS/styles.css' rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <script src="jquery-3.5.1.min.js"></script> -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -478,7 +480,65 @@
   </section>
 
 
+  <script>
+    function readMoreRedirection(id) {
+      console.log(id)
+      window.document.location = "./singleBlog.php?Id="+id; //Connecting Second page
+    }
+  </script>
+  
+  <section class="text-center">
+    <div class="container">
+      <h2 class="display-4 font-weight-bold my-3">Recent Blogs</h2>
+      <div class="row" id="threeBlogsRow"></div>
+      <a href="./blogs.php">
+        <button class="btn meet-us" style="background-color:#2250fc; margin-top: 20px;">
+          <span style="color:#fff; font-size:1rem">SEE MORE Blogs</span>
+        </button>
+      </a>
+    </div>    
+  </section>
 
+  <script>
+    var rwBlogs = document.getElementById("threeBlogsRow");
+    rwBlogs.innerHTML = "";
+
+    let url = "./admin/blogAdmin/api.php/?q=readHome"
+
+    $(document).ready(function(){
+      $.ajax({
+        url: url,
+        method: "GET",
+        dataType: "JSON",
+        success: function(data){
+            var i;
+            for(i=1;i<4;i++){
+              myFunc(data[i-1],i)
+            }
+
+            function myFunc(row,index){
+              var desc = row.Content;
+              var descSub = desc.substring(0, 70) + '...';
+              rwBlogs.innerHTML += 
+              "<div class=col-lg-4 col-md-6 col-12 my-3>\
+                <div class=mb-4>\
+                <img src=./admin/blogAdmin/" + row.Image + " id=blog1_image class=img-fluid alt=Sample image style='height: 12rem'>\
+                </div>\
+                <a href=#! class=pink-text>\
+                  <h6 class=font-weight-bold mb-3>\
+                    <i id=blog1_category class=fas fa-map pr-2>"+ row.Category +"</i>\
+                  </h6>\
+                </a>\
+                <h4 id=blog1_title class=font-weight-bold mb-3 style=color: black;>"+ row.Title +"<strong></strong></h4>\
+                <p >by <a id=blog1_author class=font-weight-bold style=color: black;>"+ row.Author +"</a>, <p id=blog1_date></p></p>\
+                <p class=d-inline id=blog1_content>"+ descSub +"</p>\
+                <a style=color:blue;cursor:pointer onclick=readMoreRedirection("+ row.Sno +") id=readMore_blog1 class=d-inline style=color: #2250fc;>Read More</a>\
+              </div>"   
+            }
+        }
+      });
+    });
+  </script>
 
   <!--  *******************************************************************EVENTS*********************************************-->
 
