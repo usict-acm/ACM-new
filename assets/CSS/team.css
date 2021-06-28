@@ -115,9 +115,9 @@ section {
  
   background-color: rgba(0, 201, 252, 0.26);
   overflow: hidden;
-  margin-top: 8%;
-  
-  
+  margin: 8% 8% 0% 8%;
+  border-radius: 5px;
+  padding-left: 20px;
 }
  a.year{
   float: left;
@@ -127,11 +127,11 @@ section {
   padding:1% 2%;
   text-align: center;
   font-size: 20px;
+  transition: .6s ease;
 }
  a.year:hover{
   background-color:rgb(255, 255, 255) ;
   color: #0297ff;
-  
 }
 a.year:hover{
     text-decoration: none;
