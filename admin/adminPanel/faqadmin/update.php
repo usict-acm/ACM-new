@@ -182,7 +182,7 @@ if(isset($_POST["Sno"]) && !empty($_POST["Sno"])){
                         </div>
                         <input type="hidden" name="Sno" value="<?php echo $Sno; ?>"/>
                         <input type="submit" class="btn btn-primary" value="Submit">
-                        <a href="index.php" class="btn btn-default">Cancel</a>
+                        <a href="../index.php" class="btn btn-default">Cancel</a>
                     </form>
                 </div>
             </div>        
