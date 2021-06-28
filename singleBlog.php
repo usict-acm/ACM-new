@@ -49,7 +49,7 @@
         <a href="./index.html"><img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm logo" />
           <div class="text-and-logo">
         </a>
-        <a style="font-size: 16px; padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto" href="#">ACM<span> USICT</span></a>
+        <a style="font-size: 16px; padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto" href="./index.html">ACM<span> USICT</span></a>
         <a href="./index.html"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
       </div>
     </div>
@@ -78,9 +78,10 @@
     </div>
   </nav>
   <!-- =====================================Header Three Blogs============================================ -->
-  <section>
-    <div class="container" style="margin-top: 3%;padding-top:80px">
+  <section style="padding-top:80px;">
+    <div class="container" style="margin-top: 3%;">
       <div class="row" id="row2"></div>
+    </div>
   </section>
 
   <section class="container" style="margin-top: 60px; margin-bottom:60px">
@@ -243,7 +244,7 @@
               class='card-img-top'\
               alt='Card image cap'\
             />\
-            <div class='content'>\
+            <div class='singleContent'>\
               <div style='display: flex; justify-content: space-between'>\
                 <h1 id='blog_title' class='singleBlog-title'>" + data[0].Title + "</h1>\
                 <h5 id='blog_date'>" + data[0].Date + "</h5>\

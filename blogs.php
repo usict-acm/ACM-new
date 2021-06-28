@@ -48,7 +48,7 @@
         <a href="./index.html"><img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm logo" />
           <div class="text-and-logo">
         </a>
-        <a style="font-size: 16px; padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto" href="#">ACM<span> USICT</span></a>
+        <a style="font-size: 16px; padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto" href="./index.html">ACM<span> USICT</span></a>
         <a href="./index.html"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
       </div>
     </div>
@@ -79,8 +79,7 @@
   <!-- ==============================================header Three Blogs========================================== -->
   <section style="padding-top: 80px;">
     <div class="container" style="margin-top: 3%;">
-      <div class="row" id="row2">
-      </div>
+      <div class="row" id="row2"></div>
     </div>
   </section>
 
@@ -210,6 +209,7 @@
           });
         </script>
   </section>
+
 
   <style>
     .pagination-option-next-prev {

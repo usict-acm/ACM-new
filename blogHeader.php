@@ -14,19 +14,29 @@
           data.forEach(myThreeBlogs);
 
           function myThreeBlogs(row, index) {
+            threePosts.innerHTML +="<div class='col-md-4 col-lg-4'>\
+                                      <div id=" + row.Sno + "_image onClick = redirectHeaderThree(" + row.Sno + ") class='effect-layla figure'>\
+                                      <img src='./admin/blogAdmin/" + row.Image + "' />\
+                                        <div class='figcaption'>\
+                                          <h2><span>"+ row.Title +"</span></h2>\
+                                          <p><span>"+ row.Category +"</span></p>\
+                                          <p>"+ row.Date+ "</p>\
+                                        </div>\
+                                      </div>\
+                                    </div>";
 
-            threePosts.innerHTML += "<div class=col-md-4 col-lg-4>\
-                <div id=" + row.Sno + "_image onClick = redirectHeaderThree(" + row.Sno + ") class='a-block d-flex align-items-center height-md'" + " style= background-repeat: no-repeat; background-size: cover;>\
-                  <div class=text>\
-                    <div class=post-meta>\
-                      <span id=blogHeader" + index + "_category class='category'>" + row.Category + "</span>\
-                      <span id=blogHeader" + index + "_date class='mr-2'>" + row.Date + " </span>\
-                    </div>\
-                    <h3 id=blogHeader" + index + "_title>" + row.Title + "</h3>\
-                  </div>\
-                </div>\
-              </div>";
-            document.getElementById(row.Sno + "_image").style.backgroundImage = "url(./admin/blogAdmin/" + row.Image + ")"
+          //   threePosts.innerHTML += "<div class=col-md-4 col-lg-4>\
+          //       <div id=" + row.Sno + "_image onClick = redirectHeaderThree(" + row.Sno + ") class='a-block d-flex align-items-center height-md'" + " style= background-repeat: no-repeat; background-size: cover;>\
+          //         <div class=text>\
+          //           <div class=post-meta>\
+          //             <span id=blogHeader" + index + "_category class='category'>" + row.Category + "</span>\
+          //             <span id=blogHeader" + index + "_date class='mr-2'>" + row.Date + " </span>\
+          //           </div>\
+          //           <h3 id=blogHeader" + index + "_title>" + row.Title + "</h3>\
+          //         </div>\
+          //       </div>\
+          //     </div>";
+          //   document.getElementById(row.Sno + "_image").style.backgroundImage = "url(./admin/blogAdmin/" + row.Image + ")"
           }
           
 
