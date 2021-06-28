@@ -111,7 +111,7 @@
                         <input class="form-group" type="file" name="file" id="file" />
 
                         <input class="btn btn-primary" type="submit" name="submit" value="submit" />
-                        <a href="index.php" class="btn btn-default">Cancel</a>
+                        <a href="../index.php" class="btn btn-default">Cancel</a>
                         </form>
                 </div>
             </div>        
