@@ -55,7 +55,7 @@
     </div>
     <div class="collapse navbar-collapse" id="navbarCollapse1">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
@@ -237,7 +237,7 @@
           success: function(data) {
             console.log(data);
 
-            posts.innerHTML = "<div>\
+            posts.innerHTML = "<div class='w-100'>\
             <h1 id='blog_title' class='singleBlog-title'>" + data[0].Title + "</h1>\
             <div class='singleBlog'>\
             <img\
