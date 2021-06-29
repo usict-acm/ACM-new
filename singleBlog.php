@@ -237,7 +237,9 @@
           success: function(data) {
             console.log(data);
 
-            posts.innerHTML = "<div class='singleBlog'>\
+            posts.innerHTML = "<div>\
+            <h1 id='blog_title' class='singleBlog-title'>" + data[0].Title + "</h1>\
+            <div class='singleBlog'>\
             <img\
             src='./admin/blogAdmin/" + data[0].Image + "'\
               id='blog_image'\
@@ -245,12 +247,12 @@
               alt='Card image cap'\
             />\
             <div class='singleContent'>\
-              <div style='display: flex; justify-content: space-between'>\
-                <h1 id='blog_title' class='singleBlog-title'>" + data[0].Title + "</h1>\
+              <div style='display: flex; justify-content: flex-end'>\
                 <h5 id='blog_date'>" + data[0].Date + "</h5>\
               </div>\
               <p id='blog_content' class='singleBlog-content'>" + data[0].Content + "</p>\
             </div>\
+          </div>\
           </div>";
           },
         });
