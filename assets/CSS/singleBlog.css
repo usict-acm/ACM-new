@@ -365,7 +365,7 @@
 }
 
 .figure.effect-layla h2 {
-  padding-top: 26%;
+  /* padding-top: 26%; */
   -webkit-transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
 }

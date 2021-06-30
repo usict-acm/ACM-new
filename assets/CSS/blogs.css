@@ -353,7 +353,7 @@
 }
 
 .figure.effect-layla .figcaption::after {
-  top: 30px;
+  top: 10px;
   right: 50px;
   bottom: 30px;
   left: 50px;
@@ -366,7 +366,7 @@
 }
 
 .figure.effect-layla h2 {
-  padding-top: 26%;
+  /* padding-top: 26%; */
   -webkit-transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
 }
