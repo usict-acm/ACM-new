@@ -58,7 +58,11 @@
                     </div>
                     <?php
                     // Include config file
-                    require_once "config.php";
+                    // require_once "config.php";
+                    require('../blogAdmin/database.php');
+                    $database = new Database();
+                    $link = $database->connect();
+                    $connection = $link;
                     
                     // Attempt select query execution
                     $sql = "SELECT * FROM blog";

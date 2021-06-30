@@ -4,7 +4,7 @@
 
 <?php
 // Include config file
-require_once "config.php";
+require_once "./config.php";
 ?>
 
 <!DOCTYPE html>
@@ -83,8 +83,12 @@ require_once "config.php";
                         <input class="form-group" type="file" name="file" id="file" />
 
                         <input class="btn btn-primary" type="submit" name="submit" value="submit" />
-                        <a href="index.php" class="btn btn-default">Cancel</a>
+                        <<<<<<< HEAD <a href="index.php" class="btn btn-default">Cancel</a>
                     </form>
+                    =======
+                    <a href="../index.php" class="btn btn-default">Cancel</a>
+                    </form>
+                    >>>>>>> 8642da58d3df4a0b752b975e3bac03ab1c514f57
                 </div>
             </div>
         </div>
