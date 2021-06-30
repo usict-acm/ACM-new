@@ -282,15 +282,7 @@
 .figure .figcaption {
   padding: 2em;
   color: #fff;
-  text-transform: uppercase;
   font-size: 1.25em;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.figure .figcaption::before,
-.figure .figcaption::after {
-  pointer-events: none;
 }
 
 .figure .figcaption,
@@ -311,12 +303,12 @@
 }
 
 .figure h2 {
-  word-spacing: -0.15em;
   font-weight: 300;
 }
 
 .figure h2 span {
-  font-weight: 800;
+  font-weight: 600;
+  font-size: 25px;
 }
 
 .figure h2,
