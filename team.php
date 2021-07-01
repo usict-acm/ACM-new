@@ -144,11 +144,10 @@
     </div>
      <!--***************************************member according to years nav ****************************-->
     <div class="year-navbar">
-        <a class="year" href="#">2019</a>
-        <a class="year" href="#">2020</a>
-        <a class="year" href="#">2021</a>
+        <a class="year" onclick="openTab(2019)">2019</a>
+        <a class="year" onclick="openTab(2020)">2020</a>
+        <a class="year" onclick="openTab(2021)">2021</a>
     </div>
-
 
     <!--  ******************************************Faculty************************************************************* -->
 
@@ -193,21 +192,23 @@
 
       <script>
           let category= ['faculty', 'office-bearers', 'executive-members', 'web-team'];
-          category.forEach(element => {
-          let url = './admin/teams/api.php/?q=readMember&year=2020&category="' + element + '"';
-          var member = document.getElementById(element);
-          member.innerHTML = "";
-          $(document).ready(function() {
-            $.ajax({
-              url: url,
-              method: 'GET',
-              dataType: 'JSON',
-              success: function(data) {
-                console.log("member data",data);
-                data[0].forEach(displayFunc);
-                function displayFunc(row, index) {
-                  if (element == 'faculty') {
-                    member.innerHTML += '<div class="flip-card-without-hover">\
+          openTab(2020); //Default call
+          function openTab(navYear) {
+              category.forEach(element => {
+              let url = './admin/teams/api.php/?q=readMember&year=' + navYear + '&category="' + element + '"';
+              var member = document.getElementById(element);
+              member.innerHTML = "";
+              $(document).ready(function() {
+              $.ajax({
+                url: url,
+                method: 'GET',
+                dataType: 'JSON',
+                success: function(data) {
+                  console.log("member data",data);
+                  data[0].forEach(displayFunc);
+                  function displayFunc(row, index) {
+                    if (element == 'faculty') {
+                      member.innerHTML += '<div class="flip-card-without-hover">\
                                       <div class="flip-card-inner"> \
                                       <hr class="blue-hr" />\
                                       <div class="flip-card-front">\
@@ -217,9 +218,9 @@
                                       </div>\
                                       </div>\
                                       </div>'
-                  }
-                  else {
-                    member.innerHTML += '<div class="flip-card">\
+                    }
+                    else {
+                      member.innerHTML += '<div class="flip-card">\
                                       <div class="flip-card-inner">\
                                       <hr class="blue-hr" />\
                                       <div class="flip-card-front">\
@@ -241,12 +242,13 @@
                                       </div>\
                                       </div>\
                                       </div>'
+                    }
                   }
-                }
-              },
+                },
+              });
             });
           });
-        });
+        }
         </script>
 
     </section>

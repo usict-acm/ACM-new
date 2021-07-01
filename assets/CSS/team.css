@@ -128,14 +128,12 @@ section {
   text-align: center;
   font-size: 20px;
   transition: .6s ease;
+  cursor: pointer;
 }
  a.year:hover{
   background-color:rgb(255, 255, 255) ;
   color: #0297ff;
-}
-a.year:hover{
-    text-decoration: none;
-    
+  text-decoration: none;
 }
 
 .pt-card {
