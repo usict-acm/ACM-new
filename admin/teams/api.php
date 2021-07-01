@@ -16,7 +16,7 @@
 
         $year = $_GET['year'];
         $category = $_GET['category'];
-        
+
         // Member query
         $result = $member->readMember($year, $category);
 
