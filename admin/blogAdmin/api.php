@@ -54,6 +54,7 @@
 
         // Turn to JSON & output
         echo json_encode($multi_array_posts);
+        
         // echo json_encode($pages);
 
         } else {
