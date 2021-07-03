@@ -142,6 +142,7 @@ a.year:active{
   font-weight: bold;
 }
 a.year::after{
+  content: "";
   background-color: rgb(255, 255, 255);
   color: #0297ff;
   text-decoration: underline;
