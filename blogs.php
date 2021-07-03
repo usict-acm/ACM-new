@@ -141,7 +141,7 @@
                   posts.innerHTML += "<div class=col-md-6 col-lg-6 col-12>\
                 <div class=card id=" + row.Sno + " onClick = redirec(" + row.Sno + ") >\
                   <img\
-                  src = ./admin/blogAdmin/" + row.Image + "\
+                  src = ./" + row.Image + "\
                     id=blog" + index + "_image\
                     class=card-img-top\
                     alt=Card image cap\
