@@ -136,9 +136,16 @@ section {
   text-decoration: none;
 }
 a.year:active{
-  background-color:"";
-  color: rgb(7, 0, 0);
+  background-color: rgb(255, 255, 255);
+  color: #0297ff;
   text-decoration: underline;
+  font-weight: bold;
+}
+a.year::after{
+  background-color: rgb(255, 255, 255);
+  color: #0297ff;
+  text-decoration: underline;
+  font-weight: bold;
 }
 @media screen and (max-width: 580px) {
   .year-navbar {
