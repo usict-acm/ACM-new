@@ -1,5 +1,5 @@
 cpanel.yml
-*database.php
-*config.php
+*/database.php
 */node_modules
 upload/*
+enviornment.php
