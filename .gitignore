@@ -1,3 +1,4 @@
 .cpanel.yml
 *database.php
 *config.php
+upload/*
