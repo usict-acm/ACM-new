@@ -191,7 +191,7 @@
       </div>
 
       <script>
-          let category= ['faculty', 'office-bearers', 'executive-members', 'web-team'];
+          let category = ['faculty', 'office-bearers', 'executive-members', 'web-team'];
           openTab(2020); //Default call
           function openTab(navYear) {
               category.forEach(element => {

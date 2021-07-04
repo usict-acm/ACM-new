@@ -14,6 +14,8 @@
         public $instagram;
         public $year;
         public $category;
+        public $added_on;
+        public $updated_on;
 
         public function __construct($db) {
             $this->conn = $db;
