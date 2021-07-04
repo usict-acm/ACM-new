@@ -10,7 +10,7 @@ class Database
 
   public function connect()
   {
-    include('../../enviornment.php');
+    include(__DIR__.'/../../enviornment.php');
     // $this->server = "localhost:3307";
     // $this->username = "root";
     // $this->password = "";
