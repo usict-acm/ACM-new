@@ -2,7 +2,7 @@
     header('Access-Control-Allow-Origin: *');
     header('Content-Type: application/json');
 
-    include_once './database.php';
+    include_once '../blogAdmin/database.php';
     include_once './member.php';
 
     $method = $_SERVER['REQUEST_METHOD'];
