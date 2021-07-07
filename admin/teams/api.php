@@ -24,7 +24,6 @@
         if($result) {
         // Member array
             $member_arr = array();
-            $multi_array_member = array();
 
             while($row = $result->fetch_assoc()){
                 $member_item = array(
@@ -42,10 +41,8 @@
                 array_push($member_arr, $member_item);
         }
 
-        array_push($multi_array_member,$member_arr);
-
         // Turn to JSON & output
-        echo json_encode($multi_array_member);
+        echo json_encode($member_arr);
 
         } else {
         // No Posts

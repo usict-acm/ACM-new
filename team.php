@@ -205,7 +205,7 @@
                 dataType: 'JSON',
                 success: function(data) {
                   console.log("member data",data);
-                  data[0].forEach(displayFunc);
+                  data.forEach(displayFunc);
                   function displayFunc(row, index) {
                     if (element == 'faculty') {
                       member.innerHTML += '<div class="flip-card-without-hover">\
