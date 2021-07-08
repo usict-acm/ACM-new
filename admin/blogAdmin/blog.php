@@ -24,7 +24,8 @@ if(isset($_POST['submit'])){
 
     if(in_array($filecheck,$fileextstored)){
         $destinationfile = 'upload/blogs/'.$filename;
-        move_uploaded_file($filetemppath,$destinationfile);
+        $uploadLocation = '../../upload/blogs/'.$filename;
+        move_uploaded_file($filetemppath,$uploadLocation);
 
         $sql = "INSERT INTO `blog` (`Title`, `Author`, `Content`, `Category`, `Event`, `Image`, `Date`) VALUES ('$title', '$author', '$content', '$category','$event', '$destinationfile', current_timestamp());";
         if($con->query($sql) == true){
