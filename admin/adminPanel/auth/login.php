@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Login</title>
+    <title>ACM Backend</title>
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -25,8 +25,14 @@
 <body class="bg-gradient-primary">
 
 <?php 
-    if($_POST){
-        include('../faqadmin/config.php');
+    echo "Before Post";
+    if(isset($_POST['submit'])){
+        // include('../faqadmin/config.php');
+        require('../../blogAdmin/database.php');
+        $database = new Database();
+        $link = $database->connect();
+        $connection = $link;
+        echo "Coming to Post";
         $username = $_POST['username'];
         $password = $_POST['password'];
         $query = "SELECT * from users where username='$username' and password='$password'";
@@ -41,6 +47,7 @@
         else{
             echo 'Wrong email or password';
         }
+        echo "After Post";
     }
 ?>
 
@@ -71,7 +78,7 @@
                                             <input type="password" class="form-control form-control-user"
                                                 id="exampleInputPassword" name="password" placeholder="Password">
                                         </div>
-                                        <button class="btn btn-primary btn-user btn-block">
+                                        <button name="submit" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </button>
                                         <hr>

@@ -10,11 +10,16 @@ class Database
 
   public function connect()
   {
-
-    $this->server = "localhost:3307";
-    $this->username = "root";
-    $this->password = "";
-    $this->database = "acmbackend";
+    include(__DIR__.'/../../enviornment.php');
+    // $this->server = "localhost:3307";
+    // $this->username = "root";
+    // $this->password = "";
+    // $this->database = "acmbackend";
+    $this->server = $env_server;
+    $this->username = $env_username;
+    $this->password = $env_password;
+    $this->database = $env_database;
+    $this->port = $env_port;
     // $this->port = "3307";
 
     // $conn = new mysqli(
@@ -27,8 +32,12 @@ class Database
     //  $conn = new mysqli($this->server,$this->username,$this->password,
     //           $this->database,$this->port);
 
-    $conn = new mysqli($this->server,$this->username,$this->password,
-              $this->database);
+    $conn = new mysqli(
+      $this->server,
+      $this->username,
+      $this->password,
+      $this->database
+    );
 
     //  echo $conn;
     return $conn;
