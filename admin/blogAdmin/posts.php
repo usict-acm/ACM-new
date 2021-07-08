@@ -22,7 +22,7 @@
 
     // Get Posts
     public function read($start,$limit) {
-      $query = 'SELECT b.Sno, b.Title, b.Author, b.Content, b.Category, b.Event, b.Image, b.Date FROM ' . $this->table . ' b LIMIT ' . $start . ',' . $limit;
+      $query = 'SELECT b.Sno, b.Title, b.Author, b.Content, b.Category, b.Event, b.Image, b.Date FROM ' . $this->table . ' b ORDER BY b.Date DESC LIMIT ' . $start . ',' . $limit;
       $stmt = $this->conn->query($query);
       return $stmt;
     }
