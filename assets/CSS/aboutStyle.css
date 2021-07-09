@@ -14,12 +14,10 @@
      text-decoration:none;
      -webkit-tap-highlight-color:transparent;
 }
-
 .head-1,.head-2,.head-3,.para,figure{
      margin:0;
      padding:0;
 }
-
 .container-lg{
      margin:0 auto;
      padding:0px 20px;
