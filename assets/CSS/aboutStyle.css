@@ -1,87 +1,25 @@
-*{
-     -webkit-box-sizing:border-box;
-     box-sizing:border-box
-}
-html{
-     --gutterWidth:16px;
-     --scrollbarWidth:0px;
-     --windowWidth:calc(100vw - var(--scrollbarWidth));
-     --layoutWidth:calc(var(--windowWidth) - var(--gutterWidth)*2);
-     --layoutWidthMax:1080px;
-     --viewportWidthSmall:375;
-     --viewportWidthMedium:600;
-     --viewportWidthLarge:1112;
-     --viewportScale:calc(var(--windowWidth)/var(--viewportWidthLarge));
-     --paddingTop:160px;
-     --paddingBottom:160px;
-     --columnPaddingNone:0;
-     --columnPaddingNormal:16px;
-     --columnPaddingMedium:16px;
-     --columnPaddingLarge:16px;
-     --columnPaddingXLarge:16px;
-     --rowGapNormal:8px;
-     --rowGapMedium:24px;
-     --rowGapLarge:32px;
-     --rowGapXLarge:64px;
-     --rowGapXXLarge:88px;
-     --rowGap:var(--rowGapNormal);
-     --columnCountMax:1;
-     --columnWidth:calc(var(--layoutWidth)/var(--columnCountMax));
-     --columnMaxWidth:calc(var(--layoutWidthMax)*0.25);
-     --copyMaxWidth:calc(var(--columnMaxWidth)*3);
-}
-body{
-     background:#fff;
-     min-height:100%;
-     display:-webkit-box;
-     display:-ms-flexbox;
-     display:flex;
-     -webkit-box-orient:vertical;
-     -webkit-box-direction:normal;
-     -ms-flex-direction:column;
-     flex-direction:column;
-     
-     font-family:'Camphor','Open Sans','Segoe UI','sans-serif';
-     font-weight:400;
-     font-style:normal;
-     -webkit-text-size-adjust:100%;
-     -webkit-font-smoothing:antialiased;
-     -moz-osx-font-smoothing:grayscale;
-     text-rendering:optimizeLegibility;
-     -webkit-font-feature-settings:"pnum";
-     font-feature-settings:"pnum";
-     font-variant-numeric:proportional-nums;
-     margin:0;
-     padding:0;
-}
-:root{
-     overflow-x:hidden;
-     height:100%
-}
-ol,ul{
-     list-style:none
-}
-a{
-     text-decoration:none
-}
-button,select{
-     border:none;
-     outline:none;
-     background:none;
-     font-family:inherit
-}
-a,button,input,select,textarea{
-     -webkit-tap-highlight-color:transparent
-}
-blockquote,button,figure,dd,dl,h1,h2,h3,h4,h5,h6,ol,p,pre,ul{
-     margin:0;
-     padding:0;
-}
 .globalContent{
      -webkit-box-flex:1;
      -ms-flex-positive:1;
-     flex-grow:1
+     flex-grow:1;
+     font-family:'Camphor','Open Sans','Segoe UI','sans-serif';
+     font-weight:400;
+     font-style:normal;
+     display:flex;
+     flex-direction:column;
+     margin:0;
+     padding:0;
 }
+.common-Link{
+     text-decoration:none;
+     -webkit-tap-highlight-color:transparent;
+}
+
+.head-1,.head-2,.head-3,.para,figure{
+     margin:0;
+     padding:0;
+}
+
 .container-lg{
      margin:0 auto;
      padding:0px 20px;
@@ -187,7 +125,6 @@ blockquote,button,figure,dd,dl,h1,h2,h3,h4,h5,h6,ol,p,pre,ul{
      color:#525f7f
 }
 
-/* ------------------------------------------------------ */
 .u-overflow-hidden{
      overflow:hidden
 }
@@ -195,7 +132,8 @@ blockquote,button,figure,dd,dl,h1,h2,h3,h4,h5,h6,ol,p,pre,ul{
      font-weight:500
 }
 .header{
-     position:relative
+     position:relative;
+     margin-top: 90px;
 }
 .header-content{
      padding:100px 0 70px;
@@ -397,14 +335,7 @@ blockquote,button,figure,dd,dl,h1,h2,h3,h4,h5,h6,ol,p,pre,ul{
           padding:150px 0 70px
      }
 }
-@media (min-width:600px){
-     html{
-          --columnPaddingMedium:32px;
-          --columnPaddingLarge:64px;
-          --columnPaddingXLarge:64px;
-          --columnCountMax:2
-     }
-}
+
 @media (min-width:670px){
      .common-PageTitle{
           font-size:53px;
@@ -487,12 +418,7 @@ blockquote,button,figure,dd,dl,h1,h2,h3,h4,h5,h6,ol,p,pre,ul{
           grid-template-columns:repeat(5,1fr)
      }
 }
-@media (min-width:900px){
-     html{
-          --columnPaddingXLarge:112px;
-          --columnCountMax:4
-     }
-}
+
 @media (min-width:1040px){
      .common-StripeGrid .grid{
           --gutter-column-width:var(--content-column-width);
@@ -511,11 +437,5 @@ blockquote,button,figure,dd,dl,h1,h2,h3,h4,h5,h6,ol,p,pre,ul{
      .customers-grid{
           grid-gap:50px;
           gap:50px
-     }
-}
-@media (min-width:1112px){
-     html{
-          --layoutWidth:var(--layoutWidthMax);
-          --gutterWidth:calc(var(--windowWidth)/2 - var(--layoutWidth)/2)
      }
 }
