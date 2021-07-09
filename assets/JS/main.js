@@ -4,12 +4,12 @@ function myFunction() {
 }
 /*------- Smooth Scroll -------*/
 
-$('a[href^="#"]').on('click', function (event) {
-  var target = $($(this).attr('href'));
+$('a[href^="#"]').on("click", function (event) {
+  var target = $($(this).attr("href"));
 
   if (target.length) {
     event.preventDefault();
-    $('html, body').animate(
+    $("html, body").animate(
       {
         scrollTop: target.offset().top,
       },
@@ -33,7 +33,7 @@ $('a[href^="#"]').on('click', function (event) {
  * Released on: October 16, 2016
  */
 !(function () {
-  'use strict';
+  "use strict";
 
   function e(e) {
     e.fn.swiper = function (a) {
@@ -56,23 +56,23 @@ $('a[href^="#"]').on('click', function (event) {
       function o() {
         var e = S.params.autoplay,
           a = S.slides.eq(S.activeIndex);
-        a.attr('data-swiper-autoplay') &&
-          (e = a.attr('data-swiper-autoplay') || S.params.autoplay),
+        a.attr("data-swiper-autoplay") &&
+          (e = a.attr("data-swiper-autoplay") || S.params.autoplay),
           (S.autoplayTimeoutId = setTimeout(function () {
             S.params.loop
-              ? (S.fixLoop(), S._slideNext(), S.emit('onAutoplay', S))
+              ? (S.fixLoop(), S._slideNext(), S.emit("onAutoplay", S))
               : S.isEnd
               ? i.autoplayStopOnLast
                 ? S.stopAutoplay()
-                : (S._slideTo(0), S.emit('onAutoplay', S))
-              : (S._slideNext(), S.emit('onAutoplay', S));
+                : (S._slideTo(0), S.emit("onAutoplay", S))
+              : (S._slideNext(), S.emit("onAutoplay", S));
           }, e));
       }
 
       function l(e, t) {
         var s = a(e.target);
         if (!s.is(t))
-          if ('string' == typeof t) s = s.parents(t);
+          if ("string" == typeof t) s = s.parents(t);
           else if (t.nodeType) {
             var i;
             return (
@@ -90,14 +90,14 @@ $('a[href^="#"]').on('click', function (event) {
         var t = window.MutationObserver || window.WebkitMutationObserver,
           s = new t(function (e) {
             e.forEach(function (e) {
-              S.onResize(!0), S.emit('onObserverUpdate', S, e);
+              S.onResize(!0), S.emit("onObserverUpdate", S, e);
             });
           });
         s.observe(e, {
-          attributes: 'undefined' == typeof a.attributes || a.attributes,
-          childList: 'undefined' == typeof a.childList || a.childList,
+          attributes: "undefined" == typeof a.attributes || a.attributes,
+          childList: "undefined" == typeof a.childList || a.childList,
           characterData:
-            'undefined' == typeof a.characterData || a.characterData,
+            "undefined" == typeof a.characterData || a.characterData,
         }),
           S.observers.push(s);
       }
@@ -123,15 +123,15 @@ $('a[href^="#"]').on('click', function (event) {
             e.metaKey ||
             (document.activeElement &&
               document.activeElement.nodeName &&
-              ('input' === document.activeElement.nodeName.toLowerCase() ||
-                'textarea' === document.activeElement.nodeName.toLowerCase()))
+              ("input" === document.activeElement.nodeName.toLowerCase() ||
+                "textarea" === document.activeElement.nodeName.toLowerCase()))
           )
         ) {
           if (37 === a || 39 === a || 38 === a || 40 === a) {
             var t = !1;
             if (
-              S.container.parents('.' + S.params.slideClass).length > 0 &&
-              0 === S.container.parents('.' + S.params.slideActiveClass).length
+              S.container.parents("." + S.params.slideClass).length > 0 &&
+              0 === S.container.parents("." + S.params.slideActiveClass).length
             )
               return;
             var s = {
@@ -175,18 +175,18 @@ $('a[href^="#"]').on('click', function (event) {
       }
 
       function u() {
-        var e = 'onwheel',
+        var e = "onwheel",
           a = e in document;
         if (!a) {
-          var t = document.createElement('div');
-          t.setAttribute(e, 'return;'), (a = 'function' == typeof t[e]);
+          var t = document.createElement("div");
+          t.setAttribute(e, "return;"), (a = "function" == typeof t[e]);
         }
         return (
           !a &&
             document.implementation &&
             document.implementation.hasFeature &&
-            document.implementation.hasFeature('', '') !== !0 &&
-            (a = document.implementation.hasFeature('Events.wheel', '3.0')),
+            document.implementation.hasFeature("", "") !== !0 &&
+            (a = document.implementation.hasFeature("Events.wheel", "3.0")),
           a
         );
       }
@@ -227,7 +227,7 @@ $('a[href^="#"]').on('click', function (event) {
                     S.slideReset();
                   }, 300)))
                 : S.params.lazyLoading && S.lazy && S.lazy.load(),
-              S.emit('onScroll', S, e),
+              S.emit("onScroll", S, e),
               S.params.autoplay &&
                 S.params.autoplayDisableOnInteraction &&
                 S.stopAutoplay(),
@@ -239,10 +239,10 @@ $('a[href^="#"]').on('click', function (event) {
               if (a < 0)
                 if ((S.isEnd && !S.params.loop) || S.animating) {
                   if (S.params.mousewheelReleaseOnEdges) return !0;
-                } else S.slideNext(), S.emit('onScroll', S, e);
+                } else S.slideNext(), S.emit("onScroll", S, e);
               else if ((S.isBeginning && !S.params.loop) || S.animating) {
                 if (S.params.mousewheelReleaseOnEdges) return !0;
-              } else S.slidePrev(), S.emit('onScroll', S, e);
+              } else S.slidePrev(), S.emit("onScroll", S, e);
             S.mousewheel.lastScrollTime = new window.Date().getTime();
           }
           return (
@@ -260,15 +260,15 @@ $('a[href^="#"]').on('click', function (event) {
           n = 0,
           o = 0;
         return (
-          'detail' in e && (r = e.detail),
-          'wheelDelta' in e && (r = -e.wheelDelta / 120),
-          'wheelDeltaY' in e && (r = -e.wheelDeltaY / 120),
-          'wheelDeltaX' in e && (i = -e.wheelDeltaX / 120),
-          'axis' in e && e.axis === e.HORIZONTAL_AXIS && ((i = r), (r = 0)),
+          "detail" in e && (r = e.detail),
+          "wheelDelta" in e && (r = -e.wheelDelta / 120),
+          "wheelDeltaY" in e && (r = -e.wheelDeltaY / 120),
+          "wheelDeltaX" in e && (i = -e.wheelDeltaX / 120),
+          "axis" in e && e.axis === e.HORIZONTAL_AXIS && ((i = r), (r = 0)),
           (n = i * a),
           (o = r * a),
-          'deltaY' in e && (o = e.deltaY),
-          'deltaX' in e && (n = e.deltaX),
+          "deltaY" in e && (o = e.deltaY),
+          "deltaX" in e && (n = e.deltaX),
           (n || o) &&
             e.deltaMode &&
             (1 === e.deltaMode ? ((n *= t), (o *= t)) : ((n *= s), (o *= s))),
@@ -289,36 +289,36 @@ $('a[href^="#"]').on('click', function (event) {
           i,
           r,
           n = S.rtl ? -1 : 1;
-        (s = e.attr('data-swiper-parallax') || '0'),
-          (i = e.attr('data-swiper-parallax-x')),
-          (r = e.attr('data-swiper-parallax-y')),
+        (s = e.attr("data-swiper-parallax") || "0"),
+          (i = e.attr("data-swiper-parallax-x")),
+          (r = e.attr("data-swiper-parallax-y")),
           i || r
-            ? ((i = i || '0'), (r = r || '0'))
+            ? ((i = i || "0"), (r = r || "0"))
             : S.isHorizontal()
-            ? ((i = s), (r = '0'))
-            : ((r = s), (i = '0')),
+            ? ((i = s), (r = "0"))
+            : ((r = s), (i = "0")),
           (i =
-            i.indexOf('%') >= 0
-              ? parseInt(i, 10) * t * n + '%'
-              : i * t * n + 'px'),
-          (r = r.indexOf('%') >= 0 ? parseInt(r, 10) * t + '%' : r * t + 'px'),
-          e.transform('translate3d(' + i + ', ' + r + ',0px)');
+            i.indexOf("%") >= 0
+              ? parseInt(i, 10) * t * n + "%"
+              : i * t * n + "px"),
+          (r = r.indexOf("%") >= 0 ? parseInt(r, 10) * t + "%" : r * t + "px"),
+          e.transform("translate3d(" + i + ", " + r + ",0px)");
       }
 
       function g(e) {
         return (
-          0 !== e.indexOf('on') &&
+          0 !== e.indexOf("on") &&
             (e =
               e[0] !== e[0].toUpperCase()
-                ? 'on' + e[0].toUpperCase() + e.substring(1)
-                : 'on' + e),
+                ? "on" + e[0].toUpperCase() + e.substring(1)
+                : "on" + e),
           e
         );
       }
       if (!(this instanceof t)) return new t(e, i);
       var f = {
-          direction: 'horizontal',
-          touchEventsTarget: 'container',
+          direction: "horizontal",
+          touchEventsTarget: "container",
           initialSlide: 0,
           speed: 300,
           autoplay: !1,
@@ -337,7 +337,7 @@ $('a[href^="#"]').on('click', function (event) {
           autoHeight: !1,
           setWrapperSize: !1,
           virtualTranslate: !1,
-          effect: 'slide',
+          effect: "slide",
           coverflow: {
             rotate: 50,
             stretch: 0,
@@ -373,7 +373,7 @@ $('a[href^="#"]').on('click', function (event) {
           mousewheelInvert: !1,
           mousewheelForceToAxis: !1,
           mousewheelSensitivity: 1,
-          mousewheelEventsTarged: 'container',
+          mousewheelEventsTarged: "container",
           hashnav: !1,
           hashnavWatchState: !1,
           history: !1,
@@ -382,7 +382,7 @@ $('a[href^="#"]').on('click', function (event) {
           spaceBetween: 0,
           slidesPerView: 1,
           slidesPerColumn: 1,
-          slidesPerColumnFill: 'column',
+          slidesPerColumnFill: "column",
           slidesPerGroup: 1,
           centeredSlides: !1,
           slidesOffsetBefore: 0,
@@ -402,14 +402,14 @@ $('a[href^="#"]').on('click', function (event) {
           touchReleaseOnEdges: !1,
           uniqueNavElements: !0,
           pagination: null,
-          paginationElement: 'span',
+          paginationElement: "span",
           paginationClickable: !1,
           paginationHide: !1,
           paginationBulletRender: null,
           paginationProgressRender: null,
           paginationFractionRender: null,
           paginationCustomRender: null,
-          paginationType: 'bullets',
+          paginationType: "bullets",
           resistance: !0,
           resistanceRatio: 0.85,
           nextButton: null,
@@ -431,49 +431,49 @@ $('a[href^="#"]').on('click', function (event) {
           loopedSlides: null,
           control: void 0,
           controlInverse: !1,
-          controlBy: 'slide',
+          controlBy: "slide",
           normalizeSlideIndex: !0,
           allowSwipeToPrev: !0,
           allowSwipeToNext: !0,
           swipeHandler: null,
           noSwiping: !0,
-          noSwipingClass: 'swiper-no-swiping',
+          noSwipingClass: "swiper-no-swiping",
           passiveListeners: !0,
-          containerModifierClass: 'swiper-container-',
-          slideClass: 'swiper-slide',
-          slideActiveClass: 'swiper-slide-active',
-          slideDuplicateActiveClass: 'swiper-slide-duplicate-active',
-          slideVisibleClass: 'swiper-slide-visible',
-          slideDuplicateClass: 'swiper-slide-duplicate',
-          slideNextClass: 'swiper-slide-next',
-          slideDuplicateNextClass: 'swiper-slide-duplicate-next',
-          slidePrevClass: 'swiper-slide-prev',
-          slideDuplicatePrevClass: 'swiper-slide-duplicate-prev',
-          wrapperClass: 'swiper-wrapper',
-          bulletClass: 'swiper-pagination-bullet',
-          bulletActiveClass: 'swiper-pagination-bullet-active',
-          buttonDisabledClass: 'swiper-button-disabled',
-          paginationCurrentClass: 'swiper-pagination-current',
-          paginationTotalClass: 'swiper-pagination-total',
-          paginationHiddenClass: 'swiper-pagination-hidden',
-          paginationProgressbarClass: 'swiper-pagination-progressbar',
-          paginationClickableClass: 'swiper-pagination-clickable',
-          paginationModifierClass: 'swiper-pagination-',
-          lazyLoadingClass: 'swiper-lazy',
-          lazyStatusLoadingClass: 'swiper-lazy-loading',
-          lazyStatusLoadedClass: 'swiper-lazy-loaded',
-          lazyPreloaderClass: 'swiper-lazy-preloader',
-          notificationClass: 'swiper-notification',
-          preloaderClass: 'preloader',
-          zoomContainerClass: 'swiper-zoom-container',
+          containerModifierClass: "swiper-container-",
+          slideClass: "swiper-slide",
+          slideActiveClass: "swiper-slide-active",
+          slideDuplicateActiveClass: "swiper-slide-duplicate-active",
+          slideVisibleClass: "swiper-slide-visible",
+          slideDuplicateClass: "swiper-slide-duplicate",
+          slideNextClass: "swiper-slide-next",
+          slideDuplicateNextClass: "swiper-slide-duplicate-next",
+          slidePrevClass: "swiper-slide-prev",
+          slideDuplicatePrevClass: "swiper-slide-duplicate-prev",
+          wrapperClass: "swiper-wrapper",
+          bulletClass: "swiper-pagination-bullet",
+          bulletActiveClass: "swiper-pagination-bullet-active",
+          buttonDisabledClass: "swiper-button-disabled",
+          paginationCurrentClass: "swiper-pagination-current",
+          paginationTotalClass: "swiper-pagination-total",
+          paginationHiddenClass: "swiper-pagination-hidden",
+          paginationProgressbarClass: "swiper-pagination-progressbar",
+          paginationClickableClass: "swiper-pagination-clickable",
+          paginationModifierClass: "swiper-pagination-",
+          lazyLoadingClass: "swiper-lazy",
+          lazyStatusLoadingClass: "swiper-lazy-loading",
+          lazyStatusLoadedClass: "swiper-lazy-loaded",
+          lazyPreloaderClass: "swiper-lazy-preloader",
+          notificationClass: "swiper-notification",
+          preloaderClass: "preloader",
+          zoomContainerClass: "swiper-zoom-container",
           observer: !1,
           observeParents: !1,
           a11y: !1,
-          prevSlideMessage: 'Previous slide',
-          nextSlideMessage: 'Next slide',
-          firstSlideMessage: 'This is the first slide',
-          lastSlideMessage: 'This is the last slide',
-          paginationBulletMessage: 'Go to slide {{index}}',
+          prevSlideMessage: "Previous slide",
+          nextSlideMessage: "Next slide",
+          firstSlideMessage: "This is the first slide",
+          lastSlideMessage: "This is the last slide",
+          paginationBulletMessage: "Go to slide {{index}}",
           runCallbacksOnInit: !0,
         },
         v = i && i.virtualTranslate;
@@ -481,13 +481,13 @@ $('a[href^="#"]').on('click', function (event) {
       var w = {};
       for (var y in i)
         if (
-          'object' != typeof i[y] ||
+          "object" != typeof i[y] ||
           null === i[y] ||
           i[y].nodeType ||
           i[y] === window ||
           i[y] === document ||
-          ('undefined' != typeof s && i[y] instanceof s) ||
-          ('undefined' != typeof jQuery && i[y] instanceof jQuery)
+          ("undefined" != typeof s && i[y] instanceof s) ||
+          ("undefined" != typeof jQuery && i[y] instanceof jQuery)
         )
           w[y] = i[y];
         else {
@@ -495,19 +495,19 @@ $('a[href^="#"]').on('click', function (event) {
           for (var x in i[y]) w[y][x] = i[y][x];
         }
       for (var T in f)
-        if ('undefined' == typeof i[T]) i[T] = f[T];
-        else if ('object' == typeof i[T])
+        if ("undefined" == typeof i[T]) i[T] = f[T];
+        else if ("object" == typeof i[T])
           for (var b in f[T])
-            'undefined' == typeof i[T][b] && (i[T][b] = f[T][b]);
+            "undefined" == typeof i[T][b] && (i[T][b] = f[T][b]);
       var S = this;
       if (
         ((S.params = i),
         (S.originalParams = w),
         (S.classNames = []),
-        'undefined' != typeof a && 'undefined' != typeof s && (a = s),
-        ('undefined' != typeof a ||
+        "undefined" != typeof a && "undefined" != typeof s && (a = s),
+        ("undefined" != typeof a ||
           (a =
-            'undefined' == typeof s
+            "undefined" == typeof s
               ? window.Dom7 || window.Zepto || window.jQuery
               : s)) &&
           ((S.$ = a),
@@ -524,7 +524,7 @@ $('a[href^="#"]').on('click', function (event) {
             });
             for (var s = 0; s < t.length; s++)
               (e = t[s]), e >= window.innerWidth && !a && (a = e);
-            return a || 'max';
+            return a || "max";
           }),
           (S.setBreakpoint = function () {
             var e = S.getActiveBreakpoint();
@@ -552,30 +552,30 @@ $('a[href^="#"]').on('click', function (event) {
           );
         }
         (S.container[0].swiper = S),
-          S.container.data('swiper', S),
+          S.container.data("swiper", S),
           S.classNames.push(
             S.params.containerModifierClass + S.params.direction
           ),
           S.params.freeMode &&
-            S.classNames.push(S.params.containerModifierClass + 'free-mode'),
+            S.classNames.push(S.params.containerModifierClass + "free-mode"),
           S.support.flexbox ||
-            (S.classNames.push(S.params.containerModifierClass + 'no-flexbox'),
+            (S.classNames.push(S.params.containerModifierClass + "no-flexbox"),
             (S.params.slidesPerColumn = 1)),
           S.params.autoHeight &&
-            S.classNames.push(S.params.containerModifierClass + 'autoheight'),
+            S.classNames.push(S.params.containerModifierClass + "autoheight"),
           (S.params.parallax || S.params.watchSlidesVisibility) &&
             (S.params.watchSlidesProgress = !0),
           S.params.touchReleaseOnEdges && (S.params.resistanceRatio = 0),
-          ['cube', 'coverflow', 'flip'].indexOf(S.params.effect) >= 0 &&
+          ["cube", "coverflow", "flip"].indexOf(S.params.effect) >= 0 &&
             (S.support.transforms3d
               ? ((S.params.watchSlidesProgress = !0),
-                S.classNames.push(S.params.containerModifierClass + '3d'))
-              : (S.params.effect = 'slide')),
-          'slide' !== S.params.effect &&
+                S.classNames.push(S.params.containerModifierClass + "3d"))
+              : (S.params.effect = "slide")),
+          "slide" !== S.params.effect &&
             S.classNames.push(
               S.params.containerModifierClass + S.params.effect
             ),
-          'cube' === S.params.effect &&
+          "cube" === S.params.effect &&
             ((S.params.resistanceRatio = 0),
             (S.params.slidesPerView = 1),
             (S.params.slidesPerColumn = 1),
@@ -584,27 +584,27 @@ $('a[href^="#"]').on('click', function (event) {
             (S.params.spaceBetween = 0),
             (S.params.virtualTranslate = !0),
             (S.params.setWrapperSize = !1)),
-          ('fade' !== S.params.effect && 'flip' !== S.params.effect) ||
+          ("fade" !== S.params.effect && "flip" !== S.params.effect) ||
             ((S.params.slidesPerView = 1),
             (S.params.slidesPerColumn = 1),
             (S.params.slidesPerGroup = 1),
             (S.params.watchSlidesProgress = !0),
             (S.params.spaceBetween = 0),
             (S.params.setWrapperSize = !1),
-            'undefined' == typeof v && (S.params.virtualTranslate = !0)),
+            "undefined" == typeof v && (S.params.virtualTranslate = !0)),
           S.params.grabCursor && S.support.touch && (S.params.grabCursor = !1),
-          (S.wrapper = S.container.children('.' + S.params.wrapperClass)),
+          (S.wrapper = S.container.children("." + S.params.wrapperClass)),
           S.params.pagination &&
             ((S.paginationContainer = a(S.params.pagination)),
             S.params.uniqueNavElements &&
-              'string' == typeof S.params.pagination &&
+              "string" == typeof S.params.pagination &&
               S.paginationContainer.length > 1 &&
               1 === S.container.find(S.params.pagination).length &&
               (S.paginationContainer = S.container.find(S.params.pagination)),
-            'bullets' === S.params.paginationType &&
+            "bullets" === S.params.paginationType &&
             S.params.paginationClickable
               ? S.paginationContainer.addClass(
-                  S.params.paginationModifierClass + 'clickable'
+                  S.params.paginationModifierClass + "clickable"
                 )
               : (S.params.paginationClickable = !1),
             S.paginationContainer.addClass(
@@ -614,31 +614,31 @@ $('a[href^="#"]').on('click', function (event) {
             (S.params.nextButton &&
               ((S.nextButton = a(S.params.nextButton)),
               S.params.uniqueNavElements &&
-                'string' == typeof S.params.nextButton &&
+                "string" == typeof S.params.nextButton &&
                 S.nextButton.length > 1 &&
                 1 === S.container.find(S.params.nextButton).length &&
                 (S.nextButton = S.container.find(S.params.nextButton))),
             S.params.prevButton &&
               ((S.prevButton = a(S.params.prevButton)),
               S.params.uniqueNavElements &&
-                'string' == typeof S.params.prevButton &&
+                "string" == typeof S.params.prevButton &&
                 S.prevButton.length > 1 &&
                 1 === S.container.find(S.params.prevButton).length &&
                 (S.prevButton = S.container.find(S.params.prevButton)))),
           (S.isHorizontal = function () {
-            return 'horizontal' === S.params.direction;
+            return "horizontal" === S.params.direction;
           }),
           (S.rtl =
             S.isHorizontal() &&
-            ('rtl' === S.container[0].dir.toLowerCase() ||
-              'rtl' === S.container.css('direction'))),
-          S.rtl && S.classNames.push(S.params.containerModifierClass + 'rtl'),
-          S.rtl && (S.wrongRTL = '-webkit-box' === S.wrapper.css('display')),
+            ("rtl" === S.container[0].dir.toLowerCase() ||
+              "rtl" === S.container.css("direction"))),
+          S.rtl && S.classNames.push(S.params.containerModifierClass + "rtl"),
+          S.rtl && (S.wrongRTL = "-webkit-box" === S.wrapper.css("display")),
           S.params.slidesPerColumn > 1 &&
-            S.classNames.push(S.params.containerModifierClass + 'multirow'),
+            S.classNames.push(S.params.containerModifierClass + "multirow"),
           S.device.android &&
-            S.classNames.push(S.params.containerModifierClass + 'android'),
-          S.container.addClass(S.classNames.join(' ')),
+            S.classNames.push(S.params.containerModifierClass + "android"),
+          S.container.addClass(S.classNames.join(" ")),
           (S.translate = 0),
           (S.progress = 0),
           (S.velocity = 0),
@@ -675,15 +675,15 @@ $('a[href^="#"]').on('click', function (event) {
               S.params.grabCursor && S.setGrabCursor();
           }),
           (S.setGrabCursor = function (e) {
-            (S.container[0].style.cursor = 'move'),
+            (S.container[0].style.cursor = "move"),
               (S.container[0].style.cursor = e
-                ? '-webkit-grabbing'
-                : '-webkit-grab'),
-              (S.container[0].style.cursor = e ? '-moz-grabbin' : '-moz-grab'),
-              (S.container[0].style.cursor = e ? 'grabbing' : 'grab');
+                ? "-webkit-grabbing"
+                : "-webkit-grab"),
+              (S.container[0].style.cursor = e ? "-moz-grabbin" : "-moz-grab"),
+              (S.container[0].style.cursor = e ? "grabbing" : "grab");
           }),
           (S.unsetGrabCursor = function () {
-            S.container[0].style.cursor = '';
+            S.container[0].style.cursor = "";
           }),
           S.params.grabCursor && S.setGrabCursor(),
           (S.imagesToLoad = []),
@@ -706,23 +706,23 @@ $('a[href^="#"]').on('click', function (event) {
           }),
           (S.preloadImages = function () {
             function e() {
-              'undefined' != typeof S &&
+              "undefined" != typeof S &&
                 null !== S &&
                 (void 0 !== S.imagesLoaded && S.imagesLoaded++,
                 S.imagesLoaded === S.imagesToLoad.length &&
                   (S.params.updateOnImagesReady && S.update(),
-                  S.emit('onImagesReady', S)));
+                  S.emit("onImagesReady", S)));
             }
-            S.imagesToLoad = S.container.find('img');
+            S.imagesToLoad = S.container.find("img");
             for (var a = 0; a < S.imagesToLoad.length; a++)
               S.loadImage(
                 S.imagesToLoad[a],
                 S.imagesToLoad[a].currentSrc ||
-                  S.imagesToLoad[a].getAttribute('src'),
+                  S.imagesToLoad[a].getAttribute("src"),
                 S.imagesToLoad[a].srcset ||
-                  S.imagesToLoad[a].getAttribute('srcset'),
+                  S.imagesToLoad[a].getAttribute("srcset"),
                 S.imagesToLoad[a].sizes ||
-                  S.imagesToLoad[a].getAttribute('sizes'),
+                  S.imagesToLoad[a].getAttribute("sizes"),
                 !0,
                 e
               );
@@ -732,10 +732,10 @@ $('a[href^="#"]').on('click', function (event) {
           (S.autoplayPaused = !1),
           (S.startAutoplay = function () {
             return (
-              'undefined' == typeof S.autoplayTimeoutId &&
+              "undefined" == typeof S.autoplayTimeoutId &&
               !!S.params.autoplay &&
               !S.autoplaying &&
-              ((S.autoplaying = !0), S.emit('onAutoplayStart', S), void o())
+              ((S.autoplaying = !0), S.emit("onAutoplayStart", S), void o())
             );
           }),
           (S.stopAutoplay = function (e) {
@@ -743,7 +743,7 @@ $('a[href^="#"]').on('click', function (event) {
               (S.autoplayTimeoutId && clearTimeout(S.autoplayTimeoutId),
               (S.autoplaying = !1),
               (S.autoplayTimeoutId = void 0),
-              S.emit('onAutoplayStop', S));
+              S.emit("onAutoplayStop", S));
           }),
           (S.pauseAutoplay = function (e) {
             S.autoplayPaused ||
@@ -766,7 +766,7 @@ $('a[href^="#"]').on('click', function (event) {
           (S.updateAutoHeight = function () {
             var e = [],
               a = 0;
-            if ('auto' !== S.params.slidesPerView && S.params.slidesPerView > 1)
+            if ("auto" !== S.params.slidesPerView && S.params.slidesPerView > 1)
               for (r = 0; r < Math.ceil(S.params.slidesPerView); r++) {
                 var t = S.activeIndex + r;
                 if (t > S.slides.length) break;
@@ -774,38 +774,38 @@ $('a[href^="#"]').on('click', function (event) {
               }
             else e.push(S.slides.eq(S.activeIndex)[0]);
             for (r = 0; r < e.length; r++)
-              if ('undefined' != typeof e[r]) {
+              if ("undefined" != typeof e[r]) {
                 var s = e[r].offsetHeight;
                 a = s > a ? s : a;
               }
-            a && S.wrapper.css('height', a + 'px');
+            a && S.wrapper.css("height", a + "px");
           }),
           (S.updateContainerSize = function () {
             var e, a;
             (e =
-              'undefined' != typeof S.params.width
+              "undefined" != typeof S.params.width
                 ? S.params.width
                 : S.container[0].clientWidth),
               (a =
-                'undefined' != typeof S.params.height
+                "undefined" != typeof S.params.height
                   ? S.params.height
                   : S.container[0].clientHeight),
               (0 === e && S.isHorizontal()) ||
                 (0 === a && !S.isHorizontal()) ||
                 ((e =
                   e -
-                  parseInt(S.container.css('padding-left'), 10) -
-                  parseInt(S.container.css('padding-right'), 10)),
+                  parseInt(S.container.css("padding-left"), 10) -
+                  parseInt(S.container.css("padding-right"), 10)),
                 (a =
                   a -
-                  parseInt(S.container.css('padding-top'), 10) -
-                  parseInt(S.container.css('padding-bottom'), 10)),
+                  parseInt(S.container.css("padding-top"), 10) -
+                  parseInt(S.container.css("padding-bottom"), 10)),
                 (S.width = e),
                 (S.height = a),
                 (S.size = S.isHorizontal() ? S.width : S.height));
           }),
           (S.updateSlidesSize = function () {
-            (S.slides = S.wrapper.children('.' + S.params.slideClass)),
+            (S.slides = S.wrapper.children("." + S.params.slideClass)),
               (S.snapGrid = []),
               (S.slidesGrid = []),
               (S.slidesSizesGrid = []);
@@ -814,19 +814,19 @@ $('a[href^="#"]').on('click', function (event) {
               t = -S.params.slidesOffsetBefore,
               s = 0,
               i = 0;
-            if ('undefined' != typeof S.size) {
-              'string' == typeof a &&
-                a.indexOf('%') >= 0 &&
-                (a = (parseFloat(a.replace('%', '')) / 100) * S.size),
+            if ("undefined" != typeof S.size) {
+              "string" == typeof a &&
+                a.indexOf("%") >= 0 &&
+                (a = (parseFloat(a.replace("%", "")) / 100) * S.size),
                 (S.virtualSize = -a),
                 S.rtl
                   ? S.slides.css({
-                      marginLeft: '',
-                      marginTop: '',
+                      marginLeft: "",
+                      marginTop: "",
                     })
                   : S.slides.css({
-                      marginRight: '',
-                      marginBottom: '',
+                      marginRight: "",
+                      marginBottom: "",
                     });
               var r;
               S.params.slidesPerColumn > 1 &&
@@ -836,8 +836,8 @@ $('a[href^="#"]').on('click', function (event) {
                     ? S.slides.length
                     : Math.ceil(S.slides.length / S.params.slidesPerColumn) *
                       S.params.slidesPerColumn),
-                'auto' !== S.params.slidesPerView &&
-                  'row' === S.params.slidesPerColumnFill &&
+                "auto" !== S.params.slidesPerView &&
+                  "row" === S.params.slidesPerColumnFill &&
                   (r = Math.max(
                     r,
                     S.params.slidesPerView * S.params.slidesPerColumn
@@ -851,7 +851,7 @@ $('a[href^="#"]').on('click', function (event) {
                 var u = S.slides.eq(e);
                 if (S.params.slidesPerColumn > 1) {
                   var c, m, h;
-                  'column' === S.params.slidesPerColumnFill
+                  "column" === S.params.slidesPerColumnFill
                     ? ((m = Math.floor(e / l)),
                       (h = e - m * l),
                       (m > d || (m === d && h === l - 1)) &&
@@ -859,25 +859,25 @@ $('a[href^="#"]').on('click', function (event) {
                         ((h = 0), m++),
                       (c = m + (h * r) / l),
                       u.css({
-                        '-webkit-box-ordinal-group': c,
-                        '-moz-box-ordinal-group': c,
-                        '-ms-flex-order': c,
-                        '-webkit-order': c,
+                        "-webkit-box-ordinal-group": c,
+                        "-moz-box-ordinal-group": c,
+                        "-ms-flex-order": c,
+                        "-webkit-order": c,
                         order: c,
                       }))
                     : ((h = Math.floor(e / p)), (m = e - h * p)),
                     u
                       .css(
-                        'margin-' + (S.isHorizontal() ? 'top' : 'left'),
+                        "margin-" + (S.isHorizontal() ? "top" : "left"),
                         0 !== h &&
                           S.params.spaceBetween &&
-                          S.params.spaceBetween + 'px'
+                          S.params.spaceBetween + "px"
                       )
-                      .attr('data-swiper-column', m)
-                      .attr('data-swiper-row', h);
+                      .attr("data-swiper-column", m)
+                      .attr("data-swiper-row", h);
                 }
-                'none' !== u.css('display') &&
-                  ('auto' === S.params.slidesPerView
+                "none" !== u.css("display") &&
+                  ("auto" === S.params.slidesPerView
                     ? ((o = S.isHorizontal()
                         ? u.outerWidth(!0)
                         : u.outerHeight(!0)),
@@ -887,8 +887,8 @@ $('a[href^="#"]').on('click', function (event) {
                         S.params.slidesPerView),
                       S.params.roundLengths && (o = n(o)),
                       S.isHorizontal()
-                        ? (S.slides[e].style.width = o + 'px')
-                        : (S.slides[e].style.height = o + 'px')),
+                        ? (S.slides[e].style.width = o + "px")
+                        : (S.slides[e].style.height = o + "px")),
                   (S.slides[e].swiperSlideSize = o),
                   S.slidesSizesGrid.push(o),
                   S.params.centeredSlides
@@ -910,18 +910,18 @@ $('a[href^="#"]').on('click', function (event) {
               if (
                 (S.rtl &&
                   S.wrongRTL &&
-                  ('slide' === S.params.effect ||
-                    'coverflow' === S.params.effect) &&
+                  ("slide" === S.params.effect ||
+                    "coverflow" === S.params.effect) &&
                   S.wrapper.css({
-                    width: S.virtualSize + S.params.spaceBetween + 'px',
+                    width: S.virtualSize + S.params.spaceBetween + "px",
                   }),
                 (S.support.flexbox && !S.params.setWrapperSize) ||
                   (S.isHorizontal()
                     ? S.wrapper.css({
-                        width: S.virtualSize + S.params.spaceBetween + 'px',
+                        width: S.virtualSize + S.params.spaceBetween + "px",
                       })
                     : S.wrapper.css({
-                        height: S.virtualSize + S.params.spaceBetween + 'px',
+                        height: S.virtualSize + S.params.spaceBetween + "px",
                       })),
                 S.params.slidesPerColumn > 1 &&
                   ((S.virtualSize = (o + S.params.spaceBetween) * r),
@@ -930,10 +930,10 @@ $('a[href^="#"]').on('click', function (event) {
                     S.params.spaceBetween),
                   S.isHorizontal()
                     ? S.wrapper.css({
-                        width: S.virtualSize + S.params.spaceBetween + 'px',
+                        width: S.virtualSize + S.params.spaceBetween + "px",
                       })
                     : S.wrapper.css({
-                        height: S.virtualSize + S.params.spaceBetween + 'px',
+                        height: S.virtualSize + S.params.spaceBetween + "px",
                       }),
                   S.params.centeredSlides))
               ) {
@@ -956,13 +956,13 @@ $('a[href^="#"]').on('click', function (event) {
                   (S.isHorizontal()
                     ? S.rtl
                       ? S.slides.css({
-                          marginLeft: a + 'px',
+                          marginLeft: a + "px",
                         })
                       : S.slides.css({
-                          marginRight: a + 'px',
+                          marginRight: a + "px",
                         })
                     : S.slides.css({
-                        marginBottom: a + 'px',
+                        marginBottom: a + "px",
                       })),
                 S.params.watchSlidesProgress && S.updateSlidesOffset();
             }
@@ -975,10 +975,10 @@ $('a[href^="#"]').on('click', function (event) {
           }),
           (S.updateSlidesProgress = function (e) {
             if (
-              ('undefined' == typeof e && (e = S.translate || 0),
+              ("undefined" == typeof e && (e = S.translate || 0),
               0 !== S.slides.length)
             ) {
-              'undefined' == typeof S.slides[0].swiperSlideOffset &&
+              "undefined" == typeof S.slides[0].swiperSlideOffset &&
                 S.updateSlidesOffset();
               var a = -e;
               S.rtl && (a = e),
@@ -1004,7 +1004,7 @@ $('a[href^="#"]').on('click', function (event) {
             }
           }),
           (S.updateProgress = function (e) {
-            'undefined' == typeof e && (e = S.translate || 0);
+            "undefined" == typeof e && (e = S.translate || 0);
             var a = S.maxTranslate() - S.minTranslate(),
               t = S.isBeginning,
               s = S.isEnd;
@@ -1013,10 +1013,10 @@ $('a[href^="#"]').on('click', function (event) {
               : ((S.progress = (e - S.minTranslate()) / a),
                 (S.isBeginning = S.progress <= 0),
                 (S.isEnd = S.progress >= 1)),
-              S.isBeginning && !t && S.emit('onReachBeginning', S),
-              S.isEnd && !s && S.emit('onReachEnd', S),
+              S.isBeginning && !t && S.emit("onReachBeginning", S),
+              S.isEnd && !s && S.emit("onReachEnd", S),
               S.params.watchSlidesProgress && S.updateSlidesProgress(e),
-              S.emit('onProgress', S, S.progress);
+              S.emit("onProgress", S, S.progress);
           }),
           (S.updateActiveIndex = function () {
             var e,
@@ -1024,7 +1024,7 @@ $('a[href^="#"]').on('click', function (event) {
               t,
               s = S.rtl ? S.translate : -S.translate;
             for (a = 0; a < S.slidesGrid.length; a++)
-              'undefined' != typeof S.slidesGrid[a + 1]
+              "undefined" != typeof S.slidesGrid[a + 1]
                 ? s >= S.slidesGrid[a] &&
                   s <
                     S.slidesGrid[a + 1] -
@@ -1035,7 +1035,7 @@ $('a[href^="#"]').on('click', function (event) {
                     (e = a + 1)
                 : s >= S.slidesGrid[a] && (e = a);
             S.params.normalizeSlideIndex &&
-              (e < 0 || 'undefined' == typeof e) &&
+              (e < 0 || "undefined" == typeof e) &&
               (e = 0),
               (t = Math.floor(e / S.params.slidesPerGroup)),
               t >= S.snapGrid.length && (t = S.snapGrid.length - 1),
@@ -1048,21 +1048,21 @@ $('a[href^="#"]').on('click', function (event) {
           }),
           (S.updateRealIndex = function () {
             S.realIndex =
-              S.slides.eq(S.activeIndex).attr('data-swiper-slide-index') ||
+              S.slides.eq(S.activeIndex).attr("data-swiper-slide-index") ||
               S.activeIndex;
           }),
           (S.updateClasses = function () {
             S.slides.removeClass(
               S.params.slideActiveClass +
-                ' ' +
+                " " +
                 S.params.slideNextClass +
-                ' ' +
+                " " +
                 S.params.slidePrevClass +
-                ' ' +
+                " " +
                 S.params.slideDuplicateActiveClass +
-                ' ' +
+                " " +
                 S.params.slideDuplicateNextClass +
-                ' ' +
+                " " +
                 S.params.slideDuplicatePrevClass
             );
             var e = S.slides.eq(S.activeIndex);
@@ -1071,9 +1071,9 @@ $('a[href^="#"]').on('click', function (event) {
                 (e.hasClass(S.params.slideDuplicateClass)
                   ? S.wrapper
                       .children(
-                        '.' +
+                        "." +
                           S.params.slideClass +
-                          ':not(.' +
+                          ":not(." +
                           S.params.slideDuplicateClass +
                           ')[data-swiper-slide-index="' +
                           S.realIndex +
@@ -1082,9 +1082,9 @@ $('a[href^="#"]').on('click', function (event) {
                       .addClass(S.params.slideDuplicateActiveClass)
                   : S.wrapper
                       .children(
-                        '.' +
+                        "." +
                           S.params.slideClass +
-                          '.' +
+                          "." +
                           S.params.slideDuplicateClass +
                           '[data-swiper-slide-index="' +
                           S.realIndex +
@@ -1092,13 +1092,13 @@ $('a[href^="#"]').on('click', function (event) {
                       )
                       .addClass(S.params.slideDuplicateActiveClass));
             var t = e
-              .next('.' + S.params.slideClass)
+              .next("." + S.params.slideClass)
               .addClass(S.params.slideNextClass);
             S.params.loop &&
               0 === t.length &&
               ((t = S.slides.eq(0)), t.addClass(S.params.slideNextClass));
             var s = e
-              .prev('.' + S.params.slideClass)
+              .prev("." + S.params.slideClass)
               .addClass(S.params.slidePrevClass);
             if (
               (S.params.loop &&
@@ -1108,46 +1108,46 @@ $('a[href^="#"]').on('click', function (event) {
                 (t.hasClass(S.params.slideDuplicateClass)
                   ? S.wrapper
                       .children(
-                        '.' +
+                        "." +
                           S.params.slideClass +
-                          ':not(.' +
+                          ":not(." +
                           S.params.slideDuplicateClass +
                           ')[data-swiper-slide-index="' +
-                          t.attr('data-swiper-slide-index') +
+                          t.attr("data-swiper-slide-index") +
                           '"]'
                       )
                       .addClass(S.params.slideDuplicateNextClass)
                   : S.wrapper
                       .children(
-                        '.' +
+                        "." +
                           S.params.slideClass +
-                          '.' +
+                          "." +
                           S.params.slideDuplicateClass +
                           '[data-swiper-slide-index="' +
-                          t.attr('data-swiper-slide-index') +
+                          t.attr("data-swiper-slide-index") +
                           '"]'
                       )
                       .addClass(S.params.slideDuplicateNextClass),
                 s.hasClass(S.params.slideDuplicateClass)
                   ? S.wrapper
                       .children(
-                        '.' +
+                        "." +
                           S.params.slideClass +
-                          ':not(.' +
+                          ":not(." +
                           S.params.slideDuplicateClass +
                           ')[data-swiper-slide-index="' +
-                          s.attr('data-swiper-slide-index') +
+                          s.attr("data-swiper-slide-index") +
                           '"]'
                       )
                       .addClass(S.params.slideDuplicatePrevClass)
                   : S.wrapper
                       .children(
-                        '.' +
+                        "." +
                           S.params.slideClass +
-                          '.' +
+                          "." +
                           S.params.slideDuplicateClass +
                           '[data-swiper-slide-index="' +
-                          s.attr('data-swiper-slide-index') +
+                          s.attr("data-swiper-slide-index") +
                           '"]'
                       )
                       .addClass(S.params.slideDuplicatePrevClass)),
@@ -1169,13 +1169,13 @@ $('a[href^="#"]').on('click', function (event) {
                       (r -= S.slides.length - 2 * S.loopedSlides),
                     r > n - 1 && (r -= n),
                     r < 0 &&
-                      'bullets' !== S.params.paginationType &&
+                      "bullets" !== S.params.paginationType &&
                       (r = n + r))
                   : (r =
-                      'undefined' != typeof S.snapIndex
+                      "undefined" != typeof S.snapIndex
                         ? S.snapIndex
                         : S.activeIndex || 0),
-                'bullets' === S.params.paginationType &&
+                "bullets" === S.params.paginationType &&
                   S.bullets &&
                   S.bullets.length > 0 &&
                   (S.bullets.removeClass(S.params.bulletActiveClass),
@@ -1185,32 +1185,32 @@ $('a[href^="#"]').on('click', function (event) {
                           a(this).addClass(S.params.bulletActiveClass);
                       })
                     : S.bullets.eq(r).addClass(S.params.bulletActiveClass)),
-                'fraction' === S.params.paginationType &&
+                "fraction" === S.params.paginationType &&
                   (S.paginationContainer
-                    .find('.' + S.params.paginationCurrentClass)
+                    .find("." + S.params.paginationCurrentClass)
                     .text(r + 1),
                   S.paginationContainer
-                    .find('.' + S.params.paginationTotalClass)
+                    .find("." + S.params.paginationTotalClass)
                     .text(n)),
-                'progress' === S.params.paginationType)
+                "progress" === S.params.paginationType)
               ) {
                 var o = (r + 1) / n,
                   l = o,
                   p = 1;
                 S.isHorizontal() || ((p = o), (l = 1)),
                   S.paginationContainer
-                    .find('.' + S.params.paginationProgressbarClass)
+                    .find("." + S.params.paginationProgressbarClass)
                     .transform(
-                      'translate3d(0,0,0) scaleX(' + l + ') scaleY(' + p + ')'
+                      "translate3d(0,0,0) scaleX(" + l + ") scaleY(" + p + ")"
                     )
                     .transition(S.params.speed);
               }
-              'custom' === S.params.paginationType &&
+              "custom" === S.params.paginationType &&
                 S.params.paginationCustomRender &&
                 (S.paginationContainer.html(
                   S.params.paginationCustomRender(S, r + 1, n)
                 ),
-                S.emit('onPaginationRendered', S, S.paginationContainer[0]));
+                S.emit("onPaginationRendered", S, S.paginationContainer[0]));
             }
             S.params.loop ||
               (S.params.prevButton &&
@@ -1236,8 +1236,8 @@ $('a[href^="#"]').on('click', function (event) {
               S.paginationContainer &&
               S.paginationContainer.length > 0
             ) {
-              var e = '';
-              if ('bullets' === S.params.paginationType) {
+              var e = "";
+              if ("bullets" === S.params.paginationType) {
                 for (
                   var a = S.params.loop
                       ? Math.ceil(
@@ -1255,23 +1255,23 @@ $('a[href^="#"]').on('click', function (event) {
                         t,
                         S.params.bulletClass
                       )
-                    : '<' +
+                    : "<" +
                       S.params.paginationElement +
                       ' class="' +
                       S.params.bulletClass +
                       '"></' +
                       S.params.paginationElement +
-                      '>';
+                      ">";
                 S.paginationContainer.html(e),
                   (S.bullets = S.paginationContainer.find(
-                    '.' + S.params.bulletClass
+                    "." + S.params.bulletClass
                   )),
                   S.params.paginationClickable &&
                     S.params.a11y &&
                     S.a11y &&
                     S.a11y.initPagination();
               }
-              'fraction' === S.params.paginationType &&
+              "fraction" === S.params.paginationType &&
                 ((e = S.params.paginationFractionRender
                   ? S.params.paginationFractionRender(
                       S,
@@ -1284,7 +1284,7 @@ $('a[href^="#"]').on('click', function (event) {
                     S.params.paginationTotalClass +
                     '"></span>'),
                 S.paginationContainer.html(e)),
-                'progress' === S.params.paginationType &&
+                "progress" === S.params.paginationType &&
                   ((e = S.params.paginationProgressRender
                     ? S.params.paginationProgressRender(
                         S,
@@ -1294,8 +1294,8 @@ $('a[href^="#"]').on('click', function (event) {
                       S.params.paginationProgressbarClass +
                       '"></span>'),
                   S.paginationContainer.html(e)),
-                'custom' !== S.params.paginationType &&
-                  S.emit('onPaginationRendered', S, S.paginationContainer[0]);
+                "custom" !== S.params.paginationType &&
+                  S.emit("onPaginationRendered", S, S.paginationContainer[0]);
             }
           }),
           (S.update = function (e) {
@@ -1325,7 +1325,7 @@ $('a[href^="#"]').on('click', function (event) {
                 S.params.freeMode
                   ? (a(), S.params.autoHeight && S.updateAutoHeight())
                   : ((t =
-                      ('auto' === S.params.slidesPerView ||
+                      ("auto" === S.params.slidesPerView ||
                         S.params.slidesPerView > 1) &&
                       S.isEnd &&
                       !S.params.centeredSlides
@@ -1341,7 +1341,7 @@ $('a[href^="#"]').on('click', function (event) {
             (S.params.allowSwipeToPrev = S.params.allowSwipeToNext = !0),
               S.updateContainerSize(),
               S.updateSlidesSize(),
-              ('auto' === S.params.slidesPerView || S.params.freeMode || e) &&
+              ("auto" === S.params.slidesPerView || S.params.freeMode || e) &&
                 S.updatePagination(),
               S.params.scrollbar && S.scrollbar && S.scrollbar.set(),
               S.controller &&
@@ -1360,7 +1360,7 @@ $('a[href^="#"]').on('click', function (event) {
             } else
               S.updateClasses(),
                 (s =
-                  ('auto' === S.params.slidesPerView ||
+                  ("auto" === S.params.slidesPerView ||
                     S.params.slidesPerView > 1) &&
                   S.isEnd &&
                   !S.params.centeredSlides
@@ -1371,47 +1371,47 @@ $('a[href^="#"]').on('click', function (event) {
               (S.params.allowSwipeToNext = t);
           }),
           (S.touchEventsDesktop = {
-            start: 'mousedown',
-            move: 'mousemove',
-            end: 'mouseup',
+            start: "mousedown",
+            move: "mousemove",
+            end: "mouseup",
           }),
           window.navigator.pointerEnabled
             ? (S.touchEventsDesktop = {
-                start: 'pointerdown',
-                move: 'pointermove',
-                end: 'pointerup',
+                start: "pointerdown",
+                move: "pointermove",
+                end: "pointerup",
               })
             : window.navigator.msPointerEnabled &&
               (S.touchEventsDesktop = {
-                start: 'MSPointerDown',
-                move: 'MSPointerMove',
-                end: 'MSPointerUp',
+                start: "MSPointerDown",
+                move: "MSPointerMove",
+                end: "MSPointerUp",
               }),
           (S.touchEvents = {
             start:
               S.support.touch || !S.params.simulateTouch
-                ? 'touchstart'
+                ? "touchstart"
                 : S.touchEventsDesktop.start,
             move:
               S.support.touch || !S.params.simulateTouch
-                ? 'touchmove'
+                ? "touchmove"
                 : S.touchEventsDesktop.move,
             end:
               S.support.touch || !S.params.simulateTouch
-                ? 'touchend'
+                ? "touchend"
                 : S.touchEventsDesktop.end,
           }),
           (window.navigator.pointerEnabled ||
             window.navigator.msPointerEnabled) &&
-            ('container' === S.params.touchEventsTarget
+            ("container" === S.params.touchEventsTarget
               ? S.container
               : S.wrapper
-            ).addClass('swiper-wp8-' + S.params.direction),
+            ).addClass("swiper-wp8-" + S.params.direction),
           (S.initEvents = function (e) {
-            var a = e ? 'off' : 'on',
-              t = e ? 'removeEventListener' : 'addEventListener',
+            var a = e ? "off" : "on",
+              t = e ? "removeEventListener" : "addEventListener",
               s =
-                'container' === S.params.touchEventsTarget
+                "container" === S.params.touchEventsTarget
                   ? S.container[0]
                   : S.wrapper[0],
               r = S.support.touch ? s : document,
@@ -1423,7 +1423,7 @@ $('a[href^="#"]').on('click', function (event) {
             else {
               if (S.support.touch) {
                 var o = !(
-                  'touchstart' !== S.touchEvents.start ||
+                  "touchstart" !== S.touchEvents.start ||
                   !S.support.passiveListener ||
                   !S.params.passiveListeners
                 ) && {
@@ -1436,41 +1436,41 @@ $('a[href^="#"]').on('click', function (event) {
               }
               ((i.simulateTouch && !S.device.ios && !S.device.android) ||
                 (i.simulateTouch && !S.support.touch && S.device.ios)) &&
-                (s[t]('mousedown', S.onTouchStart, !1),
-                document[t]('mousemove', S.onTouchMove, n),
-                document[t]('mouseup', S.onTouchEnd, !1));
+                (s[t]("mousedown", S.onTouchStart, !1),
+                document[t]("mousemove", S.onTouchMove, n),
+                document[t]("mouseup", S.onTouchEnd, !1));
             }
-            window[t]('resize', S.onResize),
+            window[t]("resize", S.onResize),
               S.params.nextButton &&
                 S.nextButton &&
                 S.nextButton.length > 0 &&
-                (S.nextButton[a]('click', S.onClickNext),
+                (S.nextButton[a]("click", S.onClickNext),
                 S.params.a11y &&
                   S.a11y &&
-                  S.nextButton[a]('keydown', S.a11y.onEnterKey)),
+                  S.nextButton[a]("keydown", S.a11y.onEnterKey)),
               S.params.prevButton &&
                 S.prevButton &&
                 S.prevButton.length > 0 &&
-                (S.prevButton[a]('click', S.onClickPrev),
+                (S.prevButton[a]("click", S.onClickPrev),
                 S.params.a11y &&
                   S.a11y &&
-                  S.prevButton[a]('keydown', S.a11y.onEnterKey)),
+                  S.prevButton[a]("keydown", S.a11y.onEnterKey)),
               S.params.pagination &&
                 S.params.paginationClickable &&
                 (S.paginationContainer[a](
-                  'click',
-                  '.' + S.params.bulletClass,
+                  "click",
+                  "." + S.params.bulletClass,
                   S.onClickIndex
                 ),
                 S.params.a11y &&
                   S.a11y &&
                   S.paginationContainer[a](
-                    'keydown',
-                    '.' + S.params.bulletClass,
+                    "keydown",
+                    "." + S.params.bulletClass,
                     S.a11y.onEnterKey
                   )),
               (S.params.preventClicks || S.params.preventClicksPropagation) &&
-                s[t]('click', S.preventClicks, !0);
+                s[t]("click", S.preventClicks, !0);
           }),
           (S.attachEvents = function () {
             S.initEvents();
@@ -1499,7 +1499,7 @@ $('a[href^="#"]').on('click', function (event) {
             S.params.loop && (t += S.loopedSlides), S.slideTo(t);
           }),
           (S.updateClickedSlide = function (e) {
-            var t = l(e, '.' + S.params.slideClass),
+            var t = l(e, "." + S.params.slideClass),
               s = !1;
             if (t)
               for (var i = 0; i < S.slides.length; i++)
@@ -1517,7 +1517,7 @@ $('a[href^="#"]').on('click', function (event) {
                 n = S.clickedIndex;
               if (S.params.loop) {
                 if (S.animating) return;
-                (r = a(S.clickedSlide).attr('data-swiper-slide-index')),
+                (r = a(S.clickedSlide).attr("data-swiper-slide-index")),
                   S.params.centeredSlides
                     ? n < S.loopedSlides - S.params.slidesPerView / 2 ||
                       n >
@@ -1527,13 +1527,13 @@ $('a[href^="#"]').on('click', function (event) {
                       ? (S.fixLoop(),
                         (n = S.wrapper
                           .children(
-                            '.' +
+                            "." +
                               S.params.slideClass +
                               '[data-swiper-slide-index="' +
                               r +
                               '"]:not(.' +
                               S.params.slideDuplicateClass +
-                              ')'
+                              ")"
                           )
                           .eq(0)
                           .index()),
@@ -1545,13 +1545,13 @@ $('a[href^="#"]').on('click', function (event) {
                     ? (S.fixLoop(),
                       (n = S.wrapper
                         .children(
-                          '.' +
+                          "." +
                             S.params.slideClass +
                             '[data-swiper-slide-index="' +
                             r +
                             '"]:not(.' +
                             S.params.slideDuplicateClass +
-                            ')'
+                            ")"
                         )
                         .eq(0)
                         .index()),
@@ -1572,7 +1572,7 @@ $('a[href^="#"]').on('click', function (event) {
           D,
           B,
           H,
-          G = 'input, select, textarea, button, video',
+          G = "input, select, textarea, button, video",
           X = Date.now(),
           Y = [];
         (S.animating = !1),
@@ -1587,16 +1587,16 @@ $('a[href^="#"]').on('click', function (event) {
         (S.onTouchStart = function (e) {
           if (
             (e.originalEvent && (e = e.originalEvent),
-            (A = 'touchstart' === e.type),
-            A || !('which' in e) || 3 !== e.which)
+            (A = "touchstart" === e.type),
+            A || !("which" in e) || 3 !== e.which)
           ) {
-            if (S.params.noSwiping && l(e, '.' + S.params.noSwipingClass))
+            if (S.params.noSwiping && l(e, "." + S.params.noSwipingClass))
               return void (S.allowClick = !0);
             if (!S.params.swipeHandler || l(e, S.params.swipeHandler)) {
               var t = (S.touches.currentX =
-                  'touchstart' === e.type ? e.targetTouches[0].pageX : e.pageX),
+                  "touchstart" === e.type ? e.targetTouches[0].pageX : e.pageX),
                 s = (S.touches.currentY =
-                  'touchstart' === e.type ? e.targetTouches[0].pageY : e.pageY);
+                  "touchstart" === e.type ? e.targetTouches[0].pageY : e.pageY);
               if (
                 !(
                   S.device.ios &&
@@ -1617,7 +1617,7 @@ $('a[href^="#"]').on('click', function (event) {
                   S.updateContainerSize(),
                   (S.swipeDirection = void 0),
                   S.params.threshold > 0 && (D = !1),
-                  'touchstart' !== e.type)
+                  "touchstart" !== e.type)
                 ) {
                   var i = !0;
                   a(e.target).is(G) && (i = !1),
@@ -1626,7 +1626,7 @@ $('a[href^="#"]').on('click', function (event) {
                       document.activeElement.blur(),
                     i && e.preventDefault();
                 }
-                S.emit('onTouchStart', S, e);
+                S.emit("onTouchStart", S, e);
               }
             }
           }
@@ -1634,16 +1634,16 @@ $('a[href^="#"]').on('click', function (event) {
           (S.onTouchMove = function (e) {
             if (
               (e.originalEvent && (e = e.originalEvent),
-              !A || 'mousemove' !== e.type)
+              !A || "mousemove" !== e.type)
             ) {
               if (e.preventedByNestedSwiper)
                 return (
                   (S.touches.startX =
-                    'touchmove' === e.type
+                    "touchmove" === e.type
                       ? e.targetTouches[0].pageX
                       : e.pageX),
                   void (S.touches.startY =
-                    'touchmove' === e.type ? e.targetTouches[0].pageY : e.pageY)
+                    "touchmove" === e.type ? e.targetTouches[0].pageY : e.pageY)
                 );
               if (S.params.onlyExternal)
                 return (
@@ -1651,11 +1651,11 @@ $('a[href^="#"]').on('click', function (event) {
                   void (
                     z &&
                     ((S.touches.startX = S.touches.currentX =
-                      'touchmove' === e.type
+                      "touchmove" === e.type
                         ? e.targetTouches[0].pageX
                         : e.pageX),
                     (S.touches.startY = S.touches.currentY =
-                      'touchmove' === e.type
+                      "touchmove" === e.type
                         ? e.targetTouches[0].pageY
                         : e.pageY),
                     (P = Date.now()))
@@ -1685,19 +1685,19 @@ $('a[href^="#"]').on('click', function (event) {
               )
                 return (M = !0), void (S.allowClick = !1);
               if (
-                (E && S.emit('onTouchMove', S, e),
+                (E && S.emit("onTouchMove", S, e),
                 !(e.targetTouches && e.targetTouches.length > 1))
               ) {
                 if (
                   ((S.touches.currentX =
-                    'touchmove' === e.type
+                    "touchmove" === e.type
                       ? e.targetTouches[0].pageX
                       : e.pageX),
                   (S.touches.currentY =
-                    'touchmove' === e.type
+                    "touchmove" === e.type
                       ? e.targetTouches[0].pageY
                       : e.pageY),
-                  'undefined' == typeof I)
+                  "undefined" == typeof I)
                 ) {
                   var t;
                   (S.isHorizontal() &&
@@ -1716,8 +1716,8 @@ $('a[href^="#"]').on('click', function (event) {
                         : 90 - t > S.params.touchAngle));
                 }
                 if (
-                  (I && S.emit('onTouchMoveOpposite', S, e),
-                  'undefined' == typeof O &&
+                  (I && S.emit("onTouchMoveOpposite", S, e),
+                  "undefined" == typeof O &&
                     S.browser.ieTouch &&
                     ((S.touches.currentX === S.touches.startX &&
                       S.touches.currentY === S.touches.startY) ||
@@ -1727,7 +1727,7 @@ $('a[href^="#"]').on('click', function (event) {
                   if (I) return void (z = !1);
                   if (O || !S.browser.ieTouch) {
                     (S.allowClick = !1),
-                      S.emit('onSliderMove', S, e),
+                      S.emit("onSliderMove", S, e),
                       e.preventDefault(),
                       S.params.touchMoveStopPropagation &&
                         !S.params.nested &&
@@ -1738,7 +1738,7 @@ $('a[href^="#"]').on('click', function (event) {
                         S.setWrapperTransition(0),
                         S.animating &&
                           S.wrapper.trigger(
-                            'webkitTransitionEnd transitionend oTransitionEnd MSTransitionEnd msTransitionEnd'
+                            "webkitTransitionEnd transitionend oTransitionEnd MSTransitionEnd msTransitionEnd"
                           ),
                         S.params.autoplay &&
                           S.autoplaying &&
@@ -1756,7 +1756,7 @@ $('a[href^="#"]').on('click', function (event) {
                       : S.touches.currentY - S.touches.startY);
                     (s *= S.params.touchRatio),
                       S.rtl && (s = -s),
-                      (S.swipeDirection = s > 0 ? 'prev' : 'next'),
+                      (S.swipeDirection = s > 0 ? "prev" : "next"),
                       (k = s + L);
                     var r = !0;
                     if (
@@ -1783,11 +1783,11 @@ $('a[href^="#"]').on('click', function (event) {
                               ))),
                       r && (e.preventedByNestedSwiper = !0),
                       !S.params.allowSwipeToNext &&
-                        'next' === S.swipeDirection &&
+                        "next" === S.swipeDirection &&
                         k < L &&
                         (k = L),
                       !S.params.allowSwipeToPrev &&
-                        'prev' === S.swipeDirection &&
+                        "prev" === S.swipeDirection &&
                         k > L &&
                         (k = L),
                       S.params.threshold > 0)
@@ -1812,13 +1812,13 @@ $('a[href^="#"]').on('click', function (event) {
                         (0 === Y.length &&
                           Y.push({
                             position:
-                              S.touches[S.isHorizontal() ? 'startX' : 'startY'],
+                              S.touches[S.isHorizontal() ? "startX" : "startY"],
                             time: P,
                           }),
                         Y.push({
                           position:
                             S.touches[
-                              S.isHorizontal() ? 'currentX' : 'currentY'
+                              S.isHorizontal() ? "currentX" : "currentY"
                             ],
                           time: new window.Date().getTime(),
                         })),
@@ -1832,7 +1832,7 @@ $('a[href^="#"]').on('click', function (event) {
           (S.onTouchEnd = function (e) {
             if (
               (e.originalEvent && (e = e.originalEvent),
-              E && S.emit('onTouchEnd', S, e),
+              E && S.emit("onTouchEnd", S, e),
               (E = !1),
               z)
             ) {
@@ -1847,7 +1847,7 @@ $('a[href^="#"]').on('click', function (event) {
               if (
                 (S.allowClick &&
                   (S.updateClickedSlide(e),
-                  S.emit('onTap', S, e),
+                  S.emit("onTap", S, e),
                   s < 300 &&
                     t - X > 300 &&
                     (B && clearTimeout(B),
@@ -1859,11 +1859,11 @@ $('a[href^="#"]').on('click', function (event) {
                           S.paginationContainer.toggleClass(
                             S.params.paginationHiddenClass
                           ),
-                        S.emit('onClick', S, e));
+                        S.emit("onClick", S, e));
                     }, 300))),
                   s < 300 &&
                     t - X < 300 &&
-                    (B && clearTimeout(B), S.emit('onDoubleTap', S, e))),
+                    (B && clearTimeout(B), S.emit("onDoubleTap", S, e))),
                 (X = Date.now()),
                 setTimeout(function () {
                   S && (S.allowClick = !0);
@@ -1942,7 +1942,7 @@ $('a[href^="#"]').on('click', function (event) {
                     (u =
                       Math.abs(S.snapGrid[g] - u) <
                         Math.abs(S.snapGrid[g - 1] - u) ||
-                      'next' === S.swipeDirection
+                      "next" === S.swipeDirection
                         ? S.snapGrid[g]
                         : S.snapGrid[g - 1]),
                       S.rtl || (u = -u);
@@ -1961,7 +1961,7 @@ $('a[href^="#"]').on('click', function (event) {
                       S.wrapper.transitionEnd(function () {
                         S &&
                           H &&
-                          (S.emit('onMomentumBounce', S),
+                          (S.emit("onMomentumBounce", S),
                           S.setWrapperTransition(S.params.speed),
                           S.setWrapperTranslate(c),
                           S.wrapper.transitionEnd(function () {
@@ -1990,7 +1990,7 @@ $('a[href^="#"]').on('click', function (event) {
                 w = 0,
                 y = S.slidesSizesGrid[0];
               for (v = 0; v < S.slidesGrid.length; v += S.params.slidesPerGroup)
-                'undefined' != typeof S.slidesGrid[v + S.params.slidesPerGroup]
+                "undefined" != typeof S.slidesGrid[v + S.params.slidesPerGroup]
                   ? i >= S.slidesGrid[v] &&
                     i < S.slidesGrid[v + S.params.slidesPerGroup] &&
                     ((w = v),
@@ -2005,19 +2005,19 @@ $('a[href^="#"]').on('click', function (event) {
               var x = (i - S.slidesGrid[w]) / y;
               if (s > S.params.longSwipesMs) {
                 if (!S.params.longSwipes) return void S.slideTo(S.activeIndex);
-                'next' === S.swipeDirection &&
+                "next" === S.swipeDirection &&
                   (x >= S.params.longSwipesRatio
                     ? S.slideTo(w + S.params.slidesPerGroup)
                     : S.slideTo(w)),
-                  'prev' === S.swipeDirection &&
+                  "prev" === S.swipeDirection &&
                     (x > 1 - S.params.longSwipesRatio
                       ? S.slideTo(w + S.params.slidesPerGroup)
                       : S.slideTo(w));
               } else {
                 if (!S.params.shortSwipes) return void S.slideTo(S.activeIndex);
-                'next' === S.swipeDirection &&
+                "next" === S.swipeDirection &&
                   S.slideTo(w + S.params.slidesPerGroup),
-                  'prev' === S.swipeDirection && S.slideTo(w);
+                  "prev" === S.swipeDirection && S.slideTo(w);
               }
             }
           }),
@@ -2025,8 +2025,8 @@ $('a[href^="#"]').on('click', function (event) {
             return S.slideTo(e, a, !0, !0);
           }),
           (S.slideTo = function (e, a, t, s) {
-            'undefined' == typeof t && (t = !0),
-              'undefined' == typeof e && (e = 0),
+            "undefined" == typeof t && (t = !0),
+              "undefined" == typeof e && (e = 0),
               e < 0 && (e = 0),
               (S.snapIndex = Math.floor(e / S.params.slidesPerGroup)),
               S.snapIndex >= S.snapGrid.length &&
@@ -2056,14 +2056,14 @@ $('a[href^="#"]').on('click', function (event) {
                 i > S.maxTranslate() &&
                 (S.activeIndex || 0) !== e
               ) &&
-              ('undefined' == typeof a && (a = S.params.speed),
+              ("undefined" == typeof a && (a = S.params.speed),
               (S.previousIndex = S.activeIndex || 0),
               (S.activeIndex = e),
               S.updateRealIndex(),
               (S.rtl && -i === S.translate) || (!S.rtl && i === S.translate)
                 ? (S.params.autoHeight && S.updateAutoHeight(),
                   S.updateClasses(),
-                  'slide' !== S.params.effect && S.setWrapperTranslate(i),
+                  "slide" !== S.params.effect && S.setWrapperTranslate(i),
                   !1)
                 : (S.updateClasses(),
                   S.onTransitionStart(t),
@@ -2082,29 +2082,29 @@ $('a[href^="#"]').on('click', function (event) {
             );
           }),
           (S.onTransitionStart = function (e) {
-            'undefined' == typeof e && (e = !0),
+            "undefined" == typeof e && (e = !0),
               S.params.autoHeight && S.updateAutoHeight(),
               S.lazy && S.lazy.onTransitionStart(),
               e &&
-                (S.emit('onTransitionStart', S),
+                (S.emit("onTransitionStart", S),
                 S.activeIndex !== S.previousIndex &&
-                  (S.emit('onSlideChangeStart', S),
+                  (S.emit("onSlideChangeStart", S),
                   S.activeIndex > S.previousIndex
-                    ? S.emit('onSlideNextStart', S)
-                    : S.emit('onSlidePrevStart', S)));
+                    ? S.emit("onSlideNextStart", S)
+                    : S.emit("onSlidePrevStart", S)));
           }),
           (S.onTransitionEnd = function (e) {
             (S.animating = !1),
               S.setWrapperTransition(0),
-              'undefined' == typeof e && (e = !0),
+              "undefined" == typeof e && (e = !0),
               S.lazy && S.lazy.onTransitionEnd(),
               e &&
-                (S.emit('onTransitionEnd', S),
+                (S.emit("onTransitionEnd", S),
                 S.activeIndex !== S.previousIndex &&
-                  (S.emit('onSlideChangeEnd', S),
+                  (S.emit("onSlideChangeEnd", S),
                   S.activeIndex > S.previousIndex
-                    ? S.emit('onSlideNextEnd', S)
-                    : S.emit('onSlidePrevEnd', S))),
+                    ? S.emit("onSlideNextEnd", S)
+                    : S.emit("onSlidePrevEnd", S))),
               S.params.history &&
                 S.history &&
                 S.history.setHistory(S.params.history, S.activeIndex),
@@ -2150,7 +2150,7 @@ $('a[href^="#"]').on('click', function (event) {
           }),
           (S.setWrapperTransition = function (e, a) {
             S.wrapper.transition(e),
-              'slide' !== S.params.effect &&
+              "slide" !== S.params.effect &&
                 S.effects[S.params.effect] &&
                 S.effects[S.params.effect].setTransition(e),
               S.params.parallax && S.parallax && S.parallax.setTransition(e),
@@ -2158,7 +2158,7 @@ $('a[href^="#"]').on('click', function (event) {
               S.params.control &&
                 S.controller &&
                 S.controller.setTransition(e, a),
-              S.emit('onSetTransition', S, e);
+              S.emit("onSetTransition", S, e);
           }),
           (S.setWrapperTranslate = function (e, a, t) {
             var s = 0,
@@ -2169,16 +2169,16 @@ $('a[href^="#"]').on('click', function (event) {
               S.params.virtualTranslate ||
                 (S.support.transforms3d
                   ? S.wrapper.transform(
-                      'translate3d(' + s + 'px, ' + i + 'px, ' + r + 'px)'
+                      "translate3d(" + s + "px, " + i + "px, " + r + "px)"
                     )
-                  : S.wrapper.transform('translate(' + s + 'px, ' + i + 'px)')),
+                  : S.wrapper.transform("translate(" + s + "px, " + i + "px)")),
               (S.translate = S.isHorizontal() ? s : i);
             var o,
               l = S.maxTranslate() - S.minTranslate();
             (o = 0 === l ? 0 : (e - S.minTranslate()) / l),
               o !== S.progress && S.updateProgress(e),
               a && S.updateActiveIndex(),
-              'slide' !== S.params.effect &&
+              "slide" !== S.params.effect &&
                 S.effects[S.params.effect] &&
                 S.effects[S.params.effect].setTranslate(S.translate),
               S.params.parallax &&
@@ -2190,12 +2190,12 @@ $('a[href^="#"]').on('click', function (event) {
               S.params.control &&
                 S.controller &&
                 S.controller.setTranslate(S.translate, t),
-              S.emit('onSetTranslate', S, S.translate);
+              S.emit("onSetTranslate", S, S.translate);
           }),
           (S.getTranslate = function (e, a) {
             var t, s, i, r;
             return (
-              'undefined' == typeof a && (a = 'x'),
+              "undefined" == typeof a && (a = "x"),
               S.params.virtualTranslate
                 ? S.rtl
                   ? -S.translate
@@ -2203,14 +2203,14 @@ $('a[href^="#"]').on('click', function (event) {
                 : ((i = window.getComputedStyle(e, null)),
                   window.WebKitCSSMatrix
                     ? ((s = i.transform || i.webkitTransform),
-                      s.split(',').length > 6 &&
+                      s.split(",").length > 6 &&
                         (s = s
-                          .split(', ')
+                          .split(", ")
                           .map(function (e) {
-                            return e.replace(',', '.');
+                            return e.replace(",", ".");
                           })
-                          .join(', ')),
-                      (r = new window.WebKitCSSMatrix('none' === s ? '' : s)))
+                          .join(", ")),
+                      (r = new window.WebKitCSSMatrix("none" === s ? "" : s)))
                     : ((r =
                         i.MozTransform ||
                         i.OTransform ||
@@ -2218,16 +2218,16 @@ $('a[href^="#"]').on('click', function (event) {
                         i.msTransform ||
                         i.transform ||
                         i
-                          .getPropertyValue('transform')
-                          .replace('translate(', 'matrix(1, 0, 0, 1,')),
-                      (t = r.toString().split(','))),
-                  'x' === a &&
+                          .getPropertyValue("transform")
+                          .replace("translate(", "matrix(1, 0, 0, 1,")),
+                      (t = r.toString().split(","))),
+                  "x" === a &&
                     (s = window.WebKitCSSMatrix
                       ? r.m41
                       : 16 === t.length
                       ? parseFloat(t[12])
                       : parseFloat(t[4])),
-                  'y' === a &&
+                  "y" === a &&
                     (s = window.WebKitCSSMatrix
                       ? r.m42
                       : 16 === t.length
@@ -2239,7 +2239,7 @@ $('a[href^="#"]').on('click', function (event) {
           }),
           (S.getWrapperTranslate = function (e) {
             return (
-              'undefined' == typeof e && (e = S.isHorizontal() ? 'x' : 'y'),
+              "undefined" == typeof e && (e = S.isHorizontal() ? "x" : "y"),
               S.getTranslate(S.wrapper[0], e)
             );
           }),
@@ -2263,11 +2263,11 @@ $('a[href^="#"]').on('click', function (event) {
           (S.createLoop = function () {
             S.wrapper
               .children(
-                '.' + S.params.slideClass + '.' + S.params.slideDuplicateClass
+                "." + S.params.slideClass + "." + S.params.slideDuplicateClass
               )
               .remove();
-            var e = S.wrapper.children('.' + S.params.slideClass);
-            'auto' !== S.params.slidesPerView ||
+            var e = S.wrapper.children("." + S.params.slideClass);
+            "auto" !== S.params.slidesPerView ||
               S.params.loopedSlides ||
               (S.params.loopedSlides = e.length),
               (S.loopedSlides = parseInt(
@@ -2284,7 +2284,7 @@ $('a[href^="#"]').on('click', function (event) {
                 var n = a(this);
                 t < S.loopedSlides && i.push(r),
                   t < e.length && t >= e.length - S.loopedSlides && s.push(r),
-                  n.attr('data-swiper-slide-index', t);
+                  n.attr("data-swiper-slide-index", t);
               }),
                 t = 0;
               t < i.length;
@@ -2301,10 +2301,10 @@ $('a[href^="#"]').on('click', function (event) {
           (S.destroyLoop = function () {
             S.wrapper
               .children(
-                '.' + S.params.slideClass + '.' + S.params.slideDuplicateClass
+                "." + S.params.slideClass + "." + S.params.slideDuplicateClass
               )
               .remove(),
-              S.slides.removeAttr('data-swiper-slide-index');
+              S.slides.removeAttr("data-swiper-slide-index");
           }),
           (S.reLoop = function (e) {
             var a = S.activeIndex - S.loopedSlides;
@@ -2319,7 +2319,7 @@ $('a[href^="#"]').on('click', function (event) {
               ? ((e = S.slides.length - 3 * S.loopedSlides + S.activeIndex),
                 (e += S.loopedSlides),
                 S.slideTo(e, 0, !1, !0))
-              : (('auto' === S.params.slidesPerView &&
+              : (("auto" === S.params.slidesPerView &&
                   S.activeIndex >= 2 * S.loopedSlides) ||
                   S.activeIndex >
                     S.slides.length - 2 * S.params.slidesPerView) &&
@@ -2330,7 +2330,7 @@ $('a[href^="#"]').on('click', function (event) {
           (S.appendSlide = function (e) {
             if (
               (S.params.loop && S.destroyLoop(),
-              'object' == typeof e && e.length)
+              "object" == typeof e && e.length)
             )
               for (var a = 0; a < e.length; a++) e[a] && S.wrapper.append(e[a]);
             else S.wrapper.append(e);
@@ -2340,7 +2340,7 @@ $('a[href^="#"]').on('click', function (event) {
           (S.prependSlide = function (e) {
             S.params.loop && S.destroyLoop();
             var a = S.activeIndex + 1;
-            if ('object' == typeof e && e.length) {
+            if ("object" == typeof e && e.length) {
               for (var t = 0; t < e.length; t++)
                 e[t] && S.wrapper.prepend(e[t]);
               a = S.activeIndex + e.length;
@@ -2352,10 +2352,10 @@ $('a[href^="#"]').on('click', function (event) {
           (S.removeSlide = function (e) {
             S.params.loop &&
               (S.destroyLoop(),
-              (S.slides = S.wrapper.children('.' + S.params.slideClass)));
+              (S.slides = S.wrapper.children("." + S.params.slideClass)));
             var a,
               t = S.activeIndex;
-            if ('object' == typeof e && e.length) {
+            if ("object" == typeof e && e.length) {
               for (var s = 0; s < e.length; s++)
                 (a = e[s]),
                   S.slides[a] && S.slides.eq(a).remove(),
@@ -2391,7 +2391,7 @@ $('a[href^="#"]').on('click', function (event) {
                     : 1 + Math.min(Math.max(a[0].progress, -1), 0);
                   a.css({
                     opacity: r,
-                  }).transform('translate3d(' + s + 'px, ' + i + 'px, 0px)');
+                  }).transform("translate3d(" + s + "px, " + i + "px, 0px)");
                 }
               },
               setTransition: function (e) {
@@ -2404,11 +2404,11 @@ $('a[href^="#"]').on('click', function (event) {
                       (a = !0), (S.animating = !1);
                       for (
                         var e = [
-                            'webkitTransitionEnd',
-                            'transitionend',
-                            'oTransitionEnd',
-                            'MSTransitionEnd',
-                            'msTransitionEnd',
+                            "webkitTransitionEnd",
+                            "transitionend",
+                            "oTransitionEnd",
+                            "MSTransitionEnd",
+                            "msTransitionEnd",
                           ],
                           t = 0;
                         t < e.length;
@@ -2442,22 +2442,22 @@ $('a[href^="#"]').on('click', function (event) {
                     S.params.flip.slideShadows)
                   ) {
                     var d = S.isHorizontal()
-                        ? t.find('.swiper-slide-shadow-left')
-                        : t.find('.swiper-slide-shadow-top'),
+                        ? t.find(".swiper-slide-shadow-left")
+                        : t.find(".swiper-slide-shadow-top"),
                       u = S.isHorizontal()
-                        ? t.find('.swiper-slide-shadow-right')
-                        : t.find('.swiper-slide-shadow-bottom');
+                        ? t.find(".swiper-slide-shadow-right")
+                        : t.find(".swiper-slide-shadow-bottom");
                     0 === d.length &&
                       ((d = a(
                         '<div class="swiper-slide-shadow-' +
-                          (S.isHorizontal() ? 'left' : 'top') +
+                          (S.isHorizontal() ? "left" : "top") +
                           '"></div>'
                       )),
                       t.append(d)),
                       0 === u.length &&
                         ((u = a(
                           '<div class="swiper-slide-shadow-' +
-                            (S.isHorizontal() ? 'right' : 'bottom') +
+                            (S.isHorizontal() ? "right" : "bottom") +
                             '"></div>'
                         )),
                         t.append(u)),
@@ -2465,15 +2465,15 @@ $('a[href^="#"]').on('click', function (event) {
                       u.length && (u[0].style.opacity = Math.max(s, 0));
                   }
                   t.transform(
-                    'translate3d(' +
+                    "translate3d(" +
                       l +
-                      'px, ' +
+                      "px, " +
                       p +
-                      'px, 0px) rotateX(' +
+                      "px, 0px) rotateX(" +
                       o +
-                      'deg) rotateY(' +
+                      "deg) rotateY(" +
                       n +
-                      'deg)'
+                      "deg)"
                   );
                 }
               },
@@ -2482,7 +2482,7 @@ $('a[href^="#"]').on('click', function (event) {
                   (S.slides
                     .transition(e)
                     .find(
-                      '.swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left'
+                      ".swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left"
                     )
                     .transition(e),
                   S.params.virtualTranslate && 0 !== e)
@@ -2497,11 +2497,11 @@ $('a[href^="#"]').on('click', function (event) {
                       (t = !0), (S.animating = !1);
                       for (
                         var e = [
-                            'webkitTransitionEnd',
-                            'transitionend',
-                            'oTransitionEnd',
-                            'MSTransitionEnd',
-                            'msTransitionEnd',
+                            "webkitTransitionEnd",
+                            "transitionend",
+                            "oTransitionEnd",
+                            "MSTransitionEnd",
+                            "msTransitionEnd",
                           ],
                           s = 0;
                         s < e.length;
@@ -2519,14 +2519,14 @@ $('a[href^="#"]').on('click', function (event) {
                   t = 0;
                 S.params.cube.shadow &&
                   (S.isHorizontal()
-                    ? ((e = S.wrapper.find('.swiper-cube-shadow')),
+                    ? ((e = S.wrapper.find(".swiper-cube-shadow")),
                       0 === e.length &&
                         ((e = a('<div class="swiper-cube-shadow"></div>')),
                         S.wrapper.append(e)),
                       e.css({
-                        height: S.width + 'px',
+                        height: S.width + "px",
                       }))
-                    : ((e = S.container.find('.swiper-cube-shadow')),
+                    : ((e = S.container.find(".swiper-cube-shadow")),
                       0 === e.length &&
                         ((e = a('<div class="swiper-cube-shadow"></div>')),
                         S.container.append(e))));
@@ -2550,17 +2550,17 @@ $('a[href^="#"]').on('click', function (event) {
                     S.rtl && (l = -l),
                     S.isHorizontal() || ((p = l), (l = 0));
                   var u =
-                    'rotateX(' +
+                    "rotateX(" +
                     (S.isHorizontal() ? 0 : -r) +
-                    'deg) rotateY(' +
+                    "deg) rotateY(" +
                     (S.isHorizontal() ? r : 0) +
-                    'deg) translate3d(' +
+                    "deg) translate3d(" +
                     l +
-                    'px, ' +
+                    "px, " +
                     p +
-                    'px, ' +
+                    "px, " +
                     d +
-                    'px)';
+                    "px)";
                   if (
                     (o <= 1 &&
                       o > -1 &&
@@ -2569,22 +2569,22 @@ $('a[href^="#"]').on('click', function (event) {
                     S.params.cube.slideShadows)
                   ) {
                     var c = S.isHorizontal()
-                        ? i.find('.swiper-slide-shadow-left')
-                        : i.find('.swiper-slide-shadow-top'),
+                        ? i.find(".swiper-slide-shadow-left")
+                        : i.find(".swiper-slide-shadow-top"),
                       m = S.isHorizontal()
-                        ? i.find('.swiper-slide-shadow-right')
-                        : i.find('.swiper-slide-shadow-bottom');
+                        ? i.find(".swiper-slide-shadow-right")
+                        : i.find(".swiper-slide-shadow-bottom");
                     0 === c.length &&
                       ((c = a(
                         '<div class="swiper-slide-shadow-' +
-                          (S.isHorizontal() ? 'left' : 'top') +
+                          (S.isHorizontal() ? "left" : "top") +
                           '"></div>'
                       )),
                       i.append(c)),
                       0 === m.length &&
                         ((m = a(
                           '<div class="swiper-slide-shadow-' +
-                            (S.isHorizontal() ? 'right' : 'bottom') +
+                            (S.isHorizontal() ? "right" : "bottom") +
                             '"></div>'
                         )),
                         i.append(m)),
@@ -2594,22 +2594,22 @@ $('a[href^="#"]').on('click', function (event) {
                 }
                 if (
                   (S.wrapper.css({
-                    '-webkit-transform-origin': '50% 50% -' + S.size / 2 + 'px',
-                    '-moz-transform-origin': '50% 50% -' + S.size / 2 + 'px',
-                    '-ms-transform-origin': '50% 50% -' + S.size / 2 + 'px',
-                    'transform-origin': '50% 50% -' + S.size / 2 + 'px',
+                    "-webkit-transform-origin": "50% 50% -" + S.size / 2 + "px",
+                    "-moz-transform-origin": "50% 50% -" + S.size / 2 + "px",
+                    "-ms-transform-origin": "50% 50% -" + S.size / 2 + "px",
+                    "transform-origin": "50% 50% -" + S.size / 2 + "px",
                   }),
                   S.params.cube.shadow)
                 )
                   if (S.isHorizontal())
                     e.transform(
-                      'translate3d(0px, ' +
+                      "translate3d(0px, " +
                         (S.width / 2 + S.params.cube.shadowOffset) +
-                        'px, ' +
+                        "px, " +
                         -S.width / 2 +
-                        'px) rotateX(90deg) rotateZ(0deg) scale(' +
+                        "px) rotateX(90deg) rotateZ(0deg) scale(" +
                         S.params.cube.shadowScale +
-                        ')'
+                        ")"
                     );
                   else {
                     var h = Math.abs(t) - 90 * Math.floor(Math.abs(t) / 90),
@@ -2621,38 +2621,38 @@ $('a[href^="#"]').on('click', function (event) {
                       v = S.params.cube.shadowScale / g,
                       w = S.params.cube.shadowOffset;
                     e.transform(
-                      'scale3d(' +
+                      "scale3d(" +
                         f +
-                        ', 1, ' +
+                        ", 1, " +
                         v +
-                        ') translate3d(0px, ' +
+                        ") translate3d(0px, " +
                         (S.height / 2 + w) +
-                        'px, ' +
+                        "px, " +
                         -S.height / 2 / v +
-                        'px) rotateX(-90deg)'
+                        "px) rotateX(-90deg)"
                     );
                   }
                 var y = S.isSafari || S.isUiWebView ? -S.size / 2 : 0;
                 S.wrapper.transform(
-                  'translate3d(0px,0,' +
+                  "translate3d(0px,0," +
                     y +
-                    'px) rotateX(' +
+                    "px) rotateX(" +
                     (S.isHorizontal() ? 0 : t) +
-                    'deg) rotateY(' +
+                    "deg) rotateY(" +
                     (S.isHorizontal() ? -t : 0) +
-                    'deg)'
+                    "deg)"
                 );
               },
               setTransition: function (e) {
                 S.slides
                   .transition(e)
                   .find(
-                    '.swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left'
+                    ".swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left"
                   )
                   .transition(e),
                   S.params.cube.shadow &&
                     !S.isHorizontal() &&
-                    S.container.find('.swiper-cube-shadow').transition(e);
+                    S.container.find(".swiper-cube-shadow").transition(e);
               },
             },
             coverflow: {
@@ -2684,39 +2684,39 @@ $('a[href^="#"]').on('click', function (event) {
                     Math.abs(u) < 0.001 && (u = 0),
                     Math.abs(c) < 0.001 && (c = 0);
                   var f =
-                    'translate3d(' +
+                    "translate3d(" +
                     g +
-                    'px,' +
+                    "px," +
                     h +
-                    'px,' +
+                    "px," +
                     m +
-                    'px)  rotateX(' +
+                    "px)  rotateX(" +
                     c +
-                    'deg) rotateY(' +
+                    "deg) rotateY(" +
                     u +
-                    'deg)';
+                    "deg)";
                   if (
                     (o.transform(f),
                     (o[0].style.zIndex = -Math.abs(Math.round(d)) + 1),
                     S.params.coverflow.slideShadows)
                   ) {
                     var v = S.isHorizontal()
-                        ? o.find('.swiper-slide-shadow-left')
-                        : o.find('.swiper-slide-shadow-top'),
+                        ? o.find(".swiper-slide-shadow-left")
+                        : o.find(".swiper-slide-shadow-top"),
                       w = S.isHorizontal()
-                        ? o.find('.swiper-slide-shadow-right')
-                        : o.find('.swiper-slide-shadow-bottom');
+                        ? o.find(".swiper-slide-shadow-right")
+                        : o.find(".swiper-slide-shadow-bottom");
                     0 === v.length &&
                       ((v = a(
                         '<div class="swiper-slide-shadow-' +
-                          (S.isHorizontal() ? 'left' : 'top') +
+                          (S.isHorizontal() ? "left" : "top") +
                           '"></div>'
                       )),
                       o.append(v)),
                       0 === w.length &&
                         ((w = a(
                           '<div class="swiper-slide-shadow-' +
-                            (S.isHorizontal() ? 'right' : 'bottom') +
+                            (S.isHorizontal() ? "right" : "bottom") +
                             '"></div>'
                         )),
                         o.append(w)),
@@ -2726,14 +2726,14 @@ $('a[href^="#"]').on('click', function (event) {
                 }
                 if (S.browser.ie) {
                   var y = S.wrapper[0].style;
-                  y.perspectiveOrigin = t + 'px 50%';
+                  y.perspectiveOrigin = t + "px 50%";
                 }
               },
               setTransition: function (e) {
                 S.slides
                   .transition(e)
                   .find(
-                    '.swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left'
+                    ".swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left"
                   )
                   .transition(e);
               },
@@ -2743,18 +2743,18 @@ $('a[href^="#"]').on('click', function (event) {
             initialImageLoaded: !1,
             loadImageInSlide: function (e, t) {
               if (
-                'undefined' != typeof e &&
-                ('undefined' == typeof t && (t = !0), 0 !== S.slides.length)
+                "undefined" != typeof e &&
+                ("undefined" == typeof t && (t = !0), 0 !== S.slides.length)
               ) {
                 var s = S.slides.eq(e),
                   i = s.find(
-                    '.' +
+                    "." +
                       S.params.lazyLoadingClass +
-                      ':not(.' +
+                      ":not(." +
                       S.params.lazyStatusLoadedClass +
-                      '):not(.' +
+                      "):not(." +
                       S.params.lazyStatusLoadingClass +
-                      ')'
+                      ")"
                   );
                 !s.hasClass(S.params.lazyLoadingClass) ||
                   s.hasClass(S.params.lazyStatusLoadedClass) ||
@@ -2764,49 +2764,49 @@ $('a[href^="#"]').on('click', function (event) {
                     i.each(function () {
                       var e = a(this);
                       e.addClass(S.params.lazyStatusLoadingClass);
-                      var i = e.attr('data-background'),
-                        r = e.attr('data-src'),
-                        n = e.attr('data-srcset'),
-                        o = e.attr('data-sizes');
+                      var i = e.attr("data-background"),
+                        r = e.attr("data-src"),
+                        n = e.attr("data-srcset"),
+                        o = e.attr("data-sizes");
                       S.loadImage(e[0], r || i, n, o, !1, function () {
                         if (
                           (i
-                            ? (e.css('background-image', 'url("' + i + '")'),
-                              e.removeAttr('data-background'))
+                            ? (e.css("background-image", 'url("' + i + '")'),
+                              e.removeAttr("data-background"))
                             : (n &&
-                                (e.attr('srcset', n),
-                                e.removeAttr('data-srcset')),
+                                (e.attr("srcset", n),
+                                e.removeAttr("data-srcset")),
                               o &&
-                                (e.attr('sizes', o),
-                                e.removeAttr('data-sizes')),
+                                (e.attr("sizes", o),
+                                e.removeAttr("data-sizes")),
                               r &&
-                                (e.attr('src', r), e.removeAttr('data-src'))),
+                                (e.attr("src", r), e.removeAttr("data-src"))),
                           e
                             .addClass(S.params.lazyStatusLoadedClass)
                             .removeClass(S.params.lazyStatusLoadingClass),
                           s
                             .find(
-                              '.' +
+                              "." +
                                 S.params.lazyPreloaderClass +
-                                ', .' +
+                                ", ." +
                                 S.params.preloaderClass
                             )
                             .remove(),
                           S.params.loop && t)
                         ) {
-                          var a = s.attr('data-swiper-slide-index');
+                          var a = s.attr("data-swiper-slide-index");
                           if (s.hasClass(S.params.slideDuplicateClass)) {
                             var l = S.wrapper.children(
                               '[data-swiper-slide-index="' +
                                 a +
                                 '"]:not(.' +
                                 S.params.slideDuplicateClass +
-                                ')'
+                                ")"
                             );
                             S.lazy.loadImageInSlide(l.index(), !1);
                           } else {
                             var p = S.wrapper.children(
-                              '.' +
+                              "." +
                                 S.params.slideDuplicateClass +
                                 '[data-swiper-slide-index="' +
                                 a +
@@ -2815,9 +2815,9 @@ $('a[href^="#"]').on('click', function (event) {
                             S.lazy.loadImageInSlide(p.index(), !1);
                           }
                         }
-                        S.emit('onLazyImageReady', S, s[0], e[0]);
+                        S.emit("onLazyImageReady", S, s[0], e[0]);
                       }),
-                        S.emit('onLazyImageLoad', S, s[0], e[0]);
+                        S.emit("onLazyImageLoad", S, s[0], e[0]);
                     });
               }
             },
@@ -2825,12 +2825,12 @@ $('a[href^="#"]').on('click', function (event) {
               var e,
                 t = S.params.slidesPerView;
               if (
-                ('auto' === t && (t = 0),
+                ("auto" === t && (t = 0),
                 S.lazy.initialImageLoaded || (S.lazy.initialImageLoaded = !0),
                 S.params.watchSlidesVisibility)
               )
                 S.wrapper
-                  .children('.' + S.params.slideVisibleClass)
+                  .children("." + S.params.slideVisibleClass)
                   .each(function () {
                     S.lazy.loadImageInSlide(a(this).index());
                   });
@@ -2856,9 +2856,9 @@ $('a[href^="#"]').on('click', function (event) {
                   for (e = n; e < S.activeIndex; e++)
                     S.slides[e] && S.lazy.loadImageInSlide(e);
                 } else {
-                  var o = S.wrapper.children('.' + S.params.slideNextClass);
+                  var o = S.wrapper.children("." + S.params.slideNextClass);
                   o.length > 0 && S.lazy.loadImageInSlide(o.index());
-                  var l = S.wrapper.children('.' + S.params.slidePrevClass);
+                  var l = S.wrapper.children("." + S.params.slidePrevClass);
                   l.length > 0 && S.lazy.loadImageInSlide(l.index());
                 }
             },
@@ -2880,15 +2880,15 @@ $('a[href^="#"]').on('click', function (event) {
             setDragPosition: function (e) {
               var a = S.scrollbar,
                 t = S.isHorizontal()
-                  ? 'touchstart' === e.type || 'touchmove' === e.type
+                  ? "touchstart" === e.type || "touchmove" === e.type
                     ? e.targetTouches[0].pageX
                     : e.pageX || e.clientX
-                  : 'touchstart' === e.type || 'touchmove' === e.type
+                  : "touchstart" === e.type || "touchmove" === e.type
                   ? e.targetTouches[0].pageY
                   : e.pageY || e.clientY,
                 s =
                   t -
-                  a.track.offset()[S.isHorizontal() ? 'left' : 'top'] -
+                  a.track.offset()[S.isHorizontal() ? "left" : "top"] -
                   a.dragSize / 2,
                 i = -S.minTranslate() * a.moveDivider,
                 r = -S.maxTranslate() * a.moveDivider;
@@ -2905,10 +2905,10 @@ $('a[href^="#"]').on('click', function (event) {
                 a.setDragPosition(e),
                 clearTimeout(a.dragTimeout),
                 a.track.transition(0),
-                S.params.scrollbarHide && a.track.css('opacity', 1),
+                S.params.scrollbarHide && a.track.css("opacity", 1),
                 S.wrapper.transition(100),
                 a.drag.transition(100),
-                S.emit('onScrollbarDragStart', S);
+                S.emit("onScrollbarDragStart", S);
             },
             dragMove: function (e) {
               var a = S.scrollbar;
@@ -2918,7 +2918,7 @@ $('a[href^="#"]').on('click', function (event) {
                 S.wrapper.transition(0),
                 a.track.transition(0),
                 a.drag.transition(0),
-                S.emit('onScrollbarDragMove', S));
+                S.emit("onScrollbarDragMove", S));
             },
             dragEnd: function (e) {
               var a = S.scrollbar;
@@ -2927,9 +2927,9 @@ $('a[href^="#"]').on('click', function (event) {
                 S.params.scrollbarHide &&
                   (clearTimeout(a.dragTimeout),
                   (a.dragTimeout = setTimeout(function () {
-                    a.track.css('opacity', 0), a.track.transition(400);
+                    a.track.css("opacity", 0), a.track.transition(400);
                   }, 1e3))),
-                S.emit('onScrollbarDragEnd', S),
+                S.emit("onScrollbarDragEnd", S),
                 S.params.scrollbarSnapOnRelease && S.slideReset());
             },
             draggableEvents: (function () {
@@ -2956,16 +2956,16 @@ $('a[href^="#"]').on('click', function (event) {
                 var e = S.scrollbar;
                 (e.track = a(S.params.scrollbar)),
                   S.params.uniqueNavElements &&
-                    'string' == typeof S.params.scrollbar &&
+                    "string" == typeof S.params.scrollbar &&
                     e.track.length > 1 &&
                     1 === S.container.find(S.params.scrollbar).length &&
                     (e.track = S.container.find(S.params.scrollbar)),
-                  (e.drag = e.track.find('.swiper-scrollbar-drag')),
+                  (e.drag = e.track.find(".swiper-scrollbar-drag")),
                   0 === e.drag.length &&
                     ((e.drag = a('<div class="swiper-scrollbar-drag"></div>')),
                     e.track.append(e.drag)),
-                  (e.drag[0].style.width = ''),
-                  (e.drag[0].style.height = ''),
+                  (e.drag[0].style.width = ""),
+                  (e.drag[0].style.height = ""),
                   (e.trackSize = S.isHorizontal()
                     ? e.track[0].offsetWidth
                     : e.track[0].offsetHeight),
@@ -2973,11 +2973,11 @@ $('a[href^="#"]').on('click', function (event) {
                   (e.moveDivider = e.divider * (e.trackSize / S.size)),
                   (e.dragSize = e.trackSize * e.divider),
                   S.isHorizontal()
-                    ? (e.drag[0].style.width = e.dragSize + 'px')
-                    : (e.drag[0].style.height = e.dragSize + 'px'),
+                    ? (e.drag[0].style.width = e.dragSize + "px")
+                    : (e.drag[0].style.height = e.dragSize + "px"),
                   e.divider >= 1
-                    ? (e.track[0].style.display = 'none')
-                    : (e.track[0].style.display = ''),
+                    ? (e.track[0].style.display = "none")
+                    : (e.track[0].style.display = ""),
                   S.params.scrollbarHide && (e.track[0].style.opacity = 0);
               }
             },
@@ -2998,13 +2998,13 @@ $('a[href^="#"]').on('click', function (event) {
                     : e + a.dragSize > a.trackSize && (t = a.trackSize - e),
                   S.isHorizontal()
                     ? (S.support.transforms3d
-                        ? a.drag.transform('translate3d(' + e + 'px, 0, 0)')
-                        : a.drag.transform('translateX(' + e + 'px)'),
-                      (a.drag[0].style.width = t + 'px'))
+                        ? a.drag.transform("translate3d(" + e + "px, 0, 0)")
+                        : a.drag.transform("translateX(" + e + "px)"),
+                      (a.drag[0].style.width = t + "px"))
                     : (S.support.transforms3d
-                        ? a.drag.transform('translate3d(0px, ' + e + 'px, 0)')
-                        : a.drag.transform('translateY(' + e + 'px)'),
-                      (a.drag[0].style.height = t + 'px')),
+                        ? a.drag.transform("translate3d(0px, " + e + "px, 0)")
+                        : a.drag.transform("translateY(" + e + "px)"),
+                      (a.drag[0].style.height = t + "px")),
                   S.params.scrollbarHide &&
                     (clearTimeout(a.timeout),
                     (a.track[0].style.opacity = 1),
@@ -3049,13 +3049,13 @@ $('a[href^="#"]').on('click', function (event) {
             setTranslate: function (e, a) {
               function s(a) {
                 (e =
-                  a.rtl && 'horizontal' === a.params.direction
+                  a.rtl && "horizontal" === a.params.direction
                     ? -S.translate
                     : S.translate),
-                  'slide' === S.params.controlBy &&
+                  "slide" === S.params.controlBy &&
                     (S.controller.getInterpolateFunction(a),
                     (r = -S.controller.spline.interpolate(-e))),
-                  (r && 'container' !== S.params.controlBy) ||
+                  (r && "container" !== S.params.controlBy) ||
                     ((i =
                       (a.maxTranslate() - a.minTranslate()) /
                       (S.maxTranslate() - S.minTranslate())),
@@ -3081,7 +3081,7 @@ $('a[href^="#"]').on('click', function (event) {
                     a.wrapper.transitionEnd(function () {
                       r &&
                         (a.params.loop &&
-                          'slide' === S.params.controlBy &&
+                          "slide" === S.params.controlBy &&
                           a.fixLoop(),
                         a.onTransitionEnd());
                     }));
@@ -3096,20 +3096,20 @@ $('a[href^="#"]').on('click', function (event) {
           }),
           (S.hashnav = {
             onHashCange: function (e, a) {
-              var t = document.location.hash.replace('#', ''),
-                s = S.slides.eq(S.activeIndex).attr('data-hash');
+              var t = document.location.hash.replace("#", ""),
+                s = S.slides.eq(S.activeIndex).attr("data-hash");
               t !== s &&
                 S.slideTo(
                   S.wrapper
                     .children(
-                      '.' + S.params.slideClass + '[data-hash="' + t + '"]'
+                      "." + S.params.slideClass + '[data-hash="' + t + '"]'
                     )
                     .index()
                 );
             },
             attachEvents: function (e) {
-              var t = e ? 'off' : 'on';
-              a(window)[t]('hashchange', S.hashnav.onHashCange);
+              var t = e ? "off" : "on";
+              a(window)[t]("hashchange", S.hashnav.onHashCange);
             },
             setHash: function () {
               if (S.hashnav.initialized && S.params.hashnav)
@@ -3121,22 +3121,22 @@ $('a[href^="#"]').on('click', function (event) {
                   window.history.replaceState(
                     null,
                     null,
-                    '#' + S.slides.eq(S.activeIndex).attr('data-hash') || ''
+                    "#" + S.slides.eq(S.activeIndex).attr("data-hash") || ""
                   );
                 else {
                   var e = S.slides.eq(S.activeIndex),
-                    a = e.attr('data-hash') || e.attr('data-history');
-                  document.location.hash = a || '';
+                    a = e.attr("data-hash") || e.attr("data-history");
+                  document.location.hash = a || "";
                 }
             },
             init: function () {
               if (S.params.hashnav && !S.params.history) {
                 S.hashnav.initialized = !0;
-                var e = document.location.hash.replace('#', '');
+                var e = document.location.hash.replace("#", "");
                 if (e) {
                   for (var a = 0, t = 0, s = S.slides.length; t < s; t++) {
                     var i = S.slides.eq(t),
-                      r = i.attr('data-hash') || i.attr('data-history');
+                      r = i.attr("data-hash") || i.attr("data-history");
                     if (r === e && !i.hasClass(S.params.slideDuplicateClass)) {
                       var n = i.index();
                       S.slideTo(n, a, S.params.runCallbacksOnInit, !0);
@@ -3165,7 +3165,7 @@ $('a[href^="#"]').on('click', function (event) {
                     ),
                     S.params.replaceState ||
                       window.addEventListener(
-                        'popstate',
+                        "popstate",
                         this.setHistoryPopState
                       ));
               }
@@ -3179,7 +3179,7 @@ $('a[href^="#"]').on('click', function (event) {
                 );
             },
             getPathValues: function () {
-              var e = window.location.pathname.slice(1).split('/'),
+              var e = window.location.pathname.slice(1).split("/"),
                 a = e.length,
                 t = e[a - 2],
                 s = e[a - 1];
@@ -3191,8 +3191,8 @@ $('a[href^="#"]').on('click', function (event) {
             setHistory: function (e, a) {
               if (S.history.initialized && S.params.history) {
                 var t = S.slides.eq(a),
-                  s = this.slugify(t.attr('data-history'));
-                window.location.pathname.includes(e) || (s = e + '/' + s),
+                  s = this.slugify(t.attr("data-history"));
+                window.location.pathname.includes(e) || (s = e + "/" + s),
                   S.params.replaceState
                     ? window.history.replaceState(null, null, s)
                     : window.history.pushState(null, null, s);
@@ -3202,17 +3202,17 @@ $('a[href^="#"]').on('click', function (event) {
               return e
                 .toString()
                 .toLowerCase()
-                .replace(/\s+/g, '-')
-                .replace(/[^\w\-]+/g, '')
-                .replace(/\-\-+/g, '-')
-                .replace(/^-+/, '')
-                .replace(/-+$/, '');
+                .replace(/\s+/g, "-")
+                .replace(/[^\w\-]+/g, "")
+                .replace(/\-\-+/g, "-")
+                .replace(/^-+/, "")
+                .replace(/-+$/, "");
             },
             scrollToSlide: function (e, a, t) {
               if (a)
                 for (var s = 0, i = S.slides.length; s < i; s++) {
                   var r = S.slides.eq(s),
-                    n = this.slugify(r.attr('data-history'));
+                    n = this.slugify(r.attr("data-history"));
                   if (n === a && !r.hasClass(S.params.slideDuplicateClass)) {
                     var o = r.index();
                     S.slideTo(o, e, t);
@@ -3222,10 +3222,10 @@ $('a[href^="#"]').on('click', function (event) {
             },
           }),
           (S.disableKeyboardControl = function () {
-            (S.params.keyboardControl = !1), a(document).off('keydown', d);
+            (S.params.keyboardControl = !1), a(document).off("keydown", d);
           }),
           (S.enableKeyboardControl = function () {
-            (S.params.keyboardControl = !0), a(document).on('keydown', d);
+            (S.params.keyboardControl = !0), a(document).on("keydown", d);
           }),
           (S.mousewheel = {
             event: !1,
@@ -3233,16 +3233,16 @@ $('a[href^="#"]').on('click', function (event) {
           }),
           S.params.mousewheelControl &&
             (S.mousewheel.event =
-              navigator.userAgent.indexOf('firefox') > -1
-                ? 'DOMMouseScroll'
+              navigator.userAgent.indexOf("firefox") > -1
+                ? "DOMMouseScroll"
                 : u()
-                ? 'wheel'
-                : 'mousewheel'),
+                ? "wheel"
+                : "mousewheel"),
           (S.disableMousewheelControl = function () {
             if (!S.mousewheel.event) return !1;
             var e = S.container;
             return (
-              'container' !== S.params.mousewheelEventsTarged &&
+              "container" !== S.params.mousewheelEventsTarged &&
                 (e = a(S.params.mousewheelEventsTarged)),
               e.off(S.mousewheel.event, c),
               !0
@@ -3252,7 +3252,7 @@ $('a[href^="#"]').on('click', function (event) {
             if (!S.mousewheel.event) return !1;
             var e = S.container;
             return (
-              'container' !== S.params.mousewheelEventsTarged &&
+              "container" !== S.params.mousewheelEventsTarged &&
                 (e = a(S.params.mousewheelEventsTarged)),
               e.on(S.mousewheel.event, c),
               !0
@@ -3262,7 +3262,7 @@ $('a[href^="#"]').on('click', function (event) {
             setTranslate: function () {
               S.container
                 .children(
-                  '[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y]'
+                  "[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y]"
                 )
                 .each(function () {
                   h(this, S.progress);
@@ -3270,7 +3270,7 @@ $('a[href^="#"]').on('click', function (event) {
                 S.slides.each(function () {
                   var e = a(this);
                   e.find(
-                    '[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y]'
+                    "[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y]"
                   ).each(function () {
                     var a = Math.min(Math.max(e[0].progress, -1), 1);
                     h(this, a);
@@ -3278,15 +3278,15 @@ $('a[href^="#"]').on('click', function (event) {
                 });
             },
             setTransition: function (e) {
-              'undefined' == typeof e && (e = S.params.speed),
+              "undefined" == typeof e && (e = S.params.speed),
                 S.container
                   .find(
-                    '[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y]'
+                    "[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y]"
                   )
                   .each(function () {
                     var t = a(this),
                       s =
-                        parseInt(t.attr('data-swiper-parallax-duration'), 10) ||
+                        parseInt(t.attr("data-swiper-parallax-duration"), 10) ||
                         e;
                     0 === e && (s = 0), t.transition(s);
                   });
@@ -3340,8 +3340,8 @@ $('a[href^="#"]').on('click', function (event) {
               var t = S.zoom;
               if (!S.support.gestures) {
                 if (
-                  'touchstart' !== e.type ||
-                  ('touchstart' === e.type && e.targetTouches.length < 2)
+                  "touchstart" !== e.type ||
+                  ("touchstart" === e.type && e.targetTouches.length < 2)
                 )
                   return;
                 t.gesture.scaleStart = t.getDistanceBetweenTouches(e);
@@ -3350,12 +3350,12 @@ $('a[href^="#"]').on('click', function (event) {
                 ((t.gesture.slide = a(this)),
                 0 === t.gesture.slide.length &&
                   (t.gesture.slide = S.slides.eq(S.activeIndex)),
-                (t.gesture.image = t.gesture.slide.find('img, svg, canvas')),
+                (t.gesture.image = t.gesture.slide.find("img, svg, canvas")),
                 (t.gesture.imageWrap = t.gesture.image.parent(
-                  '.' + S.params.zoomContainerClass
+                  "." + S.params.zoomContainerClass
                 )),
                 (t.gesture.zoomMax =
-                  t.gesture.imageWrap.attr('data-swiper-zoom') ||
+                  t.gesture.imageWrap.attr("data-swiper-zoom") ||
                   S.params.zoomMax),
                 0 !== t.gesture.imageWrap.length)
                 ? (t.gesture.image.transition(0), void (t.isScaling = !0))
@@ -3365,8 +3365,8 @@ $('a[href^="#"]').on('click', function (event) {
               var a = S.zoom;
               if (!S.support.gestures) {
                 if (
-                  'touchmove' !== e.type ||
-                  ('touchmove' === e.type && e.targetTouches.length < 2)
+                  "touchmove" !== e.type ||
+                  ("touchmove" === e.type && e.targetTouches.length < 2)
                 )
                   return;
                 a.gesture.scaleMove = a.getDistanceBetweenTouches(e);
@@ -3389,14 +3389,14 @@ $('a[href^="#"]').on('click', function (event) {
                     1 -
                     Math.pow(S.params.zoomMin - a.scale + 1, 0.5)),
                 a.gesture.image.transform(
-                  'translate3d(0,0,0) scale(' + a.scale + ')'
+                  "translate3d(0,0,0) scale(" + a.scale + ")"
                 ));
             },
             onGestureEnd: function (e) {
               var a = S.zoom;
               (!S.support.gestures &&
-                ('touchend' !== e.type ||
-                  ('touchend' === e.type && e.changedTouches.length < 2))) ||
+                ("touchend" !== e.type ||
+                  ("touchend" === e.type && e.changedTouches.length < 2))) ||
                 (a.gesture.image &&
                   0 !== a.gesture.image.length &&
                   ((a.scale = Math.max(
@@ -3405,7 +3405,7 @@ $('a[href^="#"]').on('click', function (event) {
                   )),
                   a.gesture.image
                     .transition(S.params.speed)
-                    .transform('translate3d(0,0,0) scale(' + a.scale + ')'),
+                    .transform("translate3d(0,0,0) scale(" + a.scale + ")"),
                   (a.currentScale = a.scale),
                   (a.isScaling = !1),
                   1 === a.scale && (a.gesture.slide = void 0)));
@@ -3415,14 +3415,14 @@ $('a[href^="#"]').on('click', function (event) {
               t.gesture.image &&
                 0 !== t.gesture.image.length &&
                 (t.image.isTouched ||
-                  ('android' === e.device.os && a.preventDefault(),
+                  ("android" === e.device.os && a.preventDefault(),
                   (t.image.isTouched = !0),
                   (t.image.touchesStart.x =
-                    'touchstart' === a.type
+                    "touchstart" === a.type
                       ? a.targetTouches[0].pageX
                       : a.pageX),
                   (t.image.touchesStart.y =
-                    'touchstart' === a.type
+                    "touchstart" === a.type
                       ? a.targetTouches[0].pageY
                       : a.pageY)));
             },
@@ -3437,9 +3437,9 @@ $('a[href^="#"]').on('click', function (event) {
                   ((a.image.width = a.gesture.image[0].offsetWidth),
                   (a.image.height = a.gesture.image[0].offsetHeight),
                   (a.image.startX =
-                    S.getTranslate(a.gesture.imageWrap[0], 'x') || 0),
+                    S.getTranslate(a.gesture.imageWrap[0], "x") || 0),
                   (a.image.startY =
-                    S.getTranslate(a.gesture.imageWrap[0], 'y') || 0),
+                    S.getTranslate(a.gesture.imageWrap[0], "y") || 0),
                   (a.gesture.slideWidth = a.gesture.slide[0].offsetWidth),
                   (a.gesture.slideHeight = a.gesture.slide[0].offsetHeight),
                   a.gesture.imageWrap.transition(0));
@@ -3458,11 +3458,11 @@ $('a[href^="#"]').on('click', function (event) {
                     )),
                     (a.image.maxY = -a.image.minY),
                     (a.image.touchesCurrent.x =
-                      'touchmove' === e.type
+                      "touchmove" === e.type
                         ? e.targetTouches[0].pageX
                         : e.pageX),
                     (a.image.touchesCurrent.y =
-                      'touchmove' === e.type
+                      "touchmove" === e.type
                         ? e.targetTouches[0].pageY
                         : e.pageY),
                     !a.image.isMoved && !a.isScaling)
@@ -3542,11 +3542,11 @@ $('a[href^="#"]').on('click', function (event) {
                     (a.velocity.prevPositionY = a.image.touchesCurrent.y),
                     (a.velocity.prevTime = Date.now()),
                     a.gesture.imageWrap.transform(
-                      'translate3d(' +
+                      "translate3d(" +
                         a.image.currentX +
-                        'px, ' +
+                        "px, " +
                         a.image.currentY +
-                        'px,0)'
+                        "px,0)"
                     );
                 }
               }
@@ -3589,11 +3589,11 @@ $('a[href^="#"]').on('click', function (event) {
                   t.gesture.imageWrap
                     .transition(p)
                     .transform(
-                      'translate3d(' +
+                      "translate3d(" +
                         t.image.currentX +
-                        'px, ' +
+                        "px, " +
                         t.image.currentY +
-                        'px,0)'
+                        "px,0)"
                     );
               }
             },
@@ -3601,9 +3601,12 @@ $('a[href^="#"]').on('click', function (event) {
               var a = e.zoom;
               a.gesture.slide &&
                 e.previousIndex !== e.activeIndex &&
-                (a.gesture.image.transform('translate3d(0,0,0) scale(1)'),
-                a.gesture.imageWrap.transform('translate3d(0,0,0)'),
-                (a.gesture.slide = a.gesture.image = a.gesture.imageWrap = void 0),
+                (a.gesture.image.transform("translate3d(0,0,0) scale(1)"),
+                a.gesture.imageWrap.transform("translate3d(0,0,0)"),
+                (a.gesture.slide =
+                  a.gesture.image =
+                  a.gesture.imageWrap =
+                    void 0),
                 (a.scale = a.currentScale = 1));
             },
             toggleZoom: function (e, t) {
@@ -3613,20 +3616,20 @@ $('a[href^="#"]').on('click', function (event) {
                   ((s.gesture.slide = e.clickedSlide
                     ? a(e.clickedSlide)
                     : e.slides.eq(e.activeIndex)),
-                  (s.gesture.image = s.gesture.slide.find('img, svg, canvas')),
+                  (s.gesture.image = s.gesture.slide.find("img, svg, canvas")),
                   (s.gesture.imageWrap = s.gesture.image.parent(
-                    '.' + e.params.zoomContainerClass
+                    "." + e.params.zoomContainerClass
                   ))),
                 s.gesture.image && 0 !== s.gesture.image.length)
               ) {
                 var i, r, n, o, l, p, d, u, c, m, h, g, f, v, w, y, x, T;
-                'undefined' == typeof s.image.touchesStart.x && t
+                "undefined" == typeof s.image.touchesStart.x && t
                   ? ((i =
-                      'touchend' === t.type
+                      "touchend" === t.type
                         ? t.changedTouches[0].pageX
                         : t.pageX),
                     (r =
-                      'touchend' === t.type
+                      "touchend" === t.type
                         ? t.changedTouches[0].pageY
                         : t.pageY))
                   : ((i = s.image.touchesStart.x),
@@ -3635,13 +3638,13 @@ $('a[href^="#"]').on('click', function (event) {
                     ? ((s.scale = s.currentScale = 1),
                       s.gesture.imageWrap
                         .transition(300)
-                        .transform('translate3d(0,0,0)'),
+                        .transform("translate3d(0,0,0)"),
                       s.gesture.image
                         .transition(300)
-                        .transform('translate3d(0,0,0) scale(1)'),
+                        .transform("translate3d(0,0,0) scale(1)"),
                       (s.gesture.slide = void 0))
                     : ((s.scale = s.currentScale =
-                        s.gesture.imageWrap.attr('data-swiper-zoom') ||
+                        s.gesture.imageWrap.attr("data-swiper-zoom") ||
                         e.params.zoomMax),
                       t
                         ? ((x = s.gesture.slide[0].offsetWidth),
@@ -3667,21 +3670,21 @@ $('a[href^="#"]').on('click', function (event) {
                         : ((d = 0), (u = 0)),
                       s.gesture.imageWrap
                         .transition(300)
-                        .transform('translate3d(' + d + 'px, ' + u + 'px,0)'),
+                        .transform("translate3d(" + d + "px, " + u + "px,0)"),
                       s.gesture.image
                         .transition(300)
                         .transform(
-                          'translate3d(0,0,0) scale(' + s.scale + ')'
+                          "translate3d(0,0,0) scale(" + s.scale + ")"
                         ));
               }
             },
             attachEvents: function (e) {
-              var t = e ? 'off' : 'on';
+              var t = e ? "off" : "on";
               if (S.params.zoom) {
                 var s =
                   (S.slides,
                   !(
-                    'touchstart' !== S.touchEvents.start ||
+                    "touchstart" !== S.touchEvents.start ||
                     !S.support.passiveListener ||
                     !S.params.passiveListeners
                   ) && {
@@ -3689,21 +3692,21 @@ $('a[href^="#"]').on('click', function (event) {
                     capture: !1,
                   });
                 S.support.gestures
-                  ? (S.slides[t]('gesturestart', S.zoom.onGestureStart, s),
-                    S.slides[t]('gesturechange', S.zoom.onGestureChange, s),
-                    S.slides[t]('gestureend', S.zoom.onGestureEnd, s))
-                  : 'touchstart' === S.touchEvents.start &&
+                  ? (S.slides[t]("gesturestart", S.zoom.onGestureStart, s),
+                    S.slides[t]("gesturechange", S.zoom.onGestureChange, s),
+                    S.slides[t]("gestureend", S.zoom.onGestureEnd, s))
+                  : "touchstart" === S.touchEvents.start &&
                     (S.slides[t](S.touchEvents.start, S.zoom.onGestureStart, s),
                     S.slides[t](S.touchEvents.move, S.zoom.onGestureChange, s),
                     S.slides[t](S.touchEvents.end, S.zoom.onGestureEnd, s)),
-                  S[t]('touchStart', S.zoom.onTouchStart),
+                  S[t]("touchStart", S.zoom.onTouchStart),
                   S.slides.each(function (e, s) {
-                    a(s).find('.' + S.params.zoomContainerClass).length > 0 &&
+                    a(s).find("." + S.params.zoomContainerClass).length > 0 &&
                       a(s)[t](S.touchEvents.move, S.zoom.onTouchMove);
                   }),
-                  S[t]('touchEnd', S.zoom.onTouchEnd),
-                  S[t]('transitionEnd', S.zoom.onTransitionEnd),
-                  S.params.zoomToggle && S.on('doubleTap', S.zoom.toggleZoom);
+                  S[t]("touchEnd", S.zoom.onTouchEnd),
+                  S[t]("transitionEnd", S.zoom.onTransitionEnd),
+                  S.params.zoomToggle && S.on("doubleTap", S.zoom.toggleZoom);
               }
             },
             init: function () {
@@ -3770,7 +3773,7 @@ $('a[href^="#"]').on('click', function (event) {
           }),
           (S.off = function (e, a) {
             var t;
-            if (((e = g(e)), 'undefined' == typeof a))
+            if (((e = g(e)), "undefined" == typeof a))
               return (S.emitterEventListeners[e] = []), S;
             if (
               S.emitterEventListeners[e] &&
@@ -3798,19 +3801,19 @@ $('a[href^="#"]').on('click', function (event) {
           }),
           (S.a11y = {
             makeFocusable: function (e) {
-              return e.attr('tabIndex', '0'), e;
+              return e.attr("tabIndex", "0"), e;
             },
             addRole: function (e, a) {
-              return e.attr('role', a), e;
+              return e.attr("role", a), e;
             },
             addLabel: function (e, a) {
-              return e.attr('aria-label', a), e;
+              return e.attr("aria-label", a), e;
             },
             disable: function (e) {
-              return e.attr('aria-disabled', !0), e;
+              return e.attr("aria-disabled", !0), e;
             },
             enable: function (e) {
-              return e.attr('aria-disabled', !1), e;
+              return e.attr("aria-disabled", !1), e;
             },
             onEnterKey: function (e) {
               13 === e.keyCode &&
@@ -3824,7 +3827,7 @@ $('a[href^="#"]').on('click', function (event) {
                     S.isBeginning
                       ? S.a11y.notify(S.params.firstSlideMessage)
                       : S.a11y.notify(S.params.prevSlideMessage)),
-                a(e.target).is('.' + S.params.bulletClass) &&
+                a(e.target).is("." + S.params.bulletClass) &&
                   a(e.target)[0].click());
             },
             liveRegion: a(
@@ -3834,20 +3837,20 @@ $('a[href^="#"]').on('click', function (event) {
             ),
             notify: function (e) {
               var a = S.a11y.liveRegion;
-              0 !== a.length && (a.html(''), a.html(e));
+              0 !== a.length && (a.html(""), a.html(e));
             },
             init: function () {
               S.params.nextButton &&
                 S.nextButton &&
                 S.nextButton.length > 0 &&
                 (S.a11y.makeFocusable(S.nextButton),
-                S.a11y.addRole(S.nextButton, 'button'),
+                S.a11y.addRole(S.nextButton, "button"),
                 S.a11y.addLabel(S.nextButton, S.params.nextSlideMessage)),
                 S.params.prevButton &&
                   S.prevButton &&
                   S.prevButton.length > 0 &&
                   (S.a11y.makeFocusable(S.prevButton),
-                  S.a11y.addRole(S.prevButton, 'button'),
+                  S.a11y.addRole(S.prevButton, "button"),
                   S.a11y.addLabel(S.prevButton, S.params.prevSlideMessage)),
                 a(S.container).append(S.a11y.liveRegion);
             },
@@ -3859,7 +3862,7 @@ $('a[href^="#"]').on('click', function (event) {
                 S.bullets.each(function () {
                   var e = a(this);
                   S.a11y.makeFocusable(e),
-                    S.a11y.addRole(e, 'button'),
+                    S.a11y.addRole(e, "button"),
                     S.a11y.addLabel(
                       e,
                       S.params.paginationBulletMessage.replace(
@@ -3884,7 +3887,7 @@ $('a[href^="#"]').on('click', function (event) {
                 S.scrollbar &&
                 (S.scrollbar.set(),
                 S.params.scrollbarDraggable && S.scrollbar.enableDraggable()),
-              'slide' !== S.params.effect &&
+              "slide" !== S.params.effect &&
                 S.effects[S.params.effect] &&
                 (S.params.loop || S.updateProgress(),
                 S.effects[S.params.effect].setTranslate()),
@@ -3924,11 +3927,11 @@ $('a[href^="#"]').on('click', function (event) {
               S.params.history && S.history && S.history.init(),
               S.params.hashnav && S.hashnav && S.hashnav.init(),
               S.params.a11y && S.a11y && S.a11y.init(),
-              S.emit('onInit', S);
+              S.emit("onInit", S);
           }),
           (S.cleanupStyles = function () {
-            S.container.removeClass(S.classNames.join(' ')).removeAttr('style'),
-              S.wrapper.removeAttr('style'),
+            S.container.removeClass(S.classNames.join(" ")).removeAttr("style"),
+              S.wrapper.removeAttr("style"),
               S.slides &&
                 S.slides.length &&
                 S.slides
@@ -3938,11 +3941,11 @@ $('a[href^="#"]').on('click', function (event) {
                       S.params.slideActiveClass,
                       S.params.slideNextClass,
                       S.params.slidePrevClass,
-                    ].join(' ')
+                    ].join(" ")
                   )
-                  .removeAttr('style')
-                  .removeAttr('data-swiper-column')
-                  .removeAttr('data-swiper-row'),
+                  .removeAttr("style")
+                  .removeAttr("data-swiper-column")
+                  .removeAttr("data-swiper-row"),
               S.paginationContainer &&
                 S.paginationContainer.length &&
                 S.paginationContainer.removeClass(
@@ -3963,10 +3966,10 @@ $('a[href^="#"]').on('click', function (event) {
                 S.scrollbar &&
                 (S.scrollbar.track &&
                   S.scrollbar.track.length &&
-                  S.scrollbar.track.removeAttr('style'),
+                  S.scrollbar.track.removeAttr("style"),
                 S.scrollbar.drag &&
                   S.scrollbar.drag.length &&
-                  S.scrollbar.drag.removeAttr('style'));
+                  S.scrollbar.drag.removeAttr("style"));
           }),
           (S.destroy = function (e, a) {
             S.detachEvents(),
@@ -3989,11 +3992,11 @@ $('a[href^="#"]').on('click', function (event) {
               S.params.history &&
                 !S.params.replaceState &&
                 window.removeEventListener(
-                  'popstate',
+                  "popstate",
                   S.history.setHistoryPopState
                 ),
               S.params.hashnav && S.hashnav && S.hashnav.destroy(),
-              S.emit('onDestroy'),
+              S.emit("onDestroy"),
               e !== !1 && (S = null);
           }),
           S.init(),
@@ -4005,16 +4008,16 @@ $('a[href^="#"]').on('click', function (event) {
     isSafari: (function () {
       var e = navigator.userAgent.toLowerCase();
       return (
-        e.indexOf('safari') >= 0 &&
-        e.indexOf('chrome') < 0 &&
-        e.indexOf('android') < 0
+        e.indexOf("safari") >= 0 &&
+        e.indexOf("chrome") < 0 &&
+        e.indexOf("android") < 0
       );
     })(),
     isUiWebView: /(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/i.test(
       navigator.userAgent
     ),
     isArray: function (e) {
-      return '[object Array]' === Object.prototype.toString.apply(e);
+      return "[object Array]" === Object.prototype.toString.apply(e);
     },
     browser: {
       ie: window.navigator.pointerEnabled || window.navigator.msPointerEnabled,
@@ -4024,10 +4027,10 @@ $('a[href^="#"]').on('click', function (event) {
         (window.navigator.pointerEnabled &&
           window.navigator.maxTouchPoints > 1),
       lteIE9: (function () {
-        var e = document.createElement('div');
+        var e = document.createElement("div");
         return (
-          (e.innerHTML = '<!--[if lte IE 9]><i></i><![endif]-->'),
-          1 === e.getElementsByTagName('i').length
+          (e.innerHTML = "<!--[if lte IE 9]><i></i><![endif]-->"),
+          1 === e.getElementsByTagName("i").length
         );
       })(),
     },
@@ -4047,28 +4050,29 @@ $('a[href^="#"]').on('click', function (event) {
         (window.Modernizr && Modernizr.touch === !0) ||
         (function () {
           return !!(
-            'ontouchstart' in window ||
+            "ontouchstart" in window ||
             (window.DocumentTouch && document instanceof DocumentTouch)
           );
         })(),
       transforms3d:
         (window.Modernizr && Modernizr.csstransforms3d === !0) ||
         (function () {
-          var e = document.createElement('div').style;
+          var e = document.createElement("div").style;
           return (
-            'webkitPerspective' in e ||
-            'MozPerspective' in e ||
-            'OPerspective' in e ||
-            'MsPerspective' in e ||
-            'perspective' in e
+            "webkitPerspective" in e ||
+            "MozPerspective" in e ||
+            "OPerspective" in e ||
+            "MsPerspective" in e ||
+            "perspective" in e
           );
         })(),
       flexbox: (function () {
         for (
-          var e = document.createElement('div').style,
-            a = 'alignItems webkitAlignItems webkitBoxAlign msFlexAlign mozBoxAlign webkitFlexDirection msFlexDirection mozBoxDirection mozBoxOrient webkitBoxDirection webkitBoxOrient'.split(
-              ' '
-            ),
+          var e = document.createElement("div").style,
+            a =
+              "alignItems webkitAlignItems webkitBoxAlign msFlexAlign mozBoxAlign webkitFlexDirection msFlexDirection mozBoxDirection mozBoxOrient webkitBoxDirection webkitBoxOrient".split(
+                " "
+              ),
             t = 0;
           t < a.length;
           t++
@@ -4077,23 +4081,23 @@ $('a[href^="#"]').on('click', function (event) {
       })(),
       observer: (function () {
         return (
-          'MutationObserver' in window || 'WebkitMutationObserver' in window
+          "MutationObserver" in window || "WebkitMutationObserver" in window
         );
       })(),
       passiveListener: (function () {
         var e = !1;
         try {
-          var a = Object.defineProperty({}, 'passive', {
+          var a = Object.defineProperty({}, "passive", {
             get: function () {
               e = !0;
             },
           });
-          window.addEventListener('testPassiveListener', null, a);
+          window.addEventListener("testPassiveListener", null, a);
         } catch (e) {}
         return e;
       })(),
       gestures: (function () {
-        return 'ongesturestart' in window;
+        return "ongesturestart" in window;
       })(),
     },
     plugins: {},
@@ -4111,19 +4115,19 @@ $('a[href^="#"]').on('click', function (event) {
               i = 0;
             if (a && !t && a instanceof e) return a;
             if (a)
-              if ('string' == typeof a) {
+              if ("string" == typeof a) {
                 var r,
                   n,
                   o = a.trim();
-                if (o.indexOf('<') >= 0 && o.indexOf('>') >= 0) {
-                  var l = 'div';
+                if (o.indexOf("<") >= 0 && o.indexOf(">") >= 0) {
+                  var l = "div";
                   for (
-                    0 === o.indexOf('<li') && (l = 'ul'),
-                      0 === o.indexOf('<tr') && (l = 'tbody'),
-                      (0 !== o.indexOf('<td') && 0 !== o.indexOf('<th')) ||
-                        (l = 'tr'),
-                      0 === o.indexOf('<tbody') && (l = 'table'),
-                      0 === o.indexOf('<option') && (l = 'select'),
+                    0 === o.indexOf("<li") && (l = "ul"),
+                      0 === o.indexOf("<tr") && (l = "tbody"),
+                      (0 !== o.indexOf("<td") && 0 !== o.indexOf("<th")) ||
+                        (l = "tr"),
+                      0 === o.indexOf("<tbody") && (l = "table"),
+                      0 === o.indexOf("<option") && (l = "select"),
                       n = document.createElement(l),
                       n.innerHTML = a,
                       i = 0;
@@ -4134,9 +4138,9 @@ $('a[href^="#"]').on('click', function (event) {
                 } else
                   for (
                     r =
-                      t || '#' !== a[0] || a.match(/[ .<>:~]/)
+                      t || "#" !== a[0] || a.match(/[ .<>:~]/)
                         ? (t || document).querySelectorAll(a)
-                        : [document.getElementById(a.split('#')[1])],
+                        : [document.getElementById(a.split("#")[1])],
                       i = 0;
                     i < r.length;
                     i++
@@ -4151,14 +4155,14 @@ $('a[href^="#"]').on('click', function (event) {
         return (
           (e.prototype = {
             addClass: function (e) {
-              if ('undefined' == typeof e) return this;
-              for (var a = e.split(' '), t = 0; t < a.length; t++)
+              if ("undefined" == typeof e) return this;
+              for (var a = e.split(" "), t = 0; t < a.length; t++)
                 for (var s = 0; s < this.length; s++)
                   this[s].classList.add(a[t]);
               return this;
             },
             removeClass: function (e) {
-              for (var a = e.split(' '), t = 0; t < a.length; t++)
+              for (var a = e.split(" "), t = 0; t < a.length; t++)
                 for (var s = 0; s < this.length; s++)
                   this[s].classList.remove(a[t]);
               return this;
@@ -4167,13 +4171,13 @@ $('a[href^="#"]').on('click', function (event) {
               return !!this[0] && this[0].classList.contains(e);
             },
             toggleClass: function (e) {
-              for (var a = e.split(' '), t = 0; t < a.length; t++)
+              for (var a = e.split(" "), t = 0; t < a.length; t++)
                 for (var s = 0; s < this.length; s++)
                   this[s].classList.toggle(a[t]);
               return this;
             },
             attr: function (e, a) {
-              if (1 === arguments.length && 'string' == typeof e)
+              if (1 === arguments.length && "string" == typeof e)
                 return this[0] ? this[0].getAttribute(e) : void 0;
               for (var t = 0; t < this.length; t++)
                 if (2 === arguments.length) this[t].setAttribute(e, a);
@@ -4187,7 +4191,7 @@ $('a[href^="#"]').on('click', function (event) {
               return this;
             },
             data: function (e, a) {
-              if ('undefined' != typeof a) {
+              if ("undefined" != typeof a) {
                 for (var t = 0; t < this.length; t++) {
                   var s = this[t];
                   s.dom7ElementDataStorage || (s.dom7ElementDataStorage = {}),
@@ -4196,7 +4200,7 @@ $('a[href^="#"]').on('click', function (event) {
                 return this;
               }
               if (this[0]) {
-                var i = this[0].getAttribute('data-' + e);
+                var i = this[0].getAttribute("data-" + e);
                 return i
                   ? i
                   : this[0].dom7ElementDataStorage &&
@@ -4208,15 +4212,27 @@ $('a[href^="#"]').on('click', function (event) {
             transform: function (e) {
               for (var a = 0; a < this.length; a++) {
                 var t = this[a].style;
-                t.webkitTransform = t.MsTransform = t.msTransform = t.MozTransform = t.OTransform = t.transform = e;
+                t.webkitTransform =
+                  t.MsTransform =
+                  t.msTransform =
+                  t.MozTransform =
+                  t.OTransform =
+                  t.transform =
+                    e;
               }
               return this;
             },
             transition: function (e) {
-              'string' != typeof e && (e += 'ms');
+              "string" != typeof e && (e += "ms");
               for (var a = 0; a < this.length; a++) {
                 var t = this[a].style;
-                t.webkitTransitionDuration = t.MsTransitionDuration = t.msTransitionDuration = t.MozTransitionDuration = t.OTransitionDuration = t.transitionDuration = e;
+                t.webkitTransitionDuration =
+                  t.MsTransitionDuration =
+                  t.msTransitionDuration =
+                  t.MozTransitionDuration =
+                  t.OTransitionDuration =
+                  t.transitionDuration =
+                    e;
               }
               return this;
             },
@@ -4230,11 +4246,11 @@ $('a[href^="#"]').on('click', function (event) {
               }
               var n,
                 o,
-                l = e.split(' ');
+                l = e.split(" ");
               for (n = 0; n < this.length; n++)
-                if ('function' == typeof t || t === !1)
+                if ("function" == typeof t || t === !1)
                   for (
-                    'function' == typeof t &&
+                    "function" == typeof t &&
                       ((s = arguments[1]), (i = arguments[2] || !1)),
                       o = 0;
                     o < l.length;
@@ -4253,10 +4269,10 @@ $('a[href^="#"]').on('click', function (event) {
               return this;
             },
             off: function (e, a, t, s) {
-              for (var i = e.split(' '), r = 0; r < i.length; r++)
+              for (var i = e.split(" "), r = 0; r < i.length; r++)
                 for (var n = 0; n < this.length; n++)
-                  if ('function' == typeof a || a === !1)
-                    'function' == typeof a &&
+                  if ("function" == typeof a || a === !1)
+                    "function" == typeof a &&
                       ((t = arguments[1]), (s = arguments[2] || !1)),
                       this[n].removeEventListener(i[r], t, s);
                   else if (this[n].dom7LiveListeners)
@@ -4274,7 +4290,7 @@ $('a[href^="#"]').on('click', function (event) {
                 t(n), r.off(e, a, i, s);
               }
               var r = this;
-              'function' == typeof a &&
+              "function" == typeof a &&
                 ((a = !1), (t = arguments[1]), (s = arguments[2])),
                 r.on(e, a, i, s);
             },
@@ -4288,7 +4304,7 @@ $('a[href^="#"]').on('click', function (event) {
                     cancelable: !0,
                   });
                 } catch (t) {
-                  (s = document.createEvent('Event')),
+                  (s = document.createEvent("Event")),
                     s.initEvent(e, !0, !0),
                     (s.detail = a);
                 }
@@ -4304,11 +4320,11 @@ $('a[href^="#"]').on('click', function (event) {
               }
               var t,
                 s = [
-                  'webkitTransitionEnd',
-                  'transitionend',
-                  'oTransitionEnd',
-                  'MSTransitionEnd',
-                  'msTransitionEnd',
+                  "webkitTransitionEnd",
+                  "transitionend",
+                  "oTransitionEnd",
+                  "MSTransitionEnd",
+                  "msTransitionEnd",
                 ],
                 i = this;
               if (e) for (t = 0; t < s.length; t++) i.on(s[t], a);
@@ -4318,15 +4334,15 @@ $('a[href^="#"]').on('click', function (event) {
               return this[0] === window
                 ? window.innerWidth
                 : this.length > 0
-                ? parseFloat(this.css('width'))
+                ? parseFloat(this.css("width"))
                 : null;
             },
             outerWidth: function (e) {
               return this.length > 0
                 ? e
                   ? this[0].offsetWidth +
-                    parseFloat(this.css('margin-right')) +
-                    parseFloat(this.css('margin-left'))
+                    parseFloat(this.css("margin-right")) +
+                    parseFloat(this.css("margin-left"))
                   : this[0].offsetWidth
                 : null;
             },
@@ -4334,15 +4350,15 @@ $('a[href^="#"]').on('click', function (event) {
               return this[0] === window
                 ? window.innerHeight
                 : this.length > 0
-                ? parseFloat(this.css('height'))
+                ? parseFloat(this.css("height"))
                 : null;
             },
             outerHeight: function (e) {
               return this.length > 0
                 ? e
                   ? this[0].offsetHeight +
-                    parseFloat(this.css('margin-top')) +
-                    parseFloat(this.css('margin-bottom'))
+                    parseFloat(this.css("margin-top")) +
+                    parseFloat(this.css("margin-bottom"))
                   : this[0].offsetHeight
                 : null;
             },
@@ -4365,7 +4381,7 @@ $('a[href^="#"]').on('click', function (event) {
             css: function (e, a) {
               var t;
               if (1 === arguments.length) {
-                if ('string' != typeof e) {
+                if ("string" != typeof e) {
                   for (t = 0; t < this.length; t++)
                     for (var s in e) this[t].style[s] = e[s];
                   return this;
@@ -4375,7 +4391,7 @@ $('a[href^="#"]').on('click', function (event) {
                     .getComputedStyle(this[0], null)
                     .getPropertyValue(e);
               }
-              if (2 === arguments.length && 'string' == typeof e) {
+              if (2 === arguments.length && "string" == typeof e) {
                 for (t = 0; t < this.length; t++) this[t].style[e] = a;
                 return this;
               }
@@ -4386,13 +4402,13 @@ $('a[href^="#"]').on('click', function (event) {
               return this;
             },
             html: function (e) {
-              if ('undefined' == typeof e)
+              if ("undefined" == typeof e)
                 return this[0] ? this[0].innerHTML : void 0;
               for (var a = 0; a < this.length; a++) this[a].innerHTML = e;
               return this;
             },
             text: function (e) {
-              if ('undefined' == typeof e)
+              if ("undefined" == typeof e)
                 return this[0] ? this[0].textContent.trim() : null;
               for (var a = 0; a < this.length; a++) this[a].textContent = e;
               return this;
@@ -4400,7 +4416,7 @@ $('a[href^="#"]').on('click', function (event) {
             is: function (t) {
               if (!this[0]) return !1;
               var s, i;
-              if ('string' == typeof t) {
+              if ("string" == typeof t) {
                 var r = this[0];
                 if (r === document) return t === document;
                 if (r === window) return t === window;
@@ -4429,7 +4445,7 @@ $('a[href^="#"]').on('click', function (event) {
               }
             },
             eq: function (a) {
-              if ('undefined' == typeof a) return this;
+              if ("undefined" == typeof a) return this;
               var t,
                 s = this.length;
               return a > s - 1
@@ -4441,8 +4457,8 @@ $('a[href^="#"]').on('click', function (event) {
             append: function (a) {
               var t, s;
               for (t = 0; t < this.length; t++)
-                if ('string' == typeof a) {
-                  var i = document.createElement('div');
+                if ("string" == typeof a) {
+                  var i = document.createElement("div");
                   for (i.innerHTML = a; i.firstChild; )
                     this[t].appendChild(i.firstChild);
                 } else if (a instanceof e)
@@ -4453,8 +4469,8 @@ $('a[href^="#"]').on('click', function (event) {
             prepend: function (a) {
               var t, s;
               for (t = 0; t < this.length; t++)
-                if ('string' == typeof a) {
-                  var i = document.createElement('div');
+                if ("string" == typeof a) {
+                  var i = document.createElement("div");
                   for (
                     i.innerHTML = a, s = i.childNodes.length - 1;
                     s >= 0;
@@ -4592,7 +4608,7 @@ $('a[href^="#"]').on('click', function (event) {
           a
         );
       })(),
-      i = ['jQuery', 'Zepto', 'Dom7'],
+      i = ["jQuery", "Zepto", "Dom7"],
       r = 0;
     r < i.length;
     r++
@@ -4600,9 +4616,9 @@ $('a[href^="#"]').on('click', function (event) {
     window[i[r]] && e(window[i[r]]);
   var n;
   (n =
-    'undefined' == typeof s ? window.Dom7 || window.Zepto || window.jQuery : s),
+    "undefined" == typeof s ? window.Dom7 || window.Zepto || window.jQuery : s),
     n &&
-      ('transitionEnd' in n.fn ||
+      ("transitionEnd" in n.fn ||
         (n.fn.transitionEnd = function (e) {
           function a(r) {
             if (r.target === this)
@@ -4610,60 +4626,72 @@ $('a[href^="#"]').on('click', function (event) {
           }
           var t,
             s = [
-              'webkitTransitionEnd',
-              'transitionend',
-              'oTransitionEnd',
-              'MSTransitionEnd',
-              'msTransitionEnd',
+              "webkitTransitionEnd",
+              "transitionend",
+              "oTransitionEnd",
+              "MSTransitionEnd",
+              "msTransitionEnd",
             ],
             i = this;
           if (e) for (t = 0; t < s.length; t++) i.on(s[t], a);
           return this;
         }),
-      'transform' in n.fn ||
+      "transform" in n.fn ||
         (n.fn.transform = function (e) {
           for (var a = 0; a < this.length; a++) {
             var t = this[a].style;
-            t.webkitTransform = t.MsTransform = t.msTransform = t.MozTransform = t.OTransform = t.transform = e;
+            t.webkitTransform =
+              t.MsTransform =
+              t.msTransform =
+              t.MozTransform =
+              t.OTransform =
+              t.transform =
+                e;
           }
           return this;
         }),
-      'transition' in n.fn ||
+      "transition" in n.fn ||
         (n.fn.transition = function (e) {
-          'string' != typeof e && (e += 'ms');
+          "string" != typeof e && (e += "ms");
           for (var a = 0; a < this.length; a++) {
             var t = this[a].style;
-            t.webkitTransitionDuration = t.MsTransitionDuration = t.msTransitionDuration = t.MozTransitionDuration = t.OTransitionDuration = t.transitionDuration = e;
+            t.webkitTransitionDuration =
+              t.MsTransitionDuration =
+              t.msTransitionDuration =
+              t.MozTransitionDuration =
+              t.OTransitionDuration =
+              t.transitionDuration =
+                e;
           }
           return this;
         }),
-      'outerWidth' in n.fn ||
+      "outerWidth" in n.fn ||
         (n.fn.outerWidth = function (e) {
           return this.length > 0
             ? e
               ? this[0].offsetWidth +
-                parseFloat(this.css('margin-right')) +
-                parseFloat(this.css('margin-left'))
+                parseFloat(this.css("margin-right")) +
+                parseFloat(this.css("margin-left"))
               : this[0].offsetWidth
             : null;
         })),
     (window.Swiper = t);
 })(),
-  'undefined' != typeof module
+  "undefined" != typeof module
     ? (module.exports = window.Swiper)
-    : 'function' == typeof define &&
+    : "function" == typeof define &&
       define.amd &&
       define([], function () {
-        'use strict';
+        "use strict";
         return window.Swiper;
       });
 //# sourceMappingURL=maps/swiper.min.js.map
 
 /*------- Swiper Slider -------*/
-var swiper = new Swiper('.swiper-container', {
-  pagination: '.swiper-pagination',
-  nextButton: '.swiper-button-next',
-  prevButton: '.swiper-button-prev',
+var swiper = new Swiper(".swiper-container", {
+  pagination: ".swiper-pagination",
+  nextButton: ".swiper-button-next",
+  prevButton: ".swiper-button-prev",
   paginationClickable: true,
   centeredSlides: true,
   autoplay: 3500,
@@ -4684,7 +4712,7 @@ var swiper = new Swiper('.swiper-container', {
 /* exported ScrollPosStyler */
 
 var ScrollPosStyler = (function (document, window) {
-  'use strict';
+  "use strict";
 
   /* ====================
    * private variables
@@ -4695,7 +4723,7 @@ var ScrollPosStyler = (function (document, window) {
     // toggle style / class when scrolling below this position (in px)
     scrollOffsetY = 1,
     // choose elements to apply style / class to
-    elements = document.getElementsByClassName('sps');
+    elements = document.getElementsByClassName("sps");
 
   /* ====================
    * private funcion to check scroll position
@@ -4800,30 +4828,30 @@ var ScrollPosStyler = (function (document, window) {
    * main initialization
    * ==================== */
   // add initial style / class to elements when DOM is ready
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener("DOMContentLoaded", function () {
     // defer initialization to allow browser to restore scroll position
     window.setTimeout(pub.init, 1);
   });
 
   // register for window scroll events
-  window.addEventListener('scroll', onScroll);
+  window.addEventListener("scroll", onScroll);
 
   return pub;
 })(document, window);
 
 //**************************************************EVENTS********************************************************************
 
-window.addEventListener('load', function () {
-  new Glider(document.querySelector('.glider'), {
+window.addEventListener("load", function () {
+  new Glider(document.querySelector(".glider"), {
     slidesToShow: 1,
     slidesToScroll: 1,
     duration: 1.5,
     rewind: true,
     draggable: true,
-    dots: '.dots',
+    dots: ".dots",
     arrows: {
-      prev: '.glider-prev',
-      next: '.glider-next',
+      prev: ".glider-prev",
+      next: ".glider-next",
     },
     responsive: [
       {
@@ -4838,7 +4866,7 @@ window.addEventListener('load', function () {
   });
 });
 
-var countDownDate = new Date('March 8, 2021 15:00:00').getTime();
+var countDownDate = new Date("March 8, 2021 15:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {
@@ -4855,18 +4883,18 @@ var x = setInterval(function () {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById('demoDay').innerHTML =
-    days + '<br/><div class = countdown>DAYS</div> ';
-  document.getElementById('demoHour').innerHTML =
-    hours + '<br/><div class = countdown>H0URS</div> ';
-  document.getElementById('demoMin').innerHTML =
-    minutes + '<br/><div class = countdown>MIN(s)</div> ';
-  document.getElementById('demoSec').innerHTML =
-    seconds + '<br/><div class = countdown>SEC(s)</div> ';
+  document.getElementById("demoDay").innerHTML =
+    days + "<br/><div class = countdown>DAYS</div> ";
+  document.getElementById("demoHour").innerHTML =
+    hours + "<br/><div class = countdown>H0URS</div> ";
+  document.getElementById("demoMin").innerHTML =
+    minutes + "<br/><div class = countdown>MIN(s)</div> ";
+  document.getElementById("demoSec").innerHTML =
+    seconds + "<br/><div class = countdown>SEC(s)</div> ";
 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById('demo').innerHTML = 'EXPIRED';
+    document.getElementById("demo").innerHTML = "EXPIRED";
     //
     //   document.getElementById("demo").innerHTML = `<div class="butn">
     //   <button id="links" class="team_ded_page" type="button" name="button"><a href="https://youtu.be/PNsWlQDyjiY">JOIN NOW</a></button>
@@ -4877,16 +4905,16 @@ var x = setInterval(function () {
 // **********************************BLOGS********************************************
 
 var first =
-  'Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus voluptas.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa ullam autem inventore dolorum minus, dolorem corporis porro magnam aspernatur cupiditate optio ex modi dignissimos tempora doloribus laboriosam dicta quis nobis?';
-var firstSub = first.substring(0, 120) + '...';
-document.getElementById('first-blog').innerHTML = firstSub;
+  "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus voluptas.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa ullam autem inventore dolorum minus, dolorem corporis porro magnam aspernatur cupiditate optio ex modi dignissimos tempora doloribus laboriosam dicta quis nobis?";
+var firstSub = first.substring(0, 120) + "...";
+document.getElementById("first-blog").innerHTML = firstSub;
 
 var second =
-  'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis voluptatum deleniti atque corrupti quos dolores.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa ullam autem inventore dolorum minus, dolorem corporis porro magnam aspernatur cupiditate optio ex modi dignissimos tempora doloribus laboriosam dicta quis nobis?';
-var secondSub = second.substring(0, 120) + '...';
-document.getElementById('second-blog').innerHTML = secondSub;
+  "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis voluptatum deleniti atque corrupti quos dolores.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa ullam autem inventore dolorum minus, dolorem corporis porro magnam aspernatur cupiditate optio ex modi dignissimos tempora doloribus laboriosam dicta quis nobis?";
+var secondSub = second.substring(0, 120) + "...";
+document.getElementById("second-blog").innerHTML = secondSub;
 
 var third =
-  'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa ullam autem inventore dolorum minus, dolorem corporis porro magnam aspernatur cupiditate optio ex modi dignissimos tempora doloribus laboriosam dicta quis nobis?';
-var thirdSub = third.substring(0, 120) + '...';
-document.getElementById('third-blog').innerHTML = thirdSub;
+  "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa ullam autem inventore dolorum minus, dolorem corporis porro magnam aspernatur cupiditate optio ex modi dignissimos tempora doloribus laboriosam dicta quis nobis?";
+var thirdSub = third.substring(0, 120) + "...";
+document.getElementById("third-blog").innerHTML = thirdSub;
