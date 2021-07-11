@@ -402,7 +402,7 @@
      margin:13px auto 0;
      width:16px;
      height:16px;
-     z-index:9999
+     z-index:14;
 }
 #milestones .marker:after{
      display:block;
@@ -470,20 +470,20 @@
      order:2;
      width:90%;
 }
-.section{
+.section2{
      max-width:100%;
      width:100%;
      overflow:hidden;
      padding:1px 0;
 }
-.section .heading{
+.section2 .heading{
      font-size:64px;
      font-weight:700;
      letter-spacing:-.009em;
      line-height:1.0625em;
      color:#000;
 }
-.section p{
+.section2 p{
      font-size:19px;
      font-weight:600;
      letter-spacing:0;
@@ -531,7 +531,8 @@
 #address .wrapper>div p{color:rgba(255,255,255,.8);margin-bottom:25px}
 #address .wrapper>div p:last-child{margin-bottom:0}
 #address .wrapper:after{display:block;content:'';position:relative;width:570px;height:456px;margin:0 0 0 auto;align-self:flex-end}
-     
+
+
 @media only screen and (max-width:767px){
      #milestones:after{
           margin-left:0;
@@ -572,7 +573,7 @@
      #milestones .right .time+div{
           width:100%;
      }
-     .section .heading{
+     .section2 .heading{
           font-size:40px;
           line-height:1.1em;
           letter-spacing:0;
@@ -627,20 +628,20 @@
           line-height:1.125em;
           letter-spacing:.004em;
      }
-     .section .heading{
+     .section2 .heading{
           font-size:calc(48px + 8 * ((100vw - 768px) /255));
           line-height:1.0833em;
           letter-spacing:-.003em;
      }
-     .section p{
+     .section2 p{
           font-size:17px;
           line-height:1.23536em;
           letter-spacing:-.008em;
      }
 }
 @media only screen and (max-width:1440px){
-     .section .heading{
-          font-size:56px;
+     .section2 .heading{
+          
           line-height:1.0714em;
           letter-spacing:-.02em
      }
@@ -652,8 +653,8 @@
           width:100%;
           min-width:auto!important;
      }
-}
-.timeline{
+} 
+/* .timeline{
      
      margin: 0;
      padding: 0;
@@ -667,8 +668,6 @@
 }
 
 .timeline-items{
-      /* max-width:100px; 
-      margin: auto;  */
      display: flex;
      flex-wrap: wrap;
      position: relative;
@@ -743,7 +742,7 @@
      .timeline-dot{
           left: 0;
      }
-}
+} */
 
 @media(min-width:420px){
      .header-content{
@@ -751,6 +750,9 @@
      }
      .today{
           padding:150px 0 70px
+     }
+     .today > div:first-child{
+         padding: 60px 20px;
      }
 }
 
