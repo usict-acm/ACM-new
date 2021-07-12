@@ -142,11 +142,30 @@
       </section>
     </div>
      <!--***************************************member according to years nav ****************************-->
-    <div class="year-navbar">
-        <a class="year" href="#">2019</a>
-        <a class="year" href="#">2020</a>
-        <a class="year" href="#">2021</a>
+    <div id="year-navbar">
+      <ul>
+        <li><a class="year active" href="#">2019</a></li>
+        <li><a class="year" href="#">2020</a></li>
+        <li><a class="year" href="#">2021</a></li>
+      </ul>
     </div>
+    <script>
+     // Get the container element
+var btnContainer = document.getElementsById("year-navbar");
+
+// Get all buttons with class="btn" inside the container
+var year = btnContainer.getElementsByClassName("year");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < year.length; i++) {
+  year[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+      </script>
+      
 
 
     <!--  ******************************************Faculty************************************************************* -->
