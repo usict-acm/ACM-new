@@ -55,9 +55,6 @@
         case 'readMember':
             read();
             break;
-        case 'getCategories':
-            categories();
-            break;
         default:
             echo "Invalid Query";
     }
