@@ -20,7 +20,7 @@
     }
 
     function checkUserExist($user, $inputEmail){
-        $user_data = fetchUserByEmail($user, $req["email"]);
+        $user_data = fetchUserByEmail($user, $inputEmail);        
         if($user_data) return true;
         else return false;
     }
@@ -37,13 +37,16 @@
             if($user_data){
                 if(password_verify($req["password"],$user_data["password"])){
                     echo json_encode(array(
-                        'userId' => $user_data["userId"],
-                        'name' => $user_data["name"],
-                        'email' => $user_data["email"],
-                        'profilePhoto' => $user_data["profilePhoto"],
-                        'acmMemberId' => $user_data["acmMemberId"],
-                        'blogsId' => $user_data["blogsId"],
-                        'eventsId' => $user_data["eventsId"],
+                        'message' => 'Login successful',
+                        'user' => array(
+                            'userId' => $user_data["userId"],
+                            'name' => $user_data["name"],
+                            'email' => $user_data["email"],
+                            'profilePhoto' => $user_data["profilePhoto"],
+                            'acmMemberId' => $user_data["acmMemberId"],
+                            'blogsId' => $user_data["blogsId"],
+                            'eventsId' => $user_data["eventsId"],
+                        )
                     ));
                 }else{
                     echo "Invalid email/password";
@@ -65,17 +68,31 @@
         }
         $user = init();
         $req = json_decode(file_get_contents('php://input'), true);
-        if($req["email"] && $req["userType"] && $req["password"] && $req["name"] && $req["acmMemberId"] && $req["course"] && $req["branch"] && $req["batch"]){            
+        if($req["email"] && $req["password"] && $req["name"] && $req["course"] && $req["branch"] && $req["batch"]){                                    
             if(checkUserExist($user, $req['email'])){
                 echo json_encode(array('message'=>"user with same email already exist..."));
                 return;
             }
             $result = $user->register($req);
             if($result){
-                echo json_encode(array('message'=>"user registered successfully..."));
+                $user_data = fetchUserByEmail($user, $req["email"]);
+                if($user_data){
+                    echo json_encode(array(
+                        'message' => 'Signup successful',
+                        'user' => array(
+                            'userId' => $user_data["userId"],
+                            'name' => $user_data["name"],
+                            'email' => $user_data["email"],
+                            'profilePhoto' => $user_data["profilePhoto"],
+                            'acmMemberId' => $user_data["acmMemberId"],
+                            'blogsId' => $user_data["blogsId"],
+                            'eventsId' => $user_data["eventsId"],
+                        )                    
+                    ));
+                }
             }
             else{
-                echo json_encode(array('message'=>"failed to register"));
+                echo json_encode(array('message'=>"Failed to register"));
             }            
         }
         else{
