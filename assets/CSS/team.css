@@ -111,19 +111,20 @@ section {
   border-bottom: none;
   border-radius: 0;
 }
+
 .year-margin{
-  margin-top: 150px;
+  margin-top: 120px;
   margin-left: 120px;
 }
 a.year-link{
+  font-size: large;
   font-weight: 500;
 }
 a.year-link:hover{
-  background-color: #c3ddf8;
-  color: #000;
+  background-color: #aaadb3;
+  color: white;
+  cursor: pointer;
 }
-
-
 .pt-card {
   padding: 8%;
   border-radius: 30px;

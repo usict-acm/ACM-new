@@ -143,12 +143,19 @@
       </section>
     </div>
      <!--***************************************member according to years nav ****************************-->
-    <div class="year-navbar">
-        <a class="year" onclick="openTab(2019)">2019</a>
-        <a class="year" onclick="openTab(2020)">2020</a>
-        <a class="year" onclick="openTab(2021)">2021</a>
-    </div>
-
+     <div class="year-nav">
+        <ul class="nav nav-pills flex-row year-margin" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active year-link m-1" data-toggle="pill" onclick="openTab(2019)">2019</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link year-link m-1" data-toggle="pill" onclick="openTab(2020)">2020</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link year-link m-1" data-toggle="pill" onclick="openTab(2021)">2021</a>
+          </li>
+        </ul>
+      </div>    
     <!--  ******************************************Faculty************************************************************* -->
 
     <section id="collab" style="margin-top: -3%">
@@ -192,7 +199,7 @@
 
       <script>
           let category = ['faculty', 'office-bearers', 'executive-members', 'web-team'];
-          openTab(2020); //Default call
+          openTab(2019); //Default call
           function openTab(navYear) {
               category.forEach(element => {
               let url = './admin/teams/api.php/?q=readMember&year=' + navYear + '&category="' + element + '"';
