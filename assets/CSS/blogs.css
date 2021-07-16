@@ -1,3 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+body {
+  color: #5a5a5a;
+  font-family: "Lato", sans-serif;
+  margin-left: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .category {
   display: inline-block;
   background-color: #007bff;
@@ -36,7 +64,7 @@
 .a-block:before {
   background: #000;
   position: absolute;
-  content: '';
+  content: "";
   z-index: 1;
   opacity: 0.25;
   -webkit-transition: 0.3s all ease;
@@ -226,38 +254,6 @@
   color: white;
 }
 
-.text-and-logo {
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-}
-.outstanding-logo {
-  width: 160px;
-  animation-name: scale-up-center;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-delay: 1s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-}
-@keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(0.2);
-    transform: scale(0.2);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@media (min-width: 350px) and (max-width: 1200px) {
-  .footer-info {
-    display: flex;
-    flex-direction: column !important;
-  }
-}
-
 /* Common style */
 .figure {
   position: relative;
@@ -335,7 +331,7 @@
 .figure.effect-layla .figcaption::before,
 .figure.effect-layla .figcaption::after {
   position: absolute;
-  content: '';
+  content: "";
   opacity: 0;
 }
 

@@ -384,68 +384,6 @@
                 </div>
               </div>
             </form>
-
-            <!-- <form action="index.html" method="POST" class="row">
-              <div class="col-lg-6 col-md-6">
-                <input class="input form-input-boxes-manual form-control" type="text" name="fname" placeholder="First Name" required><br>
-              </div>
-              <div class="col-lg-6 col-md-6">
-                <input class="input form-input-boxes-manual form-control" type="text" name="lname" placeholder="Last Name" required><br>
-              </div>
-              <div class="col-lg-12 col-md-12">
-                <input class="input form-input-boxes-manual form-control" type="number" name="enrollment" placeholder="Enrollment Number" required><br>
-              </div>
-              <div class="col-lg-6 col-md-6">
-                <input class="input form-input-boxes-manual form-control" type="email" name="email" placeholder="Email" required><br>
-              </div>
-              <div class="col-lg-6 col-md-6">
-                <input class="input form-input-boxes-manual form-control" type="number" name="phone" placeholder="Phone" required><br>
-              </div>
-              <div class="col-lg-6 col-md-6">
-                <input class="input form-input-boxes-manual form-control" type="number" name="year" placeholder="Year">
-              </div>
-              <div class="col-lg-6 col-md-6">
-                <input class="input form-input-boxes-manual form-control" type="number" name="membership" placeholder="Membership Number">
-              </div>
-                <p>Select Your Course:</p>
-                <div class="row">
-                  <br>
-                  <div class="col-lg-3 col-md-3">
-                    <input type="radio" id="courseChoice1" name="course" value="B.Tech CSE">
-                    <label for="contactChoice1">B.Tech CSE</label>
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <input type="radio" id="courseChoice2" name="course" value="B.Tech IT">
-                    <label for="contactChoice2">B.Tech IT</label>
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <input type="radio" id="courseChoice3" name="course" value="B.Tech ECE">
-                    <label for="contactChoice3">B.Tech ECE</label>
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <input type="radio" id="courseChoice3" name="course" value="M.Tech CSE">
-                    <label for="contactChoice4">M.Tech CSE</label><br>
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <input type="radio" id="courseChoice3" name="course" value="M.Tech IT">
-                    <label for="contactChoice5">M.Tech IT</label>
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <input type="radio" id="courseChoice3" name="course" value="M.Tech ECE">
-                    <label for="contactChoice6">M.Tech ECE</label>
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <input type="radio" id="courseChoice3" name="course" value="M.Tech RA">
-                    <label for="contactChoice7">M.Tech RA</label>
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <input type="radio" id="courseChoice3" name="course" value="PhD">
-                    <label for="contactChoice8">PhD</label>
-                  </div>
-                </div>
-
-                <input class="registration-button" type="submit" name="" id="">
-            </form> -->
         </div>
     </div>
     </div>

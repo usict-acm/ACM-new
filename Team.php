@@ -43,6 +43,8 @@
       rel="stylesheet"
     />
     <link href="assets/CSS/team.css" rel="stylesheet" />
+    <link href="assets/CSS/header.css" rel="stylesheet" />
+    <link href="assets/CSS/footer.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap"
@@ -62,63 +64,10 @@
 
   <body>
     <!-- ************************************************Navbar******************************************************************************-->
-
-    <nav
-      id="togglerButton"
-      class="navbar navbar-expand-lg mb-4 top-bar navbar-static-top sps sps-abv"
-    >
-      <div class="container">
-        <button
-          class="navbar-toggler navbar-toggler-right"
-          type="button"
-          onclick="myFunction()"
-          data-toggle="collapse"
-          data-target="#navbarCollapse1"
-          aria-controls="navbarCollapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"
-            ><i style="color: black; margin-top: 5px" class="fas fa-bars"></i
-          ></span>
-        </button>
-        <div class="d-flex">
-          <a href="./index.html"><img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm logo" />
-          <div class="text-and-logo"></a>
-              <a style="font-size: 16px; padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto"
-                  href="./index.html">ACM<span> USICT</span></a>
-              <a href="./index.html"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
-          </div>
-      </div>
-
-        <div class="collapse navbar-collapse" id="navbarCollapse1">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html">Home </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./collab.html">Sponsors</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./benefits.html">Why Join Us?</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./clubs.html">Clubs</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="./Team.html">Our Team</a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="https://services.acm.org/public/qj/proflevel/proflevel_control.cfm?level=3&country=India&form_type=Student&promo=LEVEL&pay=DD"
-                >ACM Registration</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <?php
+      $currentPage = 'team';
+      include('header.php');
+    ?>
 
     <!-- ****************************************************Header Image****************************************** -->
 
@@ -959,208 +908,14 @@
         </div>
       </div>
 
-      <!--
-    <div class="container">
-      <h1 class="collab-main-heading">Renowned <span class="highlight"> Researchers/ Professionals</span> from:</h1>
-      <div class="row d-flex justify-content-center">
-        <div class="collab-card">
-          <hr class="blue-hr">
-          <div class="card-6"></div>
-            <h1 class="collab-heading">University of<br>Cincinnati, USA</h1>
-          </div>
-          <div class="collab-card">
-            <hr class="blue-hr">
-            <div class="card-7"></div>
-            <h1 class="collab-heading">University of<br>Szeged, Hungary</h1>
-          </div>
-          <div class="collab-card">
-            <hr class="blue-hr">
-            <div class="card-8"></div>
-            <h1 class="collab-heading">IIIT Delhi</h1>
-          </div>
-          <div class="collab-card">
-            <hr class="blue-hr">
-            <div class="card-9"></div>
-            <h1 class="collab-heading">Delhi<br>University</h1>
-          </div>
-          <div class="collab-card">
-            <hr class="blue-hr">
-            <div class="card-10"></div>
-            <h1 class="collab-heading">JNU Delhi</h1>
-          </div>
-          <div class="collab-card">
-            <hr class="blue-hr">
-            <div class="card-11"></div>
-            <h1 class="collab-heading">IISc<br> Banglore</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <h1 class="collab-main-heading">Industry  <span class="highlight"> Professionals</span> from:</h1>
-      <div class="row d-flex justify-content-center">
-        <div class="collab-card">
-          <hr class="blue-hr">
-          <div class="card-12"></div>
-          <h1 class="collab-heading">Amazon</h1>
-        </div>
-        <div class="collab-card">
-          <hr class="blue-hr">
-          <div class="card-13"></div>
-          <h1 class="collab-heading">TCS</h1>
-        </div>
-        <div class="collab-card">
-          <hr class="blue-hr">
-          <div class="card-14"></div>
-          <h1 class="collab-heading">Zenon</h1>
-        </div>
-        <div class="collab-card">
-          <hr class="blue-hr">
-          <div class="card-15"></div>
-          <h1 class="collab-heading">Stage3.co</h1>
-        </div>
-        <div class="collab-card">
-          <hr class="blue-hr">
-          <div class="card-16"></div>
-          <h1 class="collab-heading">Societe<br>Generale</h1>
-        </div>
-      </div>
-    </div> -->
     </section>
     <!-- ***********************************************Footer************************************************************************ -->
-
-    <footer style="background-color: #f7f9fb; margin-top: 0%" id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 col-md-6">
-              <div class="footer-info row">
-                <div class="col-lg-4 col-12 d-flex justify-content-center">
-                  <a href="#about" class="scrollto"
-                    ><img
-                      src="assets/images/acm1.png"
-                      alt="logo"
-                      title=""
-                      style="
-                        width: 160px;
-                        padding-top: 10px;
-                        padding-left: 25px;
-                        padding-right: 25px;
-                      "
-                  /></a>
-                </div>
-                <div
-                  class="col-lg-8 col-12 d-flex justify-content-center align-items-center"
-                >
-                  <a href="#about" class="scrollto"
-                    ><img
-                      src="assets/images/outstanding-website.png"
-                      alt="logo"
-                      title=""
-                      style="
-                        width: 320px;
-                        padding-top: 10px;
-                        padding-left: 25px;
-                        padding-right: 25px;
-                      "
-                  /></a>
-                </div>
-              </div>
-              <br />
-              <p>The USICT ACM Student Chapter is an official student body</p>
-              <p>incepted in 2019 under the University School USICT, GGSIPU.</p>
-            </div>
-
-            <div class="col-lg-4 col-md-6 footer-links" style="padding: 0 4%">
-              <br />
-              <h4 style="padding: 2px" id="quick">Quick Links</h4>
-              <ul style="padding-left: 0">
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="https://www.ipu.ac.in/"> IPU-Home</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="https://india.acm.org/"> ACM-India</a>
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="https://www.acm.org/governance/acm-india-council">
-                    ACM-India Office Bearers</a
-                  >
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a
-                    href="https://amturing.acm.org/award_winners/reddy_9634208.cfm"
-                  >
-                    ACM Turing Award</a
-                  >
-                </li>
-                <li>
-                  <i class="fa fa-angle-right"></i>
-                  <a href="./clubs.html">Our Clubs</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-6 footer-contact">
-              <br />
-              <h4 style="padding: 2px">Contact Us</h4>
-              <p>
-                Dean Office, <br />
-                USICT, GGSIPU<br />
-                Sector 16C, Dwarka, Delhi<br />
-                <strong>Phone:</strong> 011-25302702<br />
-                <strong>Email:</strong> info@usict.acm.org<br />
-              </p>
-
-              <div
-                class="social-links"
-                style="text-align-last: justify; font-size: x-large"
-              >
-                <a href="https://www.facebook.com/acmusict" class="facebook"
-                  ><i class="fa fa-facebook"></i
-                ></a>
-                <a
-                  href="https://www.youtube.com/channel/UCI7her-mYrb7QM0t9S_nA_Q"
-                  class="youtube"
-                  ><i class="fa fa-youtube"></i
-                ></a>
-                <a href="https://www.instagram.com/acmusict/" class="instagram"
-                  ><i class="fa fa-instagram"></i
-                ></a>
-                <a href="mailto:acmusit@gmail.com" class="envelope"
-                  ><i class="fa fa-envelope-o"></i
-                ></a>
-                <a href="https://github.com/usict-acm/ACM-new" class="github"
-                  ><i class="fa fa-github"></i
-                ></a>
-                <a href="https://discord.gg/74d2u7rv" class="discord"
-                  ><i class="fab fa-discord"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <footer style="background-color: #eff1f4" id="footer">
-      <div class="copyright-content">
-        <div class="container">
-          <br />
-          <div class="copyright-text text-center">
-            © Conceptualized,Designed and Developed by Office Bearers of ACM
-            USICT chapter.
-          </div>
-        </div>
-        <br />
-      </div>
-    </footer>
+    <?php
+      include('footer.php');
+    ?>
+  
     <script src="assets/JS/glider.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="assets/JS/benefits.js"></script>
   </body>
 </html>

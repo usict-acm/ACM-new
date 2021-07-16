@@ -4902,19 +4902,3 @@ var x = setInterval(function () {
   }
 }, 1000);
 
-// **********************************BLOGS********************************************
-
-var first =
-  "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus voluptas.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa ullam autem inventore dolorum minus, dolorem corporis porro magnam aspernatur cupiditate optio ex modi dignissimos tempora doloribus laboriosam dicta quis nobis?";
-var firstSub = first.substring(0, 120) + "...";
-document.getElementById("first-blog").innerHTML = firstSub;
-
-var second =
-  "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis voluptatum deleniti atque corrupti quos dolores.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa ullam autem inventore dolorum minus, dolorem corporis porro magnam aspernatur cupiditate optio ex modi dignissimos tempora doloribus laboriosam dicta quis nobis?";
-var secondSub = second.substring(0, 120) + "...";
-document.getElementById("second-blog").innerHTML = secondSub;
-
-var third =
-  "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa ullam autem inventore dolorum minus, dolorem corporis porro magnam aspernatur cupiditate optio ex modi dignissimos tempora doloribus laboriosam dicta quis nobis?";
-var thirdSub = third.substring(0, 120) + "...";
-document.getElementById("third-blog").innerHTML = thirdSub;
