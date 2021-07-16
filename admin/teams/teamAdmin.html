@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Admin</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgba(0, 255, 255, 0.144);
+      }
+      h1 {
+        text-align: center;
+      }
+      .container {
+        margin: 0% 10%;
+        background-color: rgba(27, 100, 235, 0.192);
+        padding: 20px;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        font-size: large;
+        font-family: "Times New Roman", Times, serif;
+      }
+      .col-25 {
+        width: 25%;
+        float: left;
+        margin-top: 6px;
+        padding-left: 250px;
+        text-align: left;
+      }
+      .col-75 {
+        width: 75%;
+        float: left;
+        margin-top: 6px;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="file"] {
+        /* background-color:#4CAF50 ; */
+        /* color: white; */
+        border-radius: 5px;
+        padding: 6px;
+      }
+      select {
+        /* background-color:#4CAF50 ; */
+        /* color: white; */
+        border-radius: 5px;
+        padding: 6px;
+      }
+      @media screen and (max-width: 600px) {
+        .col-25,
+        .col-75,
+        input[type="submit"],
+        input[type="file"],
+        select {
+          width: 100%;
+          margin-top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Add New Member</h1>
+    <div class="container">
+      <form
+        action="api.php/?q=postMember"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="row">
+          <div class="col-25">
+            <label for="name"><b> Name:</b></label>
+          </div>
+          <div class="col-75"><input type="text" id="name" name="name" /></div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="designation"><b> Designation:</b></label>
+          </div>
+          <div class="col-75"><input type="text" name="designation" id="designation"/></div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="linkdin"><b> Linkedin:</b></label>
+          </div>
+          <div class="col-75"><input type="url" name="linkedin" id="linkdin"/></div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="github"><b> Github:</b></label>
+          </div>
+          <div class="col-75"><input type="url" name="github" id="github"/><br /></div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="instagram"><b>Instagram:</b></label>
+          </div>
+          <div class="col-75"><input type="url" name="instagram" id="instagram"/><br /></div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for=" year"> <b>Year:</b></label>
+          </div>
+          <div class="col-75"><input type="text" name="year" id="year"/></div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for=" category"> <b>Category:</b></label>
+          </div>
+          <div class="col-75">
+            <select id="category" name="category">
+              <option value="Faculty" name="faculty">
+                Faculty</option>
+              <option value="Office-Bearers" name="office-bearers">
+                Office Bearer
+              </option>
+              <option value="Excutive-Members" name="executive-members">
+                Executive Member
+              </option>
+              <option value="Web-Team" name="web-team">
+                  Web Team
+                </option>
+                </select><br /><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="image"><b>Image</b></label>
+          </div>
+          <div class="col-75">
+            <input
+              type="file"
+              name="file"
+              id="file"
+            />
+            <br /><br /><br/>
+          </div>
+        </div>
+
+        <div class="row">
+          <input type="submit" name="submit" value="submit" />
+        </div>
+      </form>
+    </div>
+
+
+    <h1 style="margin-top:5%">Delete a Member</h1>
+    <div class="container">
+      <form
+        action="api.php/?q=delMember"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="row">
+          <div class="col-25">
+            <label for="name"><b> Name:</b></label>
+          </div>
+          <div class="col-75"><input type="text" id="name" name="name" /></div>
+        </div>
+        <div class="row" style="padding-bottom: 10%;">
+          <div class="col-25">
+            <label for=" year"> <b>Year:</b></label>
+          </div>
+          <div class="col-75"><input type="text" name="year" id="year"/></div>
+        </div>
+        <div class="row">
+          <input type="submit" name="submit" value="submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

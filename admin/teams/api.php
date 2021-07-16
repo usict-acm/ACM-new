@@ -53,8 +53,7 @@
     function postMember(){
         $database = new Database();
         $db = $database->connect();
-        // if(isset($_POST['submit'])){
-            $image = $_FILES['image'];
+        if(isset($_POST['submit'])){
             $name = $_POST['name'];
             $designation = $_POST['designation'];
             $linkedin = $_POST['linkedin'];
@@ -62,7 +61,8 @@
             $instagram = $_POST['instagram'];
             $year = $_POST['year'];
             $category = $_POST['category'];
-            
+            $file = $_FILES['file'];
+
             print_r($file);
         
             $filename = $file['name'];
@@ -95,29 +95,27 @@
             echo ' alert("Image not uploaded, check the extension or try again!")';
             echo '</script>';
             }
-        // }
+        }
     };
     
     function delMember(){
         $database = new Database();
         $db = $database->connect();
-        // if(isset($_POST['submit'])){
+        if(isset($_POST['submit'])){
             $name = $_POST['name'];
             $year = $_POST['year'];
             
             $sql = "DELETE FROM `team` WHERE name LIKE '%" . $name . "%' AND year=" . $year ;
-            
-            // echo $sql;
 
             if($db->query($sql) == true) {
                 echo '<script type="text/javascript">';
-                echo ' alert("Member deleted successfully!")';
+                echo 'alert("Member deleted successfully!")';
                 echo '</script>';
             }
             else {
                 echo "ERROR: $sql <br> $db->error";
             }    
-        // }
+        }
     };
 
     $q = $_GET['q'];
