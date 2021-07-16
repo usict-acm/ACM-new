@@ -47,7 +47,7 @@
   ?>
   <!-- =====================================Header Three Blogs============================================ -->
   <section style="padding-top:80px;">
-    <div class="container" style="margin-top: 3%;">
+    <div class="container topRow" style="margin-top: 3%;">
       <div class="row" id="row2"></div>
     </div>
   </section>

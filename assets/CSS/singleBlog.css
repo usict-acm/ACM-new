@@ -164,6 +164,7 @@ a {
   .card-span {
     color: #b3b3b3;
   }
+
   .card-span-dot {
     font-size: 3px;
     margin: auto 5px auto 5px;
@@ -177,6 +178,9 @@ a {
     font-size: 28px;
   }
   .right-side {
+    margin-top: 1rem;
+  }
+  .topRow {
     display: none;
   }
 }
