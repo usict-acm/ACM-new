@@ -15,7 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React,{ useState } from "react";
 
 // reactstrap components
 import {
@@ -34,54 +34,20 @@ import {
 } from "reactstrap";
 
 const Register = () => {
+    const [email,setEmail] = useState();
+    const [name,setName] = useState();
+    const [password,setPassword] = useState();
+    const [checkBox,setCheckbox] = useState();
+
+
+
   return (
     <>
       <Col lg="6" md="8">
         <Card className="bg-secondary shadow border-0">
-          <CardHeader className="bg-transparent pb-5">
-            <div className="text-muted text-center mt-2 mb-4">
-              <small>Sign up with</small>
-            </div>
-            <div className="text-center">
-              <Button
-                className="btn-neutral btn-icon mr-4"
-                color="default"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
-              >
-                <span className="btn-inner--icon">
-                  <img
-                    alt="..."
-                    src={
-                      require("../../assets/img/icons/common/github.svg")
-                        .default
-                    }
-                  />
-                </span>
-                <span className="btn-inner--text">Github</span>
-              </Button>
-              <Button
-                className="btn-neutral btn-icon"
-                color="default"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
-              >
-                <span className="btn-inner--icon">
-                  <img
-                    alt="..."
-                    src={
-                      require("../../assets/img/icons/common/google.svg")
-                        .default
-                    }
-                  />
-                </span>
-                <span className="btn-inner--text">Google</span>
-              </Button>
-            </div>
-          </CardHeader>
           <CardBody className="px-lg-5 py-lg-5">
             <div className="text-center text-muted mb-4">
-              <small>Or sign up with credentials</small>
+              <small>sign up with credentials</small>
             </div>
             <Form role="form">
               <FormGroup>
@@ -91,7 +57,7 @@ const Register = () => {
                       <i className="ni ni-hat-3" />
                     </InputGroupText>
                   </InputGroupAddon>
-                  <Input placeholder="Name" type="text" />
+                  <Input placeholder="Name" type="text" value={name} onChange={(e)=>setName(e.target.value)} />
                 </InputGroup>
               </FormGroup>
               <FormGroup>
@@ -104,7 +70,9 @@ const Register = () => {
                   <Input
                     placeholder="Email"
                     type="email"
-                    autoComplete="new-email"/>
+                    autoComplete="new-email"
+                    value ={email}
+                    onChange={(e)=>setEmail(e.target.value)}     />
                 </InputGroup>
               </FormGroup>
               <FormGroup>
@@ -118,6 +86,8 @@ const Register = () => {
                     placeholder="Password"
                     type="password"
                     autoComplete="new-password"
+                    value={password}
+                    onChange={(e)=>setPassword(e.target.value)}
                   />
                 </InputGroup>
               </FormGroup>
@@ -134,6 +104,8 @@ const Register = () => {
                       className="custom-control-input"
                       id="customCheckRegister"
                       type="checkbox"
+                      value={checkBox}
+                      onChange={(e)=>setCheckbox(e.target.value)}
                     />
                     <label
                       className="custom-control-label"
@@ -150,7 +122,7 @@ const Register = () => {
                 </Col>
               </Row>
               <div className="text-center">
-                <Button className="mt-4" color="primary" type="button">
+                <Button onClick={()=>createAccount()} className="mt-4" color="primary" type="button">
                   Create account
                 </Button>
               </div>
