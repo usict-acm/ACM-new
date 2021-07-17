@@ -39,7 +39,7 @@
 .a-block:before {
   background: #000;
   position: absolute;
-  content: '';
+  content: "";
   z-index: 1;
   opacity: 0.25;
   -webkit-transition: 0.3s all ease;
@@ -137,6 +137,7 @@
   .card-span {
     color: #b3b3b3;
   }
+
   .card-span-dot {
     font-size: 3px;
     margin: auto 5px auto 5px;
@@ -150,6 +151,9 @@
     font-size: 28px;
   }
   .right-side {
+    margin-top: 1rem;
+  }
+  .topRow {
     display: none;
   }
 }
@@ -334,7 +338,7 @@
 .figure.effect-layla .figcaption::before,
 .figure.effect-layla .figcaption::after {
   position: absolute;
-  content: '';
+  content: "";
   opacity: 0;
 }
 
