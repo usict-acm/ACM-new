@@ -16,7 +16,6 @@
         <div class="collapse navbar-collapse" id="navbarCollapse1">
             <ul class="navbar-nav ml-auto">
             <li class="nav-item <?php if($currentPage =='home'){echo 'active';}?>"> <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a> </li>
-            <li class="nav-item <?php if($currentPage =='collab'){echo 'active';}?>"> <a class="nav-link" href="./collab.php">Sponsors</a> </li>
             <li class="nav-item <?php if($currentPage =='blogs'){echo 'active';}?>"> <a class="nav-link" href="./blogs.php">Blogs</a> </li>
             <li class="nav-item <?php if($currentPage =='benefits'){echo 'active';}?>"> <a class="nav-link" href="./benefits.php">Why Join Us?</a> </li>
             <li class="nav-item <?php if($currentPage =='clubs'){echo 'active';}?>"> <a class="nav-link" href="./clubs.php">Clubs</a> </li>

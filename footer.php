@@ -68,7 +68,11 @@
               </li>
               <li>
                 <i class="fa fa-angle-right"></i>
-                <a href="./clubs.html">Our Clubs</a>
+                <a href="./clubs.php">Our Clubs</a>
+              </li>
+              <li>
+                <i class="fa fa-angle-right"></i>
+                <a href="./collab.php">Our Sponsors</a>
               </li>
             </ul>
           </div>
