@@ -9,15 +9,29 @@
         }
 
         public function fetchUserByEmail ($email) {
-            $query = "SELECT * from $this->table WHERE email = '$email'";
+            $query =
+            "SELECT * from $this->table
+            WHERE email = '$email'";
             $res = $this->conn->query($query);
             return $res;
         }
 
         public function register ($details) {
             $hashedPassword = password_hash($details['password'], PASSWORD_BCRYPT);
-            $query = "INSERT INTO $this->table (userType, email, password, name, acmMemberId, course, branch, batch, eventsId, blogsId, profilePhoto) VALUES('user', '$details[email]', '$hashedPassword', '$details[name]', '$details[acmMemberId]', '$details[course]', '$details[branch]', '$details[batch]', '$details[email]-ev', '$details[email]-bl', '$details[profilePhoto]')";
-            // echo $query;
+            $query =
+            "INSERT INTO $this->table
+            (userType, email, password, name, acmMemberId, profilePhoto, course, branch, rollNo)
+            VALUES (
+                'user',
+                '$details[email]',
+                '$hashedPassword',
+                '$details[name]',
+                NULLIF('$details[acmMemberId]',''),                
+                NULLIF('$details[profilePhoto]',''),
+                '$details[course]',
+                '$details[branch]',
+                '$details[rollNo]'
+            )";
             $res = $this->conn->query($query);
             return $res;
         }

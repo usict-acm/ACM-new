@@ -44,8 +44,9 @@
                             'email' => $user_data["email"],
                             'profilePhoto' => $user_data["profilePhoto"],
                             'acmMemberId' => $user_data["acmMemberId"],
-                            'blogsId' => $user_data["blogsId"],
-                            'eventsId' => $user_data["eventsId"],
+                            'course' => $user_data["course"],
+                            'branch' => $user_data["branch"],
+                            'rollNo' => $user_data["rollNo"],
                         )
                     ));
                 }else{
@@ -67,8 +68,9 @@
             return;
         }
         $user = init();
+        // req.body
         $req = json_decode(file_get_contents('php://input'), true);
-        if($req["email"] && $req["password"] && $req["name"] && $req["course"] && $req["branch"] && $req["batch"]){                                    
+        if($req["email"] && $req["password"] && $req["name"] && $req["course"] && $req["branch"] && $req["rollNo"]){                                    
             if(checkUserExist($user, $req['email'])){
                 echo json_encode(array('message'=>"user with same email already exist..."));
                 return;
@@ -85,8 +87,9 @@
                             'email' => $user_data["email"],
                             'profilePhoto' => $user_data["profilePhoto"],
                             'acmMemberId' => $user_data["acmMemberId"],
-                            'blogsId' => $user_data["blogsId"],
-                            'eventsId' => $user_data["eventsId"],
+                            'course' => $user_data["course"],
+                            'branch' => $user_data["branch"],
+                            'rollNo' => $user_data["rollNo"],
                         )                    
                     ));
                 }
