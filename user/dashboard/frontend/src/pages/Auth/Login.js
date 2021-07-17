@@ -15,7 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React,{ useState } from "react";
+import React, { useState } from "react";
 
 // reactstrap components
 import {
@@ -34,11 +34,8 @@ import {
 } from "reactstrap";
 
 const Login = () => {
-  const [email,setEmail] = useState();
-  const [password,setPassword] = useState();
-  const [checkBox,setCheckbox] = useState();
-
-
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
 
   return (
     <>
@@ -46,7 +43,7 @@ const Login = () => {
         <Card className="bg-secondary shadow border-0">
           <CardBody className="px-lg-5 py-lg-5">
             <div className="text-center text-muted mb-4">
-              <small>sign in with credentials</small>
+              <small>Please enter your credentials</small>
             </div>
             <Form role="form">
               <FormGroup className="mb-3">
@@ -61,7 +58,7 @@ const Login = () => {
                     type="email"
                     autoComplete="new-email"
                     value={email}
-                    onChange={(e)=>setEmail(e.target.value)}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </InputGroup>
               </FormGroup>
@@ -77,27 +74,12 @@ const Login = () => {
                     type="password"
                     autoComplete="new-password"
                     value={password}
-                    onChange={(e)=>setPassword(e.target.value)}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </InputGroup>
               </FormGroup>
-              <div className="custom-control custom-control-alternative custom-checkbox">
-                <input
-                  className="custom-control-input"
-                  id=" customCheckLogin"
-                  type="checkbox"
-                  value={checkBox}
-                  onChange={(e)=>setCheckbox(e.target.value)}
-                />
-                <label
-                  className="custom-control-label"
-                  htmlFor=" customCheckLogin"
-                >
-                  <span className="text-muted">Remember me</span>
-                </label>
-              </div>
               <div className="text-center">
-                <Button onClick={()=>signIn()} className="my-4" color="primary" type="button">
+                <Button className="my-4" color="primary" type="button">
                   Sign in
                 </Button>
               </div>
@@ -105,20 +87,11 @@ const Login = () => {
           </CardBody>
         </Card>
         <Row className="mt-3">
-          <Col xs="6">
+          <Col className="text-right" xs="12">
             <a
               className="text-light"
-              href="#pablo"
-              onClick={(e) => e.preventDefault()}
-            >
-              <small>Forgot password?</small>
-            </a>
-          </Col>
-          <Col className="text-right" xs="6">
-            <a
-              className="text-light"
-              href="#pablo"
-              onClick={(e) => e.preventDefault()}
+              href="/auth/register"
+              // onClick={(e) => e.preventDefault()}
             >
               <small>Create new account</small>
             </a>

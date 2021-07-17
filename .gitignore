@@ -4,3 +4,10 @@
 upload/*
 enviornment.php
 .DS_Store
+
+# react
+/build
+node_modules
+package-lock.json
+.eslintcache
+*.lock

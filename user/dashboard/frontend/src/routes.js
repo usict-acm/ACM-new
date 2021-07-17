@@ -20,8 +20,8 @@ import Profile from "views/examples/Profile.js";
 import Maps from "views/examples/Maps.js";
 import Tables from "views/examples/Tables.js";
 import Icons from "views/examples/Icons.js";
-import Register from "pages/Register";
-import Login from "pages/Login";
+import Register from "pages/Auth/Register";
+import Login from "pages/Auth/Login";
 
 var routes = [
   {

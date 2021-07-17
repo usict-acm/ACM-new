@@ -15,13 +15,12 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React,{ useState } from "react";
+import React, { useState } from "react";
 
 // reactstrap components
 import {
   Button,
   Card,
-  CardHeader,
   CardBody,
   FormGroup,
   Form,
@@ -34,12 +33,10 @@ import {
 } from "reactstrap";
 
 const Register = () => {
-    const [email,setEmail] = useState();
-    const [name,setName] = useState();
-    const [password,setPassword] = useState();
-    const [checkBox,setCheckbox] = useState();
-
-
+  const [email, setEmail] = useState();
+  const [name, setName] = useState();
+  const [password, setPassword] = useState();
+  const [checkBox, setCheckbox] = useState();
 
   return (
     <>
@@ -57,7 +54,12 @@ const Register = () => {
                       <i className="ni ni-hat-3" />
                     </InputGroupText>
                   </InputGroupAddon>
-                  <Input placeholder="Name" type="text" value={name} onChange={(e)=>setName(e.target.value)} />
+                  <Input
+                    placeholder="Name"
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
                 </InputGroup>
               </FormGroup>
               <FormGroup>
@@ -71,8 +73,9 @@ const Register = () => {
                     placeholder="Email"
                     type="email"
                     autoComplete="new-email"
-                    value ={email}
-                    onChange={(e)=>setEmail(e.target.value)}     />
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
                 </InputGroup>
               </FormGroup>
               <FormGroup>
@@ -87,7 +90,7 @@ const Register = () => {
                     type="password"
                     autoComplete="new-password"
                     value={password}
-                    onChange={(e)=>setPassword(e.target.value)}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </InputGroup>
               </FormGroup>
@@ -105,7 +108,7 @@ const Register = () => {
                       id="customCheckRegister"
                       type="checkbox"
                       value={checkBox}
-                      onChange={(e)=>setCheckbox(e.target.value)}
+                      onChange={(e) => setCheckbox(e.target.value)}
                     />
                     <label
                       className="custom-control-label"
@@ -122,7 +125,7 @@ const Register = () => {
                 </Col>
               </Row>
               <div className="text-center">
-                <Button onClick={()=>createAccount()} className="mt-4" color="primary" type="button">
+                <Button className="mt-4" color="primary" type="button">
                   Create account
                 </Button>
               </div>
