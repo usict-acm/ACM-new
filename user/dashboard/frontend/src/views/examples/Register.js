@@ -104,8 +104,7 @@ const Register = () => {
                   <Input
                     placeholder="Email"
                     type="email"
-                    autoComplete="new-email"
-                  />
+                    autoComplete="new-email"/>
                 </InputGroup>
               </FormGroup>
               <FormGroup>
