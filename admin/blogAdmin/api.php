@@ -244,7 +244,7 @@
     
         $filename = $file['name'];
         $fileerror = $file['error'];
-        $filetemppath= $file['tmp_name'];
+        $filetemppath = $file['tmp_name'];
     
         $fileext = explode('.',$filename);
         $filecheck = strtolower(end($fileext));
@@ -276,6 +276,34 @@
     }
    };
 
+   function readAllAnnouncements(){
+    $database = new Database();
+    $db = $database->connect();
+    $announcement = new Announcement($db);
+
+    $result = $announcement->getAnnouncements();
+
+    if($result){
+        $announcements_arr = array();
+        while($row=$result->fetch_assoc()){
+            $announcement_item = array(
+                'sno' => $row["sno"],
+                'name' => $row["name"],
+                'description' => $row["description"],
+                'regLink' => $row["regLink"],
+                'startTime' => $row["startTime"],
+                'endTime' => $row["endTime"],
+                'watchLink' => $row["watchLink"],
+                'partners' => $row["partners"],
+                'speakers' => $row["speakers"],
+                'poster' => $row["poster"],
+            );
+            array_push($announcements_arr, $announcement_item);
+        } 
+        echo json_encode($announcements_arr);
+    }
+   }
+
 
     $q = $_GET['q'];
     switch ($q){
@@ -296,6 +324,9 @@
             break;
         case 'postblog':
             postblog();
+            break;
+        case 'readAllAnnouncements':
+            readAllAnnouncements();
             break;
         default:
             echo "Invalid Query";
