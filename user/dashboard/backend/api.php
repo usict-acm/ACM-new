@@ -50,14 +50,14 @@
                         )
                     ));
                 }else{
-                    echo "Invalid email/password";
+                    echo json_encode(array('error' => 'Invalid email/password'));
                 }
             }else{
-                echo "Invalid email/password";
+                echo json_encode(array('error' => 'Invalid email/password'));
             }
         }
         else{
-            echo json_encode(array('message' => 'One or more fields are missing.'));
+            echo json_encode(array('error' => 'One or more fields are missing.'));
             return;
         }
     }
@@ -68,11 +68,10 @@
             return;
         }
         $user = init();
-        // req.body
-        $req = json_decode(file_get_contents('php://input'), true);
+        $req = json_decode(file_get_contents('php://input'), true);        
         if($req["email"] && $req["password"] && $req["name"] && $req["course"] && $req["branch"] && $req["rollNo"]){                                    
             if(checkUserExist($user, $req['email'])){
-                echo json_encode(array('message'=>"user with same email already exist..."));
+                echo json_encode(array('error'=>"user with same email already exist..."));
                 return;
             }
             $result = $user->register($req);
@@ -95,11 +94,11 @@
                 }
             }
             else{
-                echo json_encode(array('message'=>"Failed to register"));
+                echo json_encode(array('error'=>"Failed to register"));
             }            
         }
         else{
-            echo json_encode(array('message' => 'One or more fields are missing.'));
+            echo json_encode(array('error' => 'One or more fields are missing.'));
             return;
         }
     }

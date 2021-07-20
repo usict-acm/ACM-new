@@ -16,6 +16,7 @@
 
 */
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 
 // reactstrap components
 import {
@@ -32,10 +33,24 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import { login } from "redux/slices/userSlice";
 
 const Login = () => {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const dispatch = useDispatch(),
+   [email, setEmail] = useState(""),
+    [password, setPassword] = useState("");
+
+  const loginHandler = (e) => {
+    e.preventDefault();
+    if (email === "" || password === "") {
+      return alert("Please fill all the required fields.");
+    }
+    const body = {
+      email,
+      password,
+    };
+    dispatch(login(body));
+  };
 
   return (
     <>
@@ -45,7 +60,7 @@ const Login = () => {
             <div className="text-center text-muted mb-4">
               <small>Please enter your credentials</small>
             </div>
-            <Form role="form">
+            <Form onSubmit={loginHandler} role="form">
               <FormGroup className="mb-3">
                 <InputGroup className="input-group-alternative">
                   <InputGroupAddon addonType="prepend">
@@ -59,6 +74,7 @@ const Login = () => {
                     autoComplete="new-email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    required
                   />
                 </InputGroup>
               </FormGroup>
@@ -75,11 +91,17 @@ const Login = () => {
                     autoComplete="new-password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    required
                   />
                 </InputGroup>
               </FormGroup>
               <div className="text-center">
-                <Button className="my-4" color="primary" type="button">
+                <Button
+                  className="my-4"
+                  color="primary"
+                  type="submit"
+                  onClick={loginHandler}
+                >
                   Sign in
                 </Button>
               </div>
@@ -88,11 +110,7 @@ const Login = () => {
         </Card>
         <Row className="mt-3">
           <Col className="text-right" xs="12">
-            <a
-              className="text-light"
-              href="/auth/register"
-              // onClick={(e) => e.preventDefault()}
-            >
+            <a className="text-light" href="/register">
               <small>Create new account</small>
             </a>
           </Col>
