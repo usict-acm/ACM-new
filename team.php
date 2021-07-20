@@ -143,7 +143,7 @@
       </section>
     </div>
      <!--***************************************member according to years nav ****************************-->
-     <div class="year-nav">
+     <div class="year-nav d-flex justify-content-center mb-3 mr-5">
         <ul class="nav nav-pills flex-row year-margin" role="tablist">
           <li class="nav-item">
             <a class="nav-link active year-link m-1" data-toggle="pill" onclick="openTab(2019)">2019</a>
