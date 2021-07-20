@@ -93,24 +93,23 @@
         <div class="heading col-xl-9 col-lg-9 col-md-9">
           <h3><span class="uheading">Our Team</span></h3>
         </div>
-      </div>
-    </section>
-  </div>
-  <!--***************************************member according to years nav ****************************-->
-  <div class="year-nav">
-    <ul class="nav nav-pills flex-row year-margin" role="tablist">
-      <li class="nav-item">
-        <a class="nav-link active year-link m-1" data-toggle="pill" onclick="openTab(2019)">2019</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link year-link m-1" data-toggle="pill" onclick="openTab(2020)">2020</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link year-link m-1" data-toggle="pill" onclick="openTab(2021)">2021</a>
-      </li>
-    </ul>
-  </div>
-  <!--  ******************************************Faculty************************************************************* -->
+      </section>
+    </div>
+     <!--***************************************member according to years nav ****************************-->
+     <div class="year-nav d-flex justify-content-center mb-3 mr-5">
+        <ul class="nav nav-pills flex-row year-margin" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active year-link m-1" data-toggle="pill" onclick="openTab(2019)">2019</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link year-link m-1" data-toggle="pill" onclick="openTab(2020)">2020</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link year-link m-1" data-toggle="pill" onclick="openTab(2021)">2021</a>
+          </li>
+        </ul>
+      </div>    
+    <!--  ******************************************Faculty************************************************************* -->
 
   <section id="collab" style="margin-top: -3%">
     <div class="container">
