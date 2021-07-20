@@ -15,10 +15,9 @@
         $member = new Member($db);
 
         $year = $_GET['year'];
-        $category = $_GET['category'];
 
         // Member query
-        $result = $member->readMember($year, $category);
+        $result = $member->readMember($year);
 
         // Check if any members
         if($result) {
@@ -63,7 +62,7 @@
             $category = $_POST['category'];
             $file = $_FILES['file'];
 
-            print_r($file);
+            // print_r($file);
         
             $filename = $file['name'];
             $fileerror = $file['error'];
@@ -101,12 +100,12 @@
     function delMember(){
         $database = new Database();
         $db = $database->connect();
-        if(isset($_POST['submit'])){
-            $name = $_POST['name'];
-            $year = $_POST['year'];
-            
-            $sql = "DELETE FROM `team` WHERE name LIKE '%" . $name . "%' AND year=" . $year ;
 
+            $id = $_GET['id'];
+            echo $id;
+            
+            $sql = "UPDATE `team` SET active = 0 WHERE id=" . $id;
+            
             if($db->query($sql) == true) {
                 echo '<script type="text/javascript">';
                 echo 'alert("Member deleted successfully!")';
@@ -114,8 +113,7 @@
             }
             else {
                 echo "ERROR: $sql <br> $db->error";
-            }    
-        }
+            }
     };
 
     $q = $_GET['q'];
@@ -132,4 +130,3 @@
         default:
             echo "Invalid Query";
     }
-?>
