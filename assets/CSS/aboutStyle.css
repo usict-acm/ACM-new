@@ -132,7 +132,6 @@
 }
 .header{
      position:relative;
-     margin-top: 90px;
 }
 .header-content{
      padding:100px 0 70px;
@@ -144,9 +143,6 @@
      margin:0 0 20px;
      font-weight:400
 }
-/* .header-title br{
-     display:none
-} */
 .header-title span{
      display:inline-block
 }
@@ -484,17 +480,21 @@
 }
 .section2 .heading{
      font-size:64px;
-     font-weight:700;
+     font-weight: 500;
      letter-spacing:-.009em;
      line-height:1.0625em;
      color:#000;
 }
 .section2 p{
      font-size:19px;
-     font-weight:600;
+     font-family: 'Camphor','Open Sans','Segoe UI','sans-serif';
+     font-weight:400;
      letter-spacing:0;
      line-height:1.2105em;
      color:#000;
+}
+#milestones  p{
+     font-weight: 600;
 }
 .clearfix:after,.clearfix:before{content:" ";display:table}
 .clearfix:after{clear:both}
