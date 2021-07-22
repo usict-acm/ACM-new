@@ -191,15 +191,21 @@
                                       <h2>' + row.name + '</h2>\
                                       <p>' + row.designation + '</p>\
                                       <br />\
-                                      <a href= "' + row.linkedin + '" target="_blank">\
+                                      <a href= "' + row.linkedin + '">\
                                       <i class="team-social-icon fab fa-linkedin"></i></a>\
-                                      <a href= "' + row.github + '" target="_blank">\
+                                      <a href= "' + row.github + '">\
                                       <i class="team-social-icon fab fa-github"></i></a>\
-                                      <a href= "' + row.instagram + '" target="_blank">\
+                                      <a href= "' + row.instagram + '">\
                                       <i class="team-social-icon fab fa-instagram-square"></i></a>\
                                       </div>\
                                       </div>\
                                       </div>'
+                                      // if(row.linkedin == '#')
+                                      //   $('.fa-linkedin').hide();
+                                      // if(row.github == '#')
+                                      //   $('.fa-github').hide();
+                                      // if(row.instagram == '#')
+                                      //   $('.fa-instagram-square').hide();
                   }
                 }
               }

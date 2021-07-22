@@ -87,19 +87,19 @@
           <div class="col-25">
             <label for="name"><b> Name:</b></label>
           </div>
-          <div class="col-75"><input type="text" id="name" name="name" /></div>
+          <div class="col-75"><input type="text" id="name" name="name" required/></div>
         </div>
         <div class="row">
           <div class="col-25">
             <label for="designation"><b> Designation:</b></label>
           </div>
-          <div class="col-75"><input type="text" name="designation" id="designation"/></div>
+          <div class="col-75"><input type="text" name="designation" id="designation" required/></div>
         </div>
         <div class="row">
           <div class="col-25">
             <label for="linkdin"><b> Linkedin:</b></label>
           </div>
-          <div class="col-75"><input type="url" name="linkedin" id="linkdin"/></div>
+          <div class="col-75"><input type="url" name="linkedin" id="linkedin"/></div>
         </div>
         <div class="row">
           <div class="col-25">
@@ -117,14 +117,14 @@
           <div class="col-25">
             <label for=" year"> <b>Year:</b></label>
           </div>
-          <div class="col-75"><input type="text" name="year" id="year"/></div>
+          <div class="col-75"><input type="text" name="year" id="year" required/></div>
         </div>
         <div class="row">
           <div class="col-25">
             <label for=" category"> <b>Category:</b></label>
           </div>
           <div class="col-75">
-            <select id="category" name="category">
+            <select id="category" name="category" required>
               <option value="Faculty" name="faculty">
                 Faculty</option>
               <option value="Office-Bearers" name="office-bearers">
@@ -148,6 +148,7 @@
               type="file"
               name="file"
               id="file"
+              required
             />
             <br /><br /><br/>
           </div>
@@ -170,7 +171,18 @@
           <div class="col-25">
             <label for= "year"> <b>Year:</b></label>
           </div>
-          <div class="col-75"><input type="text" name="year" id="findYear"/></div>
+          <div class="col-75">
+            <select id="findYear" name="year" required>
+              <option value="2019" name="2019">
+                2019</option>
+              <option value="2020" name="2020">
+                2020
+              </option>
+              <option value="2021" name="2021">
+                2021
+              </option>
+              </select>
+          </div>
         </div>
         <div class="row">
           <input type="submit" name="submit" value="Submit" id="submit"/>

@@ -74,8 +74,8 @@
             $fileextstored = array('png','jpg','jpeg');
         
             if(in_array($filecheck,$fileextstored)) {
-                $destinationfile = './assets/images/team/'.$filename;
-                $uploadLocation = '../../assets/images/team/'.$filename;
+                $destinationfile = 'upload/teams/'.$filename;
+                $uploadLocation = '../../upload/teams/'.$filename;
                 move_uploaded_file($filetemppath,$uploadLocation);
                 
                 $sql = "INSERT INTO `team` (`image`, `name`, `designation`, `linkedin`, `github`, `instagram`, `year`, `category`, `added_on`) VALUES ('$destinationfile', '$name', '$designation', '$linkedin', '$github', '$instagram', '$year', '$category' , current_timestamp());";
