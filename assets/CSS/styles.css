@@ -2011,15 +2011,13 @@ h1 {
   background-color: #cbe9ff;
   padding-bottom: 2rem;
   width: 90%;
-  
 }
 
 .event-sec {
   background-color: #cbe9ff;
   text-align: center;
-  
 }
-.wrapper{
+.wrapper {
   /* position: fixed;
   top: 50%;
   left: 50%; */
@@ -2028,12 +2026,12 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
-.link_wrapper{
+.link_wrapper {
   position: relative;
 }
 
-.wrapper a{
-  font-family: 'Poppins', sans-serif;
+.wrapper a {
+  font-family: "Poppins", sans-serif;
   display: block;
   width: 200px;
   height: 50px;
@@ -2046,10 +2044,10 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 1px;
   border: 3px solid #333;
-  transition: all .35s;
+  transition: all 0.35s;
 }
 
-.icon{
+.icon {
   width: 50px;
   height: 50px;
   border: 3px solid transparent;
@@ -2058,20 +2056,20 @@ h1 {
   right: 0;
   top: 0;
   z-index: -1;
-  transition: all .35s;
+  transition: all 0.35s;
 }
 
-.icon svg{
+.icon svg {
   width: 30px;
   position: absolute;
   top: calc(50% - 15px);
   left: calc(50% - 15px);
   transform: rotate(-45deg);
   fill: #2250fc;
-  transition: all .35s;
+  transition: all 0.35s;
 }
 
-.wrapper a:hover{
+.wrapper a:hover {
   width: 200px;
   border: 3px solid #2250fc;
   background: transparent;
@@ -2079,7 +2077,7 @@ h1 {
   font-weight: bolder;
 }
 
-.wrapper a:hover + .icon{
+.wrapper a:hover + .icon {
   border: 3px solid #2250fc;
   right: -25%;
   font-weight: bolder;
@@ -2088,13 +2086,11 @@ h1 {
   background-color: #cbe9ff;
   padding-bottom: 2rem;
   width: 90%;
-  
 }
 
 .event-sec {
   background-color: #cbe9ff;
   text-align: center;
-  
 }
 
 /* .event-details {
@@ -2132,7 +2128,7 @@ h1 {
   .announce {
     padding: 0px;
   }
-  .wrapper{
+  .wrapper {
     margin-top: 8%;
   }
 }
@@ -2142,7 +2138,7 @@ h1 {
     font-size: 30px;
     padding: 0px;
   }
-  .wrapper{
+  .wrapper {
     margin-top: 10%;
   }
 }
@@ -2366,11 +2362,11 @@ align-items: center; */
   animation-fill-mode: none;
 }
 @keyframes scale-up-center {
-  0%{
-    -webkit-transform: scale(.2);
-    transform: scale(.2);
+  0% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
   }
-  100%{
+  100% {
     -webkit-transform: scale(1);
     transform: scale(1);
   }

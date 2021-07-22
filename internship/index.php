@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
   <title>ACM USICT</title>
-  <link rel="icon" href="./assets/images/acm1.png" type="image/x-icon">
+  <link rel="icon" href="./../assets/images/acm1.png" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
     content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc">
@@ -14,7 +14,7 @@
   <meta itemprop="name" content="ACM@USICT Chapter, GGSIPU">
   <meta itemprop="description"
     content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc">
-  <meta itemprop="image" content="./assets/images/acm1.png">
+  <meta itemprop="image" content="./../assets/images/acm1.png">
 
   <!-- Facebook Meta Tags -->
   <meta property="og:url" content="http://usict.acm.org/ACM_New">
@@ -22,21 +22,21 @@
   <meta property="og:title" content="ACM@USICT Chapter, GGSIPU">
   <meta property="og:description"
     content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc">
-  <meta property="og:image" content="./assets/images/acm1.png">
+  <meta property="og:image" content="./../assets/images/acm1.png">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ACM@USICT Chapter, GGSIPU">
   <meta name="twitter:description"
     content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc">
-  <meta name="twitter:image" content="./assets/images/acm1.png">
+  <meta name="twitter:image" content="./../assets/images/acm1.png">
 
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
   <link href='./../assets/CSS/benefits.css' rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="./assets/CSS/glider.css">
+  <link rel="stylesheet" type="text/css" href="./../assets/CSS/glider.css">
   <script src="https://kit.fontawesome.com/d459eda8d9.js" crossorigin="anonymous"></script>
 
 </head>
@@ -49,11 +49,11 @@
         <span class="navbar-toggler-icon"><i style="color:black; margin-top:5px" class="fas fa-bars"></i></span>
       </button>
       <div class="d-flex">
-        <a href="./index.html"><img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm logo" />
+        <a href="././index.html"><img class="acm-logo-navbar" src="./../assets/images/acm1.png" height="60px" alt="acm logo" />
         <div class="text-and-logo"></a>
             <a style="font-size: 16px; padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto"
-                href="./index.html">ACM<span> USICT</span></a>
-            <a href="./index.html"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
+                href="./../index.html">ACM<span> USICT</span></a>
+            <a href="./../index.html"><img class="outstanding-logo" src="./../assets/images/outstanding-website.png" alt="" /></a>
         </div>
     </div>
       <div class="collapse navbar-collapse" id="navbarCollapse1">
@@ -70,11 +70,8 @@
   </nav>
   <div style="margin-left:10%; margin-right:10%; margin-top:3%; margin-bottom: 0%;">
     <section id='header'>
-      <div class="pt-card row" style="background-image: url('assets/images/benefits-banner.png');">
-        <div class="heading col-xl-9 col-lg-9 col-md-9 col-sm-6">
-          <h3><span class="uheading">Why Join</span><br>
-            <span class="lheading">ACM USICT Chapter?</span></h3>
-        </div>
+      <div class="pt-card" style="padding: 0;">
+        <img style="width: 100%;border-radius:18px;" src="./../assets/images/internship-banner.jpeg" alt="">
       </div>
     </section>
   </div>
@@ -94,217 +91,81 @@
     </span>
   </div>
   </div>
+<section class="container" style="margin: 10% auto;">
+  <iframe src="./../assets/Summer Internship Proposal.pdf" style="width:100%; height:80vh;"></iframe>
+</section>
+ 
+<!-- =====================================Contact us============================ -->
 
-  <section class="service-sec" id="benefits">
+<section id="contact" class="background-grey"
+    style="background-color: white;background-image: url('./assets/images/left_bg.png');">
     <div class="container">
+      <div class="m-b-50" style="text-align: center;">
+        <img style="width: 90px; margin-bottom: 5vh; " class="text-center" src="./../assets/images/contact_us_icon.png"
+          alt="">
+        <p class="text section-heading">Get in touch</p>
+        <p class="text-small" style="color: #373f41; font-weight: normal;">Feel free to contact us if you need some
+          help. Consultations or you have some other questions.</p>
+      </div>
       <div class="row">
-        <div class="col-md-12">
-          <!-- <div class="heading">
-      <h2><small>Benefits of joining ACM</small>To enjoy the glow of good health, you must exercise</h2>
-    </div> -->
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <img class=" contact-us-img m-t-20" style="    width: 100%;" src="./../assets/images/contact_us.png"
+            alt="contact us image">
         </div>
-        <div class="">
-          <div class="row d-flex justify-content-center">
-            <div class="perk-card"> <img src="./assets/images/perks/flagship.png" height="80" width="80">
-              <h3>ACM’s flagship publication </h3>
-              <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe.</p>
+        <div class="col-lg-6">
+          <form class="widget-contact-form"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse"
+            role="form" method="post" target="_self" novalidate="novalidate">
+            <div class="row" style="margin-top:2rem">
+              <div class="form-group col-md-6">
+                <input type="text" aria-required="true" name="entry.360262149"
+                  class="form-input-boxes-manual form-control required name" placeholder="Name" style="color: grey;">
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" aria-required="true" name="entry.1979735424"
+                  class="form-input-boxes-manual form-control required email" placeholder="Email" style="color: grey;">
+              </div>
             </div>
-            <div class="perk-card"> <img src="./assets/images/perks/e_newletter.png" height="80" width="80">
-              <h3>ACM’s Popular E-Newsletters</h3>
-              <p>TechNews, the latest news in computing, 3x weekly; CareerNews, the latest career and industry news, bi-monthly; and MemberNet.</p>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <input type="text" name="entry.1199769641" class="form-input-boxes-manual form-control"
+                  placeholder="Phone Number" style="color: grey;">
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" name="entry.154355220" class="form-input-boxes-manual form-control"
+                  placeholder="Organization / College" style="color: grey;">
+              </div>
             </div>
-            <div class="perk-card"> <img src="./assets/images/perks/life_long.png" height="80" width="80">
-              <h3>Lifelong Learning Center</h3>
-              <p>Online courses targeted toward essential IT skills and popular certifications from Skillsoft, O'Reilly, etc.; Videos and webinars; DSP Talks; Digital Library with Thousands of Research Paper.</p>
+            <div class="form-group">
+              <textarea type="text" name="entry.1544463438" rows="5"
+                class="form-control form-input-boxes-manual required" placeholder="Message" style="color: grey;"
+                aria-required="true"></textarea>
             </div>
-            <div class="perk-card"> <img src="./assets/images/perks/research.png" height="80" width="80">
-              <h3>ACM Student Research Competition</h3>
-              <p>Sponsored by Microsoft, an internationally recognized venue enabling students to experience the research world, share and exchange ideas, rub shoulders with academic and industry luminaries.</p>
+            <div class="row">
+              <div class="form-group col-md-6"></div>
+              <div class="form-group col-md-2"></div>
+              <div class="form-group col-md-2 button-center">
+                <div class="form-group">
+                  <button class="btn signin" type="submit" style="background-color: #4169E1; color:#fff;"
+                    onclick="setColor(event)"><i class="fa fa-paper-plane"></i>&nbsp;Send message</button>
+
+                </div>
+              </div>
             </div>
-            <div class="perk-card"> <img src="./assets/images/perks/clubs.png" height="80" width="80">
-              <h3>Clubs Under ACM USICT</h3>
-              <p>ACM USICT has a total of 8 daughter clubs under its aegis. Namely Appetite, Webify, Research & Development Cell, Entreprenurs' Arena, Cyber Security Cell, Innovate AI and RobIOTics.</p>
-            </div>
-            <div class="perk-card"> <img src="./assets/images/perks/career.png" height="80" width="80">
-              <h3>ACM Career & Job Center</h3>
-              <p>Opportunities to view and apply for a wide variety of highly targeted technology jobs including academic and corporate postings not often seen on commercial sites. <a href="https://jobs.acm.org">jobs.acm.org</a></p>
-            </div>
-            <div class="perk-card"> <img src="./assets/images/perks/interest.png" height="80" width="80">
-              <h3>Specific Interest Groups</h3>
-              <p>Be a part of group of your interest collaborating with people around the globe.</p>
-            </div>
-            <div class="perk-card"> <img src="./assets/images/perks/tour.png" height="80" width="80">
-              <h3>Sponsored Conferences and Tours</h3>
-              <p>ACM sponsors national and International conferences and tours for its members.</p>
-            </div>
-            <div class="perk-card"> <img src="./assets/images/perks/summer_train.png" height="80" width="80">
-              <h3>ACM Summer and Winter School</h3>
-              <p>Developing a taste for research among students through two- to three-week summer schools conducted by faculty comprising leading experts from academia and industry on advanced topics in computing.</p>
-            </div>
-          </div>
-          <!-- <div class="col-md-4"> <img src="http://grafreez.com/wp-content/temp_demos/burnout/img/side-01.jpg" class="img-fluid" /> </div> -->
+          </form>
+
         </div>
-        <!-- /.row -->
       </div>
+    </div>
   </section>
-
-
-  <!-- **************************************************ALUMNI SECTION *****************************************************-->
-
-  <section class="alumnus">
-    <div class="container alumn">
-      <div class="line"></div>
-      <h1>MEET OUR <b>ALUMNI</b></h1>
-      <div class="glider-contain">
-        <div class="glider">
-
-          <div class="boxx">
-            <div class="images">
-              <div class="rot">
-                <img src="./assets/images/Alumni/RajatMaheshwariRotate.jpg" alt="">
-              </div>
-
-              <h4>Rajat Maheshwari</h4>
-              <h5>SDE 1, Amazon</h5>
-              <!-- <p>"ACM is the best way to learn and continue our talents in the best possible way"</p> -->
-            </div>
-
-          </div>
-
-
-          <div class="boxx">
-            <div class="images">
-              <img src="./assets/images/Alumni/sapnaChaudharyRotate.jpg" alt="">
-              <h4>Sapna Chaudhary</h4>
-              <h5>Pursuing Phd, IIITD</h5>
-              <!-- <p>"ACM is the best way to learn and continue our talents in the best possible way"</p> -->
-            </div>
-
-          </div>
-
-
-          <div class="boxx">
-            <div class="images">
-              <img src="./assets/images/Alumni/tamannaRotate.jpg" alt="">
-              <h4>Tamanna Arora</h4>
-              <h5>SDE, Media Agility</h5>
-              <!-- <p>"ACM is the best way to learn and continue our talents in the best possible way"</p> -->
-            </div>
-
-          </div>
-
-
-
-          <div class="boxx">
-            <div class="images">
-              <img src="./assets/images/Alumni/AbhishekRotate.jpg" alt="">
-              <h4>Abhishek Khandelwal</h4>
-              <h5>Founder CEO, ENSVEE & Part. of CSL Symposium, New York</h5>
-              <!-- <p>"ACM is the best way to learn and continue our talents in the best possible way"</p> -->
-            </div>
-          </div>
-        </div>
-
-        <button aria-label="Previous" class="glider-prev alumni-prev">
-          <</button>
-            <button aria-label="Next" class="glider-next alumni-next">></button>
-            <div role="tablist" class="dots"></div>
-      </div>
-
-
-    </div>
-
-  </section>
-  <div class="winnerOut">
-    <div>
-      <canvas id="my-canvas" class="custom-canvas"></canvas>
-
-    </div>
-
-    <div class="winners">
-
-      <div class="container">
-        <div class="line"></div>
-        <h1><b>WINNERS</b></h1>
-
-        <div class="glider-contain">
-          <div class="glider1">
-            <div class="winBox">
-              <div class="winnerInnerDiv">
-
-                <img src="./assets/images/TrophyOneWinner.jpg" alt="">
-                <div id="overlay">
-                  <i class="fas fa-4x fa-crown"></i>
-                </div>
-                <h2>Bat Code-2020</h2>
-
-                <div class="row winnerDetails">
-                  <div class="col">
-                    <h4>Shubham Garg, USICT</h4>
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-            <div class="winBox">
-              <div class="winnerInnerDiv">
-
-                <img src="./assets/images/TrophyOneWinner.jpg" alt="">
-                <div id="overlay">
-                  <i class="fas fa-4x fa-crown"></i>
-                </div>
-                <h2>Quiz-2020</h2>
-
-                <div class="row winnerDetails">
-                  <div class="col">
-                    <h4>Kashish Jain</h4>
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-            <div class="winBox">
-              <div class="winnerInnerDiv">
-
-                <img src="./assets/images/TrophyOneWinner.jpg" alt="">
-                <div id="overlay">
-                  <i class="fas fa-4x fa-crown"></i>
-                </div>
-                <h2>Drawing Competition-2020</h2>
-
-                <div class="row winnerDetails">
-                  <div class="col">
-                    <h4>Hanshita Prabhakar</h4>
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-
-
-          </div>
-          <button aria-label="Previous" class="glider-prev alumni-prev1">
-            < </button>
-              <button aria-label="Next" class="glider-next alumni-next1">></button>
-              <div role="tablist" class="dots1"></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-<section id="registration">
+<!-- <section id="registration">
   <div class="container">
   <p class="registration-heading">JOIN NOW</p>
   <div class="registration-form-div" style="padding:0% !important">
     <hr class="blue-hr">
     <div class="row no-gutters">
       <div class="col-lg-6">
-        <img class="registration-img" src="assets/images/Web4-removebg-preview.png" alt="">
+        <img class="registration-img" src="./../assets/images/Web4-removebg-preview.png" alt="">
       </div>
       <div class="col-lg-6 col-md-12 col-sm-12">
         <div class="registration-inner-div d-flex justify-content-center">
@@ -398,74 +259,12 @@
                 </div>
               </div>
             </form>
-
-            <!-- <form action="index.html" method="POST" class="row">
-              <div class="col-lg-6 col-md-6">
-                <input class="input form-input-boxes-manual form-control" type="text" name="fname" placeholder="First Name" required><br>
-              </div>
-              <div class="col-lg-6 col-md-6">
-                <input class="input form-input-boxes-manual form-control" type="text" name="lname" placeholder="Last Name" required><br>
-              </div>
-              <div class="col-lg-12 col-md-12">
-                <input class="input form-input-boxes-manual form-control" type="number" name="enrollment" placeholder="Enrollment Number" required><br>
-              </div>
-              <div class="col-lg-6 col-md-6">
-                <input class="input form-input-boxes-manual form-control" type="email" name="email" placeholder="Email" required><br>
-              </div>
-              <div class="col-lg-6 col-md-6">
-                <input class="input form-input-boxes-manual form-control" type="number" name="phone" placeholder="Phone" required><br>
-              </div>
-              <div class="col-lg-6 col-md-6">
-                <input class="input form-input-boxes-manual form-control" type="number" name="year" placeholder="Year">
-              </div>
-              <div class="col-lg-6 col-md-6">
-                <input class="input form-input-boxes-manual form-control" type="number" name="membership" placeholder="Membership Number">
-              </div>
-                <p>Select Your Course:</p>
-                <div class="row">
-                  <br>
-                  <div class="col-lg-3 col-md-3">
-                    <input type="radio" id="courseChoice1" name="course" value="B.Tech CSE">
-                    <label for="contactChoice1">B.Tech CSE</label>
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <input type="radio" id="courseChoice2" name="course" value="B.Tech IT">
-                    <label for="contactChoice2">B.Tech IT</label>
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <input type="radio" id="courseChoice3" name="course" value="B.Tech ECE">
-                    <label for="contactChoice3">B.Tech ECE</label>
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <input type="radio" id="courseChoice3" name="course" value="M.Tech CSE">
-                    <label for="contactChoice4">M.Tech CSE</label><br>
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <input type="radio" id="courseChoice3" name="course" value="M.Tech IT">
-                    <label for="contactChoice5">M.Tech IT</label>
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <input type="radio" id="courseChoice3" name="course" value="M.Tech ECE">
-                    <label for="contactChoice6">M.Tech ECE</label>
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <input type="radio" id="courseChoice3" name="course" value="M.Tech RA">
-                    <label for="contactChoice7">M.Tech RA</label>
-                  </div>
-                  <div class="col-lg-3 col-md-3">
-                    <input type="radio" id="courseChoice3" name="course" value="PhD">
-                    <label for="contactChoice8">PhD</label>
-                  </div>
-                </div>
-
-                <input class="registration-button" type="submit" name="" id="">
-            </form> -->
         </div>
     </div>
     </div>
   </div>
 </div>
-</section>
+</section> -->
 
 
   <footer style="background-color:#F7F9FB;" id="footer">
@@ -477,7 +276,7 @@
               <div class="col-lg-4 col-12 d-flex justify-content-center">
                 <a href="#about" class="scrollto"
                   ><img
-                    src="assets/images/acm1.png"
+                    src="./../assets/images/acm1.png"
                     alt="logo"
                     title=""
                     style="
@@ -493,7 +292,7 @@
               >
                 <a href="#about" class="scrollto"
                   ><img
-                    src="assets/images/outstanding-website.png"
+                    src="./../assets/images/outstanding-website.png"
                     alt="logo"
                     title=""
                     style="
@@ -538,7 +337,7 @@
               </li>
               <li>
                 <i class="fa fa-angle-right"></i>
-                <a href="./clubs.html">Our Clubs</a>
+                <a href="./../clubs.html">Our Clubs</a>
               </li>
             </ul>
           </div>
@@ -581,11 +380,11 @@
     </div>
   </footer>
 
-  <script src="./assets/JS/glider.js"></script>
+  <script src="./../assets/JS/glider.js"></script>
   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
-  <script src="./assets/JS/benefits.js"></script>
+  <script src="./../assets/JS/benefits.js"></script>
 </body>
 
 </html>
