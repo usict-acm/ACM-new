@@ -20,24 +20,31 @@ class Database
     $this->password = $env_password;
     $this->database = $env_database;
     $this->port = $env_port;
+    // echo "ceheck";
+    // echo $env_server;
+    // echo $env_username;
+    // echo $env_password;
+    // echo $env_database;
+    // echo $env_port;
     // $this->port = "3307";
-
+    
     // $conn = new mysqli(
-    //   $this->server,
-    //   $this->username,
-    //   $this->password,
-    //   $this->database
-    // );
-
-    //  $conn = new mysqli($this->server,$this->username,$this->password,
-    //           $this->database,$this->port);
-
-    $conn = new mysqli(
-      $this->server,
-      $this->username,
-      $this->password,
-      $this->database
-    );
+      //   $this->server,
+      //   $this->username,
+      //   $this->password,
+      //   $this->database
+      // );
+      
+      //  $conn = new mysqli($this->server,$this->username,$this->password,
+      //           $this->database,$this->port);
+      
+      $conn = new mysqli(
+        $this->server,
+        $this->username,
+        $this->password,
+        $this->database
+      );
+      // echo $conn;
 
     //  echo $conn;
     return $conn;

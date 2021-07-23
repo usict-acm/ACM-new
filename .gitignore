@@ -3,3 +3,4 @@ cpanel.yml
 */node_modules
 upload/*
 enviornment.php
+.DS_Store

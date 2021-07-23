@@ -120,49 +120,12 @@
       </div>
       </div>
     </div>
+
+
+    
     <div class="events">
-      <ul>
-        <li>
-          <div class="time">
-            <h2>2021<br><span></span></h2>
-          </div>
-          <div class="details">
-            <h3 style="color: black;font-weight: bolder;">15+ events (Jan - May 2021)</h3>
-            <p style="font-size:large; color: #e91e63;font-weight: bolder;">"We grow stronger and the journey ongoing"</p>
-            <p style="text-align: end; margin-right: 2px; font-size: smaller; color:#0297ff;">(Trellathon and STTP Cyber Security and more)</p>
-            <a href="../events/2021.html">View details</a>
-          </div>
-          <div style="clear: both;"></div>
-        </li>
-
-
-        <li>
-          <div class="time">
-            <h2>2020<br><span></span></h2>
-          </div>
-          <div class="details">
-            <h3 style="color: black;font-weight: bolder;">15+ events</h3>
-            <p style="font-size:large; color: #e91e63;font-weight: bolder;">"Pandemic cannot stop us"</p>
-            <p style="text-align: end; margin-right: 2px; font-size: smaller; color:#0297ff;">(Talk by Prof Raj K Bhatnagar, ACM Foundation Day and many more)</p>
-            <a href="../events/2020.html">View details</a>
-          </div>
-          <div style="clear: both;"></div>
-        </li>
-
-        <li>
-          <div class="time">
-            <h2>2019<br><span></span></h2>
-          </div>
-          <div class="details">
-            <h3 style="color: black;font-weight: bolder;">10+ events</h3>
-            <p style="font-size:large; color: #e91e63;font-weight: bolder;">"The year in which it all started.."
-            </p>
-            <p style="text-align: end; margin-right: 2px; font-size: smaller; color:#0297ff;">(International Talk by Prof Jozséf Dombi and Turing Workshop)</p>
-            <a href="../events/2019.html">View details</a>
-          </div>
-          <div style="clear: both;"></div>
-        </li>
-
+      <ul id="eventIndex">
+        
       </ul>
     </div>
   </section>
@@ -175,6 +138,49 @@
     <img class="quote-img" src="../assets/images/trell-4.jpeg" alt="" />
 
   </div>
+   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+<script>
+    let urlEventIndex = '../admin/blogAdmin/api.php/?q=all';
+    let yearWiseEvent=document.getElementById("eventIndex");
+
+    $(document).ready(function() {
+        $.ajax({
+            url: urlEventIndex,
+            method: 'GET',
+            dataType: 'JSON',
+            success: function(data) {
+
+                console.log("check data ",data);
+                data.forEach(allEventmore);
+                function allEventmore(event) {
+                    // console.log(yearWiseEvent);
+                    // console.log(event.year);
+                    // console.log('./'+event.year+'.php');
+                    // console.log(event.numberOfEvents);
+                    // console.log(event.heading);
+                    // console.log(event.more);
+                        yearWiseEvent.innerHTML +=" <li>\
+                                                        <div class='time'>\
+                                                            <h2>"+event.year+" <br><span></span></h2>\
+                                                        </div>\
+                                                        <div class='details'>\
+                                                            <h3 style='color: black;font-weight: bolder;'>"+event.numberOfEvents+" </h3>\
+                                                            <p style='font-size:large; color: #e91e63;font-weight: bolder;'>"+event.heading+"</p>\
+                                                            <p style='text-align: end; margin-right: 2px; font-size: smaller; color:#0297ff;'>"+event.more+"</p>\
+                                                            <a  href='./"+event.year+".php'>View details</a>\
+                                                        </div>\
+                                                        <div style='clear: both;'></div>\
+                                                    </li>";
+                                                    
+                    }
+                    console.log(yearWiseEvent);
+            },
+        });
+    });
+</script>
+
 
   <!-- ****************************************************Header Image****************************************** 
 
@@ -418,6 +424,7 @@
   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="../assets/JS/benefits.js"></script>
+  
 </body>
 
 </html>

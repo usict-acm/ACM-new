@@ -4,6 +4,7 @@
 
     include_once './database.php';
     include_once './posts.php';
+ 
 
     $method = $_SERVER['REQUEST_METHOD'];
 
@@ -11,7 +12,6 @@
          // Instantiate DB & connect
         $database = new Database();
         $db = $database->connect();
-
         // Instantiate blog post object
         $post = new Post($db);
 
@@ -54,7 +54,6 @@
 
         // Turn to JSON & output
         echo json_encode($multi_array_posts);
-        
         // echo json_encode($pages);
 
         } else {
@@ -146,7 +145,7 @@
          // Instantiate DB & connect
         $database = new Database();
         $db = $database->connect();
-
+// echo $db;
         // Instantiate blog post object
         $post = new Post($db);
 
@@ -253,8 +252,7 @@
     
         if(in_array($filecheck,$fileextstored)){
             $destinationfile = 'upload/blogs/'.$filename;
-            $uploadLocation = '../../upload/blogs/'.$filename;
-            move_uploaded_file($filetemppath,$uploadLocation);
+            move_uploaded_file($filetemppath,$destinationfile);
     
             $sql = "INSERT INTO `blog` (`Title`, `Author`, `Content`, `Category`, `Event`, `Image`, `Date`) VALUES ('$title', '$author', '$content', '$category','$event', '$destinationfile', current_timestamp());";
             if($db->query($sql) == true){
@@ -275,7 +273,102 @@
         }
     }
    };
+   function yearWiseEvent1(){
+    include_once '../../events/eventPost.php';
+    //   echo "checing";
+    // Instantiate DB & connect
+    $database = new Database();
+    echo "check1";
+    $db = $database->connect();
+    echo "check2";
+    // echo $db;
+    // echo "checking";
+  // Instantiate blog post object
+   $post = new PostEvent($db);
+   echo "check3";
+  
+   // Blog post query
+   $result = $post->eventFolder();
+   echo "check4";
+// var_dump($result);
+   
+   // Check if any posts
+   if($result) {
+    
+   // Post array
+   $posts_arr = array();
 
+   while($row=$result->fetch_assoc()){
+    //    echo $row;
+       $post_item = array(
+           'sno' => $row["sno"],
+           'year' => $row["year"],
+           'numberOfEvents' => $row["numberOfEvents"],
+           'heading' => $row["heading"],
+           'more' => $row["more"],
+       );
+           // Push to "data"
+           array_push($posts_arr, $post_item);
+   }
+
+   // Turn to JSON & output
+   echo json_encode($posts_arr);
+
+   } else {
+   // No Posts
+   echo json_encode(
+       array('message' => 'No Posts Found')
+   );
+   }
+};
+function readEvents(){
+    // Instantiate DB & connect
+   $database = new Database();
+   $db = $database->connect();
+// echo $db;
+  // Instantiate blog post object
+   $post = new PostEvent($db);
+
+   echo $year;
+// echo "helllo";
+    $year = $_GET['year'];
+   // Blog post query
+   $result = $post->readYearEvent($year);
+
+   // Check if any posts
+   if($result) {
+
+   // Post array
+   $posts_arr = array();
+
+   while($row=$result->fetch_assoc()){
+       $post_item = array(
+           'sno' => $row["sno"],
+           'name' => $row["name"],
+           'description' => $row["description"],
+           'regLink' => $row["regLink"],
+           'startTime' => $row["startTime"],
+           'endTime' => $row["endTime"],
+           'watchLink' => $row["watchLink"],
+           'partners' => $row["partners"],
+           'speakers' => $row["speakers"],
+           'poster' => $row["poster"],
+           'year' => $row["year"],
+       );
+           // Push to "data"
+           array_push($posts_arr, $post_item);
+   }
+
+   // Turn to JSON & output
+   echo json_encode($posts_arr);
+
+   } else {
+   // No Posts
+   echo json_encode(
+       array('message' => 'No Posts Found')
+   );
+   }
+};
 
     $q = $_GET['q'];
     switch ($q){
@@ -297,12 +390,13 @@
         case 'postblog':
             postblog();
             break;
+        case 'all':
+            yearWiseEvent1();
+            break;
+        case 'readAllEvent':
+            readEvents();
+            break;
         default:
             echo "Invalid Query";
     }
 ?>
-
-
-
-
-
