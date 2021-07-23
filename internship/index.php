@@ -68,13 +68,25 @@
       </div>
     </div>
   </nav>
+
   <div style="margin-left:10%; margin-right:10%; margin-top:3%; margin-bottom: 0%;">
+    <section id='header'>
+      <div class="pt-card row" style="background-image: url('./../assets/images/internship-banner.jpeg');">
+        <div class="heading col-xl-9 col-lg-9 col-md-9 col-sm-6">
+          <h3 style="color:transparent"><span class="uheading">Why Join</span><br>
+            <span class="lheading">ACM USICT Chapter?</span></h3>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- <div style="margin-left:10%; margin-right:10%; margin-top:3%; margin-bottom: 0%;">
     <section id='header'>
       <div class="pt-card" style="padding: 0;">
         <img style="width: 100%;border-radius:18px;" src="./../assets/images/internship-banner.jpeg" alt="">
       </div>
     </section>
-  </div>
+  </div> -->
 
   <div class="alert alert-info new2 p-4" style="margin-top: 7%;">
     <span class="alert-body">
@@ -415,6 +427,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
   <script src="./../assets/JS/benefits.js"></script>
+  <style>
+    .i-RrUw{
+      display: none !important;
+    }
+    .dkWypw>svg{
+      display: none !important;
+    }
+  </style>
 </body>
 
 </html>
