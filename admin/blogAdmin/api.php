@@ -332,9 +332,51 @@ function postblog()
             );
             array_push($announcements_arr, $announcement_item);
         } 
-        echo json_encode($announcements_arr);
-    }
-   }
+        echo json_encode($announcements_arr);}}
+    
+   function postAnnouncement(){
+    $database = new Database();
+    $db = $database->connect();
+    // if(isset($_POST['submit'])){
+        $txtTitle = $_POST['name'];
+        $txtDescription = $_POST['description'];
+        $txtReglink = $_POST['regLink'];
+        $txtWatchlink = $_POST['watchLink'];
+        $txtPartners = $_POST['partners'];
+        $txtSpeakers = $_POST['speakers'];
+        $file = $_FILES['poster'];
+    
+        print_r($file);
+    
+        $filename = $file['name'];
+        $fileerror = $file['error'];
+        $filetemppath= $file['tmp_name'];
+    
+        $fileext = explode('.',$filename);
+        $filecheck = strtolower(end($fileext));
+    
+        $fileextstored = array('png','jpg','jpeg');
+    
+        if(in_array($filecheck,$fileextstored)){
+            $destinationfile = 'upload/announcements/'.$filename;
+            $uploadLocation = '../../upload/announcements/'.$filename;
+            move_uploaded_file($filetemppath,$uploadLocation);
+    
+            $sql = "INSERT INTO `event` (`sno`, `name`, `description`, `regLink`, `startTime`, `endTime` , `watchLink` , `partners` , `speakers` , `poster`) VALUES ('0', '$txtTitle', '$txtDescription', '$txtReglink' ,current_timestamp(),current_timestamp(),'$txtWatchlink','$txtPartners','$txtSpeakers', '$destinationfile');";
+            if($db->query($sql) == true){
+            echo json_encode(http_response_code(200));
+        }
+        else{
+            echo json_encode("ERROR: $sql <br> $db->error");
+        }
+    
+        }
+    
+        else{
+            echo json_encode(http_response_code(400));
+        }
+    // }
+   };
 
 function postImage()
 {
@@ -404,6 +446,10 @@ switch ($q) {
     case 'readAllAnnouncements':
         readAllAnnouncements();
         break;
+    case 'postAnnouncement':
+        postAnnouncement();
+        break;
     default:
         echo "Invalid Query";
 }
+    
