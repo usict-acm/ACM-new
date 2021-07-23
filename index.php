@@ -1,59 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <title>ACM USICT</title>
-  <link rel="icon" href="./assets/images/acm1.png" type="image/x-icon">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc">
+  <head>
+    <?php
+      include("head.php")
+    ?>
+    <title>ACM USICT</title>
+    <link href='./assets/CSS/styles.css' rel="stylesheet" />
+    <link href='./assets/CSS/glider.css' rel="stylesheet" />
+    <link href='./assets/CSS/footer.css' rel="stylesheet" />
+    <style>
+      @media (min-width: 0px) and (max-width: 500px) {
+        section {
+          background-image: none !important;
+        }
 
-  <!-- Google / Search Engine Tags -->
-  <meta itemprop="name" content="ACM@USICT Chapter, GGSIPU">
-  <meta itemprop="description"
-    content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc">
-  <meta itemprop="image" content="./assets/images/acm1.png">
-
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="http://usict.acm.org/ACM_New">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="ACM@USICT Chapter, GGSIPU">
-  <meta property="og:description"
-    content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc">
-  <meta property="og:image" content="./assets/images/acm1.png">
-
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ACM@USICT Chapter, GGSIPU">
-  <meta name="twitter:description"
-    content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc">
-  <meta name="twitter:image" content="./assets/images/acm1.png">
-
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-  <link href='./assets/CSS/styles.css' rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- <script src="jquery-3.5.1.min.js"></script> -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <link rel="stylesheet" type="text/css" href="./assets/CSS/glider.css">
-  <script src="https://kit.fontawesome.com/d459eda8d9.js" crossorigin="anonymous"></script>
-
-  <style>
-    @media (min-width: 0px) and (max-width: 500px) {
-      section {
-        background-image: none !important;
+        .button-center {
+          text-align: center;
+        }
       }
-
-      .button-center {
-        text-align: center;
-      }
-    }
-  </style>
-</head>
+    </style>
+  </head>
 
 <body>
 

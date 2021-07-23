@@ -1,75 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <?php
+      include('head.php');
+    ?>
     <title>ACM USICT</title>
-    <link rel="icon" href="./assets/images/acm1.png" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc"
-    />
-
-    <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="ACM@USICT Chapter, GGSIPU" />
-    <meta
-      itemprop="description"
-      content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc"
-    />
-    <meta itemprop="image" content="./assets/images/acm1.png" />
-
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="http://usict.acm.org/ACM_New" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="ACM@USICT Chapter, GGSIPU" />
-    <meta
-      property="og:description"
-      content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc"
-    />
-    <meta property="og:image" content="./assets/images/acm1.png" />
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ACM@USICT Chapter, GGSIPU" />
-    <meta
-      name="twitter:description"
-      content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc"
-    />
-    <meta name="twitter:image" content="./assets/images/acm1.png" />
-
-    <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link href="./assets/CSS/styles.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
-    <!-- <link rel="stylesheet" type="text/css" href="./assets/CSS/glider.css" /> -->
-    <script
-      src="https://kit.fontawesome.com/d459eda8d9.js"
-      crossorigin="anonymous"
-    ></script>
     <link href="./assets/CSS/clubs.css" rel="stylesheet" />
     <link href="./assets/CSS/header.css" rel="stylesheet" />
     <link href="./assets/CSS/footer.css" rel="stylesheet" />
   </head>
-
   <body>
     <!-- ************************************************Navbar******************************************************************************-->
-
-  <?php
-    $currentPage = 'clubs';
-    include('header.php');
-  ?>
-
+    <?php
+      $currentPage = 'clubs';
+      include('header.php');
+    ?>
+    <!-- ************************************************All Clubs************************************************************************* -->
     <section style="background: white">
       <img
         src="./assets/images/clubs/Background_shapes/Bg_shape_5.svg"
@@ -91,7 +37,7 @@
           </p>
         </div>
       </div>
-      <!-- // App starts -->
+      <!-- ************************************************** App starts ***********************************************************8-->
       <div class="club-container">
         <img
           src="./assets/images/clubs/Background_shapes/Bg_shape_2.svg"
@@ -136,8 +82,8 @@
           </div>
         </div>
       </div>
-      <!-- // App ends -->
-      <!-- // webify starts -->
+      <!-- ************************************************************ App ends****************************************** -->
+      <!-- *********************************************************** webify starts *****************************************-->
       <div class="club-container">
         <div class="row club-row">
           <div class="club container">
@@ -146,7 +92,6 @@
               class="bg-shape"
               id="bg-shape-3"
             />
-            <!-- <img src="assets/images/clubs/Background_shapes/Bg_shape_3-white.svg" class="bg-shape" id="bg-shape-3-white"> -->
             <div class="lvlimg">
               <div class="lead">
                 <div class="img">
@@ -182,8 +127,8 @@
           </div>
         </div>
       </div>
-      <!-- // webify ends -->
-      <!-- //  cyber cell starts -->
+      <!--************************************************************ webify ends ************************************************************-->
+      <!--************************************************************  cyber cell starts ************************************************************-->
       <div class="club-container">
         <div class="row club-row">
           <div class="container club">
@@ -230,8 +175,8 @@
           </div>
         </div>
       </div>
-      <!-- // cyber cell ends -->
-      <!-- //  robiotics starts -->
+      <!--************************************************************ cyber cell ends ************************************************************-->
+      <!--************************************************************  robiotics starts ************************************************************-->
       <div class="club-container">
         <div class="row club-row">
           <div class="club container">
@@ -271,8 +216,8 @@
           </div>
         </div>
       </div>
-      <!-- // robiotics ends -->
-      <!-- //  Entrepreneurs' Aren starts -->
+      <!--************************************************************ robiotics ends ************************************************************-->
+      <!--************************************************************  Entrepreneurs' Aren starts ************************************************************-->
       <div class="club-container">
         <div class="bg-shape" id="bg-shape-6"></div>
         <img
@@ -323,8 +268,8 @@
           </div>
         </div>
       </div>
-      <!-- //  Entrepreneurs' Aren ends -->
-      <!-- //  research starts -->
+      <!--************************************************************  Entrepreneurs' Aren ends ************************************************************-->
+      <!--************************************************************  research starts ************************************************************-->
       <div class="club-container">
         <div class="row club-row">
           <div class="club container">
@@ -364,8 +309,8 @@
           </div>
         </div>
       </div>
-      <!-- //  research ends -->
-      <!-- // AI starts -->
+      <!--************************************************************  research ends ************************************************************-->
+      <!--************************************************************ AI starts ************************************************************-->
       <div class="club-container">
         <img
           src="./assets/images/clubs/Background_shapes/Bg_shape_9.svg"
@@ -414,8 +359,8 @@
           </div>
         </div>
       </div>
-      <!-- //  AI ends -->
-      <!-- //icpc starts -->
+      <!--************************************************************  AI ends ************************************************************-->
+      <!--************************************************************icpc starts ************************************************************-->
       <div class="club-container">
         <div class="row club-row">
           <div class="club container">
@@ -456,17 +401,15 @@
         </div>
         <div class="bg-shape" id="bg-shape-10"></div>
       </div>
-      <!-- //icpc ends -->
+      <!--************************************************************icpc ends ************************************************************-->
     </section>
-
     <!-- ************************************************Footer******************************************************************************-->
+    <?php
+      include('footer.php');
+    ?>
 
-  <?php
-    include('footer.php');
-  ?>
-
-  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
   </body>
 </html>
