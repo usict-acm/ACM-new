@@ -33,7 +33,7 @@ const App = () => {
   );
 
   return (
-    <BrowserRouter>{user ? <AdminRoutes /> : <AuthRoutes />}</BrowserRouter>
+    <BrowserRouter>{!user ? <AdminRoutes /> : <AuthRoutes />}</BrowserRouter>
   );
 };
 
