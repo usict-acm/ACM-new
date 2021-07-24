@@ -101,9 +101,7 @@
     
 <script>
         let urlEvent = '../admin/blogAdmin/api.php/?q=readAllEvent&year=2021';
-        
         console.log(urlEvent);
-        console.log("hello");
         
         let allEvents=document.getElementById("eventPage");
         

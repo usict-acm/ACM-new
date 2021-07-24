@@ -28,7 +28,7 @@ class PostEvent {
     // $this->conn = $db;
     // }
     public function __construct($db) {
-      echo 'check1.1';
+      // echo 'check1.1';
       $this->conn = $db;
       
     }

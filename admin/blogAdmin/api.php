@@ -4,6 +4,7 @@
 
     include_once './database.php';
     include_once './posts.php';
+    include_once '../../events/eventPost.php';
  
 
     $method = $_SERVER['REQUEST_METHOD'];
@@ -274,22 +275,22 @@
     }
    };
    function yearWiseEvent1(){
-    include_once '../../events/eventPost.php';
+    // include_once '../../events/eventPost.php';
     //   echo "checing";
     // Instantiate DB & connect
     $database = new Database();
-    echo "check1";
+    // echo "check1";
     $db = $database->connect();
-    echo "check2";
+    // echo "check2";
     // echo $db;
     // echo "checking";
   // Instantiate blog post object
    $post = new PostEvent($db);
-   echo "check3";
+//    echo "check3";
   
    // Blog post query
    $result = $post->eventFolder();
-   echo "check4";
+//    echo "check4";
 // var_dump($result);
    
    // Check if any posts
@@ -313,6 +314,7 @@
 
    // Turn to JSON & output
    echo json_encode($posts_arr);
+//    echo "5";
 
    } else {
    // No Posts
@@ -322,6 +324,7 @@
    }
 };
 function readEvents(){
+    include_once '../../events/eventPost.php';
     // Instantiate DB & connect
    $database = new Database();
    $db = $database->connect();

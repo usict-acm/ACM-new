@@ -146,16 +146,20 @@
     let yearWiseEvent=document.getElementById("eventIndex");
 
     $(document).ready(function() {
-        $.ajax({
-            url: urlEventIndex,
-            method: 'GET',
-            dataType: 'JSON',
+              // console.log("1");
+              // console.log(yearWiseEvent);
+      $.ajax({
+        // datatype : "application/json",
+        url: urlEventIndex,
+        method: 'GET',
+        dataType: 'JSON',
             success: function(data) {
+              console.log("2");
 
                 console.log("check data ",data);
                 data.forEach(allEventmore);
                 function allEventmore(event) {
-                    // console.log(yearWiseEvent);
+                    console.log(yearWiseEvent);
                     // console.log(event.year);
                     // console.log('./'+event.year+'.php');
                     // console.log(event.numberOfEvents);
@@ -175,9 +179,12 @@
                                                     </li>";
                                                     
                     }
-                    console.log(yearWiseEvent);
+                    // console.log(yearWiseEvent);
+
             },
-        });
+            error:function(error){console.log(error);},
+          });
+          console.log("88");
     });
 </script>
 
