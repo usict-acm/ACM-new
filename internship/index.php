@@ -60,7 +60,7 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"> <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a> </li>
           <li class="nav-item"> <a class="nav-link" href="./collab.html">Sponsors</a> </li>
-          <li class="nav-item active"> <a class="nav-link" href="./benefits.html">Why Join Us?</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="./benefits.html">Why Join Us?</a> </li>
           <li class="nav-item"> <a class="nav-link" href="./clubs.html">Clubs</a> </li>
           <li class="nav-item"> <a class="nav-link" href="./Team.html">Our Team</a> </li>
           <li class="nav-item"> <a class="nav-link" href="https://services.acm.org/public/qj/proflevel/proflevel_control.cfm?level=3&country=India&form_type=Student&promo=LEVEL&pay=DD">ACM Registration</a> </li>
@@ -96,14 +96,16 @@
           <h6 class="alert-header md-text-custom">Registration</h6>
           <p class="mb-0">Join Us today and be a part of International Society of Computer Professionals and Scientists!</p>
         </div class="col-md-1 col-sm-1 col-1">
-        <button style="height:5%" class="sm-text-custom btn btn-outline-info"><a target="_blank" href="https://bit.do/acmusict">Join Us</a></button>
+        <button style="height:5%" class="sm-text-custom btn btn-outline-info"><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSccJURrpgR_SKgxatV0NlAnQOKHY-oVGRrmW1wSV-doopOXtg/viewform">Register Now</a></button>
         <div>
         </div>
       </div>
     </span>
   </div>
   </div>
-  <div class="container" style="margin: 10% auto">
+
+  <!--*****************************************************PPT*********************************************** -->
+  <div class="container" style="margin: 10% auto auto auto">
       <div
         style="
           position: relative;
@@ -136,177 +138,51 @@
         </iframe>
       </div>
     </div>
+
+    <!-- <section id="register" class="container d-flex justify-content-center">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSccJURrpgR_SKgxatV0NlAnQOKHY-oVGRrmW1wSV-doopOXtg/viewform" target="_blank">
+        <button z-index="999" class="btn btnForNewsletter400px"
+          style="background-color:#2250fc;margin-bottom: 20px;">
+          <span style="color:#fff; font-size:0.9rem">Register Now</span>
+        </button>
+      </a>
+    </section> -->
  
 <!-- =====================================Contact us============================ -->
 
-<section id="contact" class="background-grey"
-    style="background-color: white;background-image: url('./assets/images/left_bg.png');">
-    <div class="container">
-      <div class="m-b-50" style="text-align: center;">
-        <img style="width: 90px; margin-bottom: 5vh; " class="text-center" src="./../assets/images/contact_us_icon.png"
-          alt="">
-        <p class="text section-heading">Get in touch</p>
-        <p class="text-small" style="color: #373f41; font-weight: normal;">Feel free to contact us if you need some
-          help. Consultations or you have some other questions.</p>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12">
-          <img class=" contact-us-img m-t-20" style="    width: 100%;" src="./../assets/images/contact_us.png"
-            alt="contact us image">
-        </div>
-        <div class="col-lg-6">
-          <form class="widget-contact-form"
-            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse"
-            role="form" method="post" target="_self" novalidate="novalidate">
-            <div class="row" style="margin-top:2rem">
-              <div class="form-group col-md-6">
-                <input type="text" aria-required="true" name="entry.360262149"
-                  class="form-input-boxes-manual form-control required name" placeholder="Name" style="color: grey;">
-              </div>
-              <div class="form-group col-md-6">
-                <input type="email" aria-required="true" name="entry.1979735424"
-                  class="form-input-boxes-manual form-control required email" placeholder="Email" style="color: grey;">
-              </div>
-            </div>
-            <div class="row">
-              <div class="form-group col-md-6">
-                <input type="text" name="entry.1199769641" class="form-input-boxes-manual form-control"
-                  placeholder="Phone Number" style="color: grey;">
-              </div>
-              <div class="form-group col-md-6">
-                <input type="text" name="entry.154355220" class="form-input-boxes-manual form-control"
-                  placeholder="Organization / College" style="color: grey;">
-              </div>
-            </div>
-            <div class="form-group">
-              <textarea type="text" name="entry.1544463438" rows="5"
-                class="form-control form-input-boxes-manual required" placeholder="Message" style="color: grey;"
-                aria-required="true"></textarea>
-            </div>
-            <div class="row">
-              <div class="form-group col-md-6"></div>
-              <div class="form-group col-md-2"></div>
-              <div class="form-group col-md-2 button-center">
-                <div class="form-group">
-                  <button class="btn signin" type="submit" style="background-color: #4169E1; color:#fff;"
-                    onclick="setColor(event)"><i class="fa fa-paper-plane"></i>&nbsp;Send message</button>
-
-                </div>
-              </div>
-            </div>
-          </form>
-
-        </div>
-      </div>
-    </div>
-  </section>
-<!-- <section id="registration">
+<section style="margin: 7% auto;">
   <div class="container">
-  <p class="registration-heading">JOIN NOW</p>
   <div class="registration-form-div" style="padding:0% !important">
-    <hr class="blue-hr">
+    <!-- <hr class="blue-hr"> -->
     <div class="row no-gutters">
-      <div class="col-lg-6">
-        <img class="registration-img" src="./../assets/images/Web4-removebg-preview.png" alt="">
-      </div>
-      <div class="col-lg-6 col-md-12 col-sm-12">
-        <div class="registration-inner-div d-flex justify-content-center">
-            <form class="widget-contact-form" action="https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse" role="form" method="post" target="_self" novalidate="novalidate">
-              <div class="row" style="margin-top:2rem">
-                <div class="form-group col-md-6">
-                  <input type="text" aria-required="true" name="entry.73813921" class="form-input-boxes-manual form-control required fname" placeholder="First Name" style="color: grey;">
-                </div>
-                <div class="form-group col-md-6">
-                  <input type="text" aria-required="true" name="entry.1318071106" class="form-input-boxes-manual form-control required lname" placeholder="Last Name" style="color: grey;">
-                </div>
-              </div>
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <input type="email" name="entry.2086820351" class="form-input-boxes-manual form-control" placeholder="Email" style="color: grey;">
-                </div>
-                <div class="form-group col-md-6">
-                  <input type="number" name="entry.2128372508" class="form-input-boxes-manual form-control" placeholder="Phone Number" style="color: grey;">
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="number" name="entry.1857583496" class="form-control form-input-boxes-manual required" placeholder="Enrollment Number" style="color: grey;" aria-required="true">
-              </div>
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <input type="number" name="entry.715926692" class="form-input-boxes-manual form-control" placeholder="Year Of Admission" style="color: grey;">
-                </div>
-                <div class="form-group col-md-6">
-                  <input type="number" name="entry.114256127" class="form-input-boxes-manual form-control" placeholder="ACM Membership No." style="color: grey;">
-                </div>
-              </div>
-              <div class="form-group">
-                <input list="course" name="entry.1307853061" class="form-control form-input-boxes-manual required" placeholder="Select Course" style="color: grey;" aria-required="true">
-                <datalist id="course">
-                  <option value="B.Tech CSE">
-                  <option value="B.Tech IT">
-                  <option value="B.Tech ECE">
-                  <option value="M.Tech CSE">
-                  <option value="M.Tech IT">
-                  <option value="M.Tech ECE">
-                  <option value="M.Tech RA">
-                  <option value="PhD">
-                </datalist>
-              </div>
-              <div class="form-group">
-                <p style="font-size:16px;text-align:left;">Select Your Clubs:</p>
-                <div class="row no-gutters">
-                  <br>
-                  <div class="col-lg-6 col-md-6 club">
-                    <input type="checkbox" id="courseChoice1" name="entry.332679571" value="ACM Webify - The Web Development Group">
-                    <label class="label-course" for="contactChoice1">ACM Webify</label>
-                  </div>
-                  <div class="col-lg-6 col-md-6 club">
-                    <input type="checkbox" id="courseChoice2" name="entry.332679571" value="ACM Appetite - The App Development Group">
-                    <label class="label-course" for="contactChoice2">ACM Appetite</label>
-                  </div>
-                  <div class="col-lg-6 col-md-6 club">
-                    <input type="checkbox" id="courseChoice3" name="entry.332679571" value="ICPC Club - The Competitive Programming Group">
-                    <label class="label-course" for="contactChoice3">ICPC Club</label>
-                  </div>
-                  <div class="col-lg-6 col-md-6 club">
-                    <input type="checkbox" id="courseChoice3" name="entry.332679571" value="ACM Innovate AI - The Machine Learning, Data Science and AI Group">
-                    <label class="label-course" for="contactChoice4">ACM Innovate AI</label><br>
-                  </div>
-                  <div class="col-lg-6 col-md-6 club">
-                    <input type="checkbox" id="courseChoice3" name="entry.332679571" value="ACM Cyber Cell - The Cybersecurity Group">
-                    <label class="label-course" for="contactChoice5">ACM Cyber Cell</label>
-                  </div>
-                  <div class="col-lg-6 col-md-6 club">
-                    <input type="checkbox" id="courseChoice3" name="entry.332679571" value="ACM RobIOTics - The Robotics and IoT Group">
-                    <label class="label-course" for="contactChoice6">ACM RobIOTics</label>
-                  </div>
-                  <div class="col-lg-6 col-md-6 club">
-                    <input type="checkbox" id="courseChoice3" name="entry.332679571" value="ACM Entrepreneurs' Arena - The Entrepreneurship Group">
-                    <label class="label-course" for="contactChoice7">Entrepreneurs' Arena</label>
-                  </div>
-                  <div class="col-lg-6 col-md-6 club">
-                    <input type="checkbox" id="courseChoice3" name="entry.332679571" value="ACM Research Cell - The Research and Development Group">
-                    <label class="label-course" for="contactChoice8">ACM Research Cell</label>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="form-group col-md-6"></div>
-                <div class="form-group col-md-2"></div>
-                <div class="form-group col-md-2 button-center">
-                  <div class="form-group">
-                    <button class="btn signin" type="submit" style="background-color: #0297ff; color:#fff;" onclick="setColor(event)">&nbsp;Submit</button>
-
-                  </div>
-                </div>
-              </div>
-            </form>
-        </div>
+    <div class="col-lg-6 col-md-12 col-sm-12">
+        <img class="registration-img" style="height: 100%;margin:0;border-radius:8px;" src="./../assets/images/internshp-contact.png" alt="">
     </div>
+      <div class="col-lg-6">
+        <div class="registration-inner-div d-flex flex-column justify-content-between">
+          <div>
+          <p class="text section-heading">Get in touch</p>
+          <p class="text-small" style="color: #373f41; font-weight: normal;">Feel free to contact us if you need some help. Consultations or you have some other questions.</p>
+          </div>
+          <div class="registration-form-div" style="padding: 1rem;margin:1rem;">
+            <h3>Dr. Rahul Johari</h3>
+            <p>Faculty Sponsor, ACM USICT</p>
+            <h5>rahul@ipu.ac.in</h5>
+            <h5>9910185349</h5>
+          </div>
+          <div class="registration-form-div" style="padding: 1rem;margin:1rem;">
+            <h3>Gaurav Jain</h3>
+            <p>Chair, ACM USICT</p>
+            <h5>gaurav@usict.acm.org</h5>
+            <h5>7065105167</h5>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </div>
 </div>
-</section> -->
+</section>
 
 
   <footer style="background-color:#F7F9FB;" id="footer">
@@ -434,6 +310,11 @@
     .dkWypw>svg{
       display: none !important;
     }
+    @media (min-width: 300px) and (max-width: 992px){
+      .registration-img{
+      display: none;
+    }
+  }
   </style>
 </body>
 
