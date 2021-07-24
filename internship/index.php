@@ -49,20 +49,20 @@
         <span class="navbar-toggler-icon"><i style="color:black; margin-top:5px" class="fas fa-bars"></i></span>
       </button>
       <div class="d-flex">
-        <a href="././index.html"><img class="acm-logo-navbar" src="./../assets/images/acm1.png" height="60px" alt="acm logo" />
+        <a href="./../"><img class="acm-logo-navbar" src="./../assets/images/acm1.png" height="60px" alt="acm logo" />
         <div class="text-and-logo"></a>
             <a style="font-size: 16px; padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto"
-                href="./../index.html">ACM<span> USICT</span></a>
-            <a href="./../index.html"><img class="outstanding-logo" src="./../assets/images/outstanding-website.png" alt="" /></a>
+                href="./../">ACM<span> USICT</span></a>
+            <a href="./../"><img class="outstanding-logo" src="./../assets/images/outstanding-website.png" alt="" /></a>
         </div>
     </div>
       <div class="collapse navbar-collapse" id="navbarCollapse1">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"> <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a> </li>
-          <li class="nav-item"> <a class="nav-link" href="./collab.html">Sponsors</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="./benefits.html">Why Join Us?</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="./clubs.html">Clubs</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="./Team.html">Our Team</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="./../">Home <span class="sr-only">(current)</span></a> </li>
+          <li class="nav-item"> <a class="nav-link" href="./../collab.html">Sponsors</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="./../benefits.html">Why Join Us?</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="./../clubs.html">Clubs</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="./../Team.html">Our Team</a> </li>
           <li class="nav-item"> <a class="nav-link" href="https://services.acm.org/public/qj/proflevel/proflevel_control.cfm?level=3&country=India&form_type=Student&promo=LEVEL&pay=DD">ACM Registration</a> </li>
         </ul>
       </div>
