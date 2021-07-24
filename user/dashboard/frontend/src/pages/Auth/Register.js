@@ -85,7 +85,7 @@ const Register = () => {
                   </InputGroupText>
                 </InputGroupAddon>
                 <Input
-                  placeholder="Name"
+                  placeholder="Name*"
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -101,7 +101,7 @@ const Register = () => {
                   </InputGroupText>
                 </InputGroupAddon>
                 <Input
-                  placeholder="Email"
+                  placeholder="Email*"
                   type="email"
                   autoComplete="new-email"
                   value={email}
@@ -118,7 +118,7 @@ const Register = () => {
                   </InputGroupText>
                 </InputGroupAddon>
                 <Input
-                  placeholder="Password"
+                  placeholder="Password*"
                   type="password"
                   autoComplete="new-password"
                   value={password}
@@ -135,13 +135,13 @@ const Register = () => {
                   </InputGroupText>
                 </InputGroupAddon>
                 <Input
-                  placeholder="Course"
+                  placeholder="Course*"
                   type="select"
                   required
                   value={course}
                   onChange={(e) => setCourse(e.target.value)}
                 >
-                  <option value="">Select Course</option>
+                  <option value="">Select Course*</option>
                   {Object.keys(BRANCHES).map((value, index) => (
                     <option key={index} value={value}>
                       {value}
@@ -158,14 +158,14 @@ const Register = () => {
                   </InputGroupText>
                 </InputGroupAddon>
                 <Input
-                  placeholder="Course"
+                  placeholder="Course*"
                   type="select"
                   required
                   value={branch}
                   onChange={(e) => setBranch(e.target.value)}
                   disabled={course === ""}
                 >
-                  <option value="">Select Branch</option>
+                  <option value="">Select Branch*</option>
                   {BRANCHES[course]?.map((value, index) => (
                     <option key={index} value={value}>
                       {value}
@@ -182,7 +182,7 @@ const Register = () => {
                   </InputGroupText>
                 </InputGroupAddon>
                 <Input
-                  placeholder="Roll No"
+                  placeholder="Roll No*"
                   type="text"
                   value={rollNo}
                   onChange={(e) => setRollNo(e.target.value)}
