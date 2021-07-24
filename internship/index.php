@@ -94,9 +94,9 @@
         <i class="fa fa-info-circle" aria-hidden="true"></i>
         <div class="col-lg-10 col-md-9 col-sm-8 col-7">
           <h6 class="alert-header md-text-custom">Registration</h6>
-          <p class="mb-0">Join Us today and be a part of International Society of Computer Professionals and Scientists!</p>
+          <p class="mb-0">Register now for working on trending technologies under top notch mentors.</p>
         </div class="col-md-1 col-sm-1 col-1">
-        <button style="height:5%" class="sm-text-custom btn btn-outline-info"><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSccJURrpgR_SKgxatV0NlAnQOKHY-oVGRrmW1wSV-doopOXtg/viewform">Register Now</a></button>
+          <button style="height:5%;margin:10px auto;" class="sm-text-custom btn btn-outline-info"><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSccJURrpgR_SKgxatV0NlAnQOKHY-oVGRrmW1wSV-doopOXtg/viewform">Register Now</a></button>
         <div>
         </div>
       </div>
@@ -159,18 +159,18 @@
         <img class="registration-img" style="height: 100%;margin:0;border-radius:8px;" src="./../assets/images/internshp-contact.png" alt="">
     </div>
       <div class="col-lg-6">
-        <div class="registration-inner-div d-flex flex-column justify-content-between">
+        <div class="registration-inner-div d-flex flex-column justify-content-center">
           <div>
           <p class="text section-heading">Get in touch</p>
           <p class="text-small" style="color: #373f41; font-weight: normal;">Feel free to contact us if you need some help. Consultations or you have some other questions.</p>
           </div>
-          <div class="registration-form-div" style="padding: 1rem;margin:1rem;">
+          <div class="registration-form-div" style="padding: 1rem;margin:1rem auto;">
             <h3>Dr. Rahul Johari</h3>
             <p>Faculty Sponsor, ACM USICT</p>
             <h5>rahul@ipu.ac.in</h5>
             <h5>9910185349</h5>
           </div>
-          <div class="registration-form-div" style="padding: 1rem;margin:1rem;">
+          <div class="registration-form-div" style="padding: 1rem;margin:1rem auto;">
             <h3>Gaurav Jain</h3>
             <p>Chair, ACM USICT</p>
             <h5>gaurav@usict.acm.org</h5>
