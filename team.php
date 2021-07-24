@@ -192,20 +192,20 @@
                                       <p>' + row.designation + '</p>\
                                       <br />\
                                       <a href= "' + row.linkedin + '">\
-                                      <i class="team-social-icon fab fa-linkedin"></i></a>\
+                                      <i class="' + row.id + '-linkedin team-social-icon fab fa-linkedin"></i></a>\
                                       <a href= "' + row.github + '">\
-                                      <i class="team-social-icon fab fa-github"></i></a>\
+                                      <i class="' + row.id + '-github team-social-icon fab fa-github"></i></a>\
                                       <a href= "' + row.instagram + '">\
-                                      <i class="team-social-icon fab fa-instagram-square"></i></a>\
+                                      <i class="' + row.id + '-instagram team-social-icon fab fa-instagram-square"></i></a>\
                                       </div>\
                                       </div>\
                                       </div>'
-                                      // if(row.linkedin == '#')
-                                      //   $('.fa-linkedin').hide();
-                                      // if(row.github == '#')
-                                      //   $('.fa-github').hide();
-                                      // if(row.instagram == '#')
-                                      //   $('.fa-instagram-square').hide();
+                                      if(row.linkedin == '')
+                                        $('.'+ row.id + '-linkedin').hide();
+                                      if(row.github == '')
+                                        $('.' + row.id + '-github').hide();
+                                      if(row.instagram == '')
+                                        $('.' + row.id + '-instagram').hide();
                   }
                 }
               }
