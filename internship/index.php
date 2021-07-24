@@ -94,9 +94,9 @@
         <i class="fa fa-info-circle" aria-hidden="true"></i>
         <div class="col-lg-10 col-md-9 col-sm-8 col-7">
           <h6 class="alert-header md-text-custom">Registration</h6>
-          <p class="mb-0">Register now for working on trending technologies under top notch mentors.</p>
+          <p class="mb-0 mx-auto">Register now for working on trending technologies under top notch mentors.</p>
         </div class="col-md-1 col-sm-1 col-1">
-          <button style="height:5%;margin:10px auto;" class="sm-text-custom btn btn-outline-info"><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSccJURrpgR_SKgxatV0NlAnQOKHY-oVGRrmW1wSV-doopOXtg/viewform">Register Now</a></button>
+        <a style="text-decoration: none;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSccJURrpgR_SKgxatV0NlAnQOKHY-oVGRrmW1wSV-doopOXtg/viewform"><button style="height:5%;margin:10px auto;" class="sm-text-custom btn btn-outline-info">Register Now</button></a>
         <div>
         </div>
       </div>
@@ -313,6 +313,10 @@
     @media (min-width: 300px) and (max-width: 992px){
       .registration-img{
       display: none;
+    }
+    a:hover{
+      text-decoration: none;
+      color: #fff;
     }
   }
   </style>
