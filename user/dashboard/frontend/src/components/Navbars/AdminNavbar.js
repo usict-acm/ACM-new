@@ -16,6 +16,7 @@
 
 */
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
@@ -34,8 +35,15 @@ import {
   Container,
   Media,
 } from "reactstrap";
+import { logout } from "redux/slices/userSlice";
 
 const AdminNavbar = (props) => {
+  const dispatch = useDispatch();
+
+  const logoutHandler = () => {
+    dispatch(logout());    
+  }
+
   return (
     <>
       <Navbar className="navbar-top navbar-dark" expand="md" id="navbar-main">
@@ -82,24 +90,24 @@ const AdminNavbar = (props) => {
                 <DropdownItem className="noti-title" header tag="div">
                   <h6 className="text-overflow m-0">Welcome!</h6>
                 </DropdownItem>
-                <DropdownItem to="/admin/user-profile" tag={Link}>
+                <DropdownItem to="/user-profile" tag={Link}>
                   <i className="ni ni-single-02" />
                   <span>My profile</span>
                 </DropdownItem>
-                <DropdownItem to="/admin/user-profile" tag={Link}>
+                <DropdownItem to="/user-profile" tag={Link}>
                   <i className="ni ni-settings-gear-65" />
                   <span>Settings</span>
                 </DropdownItem>
-                <DropdownItem to="/admin/user-profile" tag={Link}>
+                <DropdownItem to="/user-profile" tag={Link}>
                   <i className="ni ni-calendar-grid-58" />
                   <span>Activity</span>
                 </DropdownItem>
-                <DropdownItem to="/admin/user-profile" tag={Link}>
+                <DropdownItem to="/user-profile" tag={Link}>
                   <i className="ni ni-support-16" />
                   <span>Support</span>
                 </DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                <DropdownItem href="#pablo" onClick={logoutHandler}>
                   <i className="ni ni-user-run" />
                   <span>Logout</span>
                 </DropdownItem>
