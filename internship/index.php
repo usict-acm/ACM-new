@@ -90,14 +90,16 @@
 
   <div class="alert alert-info new2 p-4" style="margin-top: 7%;">
     <span class="alert-body">
-      <div class="row" style="align-items: center;">
-        <i class="fa fa-info-circle" aria-hidden="true"></i>
-        <div class="col-lg-10 col-md-9 col-sm-8 col-7">
+      <div class="row">
+        <div class="col-md-1 d-flex justify-content-center align-items-center">
+          <i class="fa fa-info-circle" aria-hidden="true"></i>
+        </div>
+        <div class="col-md-8 my-2 text-center-md">
           <h6 class="alert-header md-text-custom">Registration</h6>
           <p class="mb-0 mx-auto">Register now for working on trending technologies under top notch mentors.</p>
-        </div class="col-md-1 col-sm-1 col-1">
-        <a style="text-decoration: none;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSccJURrpgR_SKgxatV0NlAnQOKHY-oVGRrmW1wSV-doopOXtg/viewform"><button style="height:5%;margin:10px auto;" class="sm-text-custom btn btn-outline-info">Register Now</button></a>
-        <div>
+        </div>
+        <div class="col-md-3 d-flex justify-content-center align-items-center">
+          <a class="sm-text-custom btn btn-outline-info" style="text-decoration: none;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSccJURrpgR_SKgxatV0NlAnQOKHY-oVGRrmW1wSV-doopOXtg/viewform">Register Now</a>
         </div>
       </div>
     </span>
@@ -309,6 +311,11 @@
     }
     .dkWypw>svg{
       display: none !important;
+    }
+    @media (max-width :760px){
+      .text-center-md{
+        text-align: center;
+      }
     }
     @media (min-width: 300px) and (max-width: 992px){
       .registration-img{
