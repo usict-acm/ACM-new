@@ -16,7 +16,7 @@
 
 */
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 // reactstrap components
 import {
@@ -35,14 +35,16 @@ import {
   Container,
   Media,
 } from "reactstrap";
+import { selectUser } from "redux/slices/userSlice";
 import { logout } from "redux/slices/userSlice";
 
 const AdminNavbar = (props) => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(),
+    user = useSelector(selectUser);
 
   const logoutHandler = () => {
-    dispatch(logout());    
-  }
+    dispatch(logout());
+  };
 
   return (
     <>
@@ -81,7 +83,7 @@ const AdminNavbar = (props) => {
                   </span>
                   <Media className="ml-2 d-none d-lg-block">
                     <span className="mb-0 text-sm font-weight-bold">
-                      Jessica Jones
+                      {user?.name}
                     </span>
                   </Media>
                 </Media>
