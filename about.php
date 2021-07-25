@@ -805,71 +805,7 @@
                <div id="milestones" class="section2 lazy-bg-loaded">
                     <div class="wrapper clearfix">
                          <h2 class="heading">Milestones</h2>
-                         <div class="item left">
-                              <div class="marker"></div>
-                              <div class="content">
-                                   <div class="time">2012</div>
-                                   <div>
-                                        <p>Website.com Site Builder Version 1.0 Launched</p>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="item right">
-                              <div class="marker"></div>
-                              <div class="content">
-                                   <div class="time">2013</div>
-                                   <div>
-                                        <p>Website.com Site Builder Version 2.0 Launched</p>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="item left">
-                              <div class="marker"></div>
-                              <div class="content">
-                                   <div class="time">2014</div>
-                                   <div>
-                                        <p>Userbase Grown to 160+ Countries</p>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="item right">
-                              <div class="marker"></div>
-                              <div class="content">
-                                   <div class="time">2015</div>
-                                   <div>
-                                        <p>Mobile Editor Launched</p>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="item left">
-                              <div class="marker"></div>
-                              <div class="content">
-                                   <div class="time">2016</div>
-                                   <div>
-                                        <p>Free Website.com Plan Launched</p>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="item right">
-                              <div class="marker"></div>
-                              <div class="content">
-                                   <div class="time">2017</div>
-                                   <div>
-                                        <p>Online Store Builder Released</p>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="item left">
-                              <div class="marker multiline"></div>
-                              <div class="content">
-                                   <div class="time">2018</div>
-                                   <div>
-                                        <p>1 Million Web Pages Created</p>
-                                        <p>Multilingual Features Released</p>
-                                        <p>Ecommerce Features Included in Free Plan</p>
-                                   </div>
-                              </div>
-                         </div>
+                     
                          <div class="item right">
                               <div class="marker multiline"></div>
                               <div class="content">
@@ -908,17 +844,21 @@
                          <div>
                               <h2 class="heading">Addressing Today's Need For An Online Presence</h2>
                               <p>
-                                   In a study conducted in 2017, 55% of people research online before making a
-                                   purchase, versus just 26% checking out the physical store (KPMG). This online
-                                   consumer behaviour is only estimated to grow. In an analysis from Nosto, global
-                                   ecommerce sales as of August 2020 have increased by an average of 7% versus
-                                   levels recorded in August 2019.
+                                   ACM (Association for Computing Machinery)
+                                   Student Chapter of USICT aims to provide
+                                   students, research scholars, faculty members
+                                   and the whole community, opportunities to
+                                   explore the world of computers.
+                                   Throughout the years we conducted lots
+                                   of events in order to achieve the motto of
+                                   ACM - "Advancing Computers as a Science
+                                   and Profession" and plethora of events are
+                                   on their way in Future.
                               </p>
+                              
                               <p>
-                                   The current economic climate has pushed users to see an urgent need for an
-                                   online presence. Having a website is especially vital to maintain relevance amid
-                                   current consumer behaviours and to continue operations while visits to physical
-                                   retail spaces are becoming less appealing.
+                                   As the Covid-19 pandemic drove our life online, We shifted our events to online mode.
+                                   We conducted 28+ online events in the pandemic.
                               </p>
                          </div>
                     </div>
