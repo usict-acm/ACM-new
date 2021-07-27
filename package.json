@@ -6,8 +6,5 @@
         "test": "cd ./user/dashboard/frontend && yarn test || npm test",
         "eject": "cd ./user/dashboard/frontend && yarn eject || npm eject"
     },
-    "dependencies": {
-        "@reduxjs/toolkit": "^1.6.1",
-        "react-redux": "^7.2.4"
-    }
+    "dependencies": {}
 }
