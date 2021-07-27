@@ -93,34 +93,80 @@
         <p>We organize various events and workshops every year to make sure that you learn with the competition. Let’s go through the highlights of this enthralling journey that promises to get better with time.</p>
       </div>
       
-      <div class="content live-event">
-        <!-- <span class="badge">
-          <span class="badge-wrap">
-            <span class="badge-icon"><svg height="14" viewBox="0 0 14 14" width="14" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M7 2.333c2.577 0 4.667 2.09 4.667 4.667S9.577 11.667 7 11.667 2.333 9.577 2.333 7 4.423 2.333 7 2.333zm0 1.05c-1.997 0-3.617 1.62-3.617 3.617 0 1.997 1.62 3.617 3.617 3.617 1.997 0 3.617-1.62 3.617-3.617 0-1.997-1.62-3.617-3.617-3.617z">
-                </path>
-              </svg><span class="badge-icon-inner"><svg aria-hidden="true" focusable="false" viewbox="0 0 14 14">
-                  <path
-                    d="M7 9.567c1.418 0 2.567-1.15 2.567-2.567 0-1.418-1.15-2.567-2.567-2.567-1.418 0-2.567 1.15-2.567 2.567 0 1.418 1.15 2.567 2.567 2.567z">
-                  </path>
-                </svg></span></span><span class="badge-text">LIVE</span>
-          </span>
-        </span> -->
-        <div id="demo" class="carousel slide carousel-fade" data-ride="carousel" data-interval=5000>
-        <!-- The slideshow -->
-        <div class="carousel-inner" style="height: 100%;">
-          <div class="carousel-item active">
-            <img src="../assets/images/ReactNative.png"  class="live-carousel-img">
-          </div>
-          <!-- <div class="carousel-item">
-            <img src="/assets/images/algorithm-sessions.jpg" class="live-carousel-img">
-          </div> -->
-        </div>
-      </div>
-      </div>
-    </div>
+                      <div class="content live-event">
+                        <!-- <span class="badge">
+                          <span class="badge-wrap">
+                            <span class="badge-icon"><svg height="14" viewBox="0 0 14 14" width="14" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M7 2.333c2.577 0 4.667 2.09 4.667 4.667S9.577 11.667 7 11.667 2.333 9.577 2.333 7 4.423 2.333 7 2.333zm0 1.05c-1.997 0-3.617 1.62-3.617 3.617 0 1.997 1.62 3.617 3.617 3.617 1.997 0 3.617-1.62 3.617-3.617 0-1.997-1.62-3.617-3.617-3.617z">
+                                </path>
+                              </svg><span class="badge-icon-inner"><svg aria-hidden="true" focusable="false" viewbox="0 0 14 14">
+                                  <path
+                                    d="M7 9.567c1.418 0 2.567-1.15 2.567-2.567 0-1.418-1.15-2.567-2.567-2.567-1.418 0-2.567 1.15-2.567 2.567 0 1.418 1.15 2.567 2.567 2.567z">
+                                  </path>
+                                </svg></span></span><span class="badge-text">LIVE</span>
+                          </span>
+                        </span> -->
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval=1000>
+                            <!-- The slideshow -->
+                            <div class="carousel-inner" id="carousel" style="height: 100%;">
+                            <!-- <!-- <div class="carousel-item active">
+                                <img src="../assets/images/ReactNative.png"  class="live-carousel-img">
+                              </div> -->
+                            <!-- <div class="carousel-item active">
+                                <img src="../assets/images/acm1.png"  class="live-carousel-img">
+                              </div> -->
+                              <!-- <div class="carousel-item">
+                                <img src="/assets/images/algorithm-sessions.jpg" class="live-carousel-img">
+                              </div> -->
+                            </div>
+                        </div>
+                      </div>
 
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    let urlcarousel = '../admin/blogAdmin/api.php/?q=carousel';
+    let carouselDIV=document.getElementById("carousel");
+
+    $(document).ready(function() {
+              // console.log("1");
+              // console.log(yearWiseEvent);
+      $.ajax({
+        // datatype : "application/json",
+        url: urlcarousel,
+        method: 'GET',
+        dataType: 'JSON',
+            success: function(data) {
+              console.log("2");
+
+                console.log("check data ",data);
+                carouselDIV.innerHTML +=" <div class='carousel-item active'>\
+                                                    <img src="+data[0].poster+"  class='live-carousel-img'>\
+                                                  </div>";    
+                // data.forEach(carouselfunction);
+                console.log(data[0].poster);
+                console.log(carouselDIV);
+                function carouselfunction() {
+
+                        for (i=1;i<data.length;i++){
+                          carouselDIV.innerHTML +=" <div class='carousel-item'>\
+                                                      <img src="+data[i].poster+"  class='live-carousel-img'>\
+                                                    </div>";                             
+                        }
+                    }
+                    carouselfunction();
+                console.log(carouselDIV);
+
+                    // console.log(yearWiseEvent);
+
+            },
+            // error:function(error){console.log(error);},
+          });
+          // console.log("88");
+    });
+</script> 
 
     
     <div class="events">
@@ -142,7 +188,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   
 <script>
-    let urlEventIndex = '../admin/blogAdmin/api.php/?q=all';
+    let urlEventIndex = '../admin/blogAdmin/api.php/?q=getYearEvent';
     let yearWiseEvent=document.getElementById("eventIndex");
 
     $(document).ready(function() {

@@ -5,6 +5,7 @@ class PostEvent {
     private $table1 = 'eventPage';
     private $table2 = 'event';
 
+
     // Post Properties
     public $sno;
     public $name;
@@ -42,15 +43,35 @@ class PostEvent {
     // var_dump($stmt);     
     // return json_encode("function working");
     return $stmt;
-    }
-    public function readYearEvent($year) {
+  }
+  public function numEvents() {
+   // Create query
+   $query = 'SELECT COUNT(poster) AS numberOfEvents FROM ' . $this->table2 .' b ';
+   $stmt = $this->conn->query($query);
+  //  echo "statement"; 
+   
+   return $stmt;
+  }
+  public function readYearEvent($year) {
       // Create query
       $query = 'SELECT b.sno, b.name, b.description, b.regLink, b.startTime, b.endTime, b.watchLink, b.partners,b.speakers,b.poster , b.year FROM ' . $this->table2 .' b WHERE b.year='.$year;
                                   
       $stmt = $this->conn->query($query);
       // echo "statement".$stmt;  
       
+      
       return $stmt;
       }
+      public function carouselquerry() {
+        // Create query
+        $query = 'SELECT b.poster FROM ' . $this->table2 .' b WHERE EXTRACT(MONTH FROM CURRENT_TIMESTAMP)=EXTRACT(MONTH FROM b.endTime)';
+        // $query = 'SELECT b.poster FROM ' . $this->table2 .' b ';
+
+                                    
+        $stmt = $this->conn->query($query);
+        // echo "statement".$stmt;  
+        
+        return $stmt;
+        }
 }
 ?>

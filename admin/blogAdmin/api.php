@@ -8,7 +8,6 @@
  
 
     $method = $_SERVER['REQUEST_METHOD'];
-
     function read(){
          // Instantiate DB & connect
         $database = new Database();
@@ -337,7 +336,8 @@ function readEvents(){
     $year = $_GET['year'];
    // Blog post query
    $result = $post->readYearEvent($year);
-
+   $numRows = mysqli_num_rows($result);
+    echo $numRows;
    // Check if any posts
    if($result) {
 
@@ -357,6 +357,50 @@ function readEvents(){
            'speakers' => $row["speakers"],
            'poster' => $row["poster"],
            'year' => $row["year"],
+       );
+           // Push to "data"
+           array_push($posts_arr, $post_item);
+   }
+
+   // Turn to JSON & output
+   echo json_encode($posts_arr);
+
+   } else {
+   // No Posts
+   echo json_encode(
+       array('message' => 'No Posts Found')
+   );
+   }
+};
+function carouselFunctionAPI(){
+    include_once '../../events/eventPost.php';
+    // echo "1";
+    // Instantiate DB & connect
+    $database = new Database();
+    // echo "2";
+    $db = $database->connect();
+    // echo "3";
+    // echo $db;
+    // Instantiate blog post object
+    $post = new PostEvent($db);
+    // echo "4";
+    
+    //    echo $year;
+    // echo "helllo";
+    // $year = $_GET['year'];
+    // Blog post query
+    $result = $post->carouselquerry();
+    // echo "5";
+
+   // Check if any posts
+   if($result) {
+
+   // Post array
+   $posts_arr = array();
+
+   while($row=$result->fetch_assoc()){
+       $post_item = array(
+           'poster' => $row["poster"],
        );
            // Push to "data"
            array_push($posts_arr, $post_item);
@@ -393,11 +437,14 @@ function readEvents(){
         case 'postblog':
             postblog();
             break;
-        case 'all':
+        case 'getYearEvent':
             yearWiseEvent1();
             break;
         case 'readAllEvent':
             readEvents();
+            break;
+        case 'carousel':
+            carouselFunctionAPI();
             break;
         default:
             echo "Invalid Query";

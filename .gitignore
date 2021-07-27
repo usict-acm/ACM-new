@@ -4,3 +4,5 @@ cpanel.yml
 upload/*
 enviornment.php
 .DS_Store
+admin/.DS_Store
+assets/.DS_Store
