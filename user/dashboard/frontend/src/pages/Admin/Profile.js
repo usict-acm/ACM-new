@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     CardImg,
     Button,
@@ -13,12 +13,14 @@ import {
     Col, } from 'reactstrap';
     import UserHeader from "components/Headers/UserHeader.js";
 
-
 const Profile = (props) => {
+
+    const[disabled, setDisabled] = useState(true);
+
     return(
         
         <Container className="mt-0" fluid="xxl" >
-            <UserHeader />
+            <UserHeader  />
             {/* Page content */}
             
         <Container className="mt--9" fluid>
@@ -51,7 +53,8 @@ const Profile = (props) => {
                                          <Input                                           
                                           type="email"
                                           placeholder={props}
-                                          readOnly />
+                                          disabled={disabled}
+                                           />
                                        </FormGroup>
                                     </Col>
                                     <Col lg="6">
@@ -60,7 +63,8 @@ const Profile = (props) => {
                                          <Input
                                           type="text"
                                           placeholder={props}
-                                          readOnly />
+                                          disabled={disabled}
+                                           />
                                        </FormGroup>
                                     </Col>
                                     <Col lg="6">
@@ -69,7 +73,8 @@ const Profile = (props) => {
                                          <Input
                                           type="text"
                                           placeholder={props}
-                                          readOnly />
+                                          disabled={disabled}
+                                           />
                                        </FormGroup>
                                     </Col>
                                     <Col lg="6">
@@ -78,7 +83,8 @@ const Profile = (props) => {
                                          <Input
                                           type="text"
                                           placeholder={props}
-                                          readOnly />
+                                          disabled={disabled}
+                                           />
                                        </FormGroup>
                                     </Col>
                                     <Col lg="6">
@@ -87,12 +93,13 @@ const Profile = (props) => {
                                          <Input
                                           type="text"
                                           placeholder={props}
-                                          readOnly />
+                                          disabled={disabled}
+                                           />
                                        </FormGroup>
                                     </Col>
 
                                     <Col className="text-right" >
-                                     <Button type="button" value="Input" color="info" >Edit Profile</Button>
+                                     <Button type="button" value="Input" color="info" onClick={( )=> setDisabled(!disabled)}>Edit Profile</Button>
                                     </Col>
 
                                     </Row>
