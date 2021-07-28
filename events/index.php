@@ -108,6 +108,12 @@
                           </span>
                         </span> -->
                         <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval=1000>
+                        <!-- button dots hai ye <ol></ol> so jitti images hongi,utti dots , but inhe bhi fr dynamic krna padega kyunki hume ni pta particular month me kitte events honge, abhi 3 dots hi aaengi because 3 li tags hai  -->
+                        <!-- <ol class="carousel-indicators">
+                              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol> -->
                             <!-- The slideshow -->
                             <div class="carousel-inner" id="carousel" style="height: 100%;">
                             <!-- <!-- <div class="carousel-item active">
@@ -120,6 +126,14 @@
                                 <img src="/assets/images/algorithm-sessions.jpg" class="live-carousel-img">
                               </div> -->
                             </div>
+                              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                              </a>
+                              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                              </a>
                         </div>
                       </div>
 
