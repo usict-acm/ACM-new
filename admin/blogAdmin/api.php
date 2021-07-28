@@ -323,12 +323,15 @@ function postblog()
                 'name' => $row["name"],
                 'description' => $row["description"],
                 'regLink' => $row["regLink"],
-                'startTime' => $row["startTime"],
-                'endTime' => $row["endTime"],
-                'watchLink' => $row["watchLink"],
+                'startDate' => $row["startDate"],
+                'endDate' => $row["endDate"],
+                'viewResource' => $row["viewResource"],
                 'partners' => $row["partners"],
                 'speakers' => $row["speakers"],
                 'poster' => $row["poster"],
+                'year' => $row["year"],
+                'time' => $row["time"],
+
             );
             array_push($announcements_arr, $announcement_item);
         } 
@@ -341,10 +344,14 @@ function postblog()
         $txtTitle = $_POST['name'];
         $txtDescription = $_POST['description'];
         $txtReglink = $_POST['regLink'];
-        $txtWatchlink = $_POST['watchLink'];
+        $txtStartdate=$_POST['startDate'];
+        $txtEnddate=$_POST['endDate'];
+        $txtviewResource = $_POST['viewResource'];
         $txtPartners = $_POST['partners'];
         $txtSpeakers = $_POST['speakers'];
         $file = $_FILES['poster'];
+        $txtYear = $_POST['year'];
+        $txtTime = $_POST['time'];
     
         print_r($file);
     
@@ -362,18 +369,19 @@ function postblog()
             $uploadLocation = '../../upload/announcements/'.$filename;
             move_uploaded_file($filetemppath,$uploadLocation);
     
-            $sql = "INSERT INTO `event` (`sno`, `name`, `description`, `regLink`, `startTime`, `endTime` , `watchLink` , `partners` , `speakers` , `poster`) VALUES ('0', '$txtTitle', '$txtDescription', '$txtReglink' ,current_timestamp(),current_timestamp(),'$txtWatchlink','$txtPartners','$txtSpeakers', '$destinationfile');";
+            $sql = "INSERT INTO `event` (`sno`, `name`, `description`, `regLink`, `startDate`, `endDate` , `viewResource` , `partners` , `speakers` , `poster` , `year` , `time`) VALUES ('0', '$txtTitle', '$txtDescription', '$txtReglink' ,'$txtStartdate','$txtEnddate','$txtviewResource','$txtPartners','$txtSpeakers', '$destinationfile', '$txtYear', '$txtTime');";
             if($db->query($sql) == true){
-            echo json_encode(http_response_code(200));
-        }
+            echo json_encode("Form has been submitted");        }
         else{
-            echo json_encode("ERROR: $sql <br> $db->error");
-        }
-    
-        }
-    
-        else{
+            // echo json_encode("ERROR: $sql <br> $db->error");
             echo json_encode(http_response_code(400));
+        }
+    
+        }
+    
+        else{
+            // echo json_encode(http_response_code(400));
+            echo json_encode("Fill all the fields");
         }
     // }
    };

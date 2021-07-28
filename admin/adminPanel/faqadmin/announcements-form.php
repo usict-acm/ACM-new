@@ -1,135 +1,151 @@
 
+<?php
+// header('location: ../../blogAdmin/blogAdmin.html')
+?>
+
+<?php
+// Include config file
+require_once "./config.php";
+?>
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Announcements Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" answer="width=device-width, initial-scale=1.0">
+    <title>Create Record</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <style>
+        .wrapper {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .hh_button {
+            display: inline-block;
+            text-decoration: none;
+            background: linear-gradient(to right, #ff8a00, #da1b60);
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            font-size: 1rem;
+            border-radius: 3px;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            position: relative;
+            margin-top: 30px;
+            margin: 0px;
+            position: absolute;
+            right: 20px;
+            top: 1.5%;
+        }
+
+        header {
+            color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        header a,
+        header a:hover {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
 </head>
 
-<style>
-    .announcementH1class {
-    font-family: Calibri;
-    font-size: 40px;
-    font-weight: 100;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    width: 38%;
-  }
 
-  .announcementHR {
-    width: 38%;
-  }
-
-  .announcementH3class {
-    font-family: Calibri;
-    font-size: 30px;
-    font-weight: 100;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    width: 38%;
-  }
-
-  .formClass {
-    margin: auto;
-    text-align: center;
-    width: 60%;
-  }
-
-  ::placeholder {
-    color: gray
-  }
-
-  .announcementInput {
-    border: 2px solid lightgray;
-    border-radius: 5px;
-    font-family: Roboto;
-    font-size: 19px;
-    height: 20px;
-    margin: 10px;
-    padding: 15px;
-    width: 60%;
-  }
-
-  .announcementTextarea {
-    border: 2px solid lightgray;
-    border-radius: 5px;
-    font-family: Roboto;
-    font-size: 19px;
-    height: 100px;
-    margin: 10px;
-    padding: 15px;
-    width: 60%;
-  }
-
-  .announcementPosterlabel {
-    color: gray;
-    font-family: Roboto;
-    font-size: 19px;
-    margin: 10px;
-}
-</style>
 
 <body>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <script>
+    <script>
     function submit_announcements(){
     var formData = new FormData();
     formData.append('name',  $("#name").val());
     formData.append('description', $("#description").val());
     formData.append('regLink', $("#regLink").val());
-    formData.append('startTime', $("#startTime").val());
-    formData.append('endTime', $("#endTime").val());
-    formData.append('watchLink', $("#watchLink").val());
+    formData.append('startDate', $("#startDate").val());
+    formData.append('endDate', $("#endDate").val());
+    formData.append('viewResource', $("#viewResource").val());
     formData.append('partners', $("#partners").val());
     formData.append('speakers', $("#speakers").val());
     formData.append('poster', $("#poster").prop("files")[0]);
+    formData.append('year', $("#year").val());
+    formData.append('time', $('#time').val());
+
     $.ajax({
-      type: "POST",
-      url: "../../blogAdmin/api.php/?q=postAnnouncement",
-      data : formData,
-      cache: false,
-      processData: false,
-      contentType: false,
-      success: function(data){
-       alert(data);
-      },
-      error: function(xhr, status, error){
-       console.error(xhr);
-      },
+        type: "POST",
+        url: "../../blogAdmin/api.php/?q=postAnnouncement",
+        data : formData,
+        cache: false,
+        processData: false,
+        contentType: false,
+        success: function(data){
+        alert(data);
+        window.location.reload();
+        },
+        error: function(xhr, status, error){
+            console.error(xhr);
+            alert("Fill all the Details");
+        },
     });
-  }
+    }
 
-  </script>
+    </script>
 
-  <h1 class="announcementH1class">
-    Create Announcements
-  </h1>
-  <hr class="announcementHR">
-  <h3 class="announcementH3class">
-    Please fill in the form to add announcement
-  </h3>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <h2>Create Announcements</h2>
+                    </div>
+                    <p>Please fill in the form to add announcement.</p>
+                    <form method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <input type="text" name="txtTitle" id="name" class='form-control' placeholder="Enter the title of the announcement" />
+                        </div>
+                        <div class="form-group">
+                            <textarea name="txtDescription" id="description" rows="10" class='form-control mceEditor' placeholder="Description of the announcement"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="txtReglink" id="regLink" class='form-control' placeholder="RegLink" />
+                        </div>
+                        <div class="form-group">
+                            <input type="date" name="txtStartdate" id="startDate" class='form-control' placeholder="Date for commencement of the event" />
+                        </div>
+                        <div class="form-group">
+                            <input type="date" name="txtEnddate" id="endDate" class='form-control' placeholder="Date for end of the event" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="txtviewResource" id="viewResource" class='form-control' placeholder="View resources" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="txtPartners" id="partners" class='form-control' placeholder="Partners" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="txtSpeakers" id="speakers" class='form-control' placeholder="Speakers of the event" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="txtYear" id="year" class='form-control' placeholder="Year" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="txtTime" id="time" class='form-control' placeholder="Time" />
+                        </div>
+                        <div class="form-group">
+                            <label>Upload the Poster</label>
+                        </div>
+                        <input class="form-group" type="file" name="file" id="poster" />
 
-  <form class="formClass" method="post" enctype="multipart/form-data">
-
-    <input class="announcementInput" type="text" placeholder="Enter the title of the announcement" name="txtTitle" id="name" value=""><br>
-    <textarea class="announcementTextarea" placeholder="Description of the announcement" name="txtDescription" id="description" rows="8" cols="80"></textarea><br>
-    <input class="announcementInput" type="text" placeholder="RegLink" name="txtReglink" id="regLink" value=""><br>
-    <input class="announcementInput" type="datetime" placeholder="Date and time for commencement of the event" name="" id="startTime" value=""><br>
-    <input class="announcementInput" type="datetime" placeholder="Date and time for end of the event" name="" id="endTime" value=""><br>
-    <input class="announcementInput" type="text" placeholder="Watch Link" name="txtWatchlink" id="watchLink" value=""><br>
-    <input class="announcementInput" type="text" placeholder="Partners" name="txtPartners" id="partners" value=""><br>
-    <input class="announcementInput" type="text" placeholder="Speakers of the event" name="speakers" id="txtSpeakers" value=""><br>
-    <label class="announcementPosterlabel">Upload the poster</label><br>
-    <input class="announcementInput" type="file" placeholder="Upload the poster" name="file" id="poster" value=""><br>
-    <input type="button" name="submit" value="submit" onclick="submit_announcements()">
-
-  </form>
-
+                        <input type="button" name="submit" value="submit" onclick="submit_announcements()">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

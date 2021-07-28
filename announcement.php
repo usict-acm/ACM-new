@@ -3,7 +3,7 @@
   $database = new Database();
   $db = $database->connect();
   $table = "event";
-  $query = 'SELECT * FROM event ORDER BY startTime DESC';
+  $query = 'SELECT * FROM event ORDER BY startDate DESC';
   if($result = mysqli_query($db, $query)){
     if(mysqli_num_rows($result) > 0){
         echo "<section class='announcement'>";
@@ -22,16 +22,17 @@
                     echo "<div class='col-md-7 divide'>";
                         echo "<div class='detai'>";
                             echo "<p>" . $row["description"] . " ";
-                            echo "<br>" . $row["startTime"] . "-" . $row["endTime"] ." ";
+                            echo "<br>" . $row["startDate"] . "  to  " . $row["endDate"] ." ";
+                            echo "<br>" . $row["time"] . " ";
                             echo "<div style='display: flex;justify-content: space-evenly;'>";
                             echo "<a target='_blank' href=" . $row["regLink"] . ">";
                                 echo "<button class='btn announce-button-one' style='background-color:#2250fc'>";
                                 echo "<span style='color:#fff; font-size:0.9rem'>REGISTER NOW</span>";
                                 echo "</button>";
                             echo "</a>";
-                            echo "<a target='_blank' href=" . $row["watchLink"] . ">";
+                            echo "<a target='_blank' href=" . $row["viewResource"] . ">";
                                 echo "<button class='btn' style='background-color:#2250fc'>";
-                                echo "<span style='color:#fff; font-size:0.9rem'>VIEW PLAYLIST</span>";
+                                echo "<span style='color:#fff; font-size:0.9rem'>VIEW RESOURCES</span>";
                                 echo "</button>";
                             echo "</a>";
                         echo "</div>";

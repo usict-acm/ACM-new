@@ -585,7 +585,7 @@
                         </button>\
                       </a>\
                       <a target=_blank href=https://youtube.com/playlist?list=PLgPSSnf8lP5CubPwhgIk9n4FUhFN5nc3L><button class=btn style=background-color:#2250fc>\
-                          <span style=color:#fff; font-size:0.9rem>VIEW PLAYLIST</span>\
+                          <span style=color:#fff; font-size:0.9rem>VIEW RESOURCES</span>\
                         </button>\
                       </a>\
                     </div>\
