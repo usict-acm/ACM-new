@@ -2,7 +2,7 @@
 class PostEvent {
     // DB stuff
     private $conn;
-    private $table1 = 'eventPage';
+    private $table1 = 'eventpage';
     private $table2 = 'event';
 
 
@@ -44,27 +44,30 @@ class PostEvent {
     // return json_encode("function working");
     return $stmt;
   }
+  public function countEventsPerYear($year){
+    $query = 'SELECT COUNT(*) FROM ' . $this->table2 .' b WHERE year=' . $year . '';
+    $stmt = $this->conn->query($query);
+    return $stmt->fetch_assoc();
+  }
+
   public function numEvents() {
    // Create query
    $query = 'SELECT COUNT(poster) AS numberOfEvents FROM ' . $this->table2 .' b ';
    $stmt = $this->conn->query($query);
   //  echo "statement"; 
-   
    return $stmt;
   }
-  public function readYearEvent($year) {
+  public function readYearEvent($year,$start,$limit) {
       // Create query
-      $query = 'SELECT b.sno, b.name, b.description, b.regLink, b.startTime, b.endTime, b.watchLink, b.partners,b.speakers,b.poster , b.year FROM ' . $this->table2 .' b WHERE b.year='.$year;
-                                  
-      $stmt = $this->conn->query($query);
+      $query = 'SELECT b.* FROM ' . $this->table2 .' b WHERE b.year=' . $year . ' LIMIT ' . $start . ',' . $limit . '';                                 
+      // echo $query;
+      $stmt = $this->conn->query($query); 
       // echo "statement".$stmt;  
-      
-      
       return $stmt;
       }
       public function carouselquerry() {
         // Create query
-        $query = 'SELECT b.poster FROM ' . $this->table2 .' b WHERE EXTRACT(MONTH FROM CURRENT_TIMESTAMP)=EXTRACT(MONTH FROM b.endTime)';
+        $query = 'SELECT b.poster FROM ' . $this->table2 .' b WHERE EXTRACT(MONTH FROM CURRENT_TIMESTAMP)=EXTRACT(MONTH FROM b.endDate)';
         // $query = 'SELECT b.poster FROM ' . $this->table2 .' b ';
 
                                     
