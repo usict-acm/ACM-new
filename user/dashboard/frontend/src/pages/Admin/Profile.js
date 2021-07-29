@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useState } from "react";
 import {
   CardImg,
   Button,
@@ -17,6 +17,9 @@ import { useSelector } from "react-redux";
 import { selectUser } from "redux/slices/userSlice";
 
 const Profile = (props) => {
+  const[disabled,setDisabled] = useState(true);
+  const[cursor, setCursor] = useState({cursor : ""});
+//   const[readOnly,setReadonly] = useState(true);
   const user = useSelector(selectUser);
   console.log(user);
   return (
@@ -29,22 +32,39 @@ const Profile = (props) => {
           <Col className="order-xl-1">
             <Card className="bg-secondary shadow">
               <CardHeader className="bg-white border-0">
-                <h3 className="my-0 text-center">My Account</h3>
+               <Row className="align-items-center">
+                <Col xs="8">
+                 <h3>My Account</h3>
+                </Col>
+                <Col className="text-right">
+                 <Button disabled={!disabled} onClick={()=>{
+                     setDisabled(false);
+                    setCursor({cursor : "no-drop"});
+                 }}
+                  type="button" value="Input" color="info" style={cursor}>
+                  Edit Profile
+                 </Button>
+                </Col>
+               </Row> 
               </CardHeader>
-
               <CardBody>
                 <CardImg
                   top
-                  style={{ width: "25%" }}
+                  style={{ width: "20%" }}
                   src={
                     require("../../assets/img/theme/team-4-800x800.jpg").default
                   }
                   alt="Card image cap"
                   className="rounded-circle d-block m-auto md-8 "
                 />
-
-                <h2 className="text-center my-3">{user?.name}</h2>
-
+                <div className="my-3">
+                 {disabled ?
+                  <h2 className="text-center my-3">{user?.name}</h2> 
+                  : <Input className="text-center m-auto d-block" type="name"
+                     placeholder={user?.name} readOnly={disabled} style={{ width: "25%" }}                           
+                />
+                  }
+                </div>
                 <Form>
                   <h6 className="heading-small text-muted mb-4">
                     User information
@@ -56,8 +76,9 @@ const Profile = (props) => {
                           <label className="form-control-label">Email</label>
                           <Input
                             type="email"
-                            placeholder={user?.email}
-                            readOnly
+                            placeholder={user?.email} 
+                            readOnly    
+                            style={cursor}                       
                           />
                         </FormGroup>
                       </Col>
@@ -68,6 +89,7 @@ const Profile = (props) => {
                             type="text"
                             placeholder={user?.course}
                             readOnly
+                            style={cursor}
                           />
                         </FormGroup>
                       </Col>
@@ -78,6 +100,7 @@ const Profile = (props) => {
                             type="text"
                             placeholder={user?.branch}
                             readOnly
+                            style={cursor}
                           />
                         </FormGroup>
                       </Col>
@@ -90,6 +113,7 @@ const Profile = (props) => {
                             type="text"
                             placeholder={user?.rollNo}
                             readOnly
+                            style={cursor}
                           />
                         </FormGroup>
                       </Col>
@@ -101,15 +125,24 @@ const Profile = (props) => {
                           <Input
                             type="text"
                             placeholder={user?.acmMemberId}
-                            readOnly
+                            readOnly = {disabled}
                           />
                         </FormGroup>
                       </Col>
-
                       <Col className="text-right">
-                        <Button type="button" value="Input" color="info">
-                          Edit Profile
-                        </Button>
+                      <div>
+                       {disabled ? null : <Button onClick={()=>{
+                           setDisabled(true);
+                           setCursor({cursor : ""});
+                           }}
+                        type="button" value="Input" color="success" >
+                        Save changes
+                       </Button>}
+                       {disabled ? null : <Button onClick={()=>setDisabled(true)}
+                        type="button" value="Input" color="primary" >
+                        Cancel
+                       </Button>}
+                      </div>
                       </Col>
                     </Row>
                   </div>
