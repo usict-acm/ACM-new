@@ -4,7 +4,7 @@
     <?php
       include('head.php');
     ?>
-    <title>ACM USICT</title>
+    <title>USICT ACM</title>
     <link href="./assets/CSS/blogs.css" rel="stylesheet" />
     <link href="./assets/CSS/glider.css" rel="stylesheet"/>
     <link href="./assets/CSS/header.css" rel="stylesheet" />
@@ -188,7 +188,7 @@
 
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="./assets/JS/benefits.js"></script>
+    <!-- <script src="./assets/JS/benefits.js"></script> -->
 
     <script>
       function redirec(id) {

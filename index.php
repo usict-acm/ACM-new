@@ -5,7 +5,7 @@
     <?php
       include("head.php")
     ?>
-    <title>ACM USICT</title>
+    <title>USICT ACM</title>
     <link href='./assets/CSS/styles.css' rel="stylesheet" />
     <link href='./assets/CSS/glider.css' rel="stylesheet" />
     <link href='./assets/CSS/footer.css' rel="stylesheet" />

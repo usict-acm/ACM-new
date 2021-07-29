@@ -4,7 +4,7 @@
     <?php
       include('head.php');
     ?>
-    <title>ACM USICT</title>
+    <title>USICT ACM</title>
     <link href='./assets/CSS/benefits.css' rel="stylesheet" />
     <link href="./assets/CSS/glider.css" rel="stylesheet" />
     <link href="./assets/CSS/header.css" rel="stylesheet" />
@@ -206,9 +206,8 @@
 
 
             </div>
-            <button aria-label="Previous" class="glider-prev alumni-prev1">
-              < </button>
-                <button aria-label="Next" class="glider-next alumni-next1">></button>
+            <button aria-label="Previous" class="glider-prev alumni-prev1"><i class="fas fa-angle-left"></i></button>
+                <button aria-label="Next" class="glider-next alumni-next1"><i class="fas fa-angle-right"></i></button>
                 <div role="tablist" class="dots1"></div>
           </div>
         </div>
@@ -334,7 +333,84 @@
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
-    <script src="./assets/JS/benefits.js"></script>
+    <!-- <script src="./assets/JS/benefits.js"></script> -->
+    <script>
+      // For winners sections
+      window.addEventListener('load', function(){
+        new Glider(document.querySelector('.glider1'), {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          duration: 1.5,
+          rewind: true,
+          draggable: true,
+          dots: '.dots1',
+          arrows: {
+            prev: '.alumni-prev1',
+            next: '.alumni-next1'
+          },
+          responsive: [
+          {
+
+            breakpoint: 990,
+            settings: {
+
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              duration: 1.5
+            }
+          },
+          {
+            breakpoint: 700,
+            settings: {
+
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              duration: 1.5
+          }
+        },
+        ]
+
+        })
+      });
+
+        // For alumni section 
+      window.addEventListener('load', function(){
+        new Glider(document.querySelector('.glider'), {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          duration: 1.5,
+          rewind: true,
+          draggable: true,
+          dots: '.dots',
+          arrows: {
+            prev: '.glider-prev',
+            next: '.glider-next'
+          },
+          responsive: [
+          {
+
+            breakpoint: 990,
+            settings: {
+
+              slidesToShow: 4,
+              slidesToScroll: 1,
+              duration: 1.5
+            }
+          },
+          {
+            breakpoint: 700,
+            settings: {
+
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              duration: 1.5
+          }
+        },
+        ]
+
+        })
+      });
+    </script>
   </body>
 
 </html>

@@ -7,8 +7,8 @@
 .navbar-toggler {
   border: 1px solid #fff;
   color: #fff;
-  position: absolute;
-  right: 21px;
+  /* position: absolute; */
+  margin-right: 21px;
 }
 
 .sps {

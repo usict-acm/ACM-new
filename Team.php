@@ -4,7 +4,7 @@
     <?php
       include("head.php")
     ?>
-    <title>Our Team</title>
+    <title>USICT ACM</title>
     <link href="assets/CSS/team.css" rel="stylesheet" />
     <link href="assets/CSS/glider.css" rel="stylesheet" />
     <link href="assets/CSS/header.css" rel="stylesheet" />
@@ -864,7 +864,7 @@
       include('footer.php');
     ?>
   
-    <script src="assets/JS/glider.js"></script>
+    <!-- <script src="assets/JS/glider.js"></script> -->
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </body>
