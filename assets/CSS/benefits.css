@@ -21,7 +21,12 @@ a {
   text-decoration: none;
   color: black;
 }
-
+.section-heading {
+  color: #4169e1;
+  font-weight: bold;
+  font-size: 2.7rem;
+  display: inline-block;
+}
 .parallax-section {
   background-attachment: fixed !important;
 }
