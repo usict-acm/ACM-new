@@ -89,7 +89,7 @@ require_once "./config.php";
         },
         error: function(xhr, status, error){
             console.error(xhr);
-            alert("Fill all the Details");
+            alert("Fill in all the Details");
         },
     });
     }
