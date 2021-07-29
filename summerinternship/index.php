@@ -92,7 +92,7 @@
               <p class="mb-0 mx-auto">Register now for working on trending technologies under top notch mentors.</p>
             </div>
             <div class="col-md-3 d-flex justify-content-center align-items-center">
-              <a class="sm-text-custom btn btn-outline-info" style="text-decoration: none;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSccJURrpgR_SKgxatV0NlAnQOKHY-oVGRrmW1wSV-doopOXtg/viewform">Register Now</a>
+              <a class="sm-text-custom btn btn-outline-info" style="text-decoration: none;" target="_blank" href="https://forms.gle/EHaHB2iWzi8XFXgq9">Register Now</a>
             </div>
           </div>
         </span>
