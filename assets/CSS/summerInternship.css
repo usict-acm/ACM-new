@@ -128,7 +128,7 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: 0 0 3.5px #0297ff;
-  margin-bottom: -13%;
+  /* margin-bottom: -13%; */
   background-image: url("./../images/Internship-banner.png");
 }
 
@@ -148,7 +148,7 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     box-shadow: 0 0 3.5px #0297ff;
-    margin-bottom: -13%;
+    /* margin-bottom: -13%; */
     background-image: url("./../images/Internship-banner.png");
   }
   .uheading {
@@ -200,11 +200,11 @@ a {
   border-left: 4px solid #5bc0de;
   border-radius: 0;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-  margin-top: 7%;
+  /* margin-top: 7%; */
   margin-bottom: -6%;
   border-radius: 0 15px 15px 0;
-  margin-left: 9%;
-  margin-right: 9%;
+  /* margin-left: 9%;
+  margin-right: 9%; */
 }
 
 .alert-info.new2.p-4 {

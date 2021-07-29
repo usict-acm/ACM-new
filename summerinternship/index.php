@@ -72,7 +72,7 @@
 
   <div style="margin-left:10%; margin-right:10%; margin-top:3%; margin-bottom: 0%;">
     <section id='header'>
-      <div class="pt-card row">
+      <div class="pt-card">
         <div class="heading col-xl-9 col-lg-9 col-md-9 col-sm-6">
           <h3 style="color:transparent"><span class="uheading">Why Join</span><br>
             <span class="lheading">USICT ACM Chapter?</span></h3>
@@ -80,24 +80,25 @@
       </div>
     </section>
   </div>
-
-  <div class="alert alert-info new2 p-4" style="margin-top: 7%;">
-    <span class="alert-body">
-      <div class="row">
-        <div class="col-md-1 d-flex justify-content-center align-items-center">
-          <i class="fa fa-info-circle" aria-hidden="true"></i>
-        </div>
-        <div class="col-md-8 my-2 text-center-md">
-          <h6 class="alert-header md-text-custom">Registration</h6>
-          <p class="mb-0 mx-auto">Register now for working on trending technologies under top notch mentors.</p>
-        </div>
-        <div class="col-md-3 d-flex justify-content-center align-items-center">
-          <a class="sm-text-custom btn btn-outline-info" style="text-decoration: none;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSccJURrpgR_SKgxatV0NlAnQOKHY-oVGRrmW1wSV-doopOXtg/viewform">Register Now</a>
-        </div>
+  <div style="margin-left:10%; margin-right:10%; margin-bottom: 0%;">
+    <div class="alert alert-info new2 p-4">
+        <span class="alert-body">
+          <div class="row">
+            <div class="col-md-1 d-flex justify-content-center align-items-center">
+              <i class="fa fa-info-circle" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-8 my-2 text-center-md">
+              <h6 class="alert-header md-text-custom">Registration</h6>
+              <p class="mb-0 mx-auto">Register now for working on trending technologies under top notch mentors.</p>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center align-items-center">
+              <a class="sm-text-custom btn btn-outline-info" style="text-decoration: none;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSccJURrpgR_SKgxatV0NlAnQOKHY-oVGRrmW1wSV-doopOXtg/viewform">Register Now</a>
+            </div>
+          </div>
+        </span>
       </div>
-    </span>
   </div>
-  </div>
+
 
   <!--*****************************************************PPT*********************************************** -->
   <div class="container" style="margin: 10% auto auto auto">
