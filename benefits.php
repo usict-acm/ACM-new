@@ -410,6 +410,49 @@
 
         })
       });
+      // Winners background
+      
+      var canvas = document.getElementById('my-canvas');
+
+      canvas.confetti = canvas.confetti || confetti.create(canvas, { resize: true });
+
+      var duration = 15 * 1000;
+      var animationEnd = Date.now() + duration;
+      var skew = 1;
+      var colors= ['#bb0000', '#2DD6E0','#88B023'];
+
+      function randomInRange(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
+      (function frame() {
+        var timeLeft = animationEnd - Date.now();
+        var ticks = Math.max(200, 500 * (timeLeft / duration));
+        skew = Math.max(0.8, skew - 0.001);
+
+        canvas.confetti({
+          particleCount: 3,
+          startVelocity: 1,
+          ticks: ticks,
+          spread: 70,
+          angle: 60,
+          gravity: 0.5,
+          origin: {
+            x: Math.random(),
+
+            y: (Math.random() * skew) - 0.2
+          },
+          zIndex: 1,
+          colors: colors,
+          shapes: ['circle'],
+          scalar: 0.7,
+        });
+
+        // if (timeLeft > 0) {
+          if(1){
+          requestAnimationFrame(frame);
+        }
+      }());
     </script>
   </body>
 
