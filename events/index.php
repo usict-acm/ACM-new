@@ -171,7 +171,6 @@
     <img class="quote-img" src="../assets/images/About us/image31.jpg" alt="" />
     <img class="quote-img" src="../assets/images/About us/image4.jpg" alt="" />
     <img class="quote-img" src="../assets/images/trell-4.jpeg" alt="" />
-
   </div>
    
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

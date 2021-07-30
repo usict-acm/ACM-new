@@ -95,7 +95,7 @@
     <div class="event-container">
         <div id="eventPage"></div>
     </div>
-    <div class="row">
+    <div class="row pagination_row">
         <div style="margin:auto;" id="pagination_row_2020"></div>
     </div>
 </section>
@@ -186,6 +186,11 @@
 </script>
 
 <style>
+    .pagination_row{
+        margin-right: 0;
+        margin-left:0;
+    }
+
     .pagination-option-next-prev {
       border: 0.5px solid gray;
       color: black;

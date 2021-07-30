@@ -58,9 +58,7 @@ require_once "./config.php";
 
 
 <body>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <script>
     function submit_announcements(){
     var formData = new FormData();

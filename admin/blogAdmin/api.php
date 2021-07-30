@@ -189,7 +189,7 @@ function read_one()
     $database = new Database();
     $db = $database->connect();
     $id = $_GET['id'];
-
+    
     // echo $db;
 
     // Instantiate blog post object

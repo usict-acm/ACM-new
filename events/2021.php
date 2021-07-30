@@ -95,7 +95,7 @@
     <div class="event-container">
         <div id="eventPage"></div>
     </div>
-    <div class="row">
+    <div class="row pagination_row">
         <div style="margin:auto;" id="pagination_row_2021"></div>
     </div>
 </section>
@@ -126,7 +126,6 @@
                                                     </div>\
                                                     <div class='event-post_info'>\
                                                         <div class='event-post_date'>\
-                                                            <span>"+event.day+"</span>\
                                                             <span>"+event.startDate+" -- "+event.endDate+"</span>\
                                                             <span>"+event.time+"</span>\
                                                         </div>\
@@ -184,6 +183,11 @@
 </script>  
 
 <style>
+    .pagination_row{
+        margin-right: 0;
+        margin-left:0;
+    }
+
     .pagination-option-next-prev {
       border: 0.5px solid gray;
       color: black;
