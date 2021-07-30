@@ -99,19 +99,19 @@
      <div class="year-nav d-flex justify-content-center mb-3 mr-5">
         <ul class="nav nav-pills flex-row year-margin" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active year-link m-1" data-toggle="pill" onclick="openTab(2019)">2019</a>
+            <a class="nav-link year-link m-1" data-toggle="pill" onclick="openTab(2019)">2019</a>
           </li>
           <li class="nav-item">
             <a class="nav-link year-link m-1" data-toggle="pill" onclick="openTab(2020)">2020</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link year-link m-1" data-toggle="pill" onclick="openTab(2021)">2021</a>
+            <a class="nav-link active year-link m-1" data-toggle="pill" onclick="openTab(2021)">2021</a>
           </li>
         </ul>
       </div>    
     <!--  ******************************************Faculty************************************************************* -->
 
-  <section id="collab" style="margin-top: -3%">
+  <section id="collab">
     <div class="container">
       <h1 class="highlight collab-main-heading">Faculty:</h1>
 
@@ -151,7 +151,7 @@
     </div>
 
     <script>
-      openTab(2019); //Default call
+      openTab(2021); //Default call
       function openTab(navYear) {
         var category = ['Faculty', 'Office-Bearers', 'Executive-Members', 'Web-Team'];
         category.forEach(e => document.getElementById(e).innerHTML = "");

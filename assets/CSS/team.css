@@ -143,6 +143,10 @@ a.year-link:hover{
   font-size: 36px;
 }
 
+#collab {
+  margin-top: -5%;
+}
+
 .collab-main-heading {
   margin-top: 1rem;
   font-weight: 600;
@@ -328,6 +332,14 @@ a.year-link:hover{
   .card-name {
     font-size: 20px;
   }
+  .year-margin {
+    margin-top: 50px;
+    margin-left: 25px;
+  }
+  #collab {
+    margin-top: -25%;
+  }
+
 }
 
 @media (min-width: 350px) and (max-width: 1200px) {
