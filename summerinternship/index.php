@@ -150,7 +150,7 @@
         <div class="registration-inner-div d-flex flex-column justify-content-center">
           <div>
           <p class="text section-heading">Get in touch</p>
-          <p class="text-small" style="color: #373f41; font-weight: normal;">Feel free to contact us if you need some help. Consultations or you have some other questions.</p>
+          <p class="text-small" style="color: #373f41; font-weight: normal;"> In case of any query or doubts, feel free to contact us.</p>
           </div>
           <div class="registration-form-div" style="padding: 1rem;margin:1rem auto;">
             <h3>Dr. Rahul Johari</h3>
