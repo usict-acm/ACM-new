@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+body {
+  color: #5a5a5a;
+  font-family: "Lato", sans-serif;
+  margin-left: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat", sans-serif;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.section-heading {
+  color: #4169e1;
+  font-weight: bold;
+  font-size: 2.7rem;
+  display: inline-block;
+}
+
+#benefits,
+#header,
+#registration {
+  width: 100%;
+  padding: 80px 0;
+}
+
+/* TOP HEADER
+-------------------------------------------------- */
+.navbar.top-bar {
+  border-radius: 0;
+  padding: 16px 0;
+  z-index: 16;
+}
+
+.navbar-toggler {
+  border: 1px solid #fff;
+  color: #fff;
+  /* position: absolute; */
+  /* right: 21px; */
+  margin-right: 21px;
+}
+
+.sps {
+  padding: 1em 0.5em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.25s ease;
+  width: 100%;
+}
+
+.sps--abv {
+  background-color: transparent;
+  color: #000;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sps--blw {
+  background-color: #fff;
+  color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.top-bar a.navbar-brand {
+  color: #000;
+  font-size: 26px;
+  font-weight: 1000;
+  padding: 5px 0 0 10px;
+  text-transform: uppercase;
+}
+
+.sps--blw.top-bar a.navbar-brand {
+  color: #000;
+}
+
+.top-bar a.navbar-brand span {
+  color: #0297ff;
+}
+
+.top-bar .nav-link {
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 18px !important;
+}
+
+.sps--blw.top-bar .nav-link {
+  color: #000;
+}
+
+.top-bar .navbar-nav .nav-item {
+  margin: 0;
+}
+
+.top-bar .nav-link:hover,
+.top-bar .nav-item.active a {
+  color: #0297ff;
+  border-bottom: 2px solid #fff;
+  border-radius: 0;
+}
+
+.sps--blw.top-bar .nav-link:hover,
+.sps--blw.top-bar .nav-item.active a {
+  color: #0297ff;
+  border-bottom: none;
+  border-radius: 0;
+}
+
+.pt-card {
+  padding: 6.5%;
+  border-radius: 20px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 0 3.5px #0297ff;
+  /* margin-bottom: -13%; */
+  background-image: url("./../images/Internship-banner.png");
+}
+
+.uheading {
+  font-size: 36px;
+}
+
+.lheading {
+  font-size: 36px;
+}
+
+@media (min-width: 200px) and (max-width: 580px) {
+  .pt-card {
+    padding: 6.5%;
+    border-radius: 10px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 0 3.5px #0297ff;
+    /* margin-bottom: -13%; */
+    background-image: url("./../images/Internship-banner.png");
+  }
+  .uheading {
+    font-size: 20px;
+  }
+
+  .lheading {
+    font-size: 20px;
+  }
+
+  .acm-logo-navbar {
+    margin-left: 10px;
+  }
+
+  .pt-card {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 780px) {
+  .uheading {
+    font-size: 26px;
+  }
+
+  .lheading {
+    font-size: 26px;
+  }
+
+  .pt-card {
+    margin-top: 7%;
+    margin-bottom: -20%;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 700px) {
+  .alert-info.new2 {
+    font-size: 12px;
+  }
+
+  .md-text-custom {
+    font-size: 14px;
+  }
+}
+
+.alert-info.new2 {
+  vertical-align: middle;
+  background: #f3f8f3;
+  border: none;
+  border-left: 4px solid #5bc0de;
+  border-radius: 0;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  /* margin-top: 7%; */
+  margin-bottom: -6%;
+  border-radius: 0 15px 15px 0;
+  /* margin-left: 9%;
+  margin-right: 9%; */
+}
+
+.alert-info.new2.p-4 {
+  padding: 0.75rem 0.75rem !important;
+  vertical-align: justify;
+}
+
+.alert-info.new2 .fa {
+  color: #5bc0de;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 40px;
+  margin-left: 1%;
+  vertical-align: middle;
+}
+
+.alert-info .alert-body {
+  /* padding-left: 0.75rem; */
+  color: rgba(0, 0, 0, 0.5);
+  vertical-align: middle;
+}
+
+.alert-info .alert-header {
+  font-weight: 700;
+  color: #5bc0de;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+}
+/* ***************************************************Registration form************************************************** */
+
+.registration-form-div {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 4px 4px 26px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  display: block;
+  text-align: center;
+}
+
+.blue-hr {
+  margin: 0px !important;
+  border-style: none;
+  border-top: 6px solid #0297ff !important;
+  border-radius: 8px;
+  width: 100%;
+}
+.registration-img {
+  width: 100%;
+  margin-top: 3%;
+}
+.registration-inner-div {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.text-and-logo {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.outstanding-logo {
+  width: 160px;
+  animation-name: scale-up-center;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@media (min-width: 350px) and (max-width: 1200px) {
+  .footer-info {
+    display: flex;
+    flex-direction: column !important;
+  }
+}
+.i-RrUw {
+  display: none !important;
+}
+.dkWypw > svg {
+  display: none !important;
+}
+@media (max-width: 760px) {
+  .text-center-md {
+    text-align: center;
+  }
+}
+@media (min-width: 300px) and (max-width: 992px) {
+  .registration-img {
+    display: none;
+  }
+  a:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+}
