@@ -36,7 +36,8 @@ class Database
       $this->server,
       $this->username,
       $this->password,
-      $this->database
+      $this->database,
+      // $this->port
     );
 
     //  echo $conn;
