@@ -193,6 +193,7 @@
             $.ajax({
               url: urlYear,
               method: 'GET',
+              async: false,
               dataType: 'JSON',
               success: function(dataNumber) {
                 console.log(urlYear);
@@ -207,7 +208,7 @@
                                                     <h3 style='color: black;font-weight: bolder;'>"+numberOfEvents+" "+event.numberOfEvents+" </h3>\
                                                     <p style='font-size:large; color: #e91e63;font-weight: bolder;'>"+event.heading+"</p>\
                                                     <p style='text-align: end; margin-right: 2px; font-size: smaller; color:#0297ff;'>"+event.more+"</p>\
-                                                    <a  href='./"+event.year+".php'>View details</a>\
+                                                    <a  href='./eventYear.php?year="+event.year+"'>View details</a>\
                                                 </div>\
                                                 <div style='clear: both;'></div>\
                                             </li>";

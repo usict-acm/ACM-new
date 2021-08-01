@@ -366,7 +366,7 @@ function readEvents(){
 //    echo $year;
 // echo "helllo";
    $year = $_GET['year'];
-   $limit = 7;
+   $limit = 5;
    $page = isset($_GET['page']) ? $_GET["page"] : 1;
 //    echo $page;
    $start = ($page - 1) * $limit;

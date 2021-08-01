@@ -5,7 +5,7 @@
 
     <meta charset="utf-8" />
     <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
-    <title>Events 2021</title>
+    <title>Events</title>
     <link rel="icon" href="../assets/images/acm1.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description"
@@ -102,11 +102,12 @@
 
 <?php
     $page = isset($_GET["page"]) ? $_GET["page"] : 1;
+    $year = $_GET["year"];
     $previous = $page == 1 ? 1 : $page - 1;
 ?>
 
 <script>
-        let urlEvent = '../admin/blogAdmin/api.php/?q=readAllEvent&year=2021&page='+<?php echo $page ?>;
+        let urlEvent = '../admin/blogAdmin/api.php/?q=readAllEvent&year='+<?php echo $year ?>+'&page='+<?php echo $page ?>;
         let allEvents=document.getElementById("eventPage");
         let pagination = document.getElementById("pagination_row_2021");
         allEvents.innerHTML="";
@@ -139,7 +140,7 @@
 		    pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
                                                <ul class=pagination>\
                                                   <li class=page-item >\
-                                                    <a id='previous-pagination' class='page-link pagination-option-next-prev' href=./2021.php?q=readAllEvent&year=2021&page=<?php echo $previous ?> disabled>\
+                                                    <a id='previous-pagination' class='page-link pagination-option-next-prev' href=./eventYear.php?q=readAllEvent&year="+<?php echo $year ?>+"&page=<?php echo $previous ?> disabled>\
                                                       < Prev\
                                                     </a>\
                                                   </li>\
@@ -153,7 +154,7 @@
                       pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
                                                   <ul class=pagination>\
                                                      <li class=page-item>\
-                                                        <a id=" + id + " class='page-link pagination-numbers pagination-option-next-prev '" + "href=./2021.php?q=readAllEvent&year=2021&page=" + i + ">\
+                                                        <a id=" + id + " class='page-link pagination-numbers pagination-option-next-prev '" + "href=./eventYear.php?q=readAllEvent&year="+<?php echo $year ?>+"&page=" + i + ">\
                                                            " + i + "\
                                                         </a>\
                                                      </li>\
@@ -168,7 +169,7 @@
                   pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
                                               <ul class=pagination>\
                                                  <li class=page-item>\
-                                                    <a id='next-pagination' class='page-link pagination-option-next-prev' href=./2021.php?q=readAllEvent&year=2021&page=" + next + ">\
+                                                    <a id='next-pagination' class='page-link pagination-option-next-prev' href=./eventYear.php?q=readAllEvent&year="+<?php echo $year ?>+"&page=" + next + ">\
                                                         Next >\
                                                     </a>\
                                                  </li>\
