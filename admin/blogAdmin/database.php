@@ -37,7 +37,11 @@ class Database
       $this->username,
       $this->password,
       $this->database,
+<<<<<<< HEAD
       $this->port
+=======
+      // $this->port
+>>>>>>> 2ec7453f244e45aee2dd6df2156e467f478b9617
     );
 
     //  echo $conn;

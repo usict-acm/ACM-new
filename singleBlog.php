@@ -236,7 +236,9 @@
           dataType: 'JSON',
           success: function(data) {
             console.log(data);
-
+            if(data.length == 0 || data.message == "No Posts Found"){
+              window.document.location = "./blogs.php";
+            } else {
             posts.innerHTML = "<div class='w-100'>\
             <h1 id='blog_title' class='singleBlog-title'>" + data[0].Title + "</h1>\
             <div class='singleBlog'>\
@@ -254,6 +256,7 @@
             </div>\
           </div>\
           </div>";
+          }
           },
         });
       });
