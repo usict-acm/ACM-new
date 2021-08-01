@@ -79,7 +79,7 @@
   <!-- ==============================================header Three Blogs========================================== -->
   <section style="padding-top: 80px;">
     <div class="container" style="margin-top: 3%;">
-      <div class="row" id="row2"></div>
+      <div class="row justify-content-center" id="row2"></div>
     </div>
   </section>
 
