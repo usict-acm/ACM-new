@@ -52,20 +52,20 @@
     function postMember(){
         $database = new Database();
         $db = $database->connect();
-        if(isset($_POST['submit'])){
-            $name = $_POST['name'];
-            $designation = $_POST['designation'];
-            $linkedin = $_POST['linkedin'];
-            $github = $_POST['github'];
-            $instagram = $_POST['instagram'];
-            $year = $_POST['year'];
-            $category = $_POST['category'];
-            $file = $_FILES['file'];
+        // if(isset($_POST['submit'])){
+            $name = isset($_POST['name']) ? $_POST["name"] : false;
+            $designation = isset($_POST['designation']) ? $_POST["designation"] : false;
+            $linkedin = isset($_POST['linkedin']) ? $_POST["linkedin"] : false;
+            $github = isset($_POST['github']) ? $_POST["github"] : false;
+            $instagram = isset($_POST['instagram']) ? $_POST["instagram"] : false;
+            $year = isset($_POST['year']) ? $_POST["year"] : false;
+            $category = isset($_POST['category']) ? $_POST["category"] : false;
+            $file = $_FILES['image'];
 
             // print_r($file);
         
             $filename = $file['name'];
-            $fileerror = $file['error'];
+            // $fileerror = $file['error'];
             $filetemppath= $file['tmp_name'];
         
             $fileext = explode('.',$filename);
@@ -81,38 +81,29 @@
                 $sql = "INSERT INTO `team` (`image`, `name`, `designation`, `linkedin`, `github`, `instagram`, `year`, `category`, `added_on`) VALUES ('$destinationfile', '$name', '$designation', '$linkedin', '$github', '$instagram', '$year', '$category' , current_timestamp());";
                 
                 if($db->query($sql) == true) {
-                echo '<script type="text/javascript">';
-                echo ' alert("Member uploaded successfully!")';
-                echo '</script>';
+                    echo json_encode("Member has been added!");
                 }
                 else {
-                echo "ERROR: $sql <br> $db->error";
+                    echo json_encode(http_response_code(400));
                 }    
             }
             else {
-            echo '<script type="text/javascript">';
-            echo ' alert("Image not uploaded, check the extension or try again!")';
-            echo '</script>';
+                echo json_encode(http_response_code(400));
             }
-        }
+        // }
     };
     
     function delMember(){
         $database = new Database();
         $db = $database->connect();
 
-            $id = $_GET['id'];
-            echo $id;
-            
-            $sql = "UPDATE `team` SET active = 0 WHERE id=" . $id;
+            $sql = "UPDATE `team` SET active = 0 WHERE id= " .$_POST["id"];
             
             if($db->query($sql) == true) {
-                echo '<script type="text/javascript">';
-                echo 'alert("Member deleted successfully!")';
-                echo '</script>';
+                echo json_encode("Member deleted successfully!");
             }
             else {
-                echo "ERROR: $sql <br> $db->error";
+                echo json_encode(http_response_code(400));
             }
     };
 
