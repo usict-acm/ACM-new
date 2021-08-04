@@ -134,7 +134,7 @@ function update()
                 ));
             }
         } else {
-            echo json_encode(array('error' => "Failed to Update"));
+            echo json_encode(array('error' => "Failed To Update"));
         }
     } else {
         echo json_encode(array('error' => 'One or more fields are missing.'));
