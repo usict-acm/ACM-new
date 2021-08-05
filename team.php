@@ -163,6 +163,7 @@
           $.ajax({
             url: url,
             method: 'GET',
+            async: false,
             dataType: 'JSON',
             success: function(data) {
               // console.log("member data", data);
