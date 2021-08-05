@@ -99,14 +99,14 @@
     
       <div class="main-year">
       <div class="topnav-myear">
-        <a href="#home" class="active">2021</a> 
-        <a href="#news">2020</a>
-        <a href="#contact">2019</a>
+        <a href="javascript:openTab('2019')" id="2019" class="nav-year">2019</a> 
+        <a href="javascript:openTab('2020')" id="2020" class="nav-year">2020</a>
+        <a href="javascript:openTab('2021')" id="2021" class="nav-year">2021</a>
       </div> 
-        <select>
-          <option value="/" selected="selected">2021</option>
-          <option value="/a">2020</option>
-          <option value="/b" >2019</option> 
+        <select class="mobile-dropdown" onchange="openTab(this.value)">
+          <option value="2021" selected="selected">2021</option>
+          <option value="2020">2020</option>
+          <option value="2019">2019</option> 
         </select>
         
      </div>
@@ -154,6 +154,8 @@
     <script>
       openTab(2021); //Default call
       function openTab(navYear) {
+        $(".nav-year").removeClass("active");
+        $('#' + navYear).addClass("active");
         var category = ['Faculty', 'Office-Bearers', 'Executive-Members', 'Web-Team'];
         category.forEach(e => document.getElementById(e).innerHTML = "");
         let url = './admin/teams/api.php/?q=readMember&year=' + navYear;

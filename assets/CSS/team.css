@@ -112,7 +112,6 @@ section {
   border-radius: 0;
 }
 
-/* Add a black background color to the top navigation */
 .topnav-myear {
   background-color: rgb(255, 255, 255);
   overflow: hidden;
@@ -121,30 +120,36 @@ section {
   margin-top: 9%;
 }
 
-/* Style the links inside the navigation bar */
 .topnav-myear a {
   float: left;
   margin-left: 5px;
-  color: #23b8dd;
+  color: #0776ad;
   text-align: center;
   padding: 14px 16px;
+  border-radius: 5px;
   text-decoration: none;
-  font-size: 17px;  
+  font-size: 18px;
+  font-weight: bold;  
+  /* border: 1px #0297ff solid; */
 }
 
-/* Change the color of links on hover */
 .topnav-myear a:hover {
-  background-color: #23b8dd;
+  background-color: #0297ff;
   color: rgb(255, 255, 255);
 }
 
-/* Add a color to the active/current link */
 .topnav-myear a.active {
-  background-color: #23b8dd;
+  background-color: #0297ff;
   color: #ffffff;
 }
 .main-year select{
   display: none;
+}
+
+@media screen and (min-width:768px){
+  .mobile-dropdown {
+    display: none;
+  }
 }
 
 @media screen and (max-width:768px){
@@ -153,17 +158,22 @@ section {
     } 
     .main-year select{
       display: block;
-      background-color: #16e1f0;
-      border: transparent 0px;
+      /* border: none; */
+      outline-width: 0;
       padding: 8px;
-      margin-top: 12%;
+      margin-top: 15%;
+      margin-bottom: 2%;
       margin-left: 40%;
       width: 80px;
-    }  
-    
-    
+      background-color: #0297ff;
+      border-radius: 5px;
+      color: white;
+    }
+    .main-year select option {
+      background-color: white;
+      color: #000;
+    }
 }
-
 
 .pt-card {
   padding: 8%;
