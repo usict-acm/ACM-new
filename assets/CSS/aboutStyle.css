@@ -342,6 +342,164 @@
      letter-spacing:-.008em;
      line-height:1.23536em;
 }
+.collab-card {
+     width: 250px !important;
+     height: 280px;
+     margin: 3% 1%;
+     border-radius: 8px;
+     text-align: center;
+     /* box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08); 
+     box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.72);
+     -webkit-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.72);
+     -moz-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.72); */
+     background-color: white;
+     background-image: linear-gradient(to bottom right, white, #e6ffff);
+   }
+   .collab-card:hover {
+     width: 250px !important;
+     height: 280px;
+     margin: 3% 1%;
+     border-radius: 8px;
+     text-align: center;
+     /* box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.72);
+     -webkit-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.72);
+     -moz-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.72); */
+     background-color: white;
+     background-image: linear-gradient(to bottom right, white, #e6ffff);
+   }
+   /* .card-1 {
+     background: url('../images/collab/coursera-ConvertImage.png') no-repeat;
+     display: inline-block !important;
+     width: 10rem !important;
+     height: 10rem !important;
+     padding: 2vh 4vh;
+     background-position: center;
+     background-size: contain;
+     text-align: center;
+     transition: all 0.5s ease-in-out !important;
+   }
+   .collab-card:hover > .card-1 {
+     background: url('../images/collab/coursera.png') no-repeat;
+     display: inline-block !important;
+     width: 12rem !important;
+     height: 12rem !important;
+     padding: 2vh 4vh;
+     background-position: center;
+     background-size: contain;
+     text-align: center;
+     transition: all 0.5s ease-in-out !important;
+   } */
+   .card-2 {
+     background: url('../images/collab/docker.png') no-repeat;
+     display: inline-block !important;
+     width: 10rem !important;
+     height: 10rem !important;
+     padding: 2vh 4vh;
+     background-position: center;
+     background-size: contain;
+     text-align: center;
+     transition: all 0.5s ease-in-out !important;
+   }
+   /* .collab-card:hover > .card-2 {
+     background: url('../images/collab/docker.png') no-repeat;
+     display: inline-block !important;
+     width: 12rem !important;
+     height: 12rem !important;
+     padding: 2vh 4vh;
+     background-position: center;
+     background-size: contain;
+     text-align: center;
+     transition: all 0.5s ease-in-out !important;
+   } */
+   .card-3 {
+     background: url('../images/collab/lenskart.png') no-repeat;
+     display: inline-block !important;
+     width: 10rem !important;
+     height: 10rem !important;
+     padding: 2vh 4vh;
+     background-position: center;
+     background-size: contain;
+     text-align: center;
+     transition: all 0.5s ease-in-out !important;
+   }
+   /* .collab-card:hover > .card-3 {
+     background: url('../images/collab/lenskart.png') no-repeat;
+     display: inline-block !important;
+     width: 12rem !important;
+     height: 12rem !important;
+     padding: 2vh 4vh;
+     background-position: center;
+     background-size: contain;
+     text-align: center;
+     transition: all 0.5s ease-in-out !important;
+   } */
+   .card-4 {
+     background: url('../images/collab/coding.png') no-repeat;
+     display: inline-block !important;
+     width: 10rem !important;
+     height: 10rem !important;
+     padding: 2vh 4vh;
+     background-position: center;
+     background-size: contain;
+     text-align: center;
+     transition: all 0.5s ease-in-out !important;
+   }
+   /* .collab-card:hover > .card-4 {
+     background: url('../images/collab/coding.png') no-repeat;
+     display: inline-block !important;
+     width: 12rem !important;
+     height: 12rem !important;
+     padding: 2vh 4vh;
+     background-position: center;
+     background-size: contain;
+     text-align: center;
+     transition: all 0.5s ease-in-out !important;
+   } */
+   .card-5 {
+     background: url('../images/collab/cad.png') no-repeat;
+     display: inline-block !important;
+     width: 10rem !important;
+     height: 10rem !important;
+     padding: 2vh 4vh;
+     background-position: center;
+     background-size: contain;
+     text-align: center;
+     transition: all 0.5s ease-in-out !important;
+   }
+   /* .collab-card:hover > .card-5 {
+     background: url('../images/collab/cad.png') no-repeat;
+     display: inline-block !important;
+     width: 12rem !important;
+     height: 12rem !important;
+     padding: 2vh 4vh;
+     background-position: center;
+     background-size: contain;
+     text-align: center;
+     transition: all 0.5s ease-in-out !important;
+   } */
+   .blue-hr {
+     margin: 0px !important;
+     border-style: none;
+     border-top: 6px solid #0297ff !important;
+     border-radius: 8px;
+   }
+   .collab-heading {
+     font-size: 1.5rem;
+     font-weight: 500;
+     color: #222;
+   }
+   .container-btn {  
+      
+     display: grid;  
+     } 
+     button {  
+          background-color: lightblue;  
+          color: black;
+          font-family:'Camphor','Open Sans','Segoe UI','sans-serif';  
+          font-size: 25px;  
+          margin: auto; 
+          cursor:pointer; 
+          }   
 #milestones{
      padding-top:5.5rem;
      padding-bottom: 2rem;

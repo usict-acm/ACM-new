@@ -208,13 +208,46 @@
                     <div class="section-intro">
                          <h2 class="head-2 common-SectionTitle">From startups to the world’s largest companies</h2>
                          <p class="common-IntroText">
-                              Millions of companies in over 120 countries use Stripe to start, run, and scale
-                              their businesses.
+                    Collaboarated with industry giants to help the computer science community to grow.
                          </p>
                     </div>
                </div>
                <!--icons-->
-               <div class="container-lg">
+               
+               <div class="row d-flex justify-content-center">
+                 <!-- <div class="collab-card">
+                   <hr class="blue-hr">
+                   <div class="card-1"></div>
+                     <h1 class="collab-heading">Coursera</h1>
+                   </div> -->
+                   <div class="collab-card">
+                     <hr class="blue-hr">
+                     <div class="card-2"></div>
+                     <h1 class="collab-heading">Docker<br> Delhi</h1>
+                   </div>
+                   <div class="collab-card">
+                     <hr class="blue-hr">
+                     <div class="card-3"></div>
+                     <h1 class="collab-heading">Lenskart</h1>
+                   </div>
+                   <div class="collab-card">
+                     <hr class="blue-hr">
+                     <div class="card-4"></div>
+                     <h1 class="collab-heading">Coding<br>Ninjas</h1>
+                   </div>
+                   <div class="collab-card">
+                     <hr class="blue-hr">
+                     <div class="card-5"></div>
+                     <h1 class="collab-heading">CAD DESK <br>India</h1>
+                   </div>
+                 </div>
+                 <a href="./collab.html" target="_blank"><div class="container-btn">  
+                     <button> Collaborators </button>  
+                    </div></a> 
+               </div>
+              
+               
+               <!-- <div class="container-lg">
                     <div class="customers-grid">
                          <figure class="customers-customer customer--amazon">
                               <svg
@@ -796,8 +829,8 @@
                                    />
                               </svg>
                          </figure>
-                    </div>
-               </div>
+                    </div> -->
+                   
           </section>
      </div>
      <div id="site-wrapper">
@@ -821,13 +854,12 @@
                               <div class="content">
                                    <div class="time">2020</div>
                                    <div>
-                                        <p>Cards-Based Editor Launched</p>
-                                        <p>Curbside and In-Store Pickup Ecommerce Feature Added</p>
-                                        <p>User Base Grown to 230+ Countries</p>
+                                        <p>Growth from 15 members to 500+ members</p>
+                                        
                                    </div>
                               </div>
                          </div>
-                         <div class="item left">
+                         <div class="item right">
                               <div class="marker multiline"></div>
                               <div class="content">
                                    <div class="time">2021</div>
