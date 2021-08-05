@@ -96,19 +96,20 @@
       </section>
     </div>
      <!--***************************************member according to years nav ****************************-->
-     <div class="year-nav d-flex justify-content-center mb-3 mr-5">
-        <ul class="nav nav-pills flex-row year-margin" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link year-link m-1" data-toggle="pill" onclick="openTab(2019)">2019</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link year-link m-1" data-toggle="pill" onclick="openTab(2020)">2020</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active year-link m-1" data-toggle="pill" onclick="openTab(2021)">2021</a>
-          </li>
-        </ul>
-      </div>    
+    
+      <div class="main-year">
+      <div class="topnav-myear">
+        <a href="#home" class="active">2021</a> 
+        <a href="#news">2020</a>
+        <a href="#contact">2019</a>
+      </div> 
+        <select>
+          <option value="/" selected="selected">2021</option>
+          <option value="/a">2020</option>
+          <option value="/b" >2019</option> 
+        </select>
+        
+     </div>
     <!--  ******************************************Faculty************************************************************* -->
 
   <section id="collab">
