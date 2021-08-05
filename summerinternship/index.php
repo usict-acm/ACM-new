@@ -92,7 +92,7 @@
               <p class="mb-0 mx-auto">Register now for working on trending technologies under top notch mentors.</p>
             </div>
             <div class="col-md-3 d-flex justify-content-center align-items-center">
-              <a class="sm-text-custom btn btn-outline-info" style="text-decoration: none;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSccJURrpgR_SKgxatV0NlAnQOKHY-oVGRrmW1wSV-doopOXtg/viewform">Register Now</a>
+              <a class="sm-text-custom btn btn-outline-info" style="text-decoration: none;" target="_blank" href="https://forms.gle/EHaHB2iWzi8XFXgq9">Register Now</a>
             </div>
           </div>
         </span>
@@ -150,7 +150,7 @@
         <div class="registration-inner-div d-flex flex-column justify-content-center">
           <div>
           <p class="text section-heading">Get in touch</p>
-          <p class="text-small" style="color: #373f41; font-weight: normal;">Feel free to contact us if you need some help. Consultations or you have some other questions.</p>
+          <p class="text-small" style="color: #373f41; font-weight: normal;"> In case of any query or doubts, feel free to contact us.</p>
           </div>
           <div class="registration-form-div" style="padding: 1rem;margin:1rem auto;">
             <h3>Dr. Rahul Johari</h3>
