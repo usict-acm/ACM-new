@@ -1,24 +1,28 @@
 <?php
 
-    class User {
-        private $conn;
-        private $table = "users";
+class User
+{
+    private $conn;
+    private $table = "users";
 
-        public function __construct($db) {            
-            $this->conn = $db;
-        }
+    public function __construct($db)
+    {
+        $this->conn = $db;
+    }
 
-        public function fetchUserByEmail ($email) {
-            $query =
+    public function fetchUserByEmail($email)
+    {
+        $query =
             "SELECT * from $this->table
             WHERE email = '$email'";
-            $res = $this->conn->query($query);
-            return $res;
-        }
+        $res = $this->conn->query($query);
+        return $res;
+    }
 
-        public function register ($details) {
-            $hashedPassword = password_hash($details['password'], PASSWORD_BCRYPT);
-            $query =
+    public function register($details)
+    {
+        $hashedPassword = password_hash($details['password'], PASSWORD_BCRYPT);
+        $query =
             "INSERT INTO $this->table
             (userType, email, password, name, acmMemberId, profilePhoto, course, branch, rollNo)
             VALUES (
@@ -32,8 +36,20 @@
                 '$details[branch]',
                 '$details[rollNo]'
             )";
-            $res = $this->conn->query($query);
-            return $res;
-        }
+        $res = $this->conn->query($query);
+        return $res;
     }
-?>
+
+    public function updateProfile($email, $userDoc)
+    {
+        $updatedName = $userDoc["name"];
+        $updatedAcmId = $userDoc["acmMemberId"];
+
+        $query =
+            "UPDATE $this->table
+             SET name ='$updatedName', acmMemberId = '$updatedAcmId'
+             WHERE email = '$email'";
+        $res = $this->conn->query($query);
+        return $res;
+    }
+}
