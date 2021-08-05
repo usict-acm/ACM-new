@@ -1,4 +1,4 @@
-import React,{ useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   CardImg,
   Button,
@@ -13,61 +13,35 @@ import {
   Col,
 } from "reactstrap";
 import UserHeader from "components/Headers/UserHeader.js";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "redux/slices/userSlice";
+import { updateProfile } from "redux/slices/userSlice";
 
-const Profile = (props) => {
-  const user = useSelector(selectUser);
+const Profile = () => {
+  const dispatch = useDispatch(),
+    user = useSelector(selectUser),
+    [disabled, setDisabled] = useState(true),
+    [cursor, setCursor] = useState({ cursor: "" }),
+    [name, setName] = useState(""),
+    [memberId, setMemberId] = useState("");
 
-  const[disabled,setDisabled] = useState(true);
-  const[cursor, setCursor] = useState({cursor : ""});
-  const [data, setData] = useState([]);
+  const init = () => {
+    setName(user?.name);
+    setMemberId(user?.acmMemberId);
+  };
 
-  const[name, setName] = useState();
-  const[memberId, setMemberId] = useState();
-  const[id, setId] = useState();
-  const[email, setEmail] = useState()
-  const[branch, setBranch] = useState()
-  const[rollNo, setRollNo] = useState()
-  const[course, setcourse] = useState()
+  useEffect(() => {
+    init();
+  }, []);
 
-
-const url = "http://localhost:8000/users";
-
-const getUser = () =>{
-  fetch(url).then((result) =>{
-    result.json().then((resp) =>{
-        setData(resp?.[0]);
-        setName(resp?.[0]?.name);
-        setMemberId(resp?.[0]?.memberId);
-        setId(resp?.[0]?.id);
-        setEmail(resp?.[0]?.email);
-        setRollNo(resp?.[0]?.rollNo);
-        setBranch(resp?.[0]?.branch);
-        setcourse(resp?.[0]?.course);
-    })
-  })
-};
-
-useEffect( ()=>{
-  getUser();
-}, [ ] );
-
-  const updateInfo = () =>{
-    let items = {id, name,email, memberId,course, rollNo,branch }
-    fetch(`http://localhost:8000/users/${id}`, {
-      method : 'PUT',
-      headers : {
-        'Accept' : 'application/json',
-        'Content-Type' : 'application/json'
-      },
-      body : JSON.stringify(items)
-    }).then((result)=>{
-      result.json().then((resp)=>{
-        // getUser();
-      })
-    })
-  }
+  const updateInfo = () => {
+    let data = { ...user, name, acmMemberId: memberId };
+    if (!name) {
+      alert("Please fill in all the required fields");
+      return;
+    }
+    dispatch(updateProfile(data));
+  };
 
   return (
     <Container className="mt-0" fluid="xxl">
@@ -79,20 +53,26 @@ useEffect( ()=>{
           <Col className="order-xl-1">
             <Card className="bg-secondary shadow">
               <CardHeader className="bg-white border-0">
-               <Row className="align-items-center">
-                <Col xs="8">
-                 <h3>My Account</h3>
-                </Col>
-                <Col className="text-right">
-                 <Button disabled={!disabled} onClick={()=>{
-                     setDisabled(false);
-                    setCursor({cursor : "no-drop"});
-                 }}
-                  type="button" value="Input" color="info" style={cursor}>
-                  Edit Profile
-                 </Button>
-                </Col>
-               </Row> 
+                <Row className="align-items-center">
+                  <Col xs="8">
+                    <h3>My Account</h3>
+                  </Col>
+                  <Col className="text-right">
+                    <Button
+                      disabled={!disabled}
+                      onClick={() => {
+                        setDisabled(false);
+                        setCursor({ cursor: "no-drop" });
+                      }}
+                      type="button"
+                      value="Input"
+                      color="info"
+                      style={cursor}
+                    >
+                      Edit Profile
+                    </Button>
+                  </Col>
+                </Row>
               </CardHeader>
               <CardBody>
                 <CardImg
@@ -105,16 +85,20 @@ useEffect( ()=>{
                   className="rounded-circle d-block m-auto md-8 "
                 />
                 <div className="my-3">
-                 {disabled ?
-                  <h2 className="text-center my-3">
-                  {/* {user?.name} */}
-                  {name}
-                  </h2> 
-                  : <Input className="text-center m-auto d-block" type="name"
-                     placeholder={user?.name} readOnly={disabled} style={{ width: "25%" }}   
-                     onChange={(e)=>setName(e.target.value)}   value={name}                     
-                />
-                  }
+                  {disabled ? (
+                    <h2 className="text-center my-3">{user?.name}</h2>
+                  ) : (
+                    <Input
+                      className="text-center m-auto d-block"
+                      type="name"
+                      placeholder="New Name"
+                      readOnly={disabled}
+                      style={{ width: "15%" }}
+                      onChange={(e) => setName(e.target.value)}
+                      value={name}
+                      required
+                    />
+                  )}
                 </div>
                 <Form>
                   <h6 className="heading-small text-muted mb-4">
@@ -127,10 +111,10 @@ useEffect( ()=>{
                           <label className="form-control-label">Email</label>
                           <Input
                             type="email"
-                            placeholder={user?.email} 
-                            readOnly    
-                            value={data?.email}
-                            style={cursor}                    
+                            placeholder={user?.email}
+                            readOnly
+                            value={user?.email}
+                            style={cursor}
                           />
                         </FormGroup>
                       </Col>
@@ -141,7 +125,7 @@ useEffect( ()=>{
                             type="text"
                             placeholder={user?.course}
                             readOnly
-                            value={data?.course}
+                            value={user?.course}
                             style={cursor}
                           />
                         </FormGroup>
@@ -153,7 +137,7 @@ useEffect( ()=>{
                             type="text"
                             placeholder={user?.branch}
                             readOnly
-                            value={data?.branch}
+                            value={user?.branch}
                             style={cursor}
                           />
                         </FormGroup>
@@ -167,7 +151,7 @@ useEffect( ()=>{
                             type="text"
                             placeholder={user?.rollNo}
                             readOnly
-                            value={data?.rollNo}
+                            value={user?.rollNo}
                             style={cursor}
                           />
                         </FormGroup>
@@ -179,31 +163,45 @@ useEffect( ()=>{
                           </label>
                           <Input
                             type="text"
-                            placeholder={user?.acmMemberId}
-                            readOnly = {disabled}
-                            onChange={(e)=>setMemberId(e.target.value)}
+                            placeholder={
+                              memberId ? "Member Id" : "Not A Member"
+                            }
+                            readOnly={disabled}
+                            onChange={(e) => setMemberId(e.target.value)}
                             value={memberId}
                           />
                         </FormGroup>
                       </Col>
                       <Col className="text-right">
-                      <div>
-                       {disabled ? null : <Button onClick={()=>{
-                           setDisabled(true);
-                           setCursor({cursor : ""});
-                           updateInfo();
-                           }}
-                        type="button" value="Input" color="success" >
-                        Save changes
-                       </Button>}
-                       {disabled ? null : <Button onClick={()=>{
-                           setDisabled(true)
-                           window.location.reload();
-                         }}
-                        type="button" value="Input" color="danger" >
-                        Cancel
-                       </Button>}
-                      </div>
+                        <div>
+                          {disabled ? null : (
+                            <Button
+                              onClick={() => {
+                                setDisabled(true);
+                                setCursor({ cursor: "" });
+                                updateInfo();
+                              }}
+                              type="button"
+                              value="Input"
+                              color="success"
+                            >
+                              Save changes
+                            </Button>
+                          )}
+                          {disabled ? null : (
+                            <Button
+                              onClick={() => {
+                                setDisabled(true);
+                                init();
+                              }}
+                              type="button"
+                              value="Input"
+                              color="danger"
+                            >
+                              Cancel
+                            </Button>
+                          )}
+                        </div>
                       </Col>
                     </Row>
                   </div>
