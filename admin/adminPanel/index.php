@@ -1,22 +1,14 @@
-<?php session_start(); 
-    echo "In index.php";
-    print_r($_SERVER);
-    var_dump($_SERVER);
-    if(isset($_SERVER['auth'])){
-        if(!$_SERVER['auth']){
-            header('location: auth/login.php');
-        }
-        $now = time(); // Checking the time now when home page starts.
-
-        // if ($now > $_SERVER['expire']) {
-        //     session_destroy();
-        //     header('location: auth/login.php');
-        // }
+<?php 
+    session_start();
+    if(!$_SESSION['auth']){
+        header('location: auth/login.php');
     }
-    else{
-        // header('location: auth/login.php');
-    }
+    $now = time(); // Checking the time now when home page starts.
 
+    if ($now > $_SESSION['expire']) {
+        session_destroy();
+        header('location: auth/login.php');
+    }
 ?>
 
 <?php	 include('includes/header.php');
@@ -149,6 +141,3 @@
 	include('includes/scripts.php');
 	include('includes/footer.php');
 	?>
-
-
-

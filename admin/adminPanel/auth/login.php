@@ -36,24 +36,13 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
         $query = "SELECT * from users where username='$username' and password='$password'";
-        // $result = mysqli_query($connection,$query);
-        try {
-            $result = mysqli_query($connection,$query);
-            // $this->conn = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->db_name, $this->username, $this->password);
-            // $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            var_dump($result);
-        } catch(PDOException $e) {
-            echo 'Connection Error: ' . $e->getMessage();
-        }        
+        $result = mysqli_query($connection,$query);
         if(mysqli_num_rows($result)==1){
-            echo "Login Success, creating session variables";
-            // session_save_path('/home/usicthosting/public_html/cgi-bin/tmp');
             session_start();
-            $_SERVER['auth']='true';
-            $_SERVER['start'] = time();
-            echo $_SERVER['auth'];
-            echo $_SERVER['start'];
-            header("location: ../index.php");
+            $_SESSION['auth']='true';
+            $_SESSION['start'] = time();
+            $_SESSION['expire'] = $_SESSION['start'] + (60 * 60);
+            header('location: ../index.php');
         }
         else{
             echo 'Wrong email or password';
