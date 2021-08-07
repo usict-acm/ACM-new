@@ -219,9 +219,10 @@ section .leftBox {
 section .leftBox .content {
   height: 30%;
   color: #fff;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px 30px;
-  transition: 0.5s;
+  background: rgba(0,0,0,.5);
+  padding: 7px 30px;
+  transition: .5s;
+  /* overflow: auto; */
 }
 section .leftBox .content:hover {
   background: #e91e63;
@@ -231,9 +232,9 @@ section .leftBox .content h1 {
   padding: 0;
   text-transform: uppercase;
 }
-section .leftBox .content p {
-  margin: 5px 0 0 0;
-  padding: 0;
+section .leftBox .content p{
+  margin: 2px 0 0 0;
+  padding: 0
 }
 
 section .leftBox .live-event {
@@ -315,9 +316,15 @@ section .leftBox .live-event {
   margin-top: 5%;
 }
 
-.carousel-inner {
-  text-align: center;
-}
+  .carousel-inner {
+    text-align: center;
+  }
+  
+  .live-carousel-img {
+    padding-top: 2%;
+    width: 50%;
+    height: 48vh;
+  }
 
 .live-carousel-img {
   width: 50%;
@@ -337,7 +344,7 @@ section .events {
 
 section .events ul {
   position: absolute;
-  top: 7%;
+  top: 3%;
   overflow: auto;
   width: 96%;
   /* transform: translateY(-50%); */
@@ -405,7 +412,7 @@ section .events ul li .details a {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 10px 15px;
+  padding: 8px 15px;
   border: 2px solid #262626;
   margin-top: 10px;
   font-size: 14px;
@@ -450,7 +457,7 @@ section .events ul li .details a:hover {
   section {
     width: 100%;
     /* height: auto; */
-    /* background-image: url(/assets/images/eventsbackground.jpg); */
+    background-image: url("../images/eventsbackground.jpg");
   }
 
   section .leftBox {
@@ -472,7 +479,7 @@ section .events ul li .details a:hover {
 
   section .events {
     position: relative;
-    width: 105%;
+    width: 107%;
     height: 100vh;
     margin: 0px -30px 10px 0px;
     background-image: url("../images/eventsbackground.jpg");
