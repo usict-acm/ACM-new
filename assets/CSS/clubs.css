@@ -26,85 +26,6 @@ a {
   color: black;
 }
 
-.navbar.top-bar {
-  border-radius: 0;
-  padding: 16px 0;
-  z-index: 16;
-}
-
-.navbar-toggler {
-  border: 1px solid #fff;
-  color: #000;
-  position: absolute;
-  right: 21px;
-}
-
-.sps {
-  padding: 1em 0.5em;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: all 0.25s ease;
-  width: 100%;
-}
-
-.sps--abv {
-  background-color: white;
-  color: #000;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-}
-
-.sps--blw {
-  background-color: #fff;
-  color: #000;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-}
-
-.top-bar a.navbar-brand {
-  color: #000;
-  font-size: 26px;
-  font-weight: 800;
-  padding: 5px 0 0 10px;
-  text-transform: uppercase;
-}
-
-.sps--blw.top-bar a.navbar-brand {
-  color: #000;
-}
-
-.top-bar a.navbar-brand span {
-  color: #0297ff;
-}
-
-.top-bar .nav-link {
-  color: #000;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 12px 18px !important;
-}
-
-.sps--blw.top-bar .nav-link {
-  color: #000;
-}
-
-.top-bar .navbar-nav .nav-item {
-  margin: 0;
-}
-
-.top-bar .nav-link:hover,
-.top-bar .nav-item.active a {
-  color: #000;
-  border-bottom: 2px solid #fff;
-  border-radius: 0;
-}
-
-.sps--blw.top-bar .nav-link:hover,
-.sps--blw.top-bar .nav-item.active a {
-  color: #0297ff;
-  border-bottom: none;
-  border-radius: 0;
-}
-
 .pt-card {
   padding: 8%;
   border-radius: 30px;
@@ -126,9 +47,6 @@ a {
   }
   .lheading {
     font-size: 20px;
-  }
-  .acm-logo-navbar {
-    margin-left: 10px;
   }
   .pt-card {
     margin-top: 10px;
@@ -744,36 +662,5 @@ a {
 @media (min-width: 1000px) and (max-width: 1199px) {
   #black_research {
     color: black;
-  }
-}
-.text-and-logo {
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-}
-.outstanding-logo {
-  width: 160px;
-  animation-name: scale-up-center;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-delay: 1s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-}
-@keyframes scale-up-center {
-  0%{
-    -webkit-transform: scale(.2);
-    transform: scale(.2);
-  }
-  100%{
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@media (min-width: 350px) and (max-width: 1200px) {
-  .footer-info {
-    display: flex;
-    flex-direction: column !important;
   }
 }
