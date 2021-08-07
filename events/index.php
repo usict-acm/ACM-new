@@ -107,33 +107,19 @@
                                 </svg></span></span><span class="badge-text">LIVE</span>
                           </span>
                         </span> -->
-                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval=1000>
-                        <!-- button dots hai ye <ol></ol> so jitti images hongi,utti dots , but inhe bhi fr dynamic krna padega kyunki hume ni pta particular month me kitte events honge, abhi 3 dots hi aaengi because 3 li tags hai  -->
-                        <!-- <ol class="carousel-indicators">
-                              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            </ol> -->
-                            <!-- The slideshow -->
-                            <div class="carousel-inner" id="carousel" style="height: 100%;">
-                            <!-- <!-- <div class="carousel-item active">
-                                <img src="../assets/images/ReactNative.png"  class="live-carousel-img">
-                              </div> -->
-                            <!-- <div class="carousel-item active">
-                                <img src="../assets/images/acm1.png"  class="live-carousel-img">
-                              </div> -->
-                              <!-- <div class="carousel-item">
-                                <img src="/assets/images/algorithm-sessions.jpg" class="live-carousel-img">
-                              </div> -->
-                            </div>
-                              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                              </a>
-                              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                              </a>
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval=3000>
+                            
+                          <div class="carousel-inner" id="carousel" style="height: 100%;"></div>
+                            
+                          <!-- <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a> -->
+
                         </div>
                       </div>
 
@@ -145,21 +131,15 @@
     let carouselDIV=document.getElementById("carousel");
 
     $(document).ready(function() {
-              // console.log("1");
-              // console.log(yearWiseEvent);
       $.ajax({
-        // datatype : "application/json",
         url: urlcarousel,
         method: 'GET',
         dataType: 'JSON',
             success: function(data) {
-              console.log("2");
-
-                console.log("check data ",data);
+                console.log("check data 123 ",data);
                 carouselDIV.innerHTML +=" <div class='carousel-item active'>\
                                                     <img src="+data[0].poster+"  class='live-carousel-img'>\
-                                                  </div>";    
-                // data.forEach(carouselfunction);
+                                                  </div>"; 
                 console.log(data[0].poster);
                 console.log(carouselDIV);
                 function carouselfunction() {
@@ -172,13 +152,8 @@
                     }
                     carouselfunction();
                 console.log(carouselDIV);
-
-                    // console.log(yearWiseEvent);
-
             },
-            // error:function(error){console.log(error);},
           });
-          // console.log("88");
     });
 </script> 
 
@@ -196,7 +171,6 @@
     <img class="quote-img" src="../assets/images/About us/image31.jpg" alt="" />
     <img class="quote-img" src="../assets/images/About us/image4.jpg" alt="" />
     <img class="quote-img" src="../assets/images/trell-4.jpeg" alt="" />
-
   </div>
    
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -204,50 +178,50 @@
 <script>
     let urlEventIndex = '../admin/blogAdmin/api.php/?q=getYearEvent';
     let yearWiseEvent=document.getElementById("eventIndex");
+    let numberOfEvents = 0;
 
     $(document).ready(function() {
-              // console.log("1");
-              // console.log(yearWiseEvent);
       $.ajax({
-        // datatype : "application/json",
         url: urlEventIndex,
         method: 'GET',
         dataType: 'JSON',
-            success: function(data) {
-              console.log("2");
-
-                console.log("check data ",data);
-                data.forEach(allEventmore);
-                function allEventmore(event) {
-                    console.log(yearWiseEvent);
-                    // console.log(event.year);
-                    // console.log('./'+event.year+'.php');
-                    // console.log(event.numberOfEvents);
-                    // console.log(event.heading);
-                    // console.log(event.more);
-                        yearWiseEvent.innerHTML +=" <li>\
-                                                        <div class='time'>\
-                                                            <h2>"+event.year+" <br><span></span></h2>\
-                                                        </div>\
-                                                        <div class='details'>\
-                                                            <h3 style='color: black;font-weight: bolder;'>"+event.numberOfEvents+" </h3>\
-                                                            <p style='font-size:large; color: #e91e63;font-weight: bolder;'>"+event.heading+"</p>\
-                                                            <p style='text-align: end; margin-right: 2px; font-size: smaller; color:#0297ff;'>"+event.more+"</p>\
-                                                            <a  href='./"+event.year+".php'>View details</a>\
-                                                        </div>\
-                                                        <div style='clear: both;'></div>\
-                                                    </li>";
-                                                    
-                    }
-                    // console.log(yearWiseEvent);
-
-            },
-            error:function(error){console.log(error);},
-          });
-          console.log("88");
+        success: function(data) {
+          console.log("check data ",data);
+          data.forEach(allEventmore);
+          function allEventmore(event) {
+            let urlYear = '../admin/blogAdmin/api.php/?q=readAllEvent&year='+event.year;
+            $.ajax({
+              url: urlYear,
+              method: 'GET',
+              async: false,
+              dataType: 'JSON',
+              success: function(dataNumber) {
+                console.log(urlYear);
+                console.log("dataNumber",dataNumber);
+                numberOfEvents = dataNumber[1];
+                console.log("numberrrr",numberOfEvents);
+                yearWiseEvent.innerHTML +=" <li>\
+                                                <div class='time'>\
+                                                    <h2>"+event.year+" <br><span></span></h2>\
+                                                </div>\
+                                                <div class='details'>\
+                                                    <h3 style='color: black;font-weight: bolder;'>"+numberOfEvents+" "+event.numberOfEvents+" </h3>\
+                                                    <p style='font-size:large; color: #e91e63;font-weight: bolder;'>"+event.heading+"</p>\
+                                                    <p style='text-align: end; margin-right: 2px; font-size: smaller; color:#0297ff;'>"+event.more+"</p>\
+                                                    <a  href='./eventYear.php?year="+event.year+"'>View details</a>\
+                                                </div>\
+                                                <div style='clear: both;'></div>\
+                                            </li>";
+              }
+            })                              
+          }
+        },
+      error:function(error){
+        console.log(error);
+      },
+      });
     });
 </script>
-
 
   <!-- ****************************************************Header Image****************************************** 
 

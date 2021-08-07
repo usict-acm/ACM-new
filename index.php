@@ -252,10 +252,69 @@
 
     <h1 class="section-heading announce">Announcements</h1>
     <div class="container-fluid text">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
+      <!-- <div class="swiper-container"> -->
+        <!-- <div class="swiper-wrapper"> -->
 
-           <div class="swiper-slide">
+
+<!-- =======================================Swiper slide 1=============================================== -->
+
+          <!-- <div class="swiper-slide"> -->
+            <div class="det">
+              <div class="heading">
+                <h1>
+                   ACM USICT Summer Internship
+                </h1>
+              </div>
+
+              <div class="row det-row">
+                <div class="col-md-7 divide">
+                  <div class="detai">
+                    <p>Greetings everyone!!!<br>
+
+                      USICT ACM Student Chapter has come up with a summer internship opportunity 
+                      for all students of 2022, '23 and '24 batches. The internship involves 
+                      various projects under the Supervision of Mentors. This internship will give 
+                      you in-depth knowledge and will provide exposure to work in advanced 
+                      technology areas.
+
+                      <br>
+                      <br>To be a part of the SUMMER INTERNSHIP, register by Monday,<br> 2 August 2021, 
+                      3 PM 
+
+                      <br>Please note that the form is open for all courses of USICT
+                    </p>
+                    <div style="display: flex;justify-content: space-evenly;">
+                      <!-- <a target="_blank" href="http://bit.do/ReactNativeWorkshop"><button
+                          class="btn announce-button-one" style="background-color:#2250fc">
+                          <span style="color:#fff; font-size:0.9rem">REGISTER NOW</span>
+                        </button>
+                      </a> -->
+                      <a target="_blank"
+                        href="./summerinternship/index.php"><button class="btn"
+                          style="background-color:#2250fc">
+                          <span style="color:#fff; font-size:0.9rem">REGISTER NOW</span>
+                        </button>
+                      </a>
+                    </div>
+
+                  </div>
+
+                </div>
+                <div class="col-md-5 list">
+
+                  <img class="imag imag_trell" src="./assets/images/Summer Internship 2021.jpeg" alt="">
+
+                </div>
+
+              <!-- </div> -->
+
+
+
+            <!-- </div> -->
+
+          <!-- </div> -->
+
+           <!-- <div class="swiper-slide">
             <div class="det">
               <div class="heading">
                 <h1>
@@ -279,13 +338,13 @@
 
                       <br>Time - 2-3 PM
                     </p>
-                    <div style="display: flex;justify-content: space-evenly;">
-                       <a target="_blank" href="http://bit.do/ReactNativeWorkshop"><button
+                    <div style="display: flex;justify-content: space-evenly;"> -->
+                      <!-- <a target="_blank" href="http://bit.do/ReactNativeWorkshop"><button
                           class="btn announce-button-one" style="background-color:#2250fc">
                           <span style="color:#fff; font-size:0.9rem">REGISTER NOW</span>
                         </button>
-                      </a>
-                      <a target="_blank"
+                      </a> -->
+                      <!-- <a target="_blank"
                         href="https://youtube.com/playlist?list=PLgPSSnf8lP5CubPwhgIk9n4FUhFN5nc3L"><button class="btn"
                           style="background-color:#2250fc">
                           <span style="color:#fff; font-size:0.9rem">VIEW PLAYLIST</span>
@@ -310,7 +369,7 @@
 
           </div>
 
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
             <div class="det">
               <div class="heading">
                 <h1>Workshop on "Basics Of Arduino"</h1>
@@ -352,7 +411,7 @@
 
             </div>
 
-          </div>
+          </div> -->
 
           <div class="swiper-slide">
             <div class="det">
@@ -391,11 +450,11 @@
           </div>
 
 
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
             <div class="det">
               <div class="heading">
-                <h1>
-                  <span class="badge">
+                <h1> -->
+                  <!-- <span class="badge">
                     <span class="badge-wrap">
                       <span class="badge-icon"><svg height="14" viewBox="0 0 14 14" width="14"
                           xmlns="http://www.w3.org/2000/svg">
@@ -409,8 +468,8 @@
                             </path>
                           </svg></span></span><span class="badge-text">LIVE</span>
                     </span>
-                  </span>
-                  Research Cell Daily sessions on Algorithms</h1>
+                  </span> -->
+                  <!-- Research Cell Daily sessions on Algorithms</h1>
               </div>
 
               <div class="row det-row">
@@ -428,11 +487,6 @@
                           <span style="color:#fff; font-size:0.9rem">PREVIOUS SESSIONS</span>
                         </button>
                       </a>
-                      <a target="_blank" href="https://meet.google.com/mon-qygy-npe"><button class="btn"
-                          style="background-color:#2250fc">
-                          <span style="color:#fff; font-size:0.9rem">JOIN LIVE</span>
-                        </button>
-                      </a>
                     </div>
 
                   </div>
@@ -445,7 +499,7 @@
                 </div>
 
               </div>
-
+ -->
 
 
             </div>
@@ -456,8 +510,8 @@
 
         </div>
         <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
       </div>
     </div>
   </section>  -->
@@ -586,7 +640,7 @@
                         </button>\
                       </a>\
                       <a target=_blank href=https://youtube.com/playlist?list=PLgPSSnf8lP5CubPwhgIk9n4FUhFN5nc3L><button class=btn style=background-color:#2250fc>\
-                          <span style=color:#fff; font-size:0.9rem>VIEW PLAYLIST</span>\
+                          <span style=color:#fff; font-size:0.9rem>VIEW RESOURCES</span>\
                         </button>\
                       </a>\
                     </div>\
@@ -834,8 +888,7 @@
         <img style="width: 90px; margin-bottom: 5vh; " class="text-center" src="./assets/images/contact_us_icon.png"
           alt="">
         <p class="text section-heading">Get in touch</p>
-        <p class="text-small" style="color: #373f41; font-weight: normal;">Feel free to contact us if you need some
-          help. Consultations or you have some other questions.</p>
+        <p class="text-small" style="color: #373f41; font-weight: normal;">Feel free to contact us in case of any query.</p>
       </div>
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12">

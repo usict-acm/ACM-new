@@ -189,7 +189,7 @@ function read_one()
     $database = new Database();
     $db = $database->connect();
     $id = $_GET['id'];
-
+    
     // echo $db;
 
     // Instantiate blog post object
@@ -355,7 +355,7 @@ function postblog()
    }
 };
 function readEvents(){
-    include_once '../../events/eventPost.php';
+   include_once '../../events/eventPost.php';
     // Instantiate DB & connect
    $database = new Database();
    $db = $database->connect();
@@ -363,11 +363,22 @@ function readEvents(){
   // Instantiate blog post object
    $post = new PostEvent($db);
 
-   echo $year;
+//    echo $year;
 // echo "helllo";
-    $year = $_GET['year'];
+   $year = $_GET['year'];
+   $limit = 7;
+   $page = isset($_GET['page']) ? $_GET["page"] : 1;
+//    echo $page;
+   $start = ($page - 1) * $limit;
    // Blog post query
-   $result = $post->readYearEvent($year);
+   $result = $post->readYearEvent($year,$start,$limit);
+   $countYear = $post->countEventsPerYear($year);
+   foreach ($countYear as $key => $item) {
+       $count = $item;
+   }
+
+   $pages = ceil($count/$limit);
+
    $numRows = mysqli_num_rows($result);
     // echo $numRows;
    // Check if any posts
@@ -375,27 +386,34 @@ function readEvents(){
 
    // Post array
    $posts_arr = array();
+   $multi_array = array();
 
    while($row=$result->fetch_assoc()){
        $post_item = array(
            'sno' => $row["sno"],
            'name' => $row["name"],
            'description' => $row["description"],
-           'regLink' => $row["regLink"],
-           'startTime' => $row["startTime"],
-           'endTime' => $row["endTime"],
-           'watchLink' => $row["watchLink"],
+           'button2Text' => $row["button2Text"],
+           'startDate' => $row["startDate"],
+           'endDate' => $row["endDate"],
+           'button1Text' => $row["button1Text"],
+           'button1Link' => $row["button1Link"],
+           'button2Link' => $row["button2Link"],
            'partners' => $row["partners"],
            'speakers' => $row["speakers"],
            'poster' => $row["poster"],
            'year' => $row["year"],
+           'time' => $row["time"],
        );
            // Push to "data"
            array_push($posts_arr, $post_item);
    }
 
+   array_push($multi_array,$posts_arr);
+   array_push($multi_array,$count);
+   array_push($multi_array,$pages);
    // Turn to JSON & output
-   echo json_encode($posts_arr);
+   echo json_encode($multi_array);
 
    } else {
    // No Posts
@@ -404,6 +422,7 @@ function readEvents(){
    );
    }
 };
+
 function carouselFunctionAPI(){
     include_once '../../events/eventPost.php';
     // echo "1";
@@ -425,7 +444,7 @@ function carouselFunctionAPI(){
     // echo "5";
 
    // Check if any posts
-   if($result) {
+if($result) {
 
    // Post array
    $posts_arr = array();
@@ -449,9 +468,7 @@ function carouselFunctionAPI(){
    }
 };
 
-
-
-   function readAllAnnouncements(){
+function readAllAnnouncements(){
     $database = new Database();
     $db = $database->connect();
     $announcement = new Announcement($db);
@@ -466,18 +483,70 @@ function carouselFunctionAPI(){
                 'name' => $row["name"],
                 'description' => $row["description"],
                 'regLink' => $row["regLink"],
-                'startTime' => $row["startTime"],
-                'endTime' => $row["endTime"],
-                'watchLink' => $row["watchLink"],
+                'startDate' => $row["startDate"],
+                'endDate' => $row["endDate"],
+                'viewResource' => $row["viewResource"],
                 'partners' => $row["partners"],
                 'speakers' => $row["speakers"],
                 'poster' => $row["poster"],
+                'year' => $row["year"],
+                'time' => $row["time"],
+
             );
             array_push($announcements_arr, $announcement_item);
         } 
         echo json_encode($announcements_arr);
     }
-   }
+}
+
+function postAnnouncement(){
+    $database = new Database();
+    $db = $database->connect();
+    // if(isset($_POST['submit'])){
+    $txtTitle = isset($_POST['name']) ? $_POST["name"] : false;
+    $txtDescription = isset($_POST['description']) ? $_POST["description"] : false;
+    $txtReglink = isset($_POST['regLink']) ? $_POST["regLink"] : false;
+    $txtStartdate= isset($_POST['startDate']) ? $_POST["startDate"] : false;
+    $txtEnddate= isset($_POST['endDate']) ? $_POST["endDate"] : false;
+    $txtviewResource = isset($_POST['viewResource']) ? $_POST["viewResource"] : false;
+    $txtPartners = isset($_POST['partners']) ? $_POST["partners"] : false;
+    $txtSpeakers = isset($_POST['speakers']) ? $_POST["speakers"] : false;
+    $txtYear = isset($_POST['year']) ? $_POST["year"] : false;
+    $txtTime = isset($_POST['time']) ? $_POST["time"] : false;
+    $file = $_FILES['poster'];
+    // echo $file;
+
+    $filename = $file['name'];
+    // $fileerror = $file['error'];
+    $filetemppath= $file['tmp_name'];
+
+    $fileext = explode('.',$filename);
+    $filecheck = strtolower(end($fileext));
+
+    $fileextstored = array('png','jpg','jpeg');
+    
+    if(!$txtTitle || !$txtDescription || !$txtReglink || !$txtStartdate || !$txtEnddate || !$txtviewResource || !$txtPartners || !$txtSpeakers || !$txtYear || !$txtTime){
+        echo json_encode(http_response_code(400));    
+    } else {
+        if(in_array($filecheck,$fileextstored)){
+            $destinationfile = 'upload/announcements/'.$filename;
+            $uploadLocation = '../../upload/announcements/'.$filename;
+            move_uploaded_file($filetemppath,$uploadLocation);
+
+            $sql = "INSERT INTO `event` (`sno`, `name`, `description`, `regLink`, `startDate`, `endDate` , `viewResource` , `partners` , `speakers` , `poster` , `year` , `time`) VALUES ('0', '$txtTitle', '$txtDescription', '$txtReglink' ,'$txtStartdate','$txtEnddate','$txtviewResource','$txtPartners','$txtSpeakers', '$destinationfile', '$txtYear', '$txtTime');";
+            if($db->query($sql) == true){
+                echo json_encode("Form has been submitted");        
+            } else{
+            // echo json_encode("ERROR: $sql <br> $db->error");
+                echo json_encode(http_response_code(400));
+            }
+        } else{
+            echo json_encode(http_response_code(400));
+            // echo json_encode("Fill all the fields");
+        }
+    }
+    // }
+};
 
 function postImage()
 {
@@ -546,6 +615,9 @@ switch ($q) {
         break;
     case 'readAllAnnouncements':
         readAllAnnouncements();
+        break;
+    case 'postAnnouncement':
+        postAnnouncement();
         break;
     case 'getYearEvent':
         yearWiseEvent1();
