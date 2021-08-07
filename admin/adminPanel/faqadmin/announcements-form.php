@@ -5,7 +5,7 @@
 
 <?php
 // Include config file
-require_once "./config.php";
+require_once "./faqadmin/config1.php";
 ?>
 
 <!DOCTYPE html>

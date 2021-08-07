@@ -54,7 +54,7 @@
                 <div class="col-md-12">
                     <div class="page-header clearfix">
                         <h2 class="pull-left">Blog Admin Panel</h2>
-                        <a href="faqadmin/create.php" class="btn btn-primary pull-right">Add New Blog</a>
+                        <a href="?table=AddAnnouncement" class="btn btn-primary pull-right">Add New Announcement</a>
                     </div>
                     <?php
                     // Include config file
@@ -110,3 +110,5 @@
     </div>
 </body>
 </html>
+
+
