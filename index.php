@@ -2,46 +2,13 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>ACM USICT</title>
-  <link rel="icon" href="./assets/images/acm1.png" type="image/x-icon">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc">
-
-  <!-- Google / Search Engine Tags -->
-  <meta itemprop="name" content="ACM@USICT Chapter, GGSIPU">
-  <meta itemprop="description"
-    content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc">
-  <meta itemprop="image" content="./assets/images/acm1.png">
-
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="http://usict.acm.org/ACM_New">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="ACM@USICT Chapter, GGSIPU">
-  <meta property="og:description"
-    content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc">
-  <meta property="og:image" content="./assets/images/acm1.png">
-
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ACM@USICT Chapter, GGSIPU">
-  <meta name="twitter:description"
-    content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc">
-  <meta name="twitter:image" content="./assets/images/acm1.png">
-
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <?php
+  include("head.php")
+  ?>
+  <title>USICT ACM</title>
   <link href='./assets/CSS/styles.css' rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- <script src="jquery-3.5.1.min.js"></script> -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <link rel="stylesheet" type="text/css" href="./assets/CSS/glider.css">
-  <script src="https://kit.fontawesome.com/d459eda8d9.js" crossorigin="anonymous"></script>
-
+  <link href='./assets/CSS/glider.css' rel="stylesheet" />
+  <link href='./assets/CSS/footer.css' rel="stylesheet" />
   <style>
     @media (min-width: 0px) and (max-width: 500px) {
       section {
@@ -59,33 +26,29 @@
 
   <nav id="togglerButton" class="navbar navbar-expand-lg mb-4 top-bar navbar-static-top sps sps--abv">
     <div class="container">
-      <button class="navbar-toggler navbar-toggler-right" type="button" onclick="myFunction()" data-toggle="collapse"
-        data-target="#navbarCollapse1" aria-controls="navbarCollapse" aria-expanded="false"
-        aria-label="Toggle navigation">
+      <button class="navbar-toggler navbar-toggler-right" type="button" onclick="myFunction()" data-toggle="collapse" data-target="#navbarCollapse1" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"><i style="color:black; margin-top:5px" class="fas fa-bars"></i></span>
       </button>
       <div class="d-flex">
-        <a href="./index.html"><img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm logo" />
-        <div class="text-and-logo"></a>
-            <a style="font-size: 16px; padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto"
-                href="./index.html">ACM<span> USICT</span></a>
-            <a href="./index.html"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
-        </div>
-    </div>
-      <div class="collapse navbar-collapse" id="navbarCollapse1">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"> <a class="nav-link" href="#myCarousel">Home <span
-                class="sr-only">(current)</span></a> </li>
-          <li class="nav-item"> <a class="nav-link" href="./collab.html">Sponsors</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="./benefits.html">Why Join Us?</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="./clubs.html">Clubs</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="./Team.html">Our Team</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#contact">Contact Us</a> </li>
-          <li class="nav-item"> <a class="nav-link"
-              href="https://services.acm.org/public/qj/proflevel/proflevel_control.cfm?level=3&country=India&form_type=Student&promo=LEVEL&pay=DD">ACM
-              Registration</a> </li>
-        </ul>
+        <a href="./"><img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm logo" />
+          <div class="text-and-logo">
+        </a>
+        <a style="font-size: 16px; padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto" href="./">USICT<span> ACM</span></a>
+        <a href="./"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
       </div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarCollapse1">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"> <a class="nav-link" href="#myCarousel">Home <span class="sr-only">(current)</span></a> </li>
+        <li class="nav-item"> <a class="nav-link" href="./blogs.php">Blogs</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="./benefits.php">Why Join Us?</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="./clubs.php">Clubs</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="./Team.php">Our Team</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#contact">Contact Us</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="./benefits.php#registration">ACM
+            Registration</a> </li>
+      </ul>
+    </div>
     </div>
   </nav>
 
@@ -114,19 +77,9 @@
       <div class="swiper-button-prev"><i class="fa fa-chevron-left"></i></div>
       <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
     </div>
-
   </div>
 
-
-
-
-
-
-
-
-
-  <section id="about" class="p-t-80"
-    style="background-color:#fff;background-image: url('./assets/images/right_up.png');">
+  <section id="about" class="p-t-80" style="background-color:#fff;background-image: url('./assets/images/right_up.png');">
     <div class="text-center" style="font-size:16px;font-weight: bold; margin-bottom: 5vh;">
       <img style="width: 90px; margin-bottom: 5vh; " class="text-center" src="./assets/images/chapter_icon.png" alt="">
       <h1 class="section-heading"><b>About Our Chapter</b></h1>
@@ -134,24 +87,15 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-7 m-b-30 animated fadeInLeft visible" data-animate="fadeInLeft">
-
           <div id="main-slider" class="swiper-container main-slider" style="height:45vh">
             <div class="swiper-wrapper">
-              <div class="swiper-slide slider-bg-position" style="background:url('assets/images/About us/image1.jpg')"
-                data-hash="slide1">
-
+              <div class="swiper-slide slider-bg-position" style="background:url('assets/images/About us/image1.jpg')" data-hash="slide1">
               </div>
-              <div class="swiper-slide slider-bg-position" style="background:url('assets/images/About us/image2.jpg')"
-                data-hash="slide2">
-
+              <div class="swiper-slide slider-bg-position" style="background:url('assets/images/About us/image2.jpg')" data-hash="slide2">
               </div>
-              <div class="swiper-slide slider-bg-position" style="background:url('assets/images/About us/image31.jpg')"
-                data-hash="slide2">
-
+              <div class="swiper-slide slider-bg-position" style="background:url('assets/images/About us/image31.jpg')" data-hash="slide2">
               </div>
-              <div class="swiper-slide slider-bg-position" style="background:url('assets/images/About us/image4.jpg')"
-                data-hash="slide2">
-
+              <div class="swiper-slide slider-bg-position" style="background:url('assets/images/About us/image4.jpg')" data-hash="slide2">
               </div>
             </div>
             <!-- Add Pagination -->
@@ -160,7 +104,6 @@
             <div class="swiper-button-prev"><i class="fa fa-chevron-left"></i></div>
             <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
           </div>
-
         </div>
         <div class="col-lg-5 p-l-40 p-r-40 animated fadeInRight visible" data-animate="fadeInRight">
           <div class="m-b-40">
@@ -175,16 +118,14 @@
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
               <a href="./assets/newsletter2.pdf">
-                <button z-index="999" class="btn btnForNewsletter400px"
-                  style="background-color:#2250fc;margin-bottom: 20px;">
+                <button z-index="999" class="btn btnForNewsletter400px" style="background-color:#2250fc;margin-bottom: 20px;">
                   <span style="color:#fff; font-size:0.9rem">ACM NEWSLETTER 2021</span>
                 </button>
               </a>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
               <a href="./assets/newsletter.pdf">
-                <button z-index="999" class="btn btnForNewsletter400px"
-                  style="background-color:#2250fc;margin-bottom: 20px">
+                <button z-index="999" class="btn btnForNewsletter400px" style="background-color:#2250fc;margin-bottom: 20px">
                   <span style="color:#fff; font-size:0.9rem">ACM NEWS LETTER 2020</span>
                 </button>
               </a>
@@ -193,27 +134,21 @@
         </div>
       </div>
     </div>
-
   </section>
 
+  <!-- =================================Vision and mission================================================== -->
 
-
-
-  <section id="what_we_do" class="box-fancy background-overlay-one"
-    style="background-color: white;background-image: url('./assets/images/left_bg.png');">
+  <section id="what_we_do" class="box-fancy background-overlay-one" style="background-color: white;background-image: url('./assets/images/left_bg.png');">
     <div class="text-center" style="font-size:16px;font-weight: bold; margin-bottom: 5vh;">
-      <img style="width: 90px; margin-bottom: 5vh; " class="text-center" src="./assets/images/vision&mision/icon.png"
-        alt="">
+      <img style="width: 90px; margin-bottom: 5vh; " class="text-center" src="./assets/images/vision&mision/icon.png" alt="">
       <h1 class="section-heading"><b>Chapter Goals</b></h1>
     </div>
     <div class="container container-fluid">
       <div class="row m-b-30" style="padding:3vh;margin-bottom: 5vh;">
-        <div class="col-lg-4 text-center animated fadeInLeft visible" data-animate="fadeInLeft"
-          data-animate-delay="400">
+        <div class="col-lg-4 text-center animated fadeInLeft visible" data-animate="fadeInLeft" data-animate-delay="400">
           <img src="./assets/images/vision&mision/vission.png" style="height: 20vh;" alt="">
         </div>
-        <div class="col-lg-8 text-center animated fadeInLeft visible" data-animate="fadeInLeft"
-          data-animate-delay="400">
+        <div class="col-lg-8 text-center animated fadeInLeft visible" data-animate="fadeInLeft" data-animate-delay="400">
           <h3 style="font-size: xx-large;"><b>VISION</b></h1>
             <h5 style="line-height: 150%;font-size:14px;text-align: justify;"><b>We see a world where computing helps
                 solve tomorrow’s problems – where we use our knowledge and skills to advance the profession and make a
@@ -222,10 +157,8 @@
                 organising Seminars, workshops and competitions of various domains.</b></h5>
         </div>
       </div>
-      <!-- <hr style="border: 2px solid #25286e; border-style: none; border-top-style: dotted; border-width: 8px;"> -->
       <div class="row m-b-30" style="padding:3vh;margin-bottom: 5vh;">
-        <div class="col-lg-8 text-center animated fadeInRight visible" data-animate="fadeInRight"
-          data-animate-delay="400">
+        <div class="col-lg-8 text-center animated fadeInRight visible" data-animate="fadeInRight" data-animate-delay="400">
           <h3 style="font-size:xx-large;"><b>MISSION</b></h1>
             <h5 style=" line-height: 150%; font-size:14px;text-align: justify;"><b>We, at The ACM Chapter USICT, are
                 missioned with a common goal to inculcate the spirit of technology among young minds and become a
@@ -235,95 +168,131 @@
                 existence, has now created its
                 unique. </b></h5>
         </div>
-        <div class="col-lg-4 text-center animated fadeInRight visible" data-animate="fadeInRight"
-          data-animate-delay="400">
+        <div class="col-lg-4 text-center animated fadeInRight visible" data-animate="fadeInRight" data-animate-delay="400">
           <img src="./assets/images/vision&mision/mission.png" style="height: 20vh;" alt="">
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ====================================Announcement============================================= -->
 
-
-
-
-  <!-- <section class="announcement">
-
+  <section class="announcement">
     <h1 class="section-heading announce">Announcements</h1>
     <div class="container-fluid text">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
+      <!-- <div class="swiper-container"> -->
+      <!-- <div class="swiper-wrapper"> -->
 
-           <div class="swiper-slide">
+      <!-- ==================================Swiper slide 1============================================= -->
+
+
+      <!-- <div class="swiper-slide"> -->
+      <div class="det">
+        <div class="heading">
+          <h1>
+            ACM USICT Summer Internship
+          </h1>
+        </div>
+
+        <div class="row det-row">
+          <div class="col-md-7 divide">
+            <div class="detai">
+              <p>Greetings everyone!!!<br>
+
+                USICT ACM Student Chapter has come up with a summer internship opportunity
+                for all students of 2022, '23 and '24 batches. The internship involves
+                various projects under the Supervision of Mentors. This internship will give
+                you in-depth knowledge and will provide exposure to work in advanced
+                technology areas.
+
+                <br>
+                <br>To be a part of the SUMMER INTERNSHIP, register by Monday,<br> 2 August 2021,
+                3 PM
+
+                <br>Please note that the form is open for all courses of USICT
+              </p>
+              <div style="display: flex;justify-content: space-evenly;">
+                <a target="_blank" href="http://bit.do/ReactNativeWorkshop"><button class="btn announce-button-one" style="background-color:#2250fc">
+                    <span style="color:#fff; font-size:0.9rem">REGISTER NOW</span>
+                  </button>
+                </a>
+                <a target="_blank" href="./summerinternship/index.php"><button class="btn" style="background-color:#2250fc">
+                    <span style="color:#fff; font-size:0.9rem">REGISTER NOW</span>
+                  </button>
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="col-md-5 list">
+
+            <img class="imag imag_trell" src="./assets/images/Summer Internship 2021.jpeg" alt="">
+
+          </div>
+
+          <!-- </div> -->
+
+
+
+          <!-- </div> -->
+
+          <!-- </div> -->
+
+          <!-- <div class="swiper-slide">
             <div class="det">
               <div class="heading">
                 <h1>
                    Session On React Native
                 </h1>
               </div>
-
               <div class="row det-row">
                 <div class="col-md-7 divide">
                   <div class="detai">
                     <p>Greetings everyone!!!<br>
-
                       We hope you all are healthy and doing fine. If you want to do have a go at the App Development, we
                       are here with something tailor-made for you. We, at USICT ACM Student Chapter are conducting a
                       week-long session on React Native by Shlok Garg (Youtube Channel - S.G. Codes) . The event will be
                       a complete journey to your first react app from the scratch. So, what are you thinking? Register
                       now for what promises to be a great journey.
-
-
                       <br>Date - 12-17 May, 2021
-
                       <br>Time - 2-3 PM
                     </p>
-                    <div style="display: flex;justify-content: space-evenly;">
-                       <a target="_blank" href="http://bit.do/ReactNativeWorkshop"><button
+                    <div style="display: flex;justify-content: space-evenly;"> -->
+          <!-- <a target="_blank" href="http://bit.do/ReactNativeWorkshop"><button
                           class="btn announce-button-one" style="background-color:#2250fc">
                           <span style="color:#fff; font-size:0.9rem">REGISTER NOW</span>
                         </button>
-                      </a>
-                      <a target="_blank"
+                      </a> -->
+          <!-- <a target="_blank"
                         href="https://youtube.com/playlist?list=PLgPSSnf8lP5CubPwhgIk9n4FUhFN5nc3L"><button class="btn"
                           style="background-color:#2250fc">
                           <span style="color:#fff; font-size:0.9rem">VIEW PLAYLIST</span>
                         </button>
                       </a>
                     </div>
-
                   </div>
-
                 </div>
                 <div class="col-md-5 list">
-
                   <img class="imag imag_trell" src="./assets/images/ReactNative.png" alt="">
-
                 </div>
-
               </div>
-
-
-
             </div>
 
           </div>
 
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
             <div class="det">
               <div class="heading">
                 <h1>Workshop on "Basics Of Arduino"</h1>
               </div>
-
               <div class="row det-row">
                 <div class="col-md-7 divide">
                   <div class="detai">
                     <p>"You don't need anyone's permission to create something great".
-
                       As you are on a journey to create a better you, we are there to help you out. RobIoTics Club,
                       USICT ACM Student Chapter is organizing a workshop on "Basics of Arduino" to give wings to your
                       robotics journey. Join us for a fun and interactive experience. Details are as follows:-
-
                       <br>Date - 9 May, 2021
                       <br>Day - Sunday
                       <br>Time - 7PM onwards
@@ -335,66 +304,47 @@
                         </button>
                       </a>
                     </div>
-
                   </div>
-
                 </div>
                 <div class="col-md-5 list">
-
                   <img class="imag imag_trell" src="./assets/images/arduino-workshop.jpeg" alt="">
-
                 </div>
-
               </div>
-
-
-
             </div>
 
-          </div>
+          </div> -->
 
           <div class="swiper-slide">
             <div class="det">
               <div class="heading">
                 <h1>Blog Writing Competition</h1>
               </div>
-
               <div class="row det-row">
                 <div class="col-md-7 divide">
                   <div class="detai">
                     <p>USICT ACM Student Chapter is organizing an online blog writing competition "Write It Loud".
                     </p>
                     <div style="display: flex;justify-content: space-evenly;">
-                      <a target="_blank" href="http://bit.do/WriteItLoud"><button class="btn announce-button-one"
-                          style="background-color:#2250fc">
+                      <a target="_blank" href="http://bit.do/WriteItLoud"><button class="btn announce-button-one" style="background-color:#2250fc">
                           <span style="color:#fff; font-size:0.9rem">REGISTER NOW</span>
                         </button>
                       </a>
                     </div>
-
                   </div>
-
                 </div>
                 <div class="col-md-5 list">
-
                   <img class="imag imag_trell" src="./assets/images/blog.jpeg" alt="">
-
                 </div>
-
               </div>
-
-
-
             </div>
-
           </div>
 
 
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
             <div class="det">
               <div class="heading">
-                <h1>
-                  <span class="badge">
+                <h1> -->
+          <!-- <span class="badge">
                     <span class="badge-wrap">
                       <span class="badge-icon"><svg height="14" viewBox="0 0 14 14" width="14"
                           xmlns="http://www.w3.org/2000/svg">
@@ -408,10 +358,9 @@
                             </path>
                           </svg></span></span><span class="badge-text">LIVE</span>
                     </span>
-                  </span>
-                  Research Cell Daily sessions on Algorithms</h1>
+                  </span> -->
+          <!-- Research Cell Daily sessions on Algorithms</h1>
               </div>
-
               <div class="row det-row">
                 <div class="col-md-7 divide">
                   <div class="detai">
@@ -427,49 +376,33 @@
                           <span style="color:#fff; font-size:0.9rem">PREVIOUS SESSIONS</span>
                         </button>
                       </a>
-                      <a target="_blank" href="https://meet.google.com/mon-qygy-npe"><button class="btn"
-                          style="background-color:#2250fc">
-                          <span style="color:#fff; font-size:0.9rem">JOIN LIVE</span>
-                        </button>
-                      </a>
+
                     </div>
-
                   </div>
-
                 </div>
                 <div class="col-md-5 list">
-
                   <img class="imag" src="./assets/images/algorithm-sessions.jpg" alt="" width="100%">
-
                 </div>
-
               </div>
+ -->
 
-
-
-            </div>
-
-          </div>
-
-          <script src="tmp_home_swipe/js/swiper.min.js"></script>
 
         </div>
-        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
       </div>
     </div>
-  </section>  -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    </div>
+    </div>
+  </section>
 
-  <?php 
-    require_once("./announcement.php"); 
-  ?>
-
+  <!-- ******************************************Blogs******************************************* -->
 
   <script>
     function readMoreRedirection(id) {
       console.log(id)
-      window.document.location = "./singleBlog.php?Id="+id; //Connecting Second page
+      window.document.location = "./singleBlog.php?Id=" + id; //Connecting Second page
     }
   </script>
 
@@ -485,8 +418,8 @@
     </div>
   </section> -->
 
-  <?php 
-    require_once "./announcement.php";
+  <?php
+  require_once "./announcement.php";
   ?>
 
   <section class="text-center">
@@ -498,7 +431,7 @@
           <span style="color:#fff; font-size:1rem">SEE MORE BLOGS</span>
         </button>
       </a>
-    </div>    
+    </div>
   </section>
 
   <script>
@@ -507,36 +440,36 @@
 
     let url1 = "./admin/blogAdmin/api.php/?q=readHome"
 
-    $(document).ready(function(){
+    $(document).ready(function() {
       $.ajax({
         url: url1,
         method: "GET",
         dataType: "JSON",
-        success: function(data){
-            var i;
-            for(i=1;i<4;i++){
-              myFunc(data[i-1],i)
-            }
+        success: function(data) {
+          var i;
+          for (i = 1; i < 4; i++) {
+            myFunc(data[i - 1], i)
+          }
 
-            function myFunc(row,index){
-              var desc = row.Content;
-              var descSub = desc.substring(0, 70) + '...';
-              rwBlogs.innerHTML += 
+          function myFunc(row, index) {
+            var desc = row.Content;
+            var descSub = desc.substring(0, 70) + '...';
+            rwBlogs.innerHTML +=
               "<div class=col-lg-4 col-md-6 col-12 my-3>\
                 <div class=mb-4>\
                 <img src=./" + row.Image + " id=blog1_image class=img-fluid alt=Sample image style='height: 12rem'>\
                 </div>\
                 <a href=#! class=pink-text>\
                   <h6 class=font-weight-bold mb-3>\
-                    <i id=blog1_category class=fas fa-map pr-2>"+ row.Category +"</i>\
+                    <i id=blog1_category class=fas fa-map pr-2>" + row.Category + "</i>\
                   </h6>\
                 </a>\
-                <h4 id=blog1_title class=font-weight-bold mb-3 style=color: black;>"+ row.Title +"<strong></strong></h4>\
-                <p >by <a id=blog1_author class=font-weight-bold style=color: black;>"+ row.Author +"</a>, <p id=blog1_date></p></p>\
-                <p class=d-inline id=blog1_content>"+ descSub +"</p>\
-                <a style=color:blue;cursor:pointer onclick=readMoreRedirection("+ row.Sno +") id=readMore_blog1 class=d-inline style=color: #2250fc;>Read More</a>\
-              </div>"   
-            }
+                <h4 id=blog1_title class=font-weight-bold mb-3 style=color: black;>" + row.Title + "<strong></strong></h4>\
+                <p >by <a id=blog1_author class=font-weight-bold style=color: black;>" + row.Author + "</a>, <p id=blog1_date></p></p>\
+                <p class=d-inline id=blog1_content>" + descSub + "</p>\
+                <a style=color:blue;cursor:pointer onclick=readMoreRedirection(" + row.Sno + ") id=readMore_blog1 class=d-inline style=color: #2250fc;>Read More</a>\
+              </div>"
+          }
         }
       });
     });
@@ -548,16 +481,17 @@
 
     let url = "./admin/blogAdmin/api.php/?q=readAllAnnouncements";
 
-    $(document).ready(function(){
+    $(document).ready(function() {
       $.ajax({
         url: url,
         method: "GET",
         dataType: "JSON",
-        success: function(data){
-          console.log("all announcements",data);
-            data.forEach(myfunc1);
-            function myfunc1(row, index) {
-              allAnn.innerHTML += "<div class='swiper-slide'>\
+        success: function(data) {
+          console.log("all announcements", data);
+          data.forEach(myfunc1);
+
+          function myfunc1(row, index) {
+            allAnn.innerHTML += "<div class='swiper-slide'>\
             <div class=det>\
               <div class=heading>\
                 <h1>\
@@ -597,12 +531,10 @@
               </div>\
             </div>\
           </div>"
-            }
           }
-        });
+        }
       });
-
- 
+    });
   </script>
 
   <!--  *******************************************************************EVENTS*********************************************-->
@@ -612,22 +544,17 @@
     <div class="container events">
       <img src="./assets/images/events.png" style="width: 90px;margin-bottom: 5vh;" alt="">
       <h1 class="section-heading announce">Events & Announcements</h1>
-      
-          <!-- ********************************************EVENT ARD***************************************************  -->
-          <div class="wrapper">
-            <div class="link_wrapper">
-              <a href="./events/index.html">Know More!</a>
-              <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
-                  <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
-                </svg>
-              </div>
-            </div>
-            
+      <!-- ********************************************EVENT ARD***************************************************  -->
+      <div class="wrapper">
+        <div class="link_wrapper">
+          <a href="./events/index.html">Know More!</a>
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+              <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z" />
+            </svg>
           </div>
-        
-       
-
+        </div>
+      </div>
     </div>
   </section>
 
@@ -668,8 +595,7 @@
               <div class="team-mem">
                 <img class="dean" src="./assets/images/team/Gaurav.png" alt="">
                 <div class="content">
-                  <a href="https://linkedin.com/in/gauravj22" target="_blank"><i
-                      class="fab fa-linkedin team-profile"></i></a>
+                  <a href="https://linkedin.com/in/gauravj22" target="_blank"><i class="fab fa-linkedin team-profile"></i></a>
                 </div>
               </div>
 
@@ -681,8 +607,7 @@
               <div class="team-mem">
                 <img class="dean" src="./assets/images/team/vardaan.jpg" alt="">
                 <div class="content">
-                  <a href="https://www.linkedin.com/in/vardaan-grover-8a64141a0/" target="_blank"><i
-                      class="fab fa-linkedin team-profile"></i></a>
+                  <a href="https://www.linkedin.com/in/vardaan-grover-8a64141a0/" target="_blank"><i class="fab fa-linkedin team-profile"></i></a>
                 </div>
               </div>
               <p class="team-memberName">Vardaan Grover</p>
@@ -693,8 +618,7 @@
               <div class="team-mem">
                 <img class="dean" src="./assets/images/team/Akshad.jpg" alt="">
                 <div class="content">
-                  <a href="https://www.linkedin.com/in/akshad-bhandula-073202113/" target="_blank"><i
-                      class="fab fa-linkedin team-profile"></i></a>
+                  <a href="https://www.linkedin.com/in/akshad-bhandula-073202113/" target="_blank"><i class="fab fa-linkedin team-profile"></i></a>
                 </div>
               </div>
               <p class="team-memberName">Akshad Bhandula</p>
@@ -705,8 +629,7 @@
               <div class="team-mem">
                 <img class="dean" src="./assets/images/team/Divyansh.jpg" alt="">
                 <div class="content">
-                  <a href="https://www.linkedin.com/in/divyansh-rastogi-08a44a171/" target="_blank"><i
-                      class="fab fa-linkedin team-profile"></i></a>
+                  <a href="https://www.linkedin.com/in/divyansh-rastogi-08a44a171/" target="_blank"><i class="fab fa-linkedin team-profile"></i></a>
                 </div>
               </div>
               <p class="team-memberName">Divyansh Rastogi</p>
@@ -719,8 +642,7 @@
               <div class="team-mem">
                 <img class="dean" src="./assets/images/team/chaitanDev.jpg" alt="">
                 <div class="content">
-                  <a href="https://www.linkedin.com/in/chaitan-dev" target="_blank"><i
-                      class="fab fa-linkedin team-profile"></i></a>
+                  <a href="https://www.linkedin.com/in/chaitan-dev" target="_blank"><i class="fab fa-linkedin team-profile"></i></a>
                 </div>
               </div>
               <p class="team-memberName">Chaitan Dev</p>
@@ -731,8 +653,7 @@
               <div class="team-mem">
                 <img class="dean" src="./assets/images/team/profile_pic_anmol.webp" alt="">
                 <div class="content">
-                  <a href="https://linkedin.com/in/anmol-goel-13b447178" target="_blank"><i
-                      class="fab fa-linkedin team-profile"></i></a>
+                  <a href="https://linkedin.com/in/anmol-goel-13b447178" target="_blank"><i class="fab fa-linkedin team-profile"></i></a>
                 </div>
               </div>
               <p class="team-memberName">Anmol Goel</p>
@@ -743,8 +664,7 @@
               <div class="team-mem">
                 <img class="dean" src="./assets/images/team/sushantHaluwai.jpg" alt="">
                 <div class="content">
-                  <a href="https://www.linkedin.com/in/sushant-haluwai-8997171b5" target="_blank"><i
-                      class="fab fa-linkedin team-profile"></i></a>
+                  <a href="https://www.linkedin.com/in/sushant-haluwai-8997171b5" target="_blank"><i class="fab fa-linkedin team-profile"></i></a>
                 </div>
               </div>
               <p class="team-memberName">Sushant Haluwai</p>
@@ -755,8 +675,7 @@
               <div class="team-mem">
                 <img class="dean" src="./assets/images/team/harshGoyal.png" alt="">
                 <div class="content">
-                  <a href="https://www.linkedin.com/in/harsh-goyal-195255b9" target="_blank"><i
-                      class="fab fa-linkedin team-profile"></i></a>
+                  <a href="https://www.linkedin.com/in/harsh-goyal-195255b9" target="_blank"><i class="fab fa-linkedin team-profile"></i></a>
                 </div>
               </div>
               <p class="team-memberName">Harsh Goyal</p>
@@ -770,8 +689,7 @@
               <div class="team-mem">
                 <img class="dean" src="./assets/images/team/Manoj.jpg" alt="">
                 <div class="content">
-                  <a href="https://www.linkedin.com/in/manoj-kumar-a4a215195/" target="_blank"><i
-                      class="fab fa-linkedin team-profile"></i></a>
+                  <a href="https://www.linkedin.com/in/manoj-kumar-a4a215195/" target="_blank"><i class="fab fa-linkedin team-profile"></i></a>
                 </div>
               </div>
               <p class="team-memberName">Manoj Kumar</p>
@@ -782,8 +700,7 @@
               <div class="team-mem">
                 <img class="dean" src="./assets/images/team/Anuj.jpg" height="inherit" alt="">
                 <div class="content">
-                  <a href="https://www.linkedin.com/in/anuj-talwar-1281121b4/" target="_blank"><i
-                      class="fab fa-linkedin team-profile"></i></a>
+                  <a href="https://www.linkedin.com/in/anuj-talwar-1281121b4/" target="_blank"><i class="fab fa-linkedin team-profile"></i></a>
                 </div>
               </div>
               <p class="team-memberName">Anuj Talwar</p>
@@ -794,8 +711,7 @@
               <div class="team-mem">
                 <img class="dean" src="./assets/images/team/Tarun.jpg" alt="">
                 <div class="content">
-                  <a href="https://www.linkedin.com/in/tarun-shekhawat-037091194/" target="_blank"><i
-                      class="fab fa-linkedin team-profile"></i></a>
+                  <a href="https://www.linkedin.com/in/tarun-shekhawat-037091194/" target="_blank"><i class="fab fa-linkedin team-profile"></i></a>
                 </div>
               </div>
               <p class="team-memberName">Tarun</p>
@@ -806,8 +722,7 @@
               <div class="team-mem">
                 <img class="dean" src="./assets/images/team/vishesh.jpeg" alt="">
                 <div class="content">
-                  <a href="https://www.linkedin.com/in/vishesh-gupta-404955206/" target="_blank"><i
-                      class="fab fa-linkedin team-profile"></i></a>
+                  <a href="https://www.linkedin.com/in/vishesh-gupta-404955206/" target="_blank"><i class="fab fa-linkedin team-profile"></i></a>
                 </div>
               </div>
               <p class="team-memberName">Vishesh Gupta</p>
@@ -817,7 +732,7 @@
         </div>
       </div>
 
-      <a href="./Team.html">
+      <a href="./team.php">
         <button class="btn meet-us" style="background-color:#2250fc">
           <span style="color:#fff; font-size:1rem">MEET US</span>
         </button>
@@ -826,57 +741,44 @@
   </section>
 
   <!--************************************************************Get In touch******************************************-->
-  <section id="contact" class="background-grey"
-    style="background-color: white;background-image: url('./assets/images/left_bg.png')">
+  <section id="contact" class="background-grey" style="background-color: white;background-image: url('./assets/images/left_bg.png')">
     <div class="container">
       <div class="m-b-50" style="text-align: center;">
-        <img style="width: 90px; margin-bottom: 5vh; " class="text-center" src="./assets/images/contact_us_icon.png"
-          alt="">
+        <img style="width: 90px; margin-bottom: 5vh; " class="text-center" src="./assets/images/contact_us_icon.png" alt="">
         <p class="text section-heading">Get in touch</p>
-        <p class="text-small" style="color: #373f41; font-weight: normal;">Feel free to contact us if you need some
-          help. Consultations or you have some other questions.</p>
+        <p class="text-small" style="color: #373f41; font-weight: normal;">Feel free to contact us if you need some help, consultations or you have some other questions.</p>
       </div>
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12">
-          <img class=" contact-us-img m-t-20" style="    width: 100%;" src="./assets/images/contact_us.png"
-            alt="contact us image">
+          <img class=" contact-us-img m-t-20" style="    width: 100%;" src="./assets/images/contact_us.png" alt="contact us image">
         </div>
         <div class="col-lg-6">
-          <form class="widget-contact-form"
-            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse"
-            role="form" method="post" target="_self" novalidate="novalidate">
+          <form class="widget-contact-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse" role="form" method="post" target="_self" novalidate="novalidate">
             <div class="row" style="margin-top:2rem">
               <div class="form-group col-md-6">
-                <input type="text" aria-required="true" name="entry.360262149"
-                  class="form-input-boxes-manual form-control required name" placeholder="Name" style="color: grey;">
+                <input type="text" aria-required="true" name="entry.360262149" class="form-input-boxes-manual form-control" placeholder="Name" style="color: grey;" required>
               </div>
               <div class="form-group col-md-6">
-                <input type="email" aria-required="true" name="entry.1979735424"
-                  class="form-input-boxes-manual form-control required email" placeholder="Email" style="color: grey;">
+                <input type="email" aria-required="true" name="entry.1979735424" class="form-input-boxes-manual form-control required email" placeholder="Email" style="color: grey;">
               </div>
             </div>
             <div class="row">
               <div class="form-group col-md-6">
-                <input type="text" name="entry.1199769641" class="form-input-boxes-manual form-control"
-                  placeholder="Phone Number" style="color: grey;">
+                <input type="text" name="entry.1199769641" class="form-input-boxes-manual form-control" placeholder="Phone Number" style="color: grey;">
               </div>
               <div class="form-group col-md-6">
-                <input type="text" name="entry.154355220" class="form-input-boxes-manual form-control"
-                  placeholder="Organization / College" style="color: grey;">
+                <input type="text" name="entry.154355220" class="form-input-boxes-manual form-control" placeholder="Organization / College" style="color: grey;">
               </div>
             </div>
             <div class="form-group">
-              <textarea type="text" name="entry.1544463438" rows="5"
-                class="form-control form-input-boxes-manual required" placeholder="Message" style="color: grey;"
-                aria-required="true"></textarea>
+              <textarea type="text" name="entry.1544463438" rows="5" class="form-control form-input-boxes-manual required" placeholder="Message" style="color: grey;" aria-required="true"></textarea>
             </div>
             <div class="row">
               <div class="form-group col-md-6"></div>
               <div class="form-group col-md-2"></div>
               <div class="form-group col-md-2 button-center">
                 <div class="form-group">
-                  <button class="btn signin" type="submit" style="background-color: #4169E1; color:#fff;"
-                    onclick="setColor(event)"><i class="fa fa-paper-plane"></i>&nbsp;Send message</button>
+                  <button class="btn signin" type="submit" style="background-color: #4169E1; color:#fff;" onclick="setColor(event)"><i class="fa fa-paper-plane"></i>&nbsp;Send message</button>
 
                 </div>
               </div>
@@ -888,9 +790,7 @@
     </div>
   </section>
 
-
-
-
+  <!-- =================================Follwer count========================================= -->
 
   <section style="background-color: #fff; background-image: url('./assets/images/right_up.png'); height:20%; ">
     <div class="container">
@@ -898,11 +798,9 @@
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
 
           <div class="text-center">
-            <div class="f-icon"><a href="https://facebook.com/acmusict" target="_blank"><i
-                  class="fa fa-4x fa-facebook-square"></i></a>
+            <div class="f-icon"><a href="https://facebook.com/acmusict" target="_blank"><i class="fa fa-4x fa-facebook-square"></i></a>
             </div>
-            <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="700"
-                data-from="0" data-target="700" data-seperator="true">700</span> </div>
+            <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="700" data-from="0" data-target="700" data-seperator="true">700</span> </div>
             <div class="seperator seperator-small"></div>
             <p class="follower-count">Facebook Likes</p>
           </div>
@@ -911,10 +809,8 @@
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
           <br>
           <div class="text-center" style="margin-top: -20px;">
-            <div class="l-icon"><a href="https://linkedin.com/company/acmusict" target="_blank"><i
-                  class="fab fa-4x fa-linkedin"></i></a></div>
-            <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="200"
-                data-from="0" data-target="200" data-seperator="true">1000</span> </div>
+            <div class="l-icon"><a href="https://linkedin.com/company/acmusict" target="_blank"><i class="fab fa-4x fa-linkedin"></i></a></div>
+            <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="200" data-from="0" data-target="200" data-seperator="true">1000</span> </div>
             <div class="seperator seperator-small"></div>
             <p class="follower-count"> LinkedIn Reach</p>
           </div>
@@ -923,10 +819,8 @@
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
 
           <div class="text-center" style="margin-top: 5px;">
-            <div class="i-icon"><a href="https://instagram.com/acmusict" target="_blank"><i
-                  class="fa fa-4x fa-instagram"></i></a></div>
-            <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="180"
-                data-from="0" data-target="205" data-seperator="true">300+</span> </div>
+            <div class="i-icon"><a href="https://instagram.com/acmusict" target="_blank"><i class="fa fa-4x fa-instagram"></i></a></div>
+            <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="180" data-from="0" data-target="205" data-seperator="true">300+</span> </div>
             <div class="seperator seperator-small"></div>
             <p class="follower-count">Instagram Followers</p>
           </div>
@@ -936,8 +830,7 @@
 
           <div class="text-center" style="margin-top: 5px;">
             <div class="c-icon"><a href="#"><i class="fa fa-4x fa-child"></i></a></div>
-            <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="100"
-                data-from="0" data-target="100" data-seperator="true">1000+</span> </div>
+            <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="100" data-from="0" data-target="100" data-seperator="true">1000+</span> </div>
             <div class="seperator seperator-small"></div>
             <p class="follower-count">Connected Students</p>
           </div>
@@ -947,109 +840,14 @@
   </section>
 
 
-  <footer style="background-color:#F7F9FB;" id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 col-md-6">
-            <div class="footer-info row">
-              <div class="col-lg-4 col-12 d-flex justify-content-center">
-                <a href="#about" class="scrollto"><img src="assets/images/acm1.png" alt="logo" title="" style="
-                      width: 160px;
-                      padding-top: 10px;
-                      padding-left: 25px;
-                      padding-right: 25px;
-                    " /></a>
-              </div>
-              <div class="col-lg-8 col-12 d-flex justify-content-center align-items-center">
-                <a href="#about" class="scrollto"><img src="assets/images/outstanding-website.png" alt="logo" title=""
-                    style="
-                      width: 320px;
-                      padding-top: 10px;
-                      padding-left: 25px;
-                      padding-right: 25px;
-                    " /></a>
-              </div>
-            </div>
-            <br />
-            <p>The USICT ACM Student Chapter is an official student body</p>
-            <p>incepted in 2019 under the University School USICT, GGSIPU.</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-links" style="padding: 0 4%">
-            <br />
-            <h4 style="padding: 2px" id="quick">Quick Links</h4>
-            <ul style="padding-left: 0">
-              <li>
-                <i class="fa fa-angle-right"></i>
-                <a href="https://www.ipu.ac.in/"> IPU-Home</a>
-              </li>
-              <li>
-                <i class="fa fa-angle-right"></i>
-                <a href="https://india.acm.org/"> ACM-India</a>
-              </li>
-              <li>
-                <i class="fa fa-angle-right"></i>
-                <a href="https://www.acm.org/governance/acm-india-council">
-                  ACM-India Office Bearers</a>
-              </li>
-              <li>
-                <i class="fa fa-angle-right"></i>
-                <a href="https://amturing.acm.org/award_winners/reddy_9634208.cfm">
-                  ACM Turing Award</a>
-              </li>
-              <li>
-                <i class="fa fa-angle-right"></i>
-                <a href="./clubs.html">Our Clubs</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <br>
-            <h4 style="padding:2px">Contact Us</h4>
-            <p>
-              Dean Office, <br>
-              USICT, GGSIPU<br>
-              Sector 16C, Dwarka, Delhi<br>
-              <strong>Phone:</strong> 011-25302702<br>
-              <strong>Email:</strong> info@usict.acm.org<br>
-            </p>
-
-            <div class="social-links" style="    text-align-last: justify;
-    font-size: x-large;">
-              <a href="https://www.facebook.com/acmusict" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="https://www.youtube.com/channel/UCI7her-mYrb7QM0t9S_nA_Q" class="youtube"><i
-                  class="fa fa-youtube"></i></a>
-              <a href="https://www.instagram.com/acmusict/" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="mailto:acmusit@gmail.com" class="envelope"><i class="fa fa-envelope-o"></i></a>
-              <a href="https://github.com/usict-acm/ACM-new" class="github"><i class="fab fa-github"></i></a>
-              <a href="https://discord.gg/74d2u7rv" class="discord"><i class="fab fa-discord"></i></a>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </footer>
-
-
-  <footer style="background-color:#eff1f4;" id="footer">
-    <div class="copyright-content">
-      <div class="container">
-        <br>
-        <div class="copyright-text text-center">© Conceptualized,Designed and Developed by Office Bearers of ACM USICT
-          chapter.</div>
-      </div>
-      <br>
-    </div>
-  </footer>
-
+  <!-- ==================================Footer==================================== -->
+  <?php
+  include('footer.php');
+  ?>
   <script src="./assets/JS/glider.js"></script>
-  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="./assets/JS/main.js"></script>
+
+  </script>
 </body>
 
 </html>
