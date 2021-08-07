@@ -2,83 +2,23 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
-  <title>Our Team</title>
-  <link rel="icon" href="./assets/images/acm1.png" type="image/x-icon" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc" />
+    <?php
+      include("head.php")
+    ?>
+    <title>USICT ACM</title>
+    <link href="assets/CSS/team.css" rel="stylesheet" />
+    <link href="assets/CSS/glider.css" rel="stylesheet" />
+    <link href="assets/CSS/header.css" rel="stylesheet" />
+    <link href="assets/CSS/footer.css" rel="stylesheet" />
 
-  <!-- Google / Search Engine Tags -->
-  <meta itemprop="name" content="ACM@USICT Chapter, GGSIPU" />
-  <meta itemprop="description" content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc" />
-  <meta itemprop="image" content="./assets/images/acm1.png" />
-
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="http://usict.acm.org/ACM_New" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="ACM@USICT Chapter, GGSIPU" />
-  <meta property="og:description" content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc" />
-  <meta property="og:image" content="./assets/images/acm1.png" />
-
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ACM@USICT Chapter, GGSIPU" />
-  <meta name="twitter:description" content=">ACM Student Chapter, USICT is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc" />
-  <meta name="twitter:image" content="./assets/images/acm1.png" />
-
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="assets/CSS/team.css" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-
-  <link rel="stylesheet" type="text/css" href="assets/CSS/glider.css" />
-  <script src="https://kit.fontawesome.com/d459eda8d9.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-</head>
+  </head>
 
 <body>
   <!-- ************************************************Navbar******************************************************************************-->
-
-  <nav id="togglerButton" class="navbar navbar-expand-lg mb-4 top-bar navbar-static-top sps sps-abv">
-    <div class="container">
-      <button class="navbar-toggler navbar-toggler-right" type="button" onclick="myFunction()" data-toggle="collapse" data-target="#navbarCollapse1" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"><i style="color: black; margin-top: 5px" class="fas fa-bars"></i></span>
-      </button>
-      <div class="d-flex">
-        <a href="./index.html"><img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm logo" />
-          <div class="text-and-logo">
-        </a>
-        <a style="font-size: 16px; padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto" href="#">ACM<span> USICT</span></a>
-        <a href="./index.html"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
-      </div>
-    </div>
-
-    <div class="collapse navbar-collapse" id="navbarCollapse1">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="./index.html">Home </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./collab.html">Sponsors</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./benefits.html">Why Join Us?</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./clubs.html">Clubs</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="./team.php">Our Team</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://services.acm.org/public/qj/proflevel/proflevel_control.cfm?level=3&country=India&form_type=Student&promo=LEVEL&pay=DD">ACM Registration</a>
-        </li>
-      </ul>
-    </div>
-    </div>
-  </nav>
+ <?php
+      $currentPage = 'team';
+      include('header.php');
+    ?>
 
   <!-- ****************************************************Header Image****************************************** -->
 
@@ -98,30 +38,24 @@
      <!--***************************************member according to years nav ****************************-->
     
       <div class="main-year">
-      <div class="topnav-myear">
-        <a href="javascript:openTab('2019')" id="2019" class="nav-year">2019</a> 
-        <a href="javascript:openTab('2020')" id="2020" class="nav-year">2020</a>
-        <a href="javascript:openTab('2021')" id="2021" class="nav-year">2021</a>
+      <div class="topnav-myear" id="year-nav">
       </div> 
-        <select class="mobile-dropdown" onchange="openTab(this.value)">
-          <option value="2021" selected="selected">2021</option>
-          <option value="2020">2020</option>
-          <option value="2019">2019</option> 
+        <select class="mobile-dropdown" id="year-nav-mobile" onchange="openTab(this.value)">
         </select>
         
      </div>
     <!--  ******************************************Faculty************************************************************* -->
 
   <section id="collab">
-    <div class="container">
-      <h1 class="highlight collab-main-heading">Faculty:</h1>
+    <div class="container" id="fac">
+      <h1 class="highlight collab-main-heading" id="fac">Faculty:</h1>
 
       <div class="row d-flex justify-content-center" id="Faculty">
       </div>
     </div>
 
     <!-- *********************************** Office Bearers *******************************************************-->
-    <div class="container">
+    <div class="container" id="office">
       <h1 class="collab-main-heading">
         Office<span class="highlight"> Bearers</span>:
       </h1>
@@ -131,8 +65,8 @@
     </div>
 
     <!--***************************************** Executive Members **********************************************-->
-    <div class="container">
-      <h1 class="collab-main-heading">
+    <div class="container" id="executive">
+      <h1 class="collab-main-heading" >
         Executive<span class="highlight"> Members</span>:
       </h1>
       <div class="row d-flex justify-content-center" id="Executive-Members">
@@ -141,7 +75,7 @@
     </div>
 
     <!--***************************************** Web Team **********************************************-->
-    <div class="container">
+    <div class="container" id="web">
       <h1 class="collab-main-heading">
         Web<span class="highlight"> Team</span>:
       </h1>
@@ -152,8 +86,31 @@
     </div>
 
     <script>
-      openTab(2021); //Default call
+      $(document).ready(function () {
+          var yearNav = document.getElementById("year-nav");
+          var yearNavMobile = document.getElementById("year-nav-mobile");
+          yearNav.innerHTML = "";
+          yearNavMobile.innerHTML = "";
+          $.ajax({
+            url: "./admin/teams/api.php/?q=getYear",
+            method: "GET",
+            dataType: "JSON",
+            success: function (data) {
+              // console.log("year data", data);s
+              data.forEach(displayFunc);
+              openTab(data[0].year); //Default call
+              function displayFunc(row) {
+                yearNav.innerHTML += '<a href="javascript:openTab(\'' + row.year + '\')" id="' + row.year + '" class="nav-year">' + row.year + '</a>';
+                yearNavMobile.innerHTML += '<option value="' + row.year + '">' + row.year + '</option>';
+          }
+        }
+      });
+    });
       function openTab(navYear) {
+        $("#fac").hide();
+        $("#office").hide();
+        $("#executive").hide();
+        $("#web").hide();
         $(".nav-year").removeClass("active");
         $('#' + navYear).addClass("active");
         var category = ['Faculty', 'Office-Bearers', 'Executive-Members', 'Web-Team'];
@@ -170,23 +127,30 @@
               data.forEach(displayFunc);
               function displayFunc(row) {
                 var member = document.getElementById(row.category);
-                if (row.category == 'Faculty') {  
+                if (row.category == 'Faculty') {
+                  $("#fac").show();
                   member.innerHTML += '<div class="flip-card-without-hover">\
                                       <div class="flip-card-inner"> \
                                       <hr class="blue-hr" />\
                                       <div class="flip-card-front">\
-                                      <img src= "' + row.image + '" class="flip-img" alt="Avatar" />\
+                                      <img src= "' + row.image + '" class="flip-img" alt="profile-pic" />\
                                       <h4 class="card-name">' + row.name + '</h4>\
                                       <p class="card-name">' + row.designation + '</p>\
                                       </div>\
                                       </div>\
                                       </div>'
                   } else {
+                    if(row.category == category[1])
+                      $("#office").show();
+                    else if (row.category == category[2])
+                      $("#executive").show();
+                    else if (row.category == category[3])
+                      $("#web").show();
                     member.innerHTML += '<div class="flip-card">\
                                       <div class="flip-card-inner">\
                                       <hr class="blue-hr" />\
                                       <div class="flip-card-front">\
-                                      <img src= "' + row.image + '" class="flip-img" alt="Avatar" />\
+                                      <img src= "' + row.image + '" class="flip-img" alt="profile-pic" />\
                                       <h4 class="card-name">' + row.name + '</h4>\
                                       <p class="card-name">' + row.designation + '</p>\
                                       </div>\
@@ -195,11 +159,11 @@
                                       <h2>' + row.name + '</h2>\
                                       <p>' + row.designation + '</p>\
                                       <br />\
-                                      <a href= "' + row.linkedin + '">\
+                                      <a href= "' + row.linkedin + '" target="_blank">\
                                       <i class="' + row.id + '-linkedin team-social-icon fab fa-linkedin"></i></a>\
-                                      <a href= "' + row.github + '">\
+                                      <a href= "' + row.github + '" target="_blank">\
                                       <i class="' + row.id + '-github team-social-icon fab fa-github"></i></a>\
-                                      <a href= "' + row.instagram + '">\
+                                      <a href= "' + row.instagram + '" target="_blank">\
                                       <i class="' + row.id + '-instagram team-social-icon fab fa-instagram-square"></i></a>\
                                       </div>\
                                       </div>\
@@ -221,104 +185,10 @@
   </section>
   <!-- ***********************************************Footer************************************************************************ -->
 
-  <footer style="background-color: #f7f9fb; margin-top: 0%" id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 col-md-6">
-            <div class="footer-info row">
-              <div class="col-lg-4 col-12 d-flex justify-content-center">
-                <a href="#about" class="scrollto"><img src="assets/images/acm1.png" alt="logo" title="" style="
-                        width: 160px;
-                        padding-top: 10px;
-                        padding-left: 25px;
-                        padding-right: 25px;
-                      " /></a>
-              </div>
-              <div class="col-lg-8 col-12 d-flex justify-content-center align-items-center">
-                <a href="#about" class="scrollto"><img src="assets/images/outstanding-website.png" alt="logo" title="" style="
-                        width: 320px;
-                        padding-top: 10px;
-                        padding-left: 25px;
-                        padding-right: 25px;
-                      " /></a>
-              </div>
-            </div>
-            <br />
-            <p>The USICT ACM Student Chapter is an official student body</p>
-            <p>incepted in 2019 under the University School USICT, GGSIPU.</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-links" style="padding: 0 4%">
-            <br />
-            <h4 style="padding: 2px" id="quick">Quick Links</h4>
-            <ul style="padding-left: 0">
-              <li>
-                <i class="fa fa-angle-right"></i>
-                <a href="https://www.ipu.ac.in/"> IPU-Home</a>
-              </li>
-              <li>
-                <i class="fa fa-angle-right"></i>
-                <a href="https://india.acm.org/"> ACM-India</a>
-              </li>
-              <li>
-                <i class="fa fa-angle-right"></i>
-                <a href="https://www.acm.org/governance/acm-india-council">
-                  ACM-India Office Bearers</a>
-              </li>
-              <li>
-                <i class="fa fa-angle-right"></i>
-                <a href="https://amturing.acm.org/award_winners/reddy_9634208.cfm">
-                  ACM Turing Award</a>
-              </li>
-              <li>
-                <i class="fa fa-angle-right"></i>
-                <a href="./clubs.html">Our Clubs</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <br />
-            <h4 style="padding: 2px">Contact Us</h4>
-            <p>
-              Dean Office, <br />
-              USICT, GGSIPU<br />
-              Sector 16C, Dwarka, Delhi<br />
-              <strong>Phone:</strong> 011-25302702<br />
-              <strong>Email:</strong> info@usict.acm.org<br />
-            </p>
-
-            <div class="social-links" style="text-align-last: justify; font-size: x-large">
-              <a href="https://www.facebook.com/acmusict" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="https://www.youtube.com/channel/UCI7her-mYrb7QM0t9S_nA_Q" class="youtube"><i class="fa fa-youtube"></i></a>
-              <a href="https://www.instagram.com/acmusict/" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="mailto:acmusit@gmail.com" class="envelope"><i class="fa fa-envelope-o"></i></a>
-              <a href="https://github.com/usict-acm/ACM-new" class="github"><i class="fa fa-github"></i></a>
-              <a href="https://discord.gg/74d2u7rv" class="discord"><i class="fab fa-discord"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <footer style="background-color: #eff1f4" id="footer">
-    <div class="copyright-content">
-      <div class="container">
-        <br />
-        <div class="copyright-text text-center">
-          © Conceptualized,Designed and Developed by Office Bearers of ACM
-          USICT chapter.
-        </div>
-      </div>
-      <br />
-    </div>
-  </footer>
+  <?php
+      include('footer.php');
+    ?>
   <script src="assets/JS/glider.js"></script>
-  <!-- <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="assets/JS/benefits.js"></script>
 </body>
 
 </html>
