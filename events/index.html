@@ -73,7 +73,7 @@
             <a class="nav-link" href="../clubs.html">Clubs</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="../Team.html">Our Team</a>
+            <a class="nav-link" href="../team.php">Our Team</a>
           </li>
           <li class="nav-item">
             <a class="nav-link"

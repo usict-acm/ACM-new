@@ -141,6 +141,3 @@
 	include('includes/scripts.php');
 	include('includes/footer.php');
 	?>
-
-
-
