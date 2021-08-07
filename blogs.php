@@ -31,20 +31,12 @@
             <div style="margin:auto;" id="pagination_row"></div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div id="row4"></div>
-
-        <div class="row categoryCards"  >
-          <div class="col">
-            <h4>Categories</h4>
-=======
         <div class="right-side">
           <!-- ==============================================Show rightside three blogs================================== -->
           <div class="row categoryCards mt-0">
             <div class="col">
               <h4>Recent Blogs</h4>
             </div>
->>>>>>> 3e4aaf0173672e464c91c26f29876d6bede4373f
           </div>
           <div id="row4"></div>
 
