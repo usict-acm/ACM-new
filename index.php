@@ -81,16 +81,7 @@
       <div class="swiper-button-prev"><i class="fa fa-chevron-left"></i></div>
       <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
     </div>
-
   </div>
-
-
-
-
-
-
-
-
 
   <section id="about" class="p-t-80"
     style="background-color:#fff;background-image: url('./assets/images/right_up.png');">
@@ -101,24 +92,19 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-7 m-b-30 animated fadeInLeft visible" data-animate="fadeInLeft">
-
           <div id="main-slider" class="swiper-container main-slider" style="height:45vh">
             <div class="swiper-wrapper">
               <div class="swiper-slide slider-bg-position" style="background:url('assets/images/About us/image1.jpg')"
                 data-hash="slide1">
-
               </div>
               <div class="swiper-slide slider-bg-position" style="background:url('assets/images/About us/image2.jpg')"
                 data-hash="slide2">
-
               </div>
               <div class="swiper-slide slider-bg-position" style="background:url('assets/images/About us/image31.jpg')"
                 data-hash="slide2">
-
               </div>
               <div class="swiper-slide slider-bg-position" style="background:url('assets/images/About us/image4.jpg')"
                 data-hash="slide2">
-
               </div>
             </div>
             <!-- Add Pagination -->
@@ -127,7 +113,6 @@
             <div class="swiper-button-prev"><i class="fa fa-chevron-left"></i></div>
             <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
           </div>
-
         </div>
         <div class="col-lg-5 p-l-40 p-r-40 animated fadeInRight visible" data-animate="fadeInRight">
           <div class="m-b-40">
@@ -160,11 +145,9 @@
         </div>
       </div>
     </div>
-
   </section>
 
-
-
+  <!-- =================================Vision and mission================================================== -->
 
   <section id="what_we_do" class="box-fancy background-overlay-one"
     style="background-color: white;background-image: url('./assets/images/left_bg.png');">
@@ -189,7 +172,6 @@
                 organising Seminars, workshops and competitions of various domains.</b></h5>
         </div>
       </div>
-      <!-- <hr style="border: 2px solid #25286e; border-style: none; border-top-style: dotted; border-width: 8px;"> -->
       <div class="row m-b-30" style="padding:3vh;margin-bottom: 5vh;">
         <div class="col-lg-8 text-center animated fadeInRight visible" data-animate="fadeInRight"
           data-animate-delay="400">
@@ -210,19 +192,16 @@
     </div>
   </section>
 
-
-
-
+  <!-- ====================================Announcement============================================= -->
 
   <section class="announcement">
-
     <h1 class="section-heading announce">Announcements</h1>
     <div class="container-fluid text">
       <!-- <div class="swiper-container"> -->
         <!-- <div class="swiper-wrapper"> -->
 
-
-<!-- =======================================Swiper slide 1=============================================== -->
+<!-- ==================================Swiper slide 1============================================= -->
+          
 
           <!-- <div class="swiper-slide"> -->
             <div class="det">
@@ -287,21 +266,16 @@
                    Session On React Native
                 </h1>
               </div>
-
               <div class="row det-row">
                 <div class="col-md-7 divide">
                   <div class="detai">
                     <p>Greetings everyone!!!<br>
-
                       We hope you all are healthy and doing fine. If you want to do have a go at the App Development, we
                       are here with something tailor-made for you. We, at USICT ACM Student Chapter are conducting a
                       week-long session on React Native by Shlok Garg (Youtube Channel - S.G. Codes) . The event will be
                       a complete journey to your first react app from the scratch. So, what are you thinking? Register
                       now for what promises to be a great journey.
-
-
                       <br>Date - 12-17 May, 2021
-
                       <br>Time - 2-3 PM
                     </p>
                     <div style="display: flex;justify-content: space-evenly;"> -->
@@ -317,20 +291,12 @@
                         </button>
                       </a>
                     </div>
-
                   </div>
-
                 </div>
                 <div class="col-md-5 list">
-
                   <img class="imag imag_trell" src="./assets/images/ReactNative.png" alt="">
-
                 </div>
-
               </div>
-
-
-
             </div>
 
           </div> -->
@@ -340,16 +306,13 @@
               <div class="heading">
                 <h1>Workshop on "Basics Of Arduino"</h1>
               </div>
-
               <div class="row det-row">
                 <div class="col-md-7 divide">
                   <div class="detai">
                     <p>"You don't need anyone's permission to create something great".
-
                       As you are on a journey to create a better you, we are there to help you out. RobIoTics Club,
                       USICT ACM Student Chapter is organizing a workshop on "Basics of Arduino" to give wings to your
                       robotics journey. Join us for a fun and interactive experience. Details are as follows:-
-
                       <br>Date - 9 May, 2021
                       <br>Day - Sunday
                       <br>Time - 7PM onwards
@@ -361,20 +324,12 @@
                         </button>
                       </a>
                     </div>
-
                   </div>
-
                 </div>
                 <div class="col-md-5 list">
-
                   <img class="imag imag_trell" src="./assets/images/arduino-workshop.jpeg" alt="">
-
                 </div>
-
               </div>
-
-
-
             </div>
 
           </div> -->
@@ -384,7 +339,6 @@
               <div class="heading">
                 <h1>Blog Writing Competition</h1>
               </div>
-
               <div class="row det-row">
                 <div class="col-md-7 divide">
                   <div class="detai">
@@ -397,22 +351,13 @@
                         </button>
                       </a>
                     </div>
-
                   </div>
-
                 </div>
                 <div class="col-md-5 list">
-
                   <img class="imag imag_trell" src="./assets/images/blog.jpeg" alt="">
-
                 </div>
-
               </div>
-
-
-
             </div>
-
           </div> -->
 
 
@@ -437,7 +382,6 @@
                   </span> -->
                   <!-- Research Cell Daily sessions on Algorithms</h1>
               </div>
-
               <div class="row det-row">
                 <div class="col-md-7 divide">
                   <div class="detai">
@@ -455,35 +399,23 @@
                       </a>
 
                     </div>
-
                   </div>
-
                 </div>
                 <div class="col-md-5 list">
-
                   <img class="imag" src="./assets/images/algorithm-sessions.jpg" alt="" width="100%">
-
                 </div>
-
               </div>
  -->
 
 
             </div>
-
           </div>
-
         </div>
         <div class="swiper-pagination"></div>
-
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-
       </div>
-
     </div>
-
-
   </section>
 
 <!-- ******************************************Blogs******************************************* -->
@@ -555,22 +487,17 @@
     <div class="container events">
       <img src="./assets/images/events.png" style="width: 90px;margin-bottom: 5vh;" alt="">
       <h1 class="section-heading announce">Events & Announcements</h1>
-      
-          <!-- ********************************************EVENT ARD***************************************************  -->
-          <div class="wrapper">
-            <div class="link_wrapper">
-              <a href="./events/index.html">Know More!</a>
-              <div class="icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
-                  <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
-                </svg>
-              </div>
-            </div>
-            
+      <!-- ********************************************EVENT ARD***************************************************  -->
+      <div class="wrapper">
+        <div class="link_wrapper">
+          <a href="./events/index.html">Know More!</a>
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+              <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+            </svg>
           </div>
-        
-       
-
+        </div>
+      </div>
     </div>
   </section>
 
@@ -776,7 +703,7 @@
         <img style="width: 90px; margin-bottom: 5vh; " class="text-center" src="./assets/images/contact_us_icon.png"
           alt="">
         <p class="text section-heading">Get in touch</p>
-        <p class="text-small" style="color: #373f41; font-weight: normal;">Feel free to contact us in case of any query.</p>
+        <p class="text-small" style="color: #373f41; font-weight: normal;">Feel free to contact us if you need some help, consultations or you have some other questions.</p>
       </div>
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12">
@@ -790,7 +717,7 @@
             <div class="row" style="margin-top:2rem">
               <div class="form-group col-md-6">
                 <input type="text" aria-required="true" name="entry.360262149"
-                  class="form-input-boxes-manual form-control required name" placeholder="Name" style="color: grey;">
+                  class="form-input-boxes-manual form-control" placeholder="Name" style="color: grey;" required>
               </div>
               <div class="form-group col-md-6">
                 <input type="email" aria-required="true" name="entry.1979735424"
@@ -830,9 +757,7 @@
     </div>
   </section>
 
-
-
-
+<!-- =================================Follwer count========================================= -->
 
   <section style="background-color: #fff; background-image: url('./assets/images/right_up.png'); height:20%; ">
     <div class="container">

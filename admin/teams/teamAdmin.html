@@ -92,7 +92,7 @@
   <body>
     <h1>Add New Member</h1>
     <div class="container">
-      <form method="POST" enctype="multipart/form-data">
+      <form method="POST" enctype="multipart/form-data" action="javascript:submit_member()">
         <div class="row">
           <div class="col-25">
             <label for="name"><b> Name:</b></label>
@@ -138,7 +138,7 @@
             <label for=" year"> <b>Year:</b></label>
           </div>
           <div class="col-75">
-            <input type="text" name="year" id="year" required />
+            <input type="number" min="2019" max="2099" name="year" id="year" required />
           </div>
         </div>
         <div class="row">
@@ -172,8 +172,7 @@
           <input
             type="submit"
             name="submit"
-            value="Submit"
-            onclick="submit_member()"
+            value="Submit"            
           />
         </div>
       </form>
@@ -191,14 +190,12 @@
         </div>
         <div class="col-75">
           <select id="findYear" name="year" required>
-            <option value="2019" name="2019">2019</option>
-            <option value="2020" name="2020">2020</option>
-            <option value="2021" name="2021">2021</option>
           </select>
         </div>
       </div>
       <div class="row">
         <input
+          id="del_submit"
           type="submit"
           name="submit"
           value="Submit"
@@ -256,6 +253,7 @@
           $.ajax({
             url: "./api.php/?q=readMember&year=" + year,
             method: "GET",
+            async: false,
             dataType: "JSON",
             success: function (data) {
               // console.log("member data", data);
@@ -296,10 +294,27 @@
           data: { id: member_id },
           success: function (data) {
             alert(data);
+            $("#del_submit").click();
             // window.location.reload();
           },
         });
       }
+      $(document).ready(function () {
+          var year = document.getElementById("findYear");
+          year.innerHTML = "";
+          $.ajax({
+            url: "./api.php/?q=getYear",
+            method: "GET",
+            dataType: "JSON",
+            success: function (data) {
+              // console.log("year data", data);
+              data.forEach(displayFunc);
+              function displayFunc(row) {
+                year.innerHTML += '<option value="' + row.year + '" name="'+ row.year + '">' + row.year + '</option>';
+          }
+        }
+      });
+    });
     </script>
   </body>
 </html>

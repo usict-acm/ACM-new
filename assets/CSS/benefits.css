@@ -1153,7 +1153,7 @@ ul {
   box-shadow: 0 0 1.5rem 0 grey;
 }
 
-.winners h2 {
+.winnerDetails > .col > h2 {
   text-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
   line-height: 1.2;
   font-size: 1.3rem;
@@ -1166,7 +1166,12 @@ ul {
   color: white;
 }
 
-.winnerDetails {
+.winnerDetails > .col {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  justify-content: center;
+  flex-direction: column;
   padding-top: 0;
 }
 

@@ -95,7 +95,9 @@ section {
   color: #0297ff;
 }
 .card-1 {
-  background: url("../images/collab/coursera-ConvertImage.png") no-repeat;
+  background: url("../images/collab/coursera.png") no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.8;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -106,7 +108,8 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .collab-card:hover > .card-1 {
-  background: url("../images/collab/coursera.png") no-repeat;
+  filter: grayscale(0%);
+  opacity: 1;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -117,7 +120,9 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-2 {
-  background: url("../images/collab/docker-ConvertImage.png") no-repeat;
+  background: url("../images/collab/docker.png") no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.8;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -128,7 +133,8 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .collab-card:hover > .card-2 {
-  background: url("../images/collab/docker.png") no-repeat;
+  filter: grayscale(0%);
+  opacity: 1;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -139,7 +145,9 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-3 {
-  background: url("../images/collab/lenskart-ConvertImage.png") no-repeat;
+  background: url("../images/collab/lenskart.png") no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.8;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -150,7 +158,8 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .collab-card:hover > .card-3 {
-  background: url("../images/collab/lenskart.png") no-repeat;
+  filter: grayscale(0%);
+  opacity: 1;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -161,7 +170,9 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-4 {
-  background: url("../images/collab/coding-ConvertImage.png") no-repeat;
+  background: url("../images/collab/coding.png") no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.8;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -172,7 +183,8 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .collab-card:hover > .card-4 {
-  background: url("../images/collab/coding.png") no-repeat;
+  filter: grayscale(0%);
+  opacity: 1;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -183,7 +195,9 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-5 {
-  background: url("../images/collab/cad-ConvertImage.png") no-repeat;
+  background: url("../images/collab/cad.png") no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.8;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -194,7 +208,8 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .collab-card:hover > .card-5 {
-  background: url("../images/collab/cad.png") no-repeat;
+  filter: grayscale(0%);
+  opacity: 1;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -205,8 +220,9 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-6 {
-  background: url("../images/collab/UniversityCincinnati-ConvertImage.png")
-    no-repeat;
+  background: url("../images/collab/UniversityCincinnati.png") no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.8;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -217,7 +233,8 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .collab-card:hover > .card-6 {
-  background: url("../images/collab/UniversityCincinnati.png") no-repeat;
+  filter: grayscale(0%);
+  opacity: 1;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -228,7 +245,9 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-7 {
-  background: url("../images/collab/szeged-ConvertImage.png") no-repeat;
+  background: url("../images/collab/szeged.png") no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.8;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -239,7 +258,8 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .collab-card:hover > .card-7 {
-  background: url("../images/collab/szeged.png") no-repeat;
+  filter: grayscale(0%);
+  opacity: 1;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -250,7 +270,9 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-8 {
-  background: url("../images/collab/iiitd-ConvertImage.png") no-repeat;
+  background: url("../images/collab/iiitd.png") no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.8;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -261,7 +283,8 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .collab-card:hover > .card-8 {
-  background: url("../images/collab/iiitd.png") no-repeat;
+  filter: grayscale(0%);
+  opacity: 1;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -272,8 +295,9 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-9 {
-  background: url("../images/collab/UniversityofDelhi-ConvertImage.png")
-    no-repeat;
+  background: url("../images/collab/UniversityofDelhi.png") no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.8;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -284,7 +308,8 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .collab-card:hover > .card-9 {
-  background: url("../images/collab/UniversityofDelhi.png") no-repeat;
+  filter: grayscale(0%);
+  opacity: 1;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -295,7 +320,9 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-10 {
-  background: url("../images/collab/jnu-ConvertImage.png") no-repeat;
+  background: url("../images/collab/jnu.png") no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.8;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -306,7 +333,8 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .collab-card:hover > .card-10 {
-  background: url("../images/collab/jnu.png") no-repeat;
+  filter: grayscale(0%);
+  opacity: 1;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -317,7 +345,9 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-11 {
-  background: url("../images/collab/iisc-ConvertImage.png") no-repeat;
+  background: url("../images/collab/iisc.png") no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.8;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -328,7 +358,8 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .collab-card:hover > .card-11 {
-  background: url("../images/collab/iisc.png") no-repeat;
+  filter: grayscale(0%);
+  opacity: 1;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -339,7 +370,9 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-12 {
-  background: url("../images/collab/amazon-ConvertImage.png") no-repeat;
+  background: url("../images/collab/amazon.png") no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.8;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -350,7 +383,8 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .collab-card:hover > .card-12 {
-  background: url("../images/collab/amazon.png") no-repeat;
+  filter: grayscale(0%);
+  opacity: 1;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -361,7 +395,9 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-13 {
-  background: url("../images/collab/tcs-ConvertImage.png") no-repeat;
+  background: url("../images/collab/tcs.png") no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.8;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -372,7 +408,8 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .collab-card:hover > .card-13 {
-  background: url("../images/collab/tcs.png") no-repeat;
+  filter: grayscale(0%);
+  opacity: 1;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -383,7 +420,9 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-14 {
-  background: url("../images/collab/zenon-ConvertImage.png") no-repeat;
+  background: url("../images/collab/zenon.png") no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.8;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -394,7 +433,8 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .collab-card:hover > .card-14 {
-  background: url("../images/collab/zenon.png") no-repeat;
+  filter: grayscale(0%);
+  opacity: 1;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -405,7 +445,9 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-15 {
-  background: url("../images/collab/stage3-ConvertImage.png") no-repeat;
+  background: url("../images/collab/stage3.png") no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.8;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -416,7 +458,8 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .collab-card:hover > .card-15 {
-  background: url("../images/collab/stage3.png") no-repeat;
+  filter: grayscale(0%);
+  opacity: 1;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -427,8 +470,9 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .card-16 {
-  background: url("../images/collab/societe-generale-logo-ConvertImage.png")
-    no-repeat;
+  background: url("../images/collab/societe-generale-logo.png") no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.8;
   display: inline-block !important;
   width: 10rem !important;
   height: 10rem !important;
@@ -439,7 +483,8 @@ section {
   transition: all 0.5s ease-in-out !important;
 }
 .collab-card:hover > .card-16 {
-  background: url("../images/collab/societe-generale-logo.png") no-repeat;
+  filter: grayscale(0%);
+  opacity: 1;
   display: inline-block !important;
   width: 12rem !important;
   height: 12rem !important;
@@ -471,5 +516,214 @@ section {
   .pt-card {
     margin-top: 7%;
     margin-bottom: -40%;
+  }
+  .card-1 {
+    background: url("../images/collab/coursera.png") no-repeat;
+    filter: grayscale(0%);
+    opacity: 1;
+    display: inline-block !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    padding: 2vh 4vh;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    transition: all 0.5s ease-in-out !important;
+  }
+
+  .card-2 {
+    background: url("../images/collab/docker.png") no-repeat;
+    filter: grayscale(0%);
+    opacity: 0.8;
+    display: inline-block !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    padding: 2vh 4vh;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    transition: all 0.5s ease-in-out !important;
+  }
+  .card-3 {
+    background: url("../images/collab/lenskart.png") no-repeat;
+    filter: grayscale(0%);
+    opacity: 0.8;
+    display: inline-block !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    padding: 2vh 4vh;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    transition: all 0.5s ease-in-out !important;
+  }
+  .card-4 {
+    background: url("../images/collab/coding.png") no-repeat;
+    filter: grayscale(0%);
+    opacity: 0.8;
+    display: inline-block !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    padding: 2vh 4vh;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    transition: all 0.5s ease-in-out !important;
+  }
+  .card-5 {
+    background: url("../images/collab/cad.png") no-repeat;
+    filter: grayscale(0%);
+    opacity: 0.8;
+    display: inline-block !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    padding: 2vh 4vh;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    transition: all 0.5s ease-in-out !important;
+  }
+  .card-6 {
+    background: url("../images/collab/UniversityCincinnati.png") no-repeat;
+    filter: grayscale(0%);
+    opacity: 0.8;
+    display: inline-block !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    padding: 2vh 4vh;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    transition: all 0.5s ease-in-out !important;
+  }
+  .card-7 {
+    background: url("../images/collab/szeged.png") no-repeat;
+    filter: grayscale(0%);
+    opacity: 0.8;
+    display: inline-block !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    padding: 2vh 4vh;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    transition: all 0.5s ease-in-out !important;
+  }
+  .card-8 {
+    background: url("../images/collab/iiitd.png") no-repeat;
+    filter: grayscale(0%);
+    opacity: 0.8;
+    display: inline-block !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    padding: 2vh 4vh;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    transition: all 0.5s ease-in-out !important;
+  }
+  .card-9 {
+    background: url("../images/collab/UniversityofDelhi.png") no-repeat;
+    filter: grayscale(0%);
+    opacity: 0.8;
+    display: inline-block !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    padding: 2vh 4vh;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    transition: all 0.5s ease-in-out !important;
+  }
+  .card-10 {
+    background: url("../images/collab/jnu.png") no-repeat;
+    filter: grayscale(0%);
+    opacity: 0.8;
+    display: inline-block !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    padding: 2vh 4vh;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    transition: all 0.5s ease-in-out !important;
+  }
+  .card-11 {
+    background: url("../images/collab/iisc.png") no-repeat;
+    filter: grayscale(0%);
+    opacity: 0.8;
+    display: inline-block !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    padding: 2vh 4vh;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    transition: all 0.5s ease-in-out !important;
+  }
+  .card-12 {
+    background: url("../images/collab/amazon.png") no-repeat;
+    filter: grayscale(0%);
+    opacity: 0.8;
+    display: inline-block !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    padding: 2vh 4vh;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    transition: all 0.5s ease-in-out !important;
+  }
+  .card-13 {
+    background: url("../images/collab/tcs.png") no-repeat;
+    filter: grayscale(0%);
+    opacity: 0.8;
+    display: inline-block !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    padding: 2vh 4vh;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    transition: all 0.5s ease-in-out !important;
+  }
+  .card-14 {
+    background: url("../images/collab/zenon.png") no-repeat;
+    filter: grayscale(0%);
+    opacity: 0.8;
+    display: inline-block !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    padding: 2vh 4vh;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    transition: all 0.5s ease-in-out !important;
+  }
+  .card-15 {
+    background: url("../images/collab/stage3.png") no-repeat;
+    filter: grayscale(0%);
+    opacity: 0.8;
+    display: inline-block !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    padding: 2vh 4vh;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    transition: all 0.5s ease-in-out !important;
+  }
+  .card-16 {
+    background: url("../images/collab/societe-generale-logo.png") no-repeat;
+    filter: grayscale(0%);
+    opacity: 0.8;
+    display: inline-block !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    padding: 2vh 4vh;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    transition: all 0.5s ease-in-out !important;
   }
 }

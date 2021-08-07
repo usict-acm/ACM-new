@@ -107,16 +107,45 @@
             }
     };
 
+    function readYear(){
+        $database = new Database();
+        $db = $database->connect();
+
+            $sql = 'SELECT DISTINCT t.year FROM `team` t ORDER BY year desc';
+            $result = $db->query($sql);
+
+            if($result) {
+            
+                    $year_arr = array();
+        
+                    while($row = $result->fetch_assoc()){
+                        $year_item = array(
+                        'year' => $row["year"],
+                        );
+
+                        array_push($year_arr, $year_item);
+                    }
+                    echo json_encode($year_arr);
+
+        } else {
+        // No Posts
+            echo json_encode(array('message' => 'No members found'));
+        }
+    };
+
     $q = $_GET['q'];
     switch ($q){
         case 'readMember':
             read();
             break;
-        case 'postMember';
+        case 'postMember':
             postMember();
             break;
-        case 'delMember';
+        case 'delMember':
             delMember();
+            break;
+        case 'getYear' :
+            readYear();
             break;
         default:
             echo "Invalid Query";

@@ -38,30 +38,24 @@
      <!--***************************************member according to years nav ****************************-->
     
       <div class="main-year">
-      <div class="topnav-myear">
-        <a href="javascript:openTab('2019')" id="2019" class="nav-year">2019</a> 
-        <a href="javascript:openTab('2020')" id="2020" class="nav-year">2020</a>
-        <a href="javascript:openTab('2021')" id="2021" class="nav-year">2021</a>
+      <div class="topnav-myear" id="year-nav">
       </div> 
-        <select class="mobile-dropdown" onchange="openTab(this.value)">
-          <option value="2021" selected="selected">2021</option>
-          <option value="2020">2020</option>
-          <option value="2019">2019</option> 
+        <select class="mobile-dropdown" id="year-nav-mobile" onchange="openTab(this.value)">
         </select>
         
      </div>
     <!--  ******************************************Faculty************************************************************* -->
 
   <section id="collab">
-    <div class="container">
-      <h1 class="highlight collab-main-heading">Faculty:</h1>
+    <div class="container" id="fac">
+      <h1 class="highlight collab-main-heading" id="fac">Faculty:</h1>
 
       <div class="row d-flex justify-content-center" id="Faculty">
       </div>
     </div>
 
     <!-- *********************************** Office Bearers *******************************************************-->
-    <div class="container">
+    <div class="container" id="office">
       <h1 class="collab-main-heading">
         Office<span class="highlight"> Bearers</span>:
       </h1>
@@ -71,8 +65,8 @@
     </div>
 
     <!--***************************************** Executive Members **********************************************-->
-    <div class="container">
-      <h1 class="collab-main-heading">
+    <div class="container" id="executive">
+      <h1 class="collab-main-heading" >
         Executive<span class="highlight"> Members</span>:
       </h1>
       <div class="row d-flex justify-content-center" id="Executive-Members">
@@ -81,7 +75,7 @@
     </div>
 
     <!--***************************************** Web Team **********************************************-->
-    <div class="container">
+    <div class="container" id="web">
       <h1 class="collab-main-heading">
         Web<span class="highlight"> Team</span>:
       </h1>
@@ -92,8 +86,31 @@
     </div>
 
     <script>
-      openTab(2021); //Default call
+      $(document).ready(function () {
+          var yearNav = document.getElementById("year-nav");
+          var yearNavMobile = document.getElementById("year-nav-mobile");
+          yearNav.innerHTML = "";
+          yearNavMobile.innerHTML = "";
+          $.ajax({
+            url: "./admin/teams/api.php/?q=getYear",
+            method: "GET",
+            dataType: "JSON",
+            success: function (data) {
+              // console.log("year data", data);s
+              data.forEach(displayFunc);
+              openTab(data[0].year); //Default call
+              function displayFunc(row) {
+                yearNav.innerHTML += '<a href="javascript:openTab(\'' + row.year + '\')" id="' + row.year + '" class="nav-year">' + row.year + '</a>';
+                yearNavMobile.innerHTML += '<option value="' + row.year + '">' + row.year + '</option>';
+          }
+        }
+      });
+    });
       function openTab(navYear) {
+        $("#fac").hide();
+        $("#office").hide();
+        $("#executive").hide();
+        $("#web").hide();
         $(".nav-year").removeClass("active");
         $('#' + navYear).addClass("active");
         var category = ['Faculty', 'Office-Bearers', 'Executive-Members', 'Web-Team'];
@@ -110,23 +127,30 @@
               data.forEach(displayFunc);
               function displayFunc(row) {
                 var member = document.getElementById(row.category);
-                if (row.category == 'Faculty') {  
+                if (row.category == 'Faculty') {
+                  $("#fac").show();
                   member.innerHTML += '<div class="flip-card-without-hover">\
                                       <div class="flip-card-inner"> \
                                       <hr class="blue-hr" />\
                                       <div class="flip-card-front">\
-                                      <img src= "' + row.image + '" class="flip-img" alt="Avatar" />\
+                                      <img src= "' + row.image + '" class="flip-img" alt="profile-pic" />\
                                       <h4 class="card-name">' + row.name + '</h4>\
                                       <p class="card-name">' + row.designation + '</p>\
                                       </div>\
                                       </div>\
                                       </div>'
                   } else {
+                    if(row.category == category[1])
+                      $("#office").show();
+                    else if (row.category == category[2])
+                      $("#executive").show();
+                    else if (row.category == category[3])
+                      $("#web").show();
                     member.innerHTML += '<div class="flip-card">\
                                       <div class="flip-card-inner">\
                                       <hr class="blue-hr" />\
                                       <div class="flip-card-front">\
-                                      <img src= "' + row.image + '" class="flip-img" alt="Avatar" />\
+                                      <img src= "' + row.image + '" class="flip-img" alt="profile-pic" />\
                                       <h4 class="card-name">' + row.name + '</h4>\
                                       <p class="card-name">' + row.designation + '</p>\
                                       </div>\
@@ -135,11 +159,11 @@
                                       <h2>' + row.name + '</h2>\
                                       <p>' + row.designation + '</p>\
                                       <br />\
-                                      <a href= "' + row.linkedin + '">\
+                                      <a href= "' + row.linkedin + '" target="_blank">\
                                       <i class="' + row.id + '-linkedin team-social-icon fab fa-linkedin"></i></a>\
-                                      <a href= "' + row.github + '">\
+                                      <a href= "' + row.github + '" target="_blank">\
                                       <i class="' + row.id + '-github team-social-icon fab fa-github"></i></a>\
-                                      <a href= "' + row.instagram + '">\
+                                      <a href= "' + row.instagram + '" target="_blank">\
                                       <i class="' + row.id + '-instagram team-social-icon fab fa-instagram-square"></i></a>\
                                       </div>\
                                       </div>\
