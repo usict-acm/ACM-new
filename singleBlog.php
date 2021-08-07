@@ -22,6 +22,13 @@
         <div class="row" id="row2"></div>
       </div>
     </section>
+    
+  <!-- =====================================Header Three Blogs============================================ -->
+  <section style="padding-top:80px;">
+    <div class="container topRow" style="margin-top: 3%;">
+      <div class="row justify-content-center" id="row2"></div>
+    </div>
+  </section>
 
     <section class="container" style="margin-top: 60px; margin-bottom:60px">
       <div class="lower">
@@ -51,58 +58,58 @@
         </div>
       </div>
     </section>
-    <!-- ***********************************************Footer************************************************************************ -->
+    <!-- ===================================================Footer======================================= -->
     <?php
       include('footer.php');
     ?>
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="./../../assets/JS/benefits.js"></script>
-    <script>
-      var posts = document.getElementById("row1");
-      document.addEventListener('DOMContentLoaded', function() {
-        // var blogId = localStorage.getItem('blogId');
-        var blogId = <?php echo $_GET['Id'] ?>;
-        console.log(blogId);
-        let url = './admin/blogAdmin/api.php/?q=readOne&id=' + blogId;
 
-        $(document).ready(function() {
-          $.ajax({
-            url: url,
-            method: 'GET',
-            dataType: 'JSON',
-            success: function(data) {
-              console.log(data);
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="./../../assets/JS/benefits.js"></script>
+  <script>
+    var posts = document.getElementById("row1");
+    document.addEventListener('DOMContentLoaded', function() {
+      // var blogId = localStorage.getItem('blogId');
+      var blogId = <?php echo $_GET['Id'] ?>;
+      console.log(blogId);
+      let url = './admin/blogAdmin/api.php/?q=readOne&id=' + blogId;
 
-              posts.innerHTML = "<div class='w-100'>\
-              <h1 id='blog_title' class='singleBlog-title'>" + data[0].Title + "</h1>\
-              <div class='singleBlog'>\
-              <img\
-              src='./" + data[0].Image + "'\
-                id='blog_image'\
-                class='card-img-top'\
-                alt='Card image cap'\
-              />\
-              <div class='singleContent'>\
-                <div style='display: flex; justify-content: flex-end'>\
-                  <h5 id='blog_date'>" + data[0].Date + "</h5>\
-                </div>\
-                <p id='blog_content' class='singleBlog-content'>" + data[0].Content + "</p>\
+      $(document).ready(function() {
+        $.ajax({
+          url: url,
+          method: 'GET',
+          dataType: 'JSON',
+          success: function(data) {
+            console.log(data);
+            if(data.length == 0 || data.message == "No Posts Found"){
+              window.document.location = "./blogs.php";
+            } else {
+            posts.innerHTML = "<div class='w-100'>\
+            <h1 id='blog_title' class='singleBlog-title'>" + data[0].Title + "</h1>\
+            <div class='singleBlog'>\
+            <img\
+            src='./" + data[0].Image + "'\
+              id='blog_image'\
+              class='card-img-top'\
+              alt='Card image cap'\
+            />\
+            <div class='singleContent'>\
+              <div style='display: flex; justify-content: flex-end'>\
+                <h5 id='blog_date'>" + data[0].Date + "</h5>\
               </div>\
             </div>\
-            </div>";
-            },
-          });
+          </div>\
+          </div>";
+            }
+          },
         });
       });
+    });
 
       function redirec(id) {
         window.document.location = "./singleBlog.php?Id=" + id; //Connecting Second page
       }
     </script>
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="./assets/JS/benefits.js"></script>
   </body>
 
 </html>

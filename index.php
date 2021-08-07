@@ -32,11 +32,11 @@
         <span class="navbar-toggler-icon"><i style="color:black; margin-top:5px" class="fas fa-bars"></i></span>
       </button>
       <div class="d-flex">
-        <a href="./index.html"><img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm logo" />
+        <a href="./"><img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm logo" />
         <div class="text-and-logo"></a>
             <a style="font-size: 16px; padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto"
-                href="./index.html">ACM<span> USICT</span></a>
-            <a href="./index.html"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
+                href="./">USICT<span> ACM</span></a>
+            <a href="./"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
         </div>
     </div>
       <div class="collapse navbar-collapse" id="navbarCollapse1">
@@ -218,10 +218,69 @@
 
     <h1 class="section-heading announce">Announcements</h1>
     <div class="container-fluid text">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
+      <!-- <div class="swiper-container"> -->
+        <!-- <div class="swiper-wrapper"> -->
 
-           <div class="swiper-slide">
+
+<!-- =======================================Swiper slide 1=============================================== -->
+
+          <!-- <div class="swiper-slide"> -->
+            <div class="det">
+              <div class="heading">
+                <h1>
+                   ACM USICT Summer Internship
+                </h1>
+              </div>
+
+              <div class="row det-row">
+                <div class="col-md-7 divide">
+                  <div class="detai">
+                    <p>Greetings everyone!!!<br>
+
+                      USICT ACM Student Chapter has come up with a summer internship opportunity 
+                      for all students of 2022, '23 and '24 batches. The internship involves 
+                      various projects under the Supervision of Mentors. This internship will give 
+                      you in-depth knowledge and will provide exposure to work in advanced 
+                      technology areas.
+
+                      <br>
+                      <br>To be a part of the SUMMER INTERNSHIP, register by Monday,<br> 2 August 2021, 
+                      3 PM 
+
+                      <br>Please note that the form is open for all courses of USICT
+                    </p>
+                    <div style="display: flex;justify-content: space-evenly;">
+                      <!-- <a target="_blank" href="http://bit.do/ReactNativeWorkshop"><button
+                          class="btn announce-button-one" style="background-color:#2250fc">
+                          <span style="color:#fff; font-size:0.9rem">REGISTER NOW</span>
+                        </button>
+                      </a> -->
+                      <a target="_blank"
+                        href="./summerinternship/index.php"><button class="btn"
+                          style="background-color:#2250fc">
+                          <span style="color:#fff; font-size:0.9rem">REGISTER NOW</span>
+                        </button>
+                      </a>
+                    </div>
+
+                  </div>
+
+                </div>
+                <div class="col-md-5 list">
+
+                  <img class="imag imag_trell" src="./assets/images/Summer Internship 2021.jpeg" alt="">
+
+                </div>
+
+              <!-- </div> -->
+
+
+
+            <!-- </div> -->
+
+          <!-- </div> -->
+
+           <!-- <div class="swiper-slide">
             <div class="det">
               <div class="heading">
                 <h1>
@@ -245,13 +304,13 @@
 
                       <br>Time - 2-3 PM
                     </p>
-                    <div style="display: flex;justify-content: space-evenly;">
+                    <div style="display: flex;justify-content: space-evenly;"> -->
                       <!-- <a target="_blank" href="http://bit.do/ReactNativeWorkshop"><button
                           class="btn announce-button-one" style="background-color:#2250fc">
                           <span style="color:#fff; font-size:0.9rem">REGISTER NOW</span>
                         </button>
                       </a> -->
-                      <a target="_blank"
+                      <!-- <a target="_blank"
                         href="https://youtube.com/playlist?list=PLgPSSnf8lP5CubPwhgIk9n4FUhFN5nc3L"><button class="btn"
                           style="background-color:#2250fc">
                           <span style="color:#fff; font-size:0.9rem">VIEW PLAYLIST</span>
@@ -276,7 +335,7 @@
 
           </div> -->
 
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
             <div class="det">
               <div class="heading">
                 <h1>Workshop on "Basics Of Arduino"</h1>
@@ -318,7 +377,7 @@
 
             </div>
 
-          </div>
+          </div> -->
 
           <!-- <div class="swiper-slide">
             <div class="det">
@@ -357,10 +416,10 @@
           </div> -->
 
 
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
             <div class="det">
               <div class="heading">
-                <h1>
+                <h1> -->
                   <!-- <span class="badge">
                     <span class="badge-wrap">
                       <span class="badge-icon"><svg height="14" viewBox="0 0 14 14" width="14"
@@ -376,7 +435,7 @@
                           </svg></span></span><span class="badge-text">LIVE</span>
                     </span>
                   </span> -->
-                  Research Cell Daily sessions on Algorithms</h1>
+                  <!-- Research Cell Daily sessions on Algorithms</h1>
               </div>
 
               <div class="row det-row">
@@ -394,11 +453,7 @@
                           <span style="color:#fff; font-size:0.9rem">PREVIOUS SESSIONS</span>
                         </button>
                       </a>
-                      <!-- <a target="_blank" href="https://meet.google.com/mon-qygy-npe"><button class="btn"
-                          style="background-color:#2250fc">
-                          <span style="color:#fff; font-size:0.9rem">JOIN LIVE</span>
-                        </button>
-                      </a> -->
+
                     </div>
 
                   </div>
@@ -411,7 +466,7 @@
                 </div>
 
               </div>
-
+ -->
 
 
             </div>
@@ -443,7 +498,7 @@
   <section class="text-center">
     <div class="container">
       <h2 class="display-4 font-weight-bold my-3">Recent Blogs</h2>
-      <div class="row" id="threeBlogsRow"></div>
+      <div class="row justify-content-center" id="threeBlogsRow"></div>
       <a href="./blogs.php">
         <button class="btn meet-us" style="background-color:#2250fc; margin-top: 20px;">
           <span style="color:#fff; font-size:1rem">SEE MORE BLOGS</span>
@@ -705,7 +760,7 @@
         </div>
       </div>
 
-      <a href="./Team.html">
+      <a href="./team.php">
         <button class="btn meet-us" style="background-color:#2250fc">
           <span style="color:#fff; font-size:1rem">MEET US</span>
         </button>
@@ -721,8 +776,7 @@
         <img style="width: 90px; margin-bottom: 5vh; " class="text-center" src="./assets/images/contact_us_icon.png"
           alt="">
         <p class="text section-heading">Get in touch</p>
-        <p class="text-small" style="color: #373f41; font-weight: normal;">Feel free to contact us if you need some
-          help. Consultations or you have some other questions.</p>
+        <p class="text-small" style="color: #373f41; font-weight: normal;">Feel free to contact us in case of any query.</p>
       </div>
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12">
@@ -835,108 +889,11 @@
   </section>
 
 
-  <footer style="background-color:#F7F9FB;" id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 col-md-6">
-            <div class="footer-info row">
-              <div class="col-lg-4 col-12 d-flex justify-content-center">
-                <a href="#about" class="scrollto"><img src="assets/images/acm1.png" alt="logo" title="" style="
-                      width: 160px;
-                      padding-top: 10px;
-                      padding-left: 25px;
-                      padding-right: 25px;
-                    " /></a>
-              </div>
-              <div class="col-lg-8 col-12 d-flex justify-content-center align-items-center">
-                <a href="#about" class="scrollto"><img src="assets/images/outstanding-website.png" alt="logo" title=""
-                    style="
-                      width: 320px;
-                      padding-top: 10px;
-                      padding-left: 25px;
-                      padding-right: 25px;
-                    " /></a>
-              </div>
-            </div>
-            <br />
-            <p>The USICT ACM Student Chapter is an official student body</p>
-            <p>incepted in 2019 under the University School USICT, GGSIPU.</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-links" style="padding: 0 4%">
-            <br />
-            <h4 style="padding: 2px" id="quick">Quick Links</h4>
-            <ul style="padding-left: 0">
-              <li>
-                <i class="fa fa-angle-right"></i>
-                <a href="https://www.ipu.ac.in/"> IPU-Home</a>
-              </li>
-              <li>
-                <i class="fa fa-angle-right"></i>
-                <a href="https://india.acm.org/"> ACM-India</a>
-              </li>
-              <li>
-                <i class="fa fa-angle-right"></i>
-                <a href="https://www.acm.org/governance/acm-india-council">
-                  ACM-India Office Bearers</a>
-              </li>
-              <li>
-                <i class="fa fa-angle-right"></i>
-                <a href="https://amturing.acm.org/award_winners/reddy_9634208.cfm">
-                  ACM Turing Award</a>
-              </li>
-              <li>
-                <i class="fa fa-angle-right"></i>
-                <a href="./clubs.html">Our Clubs</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <br>
-            <h4 style="padding:2px">Contact Us</h4>
-            <p>
-              Dean Office, <br>
-              USICT, GGSIPU<br>
-              Sector 16C, Dwarka, Delhi<br>
-              <strong>Phone:</strong> 011-25302702<br>
-              <strong>Email:</strong> info@usict.acm.org<br>
-            </p>
-
-            <div class="social-links" style="    text-align-last: justify;
-    font-size: x-large;">
-              <a href="https://www.facebook.com/acmusict" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="https://www.youtube.com/channel/UCI7her-mYrb7QM0t9S_nA_Q" class="youtube"><i
-                  class="fa fa-youtube"></i></a>
-              <a href="https://www.instagram.com/acmusict/" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="mailto:acmusit@gmail.com" class="envelope"><i class="fa fa-envelope-o"></i></a>
-              <a href="https://github.com/usict-acm/ACM-new" class="github"><i class="fab fa-github"></i></a>
-              <a href="https://discord.gg/74d2u7rv" class="discord"><i class="fab fa-discord"></i></a>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </footer>
-
-
-  <footer style="background-color:#eff1f4;" id="footer">
-    <div class="copyright-content">
-      <div class="container">
-        <br>
-        <div class="copyright-text text-center">© Conceptualized,Designed and Developed by Office Bearers of ACM USICT
-          chapter.</div>
-      </div>
-      <br>
-    </div>
-  </footer>
-
+ <!-- ==================================Footer==================================== -->
+ <?php
+      include('footer.php');
+    ?>
   <script src="./assets/JS/glider.js"></script>
-  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="./assets/JS/main.js"></script>
   
   </script>
