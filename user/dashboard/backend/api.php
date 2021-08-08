@@ -113,7 +113,7 @@ function update()
     }
     $user = init();
     $req = json_decode(file_get_contents('php://input'), true);
-    if ($req["email"] && $req["password"] && $req["name"] && $req["course"] && $req["branch"] && $req["rollNo"]) {
+    if ($req["email"] && $req["name"] && $req["course"] && $req["branch"] && $req["rollNo"]) {
         $result = $user->updateProfile($req["email"], $req);
         // echo $result;
         if ($result) {

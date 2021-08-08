@@ -62,6 +62,21 @@ export const signup = (body) => (dispatch) => {
     .catch((error) => console.log(error.message));
 };
 
+export const updateProfile = (body) => (dispatch) => {
+  fetch(API_BASE_URL + "/user/dashboard/backend/api.php?q=update", {
+    method: "POST",
+    body: JSON.stringify(body),
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      if (res.message === "Update successful") {
+        localStorage.setItem("user", JSON.stringify(res.user));
+        dispatch(setUser(res.user));
+      } else alert(res.error || "Login Failed");
+    })
+    .catch((err) => console.log(err));
+};
+
 export const logout = () => (dispatch) => {
   localStorage.removeItem("user");
   dispatch(resetUser());
