@@ -92,7 +92,7 @@
               <p class="mb-0 mx-auto">Register now for working on trending technologies under top notch mentors.</p>
             </div>
             <div class="col-md-3 d-flex justify-content-center align-items-center">
-              <a class="sm-text-custom btn btn-outline-info" style="text-decoration: none;" target="_blank" href="https://forms.gle/EHaHB2iWzi8XFXgq9">Register Now</a>
+              <a class="sm-text-custom btn btn-info disabled" style="text-decoration: none; color: #fff;" >Registrations Closed</a>
             </div>
           </div>
         </span>

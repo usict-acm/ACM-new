@@ -149,62 +149,120 @@
 
           <div class="glider-contain">
             <div class="glider1">
-              <div class="winBox">
+            <div class="winBox">
                 <div class="winnerInnerDiv">
-
                   <img src="./assets/images/TrophyOneWinner.jpg" alt="">
                   <div id="overlay">
                     <i class="fas fa-4x fa-crown"></i>
                   </div>
-                  <h2>Bat Code-2020</h2>
-
                   <div class="row winnerDetails">
                     <div class="col">
-                      <h4>Shubham Garg, USICT</h4>
+                      <h2>ACM Write It Loud</h2>
+                      <h4>Manasi Prabhakaran</h4>
+                      <h4>Anjana Jayalakshmi KR</h4>
                     </div>
-
                   </div>
                 </div>
-
               </div>
               <div class="winBox">
                 <div class="winnerInnerDiv">
-
                   <img src="./assets/images/TrophyOneWinner.jpg" alt="">
                   <div id="overlay">
                     <i class="fas fa-4x fa-crown"></i>
                   </div>
-                  <h2>Quiz-2020</h2>
-
                   <div class="row winnerDetails">
                     <div class="col">
+                      <h2>ACM Valorant Tournament</h2>
+                      <h4>Samir Mahapatra</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="winBox">
+                <div class="winnerInnerDiv">
+                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
+                  <div id="overlay">
+                    <i class="fas fa-4x fa-crown"></i>
+                  </div>
+                  <div class="row winnerDetails">
+                    <div class="col">
+                      <h2>ACM CODM Tournament</h2>
+                      <h4>Rajesh Devanda</h4>
+                      <h4>Raj Kishor Panigrahi</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="winBox">
+                <div class="winnerInnerDiv">
+                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
+                  <div id="overlay">
+                    <i class="fas fa-4x fa-crown"></i>
+                  </div>
+                  <div class="row winnerDetails">
+                    <div class="col">
+                      <h2>ACM Chess Tournament</h2>
+                      <h4>Vinayak Parashar</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="winBox">
+                <div class="winnerInnerDiv">
+                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
+                  <div id="overlay">
+                    <i class="fas fa-4x fa-crown"></i>
+                  </div>
+                  <div class="row winnerDetails">
+                    <div class="col">
+                      <h2>Decodisaster</h2>
+                      <h4>Shubham Goyal</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="winBox">
+                <div class="winnerInnerDiv">
+                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
+                  <div id="overlay">
+                    <i class="fas fa-4x fa-crown"></i>
+                  </div>
+                  <div class="row winnerDetails">
+                    <div class="col">
+                      <h2>Bat Code</h2>
+                      <h4>Shubham Garg</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="winBox">
+                <div class="winnerInnerDiv">
+                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
+                  <div id="overlay">
+                    <i class="fas fa-4x fa-crown"></i>
+                  </div>
+                  <div class="row winnerDetails">
+                    <div class="col">
+                      <h2>Quiz</h2>
                       <h4>Kashish Jain</h4>
                     </div>
-
                   </div>
                 </div>
-
               </div>
               <div class="winBox">
                 <div class="winnerInnerDiv">
-
                   <img src="./assets/images/TrophyOneWinner.jpg" alt="">
                   <div id="overlay">
                     <i class="fas fa-4x fa-crown"></i>
                   </div>
-                  <h2>Drawing Competition-2020</h2>
-
                   <div class="row winnerDetails">
                     <div class="col">
+                      <h2>Drawing Competition</h2>
                       <h4>Hanshita Prabhakar</h4>
                     </div>
-
                   </div>
                 </div>
-
               </div>
-
-
             </div>
             <button aria-label="Previous" class="glider-prev alumni-prev1"><i class="fas fa-angle-left"></i></button>
                 <button aria-label="Next" class="glider-next alumni-next1"><i class="fas fa-angle-right"></i></button>
