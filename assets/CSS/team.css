@@ -164,7 +164,7 @@ section {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .flip-card:hover .flip-card-inner {
