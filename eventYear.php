@@ -82,6 +82,7 @@
 
 
 
+
                         else if(event.button2Text!==''&&event.button1Text===''){
                             allEvents.innerHTML +=` <div class="event-post">
                                                             <div class="event-post_img">
