@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="wrap">
+			<button class="js-open btn-open is-active">Show modal</button>
+			<div class="modal js-modal">
+				<div class="modal-image">
+					<svg viewBox="0 0 32 32" style="fill: #48db71">
+						<path d="M1 14 L5 10 L13 18 L27 4 L31 8 L13 26 z"></path>
+					</svg>
+				</div>
+				<h1>Nice job!</h1>
+				<p>To dismiss click the button below</p>
+				<button class="js-close">Dismiss</button>
+			</div>
+		</div>
+		<style>
+			* {
+				box-sizing: border-box;
+				-webkit-font-smoothing: antialiased;
+			}
+			body {
+				height: 100vh;
+				display: flex;
+				font-family: sans-serif;
+				background-color: #eee;
+			}
+			.wrap {
+				margin: auto;
+			}
+			.modal {
+				box-sizing: border-box;
+				border: 2px solid #48db71;
+				background-color: #fff;
+				padding: 2em 3em;
+				text-align: center;
+				border-radius: 0.5em;
+				display: none;
+			}
+			.modal-image {
+				width: 40px;
+				height: 40px;
+				margin: 0 auto;
+				border-radius: 50%;
+				box-shadow: 0 0 0 2px #48db71;
+				padding: 11px 10px 2px;
+				margin-bottom: 2em;
+			}
+			h1 {
+				font-size: 1.5em;
+				font-weight: bold;
+				margin-bottom: 0.5em;
+			}
+			p {
+				margin-bottom: 2em;
+				color: #666;
+			}
+			.btn-open {
+				display: none;
+			}
+			.is-active {
+				display: block;
+			}
+			button {
+				font-size: 1.25em;
+				font-weight: bold;
+				background-color: #000;
+				border: none;
+				padding: 0.5em 1em;
+				color: #fff;
+				box-shadow: 0 0 0 2px #000 inset;
+				border-radius: 0.25em;
+				cursor: pointer;
+				transition: background 0.4s ease, color 0.4s ease;
+			}
+			button:hover {
+				box-shadow: 0 0 0 2px #000 inset;
+				color: #000;
+				background-color: transparent;
+			}
+		</style>
+		<script src="https://unpkg.com/dynamics.js@1.1.5"></script>
+		<script>
+			// hasClass
+			function hasClass(elem, className) {
+				return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+			}
+			// toggleClass
+			function toggleClass(elem, className) {
+				var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
+				if (hasClass(elem, className)) {
+					while (newClass.indexOf(' ' + className + ' ') >= 0) {
+						newClass = newClass.replace(' ' + className + ' ', ' ');
+					}
+					elem.className = newClass.replace(/^\s+|\s+$/g, '');
+				} else {
+					elem.className += ' ' + className;
+				}
+			}
+			// select
+			function select(selector) {
+				var elements = document.querySelectorAll(selector);
+
+				if (elements.length > 1) {
+					return elements;
+				} else {
+					return elements.item(0);
+				}
+			}
+			// External JS: JS Helper Functions
+			// External JS: Dynamics JS
+			var btnOpen = select('.js-open');
+			var btnClose = select('.js-close');
+			var modal = select('.js-modal');
+			var modalChildren = modal.children;
+			function hideModal() {
+				dynamics.animate(
+					modal,
+					{
+						opacity: 0,
+						translateY: 100,
+					},
+					{
+						type: dynamics.spring,
+						frequency: 50,
+						friction: 600,
+						duration: 1500,
+					}
+				);
+			}
+			function showModal() {
+				// Define initial properties
+				dynamics.css(modal, {
+					opacity: 0,
+					scale: 0.5,
+				});
+
+				// Animate to final properties
+				dynamics.animate(
+					modal,
+					{
+						opacity: 1,
+						scale: 1,
+					},
+					{
+						type: dynamics.spring,
+						frequency: 300,
+						friction: 400,
+						duration: 1000,
+					}
+				);
+			}
+			function showBtn() {
+				dynamics.css(btnOpen, {
+					opacity: 0,
+				});
+
+				dynamics.animate(
+					btnOpen,
+					{
+						opacity: 1,
+					},
+					{
+						type: dynamics.spring,
+						frequency: 300,
+						friction: 400,
+						duration: 800,
+					}
+				);
+			}
+			function showModalChildren() {
+				// Animate each child individually
+				for (var i = 0; i < modalChildren.length; i++) {
+					var item = modalChildren[i];
+
+					// Define initial properties
+					dynamics.css(item, {
+						opacity: 0,
+						translateY: 30,
+					});
+
+					// Animate to final properties
+					dynamics.animate(
+						item,
+						{
+							opacity: 1,
+							translateY: 0,
+						},
+						{
+							type: dynamics.spring,
+							frequency: 300,
+							friction: 400,
+							duration: 1000,
+							delay: 100 + i * 40,
+						}
+					);
+				}
+			}
+			function toggleClasses() {
+				toggleClass(btnOpen, 'is-active');
+				toggleClass(modal, 'is-active');
+			}
+			// Open nav when clicking sandwich button
+			btnOpen.addEventListener('click', function (e) {
+				toggleClasses();
+				showModal();
+				showModalChildren();
+			});
+			// Open nav when clicking sandwich button
+			btnClose.addEventListener('click', function (e) {
+				hideModal();
+				dynamics.setTimeout(toggleClasses, 500);
+				dynamics.setTimeout(showBtn, 500);
+			});
+		</script>
+	</body>
+</html>
