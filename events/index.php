@@ -42,7 +42,7 @@
 <body>
   <!-- ************************************************Navbar******************************************************************************-->
 
-  <nav id="togglerButton" class="navbar navbar-expand-lg mb-4 top-bar navbar-static-top sps sps-abv">
+  <!-- <nav id="togglerButton" class="navbar navbar-expand-lg mb-4 top-bar navbar-static-top sps sps-abv">
     <div class="container">
       <button class="navbar-toggler navbar-toggler-right" type="button" onclick="myFunction()" data-toggle="collapse"
         data-target="#navbarCollapse1" aria-controls="navbarCollapse" aria-expanded="false"
@@ -83,8 +83,8 @@
         </ul>
       </div>
     </div>
-  </nav>
-
+  </nav> -->
+<?php include("../header.php")?>
   <section>
     <div class="leftBox">
       <div class="content">

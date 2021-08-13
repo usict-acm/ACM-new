@@ -122,37 +122,80 @@
                     console.log("check data ywar",data);
                     data[0].forEach(allEvent);                    
                     function allEvent(event) {
-                        allEvents.innerHTML +=" <div class='event-post'>\
-                                                    <div class='event-post_img'>\
-                                                        <img src="+event.poster+" alt=''>\
-                                                    </div>\
-                                                    <div class='event-post_info'>\
-                                                        <div class='event-post_date'>\
-                                                            <span>"+event.startDate+" -- "+event.endDate+"</span>\
-                                                            <span>"+event.time+"</span>\
-                                                        </div>\
-                                                        <h1 class='event-post_title'>"+event.name+"</h1>\
-                                                        <p class='event-post_text'>"+event.description+"</p>\
-                                                        <p class='dateTime-para'>"+event.speakers+"</p>";
                         if(event.button1Text!==''&&event.button2Text!==''){
 
-                            allEvents.innerHTML+="   <a href="+event.button1Link+" target='_blank'><button class='dateTime-para btn form-input-boxes-manual btn-watch' style='font-size: 16px; position:relative; top:-100px; left:780px;'>"+event.button1Text+"</button></a>\
-                            <a href="+event.button2Link+" style='float: right;' target='_blank'><button class='dateTime-para btn form-input-boxes-manual event-button-two btn-watch' style='font-size: 16px; position:relative; top:-100px;right:200px;'>"+event.button2Text+"</button></a>\
-                            </div>\
-                                            </div>";
-                            }
-                       else if(event.button1Text===''||event.button2Text===''){
-                                    if(event.button2Text!==''&&event.button1Text===''){
-                                        allEvents.innerHTML+="     <a href="+event.button2Link+" style='float: right;' target='_blank'><button class='dateTime-para btn form-input-boxes-manual event-button-two btn-watch' style='font-size: 16px; position:relative; top:-100px;right:200px;'>"+event.button2Text+"</button></a>\
-                                        </div>\
-                                            </div>";
-                                    }
-                                    if(event.button2Text===''&&event.button1Text!==''){
-                                        allEvents.innerHTML+="      <a href="+event.button1Link+" target='_blank'><button class='dateTime-para btn form-input-boxes-manual btn-watch' style='font-size: 16px; position:relative; top:-100px; left:780px;'>"+event.button1Text+"</button></a>\
-                                        </div>\
-                                            </div>";
-                                    }
-                            }
+                            allEvents.innerHTML +=
+                                                        `<div class="event-post">
+                                                            <div class="event-post_img">
+                                                                <img src=${event.poster}  alt="">
+                                                            </div>
+                                                            <div class="event-post_info">
+                                                                <div class="event-post_date">
+                                                                <span>${event.startDate} -- ${event.endDate}</span>
+                                                                <span>${event.time}</span>
+                                                                </div>
+                                                                <h1 class="event-post_title">${event.name}</h1>
+                                                                <p class="event-post_text">${event.description}</p>
+                                                                <a href=${event.button1Link} style="float: right;"
+                                                                    target="_blank"><button class="dateTime-para btn form-input-boxes-manual btn-watch" style="font-size: 16px;">
+                                                                    ${event.button1Text}</button></a>
+                                                                        <a href=${event.button2Link} style="float: right;" target="_blank"><button class="dateTime-para btn form-input-boxes-manual event-button-two btn-watch" style="font-size: 16px;">${event.button2Text}</button></a>
+                                                            </div>
+                                                        </div>`;
+                        }
+
+
+
+                        else if(event.button2Text!==''&&event.button1Text===''){
+                            allEvents.innerHTML +=` <div class="event-post">
+                                                            <div class="event-post_img">
+                                                                <img src=${event.poster}  alt="">
+                                                            </div>
+                                                            <div class="event-post_info">
+                                                                <div class="event-post_date">
+                                                                <span>${event.startDate} -- ${event.endDate}</span>
+                                                                <span>${event.time}</span>
+                                                                </div>
+                                                                <h1 class="event-post_title">${event.name}</h1>
+                                                                <p class="event-post_text">${event.description}</p>
+                                                                    ${event.button1Text}</button></a>
+                                                                        <a href=${event.button2Link} style="float: right;" target="_blank"><button class="dateTime-para btn form-input-boxes-manual event-button-two btn-watch" style="font-size: 16px;">${event.button2Text}</button></a>
+                                                            </div>
+                                                        </div>`;
+                        }
+                        else if(event.button2Text===''&&event.button1Text!==''){
+                        allEvents.innerHTML +=`        <div class="event-post">
+                                                            <div class="event-post_img">
+                                                                <img src=${event.poster}  alt="">
+                                                            </div>
+                                                            <div class="event-post_info">
+                                                                <div class="event-post_date">
+                                                                <span>${event.startDate} -- ${event.endDate}</span>
+                                                                <span>${event.time}</span>
+                                                                </div>
+                                                                <h1 class="event-post_title">${event.name}</h1>
+                                                                <p class="event-post_text">${event.description}</p>
+                                                                <a href=${event.button1Link} style="float: right;"
+                                                                    target="_blank"><button class="dateTime-para btn form-input-boxes-manual btn-watch" style="font-size: 16px;">
+                                                                    ${event.button1Text}</button></a>
+                                                            </div>
+                                                        </div>`;
+                        }
+                        else {
+                            allEvents.innerHTML +=`        <div class="event-post">
+                                                            <div class="event-post_img">
+                                                                <img src=${event.poster}  alt="">
+                                                            </div>
+                                                            <div class="event-post_info">
+                                                                <div class="event-post_date">
+                                                                <span>${event.startDate} -- ${event.endDate}</span>
+                                                                <span>${event.time}</span>
+                                                                </div>
+                                                                <h1 class="event-post_title">${event.name}</h1>
+                                                                <p class="event-post_text">${event.description}</p>
+                                                            </div>
+                                                        </div>`;
+                        }       
                    
            
                                                         
