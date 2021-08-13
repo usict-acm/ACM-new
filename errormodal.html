@@ -2,22 +2,29 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>errormodal</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
-		<link rel="stylesheet" href="/assets/CSS/errormodal.css" />
+		<link rel="stylesheet" href="/assets/CSS/modal.css" />
 	</head>
-	<body class="modal-body">
+	<body>
 		<!-- partial:index.partial.html -->
-		<div class="wrap">
-			<button class="js-open btn-open is-active modal-button">Show modal</button>
-			<div class="modal js-modal">
-				<!--     <div class="modal-image"> -->
-				<!--       <svg viewBox="0 0 32 32" style="fill:#48DB71"><path d="M1 14 L5 10 L13 18 L27 4 L31 8 L13 26 z"></path></svg> -->
-				<img src="https://image.flaticon.com/icons/png/512/1680/1680214.png" class="modal-image" />
-				<!--     </div> -->
-				<h1 class="modal-h1">Error!</h1>
-				<p class="modal-p">To dismiss click the button below</p>
-				<button class="js-close modal-button">Dismiss</button>
+		<div class="modal-container">
+			<div class="wrap">
+				<button class="js-open btn-open is-active modal-btn ">Show modal</button>
+				<div class="modal js-modal" style="border: 2px solid #ff1500;
+				background-color: #fff;">
+					<!--     <div class="modal-image"> -->
+					<!--       <svg viewBox="0 0 32 32" style="fill:#48DB71"><path d="M1 14 L5 10 L13 18 L27 4 L31 8 L13 26 z"></path></svg> -->
+					<img src="https://image.flaticon.com/icons/png/512/1680/1680214.png" class="modal-image" style="border-radius: 0;
+					box-shadow: 0 0 0 2px #ffffff;
+					padding: 0;" />
+					<!--     </div> -->
+					<h1 class="modal-heading">Error!</h1>
+					<p class="modal-message">To dismiss click the button below</p>
+					<button class="js-close modal-btn">Dismiss</button>
+				</div>
 			</div>
 		</div>
 		<!-- partial -->
