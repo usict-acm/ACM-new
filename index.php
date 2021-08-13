@@ -194,9 +194,9 @@
 
   <!-- ====================================Announcement============================================= -->
 
-  <section class="announcement">
+  <!-- <section class="announcement">
     <h1 class="section-heading announce">Announcements</h1>
-    <div class="container-fluid text">
+    <div class="container-fluid text"> -->
       <!-- <div class="swiper-container"> -->
         <!-- <div class="swiper-wrapper"> -->
 
@@ -204,7 +204,7 @@
           
 
           <!-- <div class="swiper-slide"> -->
-            <div class="det">
+            <!-- <div class="det">
               <div class="heading">
                 <h1>
                    ACM USICT Summer Internship
@@ -228,13 +228,13 @@
 
                       <br>Please note that the form is open for all courses of USICT
                     </p>
-                    <div style="display: flex;justify-content: space-evenly;">
+                    <div style="display: flex;justify-content: space-evenly;"> -->
                       <!-- <a target="_blank" href="http://bit.do/ReactNativeWorkshop"><button
                           class="btn announce-button-one" style="background-color:#2250fc">
                           <span style="color:#fff; font-size:0.9rem">REGISTER NOW</span>
                         </button>
                       </a> -->
-                      <a target="_blank"
+                      <!-- <a target="_blank"
                         href="./summerinternship/index.php"><button class="btn"
                           style="background-color:#2250fc">
                           <span style="color:#fff; font-size:0.9rem">REGISTER NOW</span>
@@ -247,9 +247,9 @@
                 </div>
                 <div class="col-md-5 list">
 
-                  <img class="imag imag_trell" src="./assets/images/Summer Internship 2021.jpeg" alt="">
+                  <img class="imag imag_trell" src="./assets/images/Summer Internship 2021.jpeg" alt=""> -->
 
-                </div>
+                <!-- </div> -->
 
               <!-- </div> -->
 
@@ -334,7 +334,7 @@
 
           </div> -->
 
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
             <div class="det">
               <div class="heading">
                 <h1>Blog Writing Competition</h1>
@@ -406,7 +406,7 @@
               </div>
  -->
 
-
+<!-- 
             </div>
           </div>
         </div>
@@ -414,8 +414,8 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
-    </div>
-  </section>
+    </div> -->
+  <!-- </section> -->
 
 <!-- ******************************************Blogs******************************************* -->
 
