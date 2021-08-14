@@ -111,7 +111,7 @@
         $database = new Database();
         $db = $database->connect();
 
-            $sql = 'SELECT DISTINCT t.year FROM `team` t ORDER BY year desc';
+            $sql = 'SELECT DISTINCT t.year FROM `team` t WHERE active = 1 ORDER BY year desc';
             $result = $db->query($sql);
 
             if($result) {
