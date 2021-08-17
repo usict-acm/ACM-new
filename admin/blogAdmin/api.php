@@ -337,54 +337,58 @@ function postblog()
         } 
         echo json_encode($announcements_arr);}}
     
-   function postAnnouncement(){
+    function postAnnouncement(){
     $database = new Database();
     $db = $database->connect();
-    // if(isset($_POST['submit'])){
-        $txtTitle = $_POST['name'];
-        $txtDescription = $_POST['description'];
-        $txtReglink = $_POST['regLink'];
-        $txtStartdate=$_POST['startDate'];
-        $txtEnddate=$_POST['endDate'];
-        $txtviewResource = $_POST['viewResource'];
-        $txtPartners = $_POST['partners'];
-        $txtSpeakers = $_POST['speakers'];
-        $file = $_FILES['poster'];
-        $txtYear = $_POST['year'];
-        $txtTime = $_POST['time'];
+        $txtTitle = $_POST["name"];
+        $txtDescription =  $_POST["description"];
+        $txtStartdate = $_POST["startDate"];
+        $txtEnddate = $_POST["endDate"];
+        $txtButton1Text = $_POST["button1Text"];
+        $txtButton1Link = $_POST["button1Link"];
+        $txtButton2Text = $_POST["button2Text"];
+        $txtButton2Link = $_POST["button2Link"];
+        $txtPartners = $_POST["partners"];
+        $txtSpeakers = $_POST["speakers"];
+        $txtYear = $_POST["year"];
+        $txtTime = $_POST["time"];
+        $file = isset($_FILES['poster']) ? $_FILES['poster'] : false;
     
-        print_r($file);
+        if(!$file){
+            echo json_encode(
+                array('message' => 'Insert the image')
+            );
+        }
     
         $filename = $file['name'];
-        $fileerror = $file['error'];
         $filetemppath= $file['tmp_name'];
     
         $fileext = explode('.',$filename);
         $filecheck = strtolower(end($fileext));
     
         $fileextstored = array('png','jpg','jpeg');
-    
+        
         if(in_array($filecheck,$fileextstored)){
             $destinationfile = 'upload/announcements/'.$filename;
             $uploadLocation = '../../upload/announcements/'.$filename;
             move_uploaded_file($filetemppath,$uploadLocation);
     
-            $sql = "INSERT INTO `event` (`sno`, `name`, `description`, `regLink`, `startDate`, `endDate` , `viewResource` , `partners` , `speakers` , `poster` , `year` , `time`) VALUES ('0', '$txtTitle', '$txtDescription', '$txtReglink' ,'$txtStartdate','$txtEnddate','$txtviewResource','$txtPartners','$txtSpeakers', '$destinationfile', '$txtYear', '$txtTime');";
+            $sql = "INSERT INTO `event` (`sno`, `name`, `description`, `startDate`, `endDate` , `button1Text`, `button1Link`, `button2Text`, `button2Link` , `partners` , `speakers` , `poster` , `year` , `time`) VALUES ('0', '$txtTitle', '$txtDescription','$txtStartdate','$txtEnddate','$txtButton1Text', '$txtButton1Link', '$txtButton2Text', '$txtButton2Link', '$txtPartners','$txtSpeakers', '$destinationfile', '$txtYear', '$txtTime');";
             if($db->query($sql) == true){
-            echo json_encode("Form has been submitted");        }
-        else{
-            // echo json_encode("ERROR: $sql <br> $db->error");
-            echo json_encode(http_response_code(400));
+                echo json_encode(
+                    array('message' => 'Form has been submitted')
+                );       
+            } else{
+                echo json_encode(
+                    array('message' => 'Internal Server Error. Try Again')
+                );
+            }
+        } else{
+            echo json_encode(
+                array('message' => 'Insert the image')
+            );
         }
-    
-        }
-    
-        else{
-            // echo json_encode(http_response_code(400));
-            echo json_encode("Fill all the fields");
-        }
-    // }
-   };
+    };
 
 function postImage()
 {

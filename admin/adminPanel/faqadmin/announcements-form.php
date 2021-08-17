@@ -66,9 +66,12 @@ require_once "./faqadmin/config1.php";
     var formData = new FormData();
     formData.append('name',  $("#name").val());
     formData.append('description', $("#description").val());
-    formData.append('regLink', $("#regLink").val());
     formData.append('startDate', $("#startDate").val());
     formData.append('endDate', $("#endDate").val());
+    formData.append('button1Text',$("#button1Text").val());
+    formData.append('button1Link',$("#button1Link").val());
+    formData.append('button2Text',$("#button2Text").val());
+    formData.append('button2Link',$("#button2Link").val());
     formData.append('viewResource', $("#viewResource").val());
     formData.append('partners', $("#partners").val());
     formData.append('speakers', $("#speakers").val());
@@ -84,12 +87,11 @@ require_once "./faqadmin/config1.php";
         processData: false,
         contentType: false,
         success: function(data){
-        alert(data);
-        window.location.reload();
+            alert(data.message);
+            window.location.reload();
         },
         error: function(xhr, status, error){
-            console.error(xhr);
-            alert("Fill all the Details");
+            alert("Fill in the details");
         },
     });
     }
@@ -111,18 +113,36 @@ require_once "./faqadmin/config1.php";
                         <div class="form-group">
                             <textarea name="txtDescription" id="description" rows="10" class='form-control mceEditor' placeholder="Description of the announcement"></textarea>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <input type="text" name="txtReglink" id="regLink" class='form-control' placeholder="RegLink" />
+                        </div> -->
+                        <div class="form-group">
+                            <label>Date for commencement of the event</label>
                         </div>
                         <div class="form-group">
                             <input type="date" name="txtStartdate" id="startDate" class='form-control' placeholder="Date for commencement of the event" />
                         </div>
                         <div class="form-group">
+                            <label>Date for end of the event</label>
+                        </div>
+                        <div class="form-group">
                             <input type="date" name="txtEnddate" id="endDate" class='form-control' placeholder="Date for end of the event" />
                         </div>
                         <div class="form-group">
-                            <input type="text" name="txtviewResource" id="viewResource" class='form-control' placeholder="View resources" />
+                            <input type="text" name="txtButton1Text" id="button1Text" class='form-control' placeholder="Button1 Text" />
                         </div>
+                        <div class="form-group">
+                            <input type="text" name="txtButton1Link" id="button1Link" class='form-control' placeholder="Button1 Link" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="txtButton2Text" id="button2Text" class='form-control' placeholder="Button2 Text" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="txtButton2Link" id="button2Link" class='form-control' placeholder="Button2 Link" />
+                        </div>
+                        <!-- <div class="form-group">
+                            <input type="text" name="txtviewResource" id="viewResource" class='form-control' placeholder="View resources" />
+                        </div> -->
                         <div class="form-group">
                             <input type="text" name="txtPartners" id="partners" class='form-control' placeholder="Partners" />
                         </div>
