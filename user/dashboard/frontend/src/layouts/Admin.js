@@ -39,7 +39,9 @@ const Admin = (props) => {
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
       if (prop.layout === "/admin") {
-        return <Route path={prop.path} component={prop.component} key={key} />;
+        return (
+          <Route exact path={prop.path} component={prop.component} key={key} />
+        );
       } else {
         return null;
       }
@@ -48,7 +50,7 @@ const Admin = (props) => {
 
   const getBrandText = (path) => {
     for (let i = 0; i < routes.length; i++) {
-      if (props.location.pathname.indexOf(routes[i].path) !== -1) {
+      if (location.pathname.indexOf(routes[i].path) !== -1) {
         return routes[i].name;
       }
     }
@@ -61,19 +63,16 @@ const Admin = (props) => {
         {...props}
         routes={routes}
         logo={{
-          innerLink: "/admin/index",
+          innerLink: "/",
           imgSrc: require("../assets/img/brand/argon-react.png").default,
           imgAlt: "...",
         }}
       />
       <div className="main-content" ref={mainContent}>
-        <AdminNavbar
-          {...props}
-          brandText={getBrandText(props.location.pathname)}
-        />
+        <AdminNavbar {...props} brandText={getBrandText(location.pathname)} />
         <Switch>
           {getRoutes(routes)}
-          <Redirect from="*" to="/index" />
+          <Redirect from="*" to="/user-profile" />
         </Switch>
         <Container fluid>
           <AdminFooter />

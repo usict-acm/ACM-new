@@ -24,7 +24,7 @@ import { Container, Row, Col } from "reactstrap";
 const Login = () => {
   return (
     <>
-      <footer className="py-5">
+      <footer className="mt-5">
         <Container>
           <Row className="align-items-center justify-content-xl-center">
             <Col xl="2">
@@ -35,7 +35,7 @@ const Login = () => {
                   href="https://usict.acm.org"
                   target="_blank"
                 >
-                  ACM USICT
+                  USICT ACM
                 </a>
               </div>
             </Col>
