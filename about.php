@@ -152,8 +152,8 @@
       <!-- <h2 class="display-4 font-weight-bold my-3">Recent Blogs</h2> -->
       <div class="row justify-content-center" id="threeBlogsRow"></div>
       <a href="./collab.php">
-        <button class="btn meet-us" style="background-color:#2250fc; margin-top: 20px;">
-          <span style="color:#fff; font-size:1rem">COLLABORATIONS</span>
+        <button class="btn meet-us" style="background-color:#2250fc; margin-top: 20px; ">
+          <span style="color:#fff; font-size: 1.2rem">COLLABORATIONS</span>
         </button>
       </a>
     </div>    
