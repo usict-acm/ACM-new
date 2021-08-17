@@ -156,7 +156,7 @@
                                       </div>\
                                       <div class="flip-card-back">\
                                       <br>\
-                                      <h2>' + row.name + '</h2>\
+                                      <h2 class="card-name-back">' + row.name + '</h2>\
                                       <p>' + row.designation + '</p>\
                                       <br />\
                                       <a href= "' + row.linkedin + '" target="_blank">\

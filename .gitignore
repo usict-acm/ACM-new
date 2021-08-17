@@ -2,6 +2,6 @@ cpanel.yml
 */database.php
 */node_modules
 upload/*
-environment.php
+enviornment.php
 .vscode/
 debug.log
