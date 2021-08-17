@@ -2,36 +2,39 @@
 <html lang="en">
 
 <head>
-    <?php
+     <?php
       include("head.php")
     ?>
-    <title>USICT ACM</title>
-    <link href="assets/CSS/aboutStyle.css" rel="stylesheet" />
-    <link href="assets/CSS/glider.css" rel="stylesheet" />
-    <link href="assets/CSS/header.css" rel="stylesheet" />
-    <link href="assets/CSS/footer.css" rel="stylesheet" />
+     <title>USICT ACM</title>
+     <link href="assets/CSS/aboutStyle.css" rel="stylesheet" />
+     <link href="assets/CSS/glider.css" rel="stylesheet" />
+     <link href="assets/CSS/header.css" rel="stylesheet" />
+     <link href="assets/CSS/footer.css" rel="stylesheet" />
 
-  </head>
+</head>
 
-  <body>
-      <!-- ************************************************Navbar******************************************************************************-->
- <?php
+<body>
+     <!-- ************************************************Navbar******************************************************************************-->
+     <?php
       $currentPage = 'about';
       include('header.php');
     ?>
- <!-- Header Seaction-->
+     <!-- Header Seaction-->
      <div class="globalContent">
           <div class="u-overflow-hidden">
                <header class="header">
                     <div class="container-lg">
                          <div class="header-content">
                               <h1 class="head-1 common-PageTitle header-title">
-                                   <strong>About Us</strong><br/>ACM | USICT
+                                   <strong>About Us</strong><br />ACM | USICT
                               </h1>
 
                               <p class="common-IntroText header-intro">
-                                   USICT ACM Student Chapter was launched in 2019 to promote the Computer Science culture in USICT. At USICT ACM Student Chapter, we see a world where computing helps solve tomorrow’s problems, where we use our knowledge and skills to advance the profession and make a positive impact.<br>
-                                  
+                                   USICT ACM Student Chapter was launched in 2019 to promote the Computer Science
+                                   culture in USICT. At USICT ACM Student Chapter, we see a world where computing helps
+                                   solve tomorrow’s problems, where we use our knowledge and skills to advance the
+                                   profession and make a positive impact.<br>
+
                               </p>
                          </div>
                     </div>
@@ -67,7 +70,12 @@
                                    <h3 class="head-3 today-title">INTRODUCTION</h3>
 
                                    <p class="common-MediumBodyText">
-                                        USICT ACM Student Chapter organizes various events, webinars, and workshops to enhance the computer and scientific knowledge among the students. Chapter members are offered many opportunities, from mentors providing essential technical knowledge to information about lucrative internships up for grabs. We have conducted over 30 major events and multiple mini-events in the past year, with a growing network of more than 500 students.
+                                        USICT ACM Student Chapter organizes various events, webinars, and workshops to
+                                        enhance the computer and scientific knowledge among the students. Chapter
+                                        members are offered many opportunities, from mentors providing essential
+                                        technical knowledge to information about lucrative internships up for grabs. We
+                                        have conducted over 30 major events and multiple mini-events in the past year,
+                                        with a growing network of more than 500 students.
                                    </p>
                               </div>
                               <!--Img Section-->
@@ -96,55 +104,63 @@
                     </div>
                </section>
           </div>
-     </div>
 
-     <!--Different icon section-->
-     <div class="globalContent">
+
+          <!--Different icon section-->
+          <!-- <div class="globalContent"> -->
           <section class="customers section section--padding">
                <!--Icon header-->
                <div class="container-lg">
                     <div class="section-intro">
                          <h2 class="head-2 common-SectionTitle">From startups to the world’s largest companies</h2>
                          <p class="common-IntroText">
-                    Collaboarated with industry giants to help the computer science community to grow.
+                              Collaboarated with industry giants to help the computer science community to grow.
                          </p>
                     </div>
                </div>
                <!--icons-->
-               
+
                <div class="row d-flex justify-content-center">
-                 <!-- <div class="collab-card">
+                    <!-- <div class="collab-card">
                    <hr class="blue-hr">
                    <div class="card-1"></div>
                      <h1 class="collab-heading">Coursera</h1>
                    </div> -->
-                   <div class="collab-card">
-                     <hr class="blue-hr">
-                     <div class="card-2"></div>
-                     <h1 class="collab-heading">Docker<br> Delhi</h1>
-                   </div>
-                   <div class="collab-card">
-                     <hr class="blue-hr">
-                     <div class="card-3"></div>
-                     <h1 class="collab-heading">Lenskart</h1>
-                   </div>
-                   <div class="collab-card">
-                     <hr class="blue-hr">
-                     <div class="card-4"></div>
-                     <h1 class="collab-heading">Coding<br>Ninjas</h1>
-                   </div>
-                   <div class="collab-card">
-                     <hr class="blue-hr">
-                     <div class="card-5"></div>
-                     <h1 class="collab-heading">CAD DESK <br>India</h1>
-                   </div>
-                 </div>
-                 <a href="./collab.html" target="_blank"><div class="container-btn">  
-                     <button> Collaborators </button>  
-                    </div></a> 
+                    <div class="collab-card">
+                         <hr class="blue-hr">
+                         <div class="card-2"></div>
+                         <h1 class="collab-heading">Docker<br> Delhi</h1>
+                    </div>
+                    <div class="collab-card">
+                         <hr class="blue-hr">
+                         <div class="card-3"></div>
+                         <h1 class="collab-heading">Lenskart</h1>
+                    </div>
+                    <div class="collab-card">
+                         <hr class="blue-hr">
+                         <div class="card-4"></div>
+                         <h1 class="collab-heading">Coding<br>Ninjas</h1>
+                    </div>
+                    <div class="collab-card">
+                         <hr class="blue-hr">
+                         <div class="card-5"></div>
+                         <h1 class="collab-heading">CAD DESK <br>India</h1>
+                    </div>
                </div>
-              
-               
+               <section class="text-center">
+    <div class="container">
+      <!-- <h2 class="display-4 font-weight-bold my-3">Recent Blogs</h2> -->
+      <div class="row justify-content-center" id="threeBlogsRow"></div>
+      <a href="./collab.php">
+        <button class="btn meet-us" style="background-color:#2250fc; margin-top: 20px;">
+          <span style="color:#fff; font-size:1rem">COLLABORATIONS</span>
+        </button>
+      </a>
+    </div>    
+  </section>
+     
+
+
                <!-- <div class="container-lg">
                     <div class="customers-grid">
                          <figure class="customers-customer customer--amazon">
@@ -728,15 +744,15 @@
                               </svg>
                          </figure>
                     </div> -->
-                   
+
           </section>
-     </div>
+       <!-- </div> -->
      <div id="site-wrapper">
           <div id="site-body">
                <div id="milestones" class="section2 lazy-bg-loaded">
                     <div class="wrapper clearfix">
                          <h2 class="heading">Milestones</h2>
-                     
+
                          <div class="item right">
                               <div class="marker multiline"></div>
                               <div class="content">
@@ -753,7 +769,7 @@
                                    <div class="time">2020</div>
                                    <div>
                                         <p>Growth from 15 members to 500+ members</p>
-                                        
+
                                    </div>
                               </div>
                          </div>
@@ -763,7 +779,7 @@
                                    <div class="time">2021</div>
                                    <div>
                                         <p>Global Winners, ACM outstanding website</p>
-                                        
+
                                    </div>
                               </div>
                          </div>
@@ -785,7 +801,7 @@
                                    and Profession" and plethora of events are
                                    on their way in Future.
                               </p>
-                              
+
                               <p>
                                    As the Covid-19 pandemic drove our life online, We shifted our events to online mode.
                                    We conducted 28+ online events in the pandemic.
@@ -795,13 +811,14 @@
                </div>
           </div>
      </div>
+ </div>
 
+     <!-- ***********************************************Footer************************************************************************ -->
 
-<!-- ***********************************************Footer************************************************************************ -->
-
-<?php
+     <?php
       include('footer.php');
     ?>
-  <script src="assets/JS/glider.js"></script>
+     <script src="assets/JS/glider.js"></script>
 </body>
+
 </html>

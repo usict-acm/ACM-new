@@ -9,6 +9,7 @@ body {
   color: #5a5a5a;
   font-family: "Lato", sans-serif;
   margin-left: 1px;
+  overflow-x: hidden;
 }
 
 h1,
@@ -727,6 +728,9 @@ a {
 
 
 @media only screen and (max-width:767px){
+     body{
+          overflow-x: hidden;
+     }
      #milestones:after{
           margin-left:0;
           top:-30px;
@@ -798,6 +802,9 @@ a {
 
 }
 @media only screen and (max-width:768px){
+     body{
+      overflow-x: hidden;
+          }
      #site-body{
           position:relative;
           width:768px;
@@ -806,6 +813,9 @@ a {
      }
 }
 @media only screen and (min-width:769px) and (max-width:1019px){
+     body{
+          overflow-x: hidden;
+     }
      #site-body{
           min-width:769px;
      }
@@ -816,6 +826,9 @@ a {
      }
 }
 @media only screen and (max-width:1023px){
+     body{
+          overflow-x: hidden;
+     }
      #milestones .time{
           font-size:32px;
           line-height:1.125em;
@@ -833,6 +846,9 @@ a {
      }
 }
 @media only screen and (max-width:1440px){
+     body{
+          overflow-x: hidden;
+     }
      .section2 .heading{
           
           line-height:1.0714em;
@@ -842,6 +858,9 @@ a {
      #address .wrapper:after{width:450px;height:350px}
 }
 @media only screen and (max-width:1441px){
+     body{
+          overflow-x: hidden;
+     }
      #site-body{
           width:100%;
           min-width:auto!important;
@@ -849,6 +868,9 @@ a {
 } 
 
 @media(min-width:420px){
+     body{
+          overflow-x: hidden;
+     }
      .header-content{
           padding:160px 0 80px
      }
@@ -861,6 +883,9 @@ a {
 }
 
 @media (min-width:670px){
+     body{
+          overflow-x: hidden;
+     }
      .common-PageTitle{
           font-size:53px;
           line-height:68px
@@ -915,6 +940,9 @@ a {
      }
 }
 @media(min-width:880px){
+     body{
+          overflow-x: hidden;
+     }
      .header-content{
           padding:160px 0 120px
      }
@@ -943,6 +971,9 @@ a {
 }
 
 @media (min-width:1040px){
+     body{
+          overflow-x: hidden;
+     }
      .common-StripeGrid .grid{
           --gutter-column-width:var(--content-column-width);
           min-width:calc(1040px / var(--content-columns) * (var(--gutter-columns) * 2 + var(--content-columns)))
