@@ -38,6 +38,7 @@ const Profile = () => {
 
   useEffect(() => {
     init();
+    //eslint-disable-next-line
   }, []);
 
   const updateInfo = () => {
@@ -130,7 +131,7 @@ const Profile = () => {
                     src={
                       localURL ||
                       user?.profilePhoto ||
-                      require("../../assets/img/theme/team-4-800x800.jpg")
+                      require("../../assets/img/theme/team-1-800x800.jpg")
                         .default
                     }
                     alt="Card image cap"

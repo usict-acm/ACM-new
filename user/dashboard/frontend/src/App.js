@@ -22,6 +22,7 @@ const App = () => {
       dispatch(setUser(JSON.parse(localStorage.getItem("user"))));
       setLoading(false);
     }
+    //eslint-disable-next-line
   }, []);
 
   return loading ? (

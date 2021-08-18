@@ -18,7 +18,7 @@
 import React from "react";
 import { useLocation, Route, Switch, Redirect } from "react-router-dom";
 // reactstrap components
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row } from "reactstrap";
 
 // core components
 import AuthNavbar from "components/Navbars/AuthNavbar.js";
@@ -56,7 +56,7 @@ const Auth = (props) => {
   return (
     <>
       <AuthNavbar />
-      <div className="main-content" className="authContent">
+      <div className="main-content authContent">
         <div className="topSection" />
         <Container>
           <Row className="justify-content-center">
