@@ -75,11 +75,11 @@ export const updateProfile = (body) => (dispatch) => {
     {
       method: "POST",
       body: JSON.stringify(body),
-      headers: { "content-type": "multipart/form-data" },
     }
   )
     .then((res) => res.json())
     .then((res) => {
+      console.log(res);
       if (res.message === "Update successful") {
         localStorage.setItem("user", JSON.stringify(res.user));
         dispatch(setUser(res.user));

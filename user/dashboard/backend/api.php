@@ -117,24 +117,7 @@ function update()
     }
     $user = init();
     $req = json_decode(file_get_contents('php://input'), true);
-    if ($req["email"] && $req["name"] && $req["course"] && $req["branch"] && $req["rollNo"]) { 
-        if($_FILES['newProfilePhoto']){
-            $uploadDir = "../../../upload/dashboard/profile/";
-            $fileName = $req["email"];
-            $fileTempPath = $_FILES["newProfilePhoto"]["tmp_name"];
-            $error = $_FILES["newProfilePhoto"]["error"];
-            $fileExt = strtolower(end(explode('.',$_FILES["newProfilePhoto"]["name"])));
-            $fileExtAllowed = array('png','jpg','jpeg');
-            if($error > 0){
-                echo json_encode(array('error' => "Failed to Upload"));     
-            }else {
-                if(in_array($fileExt,$fileExtAllowed)){
-                    $uploadLocation = $uploadDir.$fileName.".".$fileExt;
-                    move_uploaded_file($fileTempPath, $uploadLocation);
-                    $req['profilePhoto'] = "upload/dashboard/profile/".$fileName.".".$fileExt;
-                }
-            }            
-        }
+    if ($req["email"] && $req["name"] && $req["course"] && $req["branch"] && $req["rollNo"]) {         
         $result = $user->updateProfile($req["email"], $req);        
         if ($result) {
             $user_data = fetchUserByEmail($user, $req["email"]);            
