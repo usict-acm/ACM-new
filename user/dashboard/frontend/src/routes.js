@@ -25,7 +25,7 @@ import Login from "pages/Auth/Login";
 
 var routes = [
   {
-    path: "/index",
+    path: "/",
     name: "Dashboard",
     icon: "ni ni-tv-2 text-primary",
     component: Index,

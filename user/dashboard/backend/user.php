@@ -44,10 +44,11 @@ class User
     {
         $updatedName = $userDoc["name"];
         $updatedAcmId = $userDoc["acmMemberId"];
+        $updatedProfilePhoto = $userDoc["profilePhoto"];
 
         $query =
             "UPDATE $this->table
-             SET name ='$updatedName', acmMemberId = '$updatedAcmId'
+             SET name ='$updatedName', acmMemberId = '$updatedAcmId', profilePhoto = '$updatedProfilePhoto'
              WHERE email = '$email'";
         $res = $this->conn->query($query);
         return $res;

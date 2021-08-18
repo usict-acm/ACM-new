@@ -22,7 +22,6 @@ import { useDispatch } from "react-redux";
 import {
   Button,
   Card,
-  CardHeader,
   CardBody,
   FormGroup,
   Form,
@@ -37,7 +36,7 @@ import { login } from "redux/slices/userSlice";
 
 const Login = () => {
   const dispatch = useDispatch(),
-   [email, setEmail] = useState(""),
+    [email, setEmail] = useState(""),
     [password, setPassword] = useState("");
 
   const loginHandler = (e) => {
@@ -54,7 +53,7 @@ const Login = () => {
 
   return (
     <>
-      <Col lg="5" md="7">
+      <Col lg="5" md="7" className="mt-7">
         <Card className="bg-secondary shadow border-0">
           <CardBody className="px-lg-5 py-lg-5">
             <div className="text-center text-muted mb-4">

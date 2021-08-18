@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter } from "react-router-dom";
 
 import AdminLayout from "layouts/Admin.js";
 import AuthLayout from "layouts/Auth.js";
@@ -9,32 +9,28 @@ import { setUser, resetUser } from "redux/slices/userSlice";
 
 const App = () => {
   const dispatch = useDispatch(),
-    user = useSelector(selectUser);
+    user = useSelector(selectUser),
+    [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     const localUser = localStorage.getItem("user");
     if (!localUser) {
       dispatch(resetUser());
+      setLoading(false);
     } else {
       dispatch(setUser(JSON.parse(localStorage.getItem("user"))));
+      setLoading(false);
     }
+    //eslint-disable-next-line
   }, []);
 
-  const AdminRoutes = () => (
-    <Switch>
-      <Route path="/" render={(props) => <AdminLayout {...props} />} />
-      {/* <Redirect from="*" to="/" /> */}
-    </Switch>
-  );
-  const AuthRoutes = () => (
-    <Switch>
-      <Route path="/" render={(props) => <AuthLayout {...props} />} />
-      {/* <Redirect from="/*" to="/" /> */}
-    </Switch>
-  );
-
-  return (
-    <BrowserRouter>{user ? <AdminRoutes /> : <AuthRoutes />}</BrowserRouter>
+  return loading ? (
+    <div>
+      <h1>Loading...</h1>
+    </div>
+  ) : (
+    <BrowserRouter>{user ? <AdminLayout /> : <AuthLayout />}</BrowserRouter>
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   CardImg,
   Button,
@@ -16,6 +16,7 @@ import UserHeader from "components/Headers/UserHeader.js";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "redux/slices/userSlice";
 import { updateProfile } from "redux/slices/userSlice";
+import "../../assets/css/profile.css";
 
 const Profile = () => {
   const dispatch = useDispatch(),
@@ -23,24 +24,63 @@ const Profile = () => {
     [disabled, setDisabled] = useState(true),
     [cursor, setCursor] = useState({ cursor: "" }),
     [name, setName] = useState(""),
-    [memberId, setMemberId] = useState("");
+    [memberId, setMemberId] = useState(""),
+    [localURL, setLocalURL] = useState(""),
+    [newImage, setNewImage] = useState(null),
+    fileUploadRef = useRef(null);
 
   const init = () => {
     setName(user?.name);
     setMemberId(user?.acmMemberId);
+    setDisabled(true);
+    setCursor({ cursor: "pointer" });
   };
 
   useEffect(() => {
     init();
+    //eslint-disable-next-line
   }, []);
 
   const updateInfo = () => {
-    let data = { ...user, name, acmMemberId: memberId };
+    if (name === user.name && memberId === user.acmMemberId && !newImage) {
+      return alert(
+        "One or more editable values must be edited for changes to be saved"
+      );
+    }
+    let data = {
+      ...user,
+      name,
+      acmMemberId: memberId,
+      newProfilePhoto: newImage,
+    };
     if (!name) {
       alert("Please fill in all the required fields");
       return;
     }
+    // let formData = new FormData();
+    // formData.append("name", name || user?.name);
+    // formData.append("acmMemberId", memberId || user?.acmMemberId);
+    // formData.append("newProfilePhoto", newImage);
+    // formData.append("email", user?.email);
+    // formData.append("course", user?.course);
+    // formData.append("branch", user?.branch);
+    // formData.append("rollNo", user?.rollNo);
+    // console.log(formData.getAll("name"));
     dispatch(updateProfile(data));
+    setDisabled(true);
+    setCursor({ cursor: "pointer" });
+  };
+
+  const onImageChange = (e) => {
+    setNewImage(e.target.files[0]);
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(e.target.files[0]);
+    fileReader.onload = () => {
+      setLocalURL(fileReader.result);
+    };
+    fileReader.onerror = (err) => {
+      console.log(err);
+    };
   };
 
   return (
@@ -48,7 +88,7 @@ const Profile = () => {
       <UserHeader />
       {/* Page content */}
 
-      <Container className="mt--9" fluid>
+      <Container className="profileContainer" fluid>
         <Row>
           <Col className="order-xl-1">
             <Card className="bg-secondary shadow">
@@ -75,15 +115,29 @@ const Profile = () => {
                 </Row>
               </CardHeader>
               <CardBody>
-                <CardImg
-                  top
-                  style={{ width: "20%" }}
-                  src={
-                    require("../../assets/img/theme/team-4-800x800.jpg").default
-                  }
-                  alt="Card image cap"
-                  className="rounded-circle d-block m-auto md-8 "
-                />
+                <div className="profileImage m-auto">
+                  {!disabled && (
+                    <div className="overlay">
+                      <div
+                        className="overlay__icon"
+                        onClick={() => fileUploadRef.current.click()}
+                      >
+                        <i className="bx bxs-pencil" />
+                      </div>
+                    </div>
+                  )}
+                  <CardImg
+                    top
+                    src={
+                      localURL ||
+                      user?.profilePhoto ||
+                      require("../../assets/img/theme/team-1-800x800.jpg")
+                        .default
+                    }
+                    alt="Card image cap"
+                    className="rounded-circle d-block md-8 "
+                  />
+                </div>
                 <div className="my-3">
                   {disabled ? (
                     <h2 className="text-center my-3">{user?.name}</h2>
@@ -105,6 +159,13 @@ const Profile = () => {
                     User information
                   </h6>
                   <div className="pl-lg-4">
+                    <input
+                      type="file"
+                      hidden
+                      accept="image/*"
+                      ref={fileUploadRef}
+                      onChange={onImageChange}
+                    />
                     <Row className="justify-content-md-center">
                       <Col md="12">
                         <FormGroup>
@@ -166,7 +227,7 @@ const Profile = () => {
                             placeholder={
                               memberId ? "Member Id" : "Not A Member"
                             }
-                            readOnly={disabled}
+                            readOnly={user?.acmMemberId || disabled}
                             onChange={(e) => setMemberId(e.target.value)}
                             value={memberId}
                           />
@@ -177,8 +238,6 @@ const Profile = () => {
                           {disabled ? null : (
                             <Button
                               onClick={() => {
-                                setDisabled(true);
-                                setCursor({ cursor: "" });
                                 updateInfo();
                               }}
                               type="button"
@@ -191,7 +250,6 @@ const Profile = () => {
                           {disabled ? null : (
                             <Button
                               onClick={() => {
-                                setDisabled(true);
                                 init();
                               }}
                               type="button"

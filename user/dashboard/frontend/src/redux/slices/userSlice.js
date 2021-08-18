@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { API_BASE_URL } from "utils/Constants";
 
 const userSlice = createSlice({
   name: "user",
@@ -22,10 +21,13 @@ export default userSlice.reducer;
 
 // ACTIONS
 export const login = (body) => (dispatch) => {
-  fetch(API_BASE_URL + "/user/dashboard/backend/api.php?q=login", {
-    method: "POST",
-    body: JSON.stringify(body),
-  })
+  fetch(
+    process.env.REACT_APP_BASE_URL + "/user/dashboard/backend/api.php?q=login",
+    {
+      method: "POST",
+      body: JSON.stringify(body),
+    }
+  )
     .then((res) => res.json())
     .then((res) => {
       if (res.message === "Login successful") {
@@ -41,10 +43,14 @@ export const login = (body) => (dispatch) => {
 };
 
 export const signup = (body) => (dispatch) => {
-  fetch(API_BASE_URL + "/user/dashboard/backend/api.php?q=register", {
-    method: "POST",
-    body: JSON.stringify(body),
-  })
+  fetch(
+    process.env.REACT_APP_BASE_URL +
+      "/user/dashboard/backend/api.php?q=register",
+    {
+      method: "POST",
+      body: JSON.stringify(body),
+    }
+  )
     .then((response) => response.json())
     .then((res) => {
       if (res.error) {
@@ -63,10 +69,15 @@ export const signup = (body) => (dispatch) => {
 };
 
 export const updateProfile = (body) => (dispatch) => {
-  fetch(API_BASE_URL + "/user/dashboard/backend/api.php?q=update", {
-    method: "POST",
-    body: JSON.stringify(body),
-  })
+  console.log(body);
+  fetch(
+    process.env.REACT_APP_BASE_URL + "/user/dashboard/backend/api.php?q=update",
+    {
+      method: "POST",
+      body: JSON.stringify(body),
+      headers: { "content-type": "multipart/form-data" },
+    }
+  )
     .then((res) => res.json())
     .then((res) => {
       if (res.message === "Update successful") {

@@ -29,17 +29,30 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import "../../assets/css/login.css";
 
-const AdminNavbar = () => {
+const AuthNavbar = () => {
   return (
     <>
-      <Navbar className="navbar-top navbar-horizontal navbar-dark" expand="md">
+      <Navbar
+        className="sticky-top navbar-top navbar-horizontal navbar-light bg-white"
+        expand="md"
+      >
         <Container className="px-4">
+          {/* <NavbarBrand to="/" tag={Link}>
+            <img
+              className="navbarLogo"
+              alt="..."
+              src={require("../../assets/img/brand/acm1.png").default}
+            />
+          </NavbarBrand> */}
           <NavbarBrand to="/" tag={Link}>
             <img
+              className="navbarLogo"
               alt="..."
               src={
-                require("../../assets/img/brand/argon-react-white.png").default
+                require("../../assets/img/brand/outstanding-website.png")
+                  .default
               }
             />
           </NavbarBrand>
@@ -49,17 +62,23 @@ const AdminNavbar = () => {
           <UncontrolledCollapse navbar toggler="#navbar-collapse-main">
             <div className="navbar-collapse-header d-md-none">
               <Row>
-                <Col className="collapse-brand" xs="6">
+                <Row className="collapse-brand" xs="6">
+                  <Link to="/">
+                    <img
+                      alt="..."
+                      src={require("../../assets/img/brand/acm1.png").default}
+                    />
+                  </Link>
                   <Link to="/">
                     <img
                       alt="..."
                       src={
-                        require("../../assets/img/brand/argon-react.png")
+                        require("../../assets/img/brand/outstanding-website.png")
                           .default
                       }
                     />
                   </Link>
-                </Col>
+                </Row>
                 <Col className="collapse-close" xs="6">
                   <button className="navbar-toggler" id="navbar-collapse-main">
                     <span />
@@ -70,17 +89,7 @@ const AdminNavbar = () => {
             </div>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink className="nav-link-icon" to="/" tag={Link}>
-                  <i className="ni ni-planet" />
-                  <span className="nav-link-inner--text">Dashboard</span>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  className="nav-link-icon"
-                  to="/auth/register"
-                  tag={Link}
-                >
+                <NavLink className="nav-link-icon" to="/register" tag={Link}>
                   <i className="ni ni-circle-08" />
                   <span className="nav-link-inner--text">Register</span>
                 </NavLink>
@@ -91,16 +100,6 @@ const AdminNavbar = () => {
                   <span className="nav-link-inner--text">Login</span>
                 </NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink
-                  className="nav-link-icon"
-                  to="/admin/user-profile"
-                  tag={Link}
-                >
-                  <i className="ni ni-single-02" />
-                  <span className="nav-link-inner--text">Profile</span>
-                </NavLink>
-              </NavItem>
             </Nav>
           </UncontrolledCollapse>
         </Container>
@@ -109,4 +108,4 @@ const AdminNavbar = () => {
   );
 };
 
-export default AdminNavbar;
+export default AuthNavbar;

@@ -34,7 +34,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              ACM USICT
+              USICT ACM
             </a>
           </div>
         </Col>
