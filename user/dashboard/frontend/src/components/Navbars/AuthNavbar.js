@@ -38,14 +38,7 @@ const AuthNavbar = () => {
         className="sticky-top navbar-top navbar-horizontal navbar-light bg-white"
         expand="md"
       >
-        <Container className="px-4">
-          {/* <NavbarBrand to="/" tag={Link}>
-            <img
-              className="navbarLogo"
-              alt="..."
-              src={require("../../assets/img/brand/acm1.png").default}
-            />
-          </NavbarBrand> */}
+        <Container>
           <NavbarBrand to="/" tag={Link}>
             <img
               className="navbarLogo"
@@ -62,13 +55,7 @@ const AuthNavbar = () => {
           <UncontrolledCollapse navbar toggler="#navbar-collapse-main">
             <div className="navbar-collapse-header d-md-none">
               <Row>
-                <Row className="collapse-brand" xs="6">
-                  <Link to="/">
-                    <img
-                      alt="..."
-                      src={require("../../assets/img/brand/acm1.png").default}
-                    />
-                  </Link>
+                <Col className="collapse-brand" xs="6">
                   <Link to="/">
                     <img
                       alt="..."
@@ -78,7 +65,7 @@ const AuthNavbar = () => {
                       }
                     />
                   </Link>
-                </Row>
+                </Col>
                 <Col className="collapse-close" xs="6">
                   <button className="navbar-toggler" id="navbar-collapse-main">
                     <span />

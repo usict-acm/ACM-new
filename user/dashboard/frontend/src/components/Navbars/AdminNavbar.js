@@ -44,20 +44,18 @@ const AdminNavbar = (props) => {
     <>
       <Navbar className="navbar-top navbar-dark" expand="md" id="navbar-main">
         <Container fluid>
-          <Link
-            className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
-            to="/"
-          >
+          <div className="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block">
             {props.brandText}
-          </Link>
+          </div>
           <Nav className="align-items-center d-none d-md-flex" navbar>
             <UncontrolledDropdown nav>
               <DropdownToggle className="pr-0" nav>
                 <Media className="align-items-center">
-                  <span className="avatar avatar-sm rounded-circle">
+                  <span className="avatar avatar-sm rounded-circle bg-transparent">
                     <img
                       alt="..."
                       src={
+                        user?.profilePhoto ||
                         require("../../assets/img/theme/team-1-800x800.jpg")
                           .default
                       }
@@ -74,19 +72,19 @@ const AdminNavbar = (props) => {
                 <DropdownItem className="noti-title" header tag="div">
                   <h6 className="text-overflow m-0">Welcome!</h6>
                 </DropdownItem>
-                <DropdownItem to="/user-profile" tag={Link}>
+                <DropdownItem to="/profile" tag={Link}>
                   <i className="ni ni-single-02" />
                   <span>My profile</span>
                 </DropdownItem>
-                <DropdownItem to="/user-profile" tag={Link}>
+                <DropdownItem to="/profile" tag={Link}>
                   <i className="ni ni-settings-gear-65" />
                   <span>Settings</span>
                 </DropdownItem>
-                <DropdownItem to="/user-profile" tag={Link}>
+                <DropdownItem to="/profile" tag={Link}>
                   <i className="ni ni-calendar-grid-58" />
                   <span>Activity</span>
                 </DropdownItem>
-                <DropdownItem to="/user-profile" tag={Link}>
+                <DropdownItem to="/profile" tag={Link}>
                   <i className="ni ni-support-16" />
                   <span>Support</span>
                 </DropdownItem>

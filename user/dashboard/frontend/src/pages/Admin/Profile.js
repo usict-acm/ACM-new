@@ -51,21 +51,12 @@ const Profile = () => {
       ...user,
       name,
       acmMemberId: memberId,
-      newProfilePhoto: newImage,
+      profilePhoto: localURL,
     };
     if (!name) {
       alert("Please fill in all the required fields");
       return;
     }
-    // let formData = new FormData();
-    // formData.append("name", name || user?.name);
-    // formData.append("acmMemberId", memberId || user?.acmMemberId);
-    // formData.append("newProfilePhoto", newImage);
-    // formData.append("email", user?.email);
-    // formData.append("course", user?.course);
-    // formData.append("branch", user?.branch);
-    // formData.append("rollNo", user?.rollNo);
-    // console.log(formData.getAll("name"));
     dispatch(updateProfile(data));
     setDisabled(true);
     setCursor({ cursor: "pointer" });

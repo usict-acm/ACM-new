@@ -79,11 +79,10 @@ export const updateProfile = (body) => (dispatch) => {
   )
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
       if (res.message === "Update successful") {
         localStorage.setItem("user", JSON.stringify(res.user));
         dispatch(setUser(res.user));
-      } else alert(res.error || "Login Failed");
+      } else alert(res.error || "Update Failed!!");
     })
     .catch((err) => console.log(err));
 };

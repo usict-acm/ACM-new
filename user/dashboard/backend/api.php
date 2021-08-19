@@ -39,16 +39,14 @@ function login()
     if ($req["email"] && $req["password"]) {
         $user_data = fetchUserByEmail($user, $req["email"]);
         if ($user_data) {
-            if (password_verify($req["password"], $user_data["password"])) {
-                include("./enviornment.php");
-                $profilePhoto = $user_data["profilePhoto"] ? $server_url.$user_data["profilePhoto"] : NULL;
+            if (password_verify($req["password"], $user_data["password"])) {                
                 echo json_encode(array(
                     'message' => 'Login successful',
                     'user' => array(
                         'userId' => $user_data["userId"],
                         'name' => $user_data["name"],
                         'email' => $user_data["email"],
-                        'profilePhoto' => $profilePhoto,
+                        'profilePhoto' => $user_data["profilePhoto"],
                         'acmMemberId' => $user_data["acmMemberId"],
                         'course' => $user_data["course"],
                         'branch' => $user_data["branch"],
@@ -83,16 +81,14 @@ function register()
         $result = $user->register($req);
         if ($result) {
             $user_data = fetchUserByEmail($user, $req["email"]);
-            if ($user_data) {
-                include("./enviornment.php");
-                $profilePhoto = $user_data["profilePhoto"] ? $server_url.$user_data["profilePhoto"] : NULL;
+            if ($user_data) {                
                 echo json_encode(array(
                     'message' => 'Signup successful',
                     'user' => array(
                         'userId' => $user_data["userId"],
                         'name' => $user_data["name"],
                         'email' => $user_data["email"],
-                        'profilePhoto' => $profilePhoto,
+                        'profilePhoto' => $user_data["profilePhoto"],
                         'acmMemberId' => $user_data["acmMemberId"],
                         'course' => $user_data["course"],
                         'branch' => $user_data["branch"],
@@ -117,20 +113,18 @@ function update()
     }
     $user = init();
     $req = json_decode(file_get_contents('php://input'), true);
-    if ($req["email"] && $req["name"] && $req["course"] && $req["branch"] && $req["rollNo"]) {         
-        $result = $user->updateProfile($req["email"], $req);        
+    if ($req["email"] && $req["name"] && $req["course"] && $req["branch"] && $req["rollNo"]) {
+        $result = $user->updateProfile($req["email"], $req);
         if ($result) {
             $user_data = fetchUserByEmail($user, $req["email"]);            
             if ($user_data) {
-                include("./enviornment.php");
-                $profilePhoto = $user_data["profilePhoto"] ? $server_url.$user_data["profilePhoto"] : NULL;
                 echo json_encode(array(
                     'message' => 'Update successful',
                     'user' => array(
                         'userId' => $user_data["userId"],
                         'name' => $user_data["name"],
                         'email' => $user_data["email"],
-                        'profilePhoto' => $profilePhoto,
+                        'profilePhoto' => $user_data["profilePhoto"],
                         'acmMemberId' => $user_data["acmMemberId"],
                         'course' => $user_data["course"],
                         'branch' => $user_data["branch"],
