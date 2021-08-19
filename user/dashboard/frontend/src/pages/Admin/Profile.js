@@ -26,7 +26,6 @@ const Profile = () => {
     [name, setName] = useState(""),
     [memberId, setMemberId] = useState(""),
     [localURL, setLocalURL] = useState(""),
-    [newImage, setNewImage] = useState(null),
     fileUploadRef = useRef(null);
 
   const init = () => {
@@ -63,7 +62,6 @@ const Profile = () => {
   };
 
   const onImageChange = (e) => {
-    setNewImage(e.target.files[0]);
     const fileReader = new FileReader();
     fileReader.readAsDataURL(e.target.files[0]);
     fileReader.onload = () => {
