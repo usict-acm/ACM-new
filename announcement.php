@@ -25,16 +25,20 @@
                             echo "<br>" . $row["startDate"] . "  to  " . $row["endDate"] ." ";
                             echo "<br>" . $row["time"] . " ";
                             echo "<div style='display: flex;justify-content: space-evenly;'>";
-                            echo "<a target='_blank' href=" . $row["regLink"] . ">";
-                                echo "<button class='btn announce-button-one' style='background-color:#2250fc'>";
-                                echo "<span style='color:#fff; font-size:0.9rem'>REGISTER NOW</span>";
-                                echo "</button>";
-                            echo "</a>";
-                            echo "<a target='_blank' href=" . $row["viewResource"] . ">";
-                                echo "<button class='btn' style='background-color:#2250fc'>";
-                                echo "<span style='color:#fff; font-size:0.9rem'>VIEW RESOURCES</span>";
-                                echo "</button>";
-                            echo "</a>";
+                            if($row["button1Text"] != ""){
+                                echo "<a target='_blank' href=" . $row["button1Link"] . ">";
+                                    echo "<button class='btn announce-button-one' style='background-color:#2250fc'>";
+                                    echo "<span style='color:#fff; font-size:0.9rem'>" . $row["button1Text"] . "</span>";
+                                    echo "</button>";
+                                    echo "</a>";
+                            }
+                            if($row["button2Text"] != ""){
+                                echo "<a target='_blank' href=" . $row["button2Link"] . ">";
+                                    echo "<button class='btn announce-button-one' style='background-color:#2250fc'>";
+                                    echo "<span style='color:#fff; font-size:0.9rem'>" . $row["button2Text"] . "</span>";
+                                    echo "</button>";
+                                echo "</a>";
+                            }
                         echo "</div>";
                     echo "</div>";
                     echo "</div>";
