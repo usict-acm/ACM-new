@@ -1,3 +1,23 @@
+function createModal() {
+	const div = document.createElement('div');
+	div.classList = 'modal js-modal';
+	div.innerHTML = `
+			<div class="modal-image">
+				<svg viewBox="0 0 32 32" style="fill: #48db71">
+					<path d="M1 14 L5 10 L13 18 L27 4 L31 8 L13 26 z"></path>
+				</svg>
+			</div>
+			<h1 class="modal-heading">Success!</h1>
+			<p class="modal-message">To dismiss click the button below</p>
+			<button class="modal-btn js-close">Dismiss</button>
+	`;
+	document.querySelector('.wrap').append(div);
+}
+function removeModal() {
+	const modal = document.querySelector('.modal');
+	modal.remove();
+}
+
 // hasClass
 function hasClass(elem, className) {
 	return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
@@ -27,10 +47,9 @@ function select(selector) {
 // External JS: JS Helper Functions
 // External JS: Dynamics JS
 var btnOpen = select('.js-open');
-var btnClose = select('.js-close');
-var modal = select('.js-modal');
-var modalChildren = modal.children;
+
 function hideModal() {
+	var modal = select('.js-modal');
 	dynamics.animate(
 		modal,
 		{
@@ -46,6 +65,7 @@ function hideModal() {
 	);
 }
 function showModal() {
+	var modal = select('.js-modal');
 	// Define initial properties
 	dynamics.css(modal, {
 		opacity: 0,
@@ -86,6 +106,8 @@ function showBtn() {
 	);
 }
 function showModalChildren() {
+	var modal = select('.js-modal');
+	var modalChildren = modal.children;
 	// Animate each child individually
 	for (var i = 0; i < modalChildren.length; i++) {
 		var item = modalChildren[i];
@@ -115,17 +137,21 @@ function showModalChildren() {
 }
 function toggleClasses() {
 	toggleClass(btnOpen, 'is-active');
+	var modal = select('.js-modal');
 	toggleClass(modal, 'is-active');
 }
 // Open nav when clicking sandwich button
 btnOpen.addEventListener('click', function (e) {
+	createModal();
 	toggleClasses();
 	showModal();
 	showModalChildren();
-});
-// Open nav when clicking sandwich button
-btnClose.addEventListener('click', function (e) {
-	hideModal();
-	dynamics.setTimeout(toggleClasses, 500);
-	dynamics.setTimeout(showBtn, 500);
+
+	var btnClose = select('.js-close');
+	btnClose.addEventListener('click', function (e) {
+		hideModal();
+		removeModal();
+		showBtn();
+		toggleClass(btnOpen, 'is-active');
+	});
 });
