@@ -57,6 +57,7 @@ export const signup = (body) => (dispatch) => {
         return alert(res.error);
       }
       if (res.message === "Signup successful") {
+        console.log(res.message);
         localStorage.setItem("user", JSON.stringify(res.user));
         dispatch(setUser(res.user));
       } else {

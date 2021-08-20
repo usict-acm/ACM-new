@@ -24,14 +24,13 @@ class User
         $hashedPassword = password_hash($details['password'], PASSWORD_BCRYPT);
         $query =
             "INSERT INTO $this->table
-            (userType, email, password, name, acmMemberId, profilePhoto, course, branch, rollNo)
+            (userType, email, password, name, acmMemberId, course, branch, rollNo)
             VALUES (
                 'user',
                 '$details[email]',
                 '$hashedPassword',
                 '$details[name]',
                 NULLIF('$details[acmMemberId]',''),                
-                NULLIF('$details[profilePhoto]',''),
                 '$details[course]',
                 '$details[branch]',
                 '$details[rollNo]'
@@ -46,10 +45,16 @@ class User
         $updatedAcmId = $userDoc["acmMemberId"];
         $updatedProfilePhoto = $userDoc["profilePhoto"];
 
-        $query =
+        $query = $updatedProfilePhoto === "" ?
+            
+            "UPDATE $this->table
+             SET name ='$updatedName', acmMemberId = '$updatedAcmId'
+             WHERE email = '$email'" :        
+            
             "UPDATE $this->table
              SET name ='$updatedName', acmMemberId = '$updatedAcmId', profilePhoto = '$updatedProfilePhoto'
              WHERE email = '$email'";
+        
         $res = $this->conn->query($query);
         return $res;
     }

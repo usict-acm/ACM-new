@@ -41,7 +41,7 @@ const Profile = () => {
   }, []);
 
   const updateInfo = () => {
-    if (name === user.name && memberId === user.acmMemberId && !newImage) {
+    if (name === user.name && memberId === user.acmMemberId && !localURL) {
       return alert(
         "One or more editable values must be edited for changes to be saved"
       );
@@ -59,6 +59,7 @@ const Profile = () => {
     dispatch(updateProfile(data));
     setDisabled(true);
     setCursor({ cursor: "pointer" });
+    setLocalURL("");
   };
 
   const onImageChange = (e) => {
