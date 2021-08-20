@@ -41,11 +41,13 @@
     $year = $_GET["year"];
     $previous = $page == 1 ? 1 : $page - 1;
 ?>
-        
-        <script>
+    <script>
+        let allEvents=document.getElementById("eventPage");
+        if(<?php echo $year ?> != 2019 && <?php echo $year ?> != 2020 && <?php echo $year ?> != 2021){
+            allEvents.innerHTML += `<h1 class='noEvents'>No Events for this year</h1>`;
+        } else {
         let urlEvent = './admin/blogAdmin/api.php/?q=readAllEvent&year='+<?php echo $year ?>+'&page='+<?php echo $page ?>;
 
-        let allEvents=document.getElementById("eventPage");
         let pagination = document.getElementById("pagination_row_2021");
         allEvents.innerHTML="";
         
@@ -59,7 +61,31 @@
                     data[0].forEach(allEvent);                    
                     function allEvent(event) {
                         if(event.button1Text!==''&&event.button2Text!==''){
-
+                            // allEvents.innerHTML += `<div class="event-post">
+                            //                                 <div class="event-post_img">
+                            //                                     <img src=${event.poster}  alt="">
+                            //                                 </div>
+                            //                                 <div class="event-post_info">
+                            //                                     <div class="event-post_date">
+                            //                                     <span>${event.startDate} -- ${event.endDate}</span>
+                            //                                     <span>${event.time}</span>
+                            //                                     </div>
+                            //                                     <h1 class="event-post_title">${event.name}</h1>
+                            //                                     <p class="event-post_text">${event.description}</p>
+                            //                                     <p class="dateTime-para">Partnered by: ${event.partners}</p>
+                            //                                     <p class="dateTime-para">Speakers: ${event.speakers}</p>`;
+                            //                         if(event.button1Text !== ''){
+                            //                           allEvents.innerHTML += `<a href=${event.button1Link} style="float: right;"
+                            //                                         target="_blank"><button class="dateTime-para btn form-input-boxes-manual btn-watch" style="font-size: 16px;">
+                            //                                         ${event.button1Text}</button></a>`;  
+                            //                         }
+                            //                         if(event.button2Text !== ''){
+                            //                           allEvents.innerHTML += `<a href=${event.button2Link} style="float: right;" target="_blank"><button class="dateTime-para btn form-input-boxes-manual event-button-two btn-watch" style="font-size: 16px;">${event.button2Text}</button></a>`;  
+                            //                         }                                   
+                            //                 allEvents.innerHTML +=  `</div>
+                            //                             </div>`;                        
+                                                                        
+                                                            
                             allEvents.innerHTML +=
                                                         `<div class="event-post">
                                                             <div class="event-post_img">
@@ -72,6 +98,8 @@
                                                                 </div>
                                                                 <h1 class="event-post_title">${event.name}</h1>
                                                                 <p class="event-post_text">${event.description}</p>
+                                                                <p class="dateTime-para">Partnered by: ${event.partners}</p>
+                                                                <p class="dateTime-para">Speakers: ${event.speakers}</p>
                                                                 <a href=${event.button1Link} style="float: right;"
                                                                     target="_blank"><button class="dateTime-para btn form-input-boxes-manual btn-watch" style="font-size: 16px;">
                                                                     ${event.button1Text}</button></a>
@@ -79,8 +107,6 @@
                                                             </div>
                                                         </div>`;
                         }
-
-
 
 
                         else if(event.button2Text!==''&&event.button1Text===''){
@@ -95,6 +121,8 @@
                                                                 </div>
                                                                 <h1 class="event-post_title">${event.name}</h1>
                                                                 <p class="event-post_text">${event.description}</p>
+                                                                <p class="dateTime-para">Partnered by: ${event.partners}</p>
+                                                                <p class="dateTime-para">Speakers: ${event.speakers}</p>
                                                                     ${event.button1Text}</button></a>
                                                                         <a href=${event.button2Link} style="float: right;" target="_blank"><button class="dateTime-para btn form-input-boxes-manual event-button-two btn-watch" style="font-size: 16px;">${event.button2Text}</button></a>
                                                             </div>
@@ -112,6 +140,8 @@
                                                                 </div>
                                                                 <h1 class="event-post_title">${event.name}</h1>
                                                                 <p class="event-post_text">${event.description}</p>
+                                                                <p class="dateTime-para">Partnered by: ${event.partners}</p>
+                                                                <p class="dateTime-para">Speakers: ${event.speakers}</p>
                                                                 <a href=${event.button1Link} style="float: right;"
                                                                     target="_blank"><button class="dateTime-para btn form-input-boxes-manual btn-watch" style="font-size: 16px;">
                                                                     ${event.button1Text}</button></a>
@@ -130,6 +160,8 @@
                                                                 </div>
                                                                 <h1 class="event-post_title">${event.name}</h1>
                                                                 <p class="event-post_text">${event.description}</p>
+                                                                <p class="dateTime-para">Partnered by: ${event.partners}</p>
+                                                                <p class="dateTime-para">Speakers: ${event.speakers}</p>
                                                             </div>
                                                         </div>`;
                         }       
@@ -181,6 +213,7 @@
               },
             });
         });
+    }
 </script>  
 
 <style>
@@ -223,10 +256,14 @@
       font-size: 23px;
       margin: 40px 10px 20px 10px !important;
     }
+
+    .noEvents{
+        font-size: 4rem;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
 </style>
-
-
-  
 
  <!-- ==============================================Footer========================================== -->
  <?php
