@@ -38,8 +38,11 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import { useSelector } from "react-redux";
+import { selectUser } from "redux/slices/userSlice";
 
 const Sidebar = (props) => {
+  const user = useSelector(selectUser);
   const [collapseOpen, setCollapseOpen] = useState();
   // verifies if routeName is the one active (in browser input)
   const activeRoute = (routeName) => {
@@ -74,7 +77,7 @@ const Sidebar = (props) => {
     });
   };
 
-  const { bgColor, routes, logo } = props;
+  const { routes, logo } = props;
   let navbarBrandProps;
   if (logo && logo.innerLink) {
     navbarBrandProps = {
@@ -118,10 +121,11 @@ const Sidebar = (props) => {
           <UncontrolledDropdown nav>
             <DropdownToggle nav>
               <Media className="align-items-center">
-                <span className="avatar avatar-sm rounded-circle">
+                <span className="avatar avatar-sm rounded-circle bg-white">
                   <img
                     alt="..."
                     src={
+                      user?.profilePhoto ||
                       require("../../assets/img/theme/team-1-800x800.jpg")
                         .default
                     }
@@ -133,19 +137,19 @@ const Sidebar = (props) => {
               <DropdownItem className="noti-title" header tag="div">
                 <h6 className="text-overflow m-0">Welcome!</h6>
               </DropdownItem>
-              <DropdownItem to="/admin/user-profile" tag={Link}>
+              <DropdownItem to="/admin/profile" tag={Link}>
                 <i className="ni ni-single-02" />
                 <span>My profile</span>
               </DropdownItem>
-              <DropdownItem to="/admin/user-profile" tag={Link}>
+              <DropdownItem to="/admin/profile" tag={Link}>
                 <i className="ni ni-settings-gear-65" />
                 <span>Settings</span>
               </DropdownItem>
-              <DropdownItem to="/admin/user-profile" tag={Link}>
+              <DropdownItem to="/admin/profile" tag={Link}>
                 <i className="ni ni-calendar-grid-58" />
                 <span>Activity</span>
               </DropdownItem>
-              <DropdownItem to="/admin/user-profile" tag={Link}>
+              <DropdownItem to="/admin/profile" tag={Link}>
                 <i className="ni ni-support-16" />
                 <span>Support</span>
               </DropdownItem>

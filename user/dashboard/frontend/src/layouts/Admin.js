@@ -48,13 +48,12 @@ const Admin = (props) => {
     });
   };
 
-  const getBrandText = (path) => {
+  const getBrandText = () => {
     for (let i = 0; i < routes.length; i++) {
-      if (location.pathname.indexOf(routes[i].path) !== -1) {
-        return routes[i].name;
-      }
+      console.log(location.pathname);
+      if (location.pathname === routes[i].path) return routes[i].name;
     }
-    return "Brand";
+    return "";
   };
 
   return (
@@ -72,7 +71,7 @@ const Admin = (props) => {
         <AdminNavbar {...props} brandText={getBrandText(location.pathname)} />
         <Switch>
           {getRoutes(routes)}
-          <Redirect from="*" to="/user-profile" />
+          <Redirect from="*" to="/profile" />
         </Switch>
         <Container fluid>
           <AdminFooter />
