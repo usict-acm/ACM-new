@@ -58,49 +58,42 @@
                     console.log("check data ywar",data);
                     data[0].forEach(allEvent);                    
                     function allEvent(event) {
-                        // allEvents.innerHTML +=` <div class="event-post">
-                        //                             <div class="event-post_img">
-                        //                                 <img src=${event.poster}  alt="">
-                        //                             </div>
-                        //                             <div class="event-post_info">
-                        //                                 <div class="event-post_date">`;
-                                                        
-                        //                                 if(event.startDate===event.endDate){
-                        //                                     let variable=document.createElement("span");
-                        //                                     let variable1=document.createTextNode(event.startDate);
-                        //                                     variable.appendChild(variable1);
-                        //                                     allEvents.appendChild(variable);
-                                                            
-                        //                                 }
-                        //                                 else{
-                        //                                     allEvents.append(` <h1>Appended text</h1>`);
-                        //                                 }
-                        let button1=  ` <a href=${event.button1Link}  style="float: right;"
-                                                    target="_blank"><button class="dateTime-para btn form-input-boxes-manual btn-watch" ;'style="font-size: 16px;">
-                                                    ${event.button1Text}</button></a>`;
+
+                        let button1=  ` <a href=${event.button1Link} style="float: right;" target="_blank"><button class="dateTime-para btn form-input-boxes-manual btn-watch" style="font-size: 16px;">${event.button1Text}</button></a>`;
                         let button2=`<a href=${event.button2Link} style="float: right;" target="_blank"><button class="dateTime-para btn form-input-boxes-manual event-button-two btn-watch" style="font-size: 16px;">${event.button2Text}</button></a>`;
                      
-
-
-
                         let var1 = `<div class="event-post">
                                             <div class="event-post_img">
                                                 <img src=${event.poster}  alt="">
                                             </div>
                                             <div class="event-post_info">
                                                 <div class="event-post_date">
-                                                <span>${event.startDate} -- ${event.endDate}</span>
+                                                <span>${event.startDate} - ${event.endDate}</span>
                                                 <span>${event.time}</span>
                                                 </div>
                                                 <h1 class="event-post_title">${event.name}</h1>
                                                 <p class="event-post_text">${event.description}</p>
-                                                <div class="buttonDiv"></div>
+                                                <div class="buttonDiv">
+                                    `;
+                        let closeDIV=`           </div>
                                             </div>
                                         </div>`;
-                        let eventPageDivs=$("#eventPage").append(var1);
-                        console.log(eventPageDivs);
-                
-                           console.log( $(eventPageDivs).find(".buttonDiv"));
+                        if(event.button2Text!==''&&event.button1Text!==''){
+                            let finalCode=var1.concat(button1,button2,closeDIV);
+                            $("#eventPage").append(finalCode);
+                        }
+                        else if(event.button1Text!==''&&event.button2Text===''){
+                            let finalCode=var1.concat(button1,closeDIV);
+                            $("#eventPage").append(finalCode);
+                        }
+                        else if(event.button2Text!==''&&event.button1Text===''){
+                            let finalCode=var1.concat(button1,closeDIV);
+                            $("#eventPage").append(finalCode);
+                        }
+                        else{
+                            let finalCode=var1.concat(closeDIV);
+                            $("#eventPage").append(finalCode);
+                        }
                                                           
                     } 
 		    pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
