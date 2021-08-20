@@ -41,11 +41,13 @@
     $year = $_GET["year"];
     $previous = $page == 1 ? 1 : $page - 1;
 ?>
-        
-        <script>
+    <script>
+        let allEvents=document.getElementById("eventPage");
+        if(<?php echo $year ?> != 2019 && <?php echo $year ?> != 2020 && <?php echo $year ?> != 2021){
+            allEvents.innerHTML += `<h1 class='noEvents'>No Events for this year</h1>`;
+        } else {
         let urlEvent = './admin/blogAdmin/api.php/?q=readAllEvent&year='+<?php echo $year ?>+'&page='+<?php echo $page ?>;
 
-        let allEvents=document.getElementById("eventPage");
         let pagination = document.getElementById("pagination_row_2021");
         allEvents.innerHTML="";
         
@@ -140,6 +142,7 @@
               },
             });
         });
+    }
 </script>  
 
 <style>
@@ -182,10 +185,14 @@
       font-size: 23px;
       margin: 40px 10px 20px 10px !important;
     }
+
+    .noEvents{
+        font-size: 4rem;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
 </style>
-
-
-  
 
  <!-- ==============================================Footer========================================== -->
  <?php

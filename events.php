@@ -102,13 +102,38 @@
     </div>
   </section>
 
-  <div class="quotes">
+  <div class="quotes" id="galleryImage">
+  </div>
+
+  <script>
+    let url = './admin/blogAdmin/api.php/?q=getImage';
+    var galleryImage = document.getElementById("galleryImage");
+    galleryImage.innerHTML = "";
+    
+    $(document).ready(function() {
+      $.ajax({
+        url: url,
+        method: 'GET',
+        dataType: 'JSON',
+        success: function(data) {
+          console.log("gallery data",data);
+          data.forEach(myFunc);
+
+          function myFunc(row, index) {
+            galleryImage.innerHTML+=" <img class='quote-img' src="+ row.Image+ " alt=' ' />";
+              }
+            }
+          })
+        })  
+  </script>
+
+  <!-- <div class="quotes">
     <img class="quote-img" src="./assets/images/About us/image1.jpg" alt="" />
     <img class="quote-img" src="./assets/images/About us/image2.jpg" alt="" />
     <img class="quote-img" src="./assets/images/About us/image31.jpg" alt="" />
     <img class="quote-img" src="./assets/images/About us/image4.jpg" alt="" />
     <img class="quote-img" src="./assets/images/trell-4.jpeg" alt="" />
-  </div>
+  </div> -->
    
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   
