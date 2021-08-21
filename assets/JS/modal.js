@@ -1,4 +1,4 @@
-function createModal() {
+function createSuccessModal() {
 	const div = document.createElement('div');
 	div.classList = 'modal js-modal';
 	div.innerHTML = `
@@ -10,6 +10,19 @@ function createModal() {
 			<h1 class="modal-heading">Success!</h1>
 			<p class="modal-message">To dismiss click the button below</p>
 			<button class="modal-btn js-close">Dismiss</button>
+	`;
+	document.querySelector('.wrap').append(div);
+}
+function createErrorModal() {
+	const div = document.createElement('div');
+	div.classList = 'modal js-modal';
+	div.style.border = '2px solid #ff1500';
+	div.style.backgroundColor = '#fff';
+	div.innerHTML = `
+		<img src="https://image.flaticon.com/icons/png/512/1680/1680214.png" class="modal-image" style="border-radius: 0; box-shadow: 0 0 0 2px #ffffff; padding: 0;" />
+		<h1 class="modal-heading">Error!</h1>
+		<p class="modal-message">To dismiss click the button below</p>
+		<button class="js-close modal-btn">Dismiss</button>
 	`;
 	document.querySelector('.wrap').append(div);
 }
@@ -142,7 +155,11 @@ function toggleClasses() {
 }
 // Open nav when clicking sandwich button
 btnOpen.addEventListener('click', function (e) {
-	createModal();
+	if (e.target.classList.contains('success-modal')) {
+		createSuccessModal();
+	} else if (e.target.classList.contains('error-modal')) {
+		createErrorModal();
+	}
 	toggleClasses();
 	showModal();
 	showModalChildren();
