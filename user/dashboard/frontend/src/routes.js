@@ -18,7 +18,7 @@
 import Index from "views/Index.js";
 import Profile from "pages/Admin/Profile.js";
 import Maps from "views/examples/Maps.js";
-import Tables from "views/examples/Tables.js";
+import CreateBlog from "pages/Admin/CreateBlog";
 import Icons from "views/examples/Icons.js";
 import Register from "pages/Auth/Register";
 import Login from "pages/Auth/Login";
@@ -53,10 +53,10 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/tables",
-    name: "Tables",
-    icon: "ni ni-bullet-list-67 text-red",
-    component: Tables,
+    path: "/CreateBlog",
+    name: "Create Blog",
+    icon: "ni ni-palette text-green",
+    component: CreateBlog,
     layout: "/admin",
   },
   {

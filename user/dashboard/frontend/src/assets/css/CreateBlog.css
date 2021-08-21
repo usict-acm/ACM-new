@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@media screen and (min-width: 520px) {
+    .BlogContainer{
+        margin-top: calc(30vw - 85vh);
+        mix-blend-mode: hard-light
+    }
+  }
+
+
+#toolbar-container{
+    width: 100%;
+    
+}
+
+#Editor{
+    width: 100%;
+    background-color: #eee;
+    padding: 50px 10%;
+    max-height: 95vh;
+    min-height: 95vh;
+    overflow-y: auto;
+}
+
+.ck.ck-editor__editable_inline{
+    max-width: 80%;
+    min-width: 70%;
+    min-height: 80vh;
+    margin: 0 auto;
+    padding: 40px 30px;
+    border: 1px #d3d3d3 solid;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgb(0 0 0 / 10%);
+    outline: none;
+
+}
