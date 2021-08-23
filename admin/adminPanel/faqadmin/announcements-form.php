@@ -110,9 +110,6 @@ require_once "./config.php";
                         <div class="form-group">
                             <textarea name="txtDescription" id="description" rows="10" class='form-control mceEditor' placeholder="Description of the announcement"></textarea>
                         </div>
-                        <!-- <div class="form-group">
-                            <input type="text" name="txtReglink" id="regLink" class='form-control' placeholder="RegLink" />
-                        </div> -->
                         <div class="form-group">
                             <input type="date" name="txtStartdate" id="startDate" class='form-control' placeholder="Date for commencement of the event" />
                         </div>
@@ -131,9 +128,6 @@ require_once "./config.php";
                         <div class="form-group">
                             <input type="text" name="txtButton2Link" id="button2Link" class='form-control' placeholder="Button2 Link" />
                         </div>
-                        <!-- <div class="form-group">
-                            <input type="text" name="txtviewResource" id="viewResource" class='form-control' placeholder="View resources" />
-                        </div> -->
                         <div class="form-group">
                             <input type="text" name="txtPartners" id="partners" class='form-control' placeholder="Partners" />
                         </div>
