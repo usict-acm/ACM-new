@@ -1,13 +1,6 @@
-.modal-container {
-	height: 100vh;
-	display: flex;
-	font-family: sans-serif;
-	background-color: #eee;
-}
-.wrap {
-	margin: auto;
-}
 .modal {
+	width: 25%;
+	margin: auto;
 	box-sizing: border-box;
 	border: 2px solid #48db71;
 	background-color: #fff;
@@ -41,19 +34,12 @@
 	display: block;
 }
 .modal-btn {
-	font-size: 1.25em;
-	font-weight: bold;
-	background-color: #000;
+	background-color:#2250fc;
+	color:#fff; 
+	font-size: 1.2rem;
 	border: none;
 	padding: 0.5em 1em;
-	color: #fff;
-	box-shadow: 0 0 0 2px #000 inset;
 	border-radius: 0.25em;
 	cursor: pointer;
 	transition: background 0.4s ease, color 0.4s ease;
-}
-.modal-btn:hover {
-	box-shadow: 0 0 0 2px #000 inset;
-	color: #000;
-	background-color: transparent;
 }
