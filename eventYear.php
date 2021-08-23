@@ -75,6 +75,8 @@
                                                 </div>
                                                 <h1 class="event-post_title">${event.name}</h1>
                                                 <p class="event-post_text">${event.description}</p>
+                                                <p class="dateTime-para">Partnered by: ${event.partners}</p>
+                                                <p class="dateTime-para">Speakers: ${event.speakers}</p>
                                                 <div class="buttonDiv">
                                     `;
                         let closeDIV=`           </div>
