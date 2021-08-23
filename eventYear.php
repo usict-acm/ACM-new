@@ -70,11 +70,13 @@
                                             </div>
                                             <div class="event-post_info">
                                                 <div class="event-post_date">
-                                                <span>${event.startDate} - ${event.endDate}</span>
+                                                <span>${event.startDate} — ${event.endDate}</span>
                                                 <span>${event.time}</span>
                                                 </div>
                                                 <h1 class="event-post_title">${event.name}</h1>
                                                 <p class="event-post_text">${event.description}</p>
+                                                <p class="dateTime-para">${event.speakers}</p>
+                                                <p class="dateTime-para">${event.partners}</p>
                                                 <div class="buttonDiv">
                                     `;
                         let closeDIV=`           </div>
