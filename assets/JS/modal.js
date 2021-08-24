@@ -11,7 +11,7 @@ function createSuccessModal() {
 			<p class="modal-message">To dismiss click the button below</p>
 			<button class="modal-btn js-close">Dismiss</button>
 	`;
-	document.querySelector('.wrap').append(div);
+	document.querySelector('body').append(div);
 }
 function createErrorModal() {
 	const div = document.createElement('div');
@@ -24,7 +24,7 @@ function createErrorModal() {
 		<p class="modal-message">To dismiss click the button below</p>
 		<button class="js-close modal-btn">Dismiss</button>
 	`;
-	document.querySelector('.wrap').append(div);
+	document.querySelector('body').append(div);
 }
 function removeModal() {
 	const modal = document.querySelector('.modal');
@@ -59,7 +59,8 @@ function select(selector) {
 }
 // External JS: JS Helper Functions
 // External JS: Dynamics JS
-var btnOpen = select('.js-open');
+var successBtn = select('.success-modal');
+var errorBtn = select('.error-modal');
 
 function hideModal() {
 	var modal = select('.js-modal');
@@ -100,24 +101,6 @@ function showModal() {
 		}
 	);
 }
-function showBtn() {
-	dynamics.css(btnOpen, {
-		opacity: 0,
-	});
-
-	dynamics.animate(
-		btnOpen,
-		{
-			opacity: 1,
-		},
-		{
-			type: dynamics.spring,
-			frequency: 300,
-			friction: 400,
-			duration: 800,
-		}
-	);
-}
 function showModalChildren() {
 	var modal = select('.js-modal');
 	var modalChildren = modal.children;
@@ -149,17 +132,16 @@ function showModalChildren() {
 	}
 }
 function toggleClasses() {
-	toggleClass(btnOpen, 'is-active');
+	toggleClass(successBtn, 'is-active');
+	toggleClass(errorBtn, 'is-active');
 	var modal = select('.js-modal');
-	toggleClass(modal, 'is-active');
-}
-// Open nav when clicking sandwich button
-btnOpen.addEventListener('click', function (e) {
-	if (e.target.classList.contains('success-modal')) {
-		createSuccessModal();
-	} else if (e.target.classList.contains('error-modal')) {
-		createErrorModal();
+	if (modal) {
+		toggleClass(modal, 'is-active');
 	}
+}
+// event listener for success btn
+successBtn.addEventListener('click', function (e) {
+	createSuccessModal();
 	toggleClasses();
 	showModal();
 	showModalChildren();
@@ -168,7 +150,20 @@ btnOpen.addEventListener('click', function (e) {
 	btnClose.addEventListener('click', function (e) {
 		hideModal();
 		removeModal();
-		showBtn();
-		toggleClass(btnOpen, 'is-active');
+		toggleClasses();
+	});
+});
+//event listener for error btn
+errorBtn.addEventListener('click', function (e) {
+	createErrorModal();
+	toggleClasses();
+	showModal();
+	showModalChildren();
+
+	var btnClose = select('.js-close');
+	btnClose.addEventListener('click', function (e) {
+		hideModal();
+		removeModal();
+		toggleClasses();
 	});
 });
