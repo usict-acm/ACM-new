@@ -134,6 +134,7 @@ function showModalChildren() {
 function toggleClasses() {
 	toggleClass(successBtn, 'is-active');
 	toggleClass(errorBtn, 'is-active');
+	document.querySelector('body').classList.toggle("bg-color");
 	var modal = select('.js-modal');
 	if (modal) {
 		toggleClass(modal, 'is-active');

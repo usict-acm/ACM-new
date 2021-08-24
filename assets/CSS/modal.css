@@ -1,3 +1,7 @@
+.bg-color {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
 .modal {
 	width: 25%;
 	margin: auto;
