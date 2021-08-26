@@ -1,0 +1,10 @@
+@media (min-width: 350px) and (max-width: 1200px) {
+  .footer-info {
+    display: flex;
+    flex-direction: column !important;
+  }
+}
+
+ul {
+  list-style: none;
+}
