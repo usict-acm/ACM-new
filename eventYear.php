@@ -57,6 +57,7 @@
                     dataType: 'JSON',
                     success: function(data) {
                         console.log("check data ywar", data);
+                        console.log("check pages", data[1]);
                         data[0].forEach(allEvent);
 
                         function allEvent(event) {
