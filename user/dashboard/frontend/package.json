@@ -44,6 +44,8 @@
     "not op_mini all"
   ],
   "dependencies": {
+    "@ckeditor/ckeditor5-build-decoupled-document": "^29.1.0",
+    "@ckeditor/ckeditor5-react": "^3.0.2",
     "@fortawesome/fontawesome-free": "5.15.2",
     "@reduxjs/toolkit": "^1.6.1",
     "axios": "^0.21.1",

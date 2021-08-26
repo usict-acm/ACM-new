@@ -1,33 +1,25 @@
 import React, { useState } from "react";
+
 // import { Nav , InputGroup,FormControl,Accordion} from 'react-bootstrap';
-import { Container, Collapse, Button, CardBody, Card } from 'reactstrap';
+import { Container, Collapse, Button, CardBody, Card, Input } from 'reactstrap';
 import "../../assets/css/CreateBlog.css"
 // import Example from "./Example";
 
 const SideNav=()=>{
-    const [showTags, setShowTags] = useState(false);
-    const [showPub, setShowPub] = useState(false);
-
-    // const toggle = () => setIsOpen(!isOpen);
+ 
     return(
         <>
-        <div>
-         <div className="right">
+         <div className="top_section">
           <h3>Post Settings</h3>
+         </div>
         <hr />
-         </div>
          <div>
-            <div><button onClick={()=>setShowTags(!showTags)}>toggle</button></div>
-            <div>{showTags?<p>Tags</p>:null}</div>
+         <h4>Tags</h4>
+        <Input type="text" placeholder="Separate tags with commas"></Input>
+        <Button color="info" className="mt-3">Add</Button>
          </div>
-         <hr /> 
-         <div>
-            <div><button onClick={()=>setShowPub(!showPub)}>toggle</button></div>
-            <div>{showPub?<p>Published</p>:null}</div>
-         </div>
-
-
-        </div>
+         {/* <hr />  */}
+ 
         </>
 
     );

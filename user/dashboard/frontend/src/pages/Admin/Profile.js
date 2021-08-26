@@ -83,11 +83,11 @@ const Profile = () => {
           <Col className="order-xl-1">
             <Card className="bg-secondary shadow">
               <CardHeader className="bg-white border-0">
-                <Row className="align-items-center">
-                  <Col xs="8">
+                <Row className="align-items-center justify-content-between">
+                  {/* <Col xs="8"> */}
                     <h3>My Account</h3>
-                  </Col>
-                  <Col className="text-right">
+                  {/* </Col> */}
+                  {/* <Col className="text-right"> */}
                     <Button
                       disabled={!disabled}
                       onClick={() => {
@@ -101,7 +101,7 @@ const Profile = () => {
                     >
                       Edit Profile
                     </Button>
-                  </Col>
+                  {/* </Col> */}
                 </Row>
               </CardHeader>
               <CardBody>
@@ -133,11 +133,10 @@ const Profile = () => {
                     <h2 className="text-center my-3">{user?.name}</h2>
                   ) : (
                     <Input
-                      className="text-center m-auto d-block"
+                      className="text-center m-auto d-block nameField"
                       type="name"
                       placeholder="New Name"
                       readOnly={disabled}
-                      style={{ width: "15%" }}
                       onChange={(e) => setName(e.target.value)}
                       value={name}
                       required
@@ -234,7 +233,7 @@ const Profile = () => {
                               value="Input"
                               color="success"
                             >
-                              Save changes
+                              Save
                             </Button>
                           )}
                           {disabled ? null : (

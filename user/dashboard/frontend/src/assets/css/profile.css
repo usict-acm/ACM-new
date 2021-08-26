@@ -38,3 +38,40 @@
   object-fit: contain;
   border: 1px solid;
 }
+
+
+.nameField{
+  width: 25%;
+}
+
+@media screen and (max-width: 768px) {
+  .nameField{
+    width: 40%;
+  }
+  
+  .profileImage {
+  min-width: 25vw;
+  }
+
+  .profileImage > img{
+   height: 25vw; 
+   width: 25vw;
+
+  }
+}
+
+@media screen and (max-width: 440px){
+  .nameField{
+    width: 55%;
+  }
+  
+  .profileImage {
+    min-width: 30vw;
+    }
+  
+    .profileImage > img{
+     height: 30vw; 
+     width: 30vw;
+  
+    }
+}
