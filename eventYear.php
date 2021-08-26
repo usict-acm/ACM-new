@@ -57,8 +57,13 @@
                     dataType: 'JSON',
                     success: function(data) {
                         console.log("check data ywar", data);
-                        console.log("check pages", data[1]);
-                        data[0].forEach(allEvent);
+                        if (<?php echo $page ?> > Math.ceil(data[1] / 7)) {
+                            allEvents.innerHTML += `<h1 class='noEvents'>No Events on this page</h1>`;
+
+                        } else {
+                            data[0].forEach(allEvent);
+                        }
+
 
                         function allEvent(event) {
 
@@ -66,9 +71,9 @@
                             let button2 = `<a href=${event.button2Link} style="float: right;" target="_blank"><button class="dateTime-para btn form-input-boxes-manual event-button-two btn-watch" style="font-size: 16px;">${event.button2Text}</button></a>`;
                             let eventPartner = `<p class="dateTime-para">Partnered By: ${event.partners}</p>`
                             let eventSpeaker = `<p class="dateTime-para">Speakers: ${event.speakers}</p>`
-                            let sameDate=`<span>${event.startDate}</span>`;
-                            let diffDate=`<span>${event.startDate} — ${event.endDate}</span>`;
-                            let afterDate=`<span>${event.time}</span>
+                            let sameDate = `<span>${event.startDate}</span>`;
+                            let diffDate = `<span>${event.startDate} — ${event.endDate}</span>`;
+                            let afterDate = `<span>${event.time}</span>
                                                 </div>
                                                 <h1 class="event-post_title">${event.name}</h1>
                                                 <p class="event-post_text">${event.description}</p>
@@ -79,15 +84,14 @@
                                             </div>
                                             <div class="event-post_info">
                                                 <div class="event-post_date">`;
-                            if(event.startDate===event.endDate){
-                                var1=var1+sameDate+afterDate;
+                            if (event.startDate === event.endDate) {
+                                var1 = var1 + sameDate + afterDate;
+                            } else if (event.startDate !== event.endDate) {
+                                var1 = var1 + diffDate + afterDate;
                             }
-                            else if (event.startDate!==event.endDate){
-                                var1=var1+diffDate+afterDate;
-                            }
-                                                
-                                                
-                                    
+
+
+
                             let closeDIV = `           </div>
                                             </div>
                                         </div>`;
@@ -153,7 +157,7 @@
                                                  </li>\
                                               </ul>\
                                           </nav>";
-                        if (<?php echo $page ?> === data[2]) {
+                        if (<?php echo $page ?> === data[2] || <?php echo $page ?> > Math.ceil(data[1] / 7)) {
                             document.getElementById("next-pagination").className += " disabled-pagination";
                         }
                     },
