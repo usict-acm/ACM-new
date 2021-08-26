@@ -62,23 +62,32 @@
 
                         function allEvent(event) {
 
-                            let button1 = ` <a href=${event.button1Link} style="float: right;" target="_blank"><button class="dateTime-para btn form-input-boxes-manual btn-watch" style="font-size: 16px;">${event.button1Text}</button></a>`;
+                            let button1 = ` <a href=${event.button1Link} style="float: right; margin-left:8px;" target="_blank"><button class="dateTime-para btn form-input-boxes-manual btn-watch" style="font-size: 16px;">${event.button1Text}</button></a>`;
                             let button2 = `<a href=${event.button2Link} style="float: right;" target="_blank"><button class="dateTime-para btn form-input-boxes-manual event-button-two btn-watch" style="font-size: 16px;">${event.button2Text}</button></a>`;
                             let eventPartner = `<p class="dateTime-para">Partnered By: ${event.partners}</p>`
                             let eventSpeaker = `<p class="dateTime-para">Speakers: ${event.speakers}</p>`
-                            let var1 = `<div class="event-post">
-                                            <div class="event-post_img">
-                                                <img src=${event.poster}  alt="">
-                                            </div>
-                                            <div class="event-post_info">
-                                                <div class="event-post_date">
-                                                <span>${event.startDate} — ${event.endDate}</span>
-                                                <span>${event.time}</span>
+                            let sameDate=`<span>${event.startDate}</span>`;
+                            let diffDate=`<span>${event.startDate} — ${event.endDate}</span>`;
+                            let afterDate=`<span>${event.time}</span>
                                                 </div>
                                                 <h1 class="event-post_title">${event.name}</h1>
                                                 <p class="event-post_text">${event.description}</p>
-                                                <div class="buttonDiv">
-                                    `;
+                                                <div class="buttonDiv">`;
+                            let var1 = `<div class="event-post">
+                                            <div class="event-post_img" style="margin-top:15px;">
+                                                <img src=${event.poster}  alt="">
+                                            </div>
+                                            <div class="event-post_info">
+                                                <div class="event-post_date">`;
+                            if(event.startDate===event.endDate){
+                                var1=var1+sameDate+afterDate;
+                            }
+                            else if (event.startDate!==event.endDate){
+                                var1=var1+diffDate+afterDate;
+                            }
+                                                
+                                                
+                                    
                             let closeDIV = `           </div>
                                             </div>
                                         </div>`;
