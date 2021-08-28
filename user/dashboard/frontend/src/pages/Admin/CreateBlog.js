@@ -27,23 +27,30 @@ const CreateBlog = () =>
             <Col className="order-xl-1">
               <Card className="bg-secondary shadow">
                 <CardHeader className="bg-white border-0">
-                  <Row className="align-items-center  justify-content-between">
-                    {/* <Col xs="6"> */}
-                    <Input
+                  <Row className="CardHeader">
+                    <Col xs="6">
+                     <Input
                       className="title"
                       type="name"
                       placeholder="T I T L E"
-                    />
-                    {/* </Col> */}
-                    {/* <Col className="text-right"> */}
-                    <Button
+                     />
+                    </Col>
+                    <Col className="text-right">
+                     <Button
+                      className="ni ni-cloud-upload-96 "
+                      type="button"
+                      color="success"
+                     > 
+                      &nbsp; Save
+                     </Button>
+                     <Button
                       className="ni ni-curved-next"
                       type="button"
                       color="success"
-                    >
-                      Publish
-                    </Button>
-                    {/* </Col> */}
+                     > 
+                      &nbsp; Publish
+                     </Button>
+                    </Col>
                   </Row>
 
                 </CardHeader>
