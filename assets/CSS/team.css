@@ -79,7 +79,7 @@ section {
     display: none;
   }
   .main-year select {
-    display: block;
+    display: inline;
     /* border: none; */
     outline-width: 0;
     padding: 8px;
@@ -204,6 +204,10 @@ section {
 
 .card-name-back {
   padding: 0 10px;
+}
+
+.large-name {
+  font-size: 16px;
 }
 
 .collab-heading {
