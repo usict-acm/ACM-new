@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from 'react'
 import {
   CardImg,
   Button,
@@ -11,108 +11,108 @@ import {
   Container,
   Row,
   Col,
-} from "reactstrap";
-import UserHeader from "components/Headers/UserHeader.js";
-import { useDispatch, useSelector } from "react-redux";
-import { selectUser } from "redux/slices/userSlice";
-import { updateProfile } from "redux/slices/userSlice";
-import "../../assets/css/profile.css";
+} from 'reactstrap'
+import UserHeader from 'components/Headers/UserHeader.js'
+import { useDispatch, useSelector } from 'react-redux'
+import { selectUser } from 'redux/slices/userSlice'
+import { updateProfile } from 'redux/slices/userSlice'
+import '../../assets/css/profile.css'
 
 const Profile = () => {
   const dispatch = useDispatch(),
     user = useSelector(selectUser),
     [disabled, setDisabled] = useState(true),
-    [cursor, setCursor] = useState({ cursor: "" }),
-    [name, setName] = useState(""),
-    [memberId, setMemberId] = useState(""),
-    [localURL, setLocalURL] = useState(""),
-    fileUploadRef = useRef(null);
+    [cursor, setCursor] = useState({ cursor: '' }),
+    [name, setName] = useState(''),
+    [memberId, setMemberId] = useState(''),
+    [localURL, setLocalURL] = useState(''),
+    fileUploadRef = useRef(null)
 
   const init = () => {
-    setName(user?.name);
-    setMemberId(user?.acmMemberId);
-    setDisabled(true);
-    setCursor({ cursor: "pointer" });
-  };
+    setName(user?.name)
+    setMemberId(user?.acmMemberId)
+    setDisabled(true)
+    setCursor({ cursor: 'pointer' })
+  }
 
   useEffect(() => {
-    init();
+    init()
     //eslint-disable-next-line
-  }, []);
+  }, [])
 
   const updateInfo = () => {
     if (name === user.name && memberId === user.acmMemberId && !localURL) {
       return alert(
-        "One or more editable values must be edited for changes to be saved"
-      );
+        'One or more editable values must be edited for changes to be saved'
+      )
     }
     let data = {
       ...user,
       name,
       acmMemberId: memberId,
       profilePhoto: localURL,
-    };
-    if (!name) {
-      alert("Please fill in all the required fields");
-      return;
     }
-    dispatch(updateProfile(data));
-    setDisabled(true);
-    setCursor({ cursor: "pointer" });
-    setLocalURL("");
-  };
+    if (!name) {
+      alert('Please fill in all the required fields')
+      return
+    }
+    dispatch(updateProfile(data))
+    setDisabled(true)
+    setCursor({ cursor: 'pointer' })
+    setLocalURL('')
+  }
 
   const onImageChange = (e) => {
-    const fileReader = new FileReader();
-    fileReader.readAsDataURL(e.target.files[0]);
+    const fileReader = new FileReader()
+    fileReader.readAsDataURL(e.target.files[0])
     fileReader.onload = () => {
-      setLocalURL(fileReader.result);
-    };
+      setLocalURL(fileReader.result)
+    }
     fileReader.onerror = (err) => {
-      console.log(err);
-    };
-  };
+      console.log(err)
+    }
+  }
 
   return (
-    <Container className="mt-0" fluid="xxl">
+    <Container className='mt-0' fluid='xxl'>
       <UserHeader />
       {/* Page content */}
 
-      <Container className="profileContainer" fluid>
+      <Container className='profileContainer' fluid>
         <Row>
-          <Col className="order-xl-1">
-            <Card className="bg-secondary shadow">
-              <CardHeader className="bg-white border-0">
-                <Row className="align-items-center justify-content-between">
+          <Col className='order-xl-1'>
+            <Card className='bg-secondary shadow'>
+              <CardHeader className='bg-white border-0'>
+                <Row className='align-items-center justify-content-between'>
                   {/* <Col xs="8"> */}
-                    <h3>My Account</h3>
+                  <h3>My Account</h3>
                   {/* </Col> */}
                   {/* <Col className="text-right"> */}
-                    <Button
-                      disabled={!disabled}
-                      onClick={() => {
-                        setDisabled(false);
-                        setCursor({ cursor: "no-drop" });
-                      }}
-                      type="button"
-                      value="Input"
-                      color="info"
-                      style={cursor}
-                    >
-                      Edit Profile
-                    </Button>
+                  <Button
+                    disabled={!disabled}
+                    onClick={() => {
+                      setDisabled(false)
+                      setCursor({ cursor: 'no-drop' })
+                    }}
+                    type='button'
+                    value='Input'
+                    color='info'
+                    style={cursor}
+                  >
+                    Edit Profile
+                  </Button>
                   {/* </Col> */}
                 </Row>
               </CardHeader>
               <CardBody>
-                <div className="profileImage m-auto">
+                <div className='profileImage m-auto'>
                   {!disabled && (
-                    <div className="overlay">
+                    <div className='overlay'>
                       <div
-                        className="overlay__icon"
+                        className='overlay__icon'
                         onClick={() => fileUploadRef.current.click()}
                       >
-                        <i className="bx bxs-pencil" />
+                        <i className='bx bxs-pencil' />
                       </div>
                     </div>
                   )}
@@ -121,21 +121,21 @@ const Profile = () => {
                     src={
                       localURL ||
                       user?.profilePhoto ||
-                      require("../../assets/img/theme/team-1-800x800.jpg")
+                      require('../../assets/img/theme/team-1-800x800.jpg')
                         .default
                     }
-                    alt="Card image cap"
-                    className="rounded-circle d-block md-8 "
+                    alt='Card image cap'
+                    className='rounded-circle d-block md-8 '
                   />
                 </div>
-                <div className="my-3">
+                <div className='my-3'>
                   {disabled ? (
-                    <h2 className="text-center my-3">{user?.name}</h2>
+                    <h2 className='text-center my-3'>{user?.name}</h2>
                   ) : (
                     <Input
-                      className="text-center m-auto d-block nameField"
-                      type="name"
-                      placeholder="New Name"
+                      className='text-center m-auto d-block nameField'
+                      type='name'
+                      placeholder='New Name'
                       readOnly={disabled}
                       onChange={(e) => setName(e.target.value)}
                       value={name}
@@ -144,23 +144,23 @@ const Profile = () => {
                   )}
                 </div>
                 <Form>
-                  <h6 className="heading-small text-muted mb-4">
+                  <h6 className='heading-small text-muted mb-4'>
                     User information
                   </h6>
-                  <div className="pl-lg-4">
+                  <div className='pl-lg-4'>
                     <input
-                      type="file"
+                      type='file'
                       hidden
-                      accept="image/*"
+                      accept='image/*'
                       ref={fileUploadRef}
                       onChange={onImageChange}
                     />
-                    <Row className="justify-content-md-center">
-                      <Col md="12">
+                    <Row className='justify-content-md-center'>
+                      <Col md='12'>
                         <FormGroup>
-                          <label className="form-control-label">Email</label>
+                          <label className='form-control-label'>Email</label>
                           <Input
-                            type="email"
+                            type='email'
                             placeholder={user?.email}
                             readOnly
                             value={user?.email}
@@ -168,11 +168,11 @@ const Profile = () => {
                           />
                         </FormGroup>
                       </Col>
-                      <Col lg="6">
+                      <Col lg='6'>
                         <FormGroup>
-                          <label className="form-control-label">Course</label>
+                          <label className='form-control-label'>Course</label>
                           <Input
-                            type="text"
+                            type='text'
                             placeholder={user?.course}
                             readOnly
                             value={user?.course}
@@ -180,11 +180,11 @@ const Profile = () => {
                           />
                         </FormGroup>
                       </Col>
-                      <Col lg="6">
+                      <Col lg='6'>
                         <FormGroup>
-                          <label className="form-control-label">Branch</label>
+                          <label className='form-control-label'>Branch</label>
                           <Input
-                            type="text"
+                            type='text'
                             placeholder={user?.branch}
                             readOnly
                             value={user?.branch}
@@ -192,13 +192,13 @@ const Profile = () => {
                           />
                         </FormGroup>
                       </Col>
-                      <Col lg="6">
+                      <Col lg='6'>
                         <FormGroup>
-                          <label className="form-control-label">
+                          <label className='form-control-label'>
                             Roll Number
                           </label>
                           <Input
-                            type="text"
+                            type='text'
                             placeholder={user?.rollNo}
                             readOnly
                             value={user?.rollNo}
@@ -206,15 +206,15 @@ const Profile = () => {
                           />
                         </FormGroup>
                       </Col>
-                      <Col lg="6">
+                      <Col lg='6'>
                         <FormGroup>
-                          <label className="form-control-label">
+                          <label className='form-control-label'>
                             Member ID
                           </label>
                           <Input
-                            type="text"
+                            type='text'
                             placeholder={
-                              memberId ? "Member Id" : "Not A Member"
+                              memberId ? 'Member Id' : 'Not A Member'
                             }
                             readOnly={user?.acmMemberId || disabled}
                             onChange={(e) => setMemberId(e.target.value)}
@@ -222,16 +222,16 @@ const Profile = () => {
                           />
                         </FormGroup>
                       </Col>
-                      <Col className="text-right">
+                      <Col className='text-right'>
                         <div>
                           {disabled ? null : (
                             <Button
                               onClick={() => {
-                                updateInfo();
+                                updateInfo()
                               }}
-                              type="button"
-                              value="Input"
-                              color="success"
+                              type='button'
+                              value='Input'
+                              color='success'
                             >
                               Save
                             </Button>
@@ -239,11 +239,12 @@ const Profile = () => {
                           {disabled ? null : (
                             <Button
                               onClick={() => {
-                                init();
+                                init()
+                                setLocalURL('')
                               }}
-                              type="button"
-                              value="Input"
-                              color="danger"
+                              type='button'
+                              value='Input'
+                              color='danger'
                             >
                               Cancel
                             </Button>
@@ -259,7 +260,7 @@ const Profile = () => {
         </Row>
       </Container>
     </Container>
-  );
-};
+  )
+}
 
-export default Profile;
+export default Profile
