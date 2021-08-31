@@ -46,7 +46,7 @@
             <ul style="padding-left: 0">
               <li>
                 <i class="fa fa-angle-right"></i>
-                <a href="https://www.ipu.ac.in/"> IPU-Home</a>
+                <a href="http://www.ipu.ac.in/"> IPU-Home</a>
               </li>
               <li>
                 <i class="fa fa-angle-right"></i>
