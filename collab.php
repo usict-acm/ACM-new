@@ -31,6 +31,16 @@
       <div class="container">
         <h1 class="collab-main-heading">Collaborations and<span class="highlight"> Sponsors</span>:</h1>
         <div class="row d-flex justify-content-center">
+        <div class="collab-card">
+            <hr class="blue-hr">
+            <div class="card-new"></div>
+              <h1 class="collab-heading">Trell</h1>
+            </div>
+            <div class="collab-card">
+            <hr class="blue-hr">
+            <div class="card-new0"></div>
+              <h1 class="collab-heading">Ensvee</h1>
+            </div>
           <div class="collab-card">
             <hr class="blue-hr">
             <div class="card-1"></div>

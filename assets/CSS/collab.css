@@ -94,6 +94,56 @@ section {
 .highlight {
   color: #0297ff;
 }
+.card-new {
+  background: url("../images/collab/trell_logo.png") no-repeat;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  display: inline-block !important;
+  width: 10rem !important;
+  height: 10rem !important;
+  padding: 2vh 4vh;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+  transition: all 0.5s ease-in-out !important;
+}
+.collab-card:hover > .card-new {
+  filter: grayscale(0%);
+  opacity: 1;
+  display: inline-block !important;
+  width: 12rem !important;
+  height: 12rem !important;
+  padding: 2vh 4vh;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+  transition: all 0.5s ease-in-out !important;
+}
+.card-new0 {
+ background: url("../images/collab/ensvee-logo.png") no-repeat; 
+  filter: grayscale(100%);
+  opacity: 0.8;
+  display: inline-block !important;
+  width: 10rem !important;
+  height: 10rem !important;
+  padding: 2vh 4vh;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+  transition: all 0.5s ease-in-out !important;
+}
+.collab-card:hover > .card-new0 {
+  filter: grayscale(0%);
+  opacity: 1;
+  display: inline-block !important;
+  width: 12rem !important;
+  height: 12rem !important;
+  padding: 2vh 4vh;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+  transition: all 0.5s ease-in-out !important;
+}
 .card-1 {
   background: url("../images/collab/coursera.png") no-repeat;
   filter: grayscale(100%);
