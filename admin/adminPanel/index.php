@@ -140,6 +140,12 @@
                         case 'AddAnnouncement':
                             include('./faqadmin/announcements-form.php');
                             break;
+                        case 'Blog':
+                            include('./faqadmin/blogtable.php');
+                            break;
+                        case 'AddBlog':
+                            include('./faqadmin/blogAdmin.html');
+                            break;
                         default:
                             include('./faqadmin/index.php');
                             break;
