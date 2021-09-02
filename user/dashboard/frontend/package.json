@@ -44,13 +44,16 @@
     "not op_mini all"
   ],
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^29.2.0",
     "@ckeditor/ckeditor5-build-decoupled-document": "^29.1.0",
     "@ckeditor/ckeditor5-react": "^3.0.2",
+    "@ckeditor/ckeditor5-upload": "^29.2.0",
     "@fortawesome/fontawesome-free": "5.15.2",
     "@reduxjs/toolkit": "^1.6.1",
     "axios": "^0.21.1",
     "bootstrap": "4.6.0",
     "chart.js": "2.9.4",
+    "ckeditor5-custom-build": "file:./ckeditor5-custom",
     "classnames": "2.2.6",
     "moment": "2.29.1",
     "node-sass": "4.14.1",

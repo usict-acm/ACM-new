@@ -1,144 +1,138 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media screen and (min-width: 520px) {
-    .BlogContainer{
-        margin-top: calc(30vw - 85vh);
-        mix-blend-mode: hard-light
-    }
+@media (min-width: 768px) and (max-width: 845px) {
+  .CardHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
-
-@media (min-width:768px) and (max-width: 845px) {
-    .CardHeader{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    
 }
 
 @media screen and (max-width: 546px) {
-    .CardHeader{
-        display: flex;
-        flex-direction: column;
-        justify-content:center;
-    }
-    
-}
-
-.title{
-    width: 100%;
-    border-width: 0 0 2px; 
-    border-radius: 0; 
-}
-
-.ck.ck-toolbar{
-    background-color: white;
-      border: none;
-  }
-
-
-
-#toolbar-container{
-    width: 100%;
-    border: 1px solid gainsboro;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-
-}
-
-#Editor{
-    width: 100%;
-    background-color: rgb(248, 249, 250);
-    padding: 20px 0%;
+  .CardHeader {
     display: flex;
-    justify-content: space-evenly;
-    
-    
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
-.TextEditor{
-    width: 75%;
-    height: 95vh;
-    
+.title {
+  width: 100%;
+  border-width: 0 0 2px;
+  border-radius: 0;
 }
 
-.PostSetting{
-
-    padding: 15px;
-    width: 22%;
-    border: 1px #d3d3d3 solid;
-    background-color: #fff;
-    box-shadow: 0 0 5px rgb(0 0 0 / 10%);
-    outline: none; 
-    height: fit-content;
+.save-btn::before {
+  margin-right: 10px;
 }
 
-.ck.ck-editor__editable_inline{
-    width : 100%;
-    min-height: 100%;
-    max-height: 100%;
-    padding:  0 20px;
-    border: 1px #d3d3d3 solid;
-    background-color: #fff;
-    box-shadow: 0 0 5px rgb(0 0 0 / 10%);
-    outline: none;
-    overflow-y: auto;
-
+.ck.ck-toolbar {
+  background-color: white;
+  border: none;
 }
 
-.ck.ck-editor__editable_inline p{
-    margin-bottom: 0;
+#toolbar-container {
+  width: 100%;
+  border: 1px solid gainsboro;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+#Editor {
+  width: 100%;
+  background-color: rgb(248, 249, 250);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.TextEditor {
+  width: 75%;
+  height: 95vh;
+}
+
+.PostSetting {
+  padding: 15px;
+  width: 22%;
+  border: 1px #d3d3d3 solid;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgb(0 0 0 / 10%);
+  outline: none;
+  height: fit-content;
+}
+
+.ck.ck-editor__editable_inline {
+  height: 580px;
+  overflow-y: scroll;
+}
+
+.ck.ck-editor__editable_inline {
+  width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  padding: 0 20px;
+  border: 1px #d3d3d3 solid;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgb(0 0 0 / 10%);
+  outline: none;
+  overflow-y: auto;
+}
+
+.ck.ck-editor__editable_inline p {
+  margin-bottom: 0;
 }
 
 .ck.ck-list__item .ck-button.ck-on {
-    background: #489be4;
-    color: var(--ck-color-list-button-on-text);
-    
-
+  background: #489be4;
+  color: var(--ck-color-list-button-on-text);
 }
 
 .ck.ck-dropdown.ck-heading-dropdown .ck-dropdown__panel .ck-list__item {
-    min-width: 0;
+  min-width: 0;
 }
 
-.tag_style{
-    display: inline-block;
-    width: max-content;
-    margin: 2px 2px 4px 2px;
-    padding: 5px;
-    border: 2px solid rgb(71, 187, 255);
-    border-radius: 5px;
+.tag_style {
+  color: black;
+  display: inline-block;
+  width: max-content;
+  margin: 5px 1px 4px 2px;
+  padding: 5px;
+  background-color: rgb(233, 232, 232);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 8px;
 }
 
-
-@media screen and (max-width: 450px){
-    .TextEditor{
-        height: 75vh;
-    }
-    #Editor{
-        padding: 0;
-    }
+@media screen and (max-width: 450px) {
+  .TextEditor {
+    height: 75vh;
+  }
+  #Editor {
+    padding: 0;
+  }
 }
 
-@media screen and (max-width: 1150px){
-    .TextEditor{
-        width: 100%;
-    }
+@media screen and (max-width: 1150px) {
+  .TextEditor {
+    width: 100%;
+  }
 
-    .PostSetting{
-        margin-top: 10px;
-        width: 100%;
-        
-    }
+  .PostSetting {
+    margin-top: 10px;
+    width: 100%;
+  }
 
-    #Editor{
-        flex-direction: column;
-        justify-content: space-between;    
-    }
-
+  #Editor {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 768px) {
+  .BlogContainer > .row > .col {
+    padding: 0;
+  }
 }

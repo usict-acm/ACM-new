@@ -33,6 +33,7 @@ import {
   Col,
 } from "reactstrap";
 import { signup } from "redux/slices/userSlice";
+import { COLLEGES } from "utils/Constants";
 import { BRANCHES } from "utils/Constants";
 
 const Register = () => {
@@ -43,7 +44,8 @@ const Register = () => {
     [memId, setMemId] = useState(""),
     [course, setCourse] = useState(""),
     [branch, setBranch] = useState(""),
-    [rollNo, setRollNo] = useState("");
+    [rollNo, setRollNo] = useState(""),
+    [college, setCollege] = useState("");
 
   const registerHandler = async (e) => {
     e.preventDefault();
@@ -53,7 +55,8 @@ const Register = () => {
       password === "" ||
       course === "" ||
       branch === "" ||
-      rollNo === ""
+      rollNo === "" ||
+      college === ""
     ) {
       return alert("Please fill all the required fields.");
     }
@@ -65,162 +68,224 @@ const Register = () => {
       course,
       branch,
       rollNo,
+      college,
     };
     dispatch(signup(data));
   };
 
   return (
-    <Col lg="6" md="8" className="mt-5">
-      <Card className="bg-secondary shadow border-0">
-        <CardBody className="px-lg-5 py-lg-5">
-          <div className="text-center text-muted mb-4">
-            <small>Please enter your details</small>
-          </div>
-          <Form role="form" onSubmit={registerHandler}>
-            <FormGroup>
-              <InputGroup className="input-group-alternative mb-3">
-                <InputGroupAddon addonType="prepend">
-                  <InputGroupText>
-                    <i className="bx bx-rename" />
-                  </InputGroupText>
-                </InputGroupAddon>
-                <Input
-                  placeholder="Name*"
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                />
-              </InputGroup>
-            </FormGroup>
-            <FormGroup>
-              <InputGroup className="input-group-alternative mb-3">
-                <InputGroupAddon addonType="prepend">
-                  <InputGroupText>
-                    <i className="ni ni-email-83" />
-                  </InputGroupText>
-                </InputGroupAddon>
-                <Input
-                  placeholder="Email*"
-                  type="email"
-                  autoComplete="new-email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </InputGroup>
-            </FormGroup>
-            <FormGroup>
-              <InputGroup className="input-group-alternative">
-                <InputGroupAddon addonType="prepend">
-                  <InputGroupText>
-                    <i className="ni ni-lock-circle-open" />
-                  </InputGroupText>
-                </InputGroupAddon>
-                <Input
-                  placeholder="Password*"
-                  type="password"
-                  autoComplete="new-password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
-              </InputGroup>
-            </FormGroup>
-            <FormGroup>
-              <InputGroup className="input-group-alternative mb-3">
-                <InputGroupAddon addonType="prepend">
-                  <InputGroupText>
-                    <i className="ni ni-hat-3" />
-                  </InputGroupText>
-                </InputGroupAddon>
-                <Input
-                  placeholder="Course*"
-                  type="select"
-                  required
-                  value={course}
-                  onChange={(e) => setCourse(e.target.value)}
-                >
-                  <option value="">Select Course*</option>
-                  {Object.keys(BRANCHES).map((value, index) => (
-                    <option key={index} value={value}>
-                      {value}
-                    </option>
-                  ))}
-                </Input>
-              </InputGroup>
-            </FormGroup>
-            <FormGroup>
-              <InputGroup className="input-group-alternative mb-3">
-                <InputGroupAddon addonType="prepend">
-                  <InputGroupText>
-                    <i className="bx bx-library" />
-                  </InputGroupText>
-                </InputGroupAddon>
-                <Input
-                  placeholder="Course*"
-                  type="select"
-                  required
-                  value={branch}
-                  onChange={(e) => setBranch(e.target.value)}
-                  disabled={course === ""}
-                >
-                  <option value="">Select Branch*</option>
-                  {BRANCHES[course]?.map((value, index) => (
-                    <option key={index} value={value}>
-                      {value}
-                    </option>
-                  ))}
-                </Input>
-              </InputGroup>
-            </FormGroup>
-            <FormGroup>
-              <InputGroup className="input-group-alternative mb-3">
-                <InputGroupAddon addonType="prepend">
-                  <InputGroupText>
-                    <i className="bx bx-id-card" />
-                  </InputGroupText>
-                </InputGroupAddon>
-                <Input
-                  placeholder="Roll No*"
-                  type="text"
-                  value={rollNo}
-                  onChange={(e) => setRollNo(e.target.value)}
-                  required
-                />
-              </InputGroup>
-            </FormGroup>
-            <FormGroup>
-              <InputGroup className="input-group-alternative mb-3">
-                <InputGroupAddon addonType="prepend">
-                  <InputGroupText>
-                    <i className="bx bx-id-card" />
-                  </InputGroupText>
-                </InputGroupAddon>
-                <Input
-                  placeholder="ACM Member ID"
-                  type="text"
-                  value={memId}
-                  onChange={(e) => setMemId(e.target.value)}
-                />
-              </InputGroup>
-            </FormGroup>
-            <div className="text-center">
-              <Button className="mt-4" color="primary" type="submit">
-                Create account
-              </Button>
+    <div className="registerPage">
+      <div className="registerLeft glass">
+        <h2 style={{ marginBottom: "20px" }}>Why Join Us?</h2>
+        <ul>
+          <li style={{ marginBottom: "10px" }}>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
+            culpa?
+          </li>
+          <li style={{ marginBottom: "10px" }}>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
+            culpa?
+          </li>
+          <li style={{ marginBottom: "10px" }}>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
+            culpa?
+          </li>
+          <li style={{ marginBottom: "10px" }}>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
+            culpa?
+          </li>
+          <li style={{ marginBottom: "10px" }}>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
+            culpa?
+          </li>
+          <li style={{ marginBottom: "10px" }}>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
+            culpa?
+          </li>
+          <li style={{ marginBottom: "10px" }}>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
+            culpa?
+          </li>
+          <li style={{ marginBottom: "10px" }}>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
+            culpa?
+          </li>
+        </ul>
+      </div>
+      <Col className="mt-5 registerRight">
+        <Card className="bg-secondary shadow border-0">
+          <CardBody className="px-lg-5 py-lg-5">
+            <div className="text-center text-muted mb-4">
+              <small>Please enter your details</small>
             </div>
-          </Form>
-        </CardBody>
-      </Card>
-      <Row className="mt-3">
-        <Col className="text-right" xs="12">
-          <a className="text-light" href="/login">
-            <small>Already registered? Login</small>
-          </a>
-        </Col>
-      </Row>
-    </Col>
+            <Form role="form" onSubmit={registerHandler}>
+              <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="bx bx-rename" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input
+                    placeholder="Name*"
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                </InputGroup>
+              </FormGroup>
+              <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="ni ni-email-83" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input
+                    placeholder="Email*"
+                    type="email"
+                    autoComplete="new-email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </InputGroup>
+              </FormGroup>
+              <FormGroup>
+                <InputGroup className="input-group-alternative">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="ni ni-lock-circle-open" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input
+                    placeholder="Password*"
+                    type="password"
+                    autoComplete="new-password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
+                </InputGroup>
+              </FormGroup>
+              <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="ni ni-building" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input
+                    list="colleges"
+                    placeholder="College Name*"
+                    type="text"
+                    value={college}
+                    onChange={(e) => setCollege(e.target.value)}
+                    required
+                  />
+                </InputGroup>
+                <datalist id="colleges">
+                  {COLLEGES.map((value, index) => (
+                    <option key={index} value={value} />
+                  ))}
+                </datalist>
+              </FormGroup>
+              <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="ni ni-hat-3" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input
+                    placeholder="Course*"
+                    type="select"
+                    required
+                    value={course}
+                    onChange={(e) => setCourse(e.target.value)}
+                  >
+                    <option value="">Select Course*</option>
+                    {Object.keys(BRANCHES).map((value, index) => (
+                      <option key={index} value={value}>
+                        {value}
+                      </option>
+                    ))}
+                  </Input>
+                </InputGroup>
+              </FormGroup>
+              <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="bx bx-library" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input
+                    placeholder="Course*"
+                    type="select"
+                    required
+                    value={branch}
+                    onChange={(e) => setBranch(e.target.value)}
+                    disabled={course === ""}
+                  >
+                    <option value="">Select Branch*</option>
+                    {BRANCHES[course]?.map((value, index) => (
+                      <option key={index} value={value}>
+                        {value}
+                      </option>
+                    ))}
+                  </Input>
+                </InputGroup>
+              </FormGroup>
+              <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="bx bx-id-card" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input
+                    placeholder="Roll No*"
+                    type="text"
+                    value={rollNo}
+                    onChange={(e) => setRollNo(e.target.value)}
+                    required
+                  />
+                </InputGroup>
+              </FormGroup>
+              <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="bx bx-id-card" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input
+                    placeholder="ACM Member ID"
+                    type="text"
+                    value={memId}
+                    onChange={(e) => setMemId(e.target.value)}
+                  />
+                </InputGroup>
+              </FormGroup>
+              <div className="text-center">
+                <Button className="mt-4" color="primary" type="submit">
+                  Create account
+                </Button>
+              </div>
+            </Form>
+          </CardBody>
+        </Card>
+        <Row className="mt-3">
+          <Col className="text-right" xs="12">
+            <a className="text-light" href="/login">
+              <small>Already registered? Login</small>
+            </a>
+          </Col>
+        </Row>
+      </Col>
+    </div>
   );
 };
 
