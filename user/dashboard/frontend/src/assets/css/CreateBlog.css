@@ -47,6 +47,7 @@
     border: 1px solid gainsboro;
     position: sticky;
     top: 0;
+    z-index: 1;
 
 }
 
@@ -103,6 +104,15 @@
 
 .ck.ck-dropdown.ck-heading-dropdown .ck-dropdown__panel .ck-list__item {
     min-width: 0;
+}
+
+.tag_style{
+    display: inline-block;
+    width: max-content;
+    margin: 2px 2px 4px 2px;
+    padding: 5px;
+    border: 2px solid rgb(71, 187, 255);
+    border-radius: 5px;
 }
 
 
