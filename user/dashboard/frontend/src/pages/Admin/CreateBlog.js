@@ -21,7 +21,7 @@ const CreateBlog = () =>
     <>
       <Container className="mt-0" fluid="xxl">
         <UserHeader />
-
+            
         <Container className="BlogContainer" fluid>
           <Row>
             <Col className="order-xl-1">
@@ -32,7 +32,7 @@ const CreateBlog = () =>
                      <Input
                       className="title"
                       type="name"
-                      placeholder="T I T L E"
+                      placeholder="TITLE"
                      />
                     </Col>
                     <Col className="text-right">
