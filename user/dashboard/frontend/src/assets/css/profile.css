@@ -39,39 +39,56 @@
   border: 1px solid;
 }
 
-
-.nameField{
+.nameField {
   width: 25%;
 }
 
 @media screen and (max-width: 768px) {
-  .nameField{
+  .nameField {
     width: 40%;
   }
-  
+
   .profileImage {
-  min-width: 25vw;
+    min-width: 25vw;
   }
 
-  .profileImage > img{
-   height: 25vw; 
-   width: 25vw;
-
+  .profileImage > img {
+    height: 25vw;
+    width: 25vw;
   }
 }
 
-@media screen and (max-width: 440px){
-  .nameField{
+@media screen and (max-width: 440px) {
+  .nameField {
     width: 55%;
   }
-  
+
   .profileImage {
     min-width: 30vw;
-    }
-  
-    .profileImage > img{
-     height: 30vw; 
-     width: 30vw;
-  
-    }
+  }
+}
+.member-label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.member-label > a {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 520px) {
+  .profileContainer {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+  .profileImage {
+    width: fit-content;
+    position: relative;
+  }
+  .profileImage > img {
+    height: 40vw;
+    width: 40vw;
+  }
 }

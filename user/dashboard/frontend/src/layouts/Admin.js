@@ -50,7 +50,6 @@ const Admin = (props) => {
 
   const getBrandText = () => {
     for (let i = 0; i < routes.length; i++) {
-      console.log(location.pathname);
       if (location.pathname === routes[i].path) return routes[i].name;
     }
     return "";
@@ -62,7 +61,7 @@ const Admin = (props) => {
         {...props}
         routes={routes}
         logo={{
-          innerLink: "/",
+          innerLink: "/home",
           imgSrc: require("../assets/img/brand/argon-react.png").default,
           imgAlt: "...",
         }}

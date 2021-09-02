@@ -57,7 +57,6 @@ export const signup = (body) => (dispatch) => {
         return alert(res.error);
       }
       if (res.message === "Signup successful") {
-        console.log(res.message);
         localStorage.setItem("user", JSON.stringify(res.user));
         dispatch(setUser(res.user));
       } else {
@@ -70,7 +69,6 @@ export const signup = (body) => (dispatch) => {
 };
 
 export const updateProfile = (body) => (dispatch) => {
-  console.log(body);
   fetch(
     process.env.REACT_APP_BASE_URL + "/user/dashboard/backend/api.php?q=update",
     {

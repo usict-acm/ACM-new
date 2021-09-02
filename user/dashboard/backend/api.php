@@ -21,13 +21,6 @@ function fetchUserByEmail($user, $email)
     return $user_data;
 }
 
-function checkUserExist($user, $inputEmail)
-{
-    $user_data = fetchUserByEmail($user, $inputEmail);
-    if ($user_data) return true;
-    else return false;
-}
-
 function login()
 {
     if ($_SERVER['REQUEST_METHOD'] != "POST") {
@@ -51,6 +44,9 @@ function login()
                         'course' => $user_data["course"],
                         'branch' => $user_data["branch"],
                         'rollNo' => $user_data["rollNo"],
+                        'college' => $user_data["college"],
+                        'created' => $user_data["created"],
+                        'lastUpdated' => $user_data["lastUpdated"]
                     )
                 ));
             } else {
@@ -73,9 +69,9 @@ function register()
     }
     $user = init();
     $req = json_decode(file_get_contents('php://input'), true);
-    if ($req["email"] && $req["password"] && $req["name"] && $req["course"] && $req["branch"] && $req["rollNo"]) {
-        if (checkUserExist($user, $req['email'])) {
-            echo json_encode(array('error' => "user with same email already exist..."));
+    if ($req["email"] && $req["password"] && $req["name"] && $req["course"] && $req["branch"] && $req["rollNo"] && $req["college"]) {
+        if ($user->checkUserExist($req)) {
+            echo json_encode(array('error' => "user with similar credentials already exist..."));
             return;
         }
         $result = $user->register($req);
@@ -93,6 +89,9 @@ function register()
                         'course' => $user_data["course"],
                         'branch' => $user_data["branch"],
                         'rollNo' => $user_data["rollNo"],
+                        'college' => $user_data["college"],
+                        'created' => $user_data["created"],
+                        'lastUpdated' => $user_data["lastUpdated"]
                     )
                 ));
             }
@@ -129,6 +128,9 @@ function update()
                         'course' => $user_data["course"],
                         'branch' => $user_data["branch"],
                         'rollNo' => $user_data["rollNo"],
+                        'college' => $user_data["college"],
+                        'created' => $user_data["created"],
+                        'lastUpdated' => $user_data["lastUpdated"]
                     )
                 ));
             }
