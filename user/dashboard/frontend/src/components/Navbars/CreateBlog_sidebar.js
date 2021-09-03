@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Button, Input } from "reactstrap";
 import "../../assets/css/CreateBlog.css";
 
@@ -45,16 +45,15 @@ const SideNav = () => {
           Add
         </Button>
       </div>
-      <div>
+      <div className="tagContainer">
         {array.map((tags, i) => {
           return (
             <div key={i} className="tag_style">
               <span
-                className="ni ni-fat-remove "
-                style={{ cursor: "pointer" }}
+                className="ni ni-fat-remove"
                 onClick={() => removeTags(i)}
               ></span>
-              &nbsp;{tags}
+              {tags}
             </div>
           );
         })}
