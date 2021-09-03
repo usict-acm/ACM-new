@@ -19,7 +19,7 @@
             <li class="nav-item <?php if($currentPage =='blogs'){echo 'active';}?>"> <a class="nav-link" href="./blogs.php">Blogs</a> </li>
             <li class="nav-item <?php if($currentPage =='benefits'){echo 'active';}?>"> <a class="nav-link" href="./benefits.php">Why Join Us?</a> </li>
             <li class="nav-item <?php if($currentPage =='clubs'){echo 'active';}?>"> <a class="nav-link" href="./clubs.php">Clubs</a> </li>
-            <li class="nav-item <?php if($currentPage =='team'){echo 'active';}?>"> <a class="nav-link" href="./Team.php">Our Team</a> </li>
+            <li class="nav-item <?php if($currentPage =='team'){echo 'active';}?>"> <a class="nav-link" href="./team.php">Our Team</a> </li>
             <li class="nav-item <?php if($currentPage =='contact'){echo 'active';}?>"> <a class="nav-link" href="./#contact">Contact Us</a> </li>
             <li class="nav-item <?php if($currentPage =='register'){echo 'active';}?>"> <a class="nav-link"
                 href="./benefits.php#registration">ACM

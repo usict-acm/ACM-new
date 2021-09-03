@@ -134,7 +134,7 @@
                                       <hr class="blue-hr" />\
                                       <div class="flip-card-front">\
                                       <img src= "' + row.image + '" class="flip-img" alt="profile-pic" />\
-                                      <h4 class="card-name">' + row.name + '</h4>\
+                                      <h4 class="card-name" id="' + row.id + '">' + row.name + '</h4>\
                                       <p class="card-name">' + row.designation + '</p>\
                                       </div>\
                                       </div>\
@@ -151,7 +151,7 @@
                                       <hr class="blue-hr" />\
                                       <div class="flip-card-front">\
                                       <img src= "' + row.image + '" class="flip-img" alt="profile-pic" />\
-                                      <h4 class="card-name">' + row.name + '</h4>\
+                                      <h4 class="card-name" id="' + row.id + '">' + row.name + '</h4>\
                                       <p class="card-name">' + row.designation + '</p>\
                                       </div>\
                                       <div class="flip-card-back">\
@@ -174,6 +174,9 @@
                                         $('.' + row.id + '-github').hide();
                                       if(row.instagram == '')
                                         $('.' + row.id + '-instagram').hide();
+                  }
+                  if(row.name.length > 16) {
+                    $("#" + row.id).css("font-size", "1.2rem");
                   }
                 }
               }
