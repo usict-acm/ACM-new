@@ -4,20 +4,36 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 768px) and (max-width: 845px) {
-  .CardHeader {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+@media (min-width: 771px) and (max-width: 864px) {
+  .btn_txt{
+    font-size: 0;
+    margin: inherit;
+    margin-right: -10px;  
   }
+  .btn:not(:last-child) {
+    max-height: 45px;
+  }
+  button:not(:disabled) {
+    max-height: 45px;
+  }
+ 
 }
 
 @media screen and (max-width: 546px) {
-  .CardHeader {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .btn_txt{
+    font-size: 0;
+    margin: inherit;
+    margin-right: -10px;
   }
+  .btn:not(:last-child) {
+    max-height: 45px;
+  }
+  button:not(:disabled) {
+    max-height: 45px;
+  }
+  .text-right{
+    padding: 0;
+  } 
 }
 
 .title {
@@ -26,11 +42,16 @@
   border-radius: 0;
 }
 
-.save-btn::before {
-  margin-right: 10px;
+.btn_txt{
+  font-family: monospace;
+  font-weight: 600;
+  display: initial;
+  margin-left: 10px;
 }
 
-
+.btn-warning {
+  background-color: #fb9940;
+}
 /* Toolbar styles */
 
 .ck.ck-toolbar {
@@ -49,15 +70,16 @@
 .ck.ck-splitbutton {
   width: max-content;
     
-  }
+}
   
-  .ck.ck-splitbutton.ck-splitbutton_open>.ck-splitbutton_arrow:not(.ck-disabled):after, .ck.ck-splitbutton:hover>.ck-splitbutton_arrow:not(.ck-disabled):after {
+.ck.ck-splitbutton.ck-splitbutton_open>.ck-splitbutton_arrow:not(.ck-disabled):after, .ck.ck-splitbutton:hover>.ck-splitbutton_arrow:not(.ck-disabled):after {
     content: none;
-  }
+}
   
-  .ck.ck-dropdown .ck-button.ck-dropdown_button .ck-button_label {
-    overflow: inherit;
-  }
+
+.ck.ck-dropdown.ck-heading-dropdown .ck-dropdown__button .ck-button__label {
+  overflow: inherit;
+}
 
 /* Editor styles */
 

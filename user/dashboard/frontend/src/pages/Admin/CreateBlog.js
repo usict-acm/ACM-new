@@ -40,14 +40,14 @@ const CreateBlog = () => {
                       type="button"
                       color="success"
                     >
-                      Save
+                      <p className="btn_txt">Save</p>
                     </Button>
                     <Button
                       className="ni ni-curved-next save-btn"
                       type="button"
-                      color="success"
+                      color="warning"
                     >
-                      Publish
+                      <p className="btn_txt">Publish</p>
                     </Button>
                   </Col>
                 </Row>
