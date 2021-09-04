@@ -4,31 +4,31 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 771px) and (max-width: 864px) {
+@media (min-width: 768px) and (max-width: 900px) {
   .btn_txt{
     font-size: 0;
     margin: inherit;
     margin-right: -10px;  
   }
-  .btn:not(:last-child) {
+  .btn{
     max-height: 45px;
   }
-  button:not(:disabled) {
+  button{
     max-height: 45px;
   }
  
 }
 
-@media screen and (max-width: 546px) {
+@media screen and (max-width: 570px) {
   .btn_txt{
     font-size: 0;
     margin: inherit;
     margin-right: -10px;
   }
-  .btn:not(:last-child) {
+  .btn{
     max-height: 45px;
   }
-  button:not(:disabled) {
+  button{
     max-height: 45px;
   }
   .text-right{
