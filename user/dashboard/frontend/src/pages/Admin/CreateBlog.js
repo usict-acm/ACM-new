@@ -20,7 +20,6 @@ import SideNav from "../../components/Navbars/CreateBlog_sidebar";
 const CreateBlog = () => {
   return (
     <Container className="mt-4" fluid="xxl">
-      {/* <UserHeader /> */}
       <Container className="BlogContainer" fluid>
         <Row>
           <Col className="order-xl-1">
