@@ -16,7 +16,6 @@ import SideNav from "../../components/Navbars/CreateBlog_sidebar";
 const CreateBlog = () => {
   return (
     <Container className="mt-4" fluid="xxl">
-      {/* <UserHeader /> */}
       <Container className="BlogContainer" fluid>
         <Row>
           <Col className="order-xl-1">
@@ -36,14 +35,14 @@ const CreateBlog = () => {
                       type="button"
                       color="success"
                     >
-                      Save
+                      <p className="btn_txt">Save</p>
                     </Button>
                     <Button
                       className="ni ni-curved-next save-btn"
                       type="button"
-                      color="success"
+                      color="warning"
                     >
-                      Publish
+                      <p className="btn_txt">Publish</p>
                     </Button>
                   </Col>
                 </Row>

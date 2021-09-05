@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* CardHeader */
+
+
+.dropdown {
+  font-size: xx-large;
+  border: none;
+  width: fit-content;
+  font-family: monospace;
+}
