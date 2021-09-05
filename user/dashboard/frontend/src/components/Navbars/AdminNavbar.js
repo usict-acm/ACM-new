@@ -15,6 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+import { logout } from "api/user";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -30,7 +31,7 @@ import {
   Media,
 } from "reactstrap";
 import { selectUser } from "redux/slices/userSlice";
-import { logout } from "redux/slices/userSlice";
+
 import "../../assets/css/navbar.css";
 
 const AdminNavbar = (props) => {

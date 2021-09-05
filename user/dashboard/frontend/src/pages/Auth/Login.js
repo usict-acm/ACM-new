@@ -17,6 +17,7 @@
 */
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { login } from "api/user";
 
 // reactstrap components
 import {
@@ -32,7 +33,6 @@ import {
   Row,
   Col,
 } from "reactstrap";
-import { login } from "redux/slices/userSlice";
 
 const Login = () => {
   const dispatch = useDispatch(),
