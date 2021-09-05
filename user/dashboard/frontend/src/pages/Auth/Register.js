@@ -32,7 +32,7 @@ import {
   Row,
   Col,
 } from "reactstrap";
-import { signup } from "redux/slices/userSlice";
+import { signup } from "api/user";
 import { COLLEGES } from "utils/Constants";
 import { BRANCHES } from "utils/Constants";
 

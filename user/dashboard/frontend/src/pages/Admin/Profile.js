@@ -15,9 +15,9 @@ import {
 import UserHeader from "components/Headers/UserHeader.js";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "redux/slices/userSlice";
-import { updateProfile } from "redux/slices/userSlice";
 import "../../assets/css/profile.css";
 import { COLLEGES } from "utils/Constants";
+import { updateProfile } from "api/user";
 
 const Profile = () => {
   const dispatch = useDispatch(),

@@ -9,13 +9,9 @@ import {
   Col,
 } from "reactstrap";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
-// import documentEditor from "@ckeditor/ckeditor5-build-decoupled-document";
 import documentEditor from "ckeditor5-custom-build";
-// import documentEditor from "@ckeditor/ckeditor5-build-classic";
 import "../../assets/css/CreateBlog.css";
-// import UserHeader from "components/Headers/UserHeader";
 import SideNav from "../../components/Navbars/CreateBlog_sidebar";
-// import Base64UploadAdapter from "@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter";
 
 const CreateBlog = () => {
   return (
@@ -53,8 +49,7 @@ const CreateBlog = () => {
                 </Row>
               </CardHeader>
               <Card>
-                <div id="toolbar-container"></div>
-
+                <div id="toolbar-container" />
                 <div id="Editor">
                   <div className="TextEditor">
                     <CKEditor
