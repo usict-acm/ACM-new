@@ -115,9 +115,6 @@ const CreateBlog = () => {
                       }}
                       //  onChange = {(e, editor) =>{handleChange(e, editor)}}
                       onReady={(editor) => {
-                        console.log(
-                          Array.from(editor.ui.componentFactory.names())
-                        );
                         const toolbarContainer =
                           document.querySelector("#toolbar-container");
                         toolbarContainer.appendChild(
