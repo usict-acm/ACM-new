@@ -1,4 +1,3 @@
-/* **********************hero section *********************** */
 .container {
 	width: 1200px;
 	padding-right: 15px;
@@ -313,56 +312,3 @@ a:hover {
 		font-size: 13px;
 	}
 }
-
-/* **********************hero section ends*********************** */
-/* **********************about us section*********************** */
-/* **********************about section ends*********************** */
-
-/* ***************************contact us style********************************************************* */
-.show-menu {
-	right: 0;
-}
-
-textarea,
-select,
-input[type='text'] {
-	border-bottom-right-radius: 2.5rem;
-}
-
-.newsletter {
-	box-shadow: 3px -1px 20px rgba(0, 0, 0, 0.12);
-}
-
-.newsletter {
-	border-bottom-right-radius: 6rem;
-}
-.h-screen {
-	display: none;
-}
-#contactus button {
-	background-color: rgb(39, 102, 238);
-	border: transparent;
-	border-radius: 5px;
-	padding: 10px;
-	width: auto;
-	height: auto;
-	margin-top: 25%;
-	margin-left: 44%;
-	outline: transparent;
-	font-size: 16px;
-	color: white;
-}
-#closebtn button {
-	background-color: rgb(39, 102, 238);
-	border: transparent;
-	border-radius: 5px;
-	padding: 6px;
-	width: auto;
-	height: auto;
-	outline: transparent;
-	float: right;
-	margin-right: 20px;
-	font-size: 16px;
-	color: white;
-}
-/* **************************contact us style end************************************************** */
