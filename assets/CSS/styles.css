@@ -163,7 +163,7 @@ section {
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 /*Swiper*/
-#main-slider {
+#myCarousel {
   width: 100%;
 }
 
@@ -213,7 +213,8 @@ section {
   color: #fff;
   position: absolute;
   top: 45%;
-  left: 14%;
+  left: 15%;
+  /* left: 14%; */
   font-weight: bolder;
   font-size: 54px;
   line-height: 59px;
@@ -2268,9 +2269,9 @@ align-items: center; */
   background: url("../images/img3.jpg") !important;
 }
 @media (min-width: 300px) and (max-width: 580px) {
-  #main-slider {
+  #myCarousel {
     width: 100%;
-    height: 30vh !important;
+    height: 50vh !important;
   }
   .slider-text {
     display: none;
