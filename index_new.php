@@ -9,7 +9,7 @@
 
 </head>
 <body>
-<!-- *********************************************************contact us ********************************* -->
+<!-- **********************************************************contact us ********************************* -->
 <div class="h-screen" id="contact">                   
   <main class="pt-14 pb-24">
     <div id="closebtn"><button onclick="closecontact()">close</button></div>
