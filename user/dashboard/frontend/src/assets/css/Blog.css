@@ -1,15 +1,19 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /* CardHeader */
 
 
-.dropdown {
-  font-size: xx-large;
-  border: none;
-  width: fit-content;
-  font-family: monospace;
+.drop-text {
+font-size:large;
+width: fit-content;
+margin-left: 35px;
+
+}
+
+.text-right{
+margin-right: 35px;
 }

@@ -40,6 +40,7 @@ const SideNav = () => {
           placeholder="Enter one at a time"
           value={item}
           onChange={(e) => setItem(e.target.value)}
+          onKeyPress={(e)=>e.key === "Enter" ? addTags() : null}
         ></Input>
         <Button color="info" className="my-3" onClick={addTags}>
           Add
