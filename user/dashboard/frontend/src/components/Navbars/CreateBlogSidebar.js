@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { Button, Input } from "reactstrap";
 import "../../assets/css/CreateBlog.css";
 
-const SideNav = ({tags,setTags}) => {
+const SideNav = ({ tags, setTags }) => {
   var today = new Date(),
     date = today.toDateString();
 
   const [item, setItem] = useState("");
-  
 
   const addTags = () => {
     setTags((prev) => {
@@ -35,15 +34,22 @@ const SideNav = ({tags,setTags}) => {
       <hr />
       <div>
         <h4>Tags</h4>
-        <Input
-          type="text"
-          placeholder="Enter one at a time"
-          value={item}
-          onChange={(e) => setItem(e.target.value)}
-        ></Input>
-        <Button color="info" className="my-3" onClick={addTags}>
-          Add
-        </Button>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            addTags();
+          }}
+        >
+          <Input
+            type="text"
+            placeholder="Enter one at a time"
+            value={item}
+            onChange={(e) => setItem(e.target.value)}
+          ></Input>
+          <Button type="submit" color="info" className="my-3">
+            Add
+          </Button>
+        </form>
       </div>
       <div className="tagContainer">
         {tags.map((tags, i) => {
