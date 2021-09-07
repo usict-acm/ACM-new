@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   Card,
@@ -11,9 +11,34 @@ import {
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import documentEditor from "ckeditor5-custom-build";
 import "../../assets/css/CreateBlog.css";
-import SideNav from "../../components/Navbars/CreateBlog_sidebar";
+import SideNav from "../../components/Navbars/CreateBlogSidebar";
+import { useDispatch, useSelector } from "react-redux";
+import { selectUser } from "redux/slices/userSlice";
+import { addBlog } from "api/blog";
 
 const CreateBlog = () => {
+  const dispatch = useDispatch(),
+    user = useSelector(selectUser),
+    [title, setTitle] = useState(""),
+    [content, setContent] = useState(""),
+    [tags, setTags] = useState([]);
+
+  function createBlog(draft) {
+    if (!title || !content) {
+      return alert("Title and Content must be mentioned !!");
+    }
+    let data = {
+      blogTitle: title,
+      userEmail: user?.email,
+      userName: user?.name,
+      content,
+      tags,
+      isDraft: draft,
+    };
+
+    dispatch(addBlog(data));
+  }
+
   return (
     <Container className="mt-4" fluid="xxl">
       <Container className="BlogContainer" fluid>
@@ -27,6 +52,7 @@ const CreateBlog = () => {
                       className="title"
                       type="name"
                       placeholder="T I T L E"
+                      onChange={(event) => setTitle(event.target.value)}
                     />
                   </Col>
                   <Col className="text-right">
@@ -34,6 +60,7 @@ const CreateBlog = () => {
                       className="ni ni-cloud-upload-96 save-btn"
                       type="button"
                       color="success"
+                      onClick={() => createBlog(true)}
                     >
                       <p className="btn_txt">Save</p>
                     </Button>
@@ -41,6 +68,7 @@ const CreateBlog = () => {
                       className="ni ni-curved-next save-btn"
                       type="button"
                       color="warning"
+                      onClick={() => createBlog(false)}
                     >
                       <p className="btn_txt">Publish</p>
                     </Button>
@@ -54,87 +82,83 @@ const CreateBlog = () => {
                     <CKEditor
                       editor={documentEditor}
                       config={{
-                        // plugins: [],
-                        toolbar: [
-                          "undo",
-                          "redo",
-                          "|",
-                          "heading",
-                          "|",
-                          "fontFamily",
-                          "|",
-                          "fontSize",
-                          "bold",
-                          "italic",
-                          "underline",
-                          "fontColor",
-                          "fontBackgroundColor",
-                          "highlight",
-                          "removeHighlight",
-                          "|",
-                          "blockQuote",
-                          "code",
-                          "strikethrough",
-                          "subscript",
-                          "superscript",
-                          "|",
-                          "link",
-                          "uploadImage",
-                          "mediaEmbed",
-                          "|",
-                          "alignment",
-                          "|",
-                          "todoList",
-                          "numberedList",
-                          "bulletedList",
-                          "indent",
-                          "outdent",
-                          "|",
-                          "insertTable",
-                          "tableColumn",
-                          "tableRow",
-                          "mergeTableCells",
-                          "toggleTableCaption",
-                          "tableCellProperties",
-                          "tableProperties",
-                          "|",
-                          "horizontalLine",
-                          "specialCharacters",
-                          "|",
-                          "findAndReplace",
-                          "selectAll",
-                        ],
+                        removePlugins: ["Title"],
+                        placeholder: "Write your blog",
+                        toolbar: {
+                          // shouldNotGroupWhenFull: true,
+                          items: [
+                            "undo",
+                            "redo",
+                            "|",
+                            "heading",
+                            "|",
+                            "fontFamily",
+                            "|",
+                            "fontSize",
+                            "bold",
+                            "italic",
+                            "underline",
+                            "fontColor",
+                            "fontBackgroundColor",
+                            "highlight",
+                            "removeHighlight",
+                            "|",
+                            "blockQuote",
+                            "code",
+                            "codeBlock",
+                            "strikethrough",
+                            "subscript",
+                            "superscript",
+                            "|",
+                            "link",
+                            "uploadImage",
+                            "resizeImage",
+                            "imageStyle:wrapText",
+                            "imageStyle:breakText",
+                            "mediaEmbed",
+                            "|",
+                            "alignment",
+                            "|",
+                            "todoList",
+                            "numberedList",
+                            "bulletedList",
+                            "indent",
+                            "outdent",
+                            "|",
+                            "insertTable",
+                            "tableColumn",
+                            "tableRow",
+                            "mergeTableCells",
+                            "toggleTableCaption",
+                            "tableCellProperties",
+                            "tableProperties",
+                            "|",
+                            "horizontalLine",
+                            // 'MathType',
+                            // 'ChemType',
+                            "specialCharacters",
+                            "|",
+                            "findAndReplace",
+                            "selectAll",
+                          ],
+                        },
                       }}
-                      //  onChange = {(e, editor) =>{handleChange(e, editor)}}
                       onReady={(editor) => {
-                        // Add the toolbar to the container
-                        // editor.config.toolbar = Array.from(
-                        //   editor.ui.componentFactory.names()
-                        // );
                         const toolbarContainer =
                           document.querySelector("#toolbar-container");
                         toolbarContainer.appendChild(
                           editor.ui.view.toolbar.element
                         );
-
-                        window.editor = editor;
-                        // You can store the "editor" and use when it is needed.
-                        console.log("Editor is ready to use!", editor);
+                        console.log("Editor is ready to use!");
                       }}
-                      onChange={(event, editor) => {
+                      onChange={(_, editor) => {
                         const data = editor.getData();
-                        console.log({ event, editor, data });
-                      }}
-                      onBlur={(event, editor) => {
-                        console.log("Blur.", editor);
-                      }}
-                      onFocus={(event, editor) => {
-                        console.log("Focus.", editor);
+                        setContent(data);
                       }}
                     />
                   </div>
                   <div className="PostSetting">
-                    <SideNav />
+                    <SideNav tags={tags} setTags={setTags} />
                   </div>
                 </div>
               </Card>
