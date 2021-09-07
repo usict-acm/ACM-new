@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import { Button, Input } from "reactstrap";
 import "../../assets/css/CreateBlog.css";
 
-const SideNav = () => {
+const SideNav = ({tags,setTags}) => {
   var today = new Date(),
     date = today.toDateString();
 
   const [item, setItem] = useState("");
-  const [array, setArray] = useState([]);
+  
 
   const addTags = () => {
-    setArray((prev) => {
+    setTags((prev) => {
       if (item.length < 1) {
         return [...prev];
       } else return [...prev, item];
@@ -20,11 +20,11 @@ const SideNav = () => {
   };
 
   const removeTags = (i) => {
-    const filteredArray = array.filter((item, index) => {
+    const filteredArray = tags.filter((item, index) => {
       return index !== i;
     });
     console.log(filteredArray);
-    setArray(filteredArray);
+    setTags(filteredArray);
   };
 
   return (
@@ -46,7 +46,7 @@ const SideNav = () => {
         </Button>
       </div>
       <div className="tagContainer">
-        {array.map((tags, i) => {
+        {tags.map((tags, i) => {
           return (
             <div key={i} className="tag_style">
               <span
