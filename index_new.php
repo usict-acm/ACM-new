@@ -4,19 +4,31 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>CodePen - Contact Us website #tailwind</title>
-		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.2/tailwind.min.css" /> -->
+		<title>Home page</title>
 
 		<!-- fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet" />
 		<!-- for hero section -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
-		<!-- for about section  -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.6.2/tailwind.min.css" />
+
+		<!-- for footer section -->
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://themify.me/wp-content/themes/themify-v32/themify-icons/themify-icons.css"
+		/>
+		<!-- bootstrap link -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+			crossorigin="anonymous"
+		/>
 		<!-- main css -->
 		<link rel="stylesheet" href="./assets/CSS/style_new.css" />
-		<!-- <link rel="stylesheet" href="./assets/CSS/heroSection.css" /> -->
 	</head>
 	<body>
 		<!-- hero Section -->
@@ -85,11 +97,11 @@
 		<!-- end of hero slider -->
 
 		<!-- begin of about section -->
-		<div class="sm:flex items-center max-w-screen-xl">
-			<div class="sm:w-1/2 p-10">
-				<div class="image object-center text-center">
+		<div class="d-sm-flex align-items-center w-75 mx-auto">
+			<div class="col-sm-6 p-5">
+				<div class="image text-center">
 					<svg
-						class="w-full"
+						class="w-100"
 						version="1.1"
 						id="Layer_1"
 						xmlns="http://www.w3.org/2000/svg"
@@ -1163,13 +1175,11 @@ LTA4LTE2VDA1OjIwOjQ5KzAzOjAw5nOPeQAAAABJRU5ErkJggg=="
 					</svg>
 				</div>
 			</div>
-			<div class="sm:w-1/2 p-5">
+			<div class="col-sm-6 p-5">
 				<div class="text">
-					<span class="text-gray-500 border-b-2 border-indigo-600 uppercase">About us</span>
-					<h2 class="my-4 font-bold text-3xl sm:text-4xl">
-						About <span class="text-indigo-600">Our Company</span>
-					</h2>
-					<p class="text-gray-700">
+					<span class="text-secondary border-bottom border-primary text-uppercase">About us</span>
+					<h2 class="my-4 fw-bold fs-5">About <span class="text-primary">Our Company</span></h2>
+					<p class="text-secondary">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi doloremque, fugiat
 						illum magni minus nisi nulla numquam obcaecati placeat quia, repellat tempore voluptatum.
 					</p>
@@ -1179,15 +1189,15 @@ LTA4LTE2VDA1OjIwOjQ5KzAzOjAw5nOPeQAAAABJRU5ErkJggg=="
 		<!-- end of about section -->
 
 		<!-- **********************************************************contact us ********************************* -->
-		<div class="h-screen" id="contact">
-			<main class="pt-14 pb-24">
+		<div style="height: 100vh; display: none" id="contact">
+			<div class="pt-5 pb-5">
 				<div id="closebtn"><button onclick="closecontact()">close</button></div>
-				<h2 class="text-center capitalize text-2xl font-semibold text-gray-800">contact us</h2>
-				<div class="h-full lg:container lg:mx-auto px-7 py-8">
-					<div class="md:flex items-center gap-10">
-						<div class="hidden invisible md:block md:visible">
+				<h2 class="text-center text-capitalize fs-4 fw-bold text-secondary">contact us</h2>
+				<div class="h-100 container-lg mx-lg-auto px-5 py-5">
+					<div class="d-md-flex align-items-center gap-5">
+						<div class="d-block">
 							<svg
-								class="max-w-md"
+								style="max-width: 28rem"
 								xmlns="http://www.w3.org/2000/svg"
 								id="bec8dac8-a9c2-4165-9f21-fe05eb8a3b02"
 								data-name="Layer 1"
@@ -1465,101 +1475,128 @@ LTA4LTE2VDA1OjIwOjQ5KzAzOjAw5nOPeQAAAABJRU5ErkJggg=="
 								/>
 							</svg>
 						</div>
-						<div class="flex flex-col gap-5 w-full">
-							<input
-								type="text"
-								placeholder="Name"
-								class="
-									w-full
-									border border-gray-100
-									focus:outline-none focus:border-blue-500
-									bg-gray-100
-									px-5
-									py-5
-								"
-							/>
-							<input
-								type="text"
-								placeholder="Email"
-								class="
-									w-full
-									border border-gray-100
-									focus:outline-none focus:border-blue-500
-									bg-gray-100
-									px-5
-									py-5
-								"
-							/>
-							<input
-								type="text"
-								placeholder="Phone Number"
-								class="
-									w-full
-									border border-gray-100
-									focus:outline-none focus:border-blue-500
-									bg-gray-100
-									px-5
-									py-5
-								"
-							/>
-							<select
-								class="
-									w-full
-									border
-									bg-white
-									border border-gray-100
-									focus:outline-none focus:border-blue-500
-									bg-gray-100
-									px-5
-									py-5
-								"
-							>
-								<option class="py-1">Option 1</option>
-								<option class="py-1">Option 2</option>
-								<option class="py-1">Option 3</option>
+						<div class="d-flex flex-column gap-5 w-100">
+							<input type="text" placeholder="Name" class="w-100 form-control" />
+							<input type="text" placeholder="Email" class="w-100 form-control" />
+							<input type="text" placeholder="Phone Number" class="w-100 form-control" />
+							<select class="form-select">
+								<option>Option 1</option>
+								<option>Option 2</option>
+								<option>Option 3</option>
 							</select>
-							<textarea
-								cols="30"
-								rows="10"
-								placeholder="Write Us"
-								class="
-									w-full
-									border border-gray-100
-									focus:outline-none focus:border-blue-500
-									bg-gray-100
-									px-5
-									py-5
-								"
-							></textarea>
-							<button
-								class="
-									max-w-sm
-									mx-auto
-									inline-block
-									mt-5
-									bg-blue-600
-									text-white
-									py-1
-									px-8
-									rounded-full
-									shadow-md
-									hover:bg-blue-500
-									transition
-									duration-300
-									md:ml-0
-								"
-							>
-								Start for free
-							</button>
+							<textarea cols="30" rows="10" placeholder="Write Us" class="w-100 form-control"></textarea>
+							<button class="btn btn-primary btn-block">Start for free</button>
 						</div>
 					</div>
 				</div>
-			</main>
+			</div>
 			<!-- ********************************contact_us end**************************************************** -->
 		</div>
 		<div id="contactus">
 			<button onclick="showcontact()">contact us</button>
 		</div>
+
+		<!-- footer start  -->
+
+		<footer class="new_footer_area bg_color">
+			<div class="new_footer_top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6">
+							<div
+								class="f_widget company_widget wow fadeInLeft"
+								data-wow-delay="0.2s"
+								style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft"
+							>
+								<h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+								<p>Don’t miss any updates of our new templates and extensions.!</p>
+								<form
+									action="#"
+									class="f_subscribe_two mailchimp"
+									method="post"
+									novalidate="true"
+									_lpchecked="1"
+								>
+									<input type="text" name="EMAIL" class="form-control memail" placeholder="Email" />
+									<button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
+									<p class="mchimp-errmessage" style="display: none"></p>
+									<p class="mchimp-sucmessage" style="display: none"></p>
+								</form>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div
+								class="f_widget about-widget pl_70 wow fadeInLeft"
+								data-wow-delay="0.4s"
+								style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft"
+							>
+								<h3 class="f-title f_600 t_color f_size_18">Download</h3>
+								<ul class="list-unstyled f_list">
+									<li><a href="#">Company</a></li>
+									<li><a href="#">Android App</a></li>
+									<li><a href="#">ios App</a></li>
+									<li><a href="#">Desktop</a></li>
+									<li><a href="#">Projects</a></li>
+									<li><a href="#">My tasks</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div
+								class="f_widget about-widget pl_70 wow fadeInLeft"
+								data-wow-delay="0.6s"
+								style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft"
+							>
+								<h3 class="f-title f_600 t_color f_size_18">Help</h3>
+								<ul class="list-unstyled f_list">
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">Term &amp; conditions</a></li>
+									<li><a href="#">Reporting</a></li>
+									<li><a href="#">Documentation</a></li>
+									<li><a href="#">Support Policy</a></li>
+									<li><a href="#">Privacy</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div
+								class="f_widget social-widget pl_70 wow fadeInLeft"
+								data-wow-delay="0.8s"
+								style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft"
+							>
+								<h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
+								<div class="f_social_icon">
+									<a href="#" class="fab fa-facebook"></a>
+									<a href="#" class="fab fa-twitter"></a>
+									<a href="#" class="fab fa-linkedin"></a>
+									<a href="#" class="fab fa-pinterest"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer_bg">
+					<div class="footer_bg_one"></div>
+					<div class="footer_bg_two"></div>
+				</div>
+			</div>
+			<div class="footer_bottom">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-6 col-sm-7">
+							<p class="mb-0 f_400">© cakecounter Inc.. 2019 All rights reserved.</p>
+						</div>
+						<div class="col-lg-6 col-sm-5 text-right">
+							<p>
+								Made with <i class="icon_heart"></i> in
+								<a href="#">CakeCounter</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--  footer ends -->
 
 		<!-- Swiper JS -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
