@@ -42,12 +42,12 @@ export default function Blog() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen(prevState => !prevState);
 
-  function showData() {
-    if(blogs[0].blogId === false){
-      return false
-    }
-    else return true
-  }
+  // function showData() {
+  //   if(blogs[0].blogId === false){
+  //     return false
+  //   }
+  //   else return true
+  // }
   
     return (
         <div>
@@ -97,8 +97,8 @@ export default function Blog() {
                         <hr className="h-line"/>
                         <CardBody className="post-section">
 
-                          <div>                     
-                            { showData() !== true ?  <h3>NO DATA YET</h3> : 
+                          {/* <div>                     
+                            { showData() === true ?  <h3>NO DATA YET</h3> : 
                             <div className="post-component">
                                 {blogs.map((item)=>(
                                 <Content id="post-content" title={item.blogTitle} date={item.published} key={item.blogId}/>
@@ -106,7 +106,7 @@ export default function Blog() {
                                 }
                             </div>
                             }
-                          </div>
+                          </div> */}
                         </CardBody>
                        </Card>
                       </Col>
