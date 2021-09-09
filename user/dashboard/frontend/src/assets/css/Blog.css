@@ -4,12 +4,58 @@
     box-sizing: border-box;
   }
 
+
 /* CardHeader */
-
-
-.dropdown {
-  font-size: xx-large;
-  border: none;
+.drop-text {
+  font-size:large;
   width: fit-content;
-  font-family: monospace;
+  margin-left: 35px;
+}
+
+.post-btn{
+  margin-right: 35px;
+}
+
+/* post section */
+.post-section{
+  color: #8898aa;
+  font-size: .75rem;
+  /* display: flex; */
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 50vh;
+}
+
+
+
+
+.h-line{
+  margin: 0;
+}
+
+.post-component{
+ 
+  height: auto;
+}
+
+.contentBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.smallBox{
+  display:flex;
+  align-items: center;
+
+}
+
+.details{
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
 }
