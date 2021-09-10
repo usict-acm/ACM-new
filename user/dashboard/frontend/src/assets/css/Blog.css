@@ -7,55 +7,93 @@
 
 /* CardHeader */
 .drop-text {
-  font-size:large;
-  width: fit-content;
-  margin-left: 35px;
+font-size:large;
+width: fit-content;
+margin-left: 35px;
 }
 
 .post-btn{
-  margin-right: 35px;
+margin-right: 35px;
 }
 
 /* post section */
 .post-section{
-  color: #8898aa;
-  font-size: .75rem;
-  /* display: flex; */
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  background-color: white;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 50vh;
+text-transform: uppercase;
+background-color: white;
+height: 50vh;
+padding-top: 3px;
+padding: 0;
+overflow-y: auto;
 }
 
+.cont-nodata{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 50vh;
 
-
+}
 
 .h-line{
-  margin: 0;
+margin: auto;
 }
 
 .post-component{
- 
-  height: auto;
+
+height: auto;
 }
 
 .contentBox{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: nowrap;
+padding: 10px 20px;
+padding: 10px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+/* height: 100px; */
+}
+
+.contentBox:hover{
+background-color: aliceblue;
 }
 
 .smallBox{
-  display:flex;
-  align-items: center;
-
+display:flex;
+align-items: center;
+max-width: 60%;
 }
 
 .details{
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
+margin-left: 30px;
+display: flex;
+flex-direction: column;
+}
+
+
+@media screen and (max-width : 550px) {
+      .contentBox{
+        flex-direction: column;
+        position: relative;
+      }
+      .smallBox{
+        max-width: auto;
+      }
+      .details p{
+        text-align: center;
+      }
+      input[type = "checkbox"]{
+        position: absolute;
+        left: 20px;
+        top: auto;
+      }
+      .details{
+        margin-left: 0;
+      }
+}
+
+@media screen and (min-width: 768px) and (max-width : 900px) {
+      .smallBox{
+        max-width: 45%;
+      }
 }
