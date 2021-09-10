@@ -20,6 +20,9 @@ switch ($q) {
     case 'createBlog':
         createBlog();
         break;
+    case 'blogs':
+        fetchUserBlogs();
+        break;
     default:
         echo "Invalid Query";
 }
