@@ -28,7 +28,7 @@
 			crossorigin="anonymous"
 		/>
 		<!-- main css -->
-		<link rel="stylesheet" href="./assets/CSS/style_new.css" />
+		<link rel="stylesheet" href="./assets/CSS/newStyle.css" />
 	</head>
 	<body>
 		<!-- hero Section -->
