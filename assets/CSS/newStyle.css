@@ -344,6 +344,17 @@ a:hover {
 	.svg-media {
 		display: none;
 	}
+	.showbtn{
+		margin-left: 40%;
+	}
+}
+@media (max-width:425px) {
+	.showbtn{
+		margin-left: 30%;
+	}
+	.s-form{
+		width: 300px;
+	}
 }
 
 /* **************************contact us style end************************************************** */
@@ -607,10 +618,11 @@ button:focus {
 	.b-container {
 		display: block;
 		margin-top: 6px;
-		margin-left: 30%;
+		margin-left: 32%;
 	}
 	.b-card {
 		margin-top: 120px;
+		width: 300px;
 	}
 }
 @media (max-width: 425px) {
@@ -621,10 +633,26 @@ button:focus {
 	}
 	.b-card {
 		margin-top: 120px;
+		width: 240px;
+	}
+}
+@media (max-width: 320px) {
+	.b-container {
+		display: block;
+		margin-top: 6px;
+		margin-left: 11.5%;
+	}
+	.b-card {
+		margin-top: 120px;
+		width: 240px;
 	}
 }
 
 /* *************************blog style end***************************************** */
+/* *****************************our team style******************************************** */
+.s-row{
+	justify-content: center;
+}
 .speaker-block {
 	position: relative;
 	margin-bottom: 40px;

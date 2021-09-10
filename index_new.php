@@ -98,7 +98,7 @@
 
 		<!-- begin of about section -->
 		<div class="d-sm-flex align-items-center w-75 mx-auto">
-			<div class="col-sm-6 p-sm-4">
+			<div class="col-sm-6 p-5">
 				<div class="image text-center">
 					<svg
 						class="w-100"
@@ -1175,7 +1175,7 @@ LTA4LTE2VDA1OjIwOjQ5KzAzOjAw5nOPeQAAAABJRU5ErkJggg=="
 					</svg>
 				</div>
 			</div>
-			<div class="col-sm-6 p-sm-4">
+			<div class="col-sm-6 p-5">
 				<div class="text">
 					<span class="text-secondary border-bottom border-primary text-uppercase">About us</span>
 					<h2 class="my-4 fw-bold fs-5">About <span class="text-primary">Our Company</span></h2>
@@ -1225,9 +1225,9 @@ LTA4LTE2VDA1OjIwOjQ5KzAzOjAw5nOPeQAAAABJRU5ErkJggg=="
 <!-- ******************************blog section end***************************************** -->
 	<!-- *******************************************our team************* -->
 	<div class="container">
-            
+            <h2> our team</h2>
 
-            <div class="row">
+            <div class="row s-row">
           
                 <div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
                     <div class="inner-box">
