@@ -27,7 +27,7 @@
             return $res;
         }
 
-        public function fetchALlBlogs($userEmail){
+        public function fetchAllBlogs($userEmail){
             $query = 
                 "SELECT * FROM $this->table 
                 WHERE userEmail = '$userEmail'";
