@@ -1,11 +1,10 @@
-
 <?php
 // header('location: ../../blogAdmin/blogAdmin.html')
 ?>
 
 <?php
 // Include config file
-require_once "./config.php";
+require_once "./faqadmin/config1.php";
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +57,9 @@ require_once "./config.php";
 
 
 <body>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script>
     function submit_announcements(){
     var formData = new FormData();
@@ -70,6 +71,7 @@ require_once "./config.php";
     formData.append('button1Link',$("#button1Link").val());
     formData.append('button2Text',$("#button2Text").val());
     formData.append('button2Link',$("#button2Link").val());
+    formData.append('viewResource', $("#viewResource").val());
     formData.append('partners', $("#partners").val());
     formData.append('speakers', $("#speakers").val());
     formData.append('poster', $("#poster").prop("files")[0]);
@@ -110,8 +112,17 @@ require_once "./config.php";
                         <div class="form-group">
                             <textarea name="txtDescription" id="description" rows="10" class='form-control mceEditor' placeholder="Description of the announcement"></textarea>
                         </div>
+                        <!-- <div class="form-group">
+                            <input type="text" name="txtReglink" id="regLink" class='form-control' placeholder="RegLink" />
+                        </div> -->
+                        <div class="form-group">
+                            <label>Date for commencement of the event</label>
+                        </div>
                         <div class="form-group">
                             <input type="date" name="txtStartdate" id="startDate" class='form-control' placeholder="Date for commencement of the event" />
+                        </div>
+                        <div class="form-group">
+                            <label>Date for end of the event</label>
                         </div>
                         <div class="form-group">
                             <input type="date" name="txtEnddate" id="endDate" class='form-control' placeholder="Date for end of the event" />
@@ -128,6 +139,9 @@ require_once "./config.php";
                         <div class="form-group">
                             <input type="text" name="txtButton2Link" id="button2Link" class='form-control' placeholder="Button2 Link" />
                         </div>
+                        <!-- <div class="form-group">
+                            <input type="text" name="txtviewResource" id="viewResource" class='form-control' placeholder="View resources" />
+                        </div> -->
                         <div class="form-group">
                             <input type="text" name="txtPartners" id="partners" class='form-control' placeholder="Partners" />
                         </div>

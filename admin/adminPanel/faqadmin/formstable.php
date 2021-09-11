@@ -53,8 +53,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-header clearfix">
-                        <h2 class="pull-left">Announcements Admin Panel</h2>
-                        <a href="?table=AddAnnouncement" class="btn btn-primary pull-right">Add New Announcement</a>
+                        <h2 class="pull-left">Forms Admin Panel</h2>
+                        <a href="?table=AddForm" class="btn btn-primary pull-right">Add New Form</a>
                     </div>
                     <?php
                     // Include config file
@@ -63,45 +63,10 @@
                     $database = new Database();
                     $link = $database->connect();
                     $connection = $link;
-                    
-                    // Attempt select query execution
-                    // $sql = "SELECT * FROM blog";
-                    // if($result = mysqli_query($link, $sql)){
-                    //     if(mysqli_num_rows($result) > 0){
-                    //         echo "<table class='table table-bordered table-striped'>";
-                    //             echo "<thead>";
-                    //                 echo "<tr>";
-                    //                     echo "<th>#</th>";
-                    //                     echo "<th>Title</th>";
-                    //                     echo "<th>Author</th>";
-                    //                     echo "<th>Action</th>";
-                    //                 echo "</tr>";
-                    //             echo "</thead>";
-                    //             echo "<tbody>";
-                    //             while($row = mysqli_fetch_array($result)){
-                    //                 echo "<tr>";
-                    //                     echo "<td>" . $row['Sno'] . "</td>";
-                    //                     echo "<td>" . $row['Title'] . "</td>";
-                    //                     echo "<td>" . substr($row["Author"],0,15) . "</td>";
-                    //                     echo "<td>";
-                    //                         echo "<a href='../../singleBlog.php?Id=".$row['Sno'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
-                    //                         // echo "<a href='faqadmin/update.php?Sno=". $row['Sno'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
-                    //                         echo "<a href='faqadmin/delete.php?Sno=". $row['Sno'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
-                    //                     echo "</td>";
-                    //                 echo "</tr>";
-                    //             }
-                    //             echo "</tbody>";                            
-                    //         echo "</table>";
-                    //         // Free result set
-                    //         mysqli_free_result($result);
-                    //     } else{
-                    //         echo "<p class='lead'><em>No Record Found.</em></p>";
-                    //     }
-                    // } else{
-                    //     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-                    // }
 
-                    $sql = "SELECT * FROM event";
+
+
+                    $sql = "SELECT * FROM forms";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo "<table class='table table-bordered table-striped'>";
@@ -109,21 +74,19 @@
                                     echo "<tr>";
                                         echo "<th>#</th>";
                                         echo "<th>Title</th>";
-                                        echo "<th>Start Date</th>";
                                         echo "<th>Action</th>";
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
-                                        echo "<td>" . $row['sno'] . "</td>";
+                                        echo "<td>" . $row['id'] . "</td>";
                                         echo "<td>" . $row['name'] . "</td>";
-                                        echo "<td>" . $row['startDate'] . "</td>";
 
                                         echo "<td>";
-                                            echo "<a href='../../singleBlog.php?Id=".$row['sno'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
+                                            echo "<a href='../../singleBlog.php?Id=".$row['id'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
                                             // echo "<a href='faqadmin/update.php?Sno=". $row['Sno'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
-                                            echo "<a href='faqadmin/delete.php?Sno=". $row['sno'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                            echo "<a href='faqadmin/delete.php?Sno=". $row['id'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                         echo "</td>";
 
                                     echo "</tr>";
