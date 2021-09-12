@@ -25,38 +25,32 @@
                $stmt = $this->conn->query($query2);
                return $stmt;
           }
-     }
 
+         
+          // DB stuff
+          private $conn;
+          private $table = 'forms';
 
-     class getForms
-     {
-     // DB stuff
-     private $conn;
-     private $table = 'forms';
+          // Post Properties
+          public $id;
+          public $name;
+          
+          // Get Posts
+          public function read($start, $limit)
+          {
+          $query = 'SELECT b.id, b.name FROM ' . $this->table . ' b ORDER BY b.id DESC LIMIT ' . $start . ',' . $limit;
+          $stmt = $this->conn->query($query);
+          return $stmt;
+          }
 
-     // Post Properties
-     public $id;
-     public $name;
+          
 
-     // Constructor with DB
-     public function __construct($db)
-     {
-     $this->conn = $db;
-     }
+          public function countForms()
+          {
+          $query = 'SELECT COUNT(*) FROM forms';
+          $stmt = $this->conn->query($query);
+          return $stmt->fetch_assoc();
+          }
 
-     // Get Posts
-     public function read($start, $limit)
-     {
-     $query = 'SELECT b.id, b.name FROM ' . $this->table . ' b ORDER BY b.id DESC LIMIT ' . $start . ',' . $limit;
-     $stmt = $this->conn->query($query);
-     return $stmt;
-     }
-
-     public function countForms()
-     {
-     $query = 'SELECT COUNT(*) FROM forms';
-     $stmt = $this->conn->query($query);
-     return $stmt->fetch_assoc();
-     }
      }
 

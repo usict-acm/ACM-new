@@ -5,6 +5,7 @@ header('Content-Type: application/json');
     include_once './database.php';
     include_once './posts.php';
     include_once '../../events/eventPost.php';
+    include_once './forms.php';
  
 
     $method = $_SERVER['REQUEST_METHOD'];
@@ -591,6 +592,54 @@ function postImage()
     }
 };
 
+function getForms(){
+    // Instantiate DB & connect
+   $database = new Database();
+   $db = $database->connect();
+   // Instantiate blog post object
+   $post = new Form($db);
+
+$limit = 10;
+$page = isset($_GET['page']) ? $_GET["page"] : 1;
+$start = ($page - 1) * $limit;
+
+// Blog post query
+$result = $post->read($start, $limit);
+$countForms = $post->countForms();
+foreach ($countForms as $key => $item) {
+   $count = $item;
+}
+$pages = ceil($count / $limit);
+// echo $pages;
+
+// Check if any posts
+if ($result) {
+   // Post array
+   $posts_arr = array();
+   $multi_array_posts = array();
+
+   while ($row = $result->fetch_assoc()) {
+       $post_item = array(
+           'id' => $row["id"],
+           'name' => $row["name"],
+       );
+       // Push to "data"
+       array_push($posts_arr, $post_item);
+   }
+
+   array_push($multi_array_posts, $posts_arr);
+   array_push($multi_array_posts, $pages);
+
+   // Turn to JSON & output
+   echo json_encode($multi_array_posts);
+   // echo json_encode($pages);
+
+} else {
+   // No Posts
+   echo json_encode(array('message' => 'No Posts Found'));
+}
+};
+
 $q = $_GET['q'];
 switch ($q) {
     case 'readAll':
@@ -631,6 +680,9 @@ switch ($q) {
         break;
     case 'carousel':
         carouselFunctionAPI();
+        break;
+    case 'forms':
+        getForms();
         break;
     default:
         echo "Invalid Query";
