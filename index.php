@@ -46,7 +46,7 @@
           <li class="nav-item"> <a class="nav-link" href="./blogs.php">Blogs</a> </li>
           <li class="nav-item"> <a class="nav-link" href="./benefits.php">Why Join Us?</a> </li>
           <li class="nav-item"> <a class="nav-link" href="./clubs.php">Clubs</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="./Team.php">Our Team</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="./team.php">Our Team</a> </li>
           <li class="nav-item"> <a class="nav-link" href="#contact">Contact Us</a> </li>
           <li class="nav-item"> <a class="nav-link"
               href="./benefits.php#registration">ACM
