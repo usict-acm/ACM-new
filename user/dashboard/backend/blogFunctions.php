@@ -13,7 +13,7 @@
             $tags = $details['tags'] ? serialize($details['tags']) : serialize([]);
 
             $query =
-                "INSERT INTO blogs
+                "INSERT INTO $this->table
                 (userEmail, userName, blogTitle, content, tags, isDraft)
                 VALUES (
                     '$details[userEmail]',
@@ -33,6 +33,33 @@
                 WHERE userEmail = '$userEmail'";
             
             $res = $this->conn->query($query);            
+            return $res;
+        }
+
+        public function updateBlog($details){
+            boolval($details['isDraft']) ? $isDraft = 1 : $isDraft = 0;
+            boolval($details['isPublished']) ? $isPublishing = 0 : ($isDraft ? $isPublishing = 0 : $isPublishing = 1);
+            $tags = $details['tags'] ? serialize($details['tags']) : serialize([]);
+
+            $query = $isPublishing ? 
+                    "UPDATE $this->table
+                    SET 
+                        blogTitle = '$details[blogTitle]',
+                        content = '$details[content]',
+                        tags = '$tags',
+                        isDraft = '$isDraft',
+                        published = (SELECT CURRENT_TIMESTAMP)
+                    WHERE userEmail = '$details[userEmail]' AND blogId = '$details[blogId]'"
+                    :
+                    "UPDATE $this->table
+                    SET 
+                        blogTitle = '$details[blogTitle]',
+                        content = '$details[content]',
+                        tags = '$tags',
+                        isDraft = '$isDraft'
+                    WHERE userEmail = '$details[userEmail]' AND blogId = '$details[blogId]'";
+            
+            $res = $this->conn->query($query);
             return $res;
         }
     }

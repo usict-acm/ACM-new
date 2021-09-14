@@ -20,6 +20,9 @@ switch ($q) {
     case 'createBlog':
         createBlog();
         break;
+    case 'updateBlog':
+        updateBlog();
+        break;
     case 'blogs':
         fetchUserBlogs();
         break;

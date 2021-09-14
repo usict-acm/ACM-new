@@ -35,7 +35,8 @@ function createBlog()
                         "isDraft" => boolval($row["isDraft"]),
                         "tags" => unserialize($row["tags"]),
                         "created" => $row["created"],
-                        "published" => $row["published"]
+                        "published" => $row["published"],
+                        "lastUpdated" => $row["lastUpdated"]
                     );
                     array_push($allBlogsArr, $blogRow);
                 }
@@ -73,7 +74,8 @@ function fetchUserBlogs()
                     "isDraft" => boolval($row["isDraft"]),
                     "tags" => unserialize($row["tags"]),
                     "created" => $row["created"],
-                    "published" => $row["published"]
+                    "published" => $row["published"],
+                    "lastUpdated" => $row["lastUpdated"]
                 );
                 array_push($allBlogsArr, $blogRow);
             }
@@ -81,6 +83,47 @@ function fetchUserBlogs()
         } else {
             echo json_encode(array("error" => "no blogs found"));
         };
+    } else {
+        echo json_encode(array('error' => 'One or more fields are missing.'));
+        return;
+    }
+}
+
+function updateBlog()
+{
+    if ($_SERVER['REQUEST_METHOD'] !== "POST") {
+        echo "Cannot " . $_SERVER['REQUEST_METHOD'] . " /createBlog";
+        return;
+    }
+
+    $blog = blogInit();
+    $req = json_decode(file_get_contents('php://input'), true);
+    if ($req["blogId"] && $req["blogTitle"] && $req["userEmail"] && $req["content"]) {
+        $result = $blog->updateBlog($req);        
+        if ($result) {
+            $allBlogs = $blog->fetchAllBlogs($req["userEmail"]);
+            $allBlogsArr = array();
+            if ($allBlogs->num_rows > 0) {
+                while ($row = $allBlogs->fetch_assoc()) {
+                    $blogRow = array(
+                        "blogId" => $row["blogId"],
+                        "blogTitle" => $row["blogTitle"],
+                        "content" => $row["content"],
+                        "userEmail" => $row["userEmail"],
+                        "userName" => $row["userName"],
+                        "isDraft" => boolval($row["isDraft"]),
+                        "tags" => unserialize($row["tags"]),
+                        "created" => $row["created"],
+                        "published" => $row["published"],
+                        "lastUpdated" => $row["lastUpdated"]
+                    );
+                    array_push($allBlogsArr, $blogRow);
+                }
+                echo json_encode(array("message" => "success", "blogs" => $allBlogsArr));
+            } else {
+                echo json_encode(array("error" => "no blogs found"));
+            };
+        }
     } else {
         echo json_encode(array('error' => 'One or more fields are missing.'));
         return;
