@@ -70,7 +70,13 @@ var swiper = new Swiper('.swiper-container', swiperOptions);
 var sliderBgSetting = $('.slide-bg-image');
 sliderBgSetting.each(function (indx) {
 	if ($(this).attr('data-background')) {
-		$(this).css('background-image', 'url(' + $(this).data('background') + ')');
+		// background: linear - gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1578934191836-ff…cHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80');
+		$(this).css(
+			'background',
+			'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + $(this).data('background') + ')'
+		);
+		$(this).css('background-size', 'cover');
+		$(this).css('background-position', 'center');
 	}
 });
 // ************************hero section ends*********************************
