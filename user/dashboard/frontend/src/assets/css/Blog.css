@@ -6,11 +6,11 @@
 
 
 /* CardHeader */
-.drop-text {
-font-size:large;
+/* .drop-text {
+font-size:medium;
 width: fit-content;
 margin-left: 35px;
-}
+} */
 
 .post-btn{
 margin-right: 35px;
@@ -49,51 +49,47 @@ justify-content: space-between;
 align-items: center;
 flex-wrap: nowrap;
 padding: 10px 20px;
-padding: 10px;
 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-/* height: 100px; */
 }
 
 .contentBox:hover{
 background-color: aliceblue;
 }
 
-.smallBox{
-display:flex;
-align-items: center;
-max-width: 60%;
-}
 
 .details{
-margin-left: 30px;
 display: flex;
 flex-direction: column;
+padding-right: 15px;
+}
+
+.Buttons{
+  display: flex;
 }
 
 
-@media screen and (max-width : 550px) {
+@media screen and (max-width : 400px) {
       .contentBox{
         flex-direction: column;
         position: relative;
-      }
-      .smallBox{
-        max-width: auto;
-      }
-      .details p{
         text-align: center;
       }
-      input[type = "checkbox"]{
-        position: absolute;
-        left: 20px;
-        top: auto;
-      }
       .details{
-        margin-left: 0;
+        padding-right: 0px;
+
       }
 }
 
 @media screen and (min-width: 768px) and (max-width : 900px) {
-      .smallBox{
+      /* .smallBox{
         max-width: 45%;
-      }
+      } */
+}
+
+@media screen and (min-width : 768px){
+
+  .temp{
+    margin: 0;
+    padding: 0;
+  }
 }
