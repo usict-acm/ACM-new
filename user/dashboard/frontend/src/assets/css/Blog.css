@@ -5,13 +5,6 @@
 }
 
 
-/* CardHeader */
-/* .drop-text {
-font-size:medium;
-width: fit-content;
-margin-left: 35px;
-} */
-
 .post-btn{
 margin-right: 35px;
 }
@@ -43,6 +36,8 @@ margin: auto;
 height: auto;
 }
 
+/* Content box component styles */
+
 .contentBox{
 display: flex;
 justify-content: space-between;
@@ -69,26 +64,46 @@ padding-right: 15px;
 
 
 @media screen and (max-width : 400px) {
-      .contentBox{
+  .BlogContainer{
+    padding: 0;
+  }   
+
+  .drop-text{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .postBtn{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .search-row{
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .bg-white.border-0{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .content-card{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .contentBox{
         flex-direction: column;
         position: relative;
         text-align: center;
+        
       }
       .details{
         padding-right: 0px;
-
       }
 }
 
-@media screen and (min-width: 768px) and (max-width : 900px) {
-      /* .smallBox{
-        max-width: 45%;
-      } */
-}
 
 @media screen and (min-width : 768px){
-
-  .temp{
+  .content-card{
     margin: 0;
     padding: 0;
   }

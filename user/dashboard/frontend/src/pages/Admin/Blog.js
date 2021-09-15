@@ -30,17 +30,14 @@ export default function Blog() {
   const  toggle = () => setDropdownOpen((prevState) => !prevState),
     [data,setData] = useState({select:"Published",disabled:false }),
     [dropdownOpen, setDropdownOpen] = useState(false),
-    [checkedPublished, setCheckedPublished] = useState(
-    new Array(blogs.length).fill(false)),
-    [checkedDraft, setCheckedDraft] = useState(
-      new Array(blogs.length).fill(false)),
+    // [checkedPublished, setCheckedPublished] = useState(
+    // new Array(blogs.length).fill(false)),
+    // [checkedDraft, setCheckedDraft] = useState(
+    //   new Array(blogs.length).fill(false)),
     [entries,setEntries] =useState({draft:0,published:0});
     const [searchItem, setSearchItem]= useState("");
-    
+    const [isShown, setIsShown]= useState([]);
 
-    // console.log("check-pub",checkedPublished);
-    // console.log("check-draft",checkedDraft)
-    // console.log("Entries",entries);
 console.log("data ",data)
   console.log("DROPDOWN",data);
   console.log("TOTAL ENTRIES",entries)
@@ -58,51 +55,57 @@ console.log("data ",data)
     else{  
       return true
     } 
-    
   }
 
-  function Count(){
+
+  useEffect(()=>{
     const len = blogs.filter( value => value.isDraft === data.disabled).length;
     {data.disabled?setEntries({draft:len}):setEntries({published:len})}
     console.log("HERE",len)
-    
-  }
-  useEffect(()=>{
-    Count();
+
+    setIsShown(()=>{
+      let arr = [];
+      for (let i = 0; i < len; i++) {
+        arr.push({isMouseEnter : false})
+      }
+
+      return arr;
+    })
+
   },[blogs,data.disabled])
 
+  console.log("isShown",isShown)
 
-  const handleOnChange =(position) =>{
-    if(data.disabled){
-      var updateChecked = checkedPublished.map((item,index) =>
-      index === position ? !item : item
-      
-    )}
-    else{
-      updateChecked = checkedPublished.map((item,index) =>
-      index === position ? !item : item
-    )}
-
-    data.disabled ?setCheckedDraft(updateChecked):setCheckedPublished(updateChecked) 
-  }
+  // const handleMouseEvent = (index)=>{
+  //   const update = [...isShown];
+  //   update[index].isMouseEnter = !update[index].isMouseEnter;
+  //   setIsShown(update);
+  // }
   
   function Content(props){
     return(
-      <div className="contentBox" >
-          {/* <div className="smallBox"> */}
-            {/* <input 
-            type="checkbox"
-            checked={data.disabled ? checkedDraft[props.index] : checkedPublished[props.index]}
-            onChange = {()=> handleOnChange(props.index)} 
-            /> */}
+      <div className="contentBox"
+        onMouseEnter={()=>{
+          const update = [...isShown];
+          update[props.index].isMouseEnter = true;
+          setIsShown(update);
+        }}
+        onMouseLeave={()=>{
+          const update = [...isShown];
+          update[props.index].isMouseEnter = false;
+          setIsShown(update);
+        }}
+        // onMouseEnter={()=>handleMouseEvent(props.index)}
+        // onMouseLeave={()=>handleMouseEvent(props.index)}
+       >
+
             <div className="details" >
               <h3>{props.title}</h3>
               <p>{props.date}</p>
             </div>
-         {/* </div> */}
          <div className="Buttons">
-           {!checkedPublished[props.index] ? <Button color="info">Edit</Button>:null }
-           {!checkedPublished[props.index] ? <Button color="danger">Trash</Button>:null }
+           {isShown[props.index]?.isMouseEnter ? <Button color="info">Edit</Button>:null }
+           {isShown[props.index]?.isMouseEnter ? <Button color="danger">Trash</Button>:null }
 
          </div>
       </div>
@@ -111,7 +114,6 @@ console.log("data ",data)
 
   
   return (
-    <div>
       <>
         <Container className='BlogContainer mt-4' fluid>
           <Row className="m-0 p-0">
@@ -138,13 +140,13 @@ console.log("data ",data)
                       </Dropdown>
                     </Col>
                     <Col className='text-right post-btn p-0 m-0'>
-                      <Button type='button' color='info' href='/CreateBlog'>
+                      <Button type='button' color='info' href='/CreateBlog' className="postBtn">
                         New Post
                       </Button>
                     </Col>
                   </Row>
                 </CardHeader>
-                <CardBody className="temp">
+                <CardBody className="content-card">
                   <Container className='mb-4' fluid>
                     <Row>
                       <Col className='order-x1-1 p-0'>
@@ -152,7 +154,7 @@ console.log("data ",data)
                           <CardHeader className='bg-white border-0'>
                             <Row className="p-0">
                               <Col
-                                className='px-2'
+                                className='px-2 search-row'
                                 // sm={{ size: 4, offset: 8 }}
                                 lg="12"
                               >
@@ -190,8 +192,6 @@ console.log("data ",data)
                                   }
                               </div>}
                               {console.log("DATA",showData())}
-                              {console.log("2 checkPublished",checkedPublished)}
-                              {console.log("2 checkDraft",checkedDraft)}
                             </div>
 
                           </CardBody>
@@ -205,6 +205,5 @@ console.log("data ",data)
           </Row>
         </Container>
       </>
-    </div>
   );
 }
