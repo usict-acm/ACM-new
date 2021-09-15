@@ -23,6 +23,9 @@ switch ($q) {
     case 'updateBlog':
         updateBlog();
         break;
+    case 'deleteBlog':
+        deleteBlog();
+        break;
     case 'blogs':
         fetchUserBlogs();
         break;
