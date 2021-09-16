@@ -160,7 +160,7 @@
 		<!-- ******************************blog section end***************************************** -->
 		<!-- *******************************************our team************* -->
 		<div class="container">
-			<h2>our team</h2>
+			<!-- <h2>our team</h2> -->
 
 			<div class="row s-row">
 				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
@@ -169,20 +169,10 @@
 							<figure class="image">
 								<img src="https://i.ibb.co/JC4skS0/team-animate.jpg" alt="" />
 								<div class="social-links">
-									<ul>
-										<li>
-											<a href="#"><span class="fab fa-facebook-f"></span></a>
-										</li>
-										<li>
-											<a href="#"><span class="fab fa-twitter"></span></a>
-										</li>
-										<li>
-											<a href="#"><span class="fab fa-linkedin-in"></span></a>
-										</li>
-										<li>
-											<a href="#"><span class="fab fa-pinterest-p"></span></a>
-										</li>
-									</ul>
+									<div class="tm-description">
+										<h3 class="tm-name">Name</h3>
+										<p class="tm-d">Experienced Back End Developer with a demonstrated history of working in the E-commerce industry. Skilled in PHP, C++, Android, Databases, and Data Science. Strong engineering professional with a Master of Computer Applications - MCA focused in Web/Multimedia Management and Webmaster from Guru Gobind Singh Indraprastha University. </p>
+									</div>
 								</div>
 							</figure>
 						</div>
@@ -195,20 +185,10 @@
 							<figure class="image">
 								<img src="https://i.ibb.co/JC4skS0/team-animate.jpg" alt="" />
 								<div class="social-links">
-									<ul>
-										<li>
-											<a href="#"><span class="fab fa-facebook-f"></span></a>
-										</li>
-										<li>
-											<a href="#"><span class="fab fa-twitter"></span></a>
-										</li>
-										<li>
-											<a href="#"><span class="fab fa-linkedin-in"></span></a>
-										</li>
-										<li>
-											<a href="#"><span class="fab fa-pinterest-p"></span></a>
-										</li>
-									</ul>
+									<div class="tm-description">
+										<h3 class="tm-name">Name</h3>
+										<p class="tm-d">Experienced Back End Developer with a demonstrated history of working in the E-commerce industry. Skilled in PHP, C++, Android, Databases, and Data Science. Strong engineering professional with a Master of Computer Applications - MCA focused in Web/Multimedia Management and Webmaster from Guru Gobind Singh Indraprastha University. </p>
+									</div>
 								</div>
 							</figure>
 						</div>
@@ -221,20 +201,10 @@
 							<figure class="image">
 								<img src="https://i.ibb.co/JC4skS0/team-animate.jpg" alt="" />
 								<div class="social-links">
-									<ul>
-										<li>
-											<a href="#"><span class="fab fa-facebook-f"></span></a>
-										</li>
-										<li>
-											<a href="#"><span class="fab fa-twitter"></span></a>
-										</li>
-										<li>
-											<a href="#"><span class="fab fa-linkedin-in"></span></a>
-										</li>
-										<li>
-											<a href="#"><span class="fab fa-pinterest-p"></span></a>
-										</li>
-									</ul>
+									<div class="tm-description">
+										<h3 class="tm-name">Name</h3>
+										<p class="tm-d">Experienced Back End Developer with a demonstrated history of working in the E-commerce industry. Skilled in PHP, C++, Android, Databases, and Data Science. Strong engineering professional with a Master of Computer Applications - MCA focused in Web/Multimedia Management and Webmaster from Guru Gobind Singh Indraprastha University. </p>
+									</div>
 								</div>
 							</figure>
 						</div>
