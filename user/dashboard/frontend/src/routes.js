@@ -17,9 +17,9 @@
 */
 import Index from "views/Index.js";
 import Profile from "pages/Admin/Profile.js";
-// import Maps from "views/examples/Maps.js";
 import Blog from "pages/Admin/Blog";
-import CreateBlog from "pages/Admin/CreateBlog";
+// import CreateBlog from "pages/Admin/CreateBlog";
+import Preview from "pages/Admin/Preview";
 import Icons from "views/examples/Icons.js";
 import Register from "pages/Auth/Register";
 import Login from "pages/Auth/Login";
@@ -54,10 +54,10 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/createBlog",
-    name: "Create Blog",
+    path: "/preview",
+    name: "Preview",
     icon: "ni ni-palette text-green",
-    component: CreateBlog,
+    component: Preview,
     layout: "/admin",
   },
   {

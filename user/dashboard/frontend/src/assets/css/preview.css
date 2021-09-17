@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+@media screen and (max-width:350px){
+    .titleEdit{
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+    .editbtn{
+        padding: 20px;
+    }
+
+    
+}
+
+.blogTitle{
+    text-transform: uppercase;
+}
+
+.date{
+    text-align: right;
+}
+
+/* .blogContent{
+    text-align:justify;
+    line-height: 2;
+} */

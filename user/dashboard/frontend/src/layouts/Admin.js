@@ -25,6 +25,8 @@ import AdminFooter from "components/Footers/AdminFooter.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
 
 import routes from "routes.js";
+import CreateBlog from "pages/Admin/CreateBlog";
+import Preview from "pages/Admin/Preview";
 
 const Admin = (props) => {
   const mainContent = React.useRef(null);
@@ -70,6 +72,9 @@ const Admin = (props) => {
         <AdminNavbar {...props} brandText={getBrandText(location.pathname)} />
         <Switch>
           {getRoutes(routes)}
+          <Route exact path="/createBlog/:blogIndex" component={CreateBlog} />
+          <Route exact path="/createBlog" component={CreateBlog} />
+          <Route exact path="/blog/:blogIndex" component={Preview} />
           <Redirect from="*" to="/profile" />
         </Switch>
         <Container fluid>
