@@ -112,7 +112,9 @@
 		</div>
 		<!-- end of about section -->
 		<!--***********************blog section***************************************** -->
-
+		<div class="bloghead">
+			<h2 class="my-4 display-2 fw-bolder"> 	Recent<span class="text-primary"> Blog</span></h2><br>
+		</div>
 		<div class="b-container">
 			<div class="b-card-container">
 				<div class="b-card">
@@ -159,6 +161,9 @@
 
 		<!-- ******************************blog section end***************************************** -->
 		<!-- *******************************************our team************* -->
+		<div class="teamhead">
+			<h2 class="my-4 display-2 fw-bolder"> Our<span class="text-primary"> Team</span></h2><br>
+		</div>
 		<div class="container">
 			<!-- <h2>our team</h2> -->
 
@@ -167,11 +172,11 @@
 					<div class="inner-box">
 						<div class="image-box">
 							<figure class="image">
-								<img src="https://i.ibb.co/JC4skS0/team-animate.jpg" alt="" />
+								<img src="assets\images\team\Anuj.jpg" alt="" />
 								<div class="social-links">
 									<div class="tm-description">
-										<h3 class="tm-name">Name</h3>
-										<p class="tm-d">Experienced Back End Developer with a demonstrated history of working in the E-commerce industry. Skilled in PHP, C++, Android, Databases, and Data Science. Strong engineering professional with a Master of Computer Applications - MCA focused in Web/Multimedia Management and Webmaster from Guru Gobind Singh Indraprastha University. </p>
+										<h5 class="tm-name">Anuj</h5>
+										<p class="tm-d">Executive Members </p>
 									</div>
 								</div>
 							</figure>
@@ -183,11 +188,11 @@
 					<div class="inner-box">
 						<div class="image-box">
 							<figure class="image">
-								<img src="https://i.ibb.co/JC4skS0/team-animate.jpg" alt="" />
+								<img src="assets\images\team\harshGoyal.png" alt="" />
 								<div class="social-links">
 									<div class="tm-description">
-										<h3 class="tm-name">Name</h3>
-										<p class="tm-d">Experienced Back End Developer with a demonstrated history of working in the E-commerce industry. Skilled in PHP, C++, Android, Databases, and Data Science. Strong engineering professional with a Master of Computer Applications - MCA focused in Web/Multimedia Management and Webmaster from Guru Gobind Singh Indraprastha University. </p>
+										<h5 class="tm-name">Harsh Goyal</h5>
+										<p class="tm-d">Executive Members </p>
 									</div>
 								</div>
 							</figure>
@@ -199,11 +204,11 @@
 					<div class="inner-box">
 						<div class="image-box">
 							<figure class="image">
-								<img src="https://i.ibb.co/JC4skS0/team-animate.jpg" alt="" />
+								<img src="assets\images\team\Gaurav.png" alt="" />
 								<div class="social-links">
 									<div class="tm-description">
-										<h3 class="tm-name">Name</h3>
-										<p class="tm-d">Experienced Back End Developer with a demonstrated history of working in the E-commerce industry. Skilled in PHP, C++, Android, Databases, and Data Science. Strong engineering professional with a Master of Computer Applications - MCA focused in Web/Multimedia Management and Webmaster from Guru Gobind Singh Indraprastha University. </p>
+										<h5 class="tm-name">Gaurav Jain</h5>
+										<p class="tm-d">Office Bearers </p>
 									</div>
 								</div>
 							</figure>

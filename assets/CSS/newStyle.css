@@ -606,6 +606,10 @@ button:focus {
 	color: #e88f87;
 	pointer-events: none;
 }
+.bloghead{
+	margin-left: 28px;
+	margin-bottom: 10px;
+}
 @media (max-width: 768px) {
 	.b-container {
 		display: block;
@@ -613,7 +617,7 @@ button:focus {
 		margin-left: 32%;
 	}
 	.b-card {
-		margin-top: 120px;
+		margin-top: 10px;
 		width: 300px;
 	}
 	.b-infos {
@@ -627,7 +631,7 @@ button:focus {
 		margin-left: 15%;
 	}
 	.b-card {
-		margin-top: 120px;
+		margin-top: 10px;
 		width: 240px;
 	}
 }
@@ -638,7 +642,7 @@ button:focus {
 		margin-left: 11.5%;
 	}
 	.b-card {
-		margin-top: 120px;
+		margin-top: 10px;
 		width: 240px;
 	}
 }
@@ -650,7 +654,9 @@ button:focus {
 }
 .speaker-block {
 	position: relative;
-	margin-bottom: 40px;
+    margin-bottom: 40px;
+    width: 200px;
+    height: 200px;
 }
 
 .speaker-block .inner-box {
@@ -695,9 +701,12 @@ button:focus {
 
 .speaker-block .image-box .image {
 	position: relative;
-	margin-bottom: 0;
-	z-index: 1;
-	overflow: hidden;
+    margin-bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 150px;
+    height: 150px;
 }
 
 .speaker-block .image-box .image img {
@@ -711,6 +720,7 @@ button:focus {
 	left: 0;
 	bottom: -340px;
 	padding: 20px;
+	padding-bottom: 12px;
 	width: 100%;
 	z-index: 9;
 	-webkit-transition: all 700ms ease;
@@ -781,13 +791,17 @@ img {
 .tm-name {
 	text-align: center;
 	color: white;
-	padding: 18px;
+	padding: "";
 }
 .tm-d {
-	font-size: 13px;
+	font-size: 18px;
 	color: white;
-	padding: 3px;
+	padding: 5px;
 	text-align: center;
+	line-height: 20px;
+}
+.teamhead{
+	margin-left: 28px;
 }
 @media (max-width: 320px) {
 	.tm-name {
