@@ -215,6 +215,156 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\vardaan.jpg" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Vardaan Grover</h5>
+										<p class="tm-d">Vice-Chair</p>
+									</div>
+								</div>
+							</figure>
+						</div>
+					</div>
+				</div>
+
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\Akshad.jpg" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Akshad Bhandula</h5>
+										<p class="tm-d">Secretory</p>
+									</div>
+								</div>
+							</figure>
+						</div>
+					</div>
+				</div>
+
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\Divyansh.jpg" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Divyansh Rastogi</h5>
+										<p class="tm-d">Joint Secretary </p>
+									</div>
+								</div>
+							</figure>
+						</div>
+					</div>
+				</div>
+
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\chaitanDev.jpg" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Chaitan Dev</h5>
+										<p class="tm-d">Treasurer </p>
+									</div>
+								</div>
+							</figure>
+						</div>
+					</div>
+				</div>
+
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\anmolRotate.png" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Anmol Goel</h5>
+										<p class="tm-d">Web Chair </p>
+									</div>
+								</div>
+							</figure>
+						</div>
+					</div>
+				</div>
+
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\sushantHaluwai.jpg" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Sushant Haluwai</h5>
+										<p class="tm-d">Executive Members</p>
+									</div>
+								</div>
+							</figure>
+						</div>
+					</div>
+				</div>
+
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\Manoj.jpg" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Manoj Kumar</h5>
+										<p class="tm-d">Executive Members </p>
+									</div>
+								</div>
+							</figure>
+						</div>
+					</div>
+				</div>
+
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\Tarun.jpg" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Tarun</h5>
+										<p class="tm-d">Executive Members </p>
+									</div>
+								</div>
+							</figure>
+						</div>
+					</div>
+				</div>
+
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\vishesh.jpeg" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Vishesh Gupta</h5>
+										<p class="tm-d">Executive Members </p>
+									</div>
+								</div>
+							</figure>
+						</div>
+					</div>
+				</div>
+
+				
+
+				
+
+				
 			</div>
 		</div>
 		<!-- *****************************our team end************************************************** -->
