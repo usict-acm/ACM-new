@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Button,
   Card,
@@ -14,14 +14,26 @@ import "../../assets/css/CreateBlog.css";
 import SideNav from "../../components/Navbars/CreateBlogSidebar";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "redux/slices/userSlice";
-import { addBlog } from "api/blog";
+import { selectBlogs } from "redux/slices/blogSlice";
+import { addBlog, fetchUserBlogs } from "api/blog";
+import { useParams } from "react-router";
 
 const CreateBlog = () => {
   const dispatch = useDispatch(),
+    params = useParams(),
     user = useSelector(selectUser),
     [title, setTitle] = useState(""),
     [content, setContent] = useState(""),
-    [tags, setTags] = useState([]);
+    [tags, setTags] = useState([]),
+    blogs = useSelector(selectBlogs),
+    [editorInstance, setEditorInstance] = useState(null);
+
+  console.log(params.blogIndex);
+
+  useEffect(() => {
+    dispatch(fetchUserBlogs({ userEmail: user?.email }));
+  }, [dispatch, user?.email]);
+  console.log("blog's data :", blogs);
 
   function createBlog(draft) {
     if (!title || !content) {
@@ -37,6 +49,11 @@ const CreateBlog = () => {
     };
 
     dispatch(addBlog(data));
+
+    editorInstance?.setData("");
+    setTitle("");
+    setContent("");
+    setTags([]);
   }
 
   return (
@@ -53,6 +70,7 @@ const CreateBlog = () => {
                       type="name"
                       placeholder="T I T L E"
                       onChange={(event) => setTitle(event.target.value)}
+                      value={title}
                     />
                   </Col>
                   <Col className="text-right">
@@ -144,6 +162,7 @@ const CreateBlog = () => {
                         },
                       }}
                       onReady={(editor) => {
+                        setEditorInstance(editor);
                         const toolbarContainer =
                           document.querySelector("#toolbar-container");
                         toolbarContainer.appendChild(

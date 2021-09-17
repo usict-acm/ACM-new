@@ -5,57 +5,106 @@
 }
 
 
-/* CardHeader */
-.drop-text {
-  font-size:large;
-  width: fit-content;
-  margin-left: 35px;
-}
-
 .post-btn{
-  margin-right: 35px;
+margin-right: 35px;
 }
 
 /* post section */
 .post-section{
-  color: #8898aa;
-  font-size: .75rem;
-  /* display: flex; */
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  background-color: white;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 50vh;
+text-transform: uppercase;
+background-color: white;
+height: 50vh;
+padding-top: 3px;
+padding: 0;
+overflow-y: auto;
 }
 
+.cont-nodata{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 50vh;
 
-
+}
 
 .h-line{
-  margin: 0;
+margin: auto;
 }
 
 .post-component{
- 
-  height: auto;
+
+height: auto;
 }
+
+/* Content box component styles */
 
 .contentBox{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: nowrap;
+padding: 10px 20px;
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.smallBox{
-  display:flex;
-  align-items: center;
-
+.contentBox:hover{
+background-color: aliceblue;
 }
+
 
 .details{
-  margin-left: 20px;
+display: flex;
+flex-direction: column;
+padding-right: 15px;
+}
+
+.Buttons{
   display: flex;
-  flex-direction: column;
+}
+
+
+@media screen and (max-width : 400px) {
+  .BlogContainer{
+    padding: 0;
+  }   
+
+  .drop-text{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .postBtn{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .search-row{
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .bg-white.border-0{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .content-card{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .contentBox{
+        flex-direction: column;
+        position: relative;
+        text-align: center;
+        
+      }
+      .details{
+        padding-right: 0px;
+      }
+}
+
+
+@media screen and (min-width : 768px){
+  .content-card{
+    margin: 0;
+    padding: 0;
+  }
 }
