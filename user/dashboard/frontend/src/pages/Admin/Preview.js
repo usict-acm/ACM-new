@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect} from 'react';
 import {
   Button,
   Card,
@@ -8,32 +8,77 @@ import {
   Container,
   Row,
   Col,
-} from 'reactstrap'
+} from 'reactstrap';
+import "assets/css/preview.css";
+import { useParams } from 'react-router';
+import { useSelector } from 'react-redux';
+import { selectBlogs } from 'redux/slices/blogSlice';
+import { CKEditor } from "@ckeditor/ckeditor5-react";
+import documentEditor from "ckeditor5-custom-build";
+import "../../assets/css/CreateBlog.css";
 
 export default function Preview(){
+    const param = useParams(),
+    {blogIndex} = param,
+    blogs=useSelector(selectBlogs),
+    blog=blogs.find(item=> item.blogId === blogIndex),
+    formatDate = (timestamp) => {
+      const date = new Date(timestamp);
+      return (
+        date.getDate() +
+        ", " +
+        (months[date.getMonth()])   
+        + ", " + 
+        date.getFullYear()    
+      );
+    };
+
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ]
+
+
+    useEffect(()=>{
+        document.getElementById("blogContent").innerHTML=blog?.content;
+    },[blog])
+
+    
     return(
         <>
         <Container fluid className="p-2 mt-4 ">
          <CardHeader className="mb-4 px-2 bg-secondary" >
-         <Row>
-             <Col xs="9">
-        <h1 style={{ textTransform : "uppercase"}}>Writing your first blog title</h1>
+          <Row className="titleEdit">
+            <Col >
+             <h1 className="blogTitle" >{blog?.blogTitle}</h1>
 
-             </Col>
-             <Col xs="3" className="text-right">
-             <Button color="info" className="bx bxs-pencil "></Button>
-             </Col>
-         </Row>
+            </Col>
+            <Col className="text-right editbtn">
+             <Button color="info" className="bx bxs-pencil"></Button>
+            </Col>
+          </Row>
          </CardHeader>
          <CardBody className="px-2">
-         <p className="text-right">16 September 2021</p>
+          <p className="date">{formatDate(blog?.published)}</p>
+          {/* <p>{blog?.tags}</p> */}
+           <div>
+            <p className="blogContent">
+               <div id="blogContent">
 
-        <p className="" style={{lineHeight : "2"}}>
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-        </p>
-        </CardBody>
+               </div>
+            </p>
+           </div>
+         </CardBody>
         </Container>
         </>
     )

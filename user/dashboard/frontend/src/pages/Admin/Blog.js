@@ -18,6 +18,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { selectBlogs } from 'redux/slices/blogSlice'
 import { selectUser } from 'redux/slices/userSlice'
 import { fetchUserBlogs } from 'api/blog'
+import toolbar from "pages/Admin/CreateBlog";
+import { Link } from 'react-router-dom'
 
 export default function Blog() {
   const user = useSelector(selectUser)
@@ -30,24 +32,16 @@ export default function Blog() {
   const  toggle = () => setDropdownOpen((prevState) => !prevState),
     [data,setData] = useState({select:"Published",disabled:false }),
     [dropdownOpen, setDropdownOpen] = useState(false),
-    [entries,setEntries] =useState({draft:0,published:0}),
-    [searchItem, setSearchItem]= useState(""),
-    [isShown, setIsShown]= useState([]),
+    [entries,setEntries] =useState({draft:0,published:0});
+    const [searchItem, setSearchItem]= useState("");
+    const [isShown, setIsShown]= useState([]),
     [filterData, setFilterData]= useState([]);
-
-console.log("data ",data)
-  console.log("DROPDOWN",data);
-  console.log("TOTAL ENTRIES",entries)
- 
 
   useEffect(() => {
     dispatch(fetchUserBlogs({userEmail:user?.email}))
-    console.log("2 useEffect",blogs)
     }, [dispatch,user?.email] )
-  console.log("3",blogs)
   
-  function showData() {
-    
+  function showData() {   
     if(blogs.length === 0) return false
     else{  
       return true
@@ -65,10 +59,11 @@ console.log("data ",data)
       <div className="post-component">
         {
           filterData.map( (item, i) => (
-              <Content id="post-content" 
-              title={item.blogTitle} date={item.published}
-              key={i} index={i} isDraft={item.isDraft} />
-              ))
+            <Link to={item.isDraft?`/CreateBlog/${item.blogId}`:`/blog/${item.blogId}`} >
+            <Content id="post-content" 
+            title={item.blogTitle} date={item.published}
+            key={i} index={i} isDraft={item.isDraft} />
+            </Link>)  )
         }
       </div>
       </>
@@ -78,20 +73,18 @@ console.log("data ",data)
   useEffect(()=>{
     const len = blogs.filter( value => value.isDraft === data.disabled).length;
     data.disabled?setEntries({draft:len}):setEntries({published:len})
-    console.log("HERE",len)
-
 
     setFilterData(()=>{
-     return blogs.filter( draft => draft.isDraft === data.disabled)
-      .filter((val)=>{
-        if(searchItem === ""){
-          return val;
-        }
-        else if(val.blogTitle.toLowerCase().includes(searchItem.toLowerCase())){
-          return val
-        }
-  })
-    });
+      return blogs.filter( draft => draft.isDraft === data.disabled)
+       .filter((val)=>{
+         if(searchItem === ""){
+           return val;
+         }
+         else if(val.blogTitle.toLowerCase().includes(searchItem.toLowerCase())){
+           return val
+         }
+   })
+     });
 
     setIsShown(()=>{
       let arr = [];
@@ -102,16 +95,8 @@ console.log("data ",data)
       return arr;
     })
 
-  },[blogs,data.disabled, searchItem])
+  },[blogs,data.disabled,searchItem])
 
-  console.log("isShown",isShown)
-  console.log("filterData",filterData);
-
-  // const handleMouseEvent = (index)=>{
-  //   const update = [...isShown];
-  //   update[index].isMouseEnter = !update[index].isMouseEnter;
-  //   setIsShown(update);
-  // }
   
   function Content(props){
     return(
@@ -126,22 +111,17 @@ console.log("data ",data)
           update[props.index].isMouseEnter = false;
           setIsShown(update);
         }}
-        // onMouseEnter={()=>handleMouseEvent(props.index)}
-        // onMouseLeave={()=>handleMouseEvent(props.index)}
        >
 
             <div className="details" >
               <h3>{props.title}</h3>
               <p>{props.date}</p>
             </div>
-            {
-              isShown[props.index]?.isMouseEnter ? 
-              <div className="Buttons">
-                  <Button color="info">Edit</Button>
-                  <Button color="danger">Trash</Button>
-              </div> 
-              : null
-            }
+         <div className="Buttons">
+           {isShown[props.index]?.isMouseEnter ? <Button color="info" className="bx bxs-pencil"></Button>:null }
+           {isShown[props.index]?.isMouseEnter ? <Button color="danger" ><i className='bx bx-trash'></i></Button>:null }
+
+         </div>
       </div>
     )
   }
@@ -174,7 +154,7 @@ console.log("data ",data)
                       </Dropdown>
                     </Col>
                     <Col className='text-right post-btn p-0 m-0'>
-                      <Button type='button' color='info' href='/CreateBlog' className="postBtn">
+                      <Button type='button' color='info' href="/CreateBlog" className="postBtn">
                         New Post
                       </Button>
                     </Col>
@@ -208,9 +188,8 @@ console.log("data ",data)
                               { !showData() ?
                               <div className="cont-nodata"><h3>NO DATA YET</h3></div>
                                 : 
-                                showFilterData()
+                              showFilterData()
                               }
-                              {/* {console.log("DATA",showData())} */}
                             </div>
 
                           </CardBody>
