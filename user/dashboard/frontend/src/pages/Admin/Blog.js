@@ -30,13 +30,10 @@ export default function Blog() {
   const  toggle = () => setDropdownOpen((prevState) => !prevState),
     [data,setData] = useState({select:"Published",disabled:false }),
     [dropdownOpen, setDropdownOpen] = useState(false),
-    // [checkedPublished, setCheckedPublished] = useState(
-    // new Array(blogs.length).fill(false)),
-    // [checkedDraft, setCheckedDraft] = useState(
-    //   new Array(blogs.length).fill(false)),
-    [entries,setEntries] =useState({draft:0,published:0});
-    const [searchItem, setSearchItem]= useState("");
-    const [isShown, setIsShown]= useState([]);
+    [entries,setEntries] =useState({draft:0,published:0}),
+    [searchItem, setSearchItem]= useState(""),
+    [isShown, setIsShown]= useState([]),
+    [filterData, setFilterData]= useState([]);
 
 console.log("data ",data)
   console.log("DROPDOWN",data);
@@ -57,11 +54,44 @@ console.log("data ",data)
     } 
   }
 
+  function showFilterData (){
+    if (filterData.length === 0) {
+
+      return   <div className="cont-nodata"><h3>No data found</h3></div>
+
+
+    } else {
+      return <>
+      <div className="post-component">
+        {
+          filterData.map( (item, i) => (
+              <Content id="post-content" 
+              title={item.blogTitle} date={item.published}
+              key={i} index={i} isDraft={item.isDraft} />
+              ))
+        }
+      </div>
+      </>
+    }
+  }
 
   useEffect(()=>{
     const len = blogs.filter( value => value.isDraft === data.disabled).length;
-    {data.disabled?setEntries({draft:len}):setEntries({published:len})}
+    data.disabled?setEntries({draft:len}):setEntries({published:len})
     console.log("HERE",len)
+
+
+    setFilterData(()=>{
+     return blogs.filter( draft => draft.isDraft === data.disabled)
+      .filter((val)=>{
+        if(searchItem === ""){
+          return val;
+        }
+        else if(val.blogTitle.toLowerCase().includes(searchItem.toLowerCase())){
+          return val
+        }
+  })
+    });
 
     setIsShown(()=>{
       let arr = [];
@@ -72,9 +102,10 @@ console.log("data ",data)
       return arr;
     })
 
-  },[blogs,data.disabled])
+  },[blogs,data.disabled, searchItem])
 
   console.log("isShown",isShown)
+  console.log("filterData",filterData);
 
   // const handleMouseEvent = (index)=>{
   //   const update = [...isShown];
@@ -103,11 +134,14 @@ console.log("data ",data)
               <h3>{props.title}</h3>
               <p>{props.date}</p>
             </div>
-         <div className="Buttons">
-           {isShown[props.index]?.isMouseEnter ? <Button color="info">Edit</Button>:null }
-           {isShown[props.index]?.isMouseEnter ? <Button color="danger">Trash</Button>:null }
-
-         </div>
+            {
+              isShown[props.index]?.isMouseEnter ? 
+              <div className="Buttons">
+                  <Button color="info">Edit</Button>
+                  <Button color="danger">Trash</Button>
+              </div> 
+              : null
+            }
       </div>
     )
   }
@@ -174,24 +208,9 @@ console.log("data ",data)
                               { !showData() ?
                               <div className="cont-nodata"><h3>NO DATA YET</h3></div>
                                 : 
-                              <div className="post-component">
-                                  {
-                                  blogs.filter( draft => draft.isDraft === data.disabled)
-                                  .filter((val)=>{
-                                    if(searchItem === ""){
-                                      return val;
-                                    }
-                                    else if(val.blogTitle.toLowerCase().includes(searchItem.toLowerCase())){
-                                      return val
-                                    }
-                              })
-                                  .map( (item, i) => (
-                                  <Content id="post-content" 
-                                  title={item.blogTitle} date={item.published}
-                                  key={i} index={i} isDraft={item.isDraft} />))
-                                  }
-                              </div>}
-                              {console.log("DATA",showData())}
+                                showFilterData()
+                              }
+                              {/* {console.log("DATA",showData())} */}
                             </div>
 
                           </CardBody>

@@ -54,8 +54,8 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/createBlog",
-    name: "Create Blog",
+    path: "/CreateBlog",
+    name: "Preview",
     icon: "ni ni-palette text-green",
     component: CreateBlog,
     layout: "/admin",
