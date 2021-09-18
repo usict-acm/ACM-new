@@ -10,7 +10,7 @@ import {
 } from "reactstrap";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import documentEditor from "ckeditor5-custom-build";
-import "../../assets/css/CreateBlog.css";
+import "assets/css/CreateBlog.css";
 import SideNav from "../../components/Navbars/CreateBlogSidebar";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "redux/slices/userSlice";

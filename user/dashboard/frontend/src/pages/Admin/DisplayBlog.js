@@ -6,8 +6,9 @@ import { useSelector } from "react-redux";
 import { selectBlogs } from "redux/slices/blogSlice";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import documentEditor from "ckeditor5-custom-build";
-import "../../assets/css/CreateBlog.css";
+import "assets/css/CreateBlog.css";
 import { formatDate } from "utils/commonFunctions";
+import SideBar from "components/Blogs/DisplayBlogSideBar.js"
 
 export default function Preview() {
   const params = useParams(),
@@ -21,6 +22,7 @@ export default function Preview() {
   useEffect(() => {
     blog && editorInstance?.setData(blog?.content);
   }, [editorInstance, blog]);
+  console.log(blogs);
 
   return (
     <>
@@ -40,11 +42,8 @@ export default function Preview() {
           </Row>
         </CardHeader>
         <CardBody className="px-2">
-          <p className="date">{formatDate(blog?.published)}</p>
-          {/* <p>{blog?.tags}</p> */}
-          <div>
-            {/* <p> */}
-            <div id="blogContent" className="blogContent">
+            <div className="display">
+            <div id="blogContent" className="blogContent TextEditor">
               <CKEditor
                 editor={documentEditor}
                 config={{ toolbar: [] }}
@@ -54,8 +53,12 @@ export default function Preview() {
                 }}
               />
             </div>
-            {/* </p> */}
-          </div>
+            
+            <div className="sideBar ">
+              <SideBar blog={blog} />
+            {/* <p className="date pt-3">{formatDate(blog?.published)}</p> */}
+            {/* </p> */}</div>
+            </div>
         </CardBody>
       </Container>
     </>
