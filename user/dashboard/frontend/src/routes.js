@@ -18,8 +18,6 @@
 import Index from "views/Index.js";
 import Profile from "pages/Admin/Profile.js";
 import AllBlogs from "pages/Admin/AllBlogs.js";
-// import CreateBlog from "pages/Admin/CreateBlog";
-// import Preview from "pages/Admin/Preview";
 import Icons from "views/examples/Icons.js";
 import Register from "pages/Auth/Register";
 import Login from "pages/Auth/Login";
@@ -53,13 +51,6 @@ var routes = [
     component: Profile,
     layout: "/admin",
   },
-  // {
-  //   path: "/preview",
-  //   name: "Preview",
-  //   icon: "ni ni-palette text-green",
-  //   component: Preview,
-  //   layout: "/admin",
-  // },
   {
     path: "/login",
     name: "Login",
