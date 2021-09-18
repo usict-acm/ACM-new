@@ -21,11 +21,9 @@
 	box-sizing: border-box;
 }
 
-
 body, html {
 	height: 100%;
 	font-family: Ubuntu-Bold, sans-serif;
-  font-weight: bold;
 }
 
 /*---------------------------------------------*/
@@ -33,7 +31,7 @@ a {
 	font-family: Ubuntu-Bold;
 	font-size: 14px;
 	line-height: 1.7;
-	color: #000;
+	color: #666666;
 	margin: 0px;
 	transition: all 0.4s;
 	-webkit-transition: all 0.4s;
@@ -58,7 +56,7 @@ p {
 	font-family: Ubuntu-Bold;
 	font-size: 14px;
 	line-height: 1.7;
-	color: #000;
+	color: #666666;
 	margin: 0px;
 }
 
@@ -72,7 +70,6 @@ ul, li {
 input {
 	outline: none;
 	border: none;
-  
 }
 
 input[type="number"] {
@@ -95,15 +92,15 @@ textarea:focus, input:focus {
   border-color: transparent !important;
 }
 
-input::-webkit-input-placeholder { color: #000;}
-input:-moz-placeholder { color: #000;}
-input::-moz-placeholder { color: #000;}
-input:-ms-input-placeholder { color: #000;}
+input::-webkit-input-placeholder { color: #bdbdd3;}
+input:-moz-placeholder { color: #bdbdd3;}
+input::-moz-placeholder { color: #bdbdd3;}
+input:-ms-input-placeholder { color: #bdbdd3;}
 
-textarea::-webkit-input-placeholder { color: #000;}
-textarea:-moz-placeholder { color: #000;}
-textarea::-moz-placeholder { color: #000;}
-textarea:-ms-input-placeholder { color: #000;}
+textarea::-webkit-input-placeholder { color: #bdbdd3;}
+textarea:-moz-placeholder { color: #bdbdd3;}
+textarea::-moz-placeholder { color: #bdbdd3;}
+textarea:-ms-input-placeholder { color: #bdbdd3;}
 
 /*---------------------------------------------*/
 button {
@@ -145,7 +142,7 @@ iframe {
   align-items: center;
   padding: 15px;
   position: relative;
-  background-color: #4c72e4;
+  background-color: #f2f2f2;
 }
 
 .wrap-contact100 {
@@ -166,7 +163,7 @@ iframe {
   display: block;
   font-family: Ubuntu-Bold;
   font-size: 30px;
-  color: #000;
+  color: #403866;
   line-height: 1.2;
   text-transform: uppercase;
   text-align: center;
@@ -180,7 +177,6 @@ iframe {
   width: 100%;
   background-color: #fff;
   border-radius: 31px;
-  border-radius: solid black;
   margin-bottom: 16px;
   position: relative;
   z-index: 1;
@@ -194,7 +190,7 @@ iframe {
   border-radius: 31px;
   font-family: Ubuntu-Bold;
   font-size: 18px;
-  color: #030303;
+  color: #8f8fa1;
   line-height: 1.2;
 }
 
@@ -297,7 +293,7 @@ textarea.input100 {
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
   border-radius: 31px;
-  background-color: #2626f5;
+  background-color: #827ffe;
   pointer-events: none;
   
   -webkit-transition: all 0.4s;
@@ -307,7 +303,7 @@ textarea.input100 {
 }
 
 .contact100-form-btn:hover:before {
-  background-color: #56c0d3;
+  background-color: #403866;
   width: calc(100% + 20px);
 }
 
