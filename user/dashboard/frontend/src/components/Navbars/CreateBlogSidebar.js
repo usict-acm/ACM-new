@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Button, Input } from "reactstrap";
+import { formatDate } from "utils/commonFunctions";
 import "../../assets/css/CreateBlog.css";
 
-const SideNav = ({ tags, setTags }) => {
+const SideNav = ({ tags, setTags, editingBlog }) => {
   const [item, setItem] = useState("");
 
   const addTags = () => {
@@ -61,6 +62,18 @@ const SideNav = ({ tags, setTags }) => {
           );
         })}
       </div>
+      {
+        editingBlog ? 
+        <>
+              <hr />
+             <div>
+                <p><h3>Created :</h3>{formatDate(editingBlog?.created)}</p>
+                <p><h3>Last updated:</h3>{formatDate(editingBlog?.lastUpdated)}</p>
+             </div>
+             </>
+            :
+             null
+      }
     </>
   );
 };

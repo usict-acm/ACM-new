@@ -29,10 +29,10 @@ export default function Preview() {
       <Container fluid className="p-2 mt-4 ">
         <CardHeader className="mb-4 px-2 bg-secondary">
           <Row className="titleEdit">
-            <Col>
+            <Col xs="9">
               <h1 className="blogTitle">{blog?.blogTitle}</h1>
             </Col>
-            <Col className="text-right editbtn">
+            <Col  xs="3" className="editbtnCol">
               <Button
                 onClick={() => history.push(`/createBlog/${blogId}`)}
                 color="info"
@@ -56,8 +56,7 @@ export default function Preview() {
             
             <div className="sideBar ">
               <SideBar blog={blog} />
-            {/* <p className="date pt-3">{formatDate(blog?.published)}</p> */}
-            {/* </p> */}</div>
+           </div>
             </div>
         </CardBody>
       </Container>

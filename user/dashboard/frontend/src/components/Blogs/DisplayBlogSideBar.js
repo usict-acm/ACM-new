@@ -23,8 +23,8 @@ export default function DisplayBlogSideBar(props){
              </div>
              <hr />
              <div>
-                <p><h3>Published On:</h3>{formatDate(props.blog?.published)}</p>
-                <p><h3>Created On:</h3>{formatDate(props.blog?.created)}</p>
+                <p><h3>Published :</h3>{formatDate(props.blog?.published)}</p>
+                <p><h3>Last updated:</h3>{formatDate(props.blog?.lastUpdated)}</p>
              </div>  
 
          </div>

@@ -202,7 +202,7 @@ const CreateBlog = () => {
                     />
                   </div>
                   <div className="PostSetting">
-                    <SideNav tags={tags} setTags={setTags} />
+                    <SideNav tags={tags} setTags={setTags} editingBlog={editingBlog} />
                   </div>
                 </div>
               </Card>
