@@ -17,9 +17,9 @@
 */
 import Index from "views/Index.js";
 import Profile from "pages/Admin/Profile.js";
-import Blog from "pages/Admin/Blog";
+import AllBlogs from "pages/Admin/AllBlogs.js";
 // import CreateBlog from "pages/Admin/CreateBlog";
-import Preview from "pages/Admin/Preview";
+// import Preview from "pages/Admin/Preview";
 import Icons from "views/examples/Icons.js";
 import Register from "pages/Auth/Register";
 import Login from "pages/Auth/Login";
@@ -43,7 +43,7 @@ var routes = [
     path: "/blogs",
     name: "Blogs",
     icon: "ni ni-pin-3 text-orange",
-    component: Blog,
+    component: AllBlogs,
     layout: "/admin",
   },
   {
@@ -53,13 +53,13 @@ var routes = [
     component: Profile,
     layout: "/admin",
   },
-  {
-    path: "/preview",
-    name: "Preview",
-    icon: "ni ni-palette text-green",
-    component: Preview,
-    layout: "/admin",
-  },
+  // {
+  //   path: "/preview",
+  //   name: "Preview",
+  //   icon: "ni ni-palette text-green",
+  //   component: Preview,
+  //   layout: "/admin",
+  // },
   {
     path: "/login",
     name: "Login",

@@ -11,5 +11,3 @@ export const COLLEGES = [
   "University School of Design & Innovation, (USDI)",
   "IP Innovation & Incubation Center",
 ];
-
-export const API_BASE_URL = "http://localhost:8888/ACM-new";

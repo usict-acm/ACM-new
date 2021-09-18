@@ -6,6 +6,7 @@ import AuthLayout from "layouts/Auth.js";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "redux/slices/userSlice";
 import { setUser, resetUser } from "redux/slices/userSlice";
+import { fetchUserBlogs } from "api/blog";
 
 const App = () => {
   const dispatch = useDispatch(),
@@ -13,14 +14,20 @@ const App = () => {
     [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const setAllData = async (userData) => {
+      dispatch(setUser(userData));
+      await dispatch(fetchUserBlogs({ userEmail: userData?.email }));
+      setLoading(false);
+    };
+
     setLoading(true);
     const localUser = localStorage.getItem("user");
     if (!localUser) {
       dispatch(resetUser());
       setLoading(false);
     } else {
-      dispatch(setUser(JSON.parse(localStorage.getItem("user"))));
-      setLoading(false);
+      const userData = JSON.parse(localUser);
+      setAllData(userData);
     }
     //eslint-disable-next-line
   }, []);
