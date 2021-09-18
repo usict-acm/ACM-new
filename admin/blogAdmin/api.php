@@ -640,6 +640,53 @@ if ($result) {
 }
 };
 
+function getFields(){
+    
+    // Instantiate DB & connect
+    $database = new Database();
+    // echo "check1";
+    $db = $database->connect();
+    // echo "check2";
+    // echo $db;
+    // echo "checking";
+  // Instantiate blog post object
+   $post = new PostForms($db);
+//    echo "check3";
+  
+   // Blog post query
+   $result = $post->fieldsQuery();
+//    echo "check4";
+// var_dump($result);
+   
+   // Check if any posts
+   if($result) {
+    
+   // Post array
+   $posts_arr = array();
+
+   while($row=$result->fetch_assoc()){
+    //    echo $row;
+       $post_item = array(
+           'formName' => $row["formName"],
+           'fieldName' => $row["fieldName"],
+           'fieldType' => $row["fieldType"],
+           'formID' => $row["formID"],
+       );
+           // Push to "data"
+           array_push($posts_arr, $post_item);
+   }
+
+   // Turn to JSON & output
+   echo json_encode($posts_arr);
+//    echo "5";
+
+   } else {
+   // No Posts
+   echo json_encode(
+       array('message' => 'No Posts Found')
+   );
+   }
+};
 $q = $_GET['q'];
 switch ($q) {
     case 'readAll':
@@ -683,6 +730,9 @@ switch ($q) {
         break;
     case 'forms':
         getForms();
+        break;
+    case 'fields':
+        getFields();
         break;
     default:
         echo "Invalid Query";
