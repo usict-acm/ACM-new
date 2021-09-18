@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 body {
   color: #5a5a5a;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   margin-left: 1px;
 }
 
@@ -14,7 +14,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 ul {
@@ -206,7 +206,7 @@ section {
 section {
   width: 100%;
   height: 100vh;
-  background-image: url('../images/FINAL.png');
+  background-image: url("../images/FINAL.png");
   background-size: cover;
 }
 section .leftBox {
@@ -448,7 +448,7 @@ section .events ul li .details a:hover {
     width: 105%;
     height: 100vh;
     margin: 0px -30px 10px 0px;
-    background-image: url('../images/eventsbackground.jpg');
+    background-image: url("../images/eventsbackground.jpg");
     box-sizing: border-box;
   }
 }
@@ -482,7 +482,7 @@ section .events ul li .details a:hover {
     width: 107%;
     height: 100vh;
     margin: 0px -30px 10px 0px;
-    background-image: url('../images/eventsbackground.jpg');
+    background-image: url("../images/eventsbackground.jpg");
     box-sizing: border-box;
   }
 
@@ -533,7 +533,7 @@ section .events ul li .details a:hover {
     width: 110%;
     height: 140vh;
     margin: 20px -30px 0px 0px;
-    background-image: url('../images/eventsbackground.jpg');
+    background-image: url("../images/eventsbackground.jpg");
     box-sizing: border-box;
   }
   section .events ul {
@@ -668,7 +668,7 @@ section .events ul li .details a:hover {
 }
 
 .quote-img:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
   opacity: 1;
 }
 
