@@ -14,26 +14,35 @@ import "../../assets/css/CreateBlog.css";
 import SideNav from "../../components/Navbars/CreateBlogSidebar";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "redux/slices/userSlice";
-import { selectBlogs } from 'redux/slices/blogSlice';
-import { addBlog,fetchUserBlogs } from "api/blog";
-import { useParams } from "react-router";
+import { selectBlogs } from "redux/slices/blogSlice";
+import { useHistory, useParams } from "react-router";
+import { addBlog, updateBlog } from "api/blog";
 
 const CreateBlog = () => {
   const dispatch = useDispatch(),
-  params=useParams(),
+    history = useHistory(),
+    params = useParams(),
+    { blogId } = params,
     user = useSelector(selectUser),
     [title, setTitle] = useState(""),
     [content, setContent] = useState(""),
     [tags, setTags] = useState([]),
-    blogs = useSelector(selectBlogs);
-    console.log(params.blogIndex);
+    blogs = useSelector(selectBlogs),
+    [editorInstance, setEditorInstance] = useState(null),
+    [editingBlog, setEditingBlog] = useState(null);
 
-  useEffect(()=>{
-    dispatch(fetchUserBlogs({userEmail:user?.email}));
-  },[dispatch,user?.email]) 
-  console.log("blog's data :",blogs);
+  useEffect(() => {
+    if (blogId && blogs) {
+      const blog = blogs.find((blog) => blog.blogId === blogId);
+      setEditingBlog(blog);
+      blog && editorInstance && editorInstance.setData(blog?.content || "");
+      setTags(blog?.tags || []);
+      setContent(blog?.content || "");
+      setTitle(blog?.blogTitle || "");
+    }
+  }, [blogs, blogId, editorInstance]);
 
-  function createBlog(draft) {
+  async function createBlog(draft) {
     if (!title || !content) {
       return alert("Title and Content must be mentioned !!");
     }
@@ -45,7 +54,27 @@ const CreateBlog = () => {
       tags,
       isDraft: draft,
     };
-    dispatch(addBlog(data));  
+    let res;
+    if (blogId) {
+      data = {
+        ...data,
+        blogId: editingBlog.blogId,
+        isPublished: !editingBlog.isDraft,
+      };
+      res = await dispatch(updateBlog(data));
+    } else res = await dispatch(addBlog(data));
+
+    // cleanup
+    if (res.status === "success") {
+      editorInstance?.setData("");
+      setTitle("");
+      setContent("");
+      setTags([]);
+
+      history.replace("/blogs");
+    } else if (res.status === "failed") {
+      alert("Process Failed");
+    }
   }
 
   return (
@@ -62,24 +91,29 @@ const CreateBlog = () => {
                       type="name"
                       placeholder="T I T L E"
                       onChange={(event) => setTitle(event.target.value)}
+                      value={title}
                     />
                   </Col>
                   <Col className="text-right">
-                    <Button
-                      className="ni ni-cloud-upload-96 save-btn"
-                      type="button"
-                      color="success"
-                      onClick={() => createBlog(true)}
-                    >
-                      <p className="btn_txt">Save</p>
-                    </Button>
+                    {(!editingBlog || editingBlog?.isDraft) && (
+                      <Button
+                        className="ni ni-cloud-upload-96 save-btn"
+                        type="button"
+                        color="success"
+                        onClick={() => createBlog(true)}
+                      >
+                        <p className="btn_txt">Save</p>
+                      </Button>
+                    )}
                     <Button
                       className="ni ni-curved-next save-btn"
                       type="button"
                       color="warning"
                       onClick={() => createBlog(false)}
                     >
-                      <p className="btn_txt">Publish</p>
+                      <p className="btn_txt">
+                        {!editingBlog?.isDraft ? "Save Changes" : "Publish"}
+                      </p>
                     </Button>
                   </Col>
                 </Row>
@@ -153,6 +187,7 @@ const CreateBlog = () => {
                         },
                       }}
                       onReady={(editor) => {
+                        setEditorInstance(editor);
                         const toolbarContainer =
                           document.querySelector("#toolbar-container");
                         toolbarContainer.appendChild(

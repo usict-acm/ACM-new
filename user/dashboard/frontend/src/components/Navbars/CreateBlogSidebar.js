@@ -3,9 +3,6 @@ import { Button, Input } from "reactstrap";
 import "../../assets/css/CreateBlog.css";
 
 const SideNav = ({ tags, setTags }) => {
-  var today = new Date(),
-    date = today.toDateString();
-
   const [item, setItem] = useState("");
 
   const addTags = () => {
@@ -63,11 +60,6 @@ const SideNav = ({ tags, setTags }) => {
             </div>
           );
         })}
-      </div>
-      <hr />
-      <div>
-        <h4>Published Date : </h4>
-        <p>{date}</p>
       </div>
     </>
   );
