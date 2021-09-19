@@ -62,7 +62,7 @@
 	background: transparent;
 	width: 55px;
 	height: 55px;
-	line-height: 53px;
+	line-height: 47px;
 	margin-top: -30px;
 	text-align: center;
 	border: 2px solid #d4d3d3;
@@ -405,6 +405,7 @@ button:focus {
 }
 .new_footer_top .f_widget.about-widget .f_list li a:hover {
 	color: #5e2ced;
+	font-weight: 600;
 }
 .new_footer_top .f_widget.about-widget .f_list li {
 	margin-bottom: 11px;
@@ -427,6 +428,7 @@ button:focus {
 	font-size: 24px;
 }
 .f_social_icon a {
+	text-decoration: none;
 	width: 46px;
 	height: 46px;
 	border-radius: 50%;
@@ -486,6 +488,7 @@ button:focus {
 }
 .new_footer_top .f_widget.about-widget .f_list li a {
 	color: #6a7695;
+	text-decoration: none;
 }
 .new_footer_top .footer_bg {
 	position: absolute;

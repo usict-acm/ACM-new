@@ -6,8 +6,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<title>Home page</title>
 
-		<!-- fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet" />
 		<!-- for hero section -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
@@ -36,50 +34,42 @@
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-						<div
-							class="slide-inner slide-bg-image"
-							data-background="https://images.unsplash.com/photo-1578934191836-ff5f608c2228?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80"
-						>
-							<div class="container">
+						<div class="slide-inner slide-bg-image" data-background="./assets/images/img1.jpg">
+							<div class="container text-center">
 								<div data-swiper-parallax="300" class="slide-title">
-									<h2>GUITAR CLASSES FOR KIDS</h2>
+									<h2>ACM CHAPTER USICT</h2>
 								</div>
-								<div data-swiper-parallax="400" class="slide-text">
-									<p>Want to see your kid become more expressive?</p>
-								</div>
-								<div class="clearfix"></div>
-								<div data-swiper-parallax="500" class="slide-btns">
-									<a href="#" class="theme-btn-s2">Register now</a>
-									<a href="#" class="theme-btn-s3"
-										><i class="fas fa-chevron-circle-right"></i> Get Info</a
-									>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="slide-inner slide-bg-image" data-background="./assets/images/img3.jpg">
+							<div class="container text-center">
+								<div data-swiper-parallax="300" class="slide-title">
+									<h2>ACM CHAPTER USICT</h2>
 								</div>
 							</div>
 						</div>
 					</div>
 
 					<div class="swiper-slide">
-						<div
-							class="slide-inner slide-bg-image"
-							data-background="https://images.unsplash.com/photo-1579003087287-997fd4d18771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-						>
-							<div class="container">
+						<div class="slide-inner slide-bg-image" data-background="./assets/images/img2.jpg">
+							<div class="container text-center">
 								<div data-swiper-parallax="300" class="slide-title">
-									<h2>GUITAR CLASSES FOR KIDS</h2>
-								</div>
-								<div data-swiper-parallax="400" class="slide-text">
-									<p>Want to see your kid become more expressive?</p>
-								</div>
-								<div class="clearfix"></div>
-								<div data-swiper-parallax="500" class="slide-btns">
-									<a href="#" class="theme-btn-s2">Register now</a>
-									<a href="#" class="theme-btn-s3"
-										><i class="fas fa-chevron-circle-right"></i>Get Info</a
-									>
+									<h2>ACM CHAPTER USICT</h2>
 								</div>
 							</div>
 						</div>
-						<!-- end slide-inner -->
+					</div>
+
+					<div class="swiper-slide">
+						<div class="slide-inner slide-bg-image" data-background="./assets/images/banner-high.png">
+							<div class="container text-center">
+								<div data-swiper-parallax="300" class="slide-title">
+									<h2></h2>
+								</div>
+							</div>
+						</div>
 					</div>
 					<!-- end swiper-slide -->
 				</div>
@@ -100,12 +90,15 @@
 					<img src="./assets/images/aboutUs-icon.png" alt="" class="w-100" />
 				</div>
 			</div>
-			<div class="col-sm-6 col-9 mx-auto p-md-5 p-sm-4">
+			<div class="col-sm-6 col-9 mx-auto pe-md-5 ps-md-0 py-md-5 p-sm-4">
 				<div class="text">
-					<h2 class="my-4 display-2 fw-bolder">About <span class="text-primary">Our Company</span></h2>
+					<h2 class="my-4 display-4 fw-bolder">About <span class="text-primary">Our Chapter</span></h2>
 					<p class="text-secondary fs-5">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi doloremque, fugiat
-						illum magni minus nisi nulla numquam obcaecati placeat quia, repellat tempore voluptatum.
+						ACM Student Chapter, USICT is an official student body incepted in 2019 under the University
+						School USICT, GGSIPU. The chapter will conduct events including programming contests, talks by
+						renowned speakers, workshops etc.which give the students an exposure to the competitive
+						computing world as well as allow them to understand the advancements going on in the computing
+						sphere worldwide.
 					</p>
 				</div>
 			</div>
@@ -113,7 +106,8 @@
 		<!-- end of about section -->
 		<!--***********************blog section***************************************** -->
 		<div class="bloghead">
-			<h2 class="my-4 display-2 fw-bolder"> 	Recent<span class="text-primary"> Blog</span></h2><br>
+			<h2 class="my-4 display-2 fw-bolder">Recent<span class="text-primary"> Blog</span></h2>
+			<br />
 		</div>
 		<div class="b-container">
 			<div class="b-card-container">
@@ -162,7 +156,8 @@
 		<!-- ******************************blog section end***************************************** -->
 		<!-- *******************************************our team************* -->
 		<div class="teamhead">
-			<h2 class="my-4 display-2 fw-bolder"> Our<span class="text-primary"> Team</span></h2><br>
+			<h2 class="my-4 display-2 fw-bolder">Our<span class="text-primary"> Team</span></h2>
+			<br />
 		</div>
 		<div class="container">
 			<!-- <h2>our team</h2> -->
@@ -176,7 +171,7 @@
 								<div class="social-links">
 									<div class="tm-description">
 										<h5 class="tm-name">Anuj</h5>
-										<p class="tm-d">Executive Members </p>
+										<p class="tm-d">Executive Members</p>
 									</div>
 								</div>
 							</figure>
@@ -192,7 +187,7 @@
 								<div class="social-links">
 									<div class="tm-description">
 										<h5 class="tm-name">Harsh Goyal</h5>
-										<p class="tm-d">Executive Members </p>
+										<p class="tm-d">Executive Members</p>
 									</div>
 								</div>
 							</figure>
@@ -208,7 +203,7 @@
 								<div class="social-links">
 									<div class="tm-description">
 										<h5 class="tm-name">Gaurav Jain</h5>
-										<p class="tm-d">Office Bearers </p>
+										<p class="tm-d">Office Bearers</p>
 									</div>
 								</div>
 							</figure>
@@ -256,7 +251,7 @@
 								<div class="social-links">
 									<div class="tm-description">
 										<h5 class="tm-name">Divyansh Rastogi</h5>
-										<p class="tm-d">Joint Secretary </p>
+										<p class="tm-d">Joint Secretary</p>
 									</div>
 								</div>
 							</figure>
@@ -272,7 +267,7 @@
 								<div class="social-links">
 									<div class="tm-description">
 										<h5 class="tm-name">Chaitan Dev</h5>
-										<p class="tm-d">Treasurer </p>
+										<p class="tm-d">Treasurer</p>
 									</div>
 								</div>
 							</figure>
@@ -284,11 +279,11 @@
 					<div class="inner-box">
 						<div class="image-box">
 							<figure class="image">
-								<img src="assets\images\team\anmolRotate.png" alt="" />
+								<img src="assets\images\team\profile_pic_anmol.png" alt="" />
 								<div class="social-links">
 									<div class="tm-description">
 										<h5 class="tm-name">Anmol Goel</h5>
-										<p class="tm-d">Web Chair </p>
+										<p class="tm-d">Web Chair</p>
 									</div>
 								</div>
 							</figure>
@@ -320,7 +315,7 @@
 								<div class="social-links">
 									<div class="tm-description">
 										<h5 class="tm-name">Manoj Kumar</h5>
-										<p class="tm-d">Executive Members </p>
+										<p class="tm-d">Executive Members</p>
 									</div>
 								</div>
 							</figure>
@@ -336,7 +331,7 @@
 								<div class="social-links">
 									<div class="tm-description">
 										<h5 class="tm-name">Tarun</h5>
-										<p class="tm-d">Executive Members </p>
+										<p class="tm-d">Executive Members</p>
 									</div>
 								</div>
 							</figure>
@@ -352,19 +347,13 @@
 								<div class="social-links">
 									<div class="tm-description">
 										<h5 class="tm-name">Vishesh Gupta</h5>
-										<p class="tm-d">Executive Members </p>
+										<p class="tm-d">Executive Members</p>
 									</div>
 								</div>
 							</figure>
 						</div>
 					</div>
 				</div>
-
-				
-
-				
-
-				
 			</div>
 		</div>
 		<!-- *****************************our team end************************************************** -->
@@ -686,9 +675,25 @@
 			<div class="new_footer_top mx-sm-5">
 				<div class="container">
 					<div class="row justify-content-center">
-						<div class="col-lg-3 col-md-6">
+						<div class="col-lg-5 col-md-6 my-auto">
+							<div class="row">
+								<div class="col-lg-3 col-5 mx-auto">
+									<img src="./assets/images/acm1.png" alt="" />
+								</div>
+								<div class="col-lg-9 col-12 text-center">
+									<img src="./assets/images/outstanding-website.png" alt="" />
+								</div>
+							</div>
+							<div class="mt-3 text-center">
+								<p>
+									The USICT ACM Student Chapter is an official student body incepted in 2019 under the
+									University School USICT, GGSIPU.
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-6 ps-lg-3 mt-lg-0 mt-5 ps-5">
 							<div
-								class="f_widget about-widget pl_70 wow fadeInLeft"
+								class="f_widget about-widget wow fadeInLeft"
 								data-wow-delay="0.4s"
 								style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft"
 							>
@@ -703,7 +708,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-6">
+						<div class="col-lg-2 col-md-6 ps-lg-3 mt-lg-0 mt-5 ps-5">
 							<div
 								class="f_widget about-widget pl_70 wow fadeInLeft"
 								data-wow-delay="0.6s"
@@ -720,7 +725,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-6">
+						<div class="col-lg-3 col-md-6 ps-lg-3 mt-lg-0 mt-5 ps-5">
 							<div
 								class="f_widget social-widget pl_70 wow fadeInLeft"
 								data-wow-delay="0.8s"
