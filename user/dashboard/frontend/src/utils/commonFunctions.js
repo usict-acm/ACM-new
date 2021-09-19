@@ -14,7 +14,7 @@ const months = [
 ];
 
 export const formatDate = (timestamp) => {
-  const date = new Date(timestamp);
+  const date = new Date(timestamp.replace(/-/g, "/"));
   return (
     date.getDate() + ", " + months[date.getMonth()] + ", " + date.getFullYear()
   );

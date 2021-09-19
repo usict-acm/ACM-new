@@ -112,7 +112,9 @@ const CreateBlog = () => {
                       onClick={() => createBlog(false)}
                     >
                       <p className="btn_txt">
-                        {!editingBlog?.isDraft ? "Save Changes" : "Publish"}
+                        {editingBlog && !editingBlog?.isDraft
+                          ? "Save Changes"
+                          : "Publish"}
                       </p>
                     </Button>
                   </Col>
@@ -202,7 +204,11 @@ const CreateBlog = () => {
                     />
                   </div>
                   <div className="PostSetting">
-                    <SideNav tags={tags} setTags={setTags} editingBlog={editingBlog} />
+                    <SideNav
+                      tags={tags}
+                      setTags={setTags}
+                      editingBlog={editingBlog}
+                    />
                   </div>
                 </div>
               </Card>
