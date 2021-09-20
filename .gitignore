@@ -3,5 +3,8 @@ cpanel.yml
 */node_modules
 upload/*
 enviornment.php
+.DS_Store
+admin/.DS_Store
+assets/.DS_Store
 .vscode/
 debug.log

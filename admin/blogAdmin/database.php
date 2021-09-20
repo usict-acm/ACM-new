@@ -17,7 +17,7 @@ class Database
     $this->database = $env_database;
     $this->port = $env_port;
     
-    $conn = new mysqli($this->server, $this->username, $this->password, $this->database);
+    $conn = new mysqli($this->server, $this->username, $this->password, $this->database, $this->port);
     return $conn;
   }
 }

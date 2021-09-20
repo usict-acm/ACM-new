@@ -71,7 +71,7 @@
     document.addEventListener('DOMContentLoaded', function() {
       // var blogId = localStorage.getItem('blogId');
       var blogId = <?php echo $_GET['Id'] ?>;
-      console.log(blogId);
+      console.log("blogIDDD",blogId);
       let url = './admin/blogAdmin/api.php/?q=readOne&id=' + blogId;
 
       $(document).ready(function() {
@@ -80,25 +80,26 @@
           method: 'GET',
           dataType: 'JSON',
           success: function(data) {
-            console.log(data);
+            console.log("data herrrr",data);
             if(data.length == 0 || data.message == "No Posts Found"){
               window.document.location = "./blogs.php";
             } else {
-            posts.innerHTML = "<div class='w-100'>\
-            <h1 id='blog_title' class='singleBlog-title'>" + data[0].Title + "</h1>\
-            <div class='singleBlog'>\
-            <img\
-            src='./" + data[0].Image + "'\
-              id='blog_image'\
-              class='card-img-top'\
-              alt='Card image cap'\
-            />\
-            <div class='singleContent'>\
-              <div style='display: flex; justify-content: flex-end'>\
-                <h5 id='blog_date'>" + data[0].Date + "</h5>\
+              posts.innerHTML = "<div class='w-100'>\
+              <h1 id='blog_title' class='singleBlog-title'>" + data[0].Title + "</h1>\
+              <div class='singleBlog'>\
+              <img\
+              src='./" + data[0].Image + "'\
+                id='blog_image'\
+                class='card-img-top'\
+                alt='Card image cap'\
+              />\
+              <div class='singleContent'>\
+                <div style='display: flex; justify-content: flex-end'>\
+                  <h5 id='blog_date'>" + data[0].Date + "</h5>\
+                </div>\
+                <p id='blog_content' class='singleBlog-content'>" + data[0].Content + "</p>\
               </div>\
             </div>\
-          </div>\
           </div>";
             }
           },
