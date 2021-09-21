@@ -23,7 +23,7 @@
           <div class="heading col-xl-9 col-lg-9 col-md-9">
             <h3><span class="uheading">Let's Collaborate</span></h3>
           </div>
-        </div>
+</div>
       </section>
     </div>
   <!-- ****************************************************Collaborators******************************************************************** -->
