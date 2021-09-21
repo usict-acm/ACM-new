@@ -620,8 +620,8 @@ if ($result) {
 
    while ($row = $result->fetch_assoc()) {
        $post_item = array(
-           'id' => $row["id"],
-           'name' => $row["name"],
+           'formID' => $row["Id"],
+           'formName' => $row["name"],
        );
        // Push to "data"
        array_push($posts_arr, $post_item);
@@ -639,6 +639,122 @@ if ($result) {
    echo json_encode(array('message' => 'No Posts Found'));
 }
 };
+
+
+function readResponses(){
+    include_once './forms.php';
+     // Instantiate DB & connect
+    $database = new Database();
+    $db = $database->connect();
+ // echo $db;
+   // Instantiate blog post object
+    $post = new Form($db);
+ 
+ //    echo $year;
+ // echo "helllo";
+    $ID = $_GET['Id'];
+    $formName = $_GET['name'];
+
+    // $limit = 7;
+    // $page = isset($_GET['page']) ? $_GET["page"] : 1;
+ //    echo $page;
+    // $start = ($page - 1) * $limit;
+    // Blog post query
+    $result0 = $post->readFields($ID,$formName);
+    
+ 
+    $result = $post->readAllResponses($ID,$formName);
+    
+
+    $result3 = $post->countFields($ID,$formName);
+    foreach ($result3 as $key => $item) {
+        $count = $item;
+    }
+
+
+    
+    // $countYear = $post->countEventsPerYear($year);
+    // foreach ($countYear as $key => $item) {
+    //     $count = $item;
+    // }
+    
+    // $pages = ceil($count/$limit);
+ 
+    // $numRows = mysqli_num_rows($result);
+     // echo $numRows;
+    // Check if any posts
+    // if($result) {
+ 
+    // // Post array
+    // $posts_arr = array();
+    // $multi_array = array();
+
+    $fielditem = array();
+    $i=0;
+    
+    // while ($i<$count){
+    //     array_push($fielditem,$row['fieldName']);
+    //     $i++;
+    // }
+
+
+    while($row=$result0->fetch_assoc()){
+        $i=0;
+        // while ($i<$count){
+        //     $formitem = array(
+        //         $row[$i] => $row[$row[$i]]
+        //     );
+        // }
+        $post_item = array(
+            'fieldName' => $row["fieldName"]
+        );
+        array_push($fielditem,$post_item);
+        // print_r($row);
+    }
+
+    $sizeofarray = sizeof($fielditem);
+    $responses_array = array();
+
+    while($row=$result->fetch_assoc()){
+        echo json_encode($row);
+
+        $i=0;
+        while($i<$sizeofarray){
+            $fielditem[$i].$fieldName=>$row[$fielditem[$i].$fieldName]
+            $i++;
+
+        }
+        echo json_encode($post_item);
+        // while($i<sizeof($fielditem)){
+            
+        //     $i++
+
+        // }
+    }
+    
+
+
+    // echo json_encode($fielditem);
+
+
+ 
+    // array_push($multi_array,$posts_arr);
+    // array_push($multi_array,$count);
+    // array_push($multi_array,$pages);
+    // // Turn to JSON & output
+    // echo json_encode($multi_array);
+ 
+    // } else {
+    // // No Posts
+    // echo json_encode(
+    //     array('message' => 'No Posts Found')
+    // );
+    // }
+    // print_r($result0);
+
+
+
+ };
 
 $q = $_GET['q'];
 switch ($q) {
@@ -684,6 +800,10 @@ switch ($q) {
     case 'forms':
         getForms();
         break;
+    case 'readResponses':
+        readResponses();
+        break;
+        
     default:
         echo "Invalid Query";
 }

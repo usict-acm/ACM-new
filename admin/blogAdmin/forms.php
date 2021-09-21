@@ -52,5 +52,36 @@
           return $stmt->fetch_assoc();
           }
 
+          public function readAllResponses($ID,$formName) {
+               // Create query
+               // $formName = $formName;
+               // $value = explode(" ",$formName);
+               // $val = join("_",$value);
+               $tableName = "responses_" . $formName;
+               $query = 'SELECT * FROM ' . $tableName .'';                                 
+               // echo $query;
+               $stmt = $this->conn->query($query); 
+               // echo "statement".$stmt;  
+               return $stmt;
+               }
+
+          public function readFields($id,$formname) {
+               $value = explode("_",$formname);
+               $val = join(" ",$value);
+               $query = ' SELECT f.* FROM fields f WHERE f.formID = '.$id.' '; 
+               $stmt = $this->conn->query($query); 
+               // echo "statement".$stmt;  
+               echo $query;
+               return $stmt;
+               
+          }
+
+          public function countFields($id,$formname) {
+               $query = ' SELECT COUNT(*) FROM fields WHERE formID = '.$id.' '; 
+               $stmt = $this->conn->query($query); 
+               // echo "statement".$stmt;  
+               echo $query;
+               return $stmt->fetch_assoc();
+          }
      }
 
