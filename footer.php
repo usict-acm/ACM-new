@@ -46,21 +46,21 @@
             <ul style="padding-left: 0">
               <li>
                 <i class="fa fa-angle-right"></i>
-                <a href="http://www.ipu.ac.in/"> IPU-Home</a>
+                <a target="_blank" href="http://www.ipu.ac.in/"> IPU-Home</a>
               </li>
               <li>
                 <i class="fa fa-angle-right"></i>
-                <a href="https://india.acm.org/"> ACM-India</a>
+                <a target="_blank" href="https://india.acm.org/"> ACM-India</a>
               </li>
               <li>
                 <i class="fa fa-angle-right"></i>
-                <a href="https://www.acm.org/governance/acm-india-council">
+                <a target="_blank" href="https://www.acm.org/governance/acm-india-council">
                   ACM-India Office Bearers</a
                 >
               </li>
               <li>
                 <i class="fa fa-angle-right"></i>
-                <a
+                <a target="_blank"
                   href="https://amturing.acm.org/award_winners/reddy_9634208.cfm"
                 >
                   ACM Turing Award</a
@@ -68,11 +68,11 @@
               </li>
               <li>
                 <i class="fa fa-angle-right"></i>
-                <a href="./clubs.php">Our Clubs</a>
+                <a target="_blank" href="./clubs.php">Our Clubs</a>
               </li>
               <li>
                 <i class="fa fa-angle-right"></i>
-                <a href="./collab.php">Our Sponsors</a>
+                <a target="_blank" href="./collab.php">Our Sponsors</a>
               </li>
             </ul>
           </div>
@@ -89,12 +89,12 @@
             </p>
 
             <div class="social-links" style="    text-align-last: justify; font-size: x-large;">
-              <a href="https://www.facebook.com/acmusict" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="https://www.youtube.com/channel/UCI7her-mYrb7QM0t9S_nA_Q" class="youtube"><i class="fa fa-youtube"></i></a>
-              <a href="https://www.instagram.com/acmusict/" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="mailto:acmusit@gmail.com" class="envelope"><i class="fa fa-envelope-o"></i></a>
-              <a href="https://github.com/usict-acm/ACM-new" class="github"><i class="fab fa-github"></i></a>
-              <a href="https://discord.gg/74d2u7rv" class="discord"><i class="fab fa-discord"></i></a>
+              <a target="_blank" href="https://www.facebook.com/acmusict" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a target="_blank" href="https://www.youtube.com/channel/UCI7her-mYrb7QM0t9S_nA_Q" class="youtube"><i class="fa fa-youtube"></i></a>
+              <a target="_blank" href="https://www.instagram.com/acmusict/" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a target="_blank" href="mailto:acmusit@gmail.com" class="envelope"><i class="fa fa-envelope-o"></i></a>
+              <a target="_blank" href="https://github.com/usict-acm/ACM-new" class="github"><i class="fab fa-github"></i></a>
+              <a target="_blank" href="http://usict.acm.org/discord" class="discord"><i class="fab fa-discord"></i></a>
             </div>
 
           </div>
