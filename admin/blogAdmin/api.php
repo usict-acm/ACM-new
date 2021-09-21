@@ -641,7 +641,7 @@ if ($result) {
 };
 
 
-// function readResponses(){
+function readResponses(){
 //     include_once './forms.php';
 //      // Instantiate DB & connect
 //     $database = new Database();
@@ -709,27 +709,27 @@ if ($result) {
     
 
 
-//     // echo json_encode($fielditem);
+    // echo json_encode($fielditem);
 
 
  
-//     // array_push($multi_array,$posts_arr);
-//     // array_push($multi_array,$count);
-//     // array_push($multi_array,$pages);
-//     // // Turn to JSON & output
-//     // echo json_encode($multi_array);
+    // array_push($multi_array,$posts_arr);
+    // array_push($multi_array,$count);
+    // array_push($multi_array,$pages);
+    // // Turn to JSON & output
+    // echo json_encode($multi_array);
  
-//     // } else {
-//     // // No Posts
-//     // echo json_encode(
-//     //     array('message' => 'No Posts Found')
-//     // );
-//     // }
-//     // print_r($result0);
+    // } else {
+    // // No Posts
+    // echo json_encode(
+    //     array('message' => 'No Posts Found')
+    // );
+    // }
+    // print_r($result0);
 
 
 
-//  };
+ };
 
 function getFields(){
     
