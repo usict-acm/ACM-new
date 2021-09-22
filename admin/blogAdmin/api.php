@@ -2,19 +2,18 @@
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
-include_once './database.php';
-include_once './posts.php';
+    include_once './database.php';
+    include_once './posts.php';
+    include_once '../../events/eventPost.php';
+ 
 
-$method = $_SERVER['REQUEST_METHOD'];
-
-function read()
-{
-    // Instantiate DB & connect
-    $database = new Database();
-    $db = $database->connect();
-
-    // Instantiate blog post object
-    $post = new Post($db);
+    $method = $_SERVER['REQUEST_METHOD'];
+    function read(){
+         // Instantiate DB & connect
+        $database = new Database();
+        $db = $database->connect();
+        // Instantiate blog post object
+        $post = new Post($db);
 
     $limit = 10;
     $page = isset($_GET['page']) ? $_GET["page"] : 1;
@@ -55,7 +54,6 @@ function read()
 
         // Turn to JSON & output
         echo json_encode($multi_array_posts);
-
         // echo json_encode($pages);
 
     } else {
@@ -191,7 +189,7 @@ function read_one()
     $database = new Database();
     $db = $database->connect();
     $id = $_GET['id'];
-
+    
     // echo $db;
 
     // Instantiate blog post object
@@ -307,8 +305,170 @@ function postblog()
         }
     }
    };
+   function yearWiseEvent1(){
+    // include_once '../../events/eventPost.php';
+    //   echo "checing";
+    // Instantiate DB & connect
+    $database = new Database();
+    // echo "check1";
+    $db = $database->connect();
+    // echo "check2";
+    // echo $db;
+    // echo "checking";
+  // Instantiate blog post object
+   $post = new PostEvent($db);
+//    echo "check3";
+  
+   // Blog post query
+   $result = $post->eventFolder();
+//    echo "check4";
+// var_dump($result);
+   
+   // Check if any posts
+   if($result) {
+    
+   // Post array
+   $posts_arr = array();
 
-   function readAllAnnouncements(){
+   while($row=$result->fetch_assoc()){
+    //    echo $row;
+       $post_item = array(
+           'sno' => $row["sno"],
+           'year' => $row["year"],
+           'numberOfEvents' => $row["numberOfEvents"],
+           'heading' => $row["heading"],
+           'more' => $row["more"],
+       );
+           // Push to "data"
+           array_push($posts_arr, $post_item);
+   }
+
+   // Turn to JSON & output
+   echo json_encode($posts_arr);
+//    echo "5";
+
+   } else {
+   // No Posts
+   echo json_encode(
+       array('message' => 'No Posts Found')
+   );
+   }
+};
+function readEvents(){
+   include_once '../../events/eventPost.php';
+    // Instantiate DB & connect
+   $database = new Database();
+   $db = $database->connect();
+// echo $db;
+  // Instantiate blog post object
+   $post = new PostEvent($db);
+
+//    echo $year;
+// echo "helllo";
+   $year = $_GET['year'];
+   $limit = 7;
+   $page = isset($_GET['page']) ? $_GET["page"] : 1;
+//    echo $page;
+   $start = ($page - 1) * $limit;
+   // Blog post query
+   $result = $post->readYearEvent($year,$start,$limit);
+   $countYear = $post->countEventsPerYear($year);
+   foreach ($countYear as $key => $item) {
+       $count = $item;
+   }
+
+   $pages = ceil($count/$limit);
+
+   $numRows = mysqli_num_rows($result);
+    // echo $numRows;
+   // Check if any posts
+   if($result) {
+
+   // Post array
+   $posts_arr = array();
+   $multi_array = array();
+
+   while($row=$result->fetch_assoc()){
+       $post_item = array(
+           'sno' => $row["sno"],
+           'name' => $row["name"],
+           'description' => $row["description"],
+           'button2Text' => $row["button2Text"],
+           'startDate' => $row["startDate"],
+           'endDate' => $row["endDate"],
+           'button1Text' => $row["button1Text"],
+           'button1Link' => $row["button1Link"],
+           'button2Link' => $row["button2Link"],
+           'partners' => $row["partners"],
+           'speakers' => $row["speakers"],
+           'poster' => $row["poster"],
+           'year' => $row["year"],
+           'time' => $row["time"],
+       );
+           // Push to "data"
+           array_push($posts_arr, $post_item);
+   }
+
+   array_push($multi_array,$posts_arr);
+   array_push($multi_array,$count);
+   array_push($multi_array,$pages);
+   // Turn to JSON & output
+   echo json_encode($multi_array);
+
+   } else {
+   // No Posts
+   echo json_encode(
+       array('message' => 'No Posts Found')
+   );
+   }
+};
+
+function carouselFunctionAPI(){
+    include_once '../../events/eventPost.php';
+    // echo "1";
+    // Instantiate DB & connect
+    $database = new Database();
+    // echo "2";
+    $db = $database->connect();
+    // echo "3";
+    // echo $db;
+    // Instantiate blog post object
+    $post = new PostEvent($db);
+    // echo "4";
+    
+    //    echo $year;
+    // echo "helllo";
+    // $year = $_GET['year'];
+    // Blog post query
+    $result = $post->carouselquerry();
+    // echo "5";
+
+   // Check if any posts
+if($result) {
+
+   // Post array
+   $posts_arr = array();
+
+   while($row=$result->fetch_assoc()){
+       $post_item = array(
+           'poster' => $row["poster"],
+       );
+           // Push to "data"
+           array_push($posts_arr, $post_item);
+   }
+
+   // Turn to JSON & output
+   echo json_encode($posts_arr);
+
+   } else {
+   // No Posts
+   echo json_encode(
+       array('message' => 'No Posts Found')
+   );
+   }
+};
+
+function readAllAnnouncements(){
     $database = new Database();
     $db = $database->connect();
     $announcement = new Announcement($db);
@@ -335,60 +495,62 @@ function postblog()
             );
             array_push($announcements_arr, $announcement_item);
         } 
-        echo json_encode($announcements_arr);}}
-    
-    function postAnnouncement(){
+        echo json_encode($announcements_arr);
+    }
+}
+
+function postAnnouncement(){
     $database = new Database();
     $db = $database->connect();
-        $txtTitle = $_POST["name"];
-        $txtDescription =  $_POST["description"];
-        $txtStartdate = $_POST["startDate"];
-        $txtEnddate = $_POST["endDate"];
-        $txtButton1Text = $_POST["button1Text"];
-        $txtButton1Link = $_POST["button1Link"];
-        $txtButton2Text = $_POST["button2Text"];
-        $txtButton2Link = $_POST["button2Link"];
-        $txtPartners = $_POST["partners"];
-        $txtSpeakers = $_POST["speakers"];
-        $txtYear = $_POST["year"];
-        $txtTime = $_POST["time"];
-        $file = isset($_FILES['poster']) ? $_FILES['poster'] : false;
+    $txtTitle = $_POST["name"];
+    $txtDescription =  $_POST["description"];
+    $txtStartdate = $_POST["startDate"];
+    $txtEnddate = $_POST["endDate"];
+    $txtButton1Text = $_POST["button1Text"];
+    $txtButton1Link = $_POST["button1Link"];
+    $txtButton2Text = $_POST["button2Text"];
+    $txtButton2Link = $_POST["button2Link"];
+    $txtPartners = $_POST["partners"];
+    $txtSpeakers = $_POST["speakers"];
+    $txtYear = $_POST["year"];
+    $txtTime = $_POST["time"];
+    $file = isset($_FILES['poster']) ? $_FILES['poster'] : false;
+
+    if(!$file){
+        echo json_encode(
+            array('message' => 'Insert the image')
+        );
+    }
+
+    $filename = $file['name'];
+    $filetemppath= $file['tmp_name'];
+
+    $fileext = explode('.',$filename);
+    $filecheck = strtolower(end($fileext));
+
+    $fileextstored = array('png','jpg','jpeg');
     
-        if(!$file){
+    if(in_array($filecheck,$fileextstored)){
+        $destinationfile = 'upload/announcements/'.$filename;
+        $uploadLocation = '../../upload/announcements/'.$filename;
+        move_uploaded_file($filetemppath,$uploadLocation);
+
+        $sql = "INSERT INTO `event` (`sno`, `name`, `description`, `startDate`, `endDate` , `button1Text`, `button1Link`, `button2Text`, `button2Link` , `partners` , `speakers` , `poster` , `year` , `time`) VALUES ('0', '$txtTitle', '$txtDescription','$txtStartdate','$txtEnddate','$txtButton1Text', '$txtButton1Link', '$txtButton2Text', '$txtButton2Link', '$txtPartners','$txtSpeakers', '$destinationfile', '$txtYear', '$txtTime');";
+        if($db->query($sql) == true){
             echo json_encode(
-                array('message' => 'Insert the image')
-            );
-        }
-    
-        $filename = $file['name'];
-        $filetemppath= $file['tmp_name'];
-    
-        $fileext = explode('.',$filename);
-        $filecheck = strtolower(end($fileext));
-    
-        $fileextstored = array('png','jpg','jpeg');
-        
-        if(in_array($filecheck,$fileextstored)){
-            $destinationfile = 'upload/announcements/'.$filename;
-            $uploadLocation = '../../upload/announcements/'.$filename;
-            move_uploaded_file($filetemppath,$uploadLocation);
-    
-            $sql = "INSERT INTO `event` (`sno`, `name`, `description`, `startDate`, `endDate` , `button1Text`, `button1Link`, `button2Text`, `button2Link` , `partners` , `speakers` , `poster` , `year` , `time`) VALUES ('0', '$txtTitle', '$txtDescription','$txtStartdate','$txtEnddate','$txtButton1Text', '$txtButton1Link', '$txtButton2Text', '$txtButton2Link', '$txtPartners','$txtSpeakers', '$destinationfile', '$txtYear', '$txtTime');";
-            if($db->query($sql) == true){
-                echo json_encode(
-                    array('message' => 'Form has been submitted')
-                );       
-            } else{
-                echo json_encode(
-                    array('message' => 'Internal Server Error. Try Again')
-                );
-            }
+                array('message' => 'Form has been submitted')
+            );       
         } else{
             echo json_encode(
-                array('message' => 'Insert the image')
+                array('message' => 'Internal Server Error. Try Again')
             );
         }
-    };
+    } else{
+        echo json_encode(
+            array('message' => 'Insert the image')
+        );
+    }
+};
 
 function postImage()
 {
@@ -408,8 +570,8 @@ function postImage()
         $fileextstored = array('png', 'jpg', 'jpeg');
 
         if (in_array($filecheck, $fileextstored)) {
-            $destinationfile = 'upload/eventGallery/' . $filename;
-            $uploadLocation = '../../upload/eventGallery/' . $filename;
+            $destinationfile = 'upload/announcements/' . $filename;
+            $uploadLocation = '../../upload/announcements/' . $filename;
 
             move_uploaded_file($filetemppath, $uploadLocation);
 
@@ -461,7 +623,16 @@ switch ($q) {
     case 'postAnnouncement':
         postAnnouncement();
         break;
+    case 'getYearEvent':
+        yearWiseEvent1();
+        break;
+    case 'readAllEvent':
+        readEvents();
+        break;
+    case 'carousel':
+        carouselFunctionAPI();
+        break;
     default:
         echo "Invalid Query";
 }
-    
+?>

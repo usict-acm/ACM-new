@@ -46,7 +46,7 @@
           <li class="nav-item"> <a class="nav-link" href="./blogs.php">Blogs</a> </li>
           <li class="nav-item"> <a class="nav-link" href="./benefits.php">Why Join Us?</a> </li>
           <li class="nav-item"> <a class="nav-link" href="./clubs.php">Clubs</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="./Team.php">Our Team</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="./team.php">Our Team</a> </li>
           <li class="nav-item"> <a class="nav-link" href="#contact">Contact Us</a> </li>
           <li class="nav-item"> <a class="nav-link"
               href="./benefits.php#registration">ACM
@@ -194,9 +194,9 @@
 
   <!-- ====================================Announcement============================================= -->
 
-  <section class="announcement">
+  <!-- <section class="announcement">
     <h1 class="section-heading announce">Announcements</h1>
-    <div class="container-fluid text">
+    <div class="container-fluid text"> -->
       <!-- <div class="swiper-container"> -->
         <!-- <div class="swiper-wrapper"> -->
 
@@ -204,7 +204,7 @@
           
 
           <!-- <div class="swiper-slide"> -->
-            <div class="det">
+            <!-- <div class="det">
               <div class="heading">
                 <h1>
                    ACM USICT Summer Internship
@@ -228,13 +228,13 @@
 
                       <br>Please note that the form is open for all courses of USICT
                     </p>
-                    <div style="display: flex;justify-content: space-evenly;">
+                    <div style="display: flex;justify-content: space-evenly;"> -->
                       <!-- <a target="_blank" href="http://bit.do/ReactNativeWorkshop"><button
                           class="btn announce-button-one" style="background-color:#2250fc">
                           <span style="color:#fff; font-size:0.9rem">REGISTER NOW</span>
                         </button>
                       </a> -->
-                      <a target="_blank"
+                      <!-- <a target="_blank"
                         href="./summerinternship/index.php"><button class="btn"
                           style="background-color:#2250fc">
                           <span style="color:#fff; font-size:0.9rem">REGISTER NOW</span>
@@ -247,9 +247,9 @@
                 </div>
                 <div class="col-md-5 list">
 
-                  <img class="imag imag_trell" src="./assets/images/Summer Internship 2021.jpeg" alt="">
+                  <img class="imag imag_trell" src="./assets/images/Summer Internship 2021.jpeg" alt=""> -->
 
-                </div>
+                <!-- </div> -->
 
               <!-- </div> -->
 
@@ -334,7 +334,7 @@
 
           </div> -->
 
-          <div class="swiper-slide">
+          <!-- <div class="swiper-slide">
             <div class="det">
               <div class="heading">
                 <h1>Blog Writing Competition</h1>
@@ -406,7 +406,7 @@
               </div>
  -->
 
-
+<!-- 
             </div>
           </div>
         </div>
@@ -414,12 +414,8 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
-    </div>
-  </section>  -->
-
-  <?php 
-    require_once("./announcement.php"); 
-  ?>
+    </div> -->
+  <!-- </section> -->
 
 <!-- ******************************************Blogs******************************************* -->
 
@@ -572,7 +568,7 @@
       <!-- ********************************************EVENT ARD***************************************************  -->
       <div class="wrapper">
         <div class="link_wrapper">
-          <a href="./events/index.html">Know More!</a>
+          <a href="./events.php">Know More!</a>
           <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
               <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
