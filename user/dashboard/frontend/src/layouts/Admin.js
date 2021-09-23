@@ -26,7 +26,7 @@ import Sidebar from "components/Sidebar/Sidebar.js";
 
 import routes from "routes.js";
 import CreateBlog from "pages/Admin/CreateBlog";
-import DisplayBlog from "pages/Admin/DisplayBlog";
+import EventDetails from '../pages/Admin/Events/EventDetails'
 
 const Admin = (props) => {
   const mainContent = React.useRef(null);
@@ -74,7 +74,7 @@ const Admin = (props) => {
           {getRoutes(routes)}
           <Route exact path="/createBlog/:blogId" component={CreateBlog} />
           <Route exact path="/createBlog" component={CreateBlog} />
-          <Route exact path="/blog/:blogId" component={DisplayBlog} />
+          <Route exact path="/event/:id" component={EventDetails} />
           <Redirect from="*" to="/profile" />
         </Switch>
         <Container fluid>
