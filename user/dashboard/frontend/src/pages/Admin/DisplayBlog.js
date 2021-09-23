@@ -7,7 +7,7 @@ import { selectBlogs } from "redux/slices/blogSlice";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import documentEditor from "ckeditor5-custom-build";
 import "assets/css/CreateBlog.css";
-import { formatDate } from "utils/commonFunctions";
+// import { formatDate } from "utils/commonFunctions";
 import SideBar from "components/Blogs/DisplayBlogSideBar.js"
 
 export default function Preview() {

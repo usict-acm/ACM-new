@@ -18,6 +18,7 @@
 import Index from "views/Index.js";
 import Profile from "pages/Admin/Profile.js";
 import AllBlogs from "pages/Admin/AllBlogs.js";
+import AllEvents from "pages/Admin/Events/AllEvents";
 import Icons from "views/examples/Icons.js";
 import Register from "pages/Auth/Register";
 import Login from "pages/Auth/Login";
@@ -42,6 +43,13 @@ var routes = [
     name: "Blogs",
     icon: "ni ni-pin-3 text-orange",
     component: AllBlogs,
+    layout: "/admin",
+  },
+  {
+    path: "/events",
+    name: "All Events",
+    icon: "ni ni-album-2 text-blue",
+    component: AllEvents,
     layout: "/admin",
   },
   {
