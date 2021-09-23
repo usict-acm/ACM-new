@@ -10,9 +10,8 @@ import {
   import "../../../assets/css/events/eventDetails.css"
 
 export default function EventDetails(){
-    const {id} = useParams();
-    const event = data.find( item=>item.id === id )
-
+    const {eventId} = useParams();
+    const event = data.find( item=>item.eventId === eventId )
 
     return(
 

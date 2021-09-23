@@ -1,6 +1,6 @@
 const data = [
     {
-      id: "1",
+      eventId: "1",
       heading: "session on react native",
       date: "12th sep, 2021",
       time: "1:00 PM",
@@ -11,7 +11,7 @@ const data = [
       banner: "https://pbs.twimg.com/media/ExpuvwSVEAkLDi1.jpg:large",
     },
     {
-      id: "2",
+      eventId: "2",
       heading: "session on ML",
       date: "13th sep, 2021",
       time: "3:00 PM",
@@ -22,7 +22,7 @@ const data = [
       banner: "https://pbs.twimg.com/media/ExpuvwSVEAkLDi1.jpg:large",
     },
     {
-      id: "3",
+      eventId: "3",
       heading: "Valorant",
       date: "14th sep, 2021",
       time: "2:00 PM",
@@ -34,7 +34,7 @@ const data = [
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCRFX4LQjx6ai5yK_N4n9SDaX5vWEsPlAIFA&usqp=CAU",
     },
     {
-      id: "4",
+      eventId: "4",
       heading: "Write It Loud",
       date: "15th sep, 2021",
       time: "2:00 PM",

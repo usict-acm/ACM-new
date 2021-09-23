@@ -74,7 +74,7 @@ const Admin = (props) => {
           {getRoutes(routes)}
           <Route exact path="/createBlog/:blogId" component={CreateBlog} />
           <Route exact path="/createBlog" component={CreateBlog} />
-          <Route exact path="/event/:id" component={EventDetails} />
+          <Route exact path="/event/:eventId" component={EventDetails} />
           <Redirect from="*" to="/profile" />
         </Switch>
         <Container fluid>

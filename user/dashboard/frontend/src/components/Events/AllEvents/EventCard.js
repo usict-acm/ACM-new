@@ -47,7 +47,7 @@ const history = useHistory()
                 <div className="text-right eventDetails p-4 ">
                   <Button
                   className="eventBtn"
-                  onClick={()=> history.push(`/event/${event.id}`)}
+                  onClick={()=> history.push(`/event/${event.eventId}`)}
                   >Details
                   </Button>
                 </div>
