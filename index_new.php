@@ -106,8 +106,8 @@
 		<!-- end of about section -->
 		<!--***********************blog section***************************************** -->
 		<div class="bloghead">
-			<h2 class="my-4 display-2 fw-bolder">Recent<span class="text-primary"> Blog</span></h2>
-			<br />
+			<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-primary"> Blog</span></h2>
+			
 		</div>
 		<div class="b-container">
 			<div class="b-card-container">
@@ -156,8 +156,8 @@
 		<!-- ******************************blog section end***************************************** -->
 		<!-- *******************************************our team************* -->
 		<div class="teamhead">
-			<h2 class="my-4 display-2 fw-bolder">Our<span class="text-primary"> Team</span></h2>
-			<br />
+			<h2 class="my-4 display-4 fw-bolder text-center">Our<span class="text-primary"> Team</span></h2>
+			
 		</div>
 		<div class="container">
 			<!-- <h2>our team</h2> -->

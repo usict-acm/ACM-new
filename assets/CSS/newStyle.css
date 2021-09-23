@@ -562,7 +562,7 @@ button:focus {
 }
 
 .b-card {
-	width: 340px;
+	width: auto;
 	height: 280px;
 	margin: 0 10px;
 	display: flex;
@@ -613,6 +613,11 @@ button:focus {
 	margin-left: 28px;
 	margin-bottom: 10px;
 }
+@media (max-width:1024px) {
+	.b-infos {
+		top: 130px;
+	}
+}
 @media (max-width: 768px) {
 	.b-container {
 		display: block;
@@ -620,6 +625,7 @@ button:focus {
 		margin-left: 32%;
 	}
 	.b-card {
+		margin: 0;
 		margin-top: 10px;
 		width: 300px;
 	}
@@ -715,7 +721,7 @@ button:focus {
 .speaker-block .image-box .image img {
 	display: block;
 	width: 100%;
-	height: auto;
+	height: 100%;
 }
 
 .speaker-block .social-links {
