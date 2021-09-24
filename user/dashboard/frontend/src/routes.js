@@ -22,6 +22,7 @@ import AllEvents from "pages/Admin/Events/AllEvents";
 import Icons from "views/examples/Icons.js";
 import Register from "pages/Auth/Register";
 import Login from "pages/Auth/Login";
+import MyEvents from "pages/Admin/Events/MyEvents";
 
 var routes = [
   {
@@ -48,6 +49,13 @@ var routes = [
   {
     path: "/events",
     name: "Events",
+    icon: "ni ni-album-2 text-blue",
+    component: MyEvents,
+    layout: "/admin",
+  },
+  {
+    path: "/my-events",
+    name: "My Events",
     icon: "ni ni-album-2 text-blue",
     component: AllEvents,
     layout: "/admin",
