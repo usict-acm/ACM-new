@@ -183,14 +183,13 @@
 	}
 }
 
-.hero-style .slide-title,
 .hero-style .slide-text,
 .hero-style .slide-btns {
 	max-width: 690px;
 }
 
 .hero-style .slide-title > h2 {
-	font-size: 100px;
+	font-size: 50px;
 	font-weight: 600;
 	line-height: 1;
 	color: #ffffff;
@@ -363,14 +362,13 @@ a:hover {
 }
 .new_footer_area .footer_bottom {
 	padding-top: 5px;
-	padding-bottom: 50px;
 }
 .footer_bottom {
 	font-size: 14px;
 	font-weight: 300;
 	line-height: 20px;
 	color: #7f88a6;
-	padding: 27px 0px;
+	padding: 27px 0px 10px;
 }
 .new_footer_top .company_widget p {
 	font-size: 16px;
@@ -404,7 +402,7 @@ button:focus {
 	outline: none;
 }
 .new_footer_top .f_widget.about-widget .f_list li a:hover {
-	color: #5e2ced;
+	color: #0ab4ca;
 	font-weight: 600;
 }
 .new_footer_top .f_widget.about-widget .f_list li {
@@ -424,7 +422,7 @@ button:focus {
 	height: 44px;
 	line-height: 43px;
 	background: transparent;
-	border: 1px solid #e2e2eb;
+	border: 2px solid #dbdbec;
 	font-size: 24px;
 }
 .f_social_icon a {
@@ -469,8 +467,8 @@ button:focus {
 }
 
 .new_footer_top .f_social_icon a:hover {
-	background: #5e2ced;
-	border-color: #5e2ced;
+	background: #0ab4ca;
+	border-color: #0ab4ca;
 	color: white;
 }
 .new_footer_top .f_social_icon a + a {
@@ -487,7 +485,7 @@ button:focus {
 	font-size: 18px;
 }
 .new_footer_top .f_widget.about-widget .f_list li a {
-	color: #6a7695;
+	color: #212529;
 	text-decoration: none;
 }
 .new_footer_top .footer_bg {
@@ -609,11 +607,11 @@ button:focus {
 	color: #e88f87;
 	pointer-events: none;
 }
-.bloghead{
+.bloghead {
 	margin-left: 28px;
 	margin-bottom: 10px;
 }
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
 	.b-infos {
 		top: 130px;
 	}
@@ -663,9 +661,9 @@ button:focus {
 }
 .speaker-block {
 	position: relative;
-    margin-bottom: 40px;
-    width: 200px;
-    height: 200px;
+	margin-bottom: 40px;
+	width: 200px;
+	height: 200px;
 }
 
 .speaker-block .inner-box {
@@ -710,12 +708,12 @@ button:focus {
 
 .speaker-block .image-box .image {
 	position: relative;
-    margin-bottom: 0;
-    z-index: 1;
-    overflow: hidden;
-    border-radius: 5px;
-    width: 150px;
-    height: 150px;
+	margin-bottom: 0;
+	z-index: 1;
+	overflow: hidden;
+	border-radius: 5px;
+	width: 150px;
+	height: 150px;
 }
 
 .speaker-block .image-box .image img {
@@ -800,7 +798,7 @@ img {
 .tm-name {
 	text-align: center;
 	color: white;
-	padding: "";
+	padding: '';
 }
 .tm-d {
 	font-size: 18px;
@@ -809,7 +807,7 @@ img {
 	text-align: center;
 	line-height: 20px;
 }
-.teamhead{
+.teamhead {
 	margin-left: 28px;
 }
 @media (max-width: 320px) {

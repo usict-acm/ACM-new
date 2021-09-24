@@ -34,18 +34,26 @@
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-						<div class="slide-inner slide-bg-image" data-background="./assets/images/img1.jpg">
+						<div
+							class="slide-inner slide-bg-image"
+							data-background-small="./assets/images/img1-mobile.png"
+							data-background="./assets/images/img1.jpg"
+						>
 							<div class="container text-center">
-								<div data-swiper-parallax="300" class="slide-title">
+								<div class="slide-title">
 									<h2>ACM CHAPTER USICT</h2>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="swiper-slide">
-						<div class="slide-inner slide-bg-image" data-background="./assets/images/img3.jpg">
+						<div
+							class="slide-inner slide-bg-image"
+							data-background-small="./assets/images/img3-mobile.png"
+							data-background="./assets/images/img3.jpg"
+						>
 							<div class="container text-center">
-								<div data-swiper-parallax="300" class="slide-title">
+								<div class="slide-title">
 									<h2>ACM CHAPTER USICT</h2>
 								</div>
 							</div>
@@ -53,9 +61,13 @@
 					</div>
 
 					<div class="swiper-slide">
-						<div class="slide-inner slide-bg-image" data-background="./assets/images/img2.jpg">
+						<div
+							class="slide-inner slide-bg-image"
+							data-background-small="./assets/images/img2-mobile.png"
+							data-background="./assets/images/img2.jpg"
+						>
 							<div class="container text-center">
-								<div data-swiper-parallax="300" class="slide-title">
+								<div class="slide-title">
 									<h2>ACM CHAPTER USICT</h2>
 								</div>
 							</div>
@@ -63,9 +75,13 @@
 					</div>
 
 					<div class="swiper-slide">
-						<div class="slide-inner slide-bg-image" data-background="./assets/images/banner-high.png">
+						<div
+							class="slide-inner slide-bg-image"
+							data-background-small="./assets/images/banner-high-mobile.png"
+							data-background="./assets/images/banner-high.png"
+						>
 							<div class="container text-center">
-								<div data-swiper-parallax="300" class="slide-title">
+								<div class="slide-title">
 									<h2></h2>
 								</div>
 							</div>
@@ -84,15 +100,15 @@
 		<!-- end of hero slider -->
 
 		<!-- begin of about section -->
-		<div class="d-sm-flex align-items-center w-100 mx-auto mt-2">
-			<div class="col-sm-6 p-md-5 p-sm-3">
+		<div class="d-sm-flex w-100 mx-auto mt-2">
+			<div class="col-sm-6 align-self-center p-md-5 p-sm-3">
 				<div class="image text-center w-75 mx-auto">
 					<img src="./assets/images/aboutUs-icon.png" alt="" class="w-100" />
 				</div>
 			</div>
-			<div class="col-sm-6 col-9 mx-auto pe-md-5 ps-md-0 py-md-5 p-sm-4">
+			<div class="col-sm-6 col-9 mx-auto mt-5 pe-md-5 ps-md-0 py-md-5 p-sm-4 pt-md-0 pt-sm-0">
 				<div class="text">
-					<h2 class="my-4 display-4 fw-bolder">About <span class="text-primary">Our Chapter</span></h2>
+					<h2 class="mb-4 display-4 fw-bolder">About <span class="text-primary">Our Chapter</span></h2>
 					<p class="text-secondary fs-5">
 						ACM Student Chapter, USICT is an official student body incepted in 2019 under the University
 						School USICT, GGSIPU. The chapter will conduct events including programming contests, talks by
@@ -107,7 +123,6 @@
 		<!--***********************blog section***************************************** -->
 		<div class="bloghead">
 			<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-primary"> Blog</span></h2>
-			
 		</div>
 		<div class="b-container">
 			<div class="b-card-container">
@@ -157,7 +172,6 @@
 		<!-- *******************************************our team************* -->
 		<div class="teamhead">
 			<h2 class="my-4 display-4 fw-bolder text-center">Our<span class="text-primary"> Team</span></h2>
-			
 		</div>
 		<div class="container">
 			<!-- <h2>our team</h2> -->
@@ -697,14 +711,23 @@
 								data-wow-delay="0.4s"
 								style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft"
 							>
-								<h3 class="f-title f_600 t_color f_size_18">Download</h3>
+								<h3 class="f-title f_600 t_color f_size_18">Quick Link</h3>
 								<ul class="list-unstyled f_list">
-									<li><a href="#">Company</a></li>
-									<li><a href="#">Android App</a></li>
-									<li><a href="#">ios App</a></li>
-									<li><a href="#">Desktop</a></li>
-									<li><a href="#">Projects</a></li>
-									<li><a href="#">My tasks</a></li>
+									<li><a href="http://www.ipu.ac.in/" target="_blank">IPU-Home</a></li>
+									<li><a href="https://india.acm.org/" target="_blank">ACM-India</a></li>
+									<li>
+										<a href="https://www.acm.org/about-acm/acm-india-council" target="_blank"
+											>ACM-India Office Bearers</a
+										>
+									</li>
+									<li>
+										<a
+											href="https://amturing.acm.org/award_winners/reddy_9634208.cfm"
+											target="_blank"
+											>ACM Turing Award</a
+										>
+									</li>
+									<li><a href="https://usict.acm.org/clubs.html" target="_blank">Our Cluds</a></li>
 								</ul>
 							</div>
 						</div>
@@ -714,29 +737,51 @@
 								data-wow-delay="0.6s"
 								style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft"
 							>
-								<h3 class="f-title f_600 t_color f_size_18">Help</h3>
+								<h3 class="f-title f_600 t_color f_size_18">Contact Us</h3>
 								<ul class="list-unstyled f_list">
-									<li><a href="#">FAQ</a></li>
-									<li><a href="#">Term &amp; conditions</a></li>
-									<li><a href="#">Reporting</a></li>
-									<li><a href="#">Documentation</a></li>
-									<li><a href="#">Support Policy</a></li>
-									<li><a href="#">Privacy</a></li>
+									<li>Dean Office,</li>
+									<li>USICT, GGSIPU</li>
+									<li>Sector 16C,</li>
+									<li>Dwarka, Delhi</li>
+									<li><strong>Phone</strong>: 011-25302702</li>
+									<li><strong>Email</strong>: info@usict.acm.org</li>
 								</ul>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-6 ps-lg-3 mt-lg-0 mt-5 ps-5">
+						<div class="col-lg-2 col-md-6 ps-lg-3 mt-lg-0 mt-5 ps-5">
 							<div
 								class="f_widget social-widget pl_70 wow fadeInLeft"
 								data-wow-delay="0.8s"
 								style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft"
 							>
-								<h3 class="f-title f_600 t_color f_size_18">Team Solutions</h3>
-								<div class="f_social_icon">
-									<a href="#" class="fab fa-facebook"></a>
-									<a href="#" class="fab fa-twitter"></a>
-									<a href="#" class="fab fa-linkedin"></a>
-									<a href="#" class="fab fa-pinterest"></a>
+								<h3 class="f-title f_600 t_color f_size_18">Social Links</h3>
+								<div class="f_social_icon d-sm-flex flex-column">
+									<div class="col mb-2">
+										<a
+											href="https://www.facebook.com/acmusict"
+											class="fab fa-facebook"
+											target="_blank"
+										></a>
+										<a
+											href="https://www.youtube.com/channel/UCI7her-mYrb7QM0t9S_nA_Q"
+											class="fab fa-youtube"
+											target="_blank"
+										></a>
+										<a
+											href="https://www.instagram.com/acmusict/"
+											class="fab fa-instagram"
+											target="_blank"
+										></a>
+									</div>
+									<div class="col">
+										<a
+											href="https://github.com/usict-acm/ACM-new"
+											class="fab fa-github"
+											target="_blank"
+										></a>
+										<a href="#" class="fab fa-discord" target="_blank"></a>
+										<a href="mailto:acmusit@gmail.com" class="fas fa-envelope" target="_blank"></a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -745,7 +790,9 @@
 			</div>
 			<div class="footer_bottom">
 				<div class="container">
-					<p class="text-center">&copy; USIC&T ACM 2021 All rights reserved.</p>
+					<p class="text-center">
+						&copy; Conceptualized,Designed and Developed by Office Bearers of ACM USICT chapter.
+					</p>
 				</div>
 			</div>
 		</footer>
