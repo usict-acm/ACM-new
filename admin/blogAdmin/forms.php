@@ -8,6 +8,15 @@
           public $id;
           public $name;
 
+              // DB stuff
+          private $table1 = 'fields';
+
+
+          // Post Properties
+          public $formName;
+          public $formId;
+          public $fieldName;
+          public $fieldType;
           public function __construct($db){
                $this->conn = $db;
           }
@@ -105,5 +114,12 @@
                // echo $query;
                return $stmt->fetch_assoc();
           }
+
+          public function fieldsQuery() {
+               // Create query
+               $query = 'SELECT b.* FROM ' . $this->table1 .' b';
+               $stmt = $this->conn->query($query);
+               return $stmt;
+             }
      }
 

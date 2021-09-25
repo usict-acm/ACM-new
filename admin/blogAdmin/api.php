@@ -688,8 +688,9 @@ function readResponses(){
 
  };
 
-function getFields(){
-    
+ function getFields(){
+    include_once './forms.php';
+
     // Instantiate DB & connect
     $database = new Database();
     // echo "check1";
@@ -698,7 +699,7 @@ function getFields(){
     // echo $db;
     // echo "checking";
   // Instantiate blog post object
-   $post = new PostForms($db);
+   $post = new Form($db);
 //    echo "check3";
   
    // Blog post query
