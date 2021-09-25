@@ -642,92 +642,49 @@ if ($result) {
 
 
 function readResponses(){
-//     include_once './forms.php';
+    include_once './forms.php';
 //      // Instantiate DB & connect
-//     $database = new Database();
-//     $db = $database->connect();
-//  // echo $db;
+    $database = new Database();
+    $db = $database->connect();
+    
 //    // Instantiate blog post object
-//     $post = new Form($db);
+    $post = new Form($db);
  
 
-//     $ID = $_GET['Id'];
-//     $formName = $_GET['name'];
+    $ID = $_GET['Id'];
+    $formName = $_GET['name'];
 
 
-//     $result0 = $post->readFields($ID,$formName);
+    $allFields = $post->readFields($ID,$formName);
+    $responses = $post->readAllResponses($ID,$formName);
+    $countNumberOfFields = $post->countFields($ID,$formName);
+
+    foreach ($countNumberOfFields as $key => $item) {
+        $count = $item;
+    }
+
+    $allResponses = array();
+    $fieldItem = array();
+    $i=0;
     
- 
-//     $result = $post->readAllResponses($ID,$formName);
-    
+    while ($row=$allFields->fetch_assoc()){
+        array_push($fieldItem,$row['fieldName']);
+        $i++;
+    }
 
-//     $result3 = $post->countFields($ID,$formName);
-//     foreach ($result3 as $key => $item) {
-//         $count = $item;
-//     }
+    array_push($allResponses,$fieldItem);
 
+    while($row=$responses->fetch_assoc()){
+        $fieldItem = array();
+        $i=0;
+        while($i < $count){
+            array_push($fieldItem,$row[$allResponses[0][$i]]);
+            $i++;
+        }
+        array_push($allResponses,$fieldItem);
+    }
 
-
-//     $fielditem = array();
-//     $i=0;
-    
-//     // while ($i<$count){
-//     //     array_push($fielditem,$row['fieldName']);
-//     //     $i++;
-//     // }
-
-
-//     while($row=$result0->fetch_assoc()){
-//         $i=0;
-//         // while ($i<$count){
-//         //     $formitem = array(
-//         //         $row[$i] => $row[$row[$i]]
-//         //     );
-//         // }
-//         $post_item = array(
-//             'fieldName' => $row["fieldName"]
-//         );
-//         array_push($fielditem,$post_item);
-//         // print_r($row);
-//     }
-
-//     $sizeofarray = sizeof($fielditem);
-//     $responses_array = array();
-
-//     while($row=$result->fetch_assoc()){
-//         echo json_encode($row);
-
-//         $i=0;
-//         while($i<$sizeofarray){
-//             $fielditem[$i].$fieldName=>$row[$fielditem[$i].$fieldName]
-//             $i++;
-
-//         }
-//         echo json_encode($post_item);
-
-//     }
-    
-
-
-    // echo json_encode($fielditem);
-
-
- 
-    // array_push($multi_array,$posts_arr);
-    // array_push($multi_array,$count);
-    // array_push($multi_array,$pages);
-    // // Turn to JSON & output
-    // echo json_encode($multi_array);
- 
-    // } else {
-    // // No Posts
-    // echo json_encode(
-    //     array('message' => 'No Posts Found')
-    // );
-    // }
-    // print_r($result0);
-
-
+    echo json_encode($allResponses);
 
  };
 
@@ -778,6 +735,33 @@ function getFields(){
    );
    }
 };
+
+function saveForm(){
+    $database = new Database();
+    $db = $database->connect();
+
+    $form = new Form($db);
+
+    $name = "event 1";
+
+    $value = explode(" ",$name);
+    $val = join("_",$value);
+
+    $request = array();
+    array_push($request,$val);
+
+    for($i = 0; $i < 3; $i++){
+        $field_array = array();
+        array_push($field_array,"Email$i");
+        array_push($field_array,"textbox");
+        array_push($request,$field_array);
+    }
+
+    $form->saveFormInFormsTable($name);
+    $form->saveFormFields($name,$request);
+    $result = $form->createResponseTable($request);
+}
+
 $q = $_GET['q'];
 switch ($q) {
     case 'readAll':
@@ -825,9 +809,11 @@ switch ($q) {
     case 'readResponses':
         readResponses();
         break;
-        
     case 'fields':
         getFields();
+        break;
+    case 'saveForm':
+        saveForm();
         break;
     default:
         echo "Invalid Query";
