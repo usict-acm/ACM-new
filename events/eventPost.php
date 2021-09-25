@@ -73,5 +73,21 @@ class PostEvent {
         
         return $stmt;
         }
+      public function countEvents() {
+        // Create query
+        $query = 'SELECT COUNT(*) FROM ' . $this->table2 .' WHERE EXTRACT(MONTH FROM CURRENT_TIMESTAMP)=EXTRACT(MONTH FROM endDate)';
+        $stmt = $this->conn->query($query);
+        // echo "statement".$stmt;  
+        
+        return $stmt;
+        }
+      public function carouselquerryOne() {
+        // Create query
+        $query = 'SELECT * FROM ' . $this->table2 .' ORDER BY endDate DESC LIMIT 1';
+        $stmt = $this->conn->query($query);
+      // var_dump($stmt);
+      // echo $stmt;
+        return $stmt;
+        }
 }
 ?>
