@@ -792,9 +792,7 @@ img {
 	max-width: 100%;
 	height: auto;
 }
-.tm-description {
-	background-color: rgba(253, 218, 51, 0.85);
-}
+
 .tm-name {
 	text-align: center;
 	color: white;
