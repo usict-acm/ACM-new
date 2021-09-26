@@ -26,6 +26,7 @@ import Sidebar from "components/Sidebar/Sidebar.js";
 
 import routes from "routes.js";
 import CreateBlog from "pages/Admin/CreateBlog";
+import DisplayBlog from "pages/Admin/DisplayBlog";
 import EventDetails from '../pages/Admin/Events/EventDetails'
 
 const Admin = (props) => {
@@ -72,6 +73,7 @@ const Admin = (props) => {
         <AdminNavbar {...props} brandText={getBrandText(location.pathname)} />
         <Switch>
           {getRoutes(routes)}
+          <Route exact path="/blog/:blogId" component={DisplayBlog} />
           <Route exact path="/createBlog/:blogId" component={CreateBlog} />
           <Route exact path="/createBlog" component={CreateBlog} />
           <Route exact path="/event/:eventId" component={EventDetails} />
