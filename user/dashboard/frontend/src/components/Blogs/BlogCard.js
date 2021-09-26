@@ -1,10 +1,10 @@
-import { deleteBlog } from "api/blog";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Button } from "reactstrap";
-import { selectUser } from "redux/slices/userSlice";
-import { formatDate } from "utils/commonFunctions";
-import { useHistory } from "react-router";
+import { deleteBlog } from 'api/blog'
+import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { Button } from 'reactstrap'
+import { selectUser } from 'redux/slices/userSlice'
+import { formatDate } from 'utils/commonFunctions'
+import { useHistory } from 'react-router'
 
 const BlogCard = ({ blogDetails }) => {
   const dispatch = useDispatch(),
@@ -12,16 +12,16 @@ const BlogCard = ({ blogDetails }) => {
     user = useSelector(selectUser),
     //eslint-disable-next-line
     [isHover, setIsHover] = useState(true),
-    [isBtn, setIsBtn] = useState(false);
+    [isBtn, setIsBtn] = useState(false)
 
   const deleteHandler = async () => {
     const body = {
       userEmail: user?.email,
       blogId: blogDetails.blogId,
-    };
-    const res = await dispatch(deleteBlog(body));
-    if (res.status === "failed") alert("Failed to Delete");
-  };
+    }
+    const res = await dispatch(deleteBlog(body))
+    if (res.status === 'failed') alert('Failed to Delete')
+  }
 
   return (
     <div
@@ -33,11 +33,11 @@ const BlogCard = ({ blogDetails }) => {
             : `/blog/${blogDetails.blogId}`
         )
       }
-      className="contentBox"
+      className='contentBox'
       //   onMouseEnter={() => setIsHover(true)}
       //   onMouseLeave={() => setIsHover(false)}
     >
-      <div className="details">
+      <div className='details'>
         <h3>{blogDetails.blogTitle}</h3>
         <p>{formatDate(blogDetails.lastUpdated)}</p>
       </div>
@@ -45,20 +45,22 @@ const BlogCard = ({ blogDetails }) => {
         <div
           onMouseEnter={() => setIsBtn(true)}
           onMouseLeave={() => setIsBtn(false)}
-          className="blog-buttons"
+          className='blog-buttons'
         >
           <Button
-            color="info"
-            className="bx bxs-pencil"
+            color='info'
+            className='bx bxs-pencil'
             onClick={() => history.push(`/createBlog/${blogDetails.blogId}`)}
           ></Button>
-          <Button color="danger" onClick={deleteHandler}>
-            <i className="bx bx-trash"></i>
-          </Button>
+          <Button
+            color='danger'
+            className='bx bx-trash'
+            onClick={deleteHandler}
+          ></Button>
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default BlogCard;
+export default BlogCard
