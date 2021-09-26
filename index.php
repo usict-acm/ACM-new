@@ -418,7 +418,7 @@
     </div>
   </section>
 
-<!-- ******************************************Blogs******************************************* -->
+<!-- ***************Blogs************** -->
 
   <script>
     function readMoreRedirection(id) {
@@ -480,14 +480,14 @@
     });
   </script>
 
-  <!--  *******************************************************************EVENTS*********************************************-->
+  <!--  **********************EVENTS****************-->
 
 
   <section class="event-sec">
     <div class="container events">
       <img src="./assets/images/events.png" style="width: 90px;margin-bottom: 5vh;" alt="">
       <h1 class="section-heading announce">Events & Announcements</h1>
-      <!-- ********************************************EVENT ARD***************************************************  -->
+      <!-- ***************EVENT ARD******************  -->
       <div class="wrapper">
         <div class="link_wrapper">
           <a href="./events/index.html">Know More!</a>
@@ -502,7 +502,7 @@
   </section>
 
 
-  <!--*******************************************************************TEAM******************************************-->
+  <!--**********************TEAM***************-->
   <section>
     <div class="container-fluid teams" id="team">
       <img src="./assets/images/31-317832_our-team-old-oak-housing-apartment-clip-art.png" style="width:80px;" alt="">
@@ -695,7 +695,7 @@
 
   </section>
 
-  <!--************************************************************Get In touch******************************************-->
+  <!--*********************Get In touch***************-->
   <section id="contact" class="background-grey"
     style="background-color: white;background-image: url('./assets/images/left_bg.png')">
     <div class="container">
@@ -812,7 +812,39 @@
       </div>
     </div>
   </section>
-
+<style>
+#scroll {
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    background-color: #4169e1;
+    text-indent:-9999px;
+    display:none;
+    -webkit-border-radius:60px;
+    -moz-border-radius:60px;
+    border-radius:60px
+}
+#scroll span {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-8px;
+    margin-top:-12px;
+    height:0;
+    width:0;
+    border:8px solid transparent;
+    border-bottom-color:#ffffff;
+}
+#scroll:hover {
+    background-color: #4169e1;
+    opacity:1;filter:"alpha(opacity=100)";
+    -ms-filter:"alpha(opacity=100)";
+}
+</style>
+<a href="#" id="scroll" style="display: none;"> <span></span> </a>
 
  <!-- ==================================Footer==================================== -->
  <?php
@@ -820,7 +852,20 @@
     ?>
   <script src="./assets/JS/glider.js"></script>
   <script src="./assets/JS/main.js"></script>
-  
+  <script>
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});
   </script>
 </body>
 

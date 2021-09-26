@@ -19,7 +19,7 @@
     margin-bottom: 3px;
     padding-top: 7px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
 }
     .control input {
         position: absolute;
@@ -28,12 +28,12 @@
     }
 .control_indicator {
     position: absolute;
-    top: 7px;
+    top: 9px;
     left: 0;
-    height: 24px;
-    width: 24px;
+    height: 18px;
+    width: 18px;
     background: #ffff;
-    border: 2px dashed #2e64cf;
+    border: 2px solid #2e64cf;
     border-radius: 3px;
 }
 .control:hover input ~ .control_indicator,
@@ -63,10 +63,10 @@
     display: block;
 }
 .control-checkbox .control_indicator:after {
-    left: 8px;
-    top: 2px;
-    width: 4px;
-    height: 11px;
+    left: 5px;
+    top: 1px;
+    width: 2px;
+    height: 8px;
     border: solid #ffffff;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
@@ -261,8 +261,8 @@
       <div class="m-b-50" style="text-align: center;">
         <!-- <img style="width: 90px; margin-bottom: 5vh; " class="text-center" src="./assets/images/contact_us_icon.png"
           alt=""> -->
-        <p class="text section-heading h1"> <big> <b>Contact Us</b> </big></p>
-        <p class="text-small" style="color: #373f41; font-weight: normal;"></p>
+        <p class="text section-heading h1" style=" color: #4169E1; font-weight: normal;"> <big> <b>Become Our Partner</b> </big></p>
+        <p class="text-small" ></p>
       </div>
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12">
@@ -304,19 +304,19 @@
             </div>
 
 
-              <label class="form-check-label h4" style="bottom: 150px;margin-bottom:6px; margin-top:10px;" > <b>Sponsorship</b> </label> <br>
+              <label class="form-check-label h4" style="bottom: 150px;margin-bottom:6px; margin-top:10px; color: #4169E1;" > <b>Partnership</b> </label> <br>
         
         
         
 
         <div class="row" style="position:relative;left: 15px; ">
           <div class="form-check form-check-inline col-md-6">
-            <label class="control control-checkbox">Annual Partners<input type="checkbox"/>
+            <label class="control control-checkbox">Annual Partners<input type="checkbox">
               <div class="control_indicator"></div>
             </label>
           </div>
           <div class="form-check form-check-inline"style="position:relative; left:-10px;">
-            <label class="control control-checkbox">Event Partners<input type="checkbox"  />
+            <label class="control control-checkbox">Event Partners<input type="checkbox">
               <div class="control_indicator"></div>
             </label>
           </div>
@@ -324,12 +324,17 @@
         
         <div class="row" style="position:relative; left:15px;margin-bottom:10px;">
           <div class="form-check form-check-inline col-md-6">
-            <label class="control control-checkbox">Domain Partners<input type="checkbox"  />
+            <label class="control control-checkbox">Domain Partners<input type="checkbox">
               <div class="control_indicator"></div>
             </label>
           </div>
           <div class="form-check form-check-inline " style="position:relative; left:-10px;">
-            <label class="control control-checkbox">Social Media Partners<input type="checkbox"  />
+            <label class="control control-checkbox">Social Media Partners<input type="checkbox">
+              <div class="control_indicator"></div>
+            </label>
+          </div>
+          <div class="form-check form-check-inline col-md-6">
+            <label class="control control-checkbox">Miscellaneous<input type="checkbox">
               <div class="control_indicator"></div>
             </label>
           </div>
