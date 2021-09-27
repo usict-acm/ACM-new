@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>Home page</title>
+		<title>ACM USICT</title>
 
 		<!-- for hero section -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
@@ -122,7 +122,7 @@
 		<!-- end of about section -->
 		<!--***********************blog section***************************************** -->
 		<div class="bloghead">
-			<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-primary"> Blog</span></h2>
+			<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-primary"> Blogs</span></h2>
 		</div>
 		<div class="b-container">
 			<div class="b-card-container">
@@ -174,7 +174,6 @@
 			<h2 class="my-4 display-4 fw-bolder text-center">Our<span class="text-primary"> Team</span></h2>
 		</div>
 		<div class="container">
-			<!-- <h2>our team</h2> -->
 
 			<div class="row s-row">
 				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
