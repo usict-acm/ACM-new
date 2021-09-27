@@ -9,6 +9,7 @@
     <link href='./assets/CSS/styles.css' rel="stylesheet" />
     <link href='./assets/CSS/glider.css' rel="stylesheet" />
     <link href='./assets/CSS/footer.css' rel="stylesheet" />
+    
     <style>
       @media (min-width: 0px) and (max-width: 500px) {
         section {
@@ -813,38 +814,20 @@
     </div>
   </section>
 <style>
-#scroll {
-    position:fixed;
-    right:10px;
-    bottom:10px;
-    cursor:pointer;
-    width:50px;
-    height:50px;
-    background-color: #4169e1;
-    text-indent:-9999px;
-    display:none;
-    -webkit-border-radius:60px;
-    -moz-border-radius:60px;
-    border-radius:60px
+body {
+	background-color: #3498db;
+	color: #ecf0f1;
 }
-#scroll span {
-    position:absolute;
-    top:50%;
-    left:50%;
-    margin-left:-8px;
-    margin-top:-12px;
-    height:0;
-    width:0;
-    border:8px solid transparent;
-    border-bottom-color:#ffffff;
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
 }
-#scroll:hover {
-    background-color: #4169e1;
-    opacity:1;filter:"alpha(opacity=100)";
-    -ms-filter:"alpha(opacity=100)";
-}
+
 </style>
-<a href="#" id="scroll" style="display: none;"> <span></span> </a>
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button" style="background-color: #4169e1; color: #fff; border-radius: 50%;"><i class="fas fa-arrow-up"></i></a>
 
  <!-- ==================================Footer==================================== -->
  <?php
@@ -853,18 +836,21 @@
   <script src="./assets/JS/glider.js"></script>
   <script src="./assets/JS/main.js"></script>
   <script>
-$(document).ready(function(){ 
-    $(window).scroll(function(){ 
-        if ($(this).scrollTop() > 100) { 
-            $('#scroll').fadeIn(); 
-        } else { 
-            $('#scroll').fadeOut(); 
-        } 
-    }); 
-    $('#scroll').click(function(){ 
-        $("html, body").animate({ scrollTop: 0 }, 600); 
-        return false; 
-    }); 
+$(document).ready(function(){
+	$(window).scroll(function () {
+			if ($(this).scrollTop() > 50) {
+				$('#back-to-top').fadeIn();
+			} else {
+				$('#back-to-top').fadeOut();
+			}
+		});
+		// scroll body to 0px on click
+		$('#back-to-top').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 400);
+			return false;
+		});
 });
   </script>
 </body>
