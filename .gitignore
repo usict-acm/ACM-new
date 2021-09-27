@@ -12,3 +12,7 @@ package-lock.json
 .eslintcache
 *.lock
 .env
+admin/.DS_Store
+assets/.DS_Store
+.vscode/
+debug.log
