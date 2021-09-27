@@ -29,9 +29,54 @@
 		<link rel="stylesheet" href="./assets/CSS/newStyle.css" />
 	</head>
 	<body>
+		<!-- nav bar -->
+		<nav class="navbar navbar-expand-custom navbar-mainbg">
+        <div class="d-flex main-logo">
+        <a href="./"><img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm logo" />
+        <div class="text-and-logo"></a>
+            <a style="font-size: 16px; padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto text-light"
+                href="./">USICT<span> ACM</span></a>
+            <a href="./"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
+        </div>
+    </div>
+        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mr-5">
+                <div class="hori-selector">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#myCarousel">Home</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./benefits.php">Why Join Us?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./clubs.php">Clubs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./team.php">Our Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact us</a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="./benefits.php#registration">ACM-Registration</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+	<!-- nav-bar end -->
 		<!-- hero Section -->
 		<section class="hero-slider hero-style">
-			<div class="swiper-container">
+			<div class="swiper-container" id="myCarousel">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<div
