@@ -34,7 +34,7 @@
         <div class="d-flex main-logo">
         <a href="./"><img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm logo" />
         <div class="text-and-logo"></a>
-            <a style="font-size: 16px; padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto text-light"
+            <a style="font-size: 16px;  padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto text-light"
                 href="./">USICT<span> ACM</span></a>
             <a href="./"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
         </div>
