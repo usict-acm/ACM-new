@@ -221,39 +221,7 @@
 		<div class="container">
 
 			<div class="row s-row">
-				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-					<div class="inner-box">
-						<div class="image-box">
-							<figure class="image">
-								<img src="assets\images\team\Anuj.jpg" alt="" />
-								<div class="social-links">
-									<div class="tm-description">
-										<h5 class="tm-name">Anuj</h5>
-										<p class="tm-d">Executive Members</p>
-									</div>
-								</div>
-							</figure>
-						</div>
-					</div>
-				</div>
-
-				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-					<div class="inner-box">
-						<div class="image-box">
-							<figure class="image">
-								<img src="assets\images\team\harshGoyal.png" alt="" />
-								<div class="social-links">
-									<div class="tm-description">
-										<h5 class="tm-name">Harsh Goyal</h5>
-										<p class="tm-d">Executive Members</p>
-									</div>
-								</div>
-							</figure>
-						</div>
-					</div>
-				</div>
-
-				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
+			<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
 					<div class="inner-box">
 						<div class="image-box">
 							<figure class="image">
@@ -261,14 +229,13 @@
 								<div class="social-links">
 									<div class="tm-description">
 										<h5 class="tm-name">Gaurav Jain</h5>
-										<p class="tm-d">Office Bearers</p>
+										<p class="tm-d">Chair</p>
 									</div>
 								</div>
 							</figure>
 						</div>
 					</div>
 				</div>
-
 				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
 					<div class="inner-box">
 						<div class="image-box">
@@ -284,7 +251,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
 					<div class="inner-box">
 						<div class="image-box">
@@ -300,7 +266,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
 					<div class="inner-box">
 						<div class="image-box">
@@ -316,7 +281,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
 					<div class="inner-box">
 						<div class="image-box">
@@ -332,7 +296,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
 					<div class="inner-box">
 						<div class="image-box">
@@ -348,7 +311,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
 					<div class="inner-box">
 						<div class="image-box">
@@ -364,7 +326,21 @@
 						</div>
 					</div>
 				</div>
-
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\harshGoyal.png" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Harsh Goyal</h5>
+										<p class="tm-d">Executive Members</p>
+									</div>
+								</div>
+							</figure>
+						</div>
+					</div>
+				</div>
 				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
 					<div class="inner-box">
 						<div class="image-box">
@@ -380,7 +356,22 @@
 						</div>
 					</div>
 				</div>
-
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\Anuj.jpg" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Anuj</h5>
+										<p class="tm-d">Executive Members</p>
+									</div>
+								</div>
+							</figure>
+						</div>
+					</div>
+				</div>
+					
 				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
 					<div class="inner-box">
 						<div class="image-box">
