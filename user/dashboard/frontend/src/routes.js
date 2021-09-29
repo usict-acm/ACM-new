@@ -18,10 +18,10 @@
 // import Index from "views/Index.js";
 import Profile from "pages/Admin/Profile.js";
 import AllBlogs from "pages/Admin/AllBlogs.js";
-import AllEvents from "pages/Admin/Events/AllEvents";
 // import Icons from "views/examples/Icons.js";
 import Register from "pages/Auth/Register";
 import Login from "pages/Auth/Login";
+import AllEvents from "pages/Admin/Events/AllEvents";
 import MyEvents from "pages/Admin/Events/MyEvents";
 
 var routes = [
@@ -57,14 +57,14 @@ var routes = [
     path: "/events",
     name: "Events",
     icon: "ni ni-album-2 text-blue",
-    component: MyEvents,
+    component: AllEvents,
     layout: "/admin",
   },
   {
     path: "/my-events",
     name: "My Events",
     icon: "ni ni-album-2 text-blue",
-    component: AllEvents,
+    component: MyEvents,
     layout: "/admin",
   },  
   {
