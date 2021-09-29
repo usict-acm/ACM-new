@@ -16,6 +16,49 @@
         return $user_data;
     }
 
+    function fetchUserDoc()
+    {
+        if ($_SERVER['REQUEST_METHOD'] != "POST") {
+            echo "Cannot " . $_SERVER['REQUEST_METHOD'] . " /fetchUserDoc";
+            return;
+        }
+        $user = userInit();
+        $req = json_decode(file_get_contents('php://input'), true);
+        if ($req["email"] && $req["userId"]) {
+            $user_data = fetchUserByEmail($user, $req["email"]);
+            if ($user_data) {
+                if($user_data["userId"] == $req["userId"]){
+                    echo json_encode(array(
+                        'message' => 'success',
+                        'user' => array(
+                            'userId' => $user_data["userId"],
+                            'name' => $user_data["name"],
+                            'email' => $user_data["email"],
+                            'profilePhoto' => $user_data["profilePhoto"],
+                            'acmMemberId' => $user_data["acmMemberId"],
+                            'course' => $user_data["course"],
+                            'branch' => $user_data["branch"],
+                            'rollNo' => $user_data["rollNo"],
+                            'college' => $user_data["college"],
+                            'created' => $user_data["created"],
+                            'lastUpdated' => $user_data["lastUpdated"]
+                        )
+                    ));
+                    return;
+                } else {
+                    echo json_encode(array('error' => 'Invalid Details'));
+                    return;
+                }
+            } else {
+                echo json_encode(array('error' => 'Invalid Details'));
+                return;
+            }
+        } else {
+            echo json_encode(array('error' => 'One or more fields are missing.'));
+            return;
+        }
+    }
+
     function login()
     {
         if ($_SERVER['REQUEST_METHOD'] != "POST") {

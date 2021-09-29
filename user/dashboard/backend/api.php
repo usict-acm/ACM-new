@@ -17,6 +17,9 @@ switch ($q) {
     case 'update':
         update();
         break;
+    case 'fetchUserDoc':
+        fetchUserDoc();
+        break;
     case 'createBlog':
         createBlog();
         break;

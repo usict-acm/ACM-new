@@ -15,28 +15,35 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import Index from "views/Index.js";
+// import Index from "views/Index.js";
 import Profile from "pages/Admin/Profile.js";
 import AllBlogs from "pages/Admin/AllBlogs.js";
 import AllEvents from "pages/Admin/Events/AllEvents";
-import Icons from "views/examples/Icons.js";
+// import Icons from "views/examples/Icons.js";
 import Register from "pages/Auth/Register";
 import Login from "pages/Auth/Login";
 import MyEvents from "pages/Admin/Events/MyEvents";
 
 var routes = [
+  // {
+  //   path: "/home",
+  //   name: "Dashboard",
+  //   icon: "ni ni-tv-2 text-primary",
+  //   component: Index,
+  //   layout: "/admin",
+  // },
+  // {
+  //   path: "/icons",
+  //   name: "Icons",
+  //   icon: "ni ni-planet text-blue",
+  //   component: Icons,
+  //   layout: "/admin",
+  // },
   {
-    path: "/home",
-    name: "Dashboard",
-    icon: "ni ni-tv-2 text-primary",
-    component: Index,
-    layout: "/admin",
-  },
-  {
-    path: "/icons",
-    name: "Icons",
-    icon: "ni ni-planet text-blue",
-    component: Icons,
+    path: "/profile",
+    name: "Profile",
+    icon: "ni ni-single-02 text-yellow",
+    component: Profile,
     layout: "/admin",
   },
   {
@@ -59,14 +66,7 @@ var routes = [
     icon: "ni ni-album-2 text-blue",
     component: AllEvents,
     layout: "/admin",
-  },
-  {
-    path: "/profile",
-    name: "Profile",
-    icon: "ni ni-single-02 text-yellow",
-    component: Profile,
-    layout: "/admin",
-  },
+  },  
   {
     path: "/login",
     name: "Login",
