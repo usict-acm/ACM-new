@@ -1,27 +1,42 @@
 /*------------------------------------------navbar-css------------------------------------------------*/
 .outstanding-logo {
-	width: 160px;
-}
+	width: 250px;animation-name: scale-up-center;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-delay: 1s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: none;
+  }
+  @keyframes scale-up-center {
+	0% {
+	  -webkit-transform: scale(0.2);
+	  transform: scale(0.2);
+	}
+	100% {
+	  -webkit-transform: scale(1);
+	  transform: scale(1);
+	}
+  }
 .acm-logo-navbar {
 	width: 100px;
 }
 .main-logo {
-	width: 160px;
+	width: 250px;
+	margin-left: 50px;
 }
 .text-and-logo {
 	margin-left: 20px;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
+  }
 .navbar-logo {
 	padding: 15px;
 	color: #fff;
 }
 .navbar-mainbg {
-	background-color: #5161ce;
-	padding: 0px;
+	background-color: #fff;
+	padding: 10px 0px;
 }
 #navbarSupportedContent {
 	overflow: hidden;
@@ -39,17 +54,18 @@
 	float: left;
 }
 #navbarSupportedContent ul li a {
-	color: rgba(255, 255, 255, 0.5);
+	color: #0a58ca;
 	text-decoration: none;
-	font-size: 15px;
+	font-size: 16px;
+	font-weight: 500;
 	display: block;
-	padding: 20px 20px;
+	padding: 15px 25px;
 	transition-duration: 0.6s;
 	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	position: relative;
 }
 #navbarSupportedContent > ul > li.active > a {
-	color: #5161ce;
+	color: #fff;
 	background-color: transparent;
 	transition: all 0.7s;
 }
@@ -75,12 +91,12 @@
 	height: 100%;
 	top: 0px;
 	left: 0px;
+	/* padding: 0; */
 	transition-duration: 0.6s;
 	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	background-color: #fff;
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
-	margin-top: 10px;
+	background-color: #3498db;
+	border-radius: 5px;
+	/* margin-top: 10px; */
 }
 .hori-selector .right,
 .hori-selector .left {
@@ -94,23 +110,6 @@
 	right: -25px;
 }
 .hori-selector .left {
-	left: -25px;
-}
-.hori-selector .right:before,
-.hori-selector .left:before {
-	content: '';
-	position: absolute;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	background-color: #5161ce;
-}
-.hori-selector .right:before {
-	bottom: 0;
-	right: -25px;
-}
-.hori-selector .left:before {
-	bottom: 0;
 	left: -25px;
 }
 
@@ -481,8 +480,14 @@ a:hover {
 .s-form {
 	width: 500px;
 }
-.s-form-group {
-	margin: 33px;
+
+.s-form-group:hover {
+	color: #0a58ca;
+}
+
+.contact-button:active {
+	color: #fff;
+	border: none;
 }
 
 .svg-media {
@@ -490,14 +495,11 @@ a:hover {
 	height: 440px;
 	width: 440px;
 }
+
 .closebtn {
 	float: right;
 }
-.showbtn {
-	display: block;
-	margin-left: 45%;
-	margin-right: 0%;
-}
+
 .dsph {
 	display: none;
 }
@@ -554,9 +556,15 @@ ul {
 	margin-bottom: 2px;
 }
 .cta-text span {
-	color: #757575;
+	color: #5a5a5a;
 	font-size: 15px;
 }
+
+.cta-text span a {
+	text-decoration: none;
+	color: #5a5a5a;
+}
+
 .footer-content {
 	position: relative;
 	z-index: 2;
@@ -576,9 +584,9 @@ ul {
 	max-width: 150px;
 }
 .footer-text p {
-	margin-bottom: 14px;
+	margin-top: 14px;
 	font-size: 14px;
-	color: #7e7e7e;
+	color: #5a5a5a;
 	line-height: 28px;
 }
 .footer-social-icon span {
@@ -625,7 +633,7 @@ ul {
 	color: #0b7cc2;
 }
 .footer-widget ul li a {
-	color: #878787;
+	color:#5a5a5a;
 	text-decoration: none;
 }
 .copyright-area {
@@ -634,8 +642,9 @@ ul {
 }
 .copyright-text p {
 	margin: 0;
-	font-size: 14px;
+	font-size: 15px;
 	color: #2b2b2b;
+	font-weight: 500;
 }
 .copyright-text p a {
 	color: #ff5e14;
@@ -750,13 +759,10 @@ ul {
 
 .b-date {
 	font-size: 0.7rem;
-	color: #e88f87;
+	color: #b19e9d;
 	pointer-events: none;
 }
-.bloghead {
-	margin-left: 28px;
-	margin-bottom: 10px;
-}
+
 @media (max-width: 1024px) {
 	.b-infos {
 		top: 130px;
