@@ -13,7 +13,7 @@
 
 <body>
 	<!-- nav bar -->
-	<nav class="navbar navbar-expand-custom navbar-mainbg">
+	<nav class="navbar navbar-expand-custom navbar-mainbg" id="navbar">
 		<div class="d-flex main-logo">
 			<a href="./"><img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm logo" /></a>
 			<div class="text-and-logo">
@@ -55,9 +55,36 @@
 		</div>
 	</nav>
 	<!-- nav-bar end -->
+		<!-- ****************************************************contact us ***************************** -->
+		<div class="dsph" id="contact">
+		<div class="d-flex justify-content-center  mt-md-5 s-back">
+			<img src="./assets/images/contact-us-form.png" class="svg-media" alt="" />
+
+			<div>
+				<div class="closebtn">
+					<button class="btn btn-primary s-form-group" onclick="closecontact()">close</button>
+				</div>
+				<form class="s-form">
+					<div class="form-group s-form-group">
+						<input type="text" class="form-control" placeholder="Name" />
+					</div>
+					<div class="form-group s-form-group">
+						<input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" />
+					</div>
+					<div class="form-group s-form-group">
+						<input type="text" class="form-control" placeholder="Phone No" />
+					</div>
+
+					<button type="submit" class="btn btn-primary s-form-group">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- ********************************contact_us end**************************************************** -->
 	<!-- hero Section -->
-	<section class="hero-slider hero-style">
-		<div class="swiper-container" id="myCarousel">
+	<section class="hero-slider hero-style" id="myCarousel">
+		<div class="swiper-container" >
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
 					<div class="slide-inner slide-bg-image" data-background-small="./assets/images/img1-mobile.png" data-background="./assets/images/img1.jpg">
@@ -91,12 +118,12 @@
 
 	<!-- begin of about section -->
 	<div class="d-sm-flex about-us">
-		<div class="col-sm-6 align-self-center p-md-5 p-sm-3">
+		<div class="col-sm-6 align-self-center p-md-5 p-sm-3" id="about1">
 			<div class="image text-center w-75 mx-auto">
 				<img src="./assets/images/aboutUs-icon.png" alt="" class="w-100" />
 			</div>
 		</div>
-		<div class="col-sm-6 col-9 mx-auto mt-3 pe-sm-5 align-self-center">
+		<div class="col-sm-6 col-9 mx-auto mt-3 pe-sm-5 align-self-center" id="about2">
 			<div class="text">
 				<h2 class="mb-4 display-4 fw-bolder text-center text-md-start">
 					About <span class="text-primary">Our Chapter</span>
@@ -121,7 +148,7 @@
 	</div>
 	<!-- end of about section -->
 	<!--***********************blog section***************************************** -->
-	<section class="blogs">
+	<section class="blogs" id="blogs">
 		<div class="bloghead">
 			<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-primary"> Blogs</span></h2>
 		</div>
@@ -181,7 +208,7 @@
 	</script>
 	<!-- ******************************blog section end***************************************** -->
 	<!-- *******************************************our team************* -->
-	<section class="team">
+	<section class="team" id="team">
 		<div class="teamhead">
 			<h2 class="my-4 display-4 fw-bolder text-center">Our<span class="text-primary"> Team</span></h2>
 		</div>
@@ -285,7 +312,7 @@
 								<div class="social-links">
 									<div class="tm-description">
 										<h5 class="tm-name">Sushant Haluwai</h5>
-										<p class="tm-d">Executive Members</p>
+										<p class="tm-d">Executive Member</p>
 									</div>
 								</div>
 							</figure>
@@ -300,7 +327,7 @@
 								<div class="social-links">
 									<div class="tm-description">
 										<h5 class="tm-name">Harsh Goyal</h5>
-										<p class="tm-d">Executive Members</p>
+										<p class="tm-d">Executive Member</p>
 									</div>
 								</div>
 							</figure>
@@ -315,7 +342,7 @@
 								<div class="social-links">
 									<div class="tm-description">
 										<h5 class="tm-name">Manoj Kumar</h5>
-										<p class="tm-d">Executive Members</p>
+										<p class="tm-d">Executive Member</p>
 									</div>
 								</div>
 							</figure>
@@ -330,7 +357,7 @@
 								<div class="social-links">
 									<div class="tm-description">
 										<h5 class="tm-name">Anuj</h5>
-										<p class="tm-d">Executive Members</p>
+										<p class="tm-d">Executive Member</p>
 									</div>
 								</div>
 							</figure>
@@ -346,7 +373,7 @@
 								<div class="social-links">
 									<div class="tm-description">
 										<h5 class="tm-name">Tarun</h5>
-										<p class="tm-d">Executive Members</p>
+										<p class="tm-d">Executive Member</p>
 									</div>
 								</div>
 							</figure>
@@ -362,7 +389,7 @@
 								<div class="social-links">
 									<div class="tm-description">
 										<h5 class="tm-name">Vishesh Gupta</h5>
-										<p class="tm-d">Executive Members</p>
+										<p class="tm-d">Executive Member</p>
 									</div>
 								</div>
 							</figure>
@@ -380,36 +407,10 @@
 	</section>
 	<!-- *****************************our team end************************************************** -->
 
-	<!-- ****************************************************contact us ***************************** -->
-	<div class="dsph" id="contact">
-		<div class="d-flex justify-content-center mr-5 mt-md-5">
-			<img src="./assets/images/contact-us-form.png" class="svg-media" alt="" />
 
-			<div>
-				<div class="closebtn">
-					<button class="btn btn-primary s-form-group" onclick="closecontact()">close</button>
-				</div>
-				<form class="s-form">
-					<div class="form-group s-form-group">
-						<input type="text" class="form-control" placeholder="Name" />
-					</div>
-					<div class="form-group s-form-group">
-						<input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" />
-					</div>
-					<div class="form-group s-form-group">
-						<input type="text" class="form-control" placeholder="Phone No" />
-					</div>
-
-					<button type="submit" class="btn btn-primary s-form-group">Submit</button>
-				</form>
-			</div>
-		</div>
-	</div>
-
-	<!-- ********************************contact_us end**************************************************** -->
 
 	<!--  footer -->
-	<footer class="footer-section">
+	<footer class="footer-section" id="footer">
 		<div class="container">
 			<div class="footer-cta pt-4 pb-3">
 				<div class="row justify-content-center align-items-center">

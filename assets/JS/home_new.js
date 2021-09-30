@@ -1,10 +1,24 @@
 // *************************contact_us function**********************************************
 function showcontact() {
-	document.getElementById('contact').style.display = 'block';
+	document.getElementById('contact').style.display = 'flex';
+	// document.getElementById('navbar').style.display = 'none';
+	// document.getElementById('myCarousel').style.display = 'none';
+	// document.getElementById('about1').style.display = 'none';
+	// document.getElementById('about2').style.display = 'none';
+	// document.getElementById('blogs').style.display = 'none';
+	// document.getElementById('team').style.display = 'none';
+	// document.getElementById('footer').style.display = 'none';
 }
 function closecontact() {
 	document.getElementById('contact').style.display = 'none';
 	document.getElementById('contactus').style.display = 'block';
+	// document.getElementById('navbar').style.display = 'flex';
+	// document.getElementById('myCarousel').style.display = 'flex';
+	// document.getElementById('about1').style.display = 'block';
+	// document.getElementById('about2').style.display = 'block';
+	// document.getElementById('blogs').style.display = 'block';
+	// document.getElementById('team').style.display = 'block';
+	// document.getElementById('footer').style.display = 'block';
 }
 // ****************************contact us function end*******************************************
 
