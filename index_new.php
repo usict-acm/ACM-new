@@ -2,18 +2,12 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>ACM USICT</title>
-
-	<!-- for hero section -->
+	<?php
+	include("head.php")
+	?>
+	<title>USICT ACM</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
-
-	<!-- bootstrap link -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
-	<!-- main css -->
 	<link rel="stylesheet" href="./assets/CSS/newStyle.css" />
 </head>
 
@@ -40,7 +34,7 @@
 					<a class="nav-link" href="#myCarousel">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Blogs</a>
+					<a class="nav-link" href="./blogs.php">Blogs</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="./benefits.php">Why Join Us?</a>
@@ -51,14 +45,11 @@
 				<li class="nav-item">
 					<a class="nav-link" href="./team.php">Our Team</a>
 				</li>
-				<!-- <li class="nav-item">
-					<a class="nav-link" href="#contact">Contact us</a>
-				</li> -->
 				<li class="nav-item">
-					<a class="nav-link" href="./benefits.php#registration">ACM-Registration</a>
+					<a class="nav-link" href="./benefits.php#registration">ACM Registration</a>
 				</li>
 				<li class="nav-item">
-				<a class="nav-link" id="contactus" href="javascript:showcontact()">Contact Us</button></a>
+					<a class="nav-link" id="contactus" href="javascript:showcontact()">Contact Us</button></a>
 				</li>
 			</ul>
 		</div>
@@ -151,235 +142,262 @@
 	<!-- end of about section -->
 	<!--***********************blog section***************************************** -->
 	<section class="blogs">
-	<div class="bloghead">
-		<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-primary"> Blogs</span></h2>
-	</div>
-	<div class="b-container">
-		<div class="b-card-container">
-			<div class="b-card">
-				<div class="b-infos">
-					<p class="b-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, cum.</p>
-					<span class="b-date">August 12, 2021</span>
-				</div>
-				<img src="https://images.unsplash.com/photo-1548625361-58a9b86aa83b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyODc3Njk3Nw&ixlib=rb-1.2.1&q=80&w=400" alt="stars on sky" />
+		<div class="bloghead">
+			<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-primary"> Blogs</span></h2>
+		</div>
+		<div class="b-container" id="threeBlogsRow">
+		</div>
+		<div class="py-3 mt-2 d-md-flex justify-content-sm-center">
+			<div class="col-md-2 col mb-2">
+				<a href="./blogs.php" class="about-button">Read More Blogs</a>
 			</div>
 		</div>
-
-		<div class="b-card-container">
-			<div class="b-card">
-				<div class="b-infos">
-					<p class="b-text">
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, assumenda!
-					</p>
-					<span class="b-date">August 12, 2021</span>
-				</div>
-				<img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyODc3NzAzNw&ixlib=rb-1.2.1&q=80&w=400" alt="earth from space" />
-			</div>
-		</div>
-		<div class="b-card-container">
-			<div class="b-card">
-				<div class="b-infos">
-					<p class="b-text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, cupiditate?
-					</p>
-					<span class="b-date">August 12, 2021</span>
-				</div>
-				<img src="https://images.unsplash.com/photo-1586442886903-1cb792cd1dc4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyODc3NzA3NQ&ixlib=rb-1.2.1&q=80&w=400" alt="desert" />
-			</div>
-		</div>
-	</div>
 	</section>
+
+	<script>
+		
+		function readMoreRedirection(id) {
+      console.log(id)
+      window.document.location = "./singleBlog.php?Id="+id; //Connecting Second page
+    }
+		var rwBlogs = document.getElementById("threeBlogsRow");
+		rwBlogs.innerHTML = "";
+
+		let url1 = "./admin/blogAdmin/api.php/?q=readHome"
+
+		$(document).ready(function() {
+			$.ajax({
+				url: url1,
+				method: "GET",
+				dataType: "JSON",
+				success: function(data) {
+					var i;
+					for (i = 1; i < 4; i++) {
+						myFunc(data[i - 1], i)
+					}
+
+					function myFunc(row, index) {
+						var desc = row.Content;
+						var descSub = desc.substring(0, 70) + '...';
+
+						rwBlogs.innerHTML +=
+							'<div class="b-card-container">\
+				<div class="b-card">\
+				<div class="b-infos">\
+					<p class="b-text">' + row.Title + '</p>\
+					<p class="b-text text-center">By ' + row.Author + '</p>\
+					<span class="b-text"><a href="javascript:readMoreRedirection('+ row.Sno + ')" style="text-decoration:none; cursor:pointer; color:#0a58ca;">Read Blog</a></span>\
+				</div>\
+				<img src="./' + row.Image + '" class="blog-img"/>\
+			</div>\
+			<div>'
+
+
+					}
+				}
+			});
+		});
+		
+	</script>
 	<!-- ******************************blog section end***************************************** -->
 	<!-- *******************************************our team************* -->
-	<div class="teamhead">
-		<h2 class="my-4 display-4 fw-bolder text-center">Our<span class="text-primary"> Team</span></h2>
-	</div>
-	<div class="container">
-		<div class="row s-row">
-			<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
-				<div class="inner-box">
-					<div class="image-box">
-						<figure class="image">
-							<img src="assets\images\team\Gaurav.png" alt="" />
-							<div class="social-links">
-								<div class="tm-description">
-									<h5 class="tm-name">Gaurav Jain</h5>
-									<p class="tm-d">Chair</p>
+	<section class="team">
+		<div class="teamhead">
+			<h2 class="my-4 display-4 fw-bolder text-center">Our<span class="text-primary"> Team</span></h2>
+		</div>
+		<div class="container">
+			<div class="row s-row">
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\Gaurav.png" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Gaurav Jain</h5>
+										<p class="tm-d">Chair</p>
+									</div>
 								</div>
-							</div>
-						</figure>
+							</figure>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-				<div class="inner-box">
-					<div class="image-box">
-						<figure class="image">
-							<img src="assets\images\team\vardaan.jpg" alt="" />
-							<div class="social-links">
-								<div class="tm-description">
-									<h5 class="tm-name">Vardaan Grover</h5>
-									<p class="tm-d">Vice-Chair</p>
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\vardaan.jpg" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Vardaan Grover</h5>
+										<p class="tm-d">Vice-Chair</p>
+									</div>
 								</div>
-							</div>
-						</figure>
+							</figure>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-				<div class="inner-box">
-					<div class="image-box">
-						<figure class="image">
-							<img src="assets\images\team\Akshad.jpg" alt="" />
-							<div class="social-links">
-								<div class="tm-description">
-									<h5 class="tm-name">Akshad Bhandula</h5>
-									<p class="tm-d">Secretory</p>
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\Akshad.jpg" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Akshad Bhandula</h5>
+										<p class="tm-d">Secretory</p>
+									</div>
 								</div>
-							</div>
-						</figure>
+							</figure>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-				<div class="inner-box">
-					<div class="image-box">
-						<figure class="image">
-							<img src="assets\images\team\Divyansh.jpg" alt="" />
-							<div class="social-links">
-								<div class="tm-description">
-									<h5 class="tm-name">Divyansh Rastogi</h5>
-									<p class="tm-d">Joint Secretary</p>
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\Divyansh.jpg" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Divyansh Rastogi</h5>
+										<p class="tm-d">Joint Secretary</p>
+									</div>
 								</div>
-							</div>
-						</figure>
+							</figure>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-				<div class="inner-box">
-					<div class="image-box">
-						<figure class="image">
-							<img src="assets\images\team\chaitanDev.jpg" alt="" />
-							<div class="social-links">
-								<div class="tm-description">
-									<h5 class="tm-name">Chaitan Dev</h5>
-									<p class="tm-d">Treasurer</p>
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\chaitanDev.jpg" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Chaitan Dev</h5>
+										<p class="tm-d">Treasurer</p>
+									</div>
 								</div>
-							</div>
-						</figure>
+							</figure>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-				<div class="inner-box">
-					<div class="image-box">
-						<figure class="image">
-							<img src="assets\images\team\profile_pic_anmol.png" alt="" />
-							<div class="social-links">
-								<div class="tm-description">
-									<h5 class="tm-name">Anmol Goel</h5>
-									<p class="tm-d">Web Chair</p>
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\profile_pic_anmol.png" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Anmol Goel</h5>
+										<p class="tm-d">Web Chair</p>
+									</div>
 								</div>
-							</div>
-						</figure>
+							</figure>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-				<div class="inner-box">
-					<div class="image-box">
-						<figure class="image">
-							<img src="assets\images\team\sushantHaluwai.jpg" alt="" />
-							<div class="social-links">
-								<div class="tm-description">
-									<h5 class="tm-name">Sushant Haluwai</h5>
-									<p class="tm-d">Executive Members</p>
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\sushantHaluwai.jpg" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Sushant Haluwai</h5>
+										<p class="tm-d">Executive Members</p>
+									</div>
 								</div>
-							</div>
-						</figure>
+							</figure>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-				<div class="inner-box">
-					<div class="image-box">
-						<figure class="image">
-							<img src="assets\images\team\harshGoyal.png" alt="" />
-							<div class="social-links">
-								<div class="tm-description">
-									<h5 class="tm-name">Harsh Goyal</h5>
-									<p class="tm-d">Executive Members</p>
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\harshGoyal.png" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Harsh Goyal</h5>
+										<p class="tm-d">Executive Members</p>
+									</div>
 								</div>
-							</div>
-						</figure>
+							</figure>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-				<div class="inner-box">
-					<div class="image-box">
-						<figure class="image">
-							<img src="assets\images\team\Manoj.jpg" alt="" />
-							<div class="social-links">
-								<div class="tm-description">
-									<h5 class="tm-name">Manoj Kumar</h5>
-									<p class="tm-d">Executive Members</p>
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\Manoj.jpg" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Manoj Kumar</h5>
+										<p class="tm-d">Executive Members</p>
+									</div>
 								</div>
-							</div>
-						</figure>
+							</figure>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-				<div class="inner-box">
-					<div class="image-box">
-						<figure class="image">
-							<img src="assets\images\team\Anuj.jpg" alt="" />
-							<div class="social-links">
-								<div class="tm-description">
-									<h5 class="tm-name">Anuj</h5>
-									<p class="tm-d">Executive Members</p>
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\Anuj.jpg" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Anuj</h5>
+										<p class="tm-d">Executive Members</p>
+									</div>
 								</div>
-							</div>
-						</figure>
+							</figure>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-				<div class="inner-box">
-					<div class="image-box">
-						<figure class="image">
-							<img src="assets\images\team\Tarun.jpg" alt="" />
-							<div class="social-links">
-								<div class="tm-description">
-									<h5 class="tm-name">Tarun</h5>
-									<p class="tm-d">Executive Members</p>
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\Tarun.jpg" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Tarun</h5>
+										<p class="tm-d">Executive Members</p>
+									</div>
 								</div>
-							</div>
-						</figure>
+							</figure>
+						</div>
+					</div>
+				</div>
+
+				<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+					<div class="inner-box">
+						<div class="image-box">
+							<figure class="image">
+								<img src="assets\images\team\vishesh.jpeg" alt="" />
+								<div class="social-links">
+									<div class="tm-description">
+										<h5 class="tm-name">Vishesh Gupta</h5>
+										<p class="tm-d">Executive Members</p>
+									</div>
+								</div>
+							</figure>
+						</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-				<div class="inner-box">
-					<div class="image-box">
-						<figure class="image">
-							<img src="assets\images\team\vishesh.jpeg" alt="" />
-							<div class="social-links">
-								<div class="tm-description">
-									<h5 class="tm-name">Vishesh Gupta</h5>
-									<p class="tm-d">Executive Members</p>
-								</div>
-							</div>
-						</figure>
-					</div>
+			<div class="py-3 mt-2 d-md-flex justify-content-sm-center">
+				<div class="col-md-3 col mb-2">
+					<a href="./team.php" class="about-button team-button">Meet the Team</a>
 				</div>
 			</div>
 		</div>
-	</div>
+
+	</section>
 	<!-- *****************************our team end************************************************** -->
 
 	<!-- ****************************************************contact us ***************************** -->
