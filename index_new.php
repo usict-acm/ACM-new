@@ -61,40 +61,20 @@
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
 					<div class="slide-inner slide-bg-image" data-background-small="./assets/images/img1-mobile.png" data-background="./assets/images/img1.jpg">
-						<div class="container text-center">
-							<div class="slide-title">
-								<h2>ACM CHAPTER USICT</h2>
-							</div>
-						</div>
 					</div>
 				</div>
 				<div class="swiper-slide">
 					<div class="slide-inner slide-bg-image" data-background-small="./assets/images/img3-mobile.png" data-background="./assets/images/img3.jpg">
-						<div class="container text-center">
-							<div class="slide-title">
-								<h2>ACM CHAPTER USICT</h2>
-							</div>
-						</div>
 					</div>
 				</div>
 
 				<div class="swiper-slide">
 					<div class="slide-inner slide-bg-image" data-background-small="./assets/images/img2-mobile.png" data-background="./assets/images/img2.jpg">
-						<div class="container text-center">
-							<div class="slide-title">
-								<h2>ACM CHAPTER USICT</h2>
-							</div>
-						</div>
 					</div>
 				</div>
 
 				<div class="swiper-slide">
 					<div class="slide-inner slide-bg-image" data-background-small="./assets/images/banner-high-mobile.png" data-background="./assets/images/banner-high.png">
-						<div class="container text-center">
-							<div class="slide-title">
-								<h2></h2>
-							</div>
-						</div>
 					</div>
 				</div>
 				<!-- end swiper-slide -->
@@ -245,7 +225,7 @@
 								<div class="social-links">
 									<div class="tm-description">
 										<h5 class="tm-name">Akshad Bhandula</h5>
-										<p class="tm-d">Secretory</p>
+										<p class="tm-d">Secretary</p>
 									</div>
 								</div>
 							</figure>
@@ -550,9 +530,6 @@
 
 	<!-- Swiper JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-	<!-- jQuery JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<!-- partial -->
 	<script src="assets\JS\home_new.js"></script>
 </body>
 
