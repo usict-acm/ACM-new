@@ -1,23 +1,24 @@
 /*------------------------------------------navbar-css------------------------------------------------*/
 .outstanding-logo {
-	width: 250px;animation-name: scale-up-center;
+	width: 250px;
+	animation-name: scale-up-center;
 	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-delay: 1s;
 	animation-iteration-count: 1;
 	animation-direction: normal;
 	animation-fill-mode: none;
-  }
-  @keyframes scale-up-center {
+}
+@keyframes scale-up-center {
 	0% {
-	  -webkit-transform: scale(0.2);
-	  transform: scale(0.2);
+		-webkit-transform: scale(0.2);
+		transform: scale(0.2);
 	}
 	100% {
-	  -webkit-transform: scale(1);
-	  transform: scale(1);
+		-webkit-transform: scale(1);
+		transform: scale(1);
 	}
-  }
+}
 .acm-logo-navbar {
 	width: 100px;
 }
@@ -29,7 +30,7 @@
 	margin-left: 20px;
 	display: flex;
 	flex-direction: column;
-  }
+}
 .navbar-logo {
 	padding: 15px;
 	color: #fff;
@@ -38,9 +39,9 @@
 	background-color: #fff;
 	padding: 10px 0px;
 	position: fixed;
-    z-index: 999;
-    width: 100%;
-    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 3px 10px 0 rgb(0 0 0 / 19%);
+	z-index: 999;
+	width: 100%;
+	box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 3px 10px 0 rgb(0 0 0 / 19%);
 }
 #navbarSupportedContent {
 	overflow: hidden;
@@ -182,7 +183,7 @@
 
 .hero-slider {
 	width: 100%;
-	height: 90vh;
+	height: 85vh;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -511,12 +512,12 @@ a:hover {
 	justify-content: center;
 	align-items: center;
 }
-.s-back{
+.s-back {
 	background-color: white;
-	border-radius:5px ;
+	border-radius: 5px;
 	padding: 20px;
 }
-#contact{
+#contact {
 	position: fixed; /* Sit on top of the page content */
 	display: none; /* Hidden by default */
 	width: 100%; /* Full width (cover the whole page) */
@@ -659,7 +660,7 @@ ul {
 	color: #0b7cc2;
 }
 .footer-widget ul li a {
-	color:#5a5a5a;
+	color: #5a5a5a;
 	text-decoration: none;
 }
 .copyright-area {
@@ -1033,8 +1034,8 @@ img {
 }
 
 .blogs {
-	background-color: #F0F0F0;
-    padding: 20px 0px;
+	background-color: #f0f0f0;
+	padding: 20px 0px;
 }
 
 .team {
@@ -1044,3 +1045,206 @@ img {
 .team-button {
 	margin-top: -50px;
 }
+
+.drop-down {
+	color: #fff;
+	background-color: #3498db;
+	font-size: 1rem;
+	font-weight: 700;
+	width: 100%;
+	padding: 17px 0;
+	box-shadow: 3px 3px 30px rgba(118, 96, 168, 0.2);
+	border-radius: 0.6rem;
+	line-height: 1;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: baseline;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+	margin-bottom: 15px;
+}
+
+.drop-down:hover {
+	color: #fff;
+	box-shadow: 6px 5px 13px rgb(64 56 85 / 34%);
+}
+.drop-down p {
+	margin: 0;
+}
+
+.arrow {
+	width: 13px;
+	transition: transform 0.3s ease;
+}
+
+.arrow.open {
+	transform: rotate(180deg);
+}
+
+.dropdown {
+	position: relative;
+	color: #e3dfe9;
+	font-size: 18px;
+	background: rgb(229 226 226 / 55%);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 15px;
+	display: block;
+	cursor: pointer;
+	transform: scale(0.01);
+	opacity: 0;
+	transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease 0.15s;
+	transform-origin: center top;
+	overflow: hidden;
+}
+
+.dropdown.open {
+	transform: scale(1);
+	opacity: 1;
+	box-shadow: 3px 3px 30px rgba(118, 96, 168, 0.15);
+}
+
+.dropdown a {
+	position: relative;
+	color: #6c6185;
+	text-decoration: none;
+	display: block;
+	padding: 12.5px 30px;
+	transition: color 0.2s ease, background-color 0.2s ease, padding-left 0.2s ease;
+	overflow: hidden;
+}
+
+.dropdown a.clicked {
+	padding-left: 35px;
+	color: #987cd9;
+}
+
+.dropdown a:hover {
+	color: #413f46;
+	padding-left: 35px;
+}
+
+/* events section */
+#announcement {
+	margin-bottom: 11rem;
+}
+
+.card-carousel {
+	position: relative;
+	margin: 0 auto 0 auto;
+	padding: 0;
+	max-width: 100%;
+	height: 450px;
+	perspective: 1000px;
+	perspective-origin: top;
+}
+.card-carousel .button-spin {
+	position: absolute;
+	top: 50%;
+	border: 1px solid black;
+	border-radius: 50%;
+	z-index: 200;
+	background-color: transparent;
+	cursor: pointer;
+	font-weight: 800;
+	padding: 10px 16px;
+	text-shadow: 1px 1px 4px rgba(0, 54, 90, 0.5);
+}
+.card-carousel .button-spin:hover {
+	box-shadow: 0px 4px 4px 4px rgba(0, 54, 90, 0.15);
+}
+.card-carousel .button-spin:active {
+	box-shadow: none;
+}
+.card-carousel .button-spin.counterclockwise {
+	left: 0;
+}
+.card-carousel .button-spin.clockwise {
+	right: 0;
+}
+.card-carousel .inner-carousel {
+	position: relative;
+	width: 70%;
+	margin: 0 auto;
+	top: 80px;
+	transform-style: preserve-3d;
+}
+.card-carousel .inner-carousel > div {
+	position: absolute;
+	margin: 0 auto;
+	padding: 20px;
+	width: 100%;
+	height: auto;
+	opacity: 1;
+	background-color: #fff;
+	color: #000;
+	border-radius: 10px;
+	transition: all 0.5s ease-out;
+	z-index: 1;
+	box-shadow: 0px 10px 10px 10px rgba(0, 54, 90, 0.15);
+}
+.card-carousel .inner-carousel > div .text-content {
+	background-color: #cbe8fe;
+	border-radius: 1rem;
+}
+.card-carousel .inner-carousel > div .text-content p {
+	font-size: 1.5rem;
+	padding: 1rem;
+}
+.card-carousel .inner-carousel > div .img-content {
+	padding: 1rem;
+}
+.card-carousel .inner-carousel > div .img-content img {
+	border-radius: 1rem;
+}
+
+.card-carousel .inner-carousel > div:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	opacity: 0.6;
+	background-color: #ddd;
+	z-index: 1;
+}
+.card-carousel .inner-carousel > div.counterclockwise:after,
+.card-carousel .inner-carousel > div.clockwise:after {
+	opacity: 0.4;
+	cursor: pointer;
+}
+.card-carousel .inner-carousel > div.front:after {
+	content: none;
+}
+.card-carousel .inner-carousel > div.front {
+	/* background-image: radial-gradient(circle 700px at center right, #8fcffa, #3498db); */
+	background-color: #fff;
+	color: black;
+}
+.card-carousel .inner-carousel > div.front a {
+	box-shadow: 0px 5px 5px 5px rgba(0, 54, 90, 0.15);
+}
+.card-carousel .inner-carousel > div.front a:hover,
+.card-carousel .inner-carousel > div.front a:focus {
+	transform: translateY(-2px);
+}
+.card-carousel .inner-carousel > div.front a:active {
+	box-shadow: none;
+}
+.card-carousel .inner-carousel > div a {
+	text-align: center;
+	display: block;
+	width: 180px;
+	margin: 15px auto 10px;
+	border: 1px solid #c9c9c9;
+	border-radius: 16px;
+	padding: 6px 0;
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: #000;
+	text-decoration: none;
+	background-color: #fff;
+}
+/* event section ends */
