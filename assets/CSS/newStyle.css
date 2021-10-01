@@ -183,7 +183,7 @@
 
 .hero-slider {
 	width: 100%;
-	height: 85vh;
+	height: 500px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -314,13 +314,6 @@
 	bottom: 30px;
 }
 
-@media screen and (min-width: 992px) {
-	.hero-slider .swiper-container-horizontal > .swiper-pagination-bullets,
-	.hero-slider .swiper-pagination-custom,
-	.hero-slider .swiper-pagination-fraction {
-		/*     display: none; */
-	}
-}
 .swiper-pagination {
 	text-align: left;
 }
@@ -841,7 +834,7 @@ ul {
 }
 .speaker-block {
 	position: relative;
-	margin-bottom: 40px;
+	/* margin-bottom: 40px; */
 	width: 200px;
 	height: 200px;
 }
@@ -1003,7 +996,7 @@ img {
 }
 
 .about-us {
-	margin-top: 80px;
+	margin-top: 70px;
 }
 
 .about-button {
@@ -1033,6 +1026,10 @@ img {
 	box-shadow: 0 0 10px 0 var(--blue) inset, 0 0 10px 4px var(--blue);
 }
 
+.text {
+	margin-top: 50px;
+}
+
 .blogs {
 	background-color: #f0f0f0;
 	padding: 20px 0px;
@@ -1040,10 +1037,6 @@ img {
 
 .team {
 	padding: 20px;
-}
-
-.team-button {
-	margin-top: -50px;
 }
 
 .drop-down {
@@ -1112,6 +1105,7 @@ img {
 	padding: 12.5px 30px;
 	transition: color 0.2s ease, background-color 0.2s ease, padding-left 0.2s ease;
 	overflow: hidden;
+	text-align: center;
 }
 
 .dropdown a.clicked {
@@ -1126,6 +1120,7 @@ img {
 
 /* events section */
 #announcement {
+	margin-top: -50px;
 	margin-bottom: 11rem;
 }
 
@@ -1133,7 +1128,7 @@ img {
 	position: relative;
 	margin: 0 auto 0 auto;
 	padding: 0;
-	max-width: 100%;
+	width: 90%;
 	height: 450px;
 	perspective: 1000px;
 	perspective-origin: top;
@@ -1157,17 +1152,20 @@ img {
 	box-shadow: none;
 }
 .card-carousel .button-spin.counterclockwise {
-	left: 0;
+	left: -50px;
 }
 .card-carousel .button-spin.clockwise {
-	right: 0;
+	right: -50px;
 }
 .card-carousel .inner-carousel {
 	position: relative;
-	width: 70%;
+	width: 100%;
 	margin: 0 auto;
 	top: 80px;
 	transform-style: preserve-3d;
+}
+.card-carousel .inner-carousel .front > h1{
+	color : #0b7cc2;
 }
 .card-carousel .inner-carousel > div {
 	position: absolute;
@@ -1188,11 +1186,12 @@ img {
 	border-radius: 1rem;
 }
 .card-carousel .inner-carousel > div .text-content p {
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	padding: 1rem;
 }
 .card-carousel .inner-carousel > div .img-content {
 	padding: 1rem;
+	width: 450px;
 }
 .card-carousel .inner-carousel > div .img-content img {
 	border-radius: 1rem;
@@ -1248,3 +1247,15 @@ img {
 	background-color: #fff;
 }
 /* event section ends */
+
+@media (max-width: 500px) {
+	.about-us {
+		margin-top: 120px;
+	}
+	.about-us > div .text {
+		margin-top: -10px;
+	}
+	#announcement {
+		margin-top: -100px;
+	}
+}

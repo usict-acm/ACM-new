@@ -146,15 +146,15 @@
 						<div class="col-md-4 col">
 							<div class="drop-down">
 								<p>ACM Newsletter</p>
-								<i class="fas fa-chevron-up arrow"></i>
+								<i class="fas fa-chevron-down arrow"></i>
 							</div>
 							<div class="dropdown">
 								<a href="./assets/newsletter2.pdf" id="adobeXd"
-									>ACM Newsletter 2021
+									>2021
 									<span></span>
 								</a>
 								<a href="./assets/newsletter.pdf" id="sketch"
-									>ACM Newsletter 2020
+									>2020
 									<span></span>
 								</a>
 							</div>
@@ -511,7 +511,7 @@
 				</div>
 				<div class="py-3 mt-2 d-md-flex justify-content-sm-center">
 					<div class="col-md-3 col mb-2">
-						<a href="./team.php" class="about-button team-button">Meet the Team</a>
+						<a href="./team.php" class="about-button">Meet the Team</a>
 					</div>
 				</div>
 			</div>
