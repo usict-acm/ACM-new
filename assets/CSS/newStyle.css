@@ -557,7 +557,7 @@ ul {
 	position: relative;
 }
 .footer-cta {
-	border-bottom: 2px solid #0b7cc2;
+	border-bottom: 2px solid #0397fe;
 }
 .single-cta {
 	display: flex;
@@ -646,7 +646,7 @@ ul {
 	bottom: -15px;
 	height: 2px;
 	width: 50px;
-	background: #0b7cc2;
+	background: #0397fe;
 }
 .footer-widget ul li {
 	margin-bottom: 12px;
@@ -698,7 +698,7 @@ ul {
 .social-menu ul li .fas {
 	font-size: 25px;
 	line-height: 50px;
-	color: #000;
+	color: #5b5a5b;
 }
 
 .social-menu ul li a i:hover {
@@ -713,7 +713,7 @@ ul {
 	background-color: rgba(255, 255, 255, 0.425);
 	text-align: center;
 	transition: 0.5s;
-	box-shadow: -1px 6px 12px rgb(0 0 0 / 50%);
+	box-shadow: 1px 4px 5px rgb(0 0 0 / 9%);
 }
 
 .social-menu ul li a:hover {
@@ -722,7 +722,7 @@ ul {
 }
 
 .social-menu ul li a:hover {
-	background-color: #0b7cc2;
+	background-color: #0397fe;
 }
 
 /* **************************footer style end************************************************** */
@@ -1119,132 +1119,130 @@ img {
 	padding-left: 35px;
 }
 
+.text-blue,
+.footer-cta i::before {
+	color: #0397fe;
+}
 /* events section */
-#announcement {
-	margin-top: -50px;
-	margin-bottom: 11rem;
-}
-
-.card-carousel {
-	position: relative;
-	margin: 0 auto 0 auto;
-	padding: 0;
-	width: 90%;
-	height: 450px;
-	perspective: 1000px;
-	perspective-origin: top;
-}
-.card-carousel .button-spin {
-	position: absolute;
-	top: 50%;
-	border: 1px solid black;
-	border-radius: 50%;
-	z-index: 200;
-	background-color: transparent;
-	cursor: pointer;
-	font-weight: 800;
-	padding: 10px 16px;
-	text-shadow: 1px 1px 4px rgba(0, 54, 90, 0.5);
-}
-.card-carousel .button-spin:hover {
-	box-shadow: 0px 4px 4px 4px rgba(0, 54, 90, 0.15);
-}
-.card-carousel .button-spin:active {
-	box-shadow: none;
-}
-.card-carousel .button-spin.counterclockwise {
-	left: -50px;
-}
-.card-carousel .button-spin.clockwise {
-	right: -50px;
-}
-.card-carousel .inner-carousel {
-	position: relative;
-	width: 100%;
-	margin: 0 auto;
-	top: 80px;
-	transform-style: preserve-3d;
-}
-.card-carousel .inner-carousel .front > h1{
-	color : #0b7cc2;
-}
-.card-carousel .inner-carousel > div {
-	position: absolute;
-	margin: 0 auto;
-	padding: 20px;
-	width: 100%;
-	height: auto;
-	opacity: 1;
-	background-color: #fff;
-	color: #000;
-	border-radius: 10px;
-	transition: all 0.5s ease-out;
-	z-index: 1;
-	box-shadow: 0px 10px 10px 10px rgba(0, 54, 90, 0.15);
-}
-.card-carousel .inner-carousel > div .text-content {
-	background-color: #cbe8fe;
-	border-radius: 1rem;
-}
-.card-carousel .inner-carousel > div .text-content p {
-	font-size: 1.3rem;
-	padding: 1rem;
-}
-.card-carousel .inner-carousel > div .img-content {
-	padding: 1rem;
-	width: 450px;
-}
-.card-carousel .inner-carousel > div .img-content img {
-	border-radius: 1rem;
-}
-
-.card-carousel .inner-carousel > div:after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	border-radius: 10px;
-	opacity: 0.6;
-	background-color: #ddd;
-	z-index: 1;
-}
-.card-carousel .inner-carousel > div.counterclockwise:after,
-.card-carousel .inner-carousel > div.clockwise:after {
-	opacity: 0.4;
-	cursor: pointer;
-}
-.card-carousel .inner-carousel > div.front:after {
-	content: none;
-}
-.card-carousel .inner-carousel > div.front {
-	/* background-image: radial-gradient(circle 700px at center right, #8fcffa, #3498db); */
-	background-color: #fff;
-	color: black;
-}
-.card-carousel .inner-carousel > div.front a {
-	box-shadow: 0px 5px 5px 5px rgba(0, 54, 90, 0.15);
-}
-.card-carousel .inner-carousel > div.front a:hover,
-.card-carousel .inner-carousel > div.front a:focus {
-	transform: translateY(-2px);
-}
-.card-carousel .inner-carousel > div.front a:active {
-	box-shadow: none;
-}
-.card-carousel .inner-carousel > div a {
+.announcement {
 	text-align: center;
-	display: block;
-	width: 180px;
-	margin: 15px auto 10px;
-	border: 1px solid #c9c9c9;
-	border-radius: 16px;
-	padding: 6px 0;
-	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	background-color: white;
+}
+
+.detai {
+	background-color: #cbe9ff;
+	border-radius: 1rem;
+	padding: 1rem;
+	height: 100%;
+}
+.detai p {
+	font-size: 16px;
 	font-weight: 500;
-	color: #000;
-	text-decoration: none;
+	color: #5a5a5f;
+}
+.container-fluid.text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 0;
+	padding: 50px 0;
+}
+
+.timeout {
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	color: black;
+	font-weight: 900;
+	border-radius: 1rem;
+	margin-top: 1rem;
+}
+
+.det {
+	width: 100%;
+	border-radius: 1rem;
+	box-shadow: 0 0 1rem 0 grey;
+	padding: 1rem;
+	/* height: auto; */
+}
+
+@media only screen and (max-width: 775px) {
+	.det {
+		width: 100%;
+	}
+	.timeout {
+		width: 100%;
+	}
+	.det h1 {
+		font-size: 2rem;
+	}
+}
+.det-row {
+	text-align: center;
+}
+.divide {
+	margin-top: 1rem;
+}
+
+.butn {
+	text-align: center;
+	transition: all 0.5s ease;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin-top: 1rem;
+	align-self: center;
+}
+
+.list div {
+	flex: 1;
+}
+.det h1 {
+	margin-top: 1rem;
+	margin-bottom: 0;
+	font-weight: 600;
+	color: rgb(43, 42, 42);
+	text-align: center;
+}
+
+.heading {
+	margin-top: -1rem;
+	text-align: center;
+}
+
+.imag {
+	height: 17rem;
+	border-radius: 1rem;
+}
+
+.countdown {
+	font-size: 0.8rem;
+	font-weight: 500;
+	opacity: 0.7;
+}
+.mySwiper {
+	width: 60vw;
+}
+@media only screen and (max-width: 426px) {
+	.mySwiper {
+		width: 90vw;
+	}
+}
+.mySwiper .swiper-slide {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 18px;
+	font-size: 22px;
+	font-weight: bold;
+	color: #fff;
 	background-color: #fff;
 }
 /* event section ends */

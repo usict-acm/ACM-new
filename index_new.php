@@ -81,6 +81,15 @@
 					<div class="swiper-slide">
 						<div
 							class="slide-inner slide-bg-image"
+							data-swiper-parallax="0"
+							data-background-small="./assets/images/banner-high-mobile.png"
+							data-background="./assets/images/banner-high.png"
+						></div>
+					</div>
+					<div class="swiper-slide">
+						<div
+							class="slide-inner slide-bg-image"
+							data-swiper-parallax="0"
 							data-background-small="./assets/images/img1-mobile.png"
 							data-background="./assets/images/img1.jpg"
 						></div>
@@ -88,6 +97,7 @@
 					<div class="swiper-slide">
 						<div
 							class="slide-inner slide-bg-image"
+							data-swiper-parallax="0"
 							data-background-small="./assets/images/img3-mobile.png"
 							data-background="./assets/images/img3.jpg"
 						></div>
@@ -96,24 +106,18 @@
 					<div class="swiper-slide">
 						<div
 							class="slide-inner slide-bg-image"
+							data-swiper-parallax="0"
 							data-background-small="./assets/images/img2-mobile.png"
 							data-background="./assets/images/img2.jpg"
 						></div>
 					</div>
 
-					<div class="swiper-slide">
-						<div
-							class="slide-inner slide-bg-image"
-							data-background-small="./assets/images/banner-high-mobile.png"
-							data-background="./assets/images/banner-high.png"
-						></div>
-					</div>
 					<!-- end swiper-slide -->
 				</div>
 				<!-- end swiper-wrapper -->
 
 				<!-- swipper controls -->
-				<div class="swiper-pagination"></div>
+
 				<div class="swiper-button-next"></div>
 				<div class="swiper-button-prev"></div>
 			</div>
@@ -130,7 +134,7 @@
 			<div class="col-sm-6 col-9 mx-auto mt-3 pe-sm-5 align-self-center">
 				<div class="text">
 					<h2 class="mb-4 display-4 fw-bolder text-center text-md-start">
-						About <span class="text-primary">Our Chapter</span>
+						About <span class="text-blue">Our Chapter</span>
 					</h2>
 					<p class="text-secondary fs-5">
 						ACM Student Chapter, USICT is an official student body incepted in 2019 under the University
@@ -165,93 +169,99 @@
 		</div>
 		<!-- end of about section -->
 		<!-- announcement section begins-->
-		<section id="announcement">
-			<h1 class="text-center display-4 fw-bolder">Announcements</h1>
-			<div class="card-carousel">
-				<button class="button-spin counterclockwise">&lt;</button>
-				<div class="inner-carousel">
-					<div>
-						<h1 class="text-center fw-bolder mt-2">ACM USICT Summer Internship</h1>
-						<div class="row align-items-center justify-content-center p-3">
-							<div class="col-7 text-center text-content">
-								<p class="mt-2">
-									Greetings everyone!!!<br />
-									USICT ACM Student Chapter has come up with a summer internship opportunity for all
-									students of 2022, '23 and '24 batches. The internship involves various projects
-									under the Supervision of Mentors. This internship will give you in-depth knowledge
-									and will provide exposure to work in advanced technology areas.<br />
-									To be a part of the SUMMER INTERNSHIP, register by Monday, 2 August 2021, 3 PM
-									Please note that the form is open for all courses of USICT
-									<a href="#" class="btn btn-primary">Register Now</a>
-								</p>
-							</div>
-							<div class="col-5 img-content">
-								<img src="./assets/images/Summer Internship 2021.jpeg" />
-							</div>
-						</div>
-					</div>
-					<div>
-						<h1 class="text-center fw-bolder mt-2">ACM USICT Summer Internship</h1>
-						<div class="row align-items-center justify-content-center p-3">
-							<div class="col-7 text-center text-content">
-								<p class="mt-2">
-									Greetings everyone!!!<br />
-									USICT ACM Student Chapter has come up with a summer internship opportunity for all
-									students of 2022, '23 and '24 batches. The internship involves various projects
-									under the Supervision of Mentors. This internship will give you in-depth knowledge
-									and will provide exposure to work in advanced technology areas.<br />
-									To be a part of the SUMMER INTERNSHIP, register by Monday, 2 August 2021, 3 PM
-									Please note that the form is open for all courses of USICT
-									<a href="#" class="btn btn-primary">Register Now</a>
-								</p>
-							</div>
-							<div class="col-5 img-content">
-								<img src="./assets/images/Summer Internship 2021.jpeg" />
-							</div>
-						</div>
-					</div>
-					<div>
-						<h1 class="text-center fw-bolder mt-2">ACM USICT Summer Internship</h1>
-						<div class="row align-items-center justify-content-center p-3">
-							<div class="col-7 text-center text-content">
-								<p class="mt-2">
-									Greetings everyone!!!<br />
-									USICT ACM Student Chapter has come up with a summer internship opportunity for all
-									students of 2022, '23 and '24 batches. The internship involves various projects
-									under the Supervision of Mentors. This internship will give you in-depth knowledge
-									and will provide exposure to work in advanced technology areas.<br />
-									To be a part of the SUMMER INTERNSHIP, register by Monday, 2 August 2021, 3 PM
-									Please note that the form is open for all courses of USICT
-									<a href="#" class="btn btn-primary">Register Now</a>
-								</p>
-							</div>
-							<div class="col-5 img-content">
-								<img src="./assets/images/Summer Internship 2021.jpeg" />
+		<section class="announcement">
+			<h2 class="mb-4 display-4 fw-bolder text-center">Announcements</h2>
+			<div class="container-fluid text" style="overflow: hidden">
+				<div class="swiper mySwiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="det">
+								<div class="heading">
+									<h1>ACM USICT Summer Internship</h1>
+								</div>
+
+								<div class="row det-row">
+									<div class="col-md-7 divide">
+										<div class="detai">
+											<p>
+												Greetings everyone!!!<br />
+												USICT ACM Student Chapter has come up with a summer internship
+												opportunity for all students of 2022, '23 and '24 batches. The
+												internship involves various projects under the Supervision of Mentors.
+												This internship will give you in-depth knowledge and will provide
+												exposure to work in advanced technology areas.
+												<br />To be a part of the SUMMER INTERNSHIP, register by Monday,<br />
+												2 August 2021, 3 PM
+												<br />Please note that the form is open for all courses of USICT
+											</p>
+											<div style="display: flex; justify-content: space-evenly">
+												<a target="_blank" href="./summerinternship/index.php"
+													><button class="btn" style="background-color: #2250fc">
+														<span style="color: #fff; font-size: 0.9rem">REGISTER NOW</span>
+													</button>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-5 list">
+										<img
+											class="imag imag_trell"
+											src="./assets/images/Summer Internship 2021.jpeg"
+											alt=""
+										/>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div>
-						<h1 class="text-center fw-bolder mt-2">ACM USICT Summer Internship</h1>
-						<div class="row align-items-center justify-content-center p-3">
-							<div class="col-7 text-center text-content">
-								<p class="mt-2">
-									Greetings everyone!!!<br />
-									USICT ACM Student Chapter has come up with a summer internship opportunity for all
-									students of 2022, '23 and '24 batches. The internship involves various projects
-									under the Supervision of Mentors. This internship will give you in-depth knowledge
-									and will provide exposure to work in advanced technology areas.<br />
-									To be a part of the SUMMER INTERNSHIP, register by Monday, 2 August 2021, 3 PM
-									Please note that the form is open for all courses of USICT
-									<a href="#" class="btn btn-primary">Register Now</a>
-								</p>
-							</div>
-							<div class="col-5 img-content">
-								<img src="./assets/images/Summer Internship 2021.jpeg" />
+
+						<div class="swiper-slide">
+							<div class="det swiper-inner">
+								<div class="heading">
+									<h1>Session On React Native</h1>
+								</div>
+								<div class="row det-row">
+									<div class="col-md-7 divide">
+										<div class="detai">
+											<p>
+												Greetings everyone!!!<br />
+												We hope you all are healthy and doing fine. If you want to do have a go
+												at the App Development, we are here with something tailor-made for you.
+												We, at USICT ACM Student Chapter are conducting a week-long session on
+												React Native by Shlok Garg (Youtube Channel - S.G. Codes) . The event
+												will be a complete journey to your first react app from the scratch. So,
+												what are you thinking? Register now for what promises to be a great
+												journey.
+												<br />Date - 12-17 May, 2021 <br />Time - 2-3 PM
+											</p>
+											<div style="display: flex; justify-content: space-evenly">
+												<a target="_blank" href="http://bit.do/ReactNativeWorkshop"
+													><button
+														class="btn announce-button-one"
+														style="background-color: #2250fc"
+													>
+														<span style="color: #fff; font-size: 0.9rem">REGISTER NOW</span>
+													</button>
+												</a>
+												<a
+													target="_blank"
+													href="https://youtube.com/playlist?list=PLgPSSnf8lP5CubPwhgIk9n4FUhFN5nc3L"
+													><button class="btn" style="background-color: #2250fc">
+														<span style="color: #fff; font-size: 0.9rem"
+															>VIEW PLAYLIST</span
+														>
+													</button>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-5 list">
+										<img class="imag imag_trell" src="./assets/images/ReactNative.png" alt="" />
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<button class="button-spin clockwise">&gt;</button>
 			</div>
 		</section>
 
@@ -259,7 +269,7 @@
 		<!--***********************blog section***************************************** -->
 		<section class="blogs">
 			<div class="bloghead">
-				<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-primary"> Blogs</span></h2>
+				<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-blue"> Blogs</span></h2>
 			</div>
 			<div class="b-container" id="threeBlogsRow"></div>
 			<div class="py-3 mt-2 d-md-flex justify-content-sm-center">
@@ -322,7 +332,7 @@
 		<!-- *******************************************our team************* -->
 		<section class="team">
 			<div class="teamhead">
-				<h2 class="my-4 display-4 fw-bolder text-center">Our<span class="text-primary"> Team</span></h2>
+				<h2 class="my-4 display-4 fw-bolder text-center">Our<span class="text-blue"> Team</span></h2>
 			</div>
 			<div class="container">
 				<div class="row s-row">
@@ -705,7 +715,7 @@
 		<!--  footer ends -->
 
 		<!-- Swiper JS -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 		<script src="assets\JS\home_new.js"></script>
 	</body>
 </html>
