@@ -59,7 +59,7 @@
 	float: left;
 }
 #navbarSupportedContent ul li a {
-	color: #0a58ca;
+	color: #000000;
 	text-decoration: none;
 	font-size: 16px;
 	font-weight: 500;
@@ -70,7 +70,7 @@
 	position: relative;
 }
 #navbarSupportedContent > ul > li.active > a {
-	color: #fff;
+	color: rgb(0, 0, 0);
 	background-color: transparent;
 	transition: all 0.7s;
 }
@@ -99,7 +99,6 @@
 	/* padding: 0; */
 	transition-duration: 0.6s;
 	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	background-color: #3498db;
 	border-radius: 5px;
 	/* margin-top: 10px; */
 }
@@ -116,6 +115,9 @@
 }
 .hori-selector .left {
 	left: -25px;
+}
+#navbarSupportedContent ul li a:hover {
+	color: #0b7cc2;
 }
 
 @media (min-width: 992px) {
@@ -1021,9 +1023,8 @@ img {
 }
 .about-button:hover,
 .about-button:focus {
-	color: var(--blue);
+	color: white;
 	outline: 0;
-	box-shadow: 0 0 10px 0 var(--blue) inset, 0 0 10px 4px var(--blue);
 }
 
 .text {
