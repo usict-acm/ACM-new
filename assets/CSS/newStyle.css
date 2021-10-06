@@ -1006,7 +1006,7 @@ img {
 	display: block;
 	box-sizing: border-box;
 	appearance: none;
-	background-color: transparent;
+	background-color: var(--blue);
 	border: 2px solid var(--blue);
 	border-radius: 0.6em;
 	cursor: pointer;
@@ -1018,12 +1018,12 @@ img {
 	text-transform: uppercase;
 	font-weight: 700;
 	color: #fff;
-	box-shadow: 0 0 40px 40px var(--blue) inset, 0 0 0 0 var(--blue);
 	transition: all 150ms ease-in-out;
 }
 .about-button:hover,
 .about-button:focus {
-	color: white;
+	color: var(--blue);
+	background-color: #fff;
 	outline: 0;
 }
 
@@ -1060,7 +1060,7 @@ img {
 
 .drop-down:hover {
 	color: #fff;
-	box-shadow: 6px 5px 13px rgb(64 56 85 / 34%);
+	box-shadow: 7px 9px 20px rgb(64 56 85 / 15%);
 }
 .drop-down p {
 	margin: 0;
@@ -1164,7 +1164,7 @@ img {
 .det {
 	width: 100%;
 	border-radius: 1rem;
-	box-shadow: 0 0 1rem 0 grey;
+	box-shadow: 2px 6px 1rem 0 #80808070;
 	padding: 1rem;
 	/* height: auto; */
 }
@@ -1228,14 +1228,18 @@ img {
 }
 .mySwiper {
 	width: 60vw;
+	position: relative;
 }
 @media only screen and (max-width: 426px) {
 	.mySwiper {
 		width: 90vw;
 	}
 }
-.mySwiper .swiper-slide {
+.mySwiper .swiper-wrapper {
 	width: 100%;
+}
+.mySwiper .swiper-slide {
+	width: 100% !important;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -1244,6 +1248,41 @@ img {
 	font-weight: bold;
 	color: #fff;
 	background-color: #fff;
+}
+.mySwiper .events-swiper-button-prev {
+	position: absolute;
+	top: calc(50% - 3.2rem);
+	left: -10vw;
+	z-index: 100;
+}
+.mySwiper .events-swiper-button-next {
+	position: absolute;
+	top: calc(50% - 3.2rem);
+	right: -10vw;
+	z-index: 100;
+}
+.mySwiper .events-swiper-button-prev::after {
+	font-family: 'Font Awesome 5 Free';
+	content: '\f053';
+	font-size: 3.2rem;
+	color: #2bc8dd;
+	font-style: normal;
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 900;
+}
+.mySwiper .events-swiper-button-next::after {
+	font-family: 'Font Awesome 5 Free';
+	content: '\f054';
+	font-size: 3.2rem;
+	color: #2bc8dd;
+	font-style: normal;
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: 900;
+}
+.events-button-disabled::after {
+	content: '' !important;
 }
 /* event section ends */
 

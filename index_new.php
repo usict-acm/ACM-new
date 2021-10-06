@@ -195,10 +195,11 @@
 												<br />Please note that the form is open for all courses of USICT
 											</p>
 											<div style="display: flex; justify-content: space-evenly">
-												<a target="_blank" href="./summerinternship/index.php"
-													><button class="btn" style="background-color: #2250fc">
-														<span style="color: #fff; font-size: 0.9rem">REGISTER NOW</span>
-													</button>
+												<a
+													target="_blank"
+													href="./summerinternship/index.php"
+													class="about-button"
+													>Register Now
 												</a>
 											</div>
 										</div>
@@ -234,22 +235,18 @@
 												<br />Date - 12-17 May, 2021 <br />Time - 2-3 PM
 											</p>
 											<div style="display: flex; justify-content: space-evenly">
-												<a target="_blank" href="http://bit.do/ReactNativeWorkshop"
-													><button
-														class="btn announce-button-one"
-														style="background-color: #2250fc"
-													>
-														<span style="color: #fff; font-size: 0.9rem">REGISTER NOW</span>
-													</button>
+												<a
+													target="_blank"
+													href="http://bit.do/ReactNativeWorkshop"
+													class="about-button"
+													>Register Now
 												</a>
 												<a
 													target="_blank"
 													href="https://youtube.com/playlist?list=PLgPSSnf8lP5CubPwhgIk9n4FUhFN5nc3L"
-													><button class="btn" style="background-color: #2250fc">
-														<span style="color: #fff; font-size: 0.9rem"
-															>VIEW PLAYLIST</span
-														>
-													</button>
+													class="about-button"
+												>
+													View Playlist
 												</a>
 											</div>
 										</div>
@@ -261,6 +258,9 @@
 							</div>
 						</div>
 					</div>
+
+					<div class="events-swiper-button-prev"></div>
+					<div class="events-swiper-button-next"></div>
 				</div>
 			</div>
 		</section>

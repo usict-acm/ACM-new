@@ -209,6 +209,10 @@ $(document).ready(function () {
 var swiper = new Swiper('.mySwiper', {
 	effect: 'cards',
 	slideShadows: 'true',
+	speed: 1000,
+	fadeEffect: {
+		crossFade: true,
+	},
 	grabCursor: true,
 	pagination: {
 		el: '.events-swiper-pagination',
@@ -216,5 +220,6 @@ var swiper = new Swiper('.mySwiper', {
 	navigation: {
 		nextEl: '.events-swiper-button-next',
 		prevEl: '.events-swiper-button-prev',
+		disabledClass: 'events-button-disabled',
 	},
 });
