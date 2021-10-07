@@ -126,8 +126,43 @@ $(window).resize(function () {
 		}
 	});
 });
-
 // ************************hero section ends*********************************
+// typewriter effect begin
+document.addEventListener('DOMContentLoaded', init);
+
+function WaitingFor(ms) {
+	return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+const KeyEffect = async (wait, content) => {
+	var effectTag = document.querySelector('.typewriter-box');
+	for (const el of content) {
+		await WaitingFor(wait);
+		var print;
+		for (i = 0; i < el.length; i++) {
+			print = el[i];
+			effectTag.innerHTML = effectTag.innerHTML + print;
+			await WaitingFor(wait);
+		}
+		await WaitingFor(wait);
+		for (j = el.length; j >= 0; j--) {
+			var printminus = el.slice(0, j);
+			effectTag.innerHTML = printminus;
+			await WaitingFor(wait / 4);
+		}
+	}
+	init();
+};
+
+function init() {
+	const effectTag = document.querySelector('.typewriter-box');
+	var wait = effectTag.getAttribute('data-wait');
+	var Rawcontent = effectTag.getAttribute('data-content');
+	const content = JSON.parse(Rawcontent);
+	KeyEffect(wait, content);
+}
+// typewriter effect end
+
 // ---------navbar start-----------
 function test() {
 	var tabsNewAnim = $('#navbarSupportedContent');
@@ -205,11 +240,15 @@ $(document).ready(function () {
 	});
 });
 
-// for evnets section
+// for events section
 var swiper = new Swiper('.mySwiper', {
 	effect: 'cards',
 	slideShadows: 'true',
 	speed: 1000,
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	},
 	fadeEffect: {
 		crossFade: true,
 	},
@@ -222,4 +261,20 @@ var swiper = new Swiper('.mySwiper', {
 		prevEl: '.events-swiper-button-prev',
 		disabledClass: 'events-button-disabled',
 	},
+});
+// event section ends
+
+// scroll to top js
+$(window).scroll(function () {
+	if ($(this).scrollTop() > 100) {
+		$('.scrolltop:hidden').stop(true, true).fadeIn();
+	} else {
+		$('.scrolltop').stop(true, true).fadeOut();
+	}
+});
+$(function () {
+	$('.scroll').click(function () {
+		$('html,body').animate({ scrollTop: 0 }, { duration: '900', easing: 'linear' });
+		return false;
+	});
 });

@@ -474,6 +474,45 @@ a:hover {
 		font-size: 13px;
 	}
 }
+/* typewriter effect */
+#typewriter {
+	top: calc(50% - 5rem);
+	height: 5rem;
+	width: 50vw;
+	left: calc(50% - 25vw);
+	position: absolute;
+	z-index: 100;
+	text-align: center;
+}
+
+.typewriter-box {
+	position: relative;
+	font-size: 3rem;
+	font-weight: 700;
+	color: #fff;
+}
+
+.typewriter-box::after {
+	position: absolute;
+	content: '';
+	width: 5px;
+	height: 72%;
+	background: rgb(255, 255, 255);
+	margin: 0 0 0 1px;
+	bottom: 10%;
+	animation: blink 0.6s none infinite;
+	animation-delay: 0s;
+}
+
+@keyframes blink {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
 
 /* **********************hero section ends*********************** */
 
@@ -1002,7 +1041,8 @@ img {
 }
 
 .about-button {
-	/* margin-left: 20px; */
+	margin-top: 5px;
+	margin-bottom: 5px;
 	display: block;
 	box-sizing: border-box;
 	appearance: none;
@@ -1056,6 +1096,7 @@ img {
 	cursor: pointer;
 	transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 	margin-bottom: 15px;
+	margin-top: 5px;
 }
 
 .drop-down:hover {
@@ -1230,9 +1271,20 @@ img {
 	width: 60vw;
 	position: relative;
 }
+.announcement-button-group {
+	display: flex;
+	justify-content: space-evenly;
+}
 @media only screen and (max-width: 426px) {
 	.mySwiper {
 		width: 90vw;
+	}
+	.mySwiper .events-swiper-button-prev::after,
+	.mySwiper .events-swiper-button-next::after {
+		content: '' !important;
+	}
+	.announcement-button-group {
+		flex-direction: column;
 	}
 }
 .mySwiper .swiper-wrapper {
@@ -1296,4 +1348,27 @@ img {
 	#announcement {
 		margin-top: -100px;
 	}
+}
+
+/* scroll to top  */
+
+.scrolltop {
+	position: fixed;
+	bottom: 45px;
+	right: 40px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: 3px 3px 9px var(--blue);
+	display: none;
+	z-index: 200;
+}
+.scrolltop .icon {
+	cursor: pointer;
+	font-size: 30px;
+	text-align: center;
+	transform: rotate(-45deg);
+	margin-top: 5px;
+	color: var(--blue);
 }

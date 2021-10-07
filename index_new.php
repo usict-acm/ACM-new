@@ -121,6 +121,9 @@
 				<div class="swiper-button-next"></div>
 				<div class="swiper-button-prev"></div>
 			</div>
+			<div id="typewriter">
+				<span class="typewriter-box" data-wait="400" data-content='["ACM CHAPTER USICT"]'> </span>
+			</div>
 		</section>
 		<!-- end of hero slider -->
 
@@ -194,7 +197,7 @@
 												2 August 2021, 3 PM
 												<br />Please note that the form is open for all courses of USICT
 											</p>
-											<div style="display: flex; justify-content: space-evenly">
+											<div class="announcement-button-group">
 												<a
 													target="_blank"
 													href="./summerinternship/index.php"
@@ -234,7 +237,7 @@
 												journey.
 												<br />Date - 12-17 May, 2021 <br />Time - 2-3 PM
 											</p>
-											<div style="display: flex; justify-content: space-evenly">
+											<div class="announcement-button-group">
 												<a
 													target="_blank"
 													href="http://bit.do/ReactNativeWorkshop"
@@ -713,6 +716,11 @@
 			</div>
 		</footer>
 		<!--  footer ends -->
+
+		<!-- back to top -->
+		<div class="scrolltop">
+			<div class="scroll icon"><i class="fa fa-rocket" aria-hidden="true"></i></div>
+		</div>
 
 		<!-- Swiper JS -->
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
