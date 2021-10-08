@@ -330,202 +330,427 @@
 		</script>
 		<!-- ******************************blog section end***************************************** -->
 		<!-- *******************************************our team************* -->
-		<section class="team">
-			<div class="teamhead">
-				<h2 class="my-4 display-4 fw-bolder text-center">Our<span class="text-blue"> Team</span></h2>
-			</div>
-			<div class="container">
-				<div class="row s-row">
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\Gaurav.png" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Gaurav Jain</h5>
-											<p class="tm-d">Chair</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\vardaan.jpg" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Vardaan Grover</h5>
-											<p class="tm-d">Vice-Chair</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\Akshad.jpg" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Akshad Bhandula</h5>
-											<p class="tm-d">Secretary</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\Divyansh.jpg" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Divyansh Rastogi</h5>
-											<p class="tm-d">Joint Secretary</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\chaitanDev.jpg" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Chaitan Dev</h5>
-											<p class="tm-d">Treasurer</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\profile_pic_anmol.png" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Anmol Goel</h5>
-											<p class="tm-d">Web Chair</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\sushantHaluwai.jpg" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Sushant Haluwai</h5>
-											<p class="tm-d">Executive Members</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\harshGoyal.png" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Harsh Goyal</h5>
-											<p class="tm-d">Executive Members</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\Manoj.jpg" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Manoj Kumar</h5>
-											<p class="tm-d">Executive Members</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\Anuj.jpg" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Anuj</h5>
-											<p class="tm-d">Executive Members</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
+		<div class="wrapper">
 
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\Tarun.jpg" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Tarun</h5>
-											<p class="tm-d">Executive Members</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
+        <section class="module-team">
 
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\vishesh.jpeg" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Vishesh Gupta</h5>
-											<p class="tm-d">Executive Members</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="py-3 mt-2 d-md-flex justify-content-sm-center">
-					<div class="col-md-3 col mb-2">
-						<a href="./team.php" class="about-button">Meet the Team</a>
-					</div>
-				</div>
-			</div>
-		</section>
+            <div class="team">
+
+                <div class="team-cards">
+
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper s-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <span class="bg"></span>
+                                    <span class="more"></span>
+                                    <figure class="photo"><img
+                                            src="assets\images\team\Gaurav.png">
+                                    </figure>
+                                    <article class="text">
+                                        <p class="name">Gaurav Jain</p>
+                                        <p class="role">Chair</p>
+                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
+                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
+                                            Sequi, et
+                                            illo?</p>
+                                    </article>
+
+                                    <div class="social">
+                                        <span class="pointer"></span>
+                                        <div class="icons">
+                                            <a class="icon" href="#" target="_blank" data-index="0"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="1"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="2"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="3"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <span class="bg"></span>
+                                    <span class="more"></span>
+                                    <figure class="photo"><img
+                                            src="assets\images\team\vardaan.jpg">
+                                    </figure>
+                                    <article class="text">
+                                        <p class="name">Vardaan Grover</p>
+                                        <p class="role">Vice Chair</p>
+                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
+                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
+                                            Sequi, et
+                                            illo?</p>
+                                    </article>
+
+                                    <div class="social">
+                                        <span class="pointer"></span>
+                                        <div class="icons">
+                                            <a class="icon" href="#" target="_blank" data-index="0"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="1"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="2"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="3"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <span class="bg"></span>
+                                    <span class="more"></span>
+                                    <figure class="photo"><img
+                                            src="assets\images\team\Akshad.jpg">
+                                    </figure>
+                                    <article class="text">
+                                        <p class="name">Akshad Bhandula</p>
+                                        <p class="role">Secretory</p>
+                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
+                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
+                                            Sequi, et
+                                            illo?</p>
+                                    </article>
+
+                                    <div class="social">
+                                        <span class="pointer"></span>
+                                        <div class="icons">
+                                            <a class="icon" href="#" target="_blank" data-index="0"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="1"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="2"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="3"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <span class="bg"></span>
+                                    <span class="more"></span>
+                                    <figure class="photo"><img
+                                            src="assets\images\team\Divyansh.jpg">
+                                    </figure>
+                                    <article class="text">
+                                        <p class="name">Divyansh Rastogi</p>
+                                        <p class="role">Joint Secretary</p>
+                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
+                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
+                                            Sequi, et
+                                            illo?</p>
+                                    </article>
+
+                                    <div class="social">
+                                        <span class="pointer"></span>
+                                        <div class="icons">
+                                            <a class="icon" href="#" target="_blank" data-index="0"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="1"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="2"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="3"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <span class="bg"></span>
+                                    <span class="more"></span>
+                                    <figure class="photo"><img
+                                            src="assets\images\team\chaitanDev.jpg">
+                                    </figure>
+                                    <article class="text">
+                                        <p class="name">Chaitan Dev</p>
+                                        <p class="role">Treasurer</p>
+                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
+                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
+                                            Sequi, et
+                                            illo?</p>
+                                    </article>
+
+                                    <div class="social">
+                                        <span class="pointer"></span>
+                                        <div class="icons">
+                                            <a class="icon" href="#" target="_blank" data-index="0"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="1"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="2"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="3"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <span class="bg"></span>
+                                    <span class="more"></span>
+                                    <figure class="photo"><img
+                                            src="assets\images\team\profile_pic_anmol.png">
+                                    </figure>
+                                    <article class="text">
+                                        <p class="name">Anmol Goel</p>
+                                        <p class="role">Web Chair</p>
+                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
+                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
+                                            Sequi, et
+                                            illo?</p>
+                                    </article>
+
+                                    <div class="social">
+                                        <span class="pointer"></span>
+                                        <div class="icons">
+                                            <a class="icon" href="#" target="_blank" data-index="0"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="1"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="2"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="3"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <span class="bg"></span>
+                                    <span class="more"></span>
+                                    <figure class="photo"><img
+                                            src="assets\images\team\sushantHaluwai.jpg">
+                                    </figure>
+                                    <article class="text">
+                                        <p class="name">Sushant Haluwai</p>
+                                        <p class="role">Executive Member</p>
+                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
+                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
+                                            Sequi, et
+                                            illo?</p>
+                                    </article>
+
+                                    <div class="social">
+                                        <span class="pointer"></span>
+                                        <div class="icons">
+                                            <a class="icon" href="#" target="_blank" data-index="0"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="1"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="2"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="3"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <span class="bg"></span>
+                                    <span class="more"></span>
+                                    <figure class="photo"><img
+                                            src="assets\images\team\harshGoyal.png">
+                                    </figure>
+                                    <article class="text">
+                                        <p class="name">Harsh Goyal</p>
+                                        <p class="role">Executive Member</p>
+                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
+                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
+                                            Sequi, et
+                                            illo?</p>
+                                    </article>
+
+                                    <div class="social">
+                                        <span class="pointer"></span>
+                                        <div class="icons">
+                                            <a class="icon" href="#" target="_blank" data-index="0"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="1"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="2"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="3"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <span class="bg"></span>
+                                    <span class="more"></span>
+                                    <figure class="photo"><img
+                                            src="assets\images\team\Manoj.jpg">
+                                    </figure>
+                                    <article class="text">
+                                        <p class="name">Manoj Kumar</p>
+                                        <p class="role">Executive Member</p>
+                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
+                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
+                                            Sequi, et
+                                            illo?</p>
+                                    </article>
+
+                                    <div class="social">
+                                        <span class="pointer"></span>
+                                        <div class="icons">
+                                            <a class="icon" href="#" target="_blank" data-index="0"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="1"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="2"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="3"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <span class="bg"></span>
+                                    <span class="more"></span>
+                                    <figure class="photo"><img
+                                            src="assets\images\team\Anuj.jpg">
+                                    </figure>
+                                    <article class="text">
+                                        <p class="name">Anuj Talwar</p>
+                                        <p class="role">Executive Member</p>
+                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
+                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
+                                            Sequi, et
+                                            illo?</p>
+                                    </article>
+
+                                    <div class="social">
+                                        <span class="pointer"></span>
+                                        <div class="icons">
+                                            <a class="icon" href="#" target="_blank" data-index="0"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="1"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="2"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="3"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <span class="bg"></span>
+                                    <span class="more"></span>
+                                    <figure class="photo"><img
+                                            src="assets\images\team\Tarun.jpg">
+                                    </figure>
+                                    <article class="text">
+                                        <p class="name">Tarun</p>
+                                        <p class="role">Executive Member</p>
+                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
+                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
+                                            Sequi, et
+                                            illo?</p>
+                                    </article>
+
+                                    <div class="social">
+                                        <span class="pointer"></span>
+                                        <div class="icons">
+                                            <a class="icon" href="#" target="_blank" data-index="0"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="1"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="2"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="3"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <span class="bg"></span>
+                                    <span class="more"></span>
+                                    <figure class="photo"><img
+                                            src="assets\images\team\vishesh.jpeg">
+                                    </figure>
+                                    <article class="text">
+                                        <p class="name">Vishesh Gupta</p>
+                                        <p class="role">Executive Member</p>
+                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
+                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
+                                            Sequi, et
+                                            illo?</p>
+                                    </article>
+
+                                    <div class="social">
+                                        <span class="pointer"></span>
+                                        <div class="icons">
+                                            <a class="icon" href="#" target="_blank" data-index="0"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="1"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="2"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+                                            <a class="icon" href="#" target="_blank" data-index="3"><img
+                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                    <!-- If we need navigation buttons -->
+
+                </div>
+
+            </div>
+    </div>
+
+    </section>
+
+    </div>
 		<!-- *****************************our team end************************************************** -->
 
 		<!-- ****************************************************contact us ***************************** -->
