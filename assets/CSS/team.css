@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 body {
   color: #5a5a5a;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   margin-left: 1px;
 }
 
@@ -14,7 +14,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 ul {
@@ -33,83 +33,68 @@ section {
 
 /* TOP HEADER
 -------------------------------------------------- */
-.navbar.top-bar {
-  border-radius: 0;
-  padding: 16px 0;
-  z-index: 16;
+
+.topnav-myear {
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  margin-left: 40%;
+  margin-right: 30%;
+  margin-top: 9%;
 }
 
-.navbar-toggler {
-  border: 1px solid #fff;
-  color: #000;
-  position: absolute;
-  right: 21px;
+.topnav-myear a {
+  float: left;
+  margin-left: 5px;
+  color: #0776ad;
+  text-align: center;
+  padding: 14px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  /* border: 1px #0297ff solid; */
 }
 
-.sps {
-  padding: 1em 0.5em;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: all 0.25s ease;
-  width: 100%;
+.topnav-myear a:hover {
+  background-color: #0297ff;
+  color: rgb(255, 255, 255);
 }
 
-.sps--abv {
-  background-color: white;
-  color: #000;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+.topnav-myear a.active {
+  background-color: #0297ff;
+  color: #ffffff;
+}
+.main-year select {
+  display: none;
 }
 
-.sps--blw {
-  background-color: #fff;
-  color: #000;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+@media screen and (min-width: 768px) {
+  .mobile-dropdown {
+    display: none;
+  }
 }
 
-.top-bar a.navbar-brand {
-  color: #000;
-  font-size: 26px;
-  font-weight: 800;
-  padding: 5px 0 0 10px;
-  text-transform: uppercase;
-}
-
-.sps--blw.top-bar a.navbar-brand {
-  color: #000;
-}
-
-.top-bar a.navbar-brand span {
-  color: #0297ff;
-}
-
-.top-bar .nav-link {
-  color: #000;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 12px 18px !important;
-}
-
-.sps--blw.top-bar .nav-link {
-  color: #000;
-}
-
-.top-bar .navbar-nav .nav-item {
-  margin: 0;
-}
-
-.top-bar .nav-link:hover,
-.top-bar .nav-item.active a {
-  color: #000;
-  border-bottom: 2px solid #fff;
-  border-radius: 0;
-}
-
-.sps--blw.top-bar .nav-link:hover,
-.sps--blw.top-bar .nav-item.active a {
-  color: #0297ff;
-  border-bottom: none;
-  border-radius: 0;
+@media screen and (max-width: 768px) {
+  .topnav-myear {
+    display: none;
+  }
+  .main-year select {
+    display: inline;
+    /* border: none; */
+    outline-width: 0;
+    padding: 8px;
+    margin-top: 15%;
+    margin-bottom: 2%;
+    margin-left: 40%;
+    width: 80px;
+    background-color: #0297ff;
+    border-radius: 5px;
+    color: white;
+  }
+  .main-year select option {
+    background-color: white;
+    color: #000;
+  }
 }
 
 .pt-card {
@@ -129,6 +114,131 @@ section {
 .lheading {
   font-size: 36px;
 }
+
+#collab {
+  margin-top: -5%;
+}
+
+.collab-main-heading {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 36px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.highlight {
+  color: #0297ff;
+}
+
+.flip-card {
+  width: 260px !important;
+  height: 300px;
+  margin: 3% 1%;
+  border-radius: 8px;
+  text-align: center;
+  /* box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08); */
+  perspective: 1000px;
+}
+
+.flip-card-without-hover {
+  width: 260px !important;
+  height: 300px;
+  margin: 3% 1%;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+  perspective: 1000px;
+}
+
+.flip-img {
+  width: 70%;
+  height: 60%;
+  border-radius: 15px 15px 15px 15px;
+  margin: 14px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.4);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: transparent;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: white;
+  background-image: linear-gradient(to bottom right, white, #e6ffff);
+  color: black;
+  transform: rotateY(180deg);
+  overflow: auto;
+}
+
+.blue-hr {
+  margin: 0px !important;
+  border-style: none;
+  border-top: 6px solid #0297ff !important;
+  border-radius: 8px;
+}
+
+.card-name-back {
+  padding: 0 10px;
+}
+
+.large-name {
+  font-size: 16px;
+}
+
+.collab-heading {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #222;
+}
+
+.team-social-icon {
+  padding: 10px;
+  font-size: 35px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.team-social-icon:hover {
+  opacity: 0.7;
+}
+
+.bio {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.overflow-control {
+  font-size: 14px;
+}
+
 @media (min-width: 300px) and (max-width: 580px) {
   .uheading {
     font-size: 26px;
@@ -156,444 +266,6 @@ section {
     font-size: 26px;
   }
 }
-.collab-card {
-  width: 250px !important;
-  height: 280px;
-  margin: 3% 1%;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
-}
-.collab-card:hover {
-  width: 250px !important;
-  height: 280px;
-  margin: 3% 1%;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.72);
-  -webkit-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.72);
-  -moz-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.72);
-  background-color: white;
-  background-image: linear-gradient(to bottom right, white, #e6ffff);
-}
-.collab-main-heading {
-  margin-top: 1rem;
-  font-weight: 600;
-  font-size: 36px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.highlight {
-  color: #0297ff;
-}
-
-.flip-card {
-  width: 260px !important;
-  height: 300px;
-  margin: 3% 1%;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
-  perspective: 1000px;
-}
-
-.flip-card-without-hover {
-  width: 260px !important;
-  height: 300px;
-  margin: 3% 1%;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
-  perspective: 1000px;
-}
-
-.flip-img {
-  width: 70%;
-  height: 60%;
-  border-radius: 15px 15px 15px 15px;
-  margin: 14px;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-  box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.72);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  background-color: transparent;
-  color: black;
-}
-
-.flip-card-back {
-  background-color: white;
-  background-image: linear-gradient(to bottom right, white, #e6ffff);
-  color: black;
-  transform: rotateY(180deg);
-  overflow: auto;
-}
-
-.card-2 {
-  background: url('../images/collab/docker-ConvertImage.png') no-repeat;
-  display: inline-block !important;
-  width: 10rem !important;
-  height: 10rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-2:hover {
-  background: url('../images/collab/docker.png') no-repeat;
-  display: inline-block !important;
-  width: 12rem !important;
-  height: 12rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-3 {
-  background: url('../images/collab/lenskart-ConvertImage.png') no-repeat;
-  display: inline-block !important;
-  width: 10rem !important;
-  height: 10rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-3:hover {
-  background: url('../images/collab/lenskart.png') no-repeat;
-  display: inline-block !important;
-  width: 12rem !important;
-  height: 12rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-4 {
-  background: url('../images/collab/coding-ConvertImage.png') no-repeat;
-  display: inline-block !important;
-  width: 10rem !important;
-  height: 10rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-4:hover {
-  background: url('../images/collab/coding.png') no-repeat;
-  display: inline-block !important;
-  width: 12rem !important;
-  height: 12rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-5 {
-  background: url('../images/collab/cad-ConvertImage.png') no-repeat;
-  display: inline-block !important;
-  width: 10rem !important;
-  height: 10rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-5:hover {
-  background: url('../images/collab/cad.png') no-repeat;
-  display: inline-block !important;
-  width: 12rem !important;
-  height: 12rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-6 {
-  background: url('../images/collab/UniversityCincinnati-ConvertImage.png')
-    no-repeat;
-  display: inline-block !important;
-  width: 10rem !important;
-  height: 10rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-6:hover {
-  background: url('../images/collab/UniversityCincinnati.png') no-repeat;
-  display: inline-block !important;
-  width: 12rem !important;
-  height: 12rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-7 {
-  background: url('../images/collab/szeged-ConvertImage.png') no-repeat;
-  display: inline-block !important;
-  width: 10rem !important;
-  height: 10rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-7:hover {
-  background: url('../images/collab/szeged.png') no-repeat;
-  display: inline-block !important;
-  width: 12rem !important;
-  height: 12rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-8 {
-  background: url('../images/collab/iiitd-ConvertImage.png') no-repeat;
-  display: inline-block !important;
-  width: 10rem !important;
-  height: 10rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-8:hover {
-  background: url('../images/collab/iiitd.png') no-repeat;
-  display: inline-block !important;
-  width: 12rem !important;
-  height: 12rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-9 {
-  background: url('../images/collab/UniversityofDelhi-ConvertImage.png')
-    no-repeat;
-  display: inline-block !important;
-  width: 10rem !important;
-  height: 10rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-9:hover {
-  background: url('../images/collab/UniversityofDelhi.png') no-repeat;
-  display: inline-block !important;
-  width: 12rem !important;
-  height: 12rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-10 {
-  background: url('../images/collab/jnu-ConvertImage.png') no-repeat;
-  display: inline-block !important;
-  width: 10rem !important;
-  height: 10rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-10:hover {
-  background: url('../images/collab/jnu.png') no-repeat;
-  display: inline-block !important;
-  width: 12rem !important;
-  height: 12rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-11 {
-  background: url('../images/collab/iisc-ConvertImage.png') no-repeat;
-  display: inline-block !important;
-  width: 10rem !important;
-  height: 10rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-11:hover {
-  background: url('../images/collab/iisc.png') no-repeat;
-  display: inline-block !important;
-  width: 12rem !important;
-  height: 12rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-12 {
-  background: url('../images/collab/amazon-ConvertImage.png') no-repeat;
-  display: inline-block !important;
-  width: 10rem !important;
-  height: 10rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-12:hover {
-  background: url('../images/collab/amazon.png') no-repeat;
-  display: inline-block !important;
-  width: 12rem !important;
-  height: 12rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-13 {
-  background: url('../images/collab/tcs-ConvertImage.png') no-repeat;
-  display: inline-block !important;
-  width: 10rem !important;
-  height: 10rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-13:hover {
-  background: url('../images/collab/tcs.png') no-repeat;
-  display: inline-block !important;
-  width: 12rem !important;
-  height: 12rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-14 {
-  background: url('../images/collab/zenon-ConvertImage.png') no-repeat;
-  display: inline-block !important;
-  width: 10rem !important;
-  height: 10rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-14:hover {
-  background: url('../images/collab/zenon.png') no-repeat;
-  display: inline-block !important;
-  width: 12rem !important;
-  height: 12rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-15 {
-  background: url('../images/collab/stage3-ConvertImage.png') no-repeat;
-  display: inline-block !important;
-  width: 10rem !important;
-  height: 10rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-15:hover {
-  background: url('../images/collab/stage3.png') no-repeat;
-  display: inline-block !important;
-  width: 12rem !important;
-  height: 12rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-16 {
-  background: url('../images/collab/societe-generale-logo-ConvertImage.png')
-    no-repeat;
-  display: inline-block !important;
-  width: 10rem !important;
-  height: 10rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.card-16:hover {
-  background: url('../images/collab/societe-generale-logo.png') no-repeat;
-  display: inline-block !important;
-  width: 12rem !important;
-  height: 12rem !important;
-  padding: 2vh 4vh;
-  background-position: center;
-  background-size: contain;
-  text-align: center;
-  transition: all 0.5s ease-in-out !important;
-}
-.blue-hr {
-  margin: 0px !important;
-  border-style: none;
-  border-top: 6px solid #0297ff !important;
-  border-radius: 8px;
-}
-.collab-heading {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #222;
-}
 
 @media (min-width: 200px) and (max-width: 580px) {
   .uheading {
@@ -617,53 +289,12 @@ section {
   .card-name {
     font-size: 20px;
   }
-}
-
-.team-social-icon {
-  padding: 10px;
-  font-size: 35px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-}
-
-.team-social-icon:hover {
-  opacity: 0.7;
-}
-
-.bio {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.overflow-control {
-  font-size: 14px;
-}
-.text-and-logo {
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-}
-.outstanding-logo {
-  width: 160px;
-  animation-name: scale-up-center;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  animation-delay: 1s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-}
-@keyframes scale-up-center {
-  0%{
-    -webkit-transform: scale(.2);
-    transform: scale(.2);
+  .year-margin {
+    margin-top: 50px;
+    margin-left: 25px;
   }
-  100%{
-    -webkit-transform: scale(1);
-    transform: scale(1);
+  #collab {
+    margin-top: -25%;
   }
 }
 

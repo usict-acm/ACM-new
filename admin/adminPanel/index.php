@@ -129,8 +129,28 @@
                     </div>
                 </div>
                 <div class="row">
-                <?php 
-                    include('faqadmin/index.php')
+                <?php
+                    $table='f';
+                    if (isset($_GET['table'])){
+                        $table = $_GET['table'];
+                        
+                    }
+                    switch ($table) {
+                    
+                        case 'AddAnnouncement':
+                            include('./faqadmin/announcements-form.php');
+                            break;
+                        case 'Blog':
+                            include('./faqadmin/blogtable.php');
+                            break;
+                        case 'AddBlog':
+                            include('./faqadmin/blogAdmin.html');
+                            break;
+                        default:
+                            include('./faqadmin/index.php');
+                            break;
+                        
+                    }
                 ?>
                 </div>
 
@@ -141,6 +161,3 @@
 	include('includes/scripts.php');
 	include('includes/footer.php');
 	?>
-
-
-
