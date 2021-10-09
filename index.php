@@ -194,9 +194,9 @@
 
   <!-- ====================================Announcement============================================= -->
 
-  <section class="announcement">
+  <!-- <section class="announcement">
     <h1 class="section-heading announce">Announcements</h1>
-    <div class="container-fluid text">
+    <div class="container-fluid text"> -->
       <!-- <div class="swiper-container"> -->
         <!-- <div class="swiper-wrapper"> -->
 
@@ -204,7 +204,7 @@
           
 
           <!-- <div class="swiper-slide"> -->
-            <div class="det">
+            <!-- <div class="det">
               <div class="heading">
                 <h1>
                    ACM USICT Summer Internship
@@ -228,13 +228,13 @@
 
                       <br>Please note that the form is open for all courses of USICT
                     </p>
-                    <div style="display: flex;justify-content: space-evenly;">
+                    <div style="display: flex;justify-content: space-evenly;"> -->
                       <!-- <a target="_blank" href="http://bit.do/ReactNativeWorkshop"><button
                           class="btn announce-button-one" style="background-color:#2250fc">
                           <span style="color:#fff; font-size:0.9rem">REGISTER NOW</span>
                         </button>
                       </a> -->
-                      <a target="_blank"
+                      <!-- <a target="_blank"
                         href="./summerinternship/index.php"><button class="btn"
                           style="background-color:#2250fc">
                           <span style="color:#fff; font-size:0.9rem">View Details</span>
@@ -247,9 +247,9 @@
                 </div>
                 <div class="col-md-5 list">
 
-                  <img class="imag imag_trell" src="./assets/images/Summer Internship 2021.jpeg" alt="">
+                  <img class="imag imag_trell" src="./assets/images/Summer Internship 2021.jpeg" alt=""> -->
 
-                </div>
+                <!-- </div> -->
 
               <!-- </div> -->
 
@@ -299,7 +299,7 @@
               </div>
             </div>
 
-          </div> -->
+          </div>
 
           <!-- <div class="swiper-slide">
             <div class="det">
@@ -397,7 +397,6 @@
                           <span style="color:#fff; font-size:0.9rem">PREVIOUS SESSIONS</span>
                         </button>
                       </a>
-
                     </div>
                   </div>
                 </div>
@@ -406,7 +405,7 @@
                 </div>
               </div> -->
 
-
+<!-- 
             </div>
           </div>
         </div>
@@ -414,8 +413,8 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div> -->
       </div>
-    </div>
-  </section>
+    </div> -->
+  <!-- </section> -->
 
 <!-- ******************************************Blogs******************************************* -->
 
@@ -425,7 +424,23 @@
       window.document.location = "./singleBlog.php?Id="+id; //Connecting Second page
     }
   </script>
-  
+
+  <!-- <section class="announcement">
+    <h1 class="section-heading announce">Announcements</h1>
+    <div class="container-fluid text">
+      <div class="swiper-container swiper-container-horizontal">
+        <div class="swiper-wrapper" id="allAnnouncements"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section> -->
+
+  <?php 
+    require_once "./announcement.php";
+  ?>
+
   <section class="text-center">
     <div class="container">
       <h2 class="display-4 font-weight-bold my-3">Recent Blogs</h2>
@@ -442,11 +457,11 @@
     var rwBlogs = document.getElementById("threeBlogsRow");
     rwBlogs.innerHTML = "";
 
-    let url = "./admin/blogAdmin/api.php/?q=readHome"
+    let url1 = "./admin/blogAdmin/api.php/?q=readHome"
 
     $(document).ready(function(){
       $.ajax({
-        url: url,
+        url: url1,
         method: "GET",
         dataType: "JSON",
         success: function(data){
@@ -479,6 +494,69 @@
     });
   </script>
 
+  <script>
+    var allAnn = document.getElementById("allAnnouncements");
+    allAnn.innerHTML = "";
+
+    let url = "./admin/blogAdmin/api.php/?q=readAllAnnouncements";
+
+    $(document).ready(function(){
+      $.ajax({
+        url: url,
+        method: "GET",
+        dataType: "JSON",
+        success: function(data){
+          console.log("all announcements",data);
+            data.forEach(myfunc1);
+            function myfunc1(row, index) {
+              allAnn.innerHTML += "<div class='swiper-slide'>\
+            <div class=det>\
+              <div class=heading>\
+                <h1>\
+                  <span class=badge>\
+                    <span class=badge-wrap>\
+                      <span class=badge-icon><svg height=14 viewBox=0 0 14 14 width=14 xmlns=http://www.w3.org/2000/svg>\
+                          <path d=M7 2.333c2.577 0 4.667 2.09 4.667 4.667S9.577 11.667 7 11.667 2.333 9.577 2.333 7 4.423 2.333 7 2.333zm0 1.05c-1.997 0-3.617 1.62-3.617 3.617 0 1.997 1.62 3.617 3.617 3.617 1.997 0 3.617-1.62 3.617-3.617 0-1.997-1.62-3.617-3.617-3.617z>\
+                          </path>\
+                        </svg><span class=badge-icon-inner><svg aria-hidden=true focusable=false viewbox=0 0 14 28>\
+                            <path d=M7 9.567c1.418 0 2.567-1.15 2.567-2.567 0-1.418-1.15-2.567-2.567-2.567-1.418 0-2.567 1.15-2.567 2.567 0 1.418 1.15 2.567 2.567 2.567z>\
+                            </path>\
+                          </svg></span></span><span class=badge-text>LIVE</span>\
+                    </span>\
+                  </span>Session On React Native</h1>\
+              </div>\
+              <div class='row det-row'>\
+                <div class='col-md-7 divide'>\
+                  <div class=detai>\
+                    <p>Greetings everyone!!!<br>\
+                    </p>\
+                    <div style=display: flex;justify-content: space-evenly;>\
+                      <a target=_blank href=http://bit.do/ReactNativeWorkshop>\
+                        <button class='btn announce-button-one' style=background-color:#2250fc>\
+                          <span style=color:#fff; font-size:0.9rem>REGISTER NOW</span>\
+                        </button>\
+                      </a>\
+                      <a target=_blank href=https://youtube.com/playlist?list=PLgPSSnf8lP5CubPwhgIk9n4FUhFN5nc3L><button class=btn style=background-color:#2250fc>\
+                          <span style=color:#fff; font-size:0.9rem>VIEW RESOURCES</span>\
+                        </button>\
+                      </a>\
+                    </div>\
+                  </div>\
+                </div>\
+                <div class='col-md-5 list'>\
+                  <img class='imag imag_trell' src=./assets/images/ReactNative.png alt=Nothing>\
+                </div>\
+              </div>\
+            </div>\
+          </div>"
+            }
+          }
+        });
+      });
+
+ 
+  </script>
+
   <!--  *******************************************************************EVENTS*********************************************-->
 
 
@@ -489,7 +567,7 @@
       <!-- ********************************************EVENT ARD***************************************************  -->
       <div class="wrapper">
         <div class="link_wrapper">
-          <a href="./events/index.html">Know More!</a>
+          <a href="./events.php">Know More!</a>
           <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
               <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>

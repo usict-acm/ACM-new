@@ -83,7 +83,7 @@ require_once "./config.php";
                         <input class="form-group" type="file" name="file" id="file" />
 
                         <input class="btn btn-primary" type="submit" name="submit" value="submit" />
-                    <a href="../index.php" class="btn btn-default">Cancel</a>
+                        <a href="../index.php" class="btn btn-default">Cancel</a>
                     </form>
                 </div>
             </div>
@@ -95,7 +95,7 @@ require_once "./config.php";
         selector: 'textarea',
         mode: "specific_textareas",
         editor_Selector: "mceEditor",
-        plugins: ' advlist autolink lists link image charmap print preview hr anchor pagebreak a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinymcespellchecker',
+        plugins: ' advlist autolink lists link image charmap print preview hr anchor pagebreak autolink lists media mediaembed pageembed permanentpen powerpaste table advtable tinymcespellchecker',
         toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
     });
 </script>
