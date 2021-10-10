@@ -237,7 +237,7 @@
                       <!-- <a target="_blank"
                         href="./summerinternship/index.php"><button class="btn"
                           style="background-color:#2250fc">
-                          <span style="color:#fff; font-size:0.9rem">REGISTER NOW</span>
+                          <span style="color:#fff; font-size:0.9rem">View Details</span>
                         </button>
                       </a>
                     </div>
@@ -403,16 +403,15 @@
                 <div class="col-md-5 list">
                   <img class="imag" src="./assets/images/algorithm-sessions.jpg" alt="" width="100%">
                 </div>
-              </div>
- -->
+              </div> -->
 
 <!-- 
             </div>
           </div>
         </div>
-        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-prev"></div> -->
       </div>
     </div> -->
   <!-- </section> -->
@@ -839,7 +838,7 @@
 
   <section style="background-color: #fff; background-image: url('./assets/images/right_up.png'); height:20%; ">
     <div class="container">
-      <div class="row">
+      <div class="row d-flex justify-content-center">
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
 
           <div class="text-center">
@@ -877,8 +876,17 @@
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <!-- <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+          <div class="text-center" style="margin-top: 5px;">
+            <div class="c-icon"><a href="https://discord.gg/3Z5mJMCWEa" target="_blank"><i class="fab fa-4x fa-discord"></i></a></div>
+            <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="100"
+                data-from="0" data-target="100" data-seperator="true">300+</span> </div>
+            <div class="seperator seperator-small"></div>
+            <p class="follower-count">Discord</p>
+          </div>
+        </div> -->
 
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
           <div class="text-center" style="margin-top: 5px;">
             <div class="c-icon"><a href="#"><i class="fa fa-4x fa-child"></i></a></div>
             <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="100"
