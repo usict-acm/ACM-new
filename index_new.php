@@ -123,7 +123,7 @@
 				<div class="swiper-button-prev"></div>
 			</div>
 			<div id="typewriter">
-				<span class="typewriter-box" data-wait="400" data-content='["ACM CHAPTER USICT"]'> </span>
+				<span class="typewriter-box" data-wait="200" data-content='["ACM CHAPTER USICT"]'> </span>
 			</div>
 		</section>
 		<!-- end of hero slider -->
@@ -285,13 +285,13 @@
 
 		<script>
 			function readMoreRedirection(id) {
-				console.log(id);
-				window.document.location = './singleBlog.php?Id=' + id; //Connecting Second page
+				console.log(id)
+				window.document.location = './singleBlog.php?Id=' + id //Connecting Second page
 			}
-			var rwBlogs = document.getElementById('threeBlogsRow');
-			rwBlogs.innerHTML = '';
+			var rwBlogs = document.getElementById('threeBlogsRow')
+			rwBlogs.innerHTML = ''
 
-			let url1 = './admin/blogAdmin/api.php/?q=readHome';
+			let url1 = './admin/blogAdmin/api.php/?q=readHome'
 
 			$(document).ready(function () {
 				$.ajax({
@@ -299,14 +299,14 @@
 					method: 'GET',
 					dataType: 'JSON',
 					success: function (data) {
-						var i;
+						var i
 						for (i = 1; i < 4; i++) {
-							myFunc(data[i - 1], i);
+							myFunc(data[i - 1], i)
 						}
 
 						function myFunc(row, index) {
-							var desc = row.Content;
-							var descSub = desc.substring(0, 70) + '...';
+							var desc = row.Content
+							var descSub = desc.substring(0, 70) + '...'
 
 							rwBlogs.innerHTML +=
 								'<div class="b-card-container">\
@@ -320,221 +320,388 @@
 								'</p>\
 					<span class="b-text"><a href="javascript:readMoreRedirection(' +
 								row.Sno +
-								')" style="text-decoration:none; cursor:pointer; color:#0a58ca;">Read Blog</a></span>\
+								')" style="text-decoration:none cursor:pointer color:#0a58ca">Read Blog</a></span>\
 				</div>\
 				<img src="./' +
 								row.Image +
 								'" class="blog-img"/>\
 			</div>\
-			<div>';
+			<div>'
 						}
 					},
-				});
-			});
+				})
+			})
 		</script>
 		<!-- ******************************blog section end***************************************** -->
 		<!-- *******************************************our team************* -->
-		<section class="team">
-			<div class="teamhead">
+		
+		<div class="bloghead">
 				<h2 class="my-4 display-4 fw-bolder text-center">Our<span class="text-blue"> Team</span></h2>
-			</div>
-			<div class="container">
-				<div class="row s-row">
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\Gaurav.png" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Gaurav Jain</h5>
-											<p class="tm-d">Chair</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\vardaan.jpg" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Vardaan Grover</h5>
-											<p class="tm-d">Vice-Chair</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\Akshad.jpg" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Akshad Bhandula</h5>
-											<p class="tm-d">Secretary</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\Divyansh.jpg" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Divyansh Rastogi</h5>
-											<p class="tm-d">Joint Secretary</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\chaitanDev.jpg" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Chaitan Dev</h5>
-											<p class="tm-d">Treasurer</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\profile_pic_anmol.png" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Anmol Goel</h5>
-											<p class="tm-d">Web Chair</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\sushantHaluwai.jpg" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Sushant Haluwai</h5>
-											<p class="tm-d">Executive Members</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\harshGoyal.png" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Harsh Goyal</h5>
-											<p class="tm-d">Executive Members</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\Manoj.jpg" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Manoj Kumar</h5>
-											<p class="tm-d">Executive Members</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\Anuj.jpg" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Anuj</h5>
-											<p class="tm-d">Executive Members</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
+			</div><div class="t-wrapper">
 
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\Tarun.jpg" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Tarun</h5>
-											<p class="tm-d">Executive Members</p>
-										</div>
-									</div>
-								</figure>
-							</div>
-						</div>
-					</div>
+<section class="t-module-team">
 
-					<div class="speaker-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-						<div class="inner-box">
-							<div class="image-box">
-								<figure class="image">
-									<img src="assets\images\team\vishesh.jpeg" alt="" />
-									<div class="social-links">
-										<div class="tm-description">
-											<h5 class="tm-name">Vishesh Gupta</h5>
-											<p class="tm-d">Executive Members</p>
-										</div>
-									</div>
-								</figure>
+	<div class="t-team">
+
+		<div class="t-team-cards">
+
+			<!-- Slider main container -->
+			<div class="t-swiper-container">
+				<!-- Additional required wrapper -->
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\Gaurav.png"></figure>
+							<article class="t-text">
+								<p class="t-name">Gaurav Jain</p>
+								<p class="t-role">Chair</p>
+								<p class="t-desc">${desc}</p>
+							</article>
+
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="#" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/gauravj22/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/gauravj22/" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="py-3 mt-2 d-md-flex justify-content-sm-center">
-					<div class="col-md-3 col mb-2">
-						<a href="./team.php" class="about-button">Meet the Team</a>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\vardaan.jpg"></figure>
+							<article class="t-text">
+								<p class="t-name">Vardaan Grover</p>
+								<p class="t-role">Vice Chair</p>
+								<p class="t-desc">${desc}</p>
+							</article>
+
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/vardaan-grover-8a64141a0/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/_vg_03/" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\Akshad.jpg"></figure>
+							<article class="t-text">
+								<p class="t-name">Akshad Bhandula</p>
+								<p class="t-role">Secretory</p>
+								<p class="t-desc">${desc}</p>
+							</article>
+
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="#" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/akshad-bhandula-073202113/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/musicalsoul107/" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\Divyansh.jpg"></figure>
+							<article class="t-text">
+								<p class="t-name">Divyansh Rastogi</p>
+								<p class="t-role">Joint Secretary</p>
+								<p class="t-desc">${desc}</p>
+							</article>
+
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="#" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/divyansh-rastogi-08a44a171/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/divyansh.rastogi.3000/" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\chaitanDev.jpg"></figure>
+							<article class="t-text">
+								<p class="t-name">Chaitan Dev</p>
+								<p class="t-role">Treasurer</p>
+								<p class="t-desc">${desc}</p>
+							</article>
+
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="#" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/chaitan-dev/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/devchaitan01/" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\profile_pic_anmol.png"></figure>
+							<article class="t-text">
+								<p class="t-name">Anmol Goel</p>
+								<p class="t-role">Web Chair</p>
+								<p class="t-desc">${desc}</p>
+							</article>
+
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="https://github.com/anmolgoel12" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/anmol-goel-13b447178/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="#" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\sushantHaluwai.jpg"></figure>
+							<article class="t-text">
+								<p class="t-name">Sushant Haluwai</p>
+								<p class="t-role">Executive Member</p>
+								<p class="t-desc">${desc}</p>
+							</article>
+
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="#" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/sushant-haluwai-8997171b5/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="#" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\harshGoyal.png"></figure>
+							<article class="t-text">
+								<p class="t-name">Harsh Goyal</p>
+								<p class="t-role">Executive Member</p>
+								<p class="t-desc">${desc}</p>
+							</article>
+
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="https://github.com/harshgoyal7065" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/harsh-goyal-195255b9/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/harsh.student99/" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\Manoj.jpg"></figure>
+							<article class="t-text">
+								<p class="t-name">Manoj Kumar</p>
+								<p class="t-role">Executive Member</p>
+								<p class="t-desc">${desc}</p>
+							</article>
+
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="https://github.com/manoj-kuma" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/manoj-kumar-a4a215195/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/manoj_kr_maurya/" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\Anuj.jpg"></figure>
+							<article class="t-text">
+								<p class="t-name">Anuj Talwar</p>
+								<p class="t-role">Executive Member</p>
+								<p class="t-desc">${desc}</p>
+							</article>
+
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="https://github.com/alooperalta" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/anuj-talwar/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/aloo_peralta_/" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\Tarun.jpg"></figure>
+							<article class="t-text">
+								<p class="t-name">Tarun</p>
+								<p class="t-role">Executive Member</p>
+								<p class="t-desc">${desc}</p>
+							</article>
+
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="https://github.com/tarawat" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/tarun-shekhawat-037091194/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/tarawat15/" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				 <div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\vishesh.jpeg"></figure>
+							<article class="t-text">
+								<p class="t-name">Vishesh Gupta</p>
+								<p class="t-role">Executive Member</p>
+								<p class="t-desc">${desc}</p>
+							</article>
+
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="https://github.com/Vishesh02" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/vishesh-gupta-404955206/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/visheshh02" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
-		</section>
+
+			<div class="t-swiper-pagination"></div>
+			<!-- If we need navigation buttons -->
+		</div>
+
+	</div>
+</div>
+
+</section>
+
+</div>
 		<!-- *****************************our team end************************************************** -->
 
 		<!-- ****************************************************contact us ***************************** -->
 		<div class="dsph" id="contact">
-			<div class="d-flex justify-content-center mr-5 mt-md-5">
+			<div class="d-flex justify-content-center mt-md-5 s-backg">
 				<img src="./assets/images/contact-us-form.png" class="svg-media" alt="" />
 
 				<div>
@@ -542,19 +709,27 @@
 						<button class="btn btn-primary s-form-group" onclick="closecontact()">close</button>
 					</div>
 					<form class="s-form">
-						<div class="form-group s-form-group">
-							<input type="text" class="form-control" placeholder="Name" />
-						</div>
-						<div class="form-group s-form-group">
-							<input
+						<div class="form-group s-form-group ">
+							
+							<div class="form-input form-margin-top">
+								<input type="text" class="form-control" placeholder="Name" style="color: grey; margin-right: 5px"/>
+								<input
 								type="email"
 								class="form-control"
 								aria-describedby="emailHelp"
 								placeholder="Enter email"
+								style="color: grey"
 							/>
+							</div>
 						</div>
-						<div class="form-group s-form-group">
-							<input type="text" class="form-control" placeholder="Phone No" />
+						<div class="form-group s-form-group ">
+						<div class="form-input">	
+							<input type="text" name="entry.1199769641" class="form-input-boxes-manual form-control" placeholder="Phone Number" style="color: grey; margin-right: 5px" spellcheck="false" data-ms-editor="true">
+							<input type="text" name="entry.154355220" class="form-input-boxes-manual form-control" placeholder="Organization / College" style="color: grey" spellcheck="false" data-ms-editor="true">
+						</div>
+						</div>
+						<div class="form-group s-form-group ">
+						<textarea type="text" name="entry.1544463438" rows="5" class="form-control form-input-boxes-manual required" placeholder="Message" style="color: grey; margin-top: 0px; margin-bottom: 0px; height: 124px" aria-required="true" spellcheck="false" data-ms-editor="true"></textarea>
 						</div>
 
 						<button type="submit" class="btn btn-primary s-form-group">Submit</button>
@@ -708,7 +883,7 @@
 						<div class="col text-center">
 							<div class="copyright-text">
 								<p>
-									&copy; Conceptualized, Designed and Developed by Office Bearers of ACM USICT chapter
+									&copy Conceptualized, Designed and Developed by Office Bearers of ACM USICT chapter
 								</p>
 							</div>
 						</div>
