@@ -470,3 +470,28 @@ window.addEventListener('load', (event) => {
 
 	/* end */
 });
+
+function validateform(){  
+	var name = document.contact.name.value;  
+	var email = document.contact.email.value;
+	var phone = document.contact.phone.value;
+
+	console.log(name);	
+	console.log(email);
+	console.log(phone.length);
+
+	const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+	if (name==null || name=="") {
+	  alert("Name can't be blank !");  
+	  return false;  
+	}
+	if (!re.test(email)) {  
+		alert("Please enter a valid e-mail address !");  
+	  	return false;  
+	}
+	if (phone.length > 10) {
+		alert ("Please enter a 10 digit number !");
+		return false;
+	}
+}  

@@ -345,25 +345,25 @@
 				<div class="closebtn">
 					<button class="btn btn-primary s-form-group contact-btn" onclick="closecontact()"><i class="fas fa-times"></i></button>
 				</div>
-				<form class="s-form">
+				<form class="s-form" name="contact" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse" onsubmit="return validateform();" >
 					<h2 class="my-4 display-4 fw-bolder text-center">Contact<span class="text-blue"> Us</span></h2>
 					<div class="row">
 						<div class="form-group s-form-group col-md-6">
-							<input type="text" name="entry.360262149" class="form-control" placeholder="Name" />
+							<input type="text" name="name" class="form-control" placeholder="Name *" />
 						</div>
 						<div class="form-group s-form-group col-md-6">
-							<input type="email" name="entry.1979735424" class="form-control" aria-describedby="emailHelp" placeholder="Email" />
+							<input type="text" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Email *" />
 						</div>
 					</div>
 					<div class="row">
 					<div class="form-group s-form-group col-md-6">
-							<input type="text" name="entry.1199769641" class="form-control" placeholder="Phone No." />
+							<input type="text" name="phone" class="form-control" placeholder="Phone No." />
 						</div>
 						<div class="form-group s-form-group col-md-6">
-							<input type="text" name="entry.154355220" class="form-control" placeholder="College/ Organization" />
+							<input type="text" name="college" class="form-control" placeholder="College/ Organization" />
 						</div>
 					</div>
-					<textarea type="text" name="entry.1544463438" rows="5" placeholder="Message" class="form-control col-md-12 contact-message"></textarea>
+					<textarea type="text" name="message" rows="5" placeholder="Message" class="form-control col-md-12 contact-message"></textarea>
 					<div class="row">
 						<button type="submit" class="btn btn-primary s-form-group contact-btn col-md-3 col-sm-2">Submit</button>
 					</div>
