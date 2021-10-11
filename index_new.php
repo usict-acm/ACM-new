@@ -123,7 +123,7 @@
 				<div class="swiper-button-prev"></div>
 			</div>
 			<div id="typewriter">
-				<span class="typewriter-box" data-wait="400" data-content='["ACM CHAPTER USICT"]'> </span>
+				<span class="typewriter-box" data-wait="200" data-content='["ACM CHAPTER USICT"]'> </span>
 			</div>
 		</section>
 		<!-- end of hero slider -->
@@ -285,13 +285,13 @@
 
 		<script>
 			function readMoreRedirection(id) {
-				console.log(id);
-				window.document.location = './singleBlog.php?Id=' + id; //Connecting Second page
+				console.log(id)
+				window.document.location = './singleBlog.php?Id=' + id //Connecting Second page
 			}
-			var rwBlogs = document.getElementById('threeBlogsRow');
-			rwBlogs.innerHTML = '';
+			var rwBlogs = document.getElementById('threeBlogsRow')
+			rwBlogs.innerHTML = ''
 
-			let url1 = './admin/blogAdmin/api.php/?q=readHome';
+			let url1 = './admin/blogAdmin/api.php/?q=readHome'
 
 			$(document).ready(function () {
 				$.ajax({
@@ -299,14 +299,14 @@
 					method: 'GET',
 					dataType: 'JSON',
 					success: function (data) {
-						var i;
+						var i
 						for (i = 1; i < 4; i++) {
-							myFunc(data[i - 1], i);
+							myFunc(data[i - 1], i)
 						}
 
 						function myFunc(row, index) {
-							var desc = row.Content;
-							var descSub = desc.substring(0, 70) + '...';
+							var desc = row.Content
+							var descSub = desc.substring(0, 70) + '...'
 
 							rwBlogs.innerHTML +=
 								'<div class="b-card-container">\
@@ -320,446 +320,388 @@
 								'</p>\
 					<span class="b-text"><a href="javascript:readMoreRedirection(' +
 								row.Sno +
-								')" style="text-decoration:none; cursor:pointer; color:#0a58ca;">Read Blog</a></span>\
+								')" style="text-decoration:none cursor:pointer color:#0a58ca">Read Blog</a></span>\
 				</div>\
 				<img src="./' +
 								row.Image +
 								'" class="blog-img"/>\
 			</div>\
-			<div>';
+			<div>'
 						}
 					},
-				});
-			});
+				})
+			})
 		</script>
 		<!-- ******************************blog section end***************************************** -->
 		<!-- *******************************************our team************* -->
-		<div class="wrapper">
+		
+		<div class="bloghead">
+				<h2 class="my-4 display-4 fw-bolder text-center">Our<span class="text-blue"> Team</span></h2>
+			</div><div class="t-wrapper">
 
-        <section class="module-team">
+<section class="t-module-team">
 
-            <div class="team">
+	<div class="t-team">
 
-                <div class="team-cards">
+		<div class="t-team-cards">
 
-                    <!-- Slider main container -->
-                    <div class="swiper-container">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper s-wrapper">
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <span class="bg"></span>
-                                    <span class="more"></span>
-                                    <figure class="photo"><img
-                                            src="assets\images\team\Gaurav.png">
-                                    </figure>
-                                    <article class="text">
-                                        <p class="name">Gaurav Jain</p>
-                                        <p class="role">Chair</p>
-                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
-                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
-                                            Sequi, et
-                                            illo?</p>
-                                    </article>
+			<!-- Slider main container -->
+			<div class="t-swiper-container">
+				<!-- Additional required wrapper -->
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\Gaurav.png"></figure>
+							<article class="t-text">
+								<p class="t-name">Gaurav Jain</p>
+								<p class="t-role">Chair</p>
+								<p class="t-desc">${desc}</p>
+							</article>
 
-                                    <div class="social">
-                                        <span class="pointer"></span>
-                                        <div class="icons">
-                                            <a class="icon" href="#" target="_blank" data-index="0"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="1"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="2"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="3"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <span class="bg"></span>
-                                    <span class="more"></span>
-                                    <figure class="photo"><img
-                                            src="assets\images\team\vardaan.jpg">
-                                    </figure>
-                                    <article class="text">
-                                        <p class="name">Vardaan Grover</p>
-                                        <p class="role">Vice Chair</p>
-                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
-                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
-                                            Sequi, et
-                                            illo?</p>
-                                    </article>
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="#" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/gauravj22/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/gauravj22/" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\vardaan.jpg"></figure>
+							<article class="t-text">
+								<p class="t-name">Vardaan Grover</p>
+								<p class="t-role">Vice Chair</p>
+								<p class="t-desc">${desc}</p>
+							</article>
 
-                                    <div class="social">
-                                        <span class="pointer"></span>
-                                        <div class="icons">
-                                            <a class="icon" href="#" target="_blank" data-index="0"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="1"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="2"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="3"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <span class="bg"></span>
-                                    <span class="more"></span>
-                                    <figure class="photo"><img
-                                            src="assets\images\team\Akshad.jpg">
-                                    </figure>
-                                    <article class="text">
-                                        <p class="name">Akshad Bhandula</p>
-                                        <p class="role">Secretory</p>
-                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
-                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
-                                            Sequi, et
-                                            illo?</p>
-                                    </article>
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/vardaan-grover-8a64141a0/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/_vg_03/" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\Akshad.jpg"></figure>
+							<article class="t-text">
+								<p class="t-name">Akshad Bhandula</p>
+								<p class="t-role">Secretory</p>
+								<p class="t-desc">${desc}</p>
+							</article>
 
-                                    <div class="social">
-                                        <span class="pointer"></span>
-                                        <div class="icons">
-                                            <a class="icon" href="#" target="_blank" data-index="0"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="1"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="2"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="3"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <span class="bg"></span>
-                                    <span class="more"></span>
-                                    <figure class="photo"><img
-                                            src="assets\images\team\Divyansh.jpg">
-                                    </figure>
-                                    <article class="text">
-                                        <p class="name">Divyansh Rastogi</p>
-                                        <p class="role">Joint Secretary</p>
-                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
-                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
-                                            Sequi, et
-                                            illo?</p>
-                                    </article>
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="#" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/akshad-bhandula-073202113/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/musicalsoul107/" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\Divyansh.jpg"></figure>
+							<article class="t-text">
+								<p class="t-name">Divyansh Rastogi</p>
+								<p class="t-role">Joint Secretary</p>
+								<p class="t-desc">${desc}</p>
+							</article>
 
-                                    <div class="social">
-                                        <span class="pointer"></span>
-                                        <div class="icons">
-                                            <a class="icon" href="#" target="_blank" data-index="0"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="1"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="2"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="3"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <span class="bg"></span>
-                                    <span class="more"></span>
-                                    <figure class="photo"><img
-                                            src="assets\images\team\chaitanDev.jpg">
-                                    </figure>
-                                    <article class="text">
-                                        <p class="name">Chaitan Dev</p>
-                                        <p class="role">Treasurer</p>
-                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
-                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
-                                            Sequi, et
-                                            illo?</p>
-                                    </article>
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="#" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/divyansh-rastogi-08a44a171/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/divyansh.rastogi.3000/" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\chaitanDev.jpg"></figure>
+							<article class="t-text">
+								<p class="t-name">Chaitan Dev</p>
+								<p class="t-role">Treasurer</p>
+								<p class="t-desc">${desc}</p>
+							</article>
 
-                                    <div class="social">
-                                        <span class="pointer"></span>
-                                        <div class="icons">
-                                            <a class="icon" href="#" target="_blank" data-index="0"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="1"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="2"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="3"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <span class="bg"></span>
-                                    <span class="more"></span>
-                                    <figure class="photo"><img
-                                            src="assets\images\team\profile_pic_anmol.png">
-                                    </figure>
-                                    <article class="text">
-                                        <p class="name">Anmol Goel</p>
-                                        <p class="role">Web Chair</p>
-                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
-                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
-                                            Sequi, et
-                                            illo?</p>
-                                    </article>
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="#" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/chaitan-dev/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/devchaitan01/" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\profile_pic_anmol.png"></figure>
+							<article class="t-text">
+								<p class="t-name">Anmol Goel</p>
+								<p class="t-role">Web Chair</p>
+								<p class="t-desc">${desc}</p>
+							</article>
 
-                                    <div class="social">
-                                        <span class="pointer"></span>
-                                        <div class="icons">
-                                            <a class="icon" href="#" target="_blank" data-index="0"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="1"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="2"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="3"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="https://github.com/anmolgoel12" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/anmol-goel-13b447178/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="#" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\sushantHaluwai.jpg"></figure>
+							<article class="t-text">
+								<p class="t-name">Sushant Haluwai</p>
+								<p class="t-role">Executive Member</p>
+								<p class="t-desc">${desc}</p>
+							</article>
 
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <span class="bg"></span>
-                                    <span class="more"></span>
-                                    <figure class="photo"><img
-                                            src="assets\images\team\sushantHaluwai.jpg">
-                                    </figure>
-                                    <article class="text">
-                                        <p class="name">Sushant Haluwai</p>
-                                        <p class="role">Executive Member</p>
-                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
-                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
-                                            Sequi, et
-                                            illo?</p>
-                                    </article>
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="#" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/sushant-haluwai-8997171b5/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="#" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\harshGoyal.png"></figure>
+							<article class="t-text">
+								<p class="t-name">Harsh Goyal</p>
+								<p class="t-role">Executive Member</p>
+								<p class="t-desc">${desc}</p>
+							</article>
 
-                                    <div class="social">
-                                        <span class="pointer"></span>
-                                        <div class="icons">
-                                            <a class="icon" href="#" target="_blank" data-index="0"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="1"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="2"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="3"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="https://github.com/harshgoyal7065" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/harsh-goyal-195255b9/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/harsh.student99/" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\Manoj.jpg"></figure>
+							<article class="t-text">
+								<p class="t-name">Manoj Kumar</p>
+								<p class="t-role">Executive Member</p>
+								<p class="t-desc">${desc}</p>
+							</article>
 
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <span class="bg"></span>
-                                    <span class="more"></span>
-                                    <figure class="photo"><img
-                                            src="assets\images\team\harshGoyal.png">
-                                    </figure>
-                                    <article class="text">
-                                        <p class="name">Harsh Goyal</p>
-                                        <p class="role">Executive Member</p>
-                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
-                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
-                                            Sequi, et
-                                            illo?</p>
-                                    </article>
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="https://github.com/manoj-kuma" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/manoj-kumar-a4a215195/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/manoj_kr_maurya/" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\Anuj.jpg"></figure>
+							<article class="t-text">
+								<p class="t-name">Anuj Talwar</p>
+								<p class="t-role">Executive Member</p>
+								<p class="t-desc">${desc}</p>
+							</article>
 
-                                    <div class="social">
-                                        <span class="pointer"></span>
-                                        <div class="icons">
-                                            <a class="icon" href="#" target="_blank" data-index="0"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="1"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="2"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="3"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="https://github.com/alooperalta" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/anuj-talwar/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/aloo_peralta_/" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\Tarun.jpg"></figure>
+							<article class="t-text">
+								<p class="t-name">Tarun</p>
+								<p class="t-role">Executive Member</p>
+								<p class="t-desc">${desc}</p>
+							</article>
 
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <span class="bg"></span>
-                                    <span class="more"></span>
-                                    <figure class="photo"><img
-                                            src="assets\images\team\Manoj.jpg">
-                                    </figure>
-                                    <article class="text">
-                                        <p class="name">Manoj Kumar</p>
-                                        <p class="role">Executive Member</p>
-                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
-                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
-                                            Sequi, et
-                                            illo?</p>
-                                    </article>
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="https://github.com/tarawat" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/tarun-shekhawat-037091194/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/tarawat15/" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				 <div class="t-swiper-wrapper">
+					<div class="t-swiper-slide">
+						<div class="t-card">
+							<span class="t-bg"></span>
+							<span class="t-more"></span>
+							<figure class="t-photo"><img src="assets\images\team\vishesh.jpeg"></figure>
+							<article class="t-text">
+								<p class="t-name">Vishesh Gupta</p>
+								<p class="t-role">Executive Member</p>
+								<p class="t-desc">${desc}</p>
+							</article>
 
-                                    <div class="social">
-                                        <span class="pointer"></span>
-                                        <div class="icons">
-                                            <a class="icon" href="#" target="_blank" data-index="0"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="1"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="2"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="3"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+							<div class="t-social">
+								<span class="t-pointer"></span>
+								<div class="t-icons">
+									<a class="t-icon" href="#" target="_blank" data-index="0"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
+									<a class="t-icon" href="https://github.com/Vishesh02" target="_blank" data-index="1"><img
+											src="assets\images\icons8-github.svg"></a>
+									<a class="t-icon" href="https://www.linkedin.com/in/vishesh-gupta-404955206/" target="_blank" data-index="2"><img
+											src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
+									<a class="t-icon" href="https://www.instagram.com/visheshh02" target="_blank" data-index="3"><img
+											src="assets\images\icons8-instagram.svg"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <span class="bg"></span>
-                                    <span class="more"></span>
-                                    <figure class="photo"><img
-                                            src="assets\images\team\Anuj.jpg">
-                                    </figure>
-                                    <article class="text">
-                                        <p class="name">Anuj Talwar</p>
-                                        <p class="role">Executive Member</p>
-                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
-                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
-                                            Sequi, et
-                                            illo?</p>
-                                    </article>
+			</div>
 
-                                    <div class="social">
-                                        <span class="pointer"></span>
-                                        <div class="icons">
-                                            <a class="icon" href="#" target="_blank" data-index="0"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="1"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="2"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="3"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+			<div class="t-swiper-pagination"></div>
+			<!-- If we need navigation buttons -->
+		</div>
 
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <span class="bg"></span>
-                                    <span class="more"></span>
-                                    <figure class="photo"><img
-                                            src="assets\images\team\Tarun.jpg">
-                                    </figure>
-                                    <article class="text">
-                                        <p class="name">Tarun</p>
-                                        <p class="role">Executive Member</p>
-                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
-                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
-                                            Sequi, et
-                                            illo?</p>
-                                    </article>
+	</div>
+</div>
 
-                                    <div class="social">
-                                        <span class="pointer"></span>
-                                        <div class="icons">
-                                            <a class="icon" href="#" target="_blank" data-index="0"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="1"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="2"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="3"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+</section>
 
-                            
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <span class="bg"></span>
-                                    <span class="more"></span>
-                                    <figure class="photo"><img
-                                            src="assets\images\team\vishesh.jpeg">
-                                    </figure>
-                                    <article class="text">
-                                        <p class="name">Vishesh Gupta</p>
-                                        <p class="role">Executive Member</p>
-                                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                                            repellendus doloremque unde, aliquid fugiat, eos asperiores dolorum nulla
-                                            libero, similique ad illo odio consequuntur perferendis neque quaerat.
-                                            Sequi, et
-                                            illo?</p>
-                                    </article>
-
-                                    <div class="social">
-                                        <span class="pointer"></span>
-                                        <div class="icons">
-                                            <a class="icon" href="#" target="_blank" data-index="0"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/link.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="1"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/email.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="2"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/linkedin.svg"></a>
-                                            <a class="icon" href="#" target="_blank" data-index="3"><img
-                                                    src="https://rafaelalucas.com/dailyui/6/assets/dribbble.svg"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-                    </div>
-
-                    <div class="swiper-pagination"></div>
-                    <!-- If we need navigation buttons -->
-
-                </div>
-
-            </div>
-    </div>
-
-    </section>
-
-    </div>
+</div>
 		<!-- *****************************our team end************************************************** -->
 
 		<!-- ****************************************************contact us ***************************** -->
 		<div class="dsph" id="contact">
-			<div class="d-flex justify-content-center mr-5 mt-md-5">
+			<div class="d-flex justify-content-center mt-md-5 s-backg">
 				<img src="./assets/images/contact-us-form.png" class="svg-media" alt="" />
 
 				<div>
@@ -767,19 +709,27 @@
 						<button class="btn btn-primary s-form-group" onclick="closecontact()">close</button>
 					</div>
 					<form class="s-form">
-						<div class="form-group s-form-group">
-							<input type="text" class="form-control" placeholder="Name" />
-						</div>
-						<div class="form-group s-form-group">
-							<input
+						<div class="form-group s-form-group ">
+							
+							<div class="form-input form-margin-top">
+								<input type="text" class="form-control" placeholder="Name" style="color: grey; margin-right: 5px"/>
+								<input
 								type="email"
 								class="form-control"
 								aria-describedby="emailHelp"
 								placeholder="Enter email"
+								style="color: grey"
 							/>
+							</div>
 						</div>
-						<div class="form-group s-form-group">
-							<input type="text" class="form-control" placeholder="Phone No" />
+						<div class="form-group s-form-group ">
+						<div class="form-input">	
+							<input type="text" name="entry.1199769641" class="form-input-boxes-manual form-control" placeholder="Phone Number" style="color: grey; margin-right: 5px" spellcheck="false" data-ms-editor="true">
+							<input type="text" name="entry.154355220" class="form-input-boxes-manual form-control" placeholder="Organization / College" style="color: grey" spellcheck="false" data-ms-editor="true">
+						</div>
+						</div>
+						<div class="form-group s-form-group ">
+						<textarea type="text" name="entry.1544463438" rows="5" class="form-control form-input-boxes-manual required" placeholder="Message" style="color: grey; margin-top: 0px; margin-bottom: 0px; height: 124px" aria-required="true" spellcheck="false" data-ms-editor="true"></textarea>
 						</div>
 
 						<button type="submit" class="btn btn-primary s-form-group">Submit</button>
@@ -933,7 +883,7 @@
 						<div class="col text-center">
 							<div class="copyright-text">
 								<p>
-									&copy; Conceptualized, Designed and Developed by Office Bearers of ACM USICT chapter
+									&copy Conceptualized, Designed and Developed by Office Bearers of ACM USICT chapter
 								</p>
 							</div>
 						</div>
