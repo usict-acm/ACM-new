@@ -65,7 +65,6 @@
 				<div class="swiper-slide">
 					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/img3-mobile.png" data-background="./assets/images/img3.jpg"></div>
 				</div>
-
 				<div class="swiper-slide">
 					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/img2-mobile.png" data-background="./assets/images/img2.jpg"></div>
 				</div>

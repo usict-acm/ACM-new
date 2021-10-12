@@ -2043,5 +2043,7 @@ ul {
 	.typewriter-box::after {
 		bottom: 0.2rem;
 	}
-	
+	.footer-logo .img-secondary {
+		max-width: 300px;
+	}
 }
