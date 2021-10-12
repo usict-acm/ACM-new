@@ -90,7 +90,7 @@
 	<!-- end of hero slider -->
 
 	<!-- begin of about section -->
-	<div class="d-sm-flex about-us">
+	<div class="tag d-sm-flex about-us">
 		<div class="col-sm-6 align-self-center p-md-5 p-sm-3">
 			<div class="image text-center w-75 mx-auto">
 				<img src="./assets/images/aboutUs-icon.png" alt="" class="w-100" />
@@ -139,6 +139,7 @@
 	<!-- announcement section ends-->
 	<!--***********************blog section***************************************** -->
 	<section class="blogs">
+		<div class = "tag">
 		<div class="bloghead">
 			<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-blue"> Blogs</span></h2>
 		</div>
@@ -147,6 +148,7 @@
 			<div class="col-md-2 col mb-2">
 				<a href="./blogs.php" class="about-button blog-mobile-btn">Read More Blogs</a>
 			</div>
+		</div>
 		</div>
 	</section>
 
@@ -201,7 +203,7 @@
 	</script>
 	<!-- ******************************blog section end***************************************** -->
 	<!-- *******************************************our team************* -->
-	<section class="team">
+	<section class="tag team">
 		<div class="teamhead">
 			<h2 class="my-4 display-4 fw-bolder text-center">Our<span class="text-blue"> Team</span></h2>
 		</div>
@@ -338,7 +340,7 @@
 	<div class="dsph" id="contact">
 		<div class="d-flex justify-content-center mt-md-5">
 
-			<img src="./assets/images/contact-us-form.png" class="svg-media" alt="" />
+			<img src="./assets/images/contact_us_img.webp" class="svg-media" alt="" />
 
 			<div class="contactUs">
 				<div class="closebtn">
@@ -362,7 +364,7 @@
 							<input type="text" name="college" class="form-control" placeholder="College/ Organization" />
 						</div>
 					</div>
-					<textarea type="text" name="message" rows="5" placeholder="Message" class="form-control col-md-12 contact-message"></textarea>
+					<textarea type="text" name="message" rows="5" placeholder="Message *" class="form-control col-md-12 contact-message"></textarea>
 					<div class="row">
 						<button type="submit" class="btn btn-primary s-form-group contact-btn col-md-3 col-sm-2">Submit</button>
 					</div>

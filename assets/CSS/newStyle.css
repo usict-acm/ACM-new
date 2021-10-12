@@ -1937,7 +1937,7 @@ ul {
 }
 
 .icons{
-    background-color: #2fd3ee;
+    background-color: #0397fe;
     border-radius: 30px;
     display: flex;
     justify-content: space-evenly;
@@ -1953,7 +1953,7 @@ ul {
 }
 
 .text-area1{
-    background-color: #2fd3ee;
+    background-color: #0397fe;
     padding: 30px 0 1px 0;
     color: #fff;
 	width: 92%;
@@ -2047,3 +2047,14 @@ ul {
 		max-width: 300px;
 	}
 }
+
+.tag {
+	opacity: 0;
+	transform: translate(0, 10vh);
+	transition: all 3s;
+  }
+  
+  .tag.visible {
+	opacity: 1;
+	transform: translate(0, 0);
+  }

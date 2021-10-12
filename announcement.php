@@ -9,7 +9,7 @@
   }
   if($result = mysqli_query($db, $query)){
     if(mysqli_num_rows($result) > 0){
-        echo "<section class='announcement'>";
+        echo "<section class='announcement tag'>";
             echo "<h2 class='mb-4 display-4 fw-bolder text-center'>Announcements</h2>";
             echo "<div class='container-fluid text' style='overflow: hidden'>";
             echo "<div class='swiper mySwiper'>";
@@ -22,6 +22,11 @@
                     echo "</div>";
 
                 echo "<div class='row det-row'>";
+
+                    echo "<div class='col-md-5 list'>";
+                    echo "<img class='imag imag_trell' src=" . $row["poster"] . " alt=''>";
+                    echo "</div>";
+
                     echo "<div class='col-md-7 divide'>";
                         echo "<div class='detai'>";
                             echo "<p>" . $row["description"] . " ";
@@ -43,9 +48,7 @@
                         echo "</div>";
                     echo "</div>";
                     echo "</div>";
-                echo "<div class='col-md-5 list'>";
-                echo "<img class='imag imag_trell' src=" . $row["poster"] . " alt=''>";
-                echo "</div>";
+                
                 echo "</div>";
                 echo "</div>";
                 echo "</div>";
@@ -70,9 +73,15 @@
                     echo "<div class='heading'>";
                         echo "<h1>" . $row["name"] . "</h1>";
                     echo "</div>";
+                    
 
                 echo "<div class='row det-row'>";
-                    echo "<div class='col-md-7 divide'>";
+                
+                echo "<div class='col-md-5 list'>";
+                echo "<img class='imag imag_trell' src=" . $row["poster"] . " alt=''>";
+                echo "</div>";
+
+                echo "<div class='col-md-7 divide'>";
                         echo "<div class='detai'>";
                             echo "<p>" . $row["description"] . " ";
                             echo "<br> <p>Date : " . $row["startDate"] . "  to  " . $row["endDate"] ." </p>";
@@ -93,9 +102,7 @@
                         echo "</div>";
                     echo "</div>";
                     echo "</div>";
-                echo "<div class='col-md-5 list'>";
-                echo "<img class='imag imag_trell' src=" . $row["poster"] . " alt=''>";
-                echo "</div>";
+    
                 echo "</div>";
                 echo "</div>";
                 echo "</div>";
