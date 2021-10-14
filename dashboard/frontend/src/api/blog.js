@@ -2,7 +2,7 @@ import { setBlogs } from "redux/slices/blogSlice";
 
 export const fetchUserBlogs = (body) => (dispatch) => {
   fetch(
-    process.env.REACT_APP_BASE_URL + "/user/dashboard/backend/api.php?q=blogs",
+    process.env.REACT_APP_BASE_URL + "/api.php?q=blogs",
     {
       method: "POST",
       body: JSON.stringify(body),
@@ -22,7 +22,7 @@ export const fetchUserBlogs = (body) => (dispatch) => {
 export const addBlog = (body) => (dispatch) => {
   return fetch(
     process.env.REACT_APP_BASE_URL +
-      "/user/dashboard/backend/api.php?q=createBlog",
+      "/api.php?q=createBlog",
     {
       method: "POST",
       body: JSON.stringify(body),
@@ -47,7 +47,7 @@ export const addBlog = (body) => (dispatch) => {
 export const updateBlog = (body) => (dispatch) => {
   return fetch(
     process.env.REACT_APP_BASE_URL +
-      "/user/dashboard/backend/api.php?q=updateBlog",
+      "/api.php?q=updateBlog",
     {
       method: "POST",
       body: JSON.stringify(body),
@@ -73,7 +73,7 @@ export const updateBlog = (body) => (dispatch) => {
 export const deleteBlog = (body) => (dispatch) => {
   return fetch(
     process.env.REACT_APP_BASE_URL +
-      "/user/dashboard/backend/api.php?q=deleteBlog",
+      "/api.php?q=deleteBlog",
     {
       method: "POST",
       body: JSON.stringify(body),

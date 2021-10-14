@@ -4,7 +4,7 @@ import { setUser } from "redux/slices/userSlice";
 export const fetchUserDoc = (body) => async (dispatch) => {
 	await fetch(
 		process.env.REACT_APP_BASE_URL +
-			"/user/dashboard/backend/api.php?q=fetchUserDoc",
+			"/api.php?q=fetchUserDoc",
 		{
 			method: "POST",
 			body: JSON.stringify(body),
@@ -25,7 +25,7 @@ export const fetchUserDoc = (body) => async (dispatch) => {
 
 export const login = (body, setLoading) => (dispatch) => {
 	fetch(
-		process.env.REACT_APP_BASE_URL + "/user/dashboard/backend/api.php?q=login",
+		process.env.REACT_APP_BASE_URL + "/api.php?q=login",
 		{
 			method: "POST",
 			body: JSON.stringify(body),
@@ -53,7 +53,7 @@ export const login = (body, setLoading) => (dispatch) => {
 export const signup = (body, setLoading) => (dispatch) => {
 	fetch(
 		process.env.REACT_APP_BASE_URL +
-			"/user/dashboard/backend/api.php?q=register",
+			"/api.php?q=register",
 		{
 			method: "POST",
 			body: JSON.stringify(body),
@@ -84,7 +84,7 @@ export const signup = (body, setLoading) => (dispatch) => {
 
 export const updateProfile = (body) => (dispatch) => {
 	fetch(
-		process.env.REACT_APP_BASE_URL + "/user/dashboard/backend/api.php?q=update",
+		process.env.REACT_APP_BASE_URL + "/api.php?q=update",
 		{
 			method: "POST",
 			body: JSON.stringify(body),
