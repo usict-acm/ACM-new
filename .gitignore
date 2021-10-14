@@ -1,5 +1,4 @@
 .cpanel.yml
-*database.php
 *config.php
 upload/*
 enviornment.php
