@@ -51,9 +51,7 @@ const Login = () => {
 			email,
 			password,
 		};
-    setTimeout(async () => {
-      dispatch(login(body, setLoading));
-    }, 2000);		
+		dispatch(login(body, setLoading));
 	};
 
 	return (

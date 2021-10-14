@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8fd5bfda.chunk.css",
+    "main.js": "/static/js/main.b7e26df4.chunk.js",
+    "main.js.map": "/static/js/main.b7e26df4.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e2ddb02d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e2ddb02d.js.map",
+    "static/css/2.7b875fa6.chunk.css": "/static/css/2.7b875fa6.chunk.css",
+    "static/js/2.4f6f815b.chunk.js": "/static/js/2.4f6f815b.chunk.js",
+    "static/js/2.4f6f815b.chunk.js.map": "/static/js/2.4f6f815b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.7b875fa6.chunk.css.map": "/static/css/2.7b875fa6.chunk.css.map",
+    "static/css/main.8fd5bfda.chunk.css.map": "/static/css/main.8fd5bfda.chunk.css.map",
+    "static/js/2.4f6f815b.chunk.js.LICENSE.txt": "/static/js/2.4f6f815b.chunk.js.LICENSE.txt",
+    "static/js/main.b7e26df4.chunk.js.LICENSE.txt": "/static/js/main.b7e26df4.chunk.js.LICENSE.txt",
+    "static/media/UserHeader.css": "/static/media/acm_banner.cbcb2392.png",
+    "static/media/argon-react.png": "/static/media/argon-react.128d71d3.png",
+    "static/media/all.min.css": "/static/media/fa-solid-900.f4f93856.woff",
+    "static/media/nucleo.css": "/static/media/nucleo-icons.d6a66724.ttf",
+    "static/media/outstanding-website.png": "/static/media/outstanding-website.910f4857.png",
+    "static/media/team-1-800x800.jpg": "/static/media/team-1-800x800.fa5a7ac2.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e2ddb02d.js",
+    "static/css/2.7b875fa6.chunk.css",
+    "static/js/2.4f6f815b.chunk.js",
+    "static/css/main.8fd5bfda.chunk.css",
+    "static/js/main.b7e26df4.chunk.js"
+  ]
+}
