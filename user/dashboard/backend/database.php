@@ -9,8 +9,8 @@ class Database
   private $port;
 
   public function connect()
-  {    
-    include(__DIR__.'/../../../enviornment.php');
+  {
+    include(__DIR__.'/../../../enviornment.php');    
     $this->server = $env_server;
     $this->username = $env_username;
     $this->password = $env_password;
