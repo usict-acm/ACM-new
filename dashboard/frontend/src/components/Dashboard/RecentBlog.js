@@ -7,7 +7,7 @@ import "../../assets/css/dashboard/recentblog.css"
 const RecentBlog = (props)=>{
     return(
       <>
-        <Card className="blogcard mb-4">
+        <Card className="blogcard shadow-lg mb-4">
           <CardBody className="parent">
                 <div className="date ">
                     <h2>Nov 14</h2>

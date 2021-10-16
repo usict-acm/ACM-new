@@ -40,6 +40,7 @@
     .parent{
         flex-direction: column;
         position: relative;
+        align-items: flex-start;
     }
     .contents{
         border-left: none;

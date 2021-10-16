@@ -3,12 +3,12 @@ import {
   Card,
   CardBody,
   CardTitle,
-  Container,
+  CardImg,
   Row,
   Col,
   CardFooter,
 } from "reactstrap";
-import { CardImg } from "react-bootstrap";
+// import { CardImg } from "react-bootstrap";
 import winner from "./AllWinner";
 
 const Header = () => {
@@ -16,7 +16,6 @@ const Header = () => {
 
   return (
     <>
-        <Container className="winnercontainer" fluid>
           <div className="header-body">
             {/* Card stats */}
             <Row >
@@ -51,7 +50,6 @@ const Header = () => {
               })}
             </Row>
           </div>
-        </Container>
       
     </>
   );
