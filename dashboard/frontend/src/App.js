@@ -37,7 +37,7 @@ const App = () => {
       <h1>Loading...</h1>
     </div>
   ) : (
-    <BrowserRouter>{user ? <AdminLayout /> : <AuthLayout />}</BrowserRouter>
+    <BrowserRouter>{!user ? <AdminLayout /> : <AuthLayout />}</BrowserRouter>
   );
 };
 

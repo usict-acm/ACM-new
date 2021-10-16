@@ -1,0 +1,64 @@
+.blogcard{
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 4px #dddfe2;
+}
+.parent{
+    display: flex;
+    align-items: center;
+}
+
+
+.date{
+    text-align: center !important;
+    margin-right: 20px;
+    color: #333333;
+}
+
+.contents{
+    border-left: 3px solid #333333;
+    padding-left: 20px;
+    color: #333333;
+}
+
+.contents h2{
+    text-transform: uppercase;
+}
+.contents p{
+    margin-bottom: 0;
+}
+.contents p span{
+    position: relative;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.contents p span a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width : 450px) {
+    .parent{
+        flex-direction: column;
+        position: relative;
+    }
+    .contents{
+        border-left: none;
+        border-top: 3px solid #333333 ;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 5px;
+    }
+    .contents h2{
+        position: absolute;
+        padding: inherit;
+        top: 19px;
+    }
+    .date{
+        width: 100%;
+        text-align: right !important;
+        margin-right: 0;
+    }
+    .date h2{
+        font-size: 1.0625rem;
+    }
+}
