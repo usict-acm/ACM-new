@@ -5,9 +5,5 @@
         "build": "cd ./dashboard/frontend && yarn build || npm build",
         "test": "cd ./dashboard/frontend && yarn test || npm test",
         "eject": "cd ./dashboard/frontend && yarn eject || npm eject"
-    },
-    "dependencies": {
-        "bootstrap": "^5.1.1",
-        "react-bootstrap": "^2.0.0-rc.0"
     }
 }

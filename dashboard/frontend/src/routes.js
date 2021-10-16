@@ -27,7 +27,7 @@ import MyEvents from "pages/Admin/Events/MyEvents";
 
 var routes = [
   {
-    path: "/dashboard",
+    path: "/",
     name: "Dashboard",
     icon: "ni ni-tv-2 text-primary",
     component: Dashboard,

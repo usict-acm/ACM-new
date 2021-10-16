@@ -1,7 +1,7 @@
-#navbar-main{
+/* #navbar-main{
     z-index: 100;
     background-color: #ffffff;
-}
+} */
 
 .bkg{
     height: 300px;
@@ -46,6 +46,19 @@
 
 .footer{
     padding-top: 125px;
+}
+
+@media screen and (max-width : 767px) {
+    .AllContent{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+@media screen and (max-width : 580px) {
+    .AllContent{
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 @media screen and (max-width: 1199px){

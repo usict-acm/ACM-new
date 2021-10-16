@@ -6,15 +6,15 @@ import { Container, Row, Col } from "reactstrap";
 function Dashboard() {
   return (
     <>
-      <div className="bkg header bg-gradient-info pl-6 pt-5">
+      <div className="bkg header bg-gradient-info pl-5 pt-5">
         <span className="winhead">WINNERS</span>
       </div>
-      <Container fluid>
+      <Container fluid className="AllContent">
         <div className="content">
           <Header />
           {/* Winner Section */}
 
-          <Row className="p-5">
+          <Row className="pt-5">
             <Col xl="6">
               <h2 className="pb-3">RECENT BLOGS</h2>
               <RecentBlog
