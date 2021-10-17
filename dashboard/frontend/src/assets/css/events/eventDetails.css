@@ -1,4 +1,4 @@
-.imageCol{
+.eventDetails__imageCol{
     width: 100%; 
      /* max-height: 490px; */
     /* max-height: 433px; */
@@ -17,6 +17,7 @@
     flex-direction: column;
 }
 .detailSideBar h1{
+    margin: 0;
     text-transform: uppercase;
     line-height: 2;
 }
@@ -59,14 +60,14 @@
 }
 
 @media screen and (max-width : 580px) {
-    .content{
+    .eventDetails__content{
         padding-left: 25px !important;
         padding-right: 25px !important; 
     }
 }
 @media screen and (max-width : 380px) {
 
-    .content{
+    .eventDetails__content{
         padding-left: 15px !important;
         padding-right: 15px !important; 
     }
