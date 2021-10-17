@@ -5,6 +5,7 @@ header('Content-Type: application/json');
 include_once './database.php';
 include_once './userApi.php';
 include_once './blogApi.php';
+include_once './eventApi.php';
 
 $q = $_GET['q'];
 switch ($q) {
@@ -31,6 +32,12 @@ switch ($q) {
         break;
     case 'blogs':
         fetchUserBlogs();
+        break;
+    case 'allEvents':
+        fetchAllEvents();
+        break;
+    case 'singleEvent':
+        fetchSingleEvent();
         break;
     default:
         echo "Invalid Query";
