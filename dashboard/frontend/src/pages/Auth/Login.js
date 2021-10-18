@@ -15,7 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "api/user";
 
@@ -40,6 +40,12 @@ const Login = () => {
 		[email, setEmail] = useState(""),
 		[password, setPassword] = useState(""),
 		[loading, setLoading] = useState(false);
+
+	useEffect(() => {
+		return () => {
+			setLoading(false);		
+		};
+	}, []);
 
 	const loginHandler = async (e) => {
 		e.preventDefault();
