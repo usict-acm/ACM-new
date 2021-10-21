@@ -19,3 +19,12 @@ export const formatDate = (timestamp) => {
     date.getDate() + ", " + months[date.getMonth()] + ", " + date.getFullYear()
   );
 };
+
+export const dateMonth = (timestamp) => {
+  const date = new Date(timestamp);
+  return (
+    date.getDate() + " " + months[date.getMonth()]?.slice(0,3)
+  );
+}
+
+
