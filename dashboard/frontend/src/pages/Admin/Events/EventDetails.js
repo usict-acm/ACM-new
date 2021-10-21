@@ -5,14 +5,18 @@ import DetailSidebar from "components/Events/EventDetails/DetailSideBar";
 import "../../../assets/css/events/eventDetails.css";
 import { fetchSingleEvent } from "api/event";
 
-export default function EventDetails() {
+export default function EventDetails()
+{
   const { eventId } = useParams();
   const [event, setEvent] = React.useState({});
 
-  useEffect(() => {
-    const fetchData = async () => {
+  useEffect(() =>
+  {
+    const fetchData = async () =>
+    {
       const event = await fetchSingleEvent(eventId);
-      if(event){
+      if (event)
+      {
         console.log(event);
         setEvent(event);
       }
@@ -32,10 +36,34 @@ export default function EventDetails() {
           </Col>
         </Row>
       </Container>
+      {/* Description part will be shown only when speakers or partners or eventDecription of length >100 is present */}
 
-      <h2 className="mt-5 ">Description</h2>
-      <hr />
-      <p>{event?.description}</p>
+      {
+        event?.speakers || event?.partners || event?.eventDescription ?
+          <>
+              <h2 className="mt-5 ">Description</h2>
+              <hr />
+
+              {/* Speakers and Partners */}
+
+              <div className="speakersAndPartners mb-4">
+                {
+                  event?.speakers && (
+                    <h3> <i class='bx bx-user-voice'></i><span>Speakers : </span>{event?.speakers}</h3>
+                  )
+                }
+                {event?.partners && (
+                  <h3><i class='bx bx-group'></i><span>Partners : </span>{event?.partners}</h3>
+                )
+                }
+              </div>
+
+              {/* Event Description */}
+              
+              <p>{event?.eventDescription}</p>
+          </>
+          : null
+      }
     </Container>
   );
 }
