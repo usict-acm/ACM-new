@@ -6,6 +6,8 @@
 }
 .banner {
 	object-fit: cover;
+	width: auto;
+	aspect-ratio: 1/1;
 }
 
 .eventContent {

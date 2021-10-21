@@ -239,7 +239,7 @@ const Profile = () => {
                             <span>Member ID</span>
                             {!user?.acmMemberId && (
                               <a
-                                href="https://services.acm.org/public/qj/proflevel/proflevel_control.cfm?level=3&country=India&form_type=Student&promo=LEVEL&pay=DD"
+                                href="https://usict.acm.org/benefits.php#registration"
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >

@@ -74,7 +74,7 @@ export default function AllBlogs() {
                     <Button
                       type="button"
                       color="info"
-                      href="/createBlog"
+                      href={process.env.REACT_APP_HOSTED_BASE_URL + "/createBlog"}
                       className="postBtn"
                     >
                       New Post
