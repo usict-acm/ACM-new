@@ -73,7 +73,7 @@
 				<div class="swiper-button-prev"></div>
 			</div>
 			<div id="typewriter">
-				<span class="typewriter-box" data-wait="200" data-content='["ACM CHAPTER USICT"]'> </span>
+				<span class="typewriter-box" data-wait="200" data-content='["USICT ACM CHAPTER"]'> </span>
 				<!-- end swiper-slide -->
 			</div>
 			<!-- end swiper-wrapper -->
@@ -84,7 +84,7 @@
 			<div class="swiper-button-prev"></div>
 		</div>
 		<div id="typewriter">
-			<span class="typewriter-box" data-wait="400" data-content='["ACM CHAPTER USICT"]'> </span>
+			<span class="typewriter-box" data-wait="400" data-content='["USICT ACM CHAPTER"]'> </span>
 		</div>
 	</section>
 	<!-- end of hero slider -->
@@ -209,31 +209,47 @@
 		</div>
 		<div class="our-team-area">
 			<div class="container">
-				<div class="row">
+				<div class="row margin-media">
 					<div class="col-md-4">
 						<div class="row">
-							<div class="col-md-6 col-lg-9">
+							<div class=" col-lg-9">
 								<div class="our-team-box">
 									<img src="./assets/images/team/deanSir.jpeg" alt="">
-									<div class="icons fac-icon">
+									<div class="t-overlay">
+									<div class="icons">
+										<!-- <a href="https://www.linkedin.com/in/gauravj22/" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+										<h4 class="text-center">Prof. Pravin Chandra
+										<p class="fadddd">Dean, USICT</p>
+										</h4>
+									</div>				
+									</div>
+									<!-- <div class="icons fac-icon">
 										<i class="fab fa-linkedin"></i>
 									</div>
 									<div class="text-area1">
 										<h4 class="text-center">Prof. Pravin Chandra</h4>
 										<p>Dean, USICT</p>
-									</div>
+									</div> -->
 								</div>
 							</div>
 							<div class="col-md-6 col-lg-9">
 								<div class="our-team-box">
 									<img src="./assets/images/team/rahulsir.jpg" alt="">
-									<div class="icons fac-icon">
+									<div class="t-overlay">
+									<div class="icons">
+										<!-- <a href="https://www.linkedin.com/in/gauravj22/" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+										<h4 class="text-center">Dr. Rahul Johari
+										<p class="fadddd">Branch Head, ACM USICT</p>
+										</h4>
+									</div>				
+									</div>
+									<!-- <div class="icons fac-icon">
 										<i class="fab fa-linkedin"></i>
 									</div>
 									<div class="text-area1">
 										<h4 class="text-center">Dr. Rahul Johari</h4>
 										<p>Branch Head, ACM USICT</p>
-									</div>
+									</div> -->
 								</div>
 							</div>
 						</div>
@@ -246,64 +262,97 @@
 							<div class="col-md-6 col-lg-4">
 								<div class="our-team-box">
 									<img src="./assets/images/team/Gaurav.png" alt="">
+									<div class="t-overlay">
 									<div class="icons">
+										<a href="https://www.linkedin.com/in/gauravj22/" target="_blank"><i class="fab fa-linkedin"></i></a>
+										<h4 class="text-center">Gaurav Jain
+										<p class="fadddd">Chair</p>
+										</h4>
+									</div>				
+									</div>
+									<!-- <div class="icons">
 										<a href="https://www.linkedin.com/in/gauravj22/" target="_blank"><i class="fab fa-linkedin"></i></a>
 									</div>
 									<div class="text-area1">
 										<h4 class="text-center">Gaurav Jain</h4>
 										<p>Chair</p>
-									</div>
+									</div> -->
 								</div>
 							</div>
 
 							<div class="col-md-6 col-lg-4">
 								<div class="our-team-box">
 									<img src="./assets/images/team/vardaan.jpg" alt="">
+									<div class="t-overlay">
 									<div class="icons">
+										<a href="https://www.linkedin.com/in/vardaan-grover-8a64141a0/" target="_blank"><i class="fab fa-linkedin"></i></a>
+										<h4 class="text-center">Vardaan Grover
+										<p class="fadddd">Vice Chair</p>
+										</h4>
+									</div>				
+									</div>
+									<!-- <div class="icons">
 										<a href="https://www.linkedin.com/in/vardaan-grover-8a64141a0/" target="_blank"><i class="fab fa-linkedin"></i></a>
 									</div>
 									<div class="text-area1">
 										<h4 class="text-center">Vardaan Grover</h4>
 										<p>Vice Chair</p>
-									</div>
+									</div> -->
 								</div>
 							</div>
 
 							<div class="col-md-6 col-lg-4">
 								<div class="our-team-box">
 									<img src="./assets/images/team/Akshad.jpg" alt="">
+									<div class="t-overlay">
 									<div class="icons">
+										<a href="https://www.linkedin.com/in/akshad-bhandula-073202113/" target="_blank"><i class="fab fa-linkedin"></i></a>
+										<h4 class="text-center">Akshad Bhandula
+										<p class="fadddd">Secretary</p>
+										</h4>
+									</div>				
+									</div>
+									<!-- <div class="icons">
 										<a href="https://www.linkedin.com/in/akshad-bhandula-073202113/" target="_blank"><i class="fab fa-linkedin"></i></a>
 									</div>
 									<div class="text-area1">
 										<h4 class="text-center">Akshad Bhandula</h4>
 										<p>Secretary</p>
-									</div>
+									</div> -->
 								</div>
 							</div>
 
 							<div class="col-md-6 col-lg-4">
 								<div class="our-team-box">
 									<img src="./assets/images/team/Divyansh.jpg" alt="">
+									<div class="t-overlay">
 									<div class="icons">
+										<a href="https://www.linkedin.com/in/divyansh-rastogi-08a44a171/" target="_blank"><i class="fab fa-linkedin"></i></a>
+										<h4 class="text-center">Divyansh Rastogi
+										<p class="fadddd">Joint Secretary</p>
+										</h4>
+									</div>				
+									</div>
+									<!-- <div class="icons">
 										<a href="https://www.linkedin.com/in/divyansh-rastogi-08a44a171/" target="_blank"><i class="fab fa-linkedin"></i></a>
 									</div>
 									<div class="text-area1">
 										<h4 class="text-center">Divyansh Rastogi</h4>
 										<p>Joint Secretary</p>
-									</div>
+									</div> -->
 								</div>
 							</div>
 
 							<div class="col-md-6 col-lg-4">
 								<div class="our-team-box">
 									<img src="./assets/images/team/chaitanDev.jpg" alt="">
+									<div class="t-overlay">
 									<div class="icons">
 										<a href="https://www.linkedin.com/in/chaitan-dev/" target="_blank"><i class="fab fa-linkedin"></i></a>
-									</div>
-									<div class="text-area1">
-										<h4 class="text-center">Chaitan Dev</h4>
-										<p>Treasurer</p>
+										<h4 class="text-center">Chaitan Dev
+										<p class="fadddd">Treasurer</p>
+										</h4>
+									</div>				
 									</div>
 								</div>
 							</div>
@@ -311,12 +360,18 @@
 							<div class="col-md-6 col-lg-4">
 								<div class="our-team-box">
 									<img src="./assets/images/team/anmol.jpeg" alt="">
+									<div class="t-overlay">
 									<div class="icons">
-										<a href="https://www.linkedin.com/in/anmol-goel-13b447178/" target="_blank"><i class="fab fa-linkedin"></i></a>
+										<a href="https://www.linkedin.com/in/chaitan-dev/" target="_blank"><i class="fab fa-linkedin"></i></a>
+										<h4 class="text-center">Anmol Jain
+										<p class="fadddd">Web Chair</p>
+										</h4>
 									</div>
-									<div class="text-area1">
-										<h4 class="text-center">Anmol Goel</h4>
-										<p>Web Chair</p>
+									</div>
+									<!-- <div class="text-area1">
+										<h4 class="text-center">Chaitan Dev</h4>
+										<p>Treasurer</p>
+									</div> -->
 									</div>
 								</div>
 							</div>
@@ -502,7 +557,10 @@
 		</div>
 	</footer>
 	<!--  footer ends -->
-
+	<!-- back to top -->
+	<div class="scrolltop">
+		<div class="scroll icon"><i class="fa fa-rocket" aria-hidden="true"></i></div>
+	</div>
 	<!-- contact us -->
 	<div class="contact-bottom-btn">
 		<a href="javascript:showcontact()">
@@ -510,10 +568,7 @@
 		</a>
 	</div>
 
-	<!-- back to top -->
-	<div class="scrolltop">
-		<div class="scroll icon"><i class="fa fa-rocket" aria-hidden="true"></i></div>
-	</div>
+	
 
 	<!-- Swiper JS -->
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

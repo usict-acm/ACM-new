@@ -1859,7 +1859,7 @@ ul {
 
 .contact-bottom-btn {
 	position: fixed;
-	bottom: 100px;
+	bottom: 45px;
 	right: 40px;
 	width: 50px;
 	height: 50px;
@@ -1881,7 +1881,7 @@ ul {
 
 .scrolltop {
 	position: fixed;
-	bottom: 45px;
+	bottom: 100px;
 	right: 40px;
 	width: 50px;
 	height: 50px;
@@ -1916,6 +1916,8 @@ ul {
 }
 
 .our-team-box{
+	position: relative;
+	width: 200px;
     text-align: center;
     margin-bottom: 60px;
 }
@@ -1924,6 +1926,24 @@ ul {
     border: 10px solid #2fd3ee;
     width: 200px;
 	height: 200px;
+}
+.t-overlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #2fd3ee;
+  overflow: hidden;
+  width: auto;
+  height: 0;
+  transition: .5s ease;
+}
+.our-team-box:hover .t-overlay{
+	height: 100%;
+}
+.fadddd{
+	color: rgb(255, 255, 255);
+	font-size: 16px;
 }
 
 .fac-icon i {
@@ -1937,15 +1957,15 @@ ul {
 }
 
 .icons{
-    background-color: #0397fe;
-    border-radius: 30px;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 8px;
-    margin-left: 10px;
-    margin-right: 10px;
-    position: relative;
-    margin-top: -35px;
+    color: white;
+  font-size: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .icons a{
@@ -1953,12 +1973,48 @@ ul {
 }
 
 .text-area1{
-    background-color: #0397fe;
-    padding: 30px 0 1px 0;
-    color: #fff;
-	width: 92%;
-    margin: -35px auto;
-    border-radius: 15px 15px 50px 0px;
+  color: white;
+  font-size: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.margin-media{
+	margin-left: "";
+}
+@media screen and (min-width: 320px) {
+	.margin-media{
+		margin-left: 20px;
+	}	
+}
+@media screen and (min-width: 375px) {
+	.margin-media{
+		margin-left: 32px;
+	}	
+}
+@media screen and (min-width: 425px) {
+	.margin-media{
+		margin-left: 55px;
+	}	
+}
+@media screen and (min-width: 520px) {
+	.margin-media{
+		margin-left: 90px;
+	}	
+}
+@media screen and (min-width: 620px) {
+	.margin-media{
+		margin-left: 120px;
+	}	
+}
+@media screen and (min-width: 720px) {
+	.margin-media{
+		margin-left: 120px;
+	}	
 }
 
 .contactUs {
@@ -2058,3 +2114,19 @@ ul {
 	opacity: 1;
 	transform: translate(0, 0);
   }
+  .middle {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+  }
+  .texttt {
+	background-color: #04AA6D;
+	color: white;
+	font-size: 16px;
+	padding: 16px 32px;
+  }  
