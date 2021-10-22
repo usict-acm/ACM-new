@@ -18,7 +18,7 @@ function Dashboard() {
 
           <Row className="pt-5">
             <Col xl="6">
-              <h2 className="pb-3">RECENT BLOGS</h2>
+              <h2 className="pb-3">PUBLISHED RECENTLY</h2>
               <RecentBlog />
             </Col>
             <Col xl="6">
