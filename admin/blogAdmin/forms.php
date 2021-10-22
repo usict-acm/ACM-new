@@ -29,7 +29,6 @@
                }
                $query = "INSERT INTO `forms` (`formID`,`formName`) VALUES ('$formID','$name')";
                $this->conn->query($query);
-               echo($query);
           }
 
           public function saveFormFields($name,$request){
@@ -43,7 +42,6 @@
                     $valueType = $request[$i][1];
                     $query = "INSERT INTO `fields` (`formID`,`formName`,`fieldName`,`fieldType`) VALUES ('$formID','$name','$valueText','$valueType')";
                     $this->conn->query($query);
-                    echo($query);
                }
           }
 
@@ -53,13 +51,10 @@
                     id INT(6) PRIMARY KEY
                )";
                $this->conn->query($query);
-
                for($i = 1; $i < count($request); $i++){
-                    $valueText = $request[$i][0];
-                    $valueType = $request[$i][1];
-                    $query1 = "ALTER TABLE $tableName ADD $valueText VARCHAR(255)";
-                    // $query2 = "ALTER TABLE $tableName ADD $valueType VARCHAR(255)";
-                    // echo($query1);
+                    $value = explode(" ",$request[$i][0]);
+                    $val = join("_",$value);
+                    $query1 = "ALTER TABLE $tableName ADD $val VARCHAR(255)";
                     $this->conn->query($query1); 
                }
 
