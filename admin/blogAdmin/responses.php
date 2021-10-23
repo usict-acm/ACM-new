@@ -24,18 +24,8 @@
                 <div class="col-md-12">
                     <div class="page-header clearfix">
                         <h2 class="pull-left">Responses</h2>
-                        <table class="table table-bordered" id="responsestable">
-                            <!-- <thead>
-                                <tr>
-                                while ($count>=0){
-                                    <th></th>
-                                }
-                                    
-
-                                </tr>
-                            </thead> -->
-
-                            <tbody class="responsedata">
+                        <table class="table table-bordered" >
+                            <tbody class="responsedata" id="responsestable">
 
                             </tbody>
                         </table>
@@ -57,24 +47,15 @@
     
 
     <?php
-    // $page = isset($_GET["page"]) ? $_GET["page"] : 1;
-    $ID = $_GET["Id"];
-    $formName = $_GET["name"];
+        $ID = $_GET["Id"];
+        // $formName = $_GET["name"];
     ?>
 
     <script>
-        let urlll = './api.php/?q=readResponses&Id=' + <?php echo $ID ?> + '&name=event_1_registration';
-
-        
-        $(document).ready(function() {
-            
-            // let urlll = './api.php/?q=readResponses&Id=1&name=event_1_registration';
+        let urlll = './api.php/?q=readResponses&Id=' + <?php echo $ID ?>;
+        $(document).ready(function() {       
             getdata();
         });
-
-
-        // $allFields = $post->readFields($ID,$formName);
-
         function getdata()
         {
             $.ajax({
@@ -82,43 +63,22 @@
                 url: urlll,
                 success: function(data) {
                     console.log(data);
-                    data.forEach(myFunc);
-
-                    function myFunc(row, index) {
-                    responsestable.innerHTML += `<tr>
-                    ${
-                        row.forEach(response_data)
-                        while ()
-                    }
-                    <td>${row[0]}</td>`
+                    let responses = document.getElementById("responsestable");
+                    for(let i=0; i<data.length; i++){
+                        var tr = "<tr>";
+                        $("#responsestable").append(tr);
+                        var td = "";
+                        for(let j=0; j<data[i].length; j++){
+                            td += `<td>${data[i][j]}</td>`;
                         }
-
-
-                        function response_data(eachdata){
-                            
-
-                        }
-                        // $.each(data, function (key,value){
-
-                        //     while ($row=$allFields->fetch_assoc()){
-                        //         $('.responsedata').append(
-                                
-                        //             '<tr'+
-                        //             '<td>'+ value[$row] + '</td>\
-                        //             </tr>');
-                        //         }
-                        //     );
-                        // });
+                        $("#responsestable").append(td);
+                        var trend = "</tr>";
+                        $("#responsestable").append(trend);
+                    }                
                 }
             });
-        }
-
-        
-
-            
+        }            
     </script>
-
-
   </body>
 </html>
 

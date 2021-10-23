@@ -102,6 +102,12 @@
                
           }
 
+          public function getFormName($id){
+               $query = ' SELECT formName FROM forms WHERE formID = '.$id.' ';
+               $stmt = $this->conn->query($query);
+               return $stmt->fetch_assoc(); 
+          }
+
           public function countFields($id,$formname) {
                $query = ' SELECT COUNT(*) FROM fields WHERE formID = '.$id.' '; 
                $stmt = $this->conn->query($query); 

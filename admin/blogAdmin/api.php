@@ -649,11 +649,16 @@ function readResponses(){
     
 //    // Instantiate blog post object
     $post = new Form($db);
- 
 
     $ID = $_GET['Id'];
-    $formName = $_GET['name'];
+    
+    $name = $post->getFormName($ID);
+    foreach ($name as $key => $item) {
+        $formName = $item;
+    }
 
+    $value = explode(" ",$formName);
+    $formName = join("_",$value);
 
     $allFields = $post->readFields($ID,$formName);
     $responses = $post->readAllResponses($ID,$formName);
