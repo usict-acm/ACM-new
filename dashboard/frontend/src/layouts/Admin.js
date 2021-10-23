@@ -77,7 +77,7 @@ const Admin = (props) => {
           <Route exact path="/createBlog/:blogId" component={CreateBlog} />
           <Route exact path="/createBlog" component={CreateBlog} />
           <Route exact path="/event/:eventId" component={EventDetails} />
-          <Redirect from="*" to="/profile" />
+          <Redirect from="*" to="/home" />
         </Switch>
         <Container fluid>
           <AdminFooter />

@@ -1,6 +1,6 @@
 import EventCard from "components/Events/AllEvents/EventCard";
 import React, { useEffect, useState } from "react";
-import { CardHeader, CardBody, Container, Row, Col } from "reactstrap";
+import { CardHeader, CardBody, Container, Row, ButtonGroup, Button } from "reactstrap";
 import eventsData from "../../../components/Events/AllEvents/AllEventData";
 
 export default function MyEvents() {
@@ -18,17 +18,13 @@ export default function MyEvents() {
   return (
     <Container className="p-0" fluid>
       <CardHeader>
-        <Row sm={3} md={3}>
-        <Col type="button" onClick={() => setStatus("")} sm="auto" md="auto">
-            All Events
-          </Col>
-          <Col type="button" onClick={() => setStatus("upcoming")} sm="auto" md="auto">
-            Upcoming Events
-          </Col>
-          <Col type="button" onClick={() => setStatus("past")} sm="auto" md="auto">
-            Past Events
-          </Col>
-        </Row>
+        <Row>
+          <ButtonGroup className="w-full">
+            <Button outline color="primary" active={status === ""} onClick={() => setStatus("")}>All Events</Button>
+            <Button outline color="primary" active={status === "upcoming"} onClick={() => setStatus("upcoming")}>Upcoming Events</Button>
+            <Button outline color="primary" active={status === "past"} onClick={() => setStatus("past")}>Past Events</Button>
+          </ButtonGroup>          
+        </Row>        
       </CardHeader>
       <CardBody className="bg-white">
         <Row xs={1} md={2} lg={2} xl={3}>

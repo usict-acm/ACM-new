@@ -15,7 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 
 // reactstrap components
@@ -31,7 +31,7 @@ import {
 	InputGroup,
 	Row,
 	Col,
-  Spinner,
+	Spinner,
 } from "reactstrap";
 import { signup } from "api/user";
 import { COLLEGES } from "utils/Constants";
@@ -39,7 +39,7 @@ import { BRANCHES } from "utils/Constants";
 
 const Register = () => {
 	const dispatch = useDispatch(),
-  [loading, setLoading] = useState(false),
+		[loading, setLoading] = useState(false),
 		[email, setEmail] = useState(""),
 		[name, setName] = useState(""),
 		[password, setPassword] = useState(""),
@@ -48,6 +48,12 @@ const Register = () => {
 		[branch, setBranch] = useState(""),
 		[rollNo, setRollNo] = useState(""),
 		[college, setCollege] = useState("");
+
+	useEffect(() => {
+		return () => {
+			setLoading(false);
+		};
+	}, []);
 
 	const registerHandler = async (e) => {
 		e.preventDefault();
@@ -62,7 +68,7 @@ const Register = () => {
 		) {
 			return alert("Please fill all the required fields.");
 		}
-    setLoading(true);
+		setLoading(true);
 		const data = {
 			email,
 			name,
@@ -73,7 +79,7 @@ const Register = () => {
 			rollNo,
 			college,
 		};
-		dispatch(signup(data, setLoading));    
+		dispatch(signup(data, setLoading));
 	};
 
 	return (
@@ -255,9 +261,13 @@ const Register = () => {
 									/>
 								</InputGroup>
 							</FormGroup>
-							<div className="text-center">              
+							<div className="text-center">
 								<Button className="mt-4 w-100" color="primary" type="submit">
-                {loading ? <Spinner color="light" size="sm" /> : "Create account"}									
+									{loading ? (
+										<Spinner color="light" size="sm" />
+									) : (
+										"Create account"
+									)}
 								</Button>
 							</div>
 						</Form>

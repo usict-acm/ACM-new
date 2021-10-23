@@ -94,7 +94,7 @@ const AdminNavbar = (props) => {
                   <span>Support</span>
                 </DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem href="#pablo" onClick={logoutHandler}>
+                <DropdownItem onClick={logoutHandler}>
                   <i className="ni ni-user-run" />
                   <span>Logout</span>
                 </DropdownItem>
