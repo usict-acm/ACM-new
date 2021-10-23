@@ -112,7 +112,7 @@ const Login = () => {
 			</Card>
 			<Row className="mt-3">
 				<Col className="text-right" xs="12">
-					<a className="text-light" href="/register">
+					<a className="text-light" href={process.env.REACT_APP_HOSTED_BASE_URL + "/register"}>
 						<small>Create new account</small>
 					</a>
 				</Col>

@@ -1,6 +1,8 @@
 import React from "react";
-import Header from "../../components/Dashboard/Winner";
+import Winner from "../../components/Dashboard/Winner";
+import winner from "../../components/Dashboard/AllWinner";
 import RecentBlog from "../../components/Dashboard/RecentBlog";
+import UpcomingEvents from "../../components/Dashboard/UpcomingEvents";
 import "../../assets/css/dashboard/dashboard.css";
 import { Container, Row, Col } from "reactstrap";
 function Dashboard() {
@@ -11,42 +13,17 @@ function Dashboard() {
       </div>
       <Container fluid className="AllContent">
         <div className="content">
-          <Header />
+          <Winner winners={winner} />
           {/* Winner Section */}
 
           <Row className="pt-5">
             <Col xl="6">
-              <h2 className="pb-3">RECENT BLOGS</h2>
-              <RecentBlog
-              type={true}
-                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio numquam laboriosam quae voluptate deserunt quam earum qui voluptatibus, ad vel.
-
-              "
-              />
-              <RecentBlog
-              type={true}
-                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio numquam laboriosam quae voluptate deserunt quam earum qui voluptatibus, ad vel.
-
-              "
-              />
-              <RecentBlog
-              type={true}
-                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio numquam laboriosam quae voluptate deserunt quam earum qui voluptatibus, ad vel.
-
-              "
-              />
-              <RecentBlog
-              type={true}
-                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio numquam laboriosam quae voluptate deserunt quam earum qui voluptatibus, ad vel.
-
-              "
-              />
+              <h2 className="pb-3">PUBLISHED RECENTLY</h2>
+              <RecentBlog />
             </Col>
             <Col xl="6">
               <h2 className="pb-3">UPCOMING EVENTS</h2>
-              <RecentBlog type={false}/>
-              <RecentBlog type={false}/>
-              <RecentBlog type={false}/>
+              <UpcomingEvents />
             </Col>
           </Row>
         </div>

@@ -22,7 +22,6 @@ export default function Preview() {
   useEffect(() => {
     blog && editorInstance?.setData(blog?.content);
   }, [editorInstance, blog]);
-  console.log(blogs);
 
   return (
     <>
