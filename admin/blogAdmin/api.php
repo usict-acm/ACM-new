@@ -649,16 +649,11 @@ function readResponses(){
     
 //    // Instantiate blog post object
     $post = new Form($db);
+ 
 
     $ID = $_GET['Id'];
-    
-    $name = $post->getFormName($ID);
-    foreach ($name as $key => $item) {
-        $formName = $item;
-    }
+    $formName = $_GET['name'];
 
-    $value = explode(" ",$formName);
-    $formName = join("_",$value);
 
     $allFields = $post->readFields($ID,$formName);
     $responses = $post->readAllResponses($ID,$formName);
@@ -729,9 +724,9 @@ function readResponses(){
   // Instantiate blog post object
    $post = new Form($db);
 //    echo "check3";
-  
+$Id = $_GET["Id"];  
    // Blog post query
-   $result = $post->fieldsQuery();
+   $result = $post->fieldsQuery($Id);
 //    echo "check4";
 // var_dump($result);
    

@@ -83,9 +83,12 @@
                                         echo "<td>" . $row['formID'] . "</td>";
                                         echo "<td>" . $row['formName'] . "</td>";
 
+                                        $value = explode(" ",$row['formName']);
+                                        $val = join("_",$value);
+
                                         echo "<td>";
-                                            echo "<a href='../blogAdmin/responses.php?q=readResponses&Id=".$row['formID']."'title='View Record' data-toggle='tooltip'><button class='btn btn-primary' type='button'>Responses</button></span></a>";
-                                            echo "<a href='../../UI?Id=".$row['formID'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
+                                            echo "<a href='../blogAdmin/responses.php?q=readResponses&Id=".$row['formID'] ."&name=".$val."' title='View Record' data-toggle='tooltip'><button class='btn btn-primary' type='button'>Responses</button></span></a>";
+                                            echo "<a href='../../UI/index.php?Id=".$row['formID'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
                                             echo "<a href='faqadmin/delete.php?Sno=". $row['formID'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                             // echo "<a href='faqadmin/update.php?Sno=". $row['Sno'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
                                             // echo "<a href='faqadmin/delete.php?Sno=". $row['id'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
@@ -115,5 +118,3 @@
     </div>
 </body>
 </html>
-
-
