@@ -141,6 +141,12 @@ require_once "config.php";
                             </div>
                             </div>`;
 
+                    $(document).ready(function(e){
+                        $("#addBtn").click(function(e){
+                            $("#container").append(html);
+                        })
+                    });
+
 </script>
 
 <?php
