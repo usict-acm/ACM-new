@@ -471,46 +471,46 @@ window.addEventListener('load', (event) => {
 	/* end */
 });
 
-function validateform(){  
-	var name = document.contact.name.value;  
+function validateform() {
+	var name = document.contact.name.value;
 	var email = document.contact.email.value;
 	var phone = document.contact.phone.value;
 	var message = document.contact.message.value;
 
-	const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	const re =
+		/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	const pere = /^\d{10}$/;
 
-	if (name==null || name=="") {
-	  alert("Name can't be blank !");  
-	  return false;  
-	}
-	if (!re.test(email)) {  
-		alert("Please enter a valid e-mail address !");  
-	  	return false;  
-	}
-	if (message==null || message=="") {
-		alert("Message can't be blank !");  
-		return false;  
-	  }
-	if (phone.length != "" && !pere.test(phone)) {
-		alert ("Please enter a 10 digit number !");
+	if (name == null || name == '') {
+		alert("Name can't be blank !");
 		return false;
 	}
-}  
+	if (!re.test(email)) {
+		alert('Please enter a valid e-mail address !');
+		return false;
+	}
+	if (message == null || message == '') {
+		alert("Message can't be blank !");
+		return false;
+	}
+	if (phone.length != '' && !pere.test(phone)) {
+		alert('Please enter a 10 digit number !');
+		return false;
+	}
+}
 
-$(document).on("scroll", function() {
+$(document).on('scroll', function () {
 	var pageTop = $(document).scrollTop();
 	var pageBottom = pageTop + $(window).height();
-	var tags = $(".tag");
-  
+	var tags = $('.tag');
+
 	for (var i = 0; i < tags.length; i++) {
-	  var tag = tags[i];
-  
-	  if ($(tag).position().top < pageBottom) {
-		$(tag).addClass("visible");
-	  } else {
-		$(tag).removeClass("visible");
-	  }
+		var tag = tags[i];
+
+		if ($(tag).position().top < pageBottom) {
+			$(tag).addClass('visible');
+		} else {
+			$(tag).removeClass('visible');
+		}
 	}
-  });
-  
+});

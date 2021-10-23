@@ -140,15 +140,15 @@
 	<!--***********************blog section***************************************** -->
 	<section class="blogs">
 		<div class = "tag">
-		<div class="bloghead">
-			<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-blue"> Blogs</span></h2>
-		</div>
-		<div class="b-container" id="threeBlogsRow"></div>
-		<div class="py-3 mt-2 d-md-flex justify-content-sm-center">
-			<div class="col-md-2 col mb-2">
-				<a href="./blogs.php" class="about-button blog-mobile-btn">Read More Blogs</a>
+			<div class="bloghead">
+				<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-blue"> Blogs</span></h2>
 			</div>
-		</div>
+			<div class="b-container" id="threeBlogsRow"></div>
+			<div class="py-3 mt-2 d-md-flex justify-content-sm-center">
+				<div class="col-md-2 col mb-2">
+					<a href="./blogs.php" class="about-button blog-mobile-btn">Read More Blogs</a>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -181,15 +181,15 @@
 							'<div class="b-card-container">\
 				<div class="b-card">\
 				<div class="b-infos">\
-					<p class="b-text">' +
+					<p class="b-text text-center">' +
 							row.Title +
 							'</p>\
 					<p class="b-text text-center">By ' +
 							row.Author +
 							'</p>\
-					<span class="b-text"><a href="javascript:readMoreRedirection(' +
+					<span class="b-text" style="display:flex; align-items:center; justify-content:center;"><a href="javascript:readMoreRedirection(' +
 							row.Sno +
-							')" style="text-decoration:none; cursor:pointer; color:#0a58ca;">Read Blog</a></span>\
+							')" class="b-button" style="text-decoration:none; cursor:pointer; font-size: 14px;padding: 12px; margin-top:5px">Read Blog <i class="fas fa-long-arrow-alt-right"></i></a></span>\
 				</div>\
 				<img src="./' +
 							row.Image +

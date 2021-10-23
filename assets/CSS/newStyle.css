@@ -1,24 +1,24 @@
 /*------------------------------------------navbar-css------------------------------------------------*/
 @media (min-width: 300px) and (max-width: 580px) {
 	.acm-logo-navbar {
-	  margin-left: 10px;
+		margin-left: 10px;
 	}
-  }
-  
-  @media (min-width: 200px) and (max-width: 580px) {
+}
+
+@media (min-width: 200px) and (max-width: 580px) {
 	.acm-logo-navbar {
-	  margin-left: 10px;
+		margin-left: 10px;
 	}
-  }
-  .main-logo {
-	  margin: 5px 0 5px 100px;
-  }
-  .text-and-logo {
+}
+.main-logo {
+	margin: 5px 0 5px 100px;
+}
+.text-and-logo {
 	margin-left: 20px;
 	display: flex;
 	flex-direction: column;
-  }
-  .outstanding-logo {
+}
+.outstanding-logo {
 	width: 160px;
 	animation-name: scale-up-center;
 	animation-duration: 1s;
@@ -27,17 +27,17 @@
 	animation-iteration-count: 1;
 	animation-direction: normal;
 	animation-fill-mode: none;
-  }
-  @keyframes scale-up-center {
+}
+@keyframes scale-up-center {
 	0% {
-	  -webkit-transform: scale(0.2);
-	  transform: scale(0.2);
+		-webkit-transform: scale(0.2);
+		transform: scale(0.2);
 	}
 	100% {
-	  -webkit-transform: scale(1);
-	  transform: scale(1);
+		-webkit-transform: scale(1);
+		transform: scale(1);
 	}
-  }
+}
 .navbar-mainbg {
 	background-color: #fff;
 	padding: 10px 0px;
@@ -175,17 +175,16 @@
 		bottom: -25px;
 		left: -25px;
 	}
-	.navbar-toggler{
+	.navbar-toggler {
 		outline: none !important;
 		border: none !important;
 		box-shadow: none !important;
 	}
-	.navbar-toggler:focus{
+	.navbar-toggler:focus {
 		outline: none !important;
 		border: none !important;
 		box-shadow: none !important;
 	}
-	
 }
 /* --------------nav css end-------------------------------------------------------------------- */
 /* **********************hero section *********************** */
@@ -589,7 +588,7 @@ a:hover {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: rgba(211,211,211, 0.5); /* Black background with opacity */
+	background-color: rgba(211, 211, 211, 0.5); /* Black background with opacity */
 	z-index: 1000; /* Specify a stack order in case you're using a different order for other elements */
 	/* cursor: pointer; Add a pointer on hover */
 }
@@ -815,12 +814,13 @@ ul {
 	flex-direction: column;
 	align-items: center;
 	position: relative;
+	border-radius: 10px;
 }
 
 .b-card img {
 	width: 400px;
 	height: 250px;
-	border-radius: 5px;
+	border-radius: 10px;
 	transition: all 0.4s ease;
 	z-index: 0;
 }
@@ -831,19 +831,57 @@ ul {
 	background-color: #fff;
 	position: absolute;
 	top: 210px;
-	border-radius: 5px;
+	border-radius: 10px;
 	padding: 20px;
 	transition: all 0.4s ease;
 	z-index: 1;
-	box-shadow: 0px 8px 16px rgb(0 0 0 / 40%);
+	box-shadow: 3px 3px 12px rgb(0 0 0 / 24%);
+}
+.b-infos .b-button {
+	background: #0397fe;
+	color: #fff;
+	border-radius: 6px;
+	border: none;
+	font-size: 16px;
+	padding: 15px 25px;
+	text-decoration: none;
+}
+.b-infos .b-button i {
+	font-size: 14px;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+.b-infos::after {
+	content: '';
+	background: #0397fe;
+	border-radius: 10px;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	clip-path: circle(10% at 0% 0%);
+	transition: all 0.3s ease-in;
 }
 
 .b-infos:hover {
 	transform: translate(0, -10px);
 }
+.b-infos:hover::after {
+	clip-path: circle(100%);
+}
 
+.b-infos:hover {
+	color: #fff;
+}
 .b-infos:hover ~ img {
 	transform: translate(0, 10px);
+}
+.b-infos:hover .b-button {
+	background: rgb(243 243 243);
+	color: #0397fe;
 }
 
 .b-text {
@@ -1876,7 +1914,6 @@ ul {
 	color: var(--blue);
 }
 
-
 /* scroll to top  */
 
 .scrolltop {
@@ -1900,48 +1937,47 @@ ul {
 	color: var(--blue);
 }
 
-
-.our-team-area{
-    padding-top: 20px;
+.our-team-area {
+	padding-top: 20px;
 }
 
-.our-team-text{
-    padding-bottom: 60px;
+.our-team-text {
+	padding-bottom: 60px;
 }
 
-.our-team-text h1{
-    font-weight: 600;
-    font-size: 34px;
-    margin-bottom: 70px;
+.our-team-text h1 {
+	font-weight: 600;
+	font-size: 34px;
+	margin-bottom: 70px;
 }
 
-.our-team-box{
+.our-team-box {
 	position: relative;
 	width: 200px;
-    text-align: center;
-    margin-bottom: 60px;
+	text-align: center;
+	margin-bottom: 60px;
 }
 
-.our-team-box img{
-    border: 10px solid #2fd3ee;
-    width: 200px;
+.our-team-box img {
+	border: 10px solid #2fd3ee;
+	width: 200px;
 	height: 200px;
 }
-.t-overlay{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #2fd3ee;
-  overflow: hidden;
-  width: auto;
-  height: 0;
-  transition: .5s ease;
+.t-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #2fd3ee;
+	overflow: hidden;
+	width: auto;
+	height: 0;
+	transition: 0.5s ease;
 }
-.our-team-box:hover .t-overlay{
+.our-team-box:hover .t-overlay {
 	height: 100%;
 }
-.fadddd{
+.fadddd {
 	color: rgb(255, 255, 255);
 	font-size: 16px;
 }
@@ -1950,71 +1986,71 @@ ul {
 	visibility: hidden;
 }
 
-.icons i{
+.icons i {
 	margin: 6px;
-    font-size: 20px;
-    border-radius: 5px;
+	font-size: 20px;
+	border-radius: 5px;
 }
 
-.icons{
-    color: white;
-  font-size: 2px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
+.icons {
+	color: white;
+	font-size: 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
 }
 
-.icons a{
-    color: white;
+.icons a {
+	color: white;
 }
 
-.text-area1{
-  color: white;
-  font-size: 2px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
+.text-area1 {
+	color: white;
+	font-size: 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
 }
-.margin-media{
-	margin-left: "";
+.margin-media {
+	margin-left: '';
 }
 @media screen and (min-width: 320px) {
-	.margin-media{
+	.margin-media {
 		margin-left: 20px;
-	}	
+	}
 }
 @media screen and (min-width: 375px) {
-	.margin-media{
+	.margin-media {
 		margin-left: 32px;
-	}	
+	}
 }
 @media screen and (min-width: 425px) {
-	.margin-media{
+	.margin-media {
 		margin-left: 55px;
-	}	
+	}
 }
 @media screen and (min-width: 520px) {
-	.margin-media{
+	.margin-media {
 		margin-left: 90px;
-	}	
+	}
 }
 @media screen and (min-width: 620px) {
-	.margin-media{
+	.margin-media {
 		margin-left: 120px;
-	}	
+	}
 }
 @media screen and (min-width: 720px) {
-	.margin-media{
+	.margin-media {
 		margin-left: 120px;
-	}	
+	}
 }
 
 .contactUs {
@@ -2077,14 +2113,14 @@ ul {
 		width: 60%;
 		margin: auto;
 	}
-	.det .heading h1{
+	.det .heading h1 {
 		font-size: 20px;
 	}
 	.contact-btn {
-		margin-top: 5px ;
+		margin-top: 5px;
 	}
-	.contact-btn i{
-		margin-left: -5px ;
+	.contact-btn i {
+		margin-left: -5px;
 	}
 	.imag {
 		width: 18rem;
@@ -2108,14 +2144,14 @@ ul {
 	opacity: 0;
 	transform: translate(0, 10vh);
 	transition: all 3s;
-  }
-  
-  .tag.visible {
+}
+
+.tag.visible {
 	opacity: 1;
 	transform: translate(0, 0);
-  }
-  .middle {
-	transition: .5s ease;
+}
+.middle {
+	transition: 0.5s ease;
 	opacity: 0;
 	position: absolute;
 	top: 50%;
@@ -2123,10 +2159,10 @@ ul {
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	text-align: center;
-  }
-  .texttt {
-	background-color: #04AA6D;
+}
+.texttt {
+	background-color: #04aa6d;
 	color: white;
 	font-size: 16px;
 	padding: 16px 32px;
-  }  
+}
