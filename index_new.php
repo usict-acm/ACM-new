@@ -217,19 +217,10 @@
 									<img src="./assets/images/team/deanSir.jpeg" alt="">
 									<div class="t-overlay">
 									<div class="icons">
-										<!-- <a href="https://www.linkedin.com/in/gauravj22/" target="_blank"><i class="fab fa-linkedin"></i></a> -->
-										<h4 class="text-center">Prof. Pravin Chandra
+										<h5 class="text-center">Prof. Pravin Chandra</h5>
 										<p class="fadddd">Dean, USICT</p>
-										</h4>
 									</div>				
 									</div>
-									<!-- <div class="icons fac-icon">
-										<i class="fab fa-linkedin"></i>
-									</div>
-									<div class="text-area1">
-										<h4 class="text-center">Prof. Pravin Chandra</h4>
-										<p>Dean, USICT</p>
-									</div> -->
 								</div>
 							</div>
 							<div class="col-md-6 col-lg-9">
@@ -237,19 +228,10 @@
 									<img src="./assets/images/team/rahulsir.jpg" alt="">
 									<div class="t-overlay">
 									<div class="icons">
-										<!-- <a href="https://www.linkedin.com/in/gauravj22/" target="_blank"><i class="fab fa-linkedin"></i></a> -->
-										<h4 class="text-center">Dr. Rahul Johari
+										<h5 class="text-center">Dr. Rahul Johari</h5>
 										<p class="fadddd">Branch Head, ACM USICT</p>
-										</h4>
 									</div>				
 									</div>
-									<!-- <div class="icons fac-icon">
-										<i class="fab fa-linkedin"></i>
-									</div>
-									<div class="text-area1">
-										<h4 class="text-center">Dr. Rahul Johari</h4>
-										<p>Branch Head, ACM USICT</p>
-									</div> -->
 								</div>
 							</div>
 						</div>
@@ -265,18 +247,10 @@
 									<div class="t-overlay">
 									<div class="icons">
 										<a href="https://www.linkedin.com/in/gauravj22/" target="_blank"><i class="fab fa-linkedin"></i></a>
-										<h4 class="text-center">Gaurav Jain
+										<h5 class="text-center">Gaurav Jain</h5>
 										<p class="fadddd">Chair</p>
-										</h4>
 									</div>				
 									</div>
-									<!-- <div class="icons">
-										<a href="https://www.linkedin.com/in/gauravj22/" target="_blank"><i class="fab fa-linkedin"></i></a>
-									</div>
-									<div class="text-area1">
-										<h4 class="text-center">Gaurav Jain</h4>
-										<p>Chair</p>
-									</div> -->
 								</div>
 							</div>
 
@@ -286,18 +260,10 @@
 									<div class="t-overlay">
 									<div class="icons">
 										<a href="https://www.linkedin.com/in/vardaan-grover-8a64141a0/" target="_blank"><i class="fab fa-linkedin"></i></a>
-										<h4 class="text-center">Vardaan Grover
+										<h5 class="text-center">Vardaan Grover</h5>
 										<p class="fadddd">Vice Chair</p>
-										</h4>
 									</div>				
 									</div>
-									<!-- <div class="icons">
-										<a href="https://www.linkedin.com/in/vardaan-grover-8a64141a0/" target="_blank"><i class="fab fa-linkedin"></i></a>
-									</div>
-									<div class="text-area1">
-										<h4 class="text-center">Vardaan Grover</h4>
-										<p>Vice Chair</p>
-									</div> -->
 								</div>
 							</div>
 
@@ -307,18 +273,10 @@
 									<div class="t-overlay">
 									<div class="icons">
 										<a href="https://www.linkedin.com/in/akshad-bhandula-073202113/" target="_blank"><i class="fab fa-linkedin"></i></a>
-										<h4 class="text-center">Akshad Bhandula
+										<h5 class="text-center">Akshad Bhandula</h5>
 										<p class="fadddd">Secretary</p>
-										</h4>
 									</div>				
 									</div>
-									<!-- <div class="icons">
-										<a href="https://www.linkedin.com/in/akshad-bhandula-073202113/" target="_blank"><i class="fab fa-linkedin"></i></a>
-									</div>
-									<div class="text-area1">
-										<h4 class="text-center">Akshad Bhandula</h4>
-										<p>Secretary</p>
-									</div> -->
 								</div>
 							</div>
 
@@ -328,18 +286,10 @@
 									<div class="t-overlay">
 									<div class="icons">
 										<a href="https://www.linkedin.com/in/divyansh-rastogi-08a44a171/" target="_blank"><i class="fab fa-linkedin"></i></a>
-										<h4 class="text-center">Divyansh Rastogi
+										<h5 class="text-center">Divyansh Rastogi</h5>
 										<p class="fadddd">Joint Secretary</p>
-										</h4>
 									</div>				
 									</div>
-									<!-- <div class="icons">
-										<a href="https://www.linkedin.com/in/divyansh-rastogi-08a44a171/" target="_blank"><i class="fab fa-linkedin"></i></a>
-									</div>
-									<div class="text-area1">
-										<h4 class="text-center">Divyansh Rastogi</h4>
-										<p>Joint Secretary</p>
-									</div> -->
 								</div>
 							</div>
 
@@ -349,9 +299,8 @@
 									<div class="t-overlay">
 									<div class="icons">
 										<a href="https://www.linkedin.com/in/chaitan-dev/" target="_blank"><i class="fab fa-linkedin"></i></a>
-										<h4 class="text-center">Chaitan Dev
+										<h5 class="text-center">Chaitan Dev</h5>
 										<p class="fadddd">Treasurer</p>
-										</h4>
 									</div>				
 									</div>
 								</div>
@@ -363,15 +312,10 @@
 									<div class="t-overlay">
 									<div class="icons">
 										<a href="https://www.linkedin.com/in/chaitan-dev/" target="_blank"><i class="fab fa-linkedin"></i></a>
-										<h4 class="text-center">Anmol Jain
+										<h5 class="text-center">Anmol Jain</h5>
 										<p class="fadddd">Web Chair</p>
-										</h4>
 									</div>
 									</div>
-									<!-- <div class="text-area1">
-										<h4 class="text-center">Chaitan Dev</h4>
-										<p>Treasurer</p>
-									</div> -->
 									</div>
 								</div>
 							</div>

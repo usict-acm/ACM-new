@@ -2166,3 +2166,7 @@ ul {
 	font-size: 16px;
 	padding: 16px 32px;
 }
+
+.t-overlay .icons {
+	width: 100%;
+}
