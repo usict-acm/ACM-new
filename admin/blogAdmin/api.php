@@ -688,6 +688,29 @@ function readResponses(){
 
  };
 
+//  function testResponses(){
+
+//     $conn = mysqli_connect("localhost","root","","acmbackend");
+
+//     $query = 'SELECT * FROM responses_event_1_registration';
+//     $query_run = mysqli_query($conn,$query);
+//     $result_array = [];
+
+//     if (mysqli_num_rows($query_run)>0)
+//     {
+//         foreach($query_run as $row)
+//         {
+//             array_push($result_array,$row);
+//         }
+//         header('Content-type: application/json');
+//         echo json_encode($result_array);
+//     }
+//     else{}
+//     // {
+//     //     echo $return = "<h4>No record found.</h4>"
+//     // }
+//  }
+
  function getFields(){
     include_once './forms.php';
 
@@ -815,6 +838,9 @@ switch ($q) {
         break;
     case 'saveForm':
         saveForm();
+        break;
+    case 'HardFetchResponses':
+        testResponses();
         break;
     default:
         echo "Invalid Query";

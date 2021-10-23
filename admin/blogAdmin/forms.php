@@ -85,7 +85,7 @@
                // $val = join("_",$value);
                $tableName = "responses_" . $formName;
                $query = 'SELECT * FROM ' . $tableName .'';                                 
-               echo $query;
+               // echo $query;
                $stmt = $this->conn->query($query); 
                // echo "statement".$stmt;  
                return $stmt;
