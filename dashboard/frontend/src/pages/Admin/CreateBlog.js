@@ -43,11 +43,12 @@ const CreateBlog = () => {
 			setTags(blog?.tags || []);
 			setContent(blog?.content || "");
 			setTitle(blog?.blogTitle || "");
+			dispatch(setLoading(false));
 		};
 		if (blogId) {
 			setData();
 		}
-	}, [user, blogId, editorInstance]);
+	}, [dispatch, user, blogId, editorInstance]);
 
 	const reset = () => {
 		if (blogId) {
@@ -153,19 +154,27 @@ const CreateBlog = () => {
 												<p className="btn_txt">Save</p>
 											</Button>
 										)}
-										<Button
-											className="bx bxs-cloud-upload save-btn"
-											type="button"
-											color="success"
-											onClick={() => createBlog(false)}
-											disabled={!hasChanged()}
-										>
-											<p className="btn_txt">
-												{editingBlog && !editingBlog?.isDraft
-													? "Save Changes"
-													: "Publish"}
-											</p>
-										</Button>
+										{!editingBlog || editingBlog?.isDraft ? (
+											<Button
+												className="bx bxs-cloud-upload save-btn"
+												type="button"
+												color="success"
+												onClick={() => createBlog(false)}
+												disabled={!editingBlog && !hasChanged()}
+											>
+												<p className="btn_txt">Publish</p>
+											</Button>
+										) : (
+											<Button
+												className="bx bxs-cloud-upload save-btn"
+												type="button"
+												color="success"
+												onClick={() => createBlog(false)}
+												disabled={!hasChanged()}
+											>
+												<p className="btn_txt">Save Changes</p>
+											</Button>											
+										)}
 									</Col>
 								</Row>
 							</CardHeader>
@@ -239,7 +248,6 @@ const CreateBlog = () => {
 											}}
 											onReady={(editor) => {
 												setEditorInstance(editor);
-												dispatch(setLoading(false));
 												const toolbarContainer =
 													document.querySelector("#toolbar-container");
 												toolbarContainer.appendChild(
