@@ -1,17 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Card, CardBody } from "reactstrap";
 import { useSelector } from "react-redux";
-import { selectBlogs } from "redux/slices/blogSlice";
 import { useHistory } from "react-router";
 import "../../assets/css/dashboard/recentblog.css";
 import moment from "moment";
+import { fetchUserBlogs } from "api/blog";
+import { selectUser } from "redux/slices/userSlice";
 
 const RecentBlog = () => {
-	const blogs = useSelector(selectBlogs),
-		history = useHistory();
+	const history = useHistory(),
+	 user = useSelector(selectUser),
+	 [blogs, setBlogs] = useState([]);
 
-	return blogs
-		.filter((blog) => blog.isDraft === false)
+	useEffect(() => {
+		const fetchData = async () => {
+			const allBlogs = await fetchUserBlogs({ userEmail: user?.email });
+			if (allBlogs) {
+				console.log(allBlogs);
+				setBlogs(allBlogs);
+			}
+		};
+		fetchData();
+	}, [user]);
+
+	return blogs?.filter((blog) => blog.isDraft === false)
 		.slice(0, 3)
 		.map((filterdata) => (
 			<Card
@@ -21,7 +33,9 @@ const RecentBlog = () => {
 			>
 				<CardBody className="dashboardCard__container">
 					<div className="dashboardCard__date">
-						<h2 id="bold">{moment(filterdata?.published).format("DD MMM, YY")}</h2>
+						<h2 id="bold">
+							{moment(filterdata?.published).format("DD MMM, YY")}
+						</h2>
 					</div>
 					<div className="dashboardCard__contents">
 						<h2 id="bold">{filterdata.blogTitle}</h2>

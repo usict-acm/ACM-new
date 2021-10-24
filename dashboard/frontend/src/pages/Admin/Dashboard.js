@@ -5,9 +5,10 @@ import RecentBlog from "../../components/Dashboard/RecentBlog";
 import UpcomingEvents from "../../components/Dashboard/UpcomingEvents";
 import "../../assets/css/dashboard/dashboard.css";
 import { Container, Row, Col } from "reactstrap";
+
 function Dashboard() {
   return (
-    <>
+    <div>
       <div className="bkg header bg-gradient-info pl-5 pt-5">
         <span className="winhead">WINNERS</span>
       </div>
@@ -28,7 +29,7 @@ function Dashboard() {
           </Row>
         </div>
       </Container>
-    </>
+    </div>
   );
 }
 

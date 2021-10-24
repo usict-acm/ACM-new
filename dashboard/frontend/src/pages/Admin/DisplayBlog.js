@@ -2,29 +2,43 @@ import React, { useState, useEffect } from "react";
 import { Button, CardHeader, CardBody, Container, Row, Col } from "reactstrap";
 import "assets/css/preview.css";
 import { useHistory, useParams } from "react-router";
-import { useSelector } from "react-redux";
-import { selectBlogs } from "redux/slices/blogSlice";
+import { useDispatch, useSelector } from "react-redux";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import documentEditor from "ckeditor5-custom-build";
-import "assets/css/CreateBlog.css";
-// import { formatDate } from "utils/commonFunctions";
 import SideBar from "components/Blogs/DisplayBlogSideBar.js"
+import { selectUser } from "redux/slices/userSlice";
+import { fetchSingleBlog } from "api/blog";
+import "assets/css/CreateBlog.css";
+import { setLoading } from "redux/slices/mainSlice";
 
 export default function Preview() {
-  const params = useParams(),
+  const dispatch = useDispatch(),
+    params = useParams(),
     { blogId } = params,
     history = useHistory(),
-    blogs = useSelector(selectBlogs),
-    [editorInstance, setEditorInstance] = useState(null);
-
-  const blog = blogs.find((item) => item.blogId === blogId);
+    user = useSelector(selectUser),
+    [editorInstance, setEditorInstance] = useState(null),
+    [blog, setBlog] = useState(null);
 
   useEffect(() => {
+    dispatch(setLoading(true));
+  }, [dispatch]);
+
+  useEffect(() => {
+    const fetchBlog = async () => {      
+			const blog = await fetchSingleBlog({userEmail: user?.email, blogId});
+			if (blog) {
+        setBlog(blog);	
+			}
+		};
+    fetchBlog()
+  }, [blogId, user]);
+
+  useEffect(() => {    
     blog && editorInstance?.setData(blog?.content);
   }, [editorInstance, blog]);
 
   return (
-    <>
       <Container fluid className="p-2 mt-4 ">
         <CardHeader className="mb-4 px-2 bg-secondary">
           <Row className="titleEdit">
@@ -49,6 +63,7 @@ export default function Preview() {
                 disabled
                 onReady={(editor) => {
                   setEditorInstance(editor);
+                  dispatch(setLoading(false));
                 }}
               />
             </div>
@@ -59,6 +74,5 @@ export default function Preview() {
             </div>
         </CardBody>
       </Container>
-    </>
   );
 }

@@ -5,20 +5,27 @@ import DetailSidebar from "components/Events/EventDetails/DetailSideBar";
 import "../../../assets/css/events/eventDetails.css";
 import { fetchSingleEvent } from "api/event";
 import ReactHtmlParser from "react-html-parser";
+import { useDispatch } from "react-redux";
+import { setLoading } from "redux/slices/mainSlice";
 
 export default function EventDetails() {
 	const { eventId } = useParams();
+	const dispatch = useDispatch();
 	const [event, setEvent] = React.useState({});
 
 	useEffect(() => {
 		const fetchData = async () => {
+			dispatch(setLoading(true));
 			const event = await fetchSingleEvent(eventId);
 			if (event) {
 				setEvent(event);
+				dispatch(setLoading(false));
+			}else{
+				dispatch(setLoading(false));
 			}
 		};
 		fetchData();
-	}, [eventId]);
+	}, [dispatch, eventId]);
 
 	return (
 		<Container className="px-5 mt-4 eventDetails__content" fluid="xs">

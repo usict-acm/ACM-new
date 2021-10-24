@@ -39,6 +39,16 @@ class Blog
         $res = $this->conn->query($query);
         return $res;
     }
+    
+    public function fetchSingleBlog($userEmail, $blogId)
+    {
+        $query =
+            "SELECT * FROM $this->table 
+                WHERE userEmail = '$userEmail' and blogId = '$blogId'";
+
+        $res = $this->conn->query($query);
+        return $res;
+    }
 
     public function updateBlog($details)
     {
