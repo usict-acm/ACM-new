@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/test_acm/dashboard/user-portal/static/css/main.020afffc.chunk.css",
-    "main.js": "/test_acm/dashboard/user-portal/static/js/main.e13dbbae.chunk.js",
-    "main.js.map": "/test_acm/dashboard/user-portal/static/js/main.e13dbbae.chunk.js.map",
+    "main.js": "/test_acm/dashboard/user-portal/static/js/main.591dc8bc.chunk.js",
+    "main.js.map": "/test_acm/dashboard/user-portal/static/js/main.591dc8bc.chunk.js.map",
     "runtime-main.js": "/test_acm/dashboard/user-portal/static/js/runtime-main.b6bad234.js",
     "runtime-main.js.map": "/test_acm/dashboard/user-portal/static/js/runtime-main.b6bad234.js.map",
     "static/css/2.228a653a.chunk.css": "/test_acm/dashboard/user-portal/static/css/2.228a653a.chunk.css",
@@ -12,7 +12,7 @@
     "static/css/2.228a653a.chunk.css.map": "/test_acm/dashboard/user-portal/static/css/2.228a653a.chunk.css.map",
     "static/css/main.020afffc.chunk.css.map": "/test_acm/dashboard/user-portal/static/css/main.020afffc.chunk.css.map",
     "static/js/2.fe72cd9f.chunk.js.LICENSE.txt": "/test_acm/dashboard/user-portal/static/js/2.fe72cd9f.chunk.js.LICENSE.txt",
-    "static/js/main.e13dbbae.chunk.js.LICENSE.txt": "/test_acm/dashboard/user-portal/static/js/main.e13dbbae.chunk.js.LICENSE.txt",
+    "static/js/main.591dc8bc.chunk.js.LICENSE.txt": "/test_acm/dashboard/user-portal/static/js/main.591dc8bc.chunk.js.LICENSE.txt",
     "static/media/acm1.png": "/test_acm/dashboard/user-portal/static/media/acm1.5d0a90f9.png",
     "static/media/UserHeader.css": "/test_acm/dashboard/user-portal/static/media/acm_banner.cbcb2392.png",
     "static/media/argon-react.png": "/test_acm/dashboard/user-portal/static/media/argon-react.128d71d3.png",
@@ -25,6 +25,6 @@
     "static/css/2.228a653a.chunk.css",
     "static/js/2.fe72cd9f.chunk.js",
     "static/css/main.020afffc.chunk.css",
-    "static/js/main.e13dbbae.chunk.js"
+    "static/js/main.591dc8bc.chunk.js"
   ]
 }
