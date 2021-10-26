@@ -1903,9 +1903,14 @@ ul {
 	height: 50px;
 	border-radius: 50%;
 	background-color: #fff;
-	box-shadow: 3px 3px 9px var(--blue);
+	box-shadow: 1px 1px 5px #606365;
 	display: block;
 	z-index: 200;
+}
+@media screen and (max-width: 375px) {
+	.contact-bottom-btn {
+		right: 16px;
+	}
 }
 .contact-icon {
 	cursor: pointer;
@@ -1924,7 +1929,7 @@ ul {
 	height: 50px;
 	border-radius: 50%;
 	background-color: #fff;
-	box-shadow: 3px 3px 9px var(--blue);
+	box-shadow: 1px 1px 5px #606365;
 	display: none;
 	z-index: 200;
 }
@@ -1935,6 +1940,11 @@ ul {
 	transform: rotate(-45deg);
 	margin-top: 5px;
 	color: var(--blue);
+}
+@media screen and (max-width: 375px) {
+	.scrolltop {
+		right: 16px;
+	}
 }
 
 .our-team-area {

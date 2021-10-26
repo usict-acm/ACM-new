@@ -73,7 +73,7 @@
 				<div class="swiper-button-prev"></div>
 			</div>
 			<div id="typewriter">
-				<span class="typewriter-box" data-wait="200" data-content='["USICT ACM CHAPTER"]'> </span>
+				<span class="typewriter-box" data-wait="200" data-content='["USICT ACM STUDENT CHAPTER"]'> </span>
 				<!-- end swiper-slide -->
 			</div>
 			<!-- end swiper-wrapper -->
@@ -84,7 +84,7 @@
 			<div class="swiper-button-prev"></div>
 		</div>
 		<div id="typewriter">
-			<span class="typewriter-box" data-wait="400" data-content='["USICT ACM CHAPTER"]'> </span>
+			<span class="typewriter-box" data-wait="400" data-content='["USICT ACM STUDENT CHAPTER"]'> </span>
 		</div>
 	</section>
 	<!-- end of hero slider -->
