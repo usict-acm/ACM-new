@@ -2244,6 +2244,11 @@ ul {
   left: 0;
   right: 0;
 }
+@media screen and (max-width: 620px) {
+	.social-btns{
+		margin-bottom: 290px;
+	}
+}
 .social-btns .btn {
   display: inline-block;
   background-color: #fff;
