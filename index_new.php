@@ -334,7 +334,38 @@
 		</div>
 	</section>
 	<!-- *****************************our team end************************************************** -->
+		<!-- socail bar******************************* -->
+ 	<div class="social-btns">
+     <div class="try1">
+      <a class="btn facebook" href="#"><i class="fa fa-facebook"></i></a>
+      <div class="write" id="wrete">
+        <h1 class="sob-heading">700</h1>
+        <p class="gratext">Facebook Likes</p>
+      </div>
+    </div>
+    <div class="try1">
+      <a class="btn twitter" href="#"><i class="fab fa fa-linkedin"></i></a>
+      <div class="write" id="wrete">
+        <h1 class="sob-heading">1000</h1>
+        <p class="gratext">LinkedIn Reach</p>
+      </div>
+    </div>
+    <div class="try1">
+      <a class="btn dribbble" href="#"><i class=" fa fa fa-instagram"></i></a>
+      <div class="write" id="wrete">
+        <h1 class="sob-heading">300+</h1>
+        <p class="gratext">Instagram Followers</p>
+      </div>
+    </div>
+    <div class="try1">
+      <a class="btn skype" href="#"><i class="fa fa fa-child"></i></a>
+      <div class="write" id="wrete">
+        <h1 class="sob-heading">1000+</h1>
+        <p class="gratext">Connected Students</p>
+      </div>
+    </div>
 
+  </div>
 	<!-- ****************************************************contact us ***************************** -->
 	<div class="dsph" id="contact">
 		<div class="d-flex justify-content-center mt-md-5">
