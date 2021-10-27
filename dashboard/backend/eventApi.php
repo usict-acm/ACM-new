@@ -48,7 +48,7 @@
     function fetchSingleEvent()
     {
         if ($_SERVER['REQUEST_METHOD'] != "POST") {
-            echo "Cannot " . $_SERVER['REQUEST_METHOD'] . " /allEvents";
+            echo "Cannot " . $_SERVER['REQUEST_METHOD'] . " /singleEvent";
             return;
         }
         $req = json_decode(file_get_contents('php://input'), true);

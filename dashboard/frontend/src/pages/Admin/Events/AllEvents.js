@@ -1,6 +1,7 @@
+import React, { useEffect, useState } from "react";
 import { fetchAllEvents } from "api/event";
 import EventCard from "components/Events/AllEvents/EventCard";
-import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import {
 	CardHeader,
 	CardBody,
@@ -9,22 +10,28 @@ import {
 	Button,
 	ButtonGroup,
 } from "reactstrap";
+import { setLoading } from "redux/slices/mainSlice";
 
 export default function AllEvents() {
-	const [status, setStatus] = useState(""),
+	const dispatch = useDispatch(),
+		[status, setStatus] = useState(""),
 		[eventsData, setEventsData] = useState([]),
 		[data, setData] = useState([]);
 
 	useEffect(() => {
 		const fetchData = async () => {
+			dispatch(setLoading(true));
 			const allEvents = await fetchAllEvents();
 			if (allEvents) {
 				setEventsData(allEvents);
 				setData(allEvents);
+				dispatch(setLoading(false));
+			}else{
+				dispatch(setLoading(false));
 			}
 		};
 		fetchData();
-	}, []);
+	}, [dispatch]);
 
 	useEffect(() => {
 		let newEvents = [];

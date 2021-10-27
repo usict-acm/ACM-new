@@ -116,7 +116,7 @@ const Sidebar = (props) => {
 						alt="logo"
 						className="navbar-brand-img"
 						src={
-							require("../../assets/img/brand/outstanding-website.png").default
+							require("../../assets/img/brand/acm1.png").default
 						}
 					/>
 				</NavbarBrand>
@@ -175,7 +175,7 @@ const Sidebar = (props) => {
 									<img
 										alt="logo"
 										src={
-											require("../../assets/img/brand/outstanding-website.png")
+											require("../../assets/img/brand/acm1.png")
 												.default
 										}
 									/>

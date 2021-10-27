@@ -14,9 +14,10 @@ import "assets/css/CreateBlog.css";
 import SideNav from "../../components/Navbars/CreateBlogSidebar";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "redux/slices/userSlice";
-import { selectBlogs } from "redux/slices/blogSlice";
 import { useHistory, useParams } from "react-router";
 import { addBlog, updateBlog } from "api/blog";
+import { fetchSingleBlog } from "api/blog";
+import { setLoading } from "redux/slices/mainSlice";
 
 const CreateBlog = () => {
 	const dispatch = useDispatch(),
@@ -27,54 +28,56 @@ const CreateBlog = () => {
 		[title, setTitle] = useState(""),
 		[content, setContent] = useState(""),
 		[tags, setTags] = useState([]),
-		blogs = useSelector(selectBlogs),
 		[editorInstance, setEditorInstance] = useState(null),
 		[editingBlog, setEditingBlog] = useState(null);
 
 	useEffect(() => {
-		if (blogId && blogs) {
-			const blog = blogs.find((blog) => blog.blogId === blogId);
+		dispatch(setLoading(true));
+	}, [dispatch]);
+
+	useEffect(() => {
+		const setData = async () => {
+			const blog = await fetchSingleBlog({ userEmail: user?.email, blogId });
 			setEditingBlog(blog);
 			blog && editorInstance && editorInstance.setData(blog?.content || "");
 			setTags(blog?.tags || []);
 			setContent(blog?.content || "");
 			setTitle(blog?.blogTitle || "");
+			dispatch(setLoading(false));
+		};
+		if (blogId) {
+			setData();
 		}
-	}, [blogs, blogId, editorInstance]);
+	}, [dispatch, user, blogId, editorInstance]);
 
 	const reset = () => {
-		if (blogId && blogs) {
-			const blog = blogs.find((blog) => blog.blogId === blogId);
-			setEditingBlog(blog);
-			setTags(blog?.tags || []);
-			setContent(blog?.content || "");
-			setTitle(blog?.blogTitle || "");
-			blog && editorInstance && editorInstance.setData(blog?.content || "");
+		if (blogId) {
+			setTags(editingBlog?.tags || []);
+			setContent(editingBlog?.content || "");
+			setTitle(editingBlog?.blogTitle || "");
+			editingBlog &&
+				editorInstance &&
+				editorInstance.setData(editingBlog?.content || "");
 		} else {
 			setTitle("");
 			setContent("");
 			setTags([]);
 			setEditingBlog(null);
-      editorInstance && editorInstance.setData("");
+			editorInstance && editorInstance.setData("");
 		}
 	};
 
-  const hasChanged = () => {
-    if(blogId && blogs) {
-      const blog = blogs?.find((blog) => blog.blogId === blogId);
-      return (
-        title !== blog?.blogTitle ||
-        content !== blog?.content ||
-        tags !== blog?.tags
-      )
-    } else {
-      return (
-        title !== "" ||
-        content !== "" ||
-        tags.length > 0
-      )
-    }
-  }
+	const hasChanged = () => {
+		if (blogId) {
+			return (
+				title !== editingBlog?.blogTitle ||
+				content !== editingBlog?.content ||
+				tags !== editingBlog?.tags
+			);
+		} else {
+			return title !== "" || content !== "" || tags.length > 0;
+		}
+	};
 
 	async function createBlog(draft) {
 		if (!title || !content) {
@@ -129,41 +132,49 @@ const CreateBlog = () => {
 										/>
 									</Col>
 									<Col className="text-right">
-                    {editingBlog && (
-                      <Button
-                        className="bx bx-x save-btn"
-                        type="button"
-                        color="danger"
-                        onClick={reset}
-                        disabled={!hasChanged()}
-                      >
-                        <p className="btn_txt">Cancel</p>
-                      </Button>
-                    )}
-										{(!blogId) && (
+										{editingBlog && (
+											<Button
+												className="bx bx-x save-btn"
+												type="button"
+												color="danger"
+												onClick={reset}
+												disabled={!hasChanged()}
+											>
+												<p className="btn_txt">Cancel</p>
+											</Button>
+										)}
+										{!blogId && (
 											<Button
 												className="bx bx-save save-btn"
 												type="button"
 												color="info"
 												onClick={() => createBlog(true)}
-                        disabled={!hasChanged()}
+												disabled={!hasChanged()}
 											>
 												<p className="btn_txt">Save</p>
 											</Button>
 										)}
-										<Button
-											className="bx bxs-cloud-upload save-btn"
-											type="button"
-											color="success"
-											onClick={() => createBlog(false)}
-                      disabled={!hasChanged()}
-										>
-											<p className="btn_txt">
-												{editingBlog && !editingBlog?.isDraft
-													? "Save Changes"
-													: "Publish"}
-											</p>
-										</Button>
+										{!editingBlog || editingBlog?.isDraft ? (
+											<Button
+												className="bx bxs-cloud-upload save-btn"
+												type="button"
+												color="success"
+												onClick={() => createBlog(false)}
+												disabled={!editingBlog && !hasChanged()}
+											>
+												<p className="btn_txt">Publish</p>
+											</Button>
+										) : (
+											<Button
+												className="bx bxs-cloud-upload save-btn"
+												type="button"
+												color="success"
+												onClick={() => createBlog(false)}
+												disabled={!hasChanged()}
+											>
+												<p className="btn_txt">Save Changes</p>
+											</Button>											
+										)}
 									</Col>
 								</Row>
 							</CardHeader>

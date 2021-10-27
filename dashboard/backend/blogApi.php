@@ -89,6 +89,43 @@ function fetchUserBlogs()
     }
 }
 
+function fetchSingleBlog()
+{
+    if ($_SERVER['REQUEST_METHOD'] != "POST") {
+        echo "Cannot " . $_SERVER['REQUEST_METHOD'] . " /singleBlog";
+        return;
+    }
+    $req = json_decode(file_get_contents('php://input'), true);
+    if($req["userEmail"] && $req["blogId"]){
+        $blog = blogInit();        
+        $singleBlog = $blog->fetchSingleBlog($req["userEmail"], $req["blogId"]);
+        if ($singleBlog) {   
+            $singleBlog = $singleBlog->fetch_assoc();
+            echo json_encode(array(
+                'message' => 'success',
+                'blog' => array(
+                    "blogId" => $singleBlog["blogId"],
+                    "blogTitle" => $singleBlog["blogTitle"],
+                    "content" => $singleBlog["content"],
+                    "userEmail" => $singleBlog["userEmail"],
+                    "userName" => $singleBlog["userName"],
+                    "isDraft" => boolval($singleBlog["isDraft"]),
+                    "tags" => unserialize($singleBlog["tags"]),
+                    "created" => $singleBlog["created"],
+                    "published" => $singleBlog["published"],
+                    "lastUpdated" => $singleBlog["lastUpdated"]
+                )
+            ));
+        } else {
+            echo json_encode(array('error' => 'Invalid Details'));
+            return;
+        }
+    }else {
+        echo json_encode(array('error' => 'One or more fields are missing.'));
+        return;
+    }
+}
+
 function updateBlog()
 {
     if ($_SERVER['REQUEST_METHOD'] !== "POST") {
