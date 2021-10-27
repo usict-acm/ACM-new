@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog entry</title>
+    <script src="https://cdn.tiny.cloud/1/mksotb5qwcfqike273vpegiuc1l37f1gkd7eansyq3mve8kz/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  </head>
+
+  <body>
+    <h1>Enter the blog details</h1>
+    <form
+      action="api.php/?q=postblog"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <input
+        type="text"
+        name="title"
+        id="title"
+        placeholder="Enter the title of the blog"
+      />
+      <input
+        type="text"
+        name="author"
+        id="age"
+        placeholder="Who wrote the blog"
+      />
+      <input
+        type="text"
+        name="category"
+        id="category"
+        placeholder="Enter Category of blog"
+      />
+      <textarea
+        name="content"
+        id="content"
+        rows="20"
+        class="mceEditor"
+        placeholder="Enter the blog"
+      ></textarea>
+      <input
+        type="text"
+        name="event"
+        id="event"
+        placeholder="Enter event, if any"
+      />
+      <input type="file" name="file" id="file" />
+      <input type="submit" name="submit" value="submit" />
+    </form>
+  </body>
+  <script>
+  tinymce.init({selector:'textarea',
+  mode: "specific_textareas", 
+  editor_Selector: "mceEditor",
+  plugins: ' advlist autolink lists link image charmap print preview hr anchor pagebreak a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinymcespellchecker',
+      toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+      });
+  </script>
+</html>

@@ -5,6 +5,7 @@ header('Content-Type: application/json');
     include_once './database.php';
     include_once './posts.php';
     include_once '../../events/eventPost.php';
+    include_once './forms.php';
  
 
     $method = $_SERVER['REQUEST_METHOD'];
@@ -436,11 +437,21 @@ function carouselFunctionAPI(){
     $post = new PostEvent($db);
     // echo "4";
     
-    //    echo $year;
-    // echo "helllo";
-    // $year = $_GET['year'];
-    // Blog post query
-    $result = $post->carouselquerry();
+    $numEvents = $post->countEvents();
+
+    foreach ($numEvents as $key => $item) {
+        $count = $item;
+    }
+    // echo $count;
+    // var_dump($count);
+    // echo sizeof($count);
+
+    if(sizeof($count==1)){
+        // echo "dfgh";
+        $result = $post->carouselquerryOne();
+    }else{
+        $result = $post->carouselquerry();
+    }
     // echo "5";
 
    // Check if any posts
@@ -591,6 +602,192 @@ function postImage()
     }
 };
 
+function getForms(){
+    // Instantiate DB & connect
+   $database = new Database();
+   $db = $database->connect();
+   // Instantiate blog post object
+   $post = new Form($db);
+
+$limit = 10;
+$page = isset($_GET['page']) ? $_GET["page"] : 1;
+$start = ($page - 1) * $limit;
+
+// Blog post query
+$result = $post->read($start, $limit);
+$countForms = $post->countForms();
+foreach ($countForms as $key => $item) {
+   $count = $item;
+}
+$pages = ceil($count / $limit);
+// echo $pages;
+
+// Check if any posts
+if ($result) {
+   // Post array
+   $posts_arr = array();
+   $multi_array_posts = array();
+
+   while ($row = $result->fetch_assoc()) {
+       $post_item = array(
+           'formID' => $row["Id"],
+           'formName' => $row["name"],
+       );
+       // Push to "data"
+       array_push($posts_arr, $post_item);
+   }
+
+   array_push($multi_array_posts, $posts_arr);
+   array_push($multi_array_posts, $pages);
+
+   // Turn to JSON & output
+   echo json_encode($multi_array_posts);
+   // echo json_encode($pages);
+
+} else {
+   // No Posts
+   echo json_encode(array('message' => 'No Posts Found'));
+}
+};
+
+
+function readResponses(){
+//     include_once './forms.php';
+//      // Instantiate DB & connect
+//     $database = new Database();
+//     $db = $database->connect();
+//  // echo $db;
+//    // Instantiate blog post object
+//     $post = new Form($db);
+ 
+
+//     $ID = $_GET['Id'];
+//     $formName = $_GET['name'];
+
+
+//     $result0 = $post->readFields($ID,$formName);
+    
+ 
+//     $result = $post->readAllResponses($ID,$formName);
+    
+
+//     $result3 = $post->countFields($ID,$formName);
+//     foreach ($result3 as $key => $item) {
+//         $count = $item;
+//     }
+
+
+
+//     $fielditem = array();
+//     $i=0;
+    
+//     // while ($i<$count){
+//     //     array_push($fielditem,$row['fieldName']);
+//     //     $i++;
+//     // }
+
+
+//     while($row=$result0->fetch_assoc()){
+//         $i=0;
+//         // while ($i<$count){
+//         //     $formitem = array(
+//         //         $row[$i] => $row[$row[$i]]
+//         //     );
+//         // }
+//         $post_item = array(
+//             'fieldName' => $row["fieldName"]
+//         );
+//         array_push($fielditem,$post_item);
+//         // print_r($row);
+//     }
+
+//     $sizeofarray = sizeof($fielditem);
+//     $responses_array = array();
+
+//     while($row=$result->fetch_assoc()){
+//         echo json_encode($row);
+
+//         $i=0;
+//         while($i<$sizeofarray){
+//             $fielditem[$i].$fieldName=>$row[$fielditem[$i].$fieldName]
+//             $i++;
+
+//         }
+//         echo json_encode($post_item);
+
+//     }
+    
+
+
+    // echo json_encode($fielditem);
+
+
+ 
+    // array_push($multi_array,$posts_arr);
+    // array_push($multi_array,$count);
+    // array_push($multi_array,$pages);
+    // // Turn to JSON & output
+    // echo json_encode($multi_array);
+ 
+    // } else {
+    // // No Posts
+    // echo json_encode(
+    //     array('message' => 'No Posts Found')
+    // );
+    // }
+    // print_r($result0);
+
+
+
+ };
+
+function getFields(){
+    
+    // Instantiate DB & connect
+    $database = new Database();
+    // echo "check1";
+    $db = $database->connect();
+    // echo "check2";
+    // echo $db;
+    // echo "checking";
+  // Instantiate blog post object
+   $post = new Form($db);
+//    echo "check3";
+  
+   // Blog post query
+   $result = $post->fieldsQuery();
+//    echo "check4";
+// var_dump($result);
+   
+   // Check if any posts
+   if($result) {
+    
+   // Post array
+   $posts_arr = array();
+
+   while($row=$result->fetch_assoc()){
+    //    echo $row;
+       $post_item = array(
+           'formName' => $row["formName"],
+           'fieldName' => $row["fieldName"],
+           'fieldType' => $row["fieldType"],
+           'formID' => $row["formID"],
+       );
+           // Push to "data"
+           array_push($posts_arr, $post_item);
+   }
+
+   // Turn to JSON & output
+   echo json_encode($posts_arr);
+//    echo "5";
+
+   } else {
+   // No Posts
+   echo json_encode(
+       array('message' => 'No Posts Found')
+   );
+   }
+};
 $q = $_GET['q'];
 switch ($q) {
     case 'readAll':
@@ -631,6 +828,16 @@ switch ($q) {
         break;
     case 'carousel':
         carouselFunctionAPI();
+        break;
+    case 'forms':
+        getForms();
+        break;
+    case 'readResponses':
+        readResponses();
+        break;
+        
+    case 'fields':
+        getFields();
         break;
     default:
         echo "Invalid Query";

@@ -1,0 +1,61 @@
+/* Card */
+.eventCard {
+	height: 100%;
+	box-shadow: 2px 1px 5px #e0e0e3;
+	background-color: #f8f9fe;
+}
+.banner {
+	object-fit: cover;
+	width: auto;
+	aspect-ratio: 1/1;
+}
+
+.eventContent {
+	height: 100%;
+	min-width: auto;
+	background-color: #f8f9fe;
+    display: flex;
+    flex-direction: column;
+}
+.eventHeading {
+	font-size: large;
+	color: rgb(82 82 255);
+	font-weight: bold;
+	/* max-height: 30%; */
+	min-height: auto;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.eventText {
+	/* max-height: 70%; */
+	min-height: auto;
+}
+/* .eventDeatils{
+    height: 30%;
+} */
+.eventBtn {
+	width: fit-content;
+	background-color: #11cdef;
+	color: white;
+	border: 1px solid #11cdef;
+}
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 920px) {
+    .eventText {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 766px) {
+    .eventHeading{
+        font-size: x-large;
+    }   
+    .eventText {
+        font-size: 16px;
+    }
+}

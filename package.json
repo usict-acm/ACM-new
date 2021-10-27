@@ -1,0 +1,9 @@
+{
+    "license": "MIT",
+    "scripts": {
+        "start": "cd ./dashboard/frontend && yarn start || npm start",
+        "build": "cd ./dashboard/frontend && yarn build || npm build",
+        "test": "cd ./dashboard/frontend && yarn test || npm test",
+        "eject": "cd ./dashboard/frontend && yarn eject || npm eject"
+    }
+}

@@ -88,7 +88,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">admin</span>
                                 <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                    src="./../../assets/images/avatar.png">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -112,6 +112,10 @@
                                 </a>
                             </div>
                         </li>
+                        <li class="d-flex justify-content-center align-items-center">
+                            <a href="logout.php" class="btn btn-sm btn-primary shadow-sm d-flex align-items-center justify-content-center" style="max-height: 20px;">
+                            <i class="fas fa-download fa-sm text-white-50" style="margin-right: 5px;"></i> Logout</a>
+                        </li>
 
                     </ul>
 
@@ -124,13 +128,31 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 style="transform: translateX(100px);" class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="logout.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-						<i class="fas fa-download fa-sm text-white-50"></i> Logout</a>
                     </div>
                 </div>
                 <div class="row">
-                <?php 
-                    include('faqadmin/index.php')
+                <?php
+                    $table='f';
+                    if (isset($_GET['table'])){
+                        $table = $_GET['table'];
+                        
+                    }
+                    switch ($table) {
+                    
+                        case 'AddAnnouncement':
+                            include('./faqadmin/announcements-form.php');
+                            break;
+                        case 'Blog':
+                            include('./faqadmin/blogtable.php');
+                            break;
+                        case 'AddBlog':
+                            include('./faqadmin/blogAdmin.html');
+                            break;
+                        default:
+                            include('./faqadmin/index.php');
+                            break;
+                        
+                    }
                 ?>
                 </div>
 
