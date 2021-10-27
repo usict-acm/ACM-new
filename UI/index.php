@@ -25,6 +25,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <?php $Id = $_GET["Id"]; ?>
     
+<script>
+      function submit_form(){
+    var formData = new FormData();
+    formData.append('name',  $("#name").val());
+
+
+    $.ajax({
+        type: "POST",
+        url: "../../blogAdmin/api.php/?q=postAnnouncement",
+        data : formData,
+        cache: false,
+        processData: false,
+        contentType: false,
+        success: function(data){
+            alert(data.message);
+            window.location.reload();
+        },
+        error: function(xhr, status, error){
+            alert("Fill in the details");
+        },
+    });
+    }
+</script>
+
     <script>
 let url = '../admin/blogAdmin/api.php/?q=fields&Id=' + <?php echo $Id ?>;
       let divTag = document.getElementById("formPage");
@@ -45,20 +69,21 @@ let url = '../admin/blogAdmin/api.php/?q=fields&Id=' + <?php echo $Id ?>;
                 </span>
 
                 <div class="wrap-input100 validate-input bold" data-validate = "Please enter your email: e@a.x">
-                    <input class="input100" type="text" name="email" placeholder="${form.fieldName}">
+                    <input id="fieldID" class="input100" type="text" name="email" placeholder="${form.fieldName}">
                     <span class="focus-input100"></span>
                 </div>
 
-                <div class="container-contact100-form-btn bold height" >
-                    <button class="contact100-form-btn">
-                        <span>
-                            <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
-                            Send
-                        </span>
-                    </button>
-                </div>
 `;
             }
+            divTag.innerHTML += `<div class="container-contact100-form-btn bold height" >
+                    <button class="contact100-form-btn" onclick="submit_form()">
+                        <span>
+                            <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+                            Submit
+                        </span>
+                    </button>
+                </div>`;
+
           },
         });
       });
