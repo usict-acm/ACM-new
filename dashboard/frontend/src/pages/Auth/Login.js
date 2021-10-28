@@ -18,6 +18,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "api/user";
+import SweetAlerts from "../../components/SweetAlerts"
 
 // reactstrap components
 import {
@@ -39,7 +40,8 @@ const Login = () => {
 	const dispatch = useDispatch(),
 		[email, setEmail] = useState(""),
 		[password, setPassword] = useState(""),
-		[loading, setLoading] = useState(false);
+		[loading, setLoading] = useState(false),
+		[show, setShow] = useState(false);
 
 	useEffect(() => {
 		return () => {
@@ -50,7 +52,8 @@ const Login = () => {
 	const loginHandler = async (e) => {
 		e.preventDefault();
 		if (email === "" || password === "") {
-			return alert("Please fill all the required fields.");
+			// return alert("Please fill all the required fields.");
+			setShow(true)
 		}
 		setLoading(true);
 		const body = {
@@ -59,9 +62,13 @@ const Login = () => {
 		};
 		dispatch(login(body, setLoading));
 	};
+	console.log("login call")
 
 	return (
 		<div className="loginPage">
+		{show  &&(
+			<SweetAlerts msg="Please fill in all details" type="warning" setState={setShow} state={show} />
+		)}
 			<Card className="col-lg-4 col-md-7 mt-5 bg-secondary shadow border-0 glass">
 				<CardBody className="px-lg-5 py-lg-5">
 					<div className="text-center text-muted mb-4">
