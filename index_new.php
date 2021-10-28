@@ -240,17 +240,20 @@
 
 					<div class="col-md-8">
 						<div class="row">
-
-							<div class="col-md-6 col-lg-4">
-								<div class="our-team-box">
+							<div class="our-team col-md-6 col-lg-4">
+								<div class="our-team-hover">
+									<div class="social">										
+										<a href="https://www.linkedin.com/in/gauravj22/" target="_blank">
+										  <i class="fab fa-linkedin" arial-hidden="true"></i>
+										</a>
+									</div>
 									<img src="./assets/images/team/Gaurav.png" alt="">
-									<div class="t-overlay">
+									<!-- <div class="t-overlay">
 									<div class="icons">
-										<a href="https://www.linkedin.com/in/gauravj22/" target="_blank"><i class="fab fa-linkedin"></i></a>
 										<h5 class="text-center">Gaurav Jain</h5>
 										<p class="fadddd">Chair</p>
 									</div>				
-									</div>
+									</div> -->
 								</div>
 							</div>
 
