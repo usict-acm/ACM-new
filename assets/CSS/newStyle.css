@@ -2029,22 +2029,9 @@ ul {
 	transform: translate(-50%, -50%);
 	text-align: center;
 }
-.margin-media {
-	margin-left: '';
-}
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 425px) {
 	.margin-media {
-		margin-left: 20px;
-	}
-}
-@media screen and (min-width: 375px) {
-	.margin-media {
-		margin-left: 32px;
-	}
-}
-@media screen and (min-width: 425px) {
-	.margin-media {
-		margin-left: 55px;
+		margin-left: 35px;
 	}
 }
 @media screen and (min-width: 520px) {
@@ -2059,7 +2046,7 @@ ul {
 }
 @media screen and (min-width: 720px) {
 	.margin-media {
-		margin-left: 120px;
+		margin-left: 50px;
 	}
 }
 
@@ -2147,6 +2134,9 @@ ul {
 	}
 	.footer-logo .img-secondary {
 		max-width: 300px;
+	}
+	.b-card-container {
+		margin-top: 50px;
 	}
 }
 
