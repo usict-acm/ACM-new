@@ -139,6 +139,12 @@
 	<!-- announcement section ends-->
 	<!--***********************blog section***************************************** -->
 	<section class="blogs">
+		<div class="blogs-sticker-holder">
+			<span class="fas fa-book  sticker"></span>
+			<span class="fas fa-pencil-alt sticker"></span>
+			<span class="fas fa-file-alt  sticker"></span>
+			<span class="far fa-bookmark sticker"></span>
+		</div>
 		<div class = "tag">
 			<div class="bloghead">
 				<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-blue"> Blogs</span></h2>
@@ -327,7 +333,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
 		</div>
 		<div class="py-3 mt-2 d-md-flex justify-content-sm-center">
 			<div class="col-md-2 col mb-2">
