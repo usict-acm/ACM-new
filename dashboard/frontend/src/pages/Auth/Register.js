@@ -36,9 +36,11 @@ import {
 import { signup } from "api/user";
 import { COLLEGES } from "utils/Constants";
 import { BRANCHES } from "utils/Constants";
+import { useHistory } from "react-router";
 
 const Register = () => {
-	const dispatch = useDispatch(),
+	const history = useHistory(),
+		dispatch = useDispatch(),
 		[loading, setLoading] = useState(false),
 		[email, setEmail] = useState(""),
 		[name, setName] = useState(""),
@@ -275,7 +277,12 @@ const Register = () => {
 				</Card>
 				<Row className="mt-3">
 					<Col className="text-right" xs="12">
-						<a className="text-light" href="/login">
+						{/* eslint-disable-next-line */}
+						<a
+							style={{cursor: "pointer"}}
+							className="text-light"
+							onClick={() => history.push("/login")}
+						>
 							<small>Already registered? Login</small>
 						</a>
 					</Col>

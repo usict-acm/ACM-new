@@ -18,7 +18,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "api/user";
-import SweetAlerts from "../../components/SweetAlerts"
+import SweetAlerts from "../../components/SweetAlerts";
 
 // reactstrap components
 import {
@@ -35,9 +35,11 @@ import {
 	Col,
 	Spinner,
 } from "reactstrap";
+import { useHistory } from "react-router";
 
 const Login = () => {
-	const dispatch = useDispatch(),
+	const history = useHistory(),
+		dispatch = useDispatch(),
 		[email, setEmail] = useState(""),
 		[password, setPassword] = useState(""),
 		[loading, setLoading] = useState(false),
@@ -45,7 +47,7 @@ const Login = () => {
 
 	useEffect(() => {
 		return () => {
-			setLoading(false);		
+			setLoading(false);
 		};
 	}, []);
 
@@ -53,7 +55,7 @@ const Login = () => {
 		e.preventDefault();
 		if (email === "" || password === "") {
 			// return alert("Please fill all the required fields.");
-			setShow(true)
+			setShow(true);
 		}
 		setLoading(true);
 		const body = {
@@ -62,13 +64,18 @@ const Login = () => {
 		};
 		dispatch(login(body, setLoading));
 	};
-	console.log("login call")
+	console.log("login call");
 
 	return (
 		<div className="loginPage">
-		{show  &&(
-			<SweetAlerts msg="Please fill in all details" type="warning" setState={setShow} state={show} />
-		)}
+			{show && (
+				<SweetAlerts
+					msg="Please fill in all details"
+					type="warning"
+					setState={setShow}
+					state={show}
+				/>
+			)}
 			<Card className="col-lg-4 col-md-7 mt-5 bg-secondary shadow border-0 glass">
 				<CardBody className="px-lg-5 py-lg-5">
 					<div className="text-center text-muted mb-4">
@@ -119,7 +126,12 @@ const Login = () => {
 			</Card>
 			<Row className="mt-3">
 				<Col className="text-right" xs="12">
-					<a className="text-light" href={process.env.REACT_APP_HOSTED_BASE_URL + "/register"}>
+					{/* eslint-disable-next-line */}
+					<a
+						style={{cursor: "pointer"}}
+						className="text-light"
+						onClick={() => history.push("/register")}
+					>
 						<small>Create new account</small>
 					</a>
 				</Col>
