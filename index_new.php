@@ -213,31 +213,27 @@
 		<div class="teamhead">
 			<h2 class="my-4 display-4 fw-bolder text-center">Our<span class="text-blue"> Team</span></h2>
 		</div>
-		<div class="our-team-area">
+		<div class="our-team-area my-5">
 			<div class="container">
 				<div class="row margin-media">
 					<div class="col-md-4">
-						<div class="row">
-							<div class=" col-lg-9">
-								<div class="our-team-box">
-									<img src="./assets/images/team/deanSir.jpeg" alt="">
-									<div class="t-overlay">
-									<div class="icons">
+						<div class="our-team-sir row">
+							<div class="our-team col-lg-4">
+								<div class="our-team-left">
+									<div class="name">
 										<h5 class="text-center">Prof. Pravin Chandra</h5>
-										<p class="fadddd">Dean, USICT</p>
-									</div>				
-									</div>
+										<p class="text-center">Dean, USICT</p>
+									</div>	
+									<img src="./assets/images/team/deanSir.jpeg" alt="">
 								</div>
 							</div>
-							<div class="col-md-6 col-lg-9">
-								<div class="our-team-box">
-									<img src="./assets/images/team/rahulsir.jpg" alt="">
-									<div class="t-overlay">
-									<div class="icons">
+							<div class="our-team col-lg-4">
+								<div class="our-team-left">
+									<div class="name">
 										<h5 class="text-center">Dr. Rahul Johari</h5>
-										<p class="fadddd">Branch Head, ACM USICT</p>
-									</div>				
-									</div>
+										<p class="text-center">Branch Head, ACM USICT</p>
+									</div>	
+									<img src="./assets/images/team/rahulsir.jpg" alt="">
 								</div>
 							</div>
 						</div>
@@ -245,25 +241,38 @@
 
 
 					<div class="col-md-8">
-						<div class="row">
+						<div class="our-team-row row">
 							<div class="our-team col-md-6 col-lg-4">
-								<div class="our-team-hover">
+								<div class="our-team-right">
 									<div class="social">										
 										<a href="https://www.linkedin.com/in/gauravj22/" target="_blank">
 										  <i class="fab fa-linkedin" arial-hidden="true"></i>
 										</a>
 									</div>
-									<img src="./assets/images/team/Gaurav.png" alt="">
-									<!-- <div class="t-overlay">
-									<div class="icons">
+									<div class="name">
 										<h5 class="text-center">Gaurav Jain</h5>
-										<p class="fadddd">Chair</p>
-									</div>				
-									</div> -->
+										<p class="text-center">Chair</p>
+									</div>	
+									<img src="./assets/images/team/Gaurav.png" alt="">
 								</div>
 							</div>
 
-							<div class="col-md-6 col-lg-4">
+							<div class="our-team col-md-6 col-lg-4">
+								<div class="our-team-right">
+									<div class="social">										
+										<a href="https://www.linkedin.com/in/vardaan-grover-8a64141a0/" target="_blank">
+										  <i class="fab fa-linkedin" arial-hidden="true"></i>
+										</a>
+									</div>
+									<div class="name">
+										<h5 class="text-center">Vardaan Grover</h5>
+										<p class="text-center">Vice Chair</p>
+									</div>	
+									<img src="./assets/images/team/vardaan.jpg" alt="">
+								</div>
+							</div>
+
+							<!-- <div class="col-md-6 col-lg-4">
 								<div class="our-team-box">
 									<img src="./assets/images/team/vardaan.jpg" alt="">
 									<div class="t-overlay">
@@ -274,9 +283,23 @@
 									</div>				
 									</div>
 								</div>
+							</div> -->
+							<div class="our-team col-md-6 col-lg-4">
+								<div class="our-team-right">
+									<div class="social">										
+										<a href="https://www.linkedin.com/in/akshad-bhandula-073202113/" target="_blank">
+										  <i class="fab fa-linkedin" arial-hidden="true"></i>
+										</a>
+									</div>
+									<div class="name">
+										<h5 class="text-center">Akshad Bhandula</h5>
+										<p class="text-center">Secretary</p>
+									</div>	
+									<img src="./assets/images/team/Akshad.jpg" alt="">
+								</div>
 							</div>
 
-							<div class="col-md-6 col-lg-4">
+							<!-- <div class="col-md-6 col-lg-4">
 								<div class="our-team-box">
 									<img src="./assets/images/team/Akshad.jpg" alt="">
 									<div class="t-overlay">
@@ -287,9 +310,24 @@
 									</div>				
 									</div>
 								</div>
+							</div> -->
+
+							<div class="our-team col-md-6 col-lg-4">
+								<div class="our-team-right">
+									<div class="social">										
+										<a href="https://www.linkedin.com/in/divyansh-rastogi-08a44a171/" target="_blank">
+										  <i class="fab fa-linkedin" arial-hidden="true"></i>
+										</a>
+									</div>
+									<div class="name">
+										<h5 class="text-center">Divyansh Rastogi</h5>
+										<p class="text-center">Joint Secretary</p>
+									</div>	
+									<img src="./assets/images/team/Divyansh.jpg" alt="">
+								</div>
 							</div>
 
-							<div class="col-md-6 col-lg-4">
+							<!-- <div class="col-md-6 col-lg-4">
 								<div class="our-team-box">
 									<img src="./assets/images/team/Divyansh.jpg" alt="">
 									<div class="t-overlay">
@@ -300,9 +338,24 @@
 									</div>				
 									</div>
 								</div>
+							</div> -->
+
+							<div class="our-team col-md-6 col-lg-4">
+								<div class="our-team-right">
+									<div class="social">										
+										<a href="https://www.linkedin.com/in/chaitan-dev/" target="_blank">
+										  <i class="fab fa-linkedin" arial-hidden="true"></i>
+										</a>
+									</div>
+									<div class="name">
+										<h5 class="text-center">Chaitan Dev</h5>
+										<p class="text-center">Treasurer</p>
+									</div>	
+									<img src="./assets/images/team/chaitanDev.jpg" alt="">
+								</div>
 							</div>
 
-							<div class="col-md-6 col-lg-4">
+							<!-- <div class="col-md-6 col-lg-4">
 								<div class="our-team-box">
 									<img src="./assets/images/team/chaitanDev.jpg" alt="">
 									<div class="t-overlay">
@@ -313,9 +366,24 @@
 									</div>				
 									</div>
 								</div>
+							</div> -->
+
+							<div class="our-team col-md-6 col-lg-4">
+								<div class="our-team-right">
+									<div class="social">										
+										<a href="https://www.linkedin.com/in/chaitan-dev/" target="_blank">
+										  <i class="fab fa-linkedin" arial-hidden="true"></i>
+										</a>
+									</div>
+									<div class="name">
+										<h5 class="text-center">Anmol Jain</h5>
+										<p class="text-center">Web Chair</p>
+									</div>	
+									<img src="./assets/images/team/anmol.jpeg" alt="">
+								</div>
 							</div>
 
-							<div class="col-md-6 col-lg-4">
+							<!-- <div class="col-md-6 col-lg-4">
 								<div class="our-team-box">
 									<img src="./assets/images/team/anmol.jpeg" alt="">
 									<div class="t-overlay">
@@ -327,7 +395,7 @@
 									</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 
 						</div>
 					</div>

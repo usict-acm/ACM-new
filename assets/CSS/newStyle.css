@@ -2005,50 +2005,92 @@ ul {
 	margin-bottom: 60px;
 }
 
-/* ////////////////NEW CHANGES OPEN//////////////// */
+.our-team-row{
+	row-gap: 80px;
+}
+.our-team-sir{
+	row-gap: 80px;
+	flex-direction: column;
+	margin-bottom: 80px;
+}
 .our-team{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
 }
-.our-team-hover,.social {
+.our-team-right,.social,.our-team-left {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.our-team-hover {
-	width: 110px;
-	height: 110px;
+.our-team-right,.our-team-left {
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
 	transition: 0.5s;
-	box-shadow: 1px 1px 5px #606365;
+	background: transparent;
 	z-index: 1;
 }
 .social{
-	height: 50px;
-	width: 50px;
+	height: 45px;
+	width: 45px;
 	border-radius: 50%;
 	position: absolute;
 	background-color: #fff;
     box-shadow: 1px 1px 5px #606365;
 	z-index: -1;
 }
-.our-team-hover img {
+
+.our-team-right img {
+	width: inherit;
+	box-shadow: 1px 1px 5px #606365;
 	border-radius: 50%;
 	max-width: 100%;
 	max-height: 100%;
 }
-.our-team-hover:hover{
-	width: 150px;
-	height: 150px;
+.our-team-left img {
+	width: inherit;
+	box-shadow: 1px 1px 5px #606365;
+	border-radius: 50%;
+	max-height: 100%;
+}
+.our-team-left:hover{
+	width: 170px;
+	height: 170px;
+}
+.our-team-right:hover{
+	padding: 20px;
+	width: 170px;
+	height: 170px;
 }
 .our-team-box:hover .social{
 	transition: 0.5s;
 }
-.our-team-hover:hover .social:nth-child(1) {
+.our-team-right:hover .social:nth-child(1) {
 	transition: 0.5s;
-	transform: rotate(0deg) translateY(-120px);
+	transform: rotate(0deg) translateY(-100px);
+}
+.our-team-left .name{
+	position: absolute;
+	z-index: -1;
+	color: #ffffff;
+}
+.our-team-right .name{
+	position: absolute;
+	z-index: -1;
+	color: #ffffff;
+}
+.our-team-left:hover .name{
+	width: max-content;
+	color: black;
+	transition: 0.5s;
+	transform:  translateY(130px);
+}
+.our-team-right:hover .name{
+	color: black;
+	transition: 0.5s;
+	transform:  translateY(110px);
 }
 .social a i{
 	transition: 0.5s;
@@ -2056,9 +2098,6 @@ ul {
 .social:hover a i{
 	transform: rotate(360deg);
 }
-
-/* ////////////////NEW CHANGES CLOSED//////////////// */
-
 .our-team-box img {
 	border: 10px solid #2fd3ee;
 	width: 200px;
@@ -2124,7 +2163,7 @@ ul {
 .margin-media {
 	margin-left: '';
 }
-@media screen and (min-width: 320px) {
+/* @media screen and (min-width: 320px) {
 	.margin-media {
 		margin-left: 20px;
 	}
@@ -2148,8 +2187,8 @@ ul {
 	.margin-media {
 		margin-left: 120px;
 	}
-}
-@media screen and (min-width: 720px) {
+} */
+@media screen and (min-width: 991px) {
 	.margin-media {
 		margin-left: 120px;
 	}
