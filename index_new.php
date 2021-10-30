@@ -416,7 +416,7 @@
       <a class="btn facebook" href="https://facebook.com/acmusict"><i class="fa fa-facebook"></i></a>
       <div class="write" id="wrete">
         <h1 class="sob-heading">700</h1>
-        <p class="gratext">Facebook Likes</p>
+        <p class="gratext">Facebook Followers</p>
       </div>
     </div>
     <div class="try1">

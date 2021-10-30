@@ -2362,17 +2362,13 @@ ul {
 	margin-top: 20px;
 	text-align: center;
 }
-@media screen and (max-width: 620px) {
-	.social-btns {
-		margin-bottom: 290px;
-	}
-}
+
 .social-btns .btn {
 	display: inline-block;
 	background-color: #fff;
 	width: 120px;
 	height: 120px;
-	line-height: 100px;
+	line-height: 105px;
 	margin: 0 0px;
 	text-align: center;
 	position: relative;
@@ -2389,7 +2385,7 @@ ul {
 	transform: rotate(45deg);
 }
 .social-btns .btn .fa {
-	font-size: 80px;
+	font-size: 70px;
 	vertical-align: middle;
 }
 .try1 {
