@@ -42,11 +42,11 @@
 				<li class="nav-item">
 					<a class="nav-link" href="./clubs.php">Clubs</a>
 				</li>
-				<li class="nav-item">
+				<!-- <li class="nav-item">
 					<a class="nav-link" href="./team.php">Our Team</a>
-				</li>
+				</li> -->
 				<li class="nav-item">
-					<a class="nav-link" href="./benefits.php#registration">ACM Registration</a>
+					<a class="nav-link" href="./collab.php">Our Sponsors</a>
 				</li>
 			</ul>
 		</div>
@@ -211,7 +211,7 @@
 	<!-- *******************************************our team************* -->
 	<section class="tag team">
 		<div class="teamhead">
-			<h2 class="my-4 display-4 fw-bolder text-center">Our<span class="text-blue"> Team</span></h2>
+			<h2 class="my-4 display-4 fw-bolder text-center">Office<span class="text-blue"> Bearers</span></h2>
 		</div>
 		<div class="our-team-area my-5">
 			<div class="container">
@@ -497,7 +497,7 @@
 					</div>
 					<div class="col-xl-4 col-md-4 mb-30">
 						<div class="single-cta justify-content-md-center">
-							<i class="fas fa-phone"></i>
+							<i class="fas fa-phone ro-nine"></i>
 							<div class="cta-text">
 								<h4>Call us</h4>
 								<span><a href="tel:011-25302702">011-25302702</a></span>
@@ -547,6 +547,9 @@
 								</li>
 								<li>
 									<a href="https://usict.acm.org/clubs.html" target="_blank"><i class="fa fa-angle-right"></i> Our Clubs</a>
+								</li>
+								<li>
+									<a href="./benefits.php#registration" target="_blank"><i class="fa fa-angle-right"></i>Join ACM</a>
 								</li>
 							</ul>
 						</div>
