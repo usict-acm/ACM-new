@@ -12,6 +12,13 @@
 
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <!--===============================================================================================-->
+    <style>
+      textarea::placeholder{
+        font-size:18px;
+        padding-top:20px;
+        padding-left:5px;
+      }
+    </style>
   </head>
   <body>
     <div class="container-contact100">
@@ -26,8 +33,10 @@
     <?php $Id = $_GET["Id"]; ?>
     
     <script>
+      
 let url = '../admin/blogAdmin/api.php/?q=fields&Id=' + <?php echo $Id ?>;
       let divTag = document.getElementById("formPage");
+      
       $(document).ready(function () {
 
         $.ajax({
@@ -39,26 +48,56 @@ let url = '../admin/blogAdmin/api.php/?q=fields&Id=' + <?php echo $Id ?>;
             // console.log("1");
             data.forEach(allForms);
 
+            let formTitle=`<span class="contact100-form-title">
+                            ${data[0].formName}
+                        </span>`;
+          
+            $("#formPage").prepend(formTitle);
             function allForms(form) {
-              divTag.innerHTML += `<span class="contact100-form-title">
-                    ${form.formName}
-                </span>
 
-                <div class="wrap-input100 validate-input bold" data-validate = "Please enter your email: e@a.x">
-                    <input class="input100" type="text" name="email" placeholder="${form.fieldName}">
-                    <span class="focus-input100"></span>
-                </div>
+              
+              let inputTypeLongAns=`  <div class="wrap-input100">
+                                          <textarea  style="position:relative; margin-top:3px; left:28px;" rows="4" cols="60" placeholder="${form.fieldName}"></textarea>
+                                          <span class="focus-input100"></span>
+                                          </div>
+                                    `;
 
-                <div class="container-contact100-form-btn bold height" >
-                    <button class="contact100-form-btn">
-                        <span>
-                            <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
-                            Send
-                        </span>
-                    </button>
-                </div>
-`;
+              let inputTypeShortAns=`      <textarea class="wrap-input100" style="position:relative; left:9px;" rows="4" cols="65" placeholder="${form.fieldName}"></textarea>
+                                          <span class="focus-input100"></span>`;
+
+              let inputFieldNormal=`<div class="wrap-input100 validate-input bold" data-validate = "Please enter your data: e@a.x">
+                                        <input class="input100" type="text" name="email" placeholder="${form.fieldName}">
+                                        <span class="focus-input100"></span>
+                                    </div>`;
+                            
+              let blank=``;
+                            
+                        if(form.fieldType=="Short answer"){
+                            blank=blank+inputTypeShortAns;
+                        }
+                        if(form.fieldType=="Paragraph"){
+                          blank=blank+inputTypeLongAns;
+                        }
+                        if(form.fieldType=="Checkbox"){
+                            blank=blank+inputTypeShortAns;
+                        }
+                        if(form.fieldType=="textbox"){
+                          blank=blank+inputFieldNormal;
+                        }
+                        $("#formPage").append(blank);
+                     
+
             }
+             let sendBtn=`<div class="container-contact100-form-btn bold height" >
+                                <button class="contact100-form-btn">
+                                    <span>
+                                        <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+                                        Send
+                                    </span>
+                                </button>
+                            </div>`; 
+                            $("#formPage").append(sendBtn);
+      
           },
         });
       });
@@ -90,7 +129,7 @@ let url = '../admin/blogAdmin/api.php/?q=fields&Id=' + <?php echo $Id ?>;
 //                 </span>
 
             
-// 				<!-- Email -->
+//        <!-- Email -->
 //                 <div class="wrap-input100 validate-input bold" data-validate = "Please enter your email: e@a.x">
 //                     <input class="input100" type="${form.fieldType}" name="email" placeholder="${form.fieldName}">
 //                     <span class="focus-input100"></span>

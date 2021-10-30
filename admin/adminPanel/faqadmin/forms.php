@@ -1,13 +1,3 @@
-<?php
-// Include config file
-// require_once "../blogAdmin/database.php";
-?>
-<?php
-// Include config file
-require_once "config.php";
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -99,7 +89,8 @@ require_once "config.php";
                                     <select  id="dropDown" name="dropDown[]" name="cars" id="cars">
                                         <option value="">Select an Option</option>
                                         <option value="checkbox">Checkbox</option>
-                                        <option value="textarea">Textarea</option>
+                                        <option value="text">Short answer</option>
+                                        <option value="text">Paragraph</option>
                                     </select>
                                 </div>
                                 <div id="required">
@@ -150,7 +141,7 @@ require_once "config.php";
 </script>
 
 <?php
-    include_once '../blogAdmin/database.php';
+    require_once "./config.php";
     include_once '../blogAdmin/forms.php';
 
     if(isset($_POST['submit'])){
