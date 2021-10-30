@@ -2342,6 +2342,11 @@ ul {
 .social-btns .btn.skype:before {
 	background-color: #00aff0;
 }
+
+.social-btns .btn.skype:hover{
+	cursor: inherit;
+}
+
 .social-btns .btn.skype .fa {
 	color: #00aff0;
 }
