@@ -64,7 +64,6 @@ const Login = () => {
 		};
 		dispatch(login(body, setLoading));
 	};
-	console.log("login call");
 
 	return (
 		<div className="loginPage">

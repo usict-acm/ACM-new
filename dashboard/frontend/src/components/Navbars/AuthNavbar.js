@@ -49,6 +49,16 @@ const AuthNavbar = () => {
               }
             />
           </NavbarBrand>
+          <NavbarBrand to="/" tag={Link} className="oslogo text-center">
+            <img
+              className="navbarLogo"
+              alt="..."
+              src={
+                require("../../assets/img/brand/outstanding-website.png")
+                  .default
+              }
+            />
+          </NavbarBrand>
           <button className="navbar-toggler" id="navbar-collapse-main">
             <span className="navbar-toggler-icon" />
           </button>
