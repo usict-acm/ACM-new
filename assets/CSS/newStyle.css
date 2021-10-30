@@ -491,7 +491,7 @@ a:hover {
 #typewriter {
 	top: calc(50% - 3rem);
 	height: 5rem;
-	width: 50vw;
+	width: 53vw;
 	left: calc(50% - 25vw);
 	position: absolute;
 	z-index: 100;
@@ -1757,6 +1757,7 @@ ul {
 }
 /* events section */
 .announcement {
+	padding-top: 20px;
 	text-align: center;
 	margin-top: -50px;
 	margin-bottom: 5rem;
@@ -1998,7 +1999,6 @@ ul {
 	font-size: 34px;
 	margin-bottom: 70px;
 }
-
 .our-team-box {
 	position: relative;
 	width: 200px;
@@ -2006,11 +2006,105 @@ ul {
 	margin-bottom: 60px;
 }
 
+.our-team-row{
+	row-gap: 80px;
+}
+.our-team-sir{
+	row-gap: 80px;
+	flex-direction: column;
+	margin-bottom: 80px;
+}
+.our-team{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.our-team-right,.social,.our-team-left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.our-team-right,.our-team-left {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	transition: 0.5s;
+	background: transparent;
+	z-index: 1;
+}
+.social{
+	height: 45px;
+	width: 45px;
+	border-radius: 50%;
+	position: absolute;
+	background-color: #fff;
+    box-shadow: 1px 1px 5px #606365;
+	z-index: -1;
+}
+
+.our-team-right img {
+	width: inherit;
+	box-shadow: 1px 1px 5px #606365;
+	border-radius: 50%;
+	max-width: 100%;
+	max-height: 100%;
+}
+.our-team-left img {
+	width: inherit;
+	box-shadow: 1px 1px 5px #606365;
+	border-radius: 50%;
+	max-height: 100%;
+}
+.our-team-left:hover{
+	width: 170px;
+	height: 170px;
+}
+.our-team-right:hover{
+	padding: 20px;
+	width: 170px;
+	height: 170px;
+}
+.our-team-box:hover .social{
+	transition: 0.5s;
+}
+.our-team-right:hover .social:nth-child(1) {
+	transition: 0.5s;
+	transform: rotate(0deg) translateY(-100px);
+}
+.our-team-left .name{
+	position: absolute;
+	z-index: -1;
+	color: #ffffff;
+}
+.our-team-right .name{
+	position: absolute;
+	z-index: -1;
+	color: #ffffff;
+}
+.our-team-left:hover .name{
+	width: max-content;
+	color: black;
+	transition: 0.5s;
+	transform:  translateY(130px);
+}
+.our-team-right:hover .name{
+	color: black;
+	transition: 0.5s;
+	transform:  translateY(110px);
+}
+.social a i{
+	transition: 0.5s;
+}
+.social:hover a i{
+	transform: rotate(360deg);
+}
 .our-team-box img {
 	border: 10px solid #2fd3ee;
 	width: 200px;
 	height: 200px;
 }
+
 .t-overlay {
 	position: absolute;
 	bottom: 0;
@@ -2067,7 +2161,10 @@ ul {
 	transform: translate(-50%, -50%);
 	text-align: center;
 }
-@media screen and (max-width: 425px) {
+.margin-media {
+	margin-left: '';
+}
+/* @media screen and (min-width: 320px) {
 	.margin-media {
 		margin-left: 35px;
 	}
@@ -2081,8 +2178,8 @@ ul {
 	.margin-media {
 		margin-left: 120px;
 	}
-}
-@media screen and (min-width: 720px) {
+} */
+@media screen and (min-width: 991px) {
 	.margin-media {
 		margin-left: 50px;
 	}
@@ -2260,17 +2357,10 @@ ul {
 }
 .social-btns {
 	display: flex;
-	justify-content: center;
+	justify-content:space-evenly;
 	flex-wrap: wrap;
-	height: 90px;
-	margin-bottom: 120px;
-	/* font-size: 0; */
+	margin-top: 20px;
 	text-align: center;
-	/* position: absolute; */
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
 }
 @media screen and (max-width: 620px) {
 	.social-btns {
@@ -2280,15 +2370,15 @@ ul {
 .social-btns .btn {
 	display: inline-block;
 	background-color: #fff;
-	width: 90px;
-	height: 90px;
-	line-height: 90px;
+	width: 120px;
+	height: 120px;
+	line-height: 100px;
 	margin: 0 0px;
 	text-align: center;
 	position: relative;
 	overflow: hidden;
 	border-radius: 28%;
-	box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
 	opacity: 0.99;
 }
 .social-btns .btn:before {
@@ -2299,7 +2389,7 @@ ul {
 	transform: rotate(45deg);
 }
 .social-btns .btn .fa {
-	font-size: 38px;
+	font-size: 80px;
 	vertical-align: middle;
 }
 .try1 {
@@ -2308,10 +2398,9 @@ ul {
 }
 .write {
 	border-radius: 5px;
-
+	padding: 20px 0px;
 	/* box-shadow: 2px 2px 5px #00000075; */
 	color: black;
-	width: 90px;
 	/* transition: all 0.5s;
   transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59); */
 }
@@ -2328,4 +2417,8 @@ ul {
 }
 .sob-heading {
 	margin-bottom: 1px;
+}
+
+.team-mobile-btn {
+	margin-top: -40px;
 }
