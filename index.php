@@ -3,16 +3,7 @@
 
   <head>
     <?php
-      include("head.php");
-      // include("mail.php");
-      // $mail->addAddress('jainabhishek7204@gmail.com');
-      // $mail->Subject = 'Hello';
-      // $mail->Body    = 'Testing some Mailgun awesomness';
-      // if(!$mail->send()) {
-          // echo 'Message could not be sent.';
-      // } else {
-          // echo 'Message has been sent';
-      // }
+      include("head.php")
     ?>
     <title>USICT ACM</title>
     <link href='./assets/CSS/styles.css' rel="stylesheet" />
