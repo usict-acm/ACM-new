@@ -15,3 +15,6 @@ admin/.DS_Store
 assets/.DS_Store
 .vscode/
 debug.log
+
+# composer
+vendor

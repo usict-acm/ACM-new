@@ -18,6 +18,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "api/user";
+import SweetAlert from "../../components/SweetAlert";
 
 // reactstrap components
 import {
@@ -34,34 +35,60 @@ import {
 	Col,
 	Spinner,
 } from "reactstrap";
+import { useHistory } from "react-router";
+import { setUser, resetUser } from "redux/slices/userSlice";
 
 const Login = () => {
-	const dispatch = useDispatch(),
+	const history = useHistory(),
+		dispatch = useDispatch(),
 		[email, setEmail] = useState(""),
 		[password, setPassword] = useState(""),
-		[loading, setLoading] = useState(false);
+		[loading, setLoading] = useState(false),
+		[showAlert, setShowAlert] = useState(false),
+		[alertMsg, setAlertMsg] = useState(""),
+		[alertType, setAlertType] = useState("warning");
 
 	useEffect(() => {
 		return () => {
-			setLoading(false);		
+			setLoading(false);
 		};
 	}, []);
 
 	const loginHandler = async (e) => {
 		e.preventDefault();
-		if (email === "" || password === "") {
-			return alert("Please fill all the required fields.");
+		if (!email || email === "" || !password || password === "") {
+			setAlertMsg("Please fill all the required fields.");
+			setAlertType("warning");
+			setShowAlert(true);
+			return;
 		}
 		setLoading(true);
 		const body = {
 			email,
 			password,
 		};
-		dispatch(login(body, setLoading));
+		const loginRes = await login(body);
+		if (loginRes?.error) {
+			localStorage.removeItem("user");
+			dispatch(resetUser());
+			setAlertMsg(loginRes?.error);
+			setAlertType("error");
+			setShowAlert(true);
+		} else {
+			localStorage.setItem("user", JSON.stringify(loginRes.user));
+			dispatch(setUser(loginRes.user));
+		}
+		setLoading(false);
 	};
 
 	return (
 		<div className="loginPage">
+			<SweetAlert
+				open={showAlert}
+				setOpen={setShowAlert}
+				msg={alertMsg}
+				type={alertType}
+			/>
 			<Card className="col-lg-4 col-md-7 mt-5 bg-secondary shadow border-0 glass">
 				<CardBody className="px-lg-5 py-lg-5">
 					<div className="text-center text-muted mb-4">
@@ -112,7 +139,12 @@ const Login = () => {
 			</Card>
 			<Row className="mt-3">
 				<Col className="text-right" xs="12">
-					<a className="text-light" href={process.env.REACT_APP_HOSTED_BASE_URL + "/register"}>
+					{/* eslint-disable-next-line */}
+					<a
+						style={{ cursor: "pointer" }}
+						className="text-light"
+						onClick={() => history.push("/register")}
+					>
 						<small>Create new account</small>
 					</a>
 				</Col>

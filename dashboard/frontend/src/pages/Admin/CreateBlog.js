@@ -131,10 +131,10 @@ const CreateBlog = () => {
 											value={title}
 										/>
 									</Col>
-									<Col className="text-right">
+									<div className="my-auto ml-auto">
 										{editingBlog && (
 											<Button
-												className="bx bx-x save-btn"
+												className="bx bx-x save-btn py-1 px-3"
 												type="button"
 												color="danger"
 												onClick={reset}
@@ -145,7 +145,7 @@ const CreateBlog = () => {
 										)}
 										{!blogId && (
 											<Button
-												className="bx bx-save save-btn"
+												className="bx bx-save save-btn py-1 px-3"
 												type="button"
 												color="info"
 												onClick={() => createBlog(true)}
@@ -156,7 +156,7 @@ const CreateBlog = () => {
 										)}
 										{!editingBlog || editingBlog?.isDraft ? (
 											<Button
-												className="bx bxs-cloud-upload save-btn"
+												className="bx bxs-cloud-upload save-btn py-1 px-3"
 												type="button"
 												color="success"
 												onClick={() => createBlog(false)}
@@ -166,7 +166,7 @@ const CreateBlog = () => {
 											</Button>
 										) : (
 											<Button
-												className="bx bxs-cloud-upload save-btn"
+												className="bx bxs-cloud-upload save-btn py-1 px-3"
 												type="button"
 												color="success"
 												onClick={() => createBlog(false)}
@@ -175,7 +175,7 @@ const CreateBlog = () => {
 												<p className="btn_txt">Save Changes</p>
 											</Button>											
 										)}
-									</Col>
+									</div>
 								</Row>
 							</CardHeader>
 							<Card>

@@ -64,6 +64,7 @@ export default function AllBlogs() {
 								<Col xs="4" className="p-0">
 									<ButtonGroup>
 										<Button
+											outline
 											color="info"
 											onClick={() => setShowDrafts(true)}
 											active={showDrafts}
@@ -71,6 +72,7 @@ export default function AllBlogs() {
 											Drafts
 										</Button>
 										<Button
+											outline
 											color="info"
 											onClick={() => setShowDrafts(false)}
 											active={!showDrafts}
