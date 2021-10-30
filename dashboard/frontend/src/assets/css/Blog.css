@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.post-btn {
+  margin-right: 35px;
+}
+
+/* post section */
+.post-section {
+  text-transform: uppercase;
+  background-color: white;
+  height: 50vh;
+  padding-top: 3px;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.cont-nodata {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.h-line {
+  margin: auto;
+}
+
+.post-component {
+  height: auto;
+}
+
+/* Content box component styles */
+
+.contentBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contentBox:hover {
+  background-color: aliceblue;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  padding-right: 15px;
+}
+
+.blog-buttons {
+  display: flex;
+}
+.blog-buttons > button {
+  z-index: 100;
+}
+
+@media screen and (max-width: 400px) {
+  .BlogContainer {
+    padding: 0;
+  }
+
+  .drop-text {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .postBtn {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .search-row {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .bg-white.border-0 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .content-card {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .contentBox {
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+  }
+  .details {
+    padding-right: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content-card {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .BlogContainer {
+    padding: 0;
+  }
+
+  .drop-text {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .postBtn {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .search-row {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .bg-white.border-0 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .content-card {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .contentBox {
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+  }
+  .details {
+    padding-right: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content-card {
+    margin: 0;
+    padding: 0;
+  }
+}

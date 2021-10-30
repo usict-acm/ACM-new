@@ -1,0 +1,12 @@
+.head {
+  min-height: 600px;
+  background-image: url("../../assets/img/theme/acm_banner.png");
+  background-size: cover;
+  background-position: center top;
+}
+
+@media screen and (max-width: 520px) {
+  .head {
+    min-height: 0px;
+  }
+}

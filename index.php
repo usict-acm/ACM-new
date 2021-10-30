@@ -3,7 +3,16 @@
 
   <head>
     <?php
-      include("head.php")
+      include("head.php");
+      // include("mail.php");
+      // $mail->addAddress('jainabhishek7204@gmail.com');
+      // $mail->Subject = 'Hello';
+      // $mail->Body    = 'Testing some Mailgun awesomness';
+      // if(!$mail->send()) {
+          // echo 'Message could not be sent.';
+      // } else {
+          // echo 'Message has been sent';
+      // }
     ?>
     <title>USICT ACM</title>
     <link href='./assets/CSS/styles.css' rel="stylesheet" />
@@ -409,11 +418,11 @@
             </div>
           </div>
         </div>
-        <!-- <div class="swiper-pagination"></div>
+         <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div> -->
+        <div class="swiper-button-prev"></div> 
       </div>
-    </div> -->
+    </div>-->
   <!-- </section> -->
 
 <!-- ******************************************Blogs******************************************* -->
@@ -816,15 +825,10 @@
                 class="form-control form-input-boxes-manual required" placeholder="Message" style="color: grey;"
                 aria-required="true"></textarea>
             </div>
-            <div class="row">
-              <div class="form-group col-md-6"></div>
-              <div class="form-group col-md-2"></div>
-              <div class="form-group col-md-2 button-center">
-                <div class="form-group">
-                  <button class="btn signin" type="submit" style="background-color: #4169E1; color:#fff;"
-                    onclick="setColor(event)"><i class="fa fa-paper-plane"></i>&nbsp;Send message</button>
-
-                </div>
+            <div class="d-flex justify-content-end">
+              <div class="justify-content-center align-items-center">
+                <button class="btn" type="submit" style="background-color: #4169E1; color:#fff; margin-right:10px"
+                  onclick="setColor(event)"><i class="fa fa-paper-plane"></i>&nbsp;Send message</button>
               </div>
             </div>
           </form>
@@ -840,7 +844,6 @@
     <div class="container">
       <div class="row d-flex justify-content-center">
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-
           <div class="text-center">
             <div class="f-icon"><a href="https://facebook.com/acmusict" target="_blank"><i
                   class="fa fa-4x fa-facebook-square"></i></a>
@@ -853,8 +856,7 @@
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-          <br>
-          <div class="text-center" style="margin-top: -20px;">
+          <div class="text-center">
             <div class="l-icon"><a href="https://linkedin.com/company/acmusict" target="_blank"><i
                   class="fab fa-4x fa-linkedin"></i></a></div>
             <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="200"
@@ -865,8 +867,7 @@
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-
-          <div class="text-center" style="margin-top: 5px;">
+          <div class="text-center">
             <div class="i-icon"><a href="https://instagram.com/acmusict" target="_blank"><i
                   class="fa fa-4x fa-instagram"></i></a></div>
             <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="180"
@@ -877,7 +878,7 @@
         </div>
 
         <!-- <div class="col-lg-2 col-md-6 col-sm-6 col-12">
-          <div class="text-center" style="margin-top: 5px;">
+          <div class="text-center">
             <div class="c-icon"><a href="https://discord.gg/3Z5mJMCWEa" target="_blank"><i class="fab fa-4x fa-discord"></i></a></div>
             <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="100"
                 data-from="0" data-target="100" data-seperator="true">300+</span> </div>
@@ -887,14 +888,68 @@
         </div> -->
 
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-          <div class="text-center" style="margin-top: 5px;">
-            <div class="c-icon"><a href="#"><i class="fa fa-4x fa-child"></i></a></div>
+          <div class="text-center">
+            <div class="c-icon"><a href="./index.php"><i class="fa fa-4x fa-child"></i></a></div>
             <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="100"
                 data-from="0" data-target="100" data-seperator="true">1000+</span> </div>
             <div class="seperator seperator-small"></div>
             <p class="follower-count">Connected Students</p>
           </div>
         </div>
+
+        <!-- <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+          <div class="text-center">
+            <div class="f-icon"><a href="https://facebook.com/acmusict" target="_blank"><i
+                  class="fa fa-4x fa-facebook-square"></i></a>
+            </div>
+            <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="700"
+                data-from="0" data-target="700" data-seperator="true">700</span> </div>
+            <div class="seperator seperator-small"></div>
+            <p class="follower-count">Facebook Likes</p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+          <div class="text-center">
+            <div class="l-icon"><a href="https://linkedin.com/company/acmusict" target="_blank"><i
+                  class="fab fa-4x fa-linkedin"></i></a></div>
+            <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="200"
+                data-from="0" data-target="200" data-seperator="true">1000</span> </div>
+            <div class="seperator seperator-small"></div>
+            <p class="follower-count"> LinkedIn Reach</p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+          <div class="text-center">
+            <div class="i-icon"><a href="https://instagram.com/acmusict" target="_blank"><i
+                  class="fa fa-4x fa-instagram"></i></a></div>
+            <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="180"
+                data-from="0" data-target="205" data-seperator="true">300+</span> </div>
+            <div class="seperator seperator-small"></div>
+            <p class="follower-count">Instagram Followers</p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+          <div class="text-center">
+            <div class="c-icon"><a href="https://discord.gg/3Z5mJMCWEa" target="_blank"><i class="fab fa-4x fa-discord"></i></a></div>
+            <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="100"
+                data-from="0" data-target="100" data-seperator="true">300+</span> </div>
+            <div class="seperator seperator-small"></div>
+            <p class="follower-count">Discord</p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+          <div class="text-center">
+            <div class="c-icon"><a href="./index.php"><i class="fa fa-4x fa-child"></i></a></div>
+            <div class="counter"> <span class="count" data-speed="3000" data-refresh-interval="50" data-to="100"
+                data-from="0" data-target="100" data-seperator="true">1000+</span> </div>
+            <div class="seperator seperator-small"></div>
+            <p class="follower-count">Connected Students</p>
+          </div>
+        </div> -->
       </div>
     </div>
   </section>

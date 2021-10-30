@@ -1,0 +1,144 @@
+.eventDetails__imageCol{
+    width: 100%; 
+     /* max-height: 490px; */
+    /* max-height: 433px; */
+}
+
+.eventImage{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.detailSideBar{
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.detailSideBar h2{
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 2;
+}
+.detailSideBar hr{
+    margin: 0.5rem 0;
+}
+
+
+.detailContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.bx, .ni{
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.dateAndTime{
+    display: flex;
+    flex-direction: column;
+     justify-content: space-between;
+     /* flex-grow: 0.3; */
+     margin-bottom: 10px;
+     /* margin-top: 20px; */
+     margin-top: auto;
+}
+
+.dateAndTime p{
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+.countdown_container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.countdown{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.countsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+}
+.countsContainer h1{
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+.eventBtn{
+    max-height: fit-content;
+}
+
+.speakersAndPartners{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.speakersAndPartners h3{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.speakersAndPartners h3:first-child{
+    margin-right: 20px;
+}
+.speakersAndPartners h3  i{
+    font-size: 25px;
+    margin-right: 10px;
+}
+.speakersAndPartners h3 span{
+    font-weight: bolder;
+    margin-right: 10px;
+}
+
+@media screen and (max-width : 1220px) {
+    .countsContainer h1{
+        font-size: 2rem;
+    }
+}
+@media screen and  (max-width : 1080px) {
+    .detailSideBar h2{
+        font-size: 1.2rem;
+    }
+    .dateAndTime{
+        margin-top: 0;
+    }
+    .countsContainer h1{
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media screen and (max-width : 580px) {
+    .eventDetails__content{
+        padding-left: 25px !important;
+        padding-right: 25px !important; 
+    }
+}
+@media screen and (max-width : 380px) {
+
+    .eventDetails__content{
+        padding-left: 15px !important;
+        padding-right: 15px !important; 
+    }
+}

@@ -1,0 +1,71 @@
+/* #navbar-main{
+    z-index: 100;
+    background-color: #ffffff;
+} */
+
+.bkg{
+    height: 300px;
+}
+
+/* Winner Section */
+
+.winhead{
+    color: #ffffff;
+    font-weight:600;
+    font-size: x-large;
+    
+}
+
+.card-stats{
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 2px 1px 5px #dddfe2;
+}
+
+.content{
+    position: relative;
+    top: -180px;
+}
+/* #winnercard{
+    box-shadow: 2px 1px 5px #e0e0e3;
+    background-color: #f8f9fe;
+
+} */
+
+.winnerrow{
+    text-align: center;
+    place-content: center;
+}
+
+.userimg{
+    height: 10vw;
+    width: 10vw;
+    object-fit: cover;
+    border: 1px solid;
+}
+
+@media screen and (max-width : 767px) {
+    .AllContent{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+@media screen and (max-width : 580px) {
+    .AllContent{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 1199px){
+    .userimg{
+        height: 14vw;
+        width: 14vw;
+    }
+}
+@media screen and (max-width: 729px){
+    .userimg{
+        height: 20vw;
+        width: 20vw;
+    }
+}
