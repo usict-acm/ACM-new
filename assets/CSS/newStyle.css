@@ -491,7 +491,7 @@ a:hover {
 #typewriter {
 	top: calc(50% - 3rem);
 	height: 5rem;
-	width: 50vw;
+	width: 53vw;
 	left: calc(50% - 25vw);
 	position: absolute;
 	z-index: 100;
@@ -1760,6 +1760,7 @@ ul {
 }
 /* events section */
 .announcement {
+	padding-top: 20px;
 	text-align: center;
 	margin-top: -50px;
 	margin-bottom: 5rem;
@@ -2168,17 +2169,7 @@ ul {
 }
 /* @media screen and (min-width: 320px) {
 	.margin-media {
-		margin-left: 20px;
-	}
-}
-@media screen and (min-width: 375px) {
-	.margin-media {
-		margin-left: 32px;
-	}
-}
-@media screen and (min-width: 425px) {
-	.margin-media {
-		margin-left: 55px;
+		margin-left: 35px;
 	}
 }
 @media screen and (min-width: 520px) {
@@ -2193,7 +2184,7 @@ ul {
 } */
 @media screen and (min-width: 991px) {
 	.margin-media {
-		margin-left: 120px;
+		margin-left: 50px;
 	}
 }
 
@@ -2282,6 +2273,9 @@ ul {
 	.footer-logo .img-secondary {
 		max-width: 300px;
 	}
+	.b-card-container {
+		margin-top: 50px;
+	}
 }
 
 .tag {
@@ -2351,6 +2345,11 @@ ul {
 .social-btns .btn.skype:before {
 	background-color: #00aff0;
 }
+
+.social-btns .btn.skype:hover{
+	cursor: inherit;
+}
+
 .social-btns .btn.skype .fa {
 	color: #00aff0;
 }
@@ -2366,35 +2365,24 @@ ul {
 }
 .social-btns {
 	display: flex;
-	justify-content: center;
+	justify-content:space-evenly;
 	flex-wrap: wrap;
-	height: 90px;
-	margin-bottom: 120px;
-	/* font-size: 0; */
+	margin-top: 20px;
 	text-align: center;
-	/* position: absolute; */
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
 }
-@media screen and (max-width: 620px) {
-	.social-btns {
-		margin-bottom: 290px;
-	}
-}
+
 .social-btns .btn {
 	display: inline-block;
 	background-color: #fff;
-	width: 90px;
-	height: 90px;
-	line-height: 90px;
+	width: 120px;
+	height: 120px;
+	line-height: 105px;
 	margin: 0 0px;
 	text-align: center;
 	position: relative;
 	overflow: hidden;
 	border-radius: 28%;
-	box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
 	opacity: 0.99;
 }
 .social-btns .btn:before {
@@ -2405,7 +2393,7 @@ ul {
 	transform: rotate(45deg);
 }
 .social-btns .btn .fa {
-	font-size: 38px;
+	font-size: 70px;
 	vertical-align: middle;
 }
 .try1 {
@@ -2414,10 +2402,9 @@ ul {
 }
 .write {
 	border-radius: 5px;
-
+	padding: 20px 0px;
 	/* box-shadow: 2px 2px 5px #00000075; */
 	color: black;
-	width: 90px;
 	/* transition: all 0.5s;
   transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59); */
 }
@@ -2435,4 +2422,8 @@ ul {
 .sob-heading {
 	margin-bottom: 1px;
 	font-family: 'math';
+}
+
+.team-mobile-btn {
+	margin-top: -40px;
 }
