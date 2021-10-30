@@ -7,26 +7,21 @@
 
     include(__DIR__.'/enviornment.php');
 
-    $mail = new PHPMailer(true);
-
+    $mail = new PHPMailer; 
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
     $mail->isSMTP();
-    $mail->Host = 'smtp.mailgun.org';
+    $mail->Host = 'smtp.hostinger.in';
     $mail->SMTPAuth = true;
     $mail->Username = $env_SMTP_Username;
     $mail->Password = $env_SMTP_Password;
     $mail->SMTPSecure = 'tls';
-    $mail->SMTPOptions = array(
-        'ssl' => array(
-            'verify_peer' => false,
-            'verify_peer_name' => false,
-            'allow_self_signed' => true
-        )
-    );
-
+    $mail->Port = 587;
+     
+    // Sender info 
     $mail->From = $env_SMTP_Username;
-    $mail->FromName = 'ACM USICT';    
+    $mail->FromName = 'ACM USICT';
 
-    $mail->WordWrap = 50;
+    // $mail->WordWrap = 50;
 
     /*
         configure PHPMAILER composer package run the👇🏻 command in ACM-New directory

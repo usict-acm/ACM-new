@@ -68,13 +68,13 @@ export default function Preview() {
 	}
 
 	return (
-		<Container fluid className="p-2 mt-4 ">
-			<CardHeader className="mb-4 px-2 bg-secondary">
+		<Container fluid className="p-2 mt-4">
+			<CardHeader className="px-2 bg-secondary">
 				<Row className="titleEdit">
-					<Col xs="9">
+					<Col xs="8">
 						<h1 className="blogTitle">{blog?.blogTitle}</h1>
 					</Col>
-					<Col xs="3" className="editbtnCol">
+					<Col xs="12" sm="4" className="editbtnCol justify-content-center justify-content-sm-end">
 						<Button
 							onClick={() => history.push(`/createBlog/${blogId}`)}
 							color="info"

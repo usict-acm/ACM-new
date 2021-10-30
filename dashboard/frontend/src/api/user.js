@@ -2,14 +2,10 @@ import { resetUser } from "redux/slices/userSlice";
 import { setUser } from "redux/slices/userSlice";
 
 export const fetchUserDoc = (body) => async (dispatch) => {
-	await fetch(
-		process.env.REACT_APP_BASE_URL +
-			"/api.php?q=fetchUserDoc",
-		{
-			method: "POST",
-			body: JSON.stringify(body),
-		}
-	)
+	await fetch(process.env.REACT_APP_BASE_URL + "/api.php?q=fetchUserDoc", {
+		method: "POST",
+		body: JSON.stringify(body),
+	})
 		.then((res) => res.json())
 		.then((res) => {
 			if (res.message === "success") {
@@ -23,81 +19,58 @@ export const fetchUserDoc = (body) => async (dispatch) => {
 		.catch((err) => console.log(err.message));
 };
 
-export const login = (body, setLoading) => (dispatch) => {
-	fetch(
-		process.env.REACT_APP_BASE_URL + "/api.php?q=login",
-		{
-			method: "POST",
-			body: JSON.stringify(body),
-		}
-	)
+export const login = async (body) => {
+	return await fetch(process.env.REACT_APP_BASE_URL + "/api.php?q=login", {
+		method: "POST",
+		body: JSON.stringify(body),
+	})
 		.then((res) => res.json())
 		.then((res) => {
 			if (res.message === "Login successful") {
-				localStorage.setItem("user", JSON.stringify(res.user));
-				dispatch(setUser(res.user));
-				setLoading(false);
+				return { user: res.user };
 			} else {
-				alert(res.error || "Login Failed");
-				localStorage.removeItem("user");
-				dispatch(resetUser());
-				setLoading(false);
+				return { error: res.error || "Login Failed" };
 			}
 		})
 		.catch((err) => {
-			console.log(err.message);
-			setLoading(false);
+			return { error: err.message };
 		});
 };
 
-export const signup = (body, setLoading) => (dispatch) => {
-	fetch(
-		process.env.REACT_APP_BASE_URL +
-			"/api.php?q=register",
-		{
-			method: "POST",
-			body: JSON.stringify(body),
-		}
-	)
+export const signup = async (body) => {
+	return await fetch(process.env.REACT_APP_BASE_URL + "/api.php?q=register", {
+		method: "POST",
+		body: JSON.stringify(body),
+	})
 		.then((response) => response.json())
 		.then((res) => {
-			if (res.error) {
-				setLoading(false);
-				return alert(res.error);
-			}
-			if (res.message === "Signup successful") {
-				localStorage.setItem("user", JSON.stringify(res.user));
-				dispatch(setUser(res.user));
-				setLoading(false);
+			if (res?.message === "Signup successful") {
+				return { user: res.user };
 			} else {
-				alert("Registration Failed");
-				localStorage.removeItem("user");
-				dispatch(resetUser());
-				setLoading(false);
+				return { error: res.error || "Unable to register" };
 			}
 		})
 		.catch((error) => {
-			console.log(error.message);
-			setLoading(false);
+			return { error: error.message || "Unable to register" };
 		});
 };
 
-export const updateProfile = (body) => (dispatch) => {
-	fetch(
-		process.env.REACT_APP_BASE_URL + "/api.php?q=update",
-		{
-			method: "POST",
-			body: JSON.stringify(body),
-		}
-	)
+export const updateProfile = async (body) => {
+	return await fetch(process.env.REACT_APP_BASE_URL + "/api.php?q=update", {
+		method: "POST",
+		body: JSON.stringify(body),
+	})
 		.then((res) => res.json())
 		.then((res) => {
 			if (res.message === "Update successful") {
-				localStorage.setItem("user", JSON.stringify(res.user));
-				dispatch(setUser(res.user));
-			} else alert(res.error || "Update Failed!!");
+				return { user: res.user };
+				// localStorage.setItem("user", JSON.stringify(res.user));
+				// dispatch(setUser(res.user));
+			} else {
+				return { error: res.error || "Update Failed" };
+			}
 		})
-		.catch((err) => console.log(err));
+		.catch((err) => ({ error: err.message || "Update Failed" }));
 };
 
 export const logout = () => (dispatch) => {

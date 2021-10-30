@@ -16,7 +16,6 @@ const RecentBlog = () => {
 		const fetchData = async () => {
 			const allBlogs = await fetchUserBlogs({ userEmail: user?.email });
 			if (allBlogs) {
-				console.log(allBlogs);
 				setBlogs(allBlogs);
 			}
 		};
