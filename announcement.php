@@ -109,8 +109,8 @@
         echo "</div>";
         echo "<div class='swiper-pagination swiper-pagination-clickable swiper-pagination-bullets'>";
         echo "</div>";
-        echo "<div class='swiper-button-next'></div>";
-        echo "<div class='swiper-button-prev'></div>";
+        // echo "<div class='swiper-button-next'></div>";
+        // echo "<div class='swiper-button-prev'></div>";
         echo "</div></div></section>";
        mysqli_free_result($result);
         // echo "<p class='lead'><em>No Record Found.</em></p>";
