@@ -47,6 +47,8 @@ const CreateBlog = () => {
 		};
 		if (blogId) {
 			setData();
+		}else{
+			dispatch(setLoading(false));
 		}
 	}, [dispatch, user, blogId, editorInstance]);
 
