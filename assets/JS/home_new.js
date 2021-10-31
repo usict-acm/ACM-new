@@ -235,27 +235,104 @@ $(document).ready(function () {
 });
 
 // for events section
-var swiper = new Swiper('.mySwiper', {
-	effect: 'cards',
-	slideShadows: 'true',
-	speed: 1000,
-	autoplay: {
-		delay: 5000,
-		disableOnInteraction: false,
-	},
-	fadeEffect: {
-		crossFade: true,
-	},
-	grabCursor: true,
-	pagination: {
-		el: '.events-swiper-pagination',
-	},
-	navigation: {
-		nextEl: '.events-swiper-button-next',
-		prevEl: '.events-swiper-button-prev',
-		disabledClass: 'events-button-disabled',
-	},
+var mySwiper;
+if ($(window).width() < 500) {
+	if (mySwiper) {
+		mySwiper.destroy('swiper');
+	}
+	mySwiper = new Swiper('.mySwiper', {
+		effect: 'creative',
+		creativeEffect: {
+			prev: {
+				// will set `translateZ(-400px)` on previous slides
+				translate: ['-200%', 0, 0],
+			},
+			next: {
+				// will set `translateX(100%)` on next slides
+				translate: ['200%', 0, 0],
+			},
+		},
+		speed: 1000,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		grabCursor: true,
+		pagination: false,
+		navigation: false,
+	});
+} else {
+	if (mySwiper) {
+		mySwiper.destroy('swiper');
+	}
+	mySwiper = new Swiper('.mySwiper', {
+		effect: 'cards',
+		speed: 1000,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		grabCursor: true,
+		pagination: {
+			el: '.events-swiper-pagination',
+		},
+		navigation: {
+			nextEl: '.events-swiper-button-next',
+			prevEl: '.events-swiper-button-prev',
+			disabledClass: 'events-button-disabled',
+		},
+	});
+}
+$(window).resize(function () {
+	if ($(window).width() < 500) {
+		if (mySwiper) {
+			mySwiper.destroy('swiper');
+		}
+		mySwiper = new Swiper('.mySwiper', {
+			effect: 'creative',
+			creativeEffect: {
+				prev: {
+					// will set `translateZ(-400px)` on previous slides
+					translate: ['-200%', 0, 0],
+				},
+				next: {
+					// will set `translateX(100%)` on next slides
+					translate: ['200%', 0, 0],
+				},
+			},
+			speed: 1000,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+			grabCursor: true,
+			pagination: false,
+			navigation: false,
+		});
+	} else {
+		if (mySwiper) {
+			mySwiper.destroy('swiper');
+		}
+		mySwiper = new Swiper('.mySwiper', {
+			effect: 'cards',
+			speed: 1000,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+			grabCursor: true,
+			pagination: {
+				el: '.events-swiper-pagination',
+			},
+			navigation: {
+				nextEl: '.events-swiper-button-next',
+				prevEl: '.events-swiper-button-prev',
+				disabledClass: 'events-button-disabled',
+			},
+		});
+	}
 });
+
 // event section ends
 
 // scroll to top js

@@ -634,7 +634,7 @@ ul {
 	font-size: 30px;
 	margin-top: 8px;
 }
-.ro-nine{
+.ro-nine {
 	transform: rotate(90deg);
 }
 .cta-text {
@@ -1640,13 +1640,13 @@ ul {
 .sticker {
 	position: absolute;
 	color: var(--blue);
-	opacity: 0.3;
+	opacity: 0.18;
 	font-size: 10rem;
 }
 
 @media only screen and (max-width: 500px) {
 	.sticker {
-		font-size: 5rem;
+		font-size: 4rem;
 	}
 }
 .sticker.fa-book {
@@ -1714,7 +1714,7 @@ ul {
 	position: relative;
 	color: #e3dfe9;
 	font-size: 18px;
-	background: rgb(229 226 226 / 55%);
+	background: rgb(218 218 218);
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-radius: 15px;
@@ -1735,7 +1735,7 @@ ul {
 
 .dropdown a {
 	position: relative;
-	color: #6c6185;
+	color: #232127;
 	text-decoration: none;
 	display: block;
 	padding: 12.5px 30px;
@@ -1874,7 +1874,7 @@ ul {
 	display: flex;
 	justify-content: space-evenly;
 }
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 500px) {
 	.mySwiper {
 		width: 90vw;
 	}
@@ -2009,26 +2009,28 @@ ul {
 	margin-bottom: 60px;
 }
 
-.our-team-row{
+.our-team-row {
 	row-gap: 80px;
 }
-.our-team-sir{
+.our-team-sir {
 	row-gap: 80px;
 	flex-direction: column;
 	margin-bottom: 80px;
 }
-.our-team{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-}
-.our-team-right,.social,.our-team-left {
+.our-team {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.our-team-right,.our-team-left {
+.our-team-right,
+.social,
+.our-team-left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.our-team-right,
+.our-team-left {
 	width: 150px;
 	height: 150px;
 	border-radius: 50%;
@@ -2036,13 +2038,13 @@ ul {
 	background: transparent;
 	z-index: 1;
 }
-.social{
+.social {
 	height: 45px;
 	width: 45px;
 	border-radius: 50%;
 	position: absolute;
 	background-color: #fff;
-    box-shadow: 1px 1px 5px #606365;
+	box-shadow: 1px 1px 5px #606365;
 	z-index: -1;
 }
 
@@ -2059,48 +2061,45 @@ ul {
 	border-radius: 50%;
 	max-height: 100%;
 }
-.our-team-left:hover{
+.our-team-left:hover {
 	width: 170px;
 	height: 170px;
 }
-.our-team-right:hover{
+.our-team-right:hover {
 	padding: 20px;
 	width: 170px;
 	height: 170px;
 }
-.our-team-box:hover .social{
+.our-team-box:hover .social {
 	transition: 0.5s;
 }
 .our-team-right:hover .social:nth-child(1) {
 	transition: 0.5s;
 	transform: rotate(0deg) translateY(-100px);
 }
-.our-team-left .name{
+.our-team-left .name {
 	position: absolute;
 	z-index: -1;
 	color: #ffffff;
 }
-.our-team-right .name{
+.our-team-right .name {
 	position: absolute;
 	z-index: -1;
 	color: #ffffff;
 }
-.our-team-left:hover .name{
+.our-team-left:hover .name {
 	width: max-content;
 	color: black;
 	transition: 0.5s;
-	transform:  translateY(130px);
+	transform: translateY(130px);
 }
-.our-team-right:hover .name{
+.our-team-right:hover .name {
 	color: black;
 	transition: 0.5s;
-	transform:  translateY(110px);
+	transform: translateY(110px);
 }
-.social a i{
+.social a i {
 	transition: 0.5s;
-}
-.social:hover a i{
-	transform: rotate(360deg);
 }
 .our-team-box img {
 	border: 10px solid #2fd3ee;
@@ -2346,7 +2345,7 @@ ul {
 	background-color: #00aff0;
 }
 
-.social-btns .btn.skype:hover{
+.social-btns .btn.skype:hover {
 	cursor: inherit;
 }
 
@@ -2365,7 +2364,7 @@ ul {
 }
 .social-btns {
 	display: flex;
-	justify-content:space-evenly;
+	justify-content: space-evenly;
 	flex-wrap: wrap;
 	margin-top: 20px;
 	text-align: center;

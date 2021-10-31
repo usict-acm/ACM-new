@@ -403,7 +403,7 @@
 			</div>
 		</div>
 		<div class="py-3 mt-2 d-md-flex justify-content-sm-center">
-			<div class="col-md-2 col mb-2">
+			<div class="col-md-2 col mb-2 mt-4 mt-sm-0">
 				<a href="./team.php" class="about-button team-mobile-btn">Meet the Team</a>
 			</div>
 		</div>
