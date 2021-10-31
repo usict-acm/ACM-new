@@ -371,12 +371,12 @@
 							<div class="our-team col-md-6 col-lg-4">
 								<div class="our-team-right">
 									<div class="social">										
-										<a href="https://www.linkedin.com/in/chaitan-dev/" target="_blank">
+										<a href="https://www.linkedin.com/in/anmol-goel-13b447178/" target="_blank">
 										  <i class="fab fa-linkedin" arial-hidden="true"></i>
 										</a>
 									</div>
 									<div class="name">
-										<h5 class="text-center">Anmol Jain</h5>
+										<h5 class="text-center">Anmol Goel</h5>
 										<p class="text-center">Web Chair</p>
 									</div>	
 									<img src="./assets/images/team/anmol.jpeg" alt="">
