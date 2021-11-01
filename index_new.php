@@ -46,7 +46,7 @@
 					<a class="nav-link" href="./team.php">Our Team</a>
 				</li> -->
 				<li class="nav-item">
-					<a class="nav-link" href="./collab.php">Our Sponsors</a>
+					<a class="nav-link" href="./collab.php"> Sponsors</a>
 				</li>
 			</ul>
 		</div>
@@ -549,7 +549,7 @@
 									<a href="https://usict.acm.org/clubs.html" target="_blank"><i class="fa fa-angle-right"></i> Our Clubs</a>
 								</li>
 								<li>
-									<a href="./benefits.php#registration" target="_blank"><i class="fa fa-angle-right"></i>Join ACM</a>
+									<a href="./benefits.php#registration" target="_blank"><i class="fa fa-angle-right"></i> Join ACM</a>
 								</li>
 							</ul>
 						</div>
