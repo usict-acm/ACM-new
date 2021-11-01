@@ -52,7 +52,7 @@ export default function AllEvents() {
       default:
         break
     }
-    setData(newEvents)
+    setData(newEvents.sort((a,b) => a?.startDate > b?.startDate ? -1 : 1))
   }, [status, eventsData])
 
   return (
