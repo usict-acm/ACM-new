@@ -112,15 +112,16 @@ require_once "config.php";
 
                         </div>
                         <hr>
-                        <input id="submitForm"class="btn btn-primary" type="submit"  name="submit" value="submit" />
+                        <button id="submitForm" class="btn btn-primary" type="submit"  name="submit" value="submit">Submit</button>
                         <a href="../index.php" class="btn btn-default">Cancel</a>
+
                     </form>
                     <p id="pText"></p>
                 </div>
             </div>
         </div>
     </div>
-    
+
 <script type="text/javascript">
 
         var html=`          <div>
@@ -190,6 +191,9 @@ require_once "config.php";
         $form->saveFormInFormsTable($name);
         $form->saveFormFields($name,$request);
         $result = $form->createResponseTable($request);
+        echo "<script>window.location.replace('http://localhost/ACM-new/admin/adminPanel/index.php?table=formCreation')</script>";
+
+        
     }
 ?>
 </body>
