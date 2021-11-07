@@ -152,6 +152,12 @@
                         case 'Forms':
                             include('./faqadmin/formstable.php');
                             break;
+                        case 'allResponses':
+                            include('../blogAdmin/responses.php');
+                            break;
+                        case 'formCreation':
+                            include('./faqadmin/form-created.php');
+                            break;
                         default:
                             include('./faqadmin/index.php');
                             break;
