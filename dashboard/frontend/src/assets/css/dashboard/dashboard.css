@@ -44,10 +44,6 @@
     border: 1px solid;
 }
 
-.footer{
-    padding-top: 125px;
-}
-
 @media screen and (max-width : 767px) {
     .AllContent{
         padding-left: 25px;

@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/test_acm/dashboard/user-portal/static/css/main.e6865cef.chunk.css",
-    "main.js": "/test_acm/dashboard/user-portal/static/js/main.78447adf.chunk.js",
-    "main.js.map": "/test_acm/dashboard/user-portal/static/js/main.78447adf.chunk.js.map",
+    "main.css": "/test_acm/dashboard/user-portal/static/css/main.82179ea7.chunk.css",
+    "main.js": "/test_acm/dashboard/user-portal/static/js/main.46e7c53a.chunk.js",
+    "main.js.map": "/test_acm/dashboard/user-portal/static/js/main.46e7c53a.chunk.js.map",
     "runtime-main.js": "/test_acm/dashboard/user-portal/static/js/runtime-main.b6bad234.js",
     "runtime-main.js.map": "/test_acm/dashboard/user-portal/static/js/runtime-main.b6bad234.js.map",
     "static/css/2.228a653a.chunk.css": "/test_acm/dashboard/user-portal/static/css/2.228a653a.chunk.css",
-    "static/js/2.0806e87d.chunk.js": "/test_acm/dashboard/user-portal/static/js/2.0806e87d.chunk.js",
-    "static/js/2.0806e87d.chunk.js.map": "/test_acm/dashboard/user-portal/static/js/2.0806e87d.chunk.js.map",
+    "static/js/2.23534713.chunk.js": "/test_acm/dashboard/user-portal/static/js/2.23534713.chunk.js",
+    "static/js/2.23534713.chunk.js.map": "/test_acm/dashboard/user-portal/static/js/2.23534713.chunk.js.map",
     "index.html": "/test_acm/dashboard/user-portal/index.html",
     "static/css/2.228a653a.chunk.css.map": "/test_acm/dashboard/user-portal/static/css/2.228a653a.chunk.css.map",
-    "static/css/main.e6865cef.chunk.css.map": "/test_acm/dashboard/user-portal/static/css/main.e6865cef.chunk.css.map",
-    "static/js/2.0806e87d.chunk.js.LICENSE.txt": "/test_acm/dashboard/user-portal/static/js/2.0806e87d.chunk.js.LICENSE.txt",
-    "static/js/main.78447adf.chunk.js.LICENSE.txt": "/test_acm/dashboard/user-portal/static/js/main.78447adf.chunk.js.LICENSE.txt",
+    "static/css/main.82179ea7.chunk.css.map": "/test_acm/dashboard/user-portal/static/css/main.82179ea7.chunk.css.map",
+    "static/js/2.23534713.chunk.js.LICENSE.txt": "/test_acm/dashboard/user-portal/static/js/2.23534713.chunk.js.LICENSE.txt",
+    "static/js/main.46e7c53a.chunk.js.LICENSE.txt": "/test_acm/dashboard/user-portal/static/js/main.46e7c53a.chunk.js.LICENSE.txt",
+    "static/media/acm1.png": "/test_acm/dashboard/user-portal/static/media/acm1.5d0a90f9.png",
     "static/media/UserHeader.css": "/test_acm/dashboard/user-portal/static/media/acm_banner.cbcb2392.png",
     "static/media/argon-react.png": "/test_acm/dashboard/user-portal/static/media/argon-react.128d71d3.png",
     "static/media/all.min.css": "/test_acm/dashboard/user-portal/static/media/fa-solid-900.f4f93856.woff",
@@ -23,8 +24,8 @@
   "entrypoints": [
     "static/js/runtime-main.b6bad234.js",
     "static/css/2.228a653a.chunk.css",
-    "static/js/2.0806e87d.chunk.js",
-    "static/css/main.e6865cef.chunk.css",
-    "static/js/main.78447adf.chunk.js"
+    "static/js/2.23534713.chunk.js",
+    "static/css/main.82179ea7.chunk.css",
+    "static/js/main.46e7c53a.chunk.js"
   ]
 }

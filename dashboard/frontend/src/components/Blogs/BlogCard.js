@@ -14,6 +14,7 @@ const BlogCard = ({ blogDetails }) => {
     [isHover, setIsHover] = useState(true),
     [isBtn, setIsBtn] = useState(false)
 
+  //eslint-disable-next-line
   const deleteHandler = async () => {
     const body = {
       userEmail: user?.email,
@@ -52,11 +53,11 @@ const BlogCard = ({ blogDetails }) => {
             className='bx bxs-pencil'
             onClick={() => history.push(`/createBlog/${blogDetails.blogId}`)}
           ></Button>
-          <Button
+          {/* <Button
             color='danger'
             className='bx bx-trash'
             onClick={deleteHandler}
-          ></Button>
+          ></Button> */}
         </div>
       )}
     </div>

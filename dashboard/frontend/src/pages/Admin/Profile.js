@@ -18,6 +18,8 @@ import { selectUser } from "redux/slices/userSlice";
 import "../../assets/css/profile.css";
 import { COLLEGES } from "utils/Constants";
 import { updateProfile } from "api/user";
+import SweetAlert from "components/SweetAlert";
+import { setUser } from "redux/slices/userSlice";
 
 const Profile = () => {
   const dispatch = useDispatch(),
@@ -28,6 +30,9 @@ const Profile = () => {
     [memberId, setMemberId] = useState(""),
     [college, setCollege] = useState(""),
     [localURL, setLocalURL] = useState(""),
+    [showAlert, setShowAlert] = useState(false),
+		[alertMsg, setAlertMsg] = useState(""),
+		[alertType, setAlertType] = useState("warning"),
     fileUploadRef = useRef(null);
 
   const init = () => {
@@ -44,18 +49,19 @@ const Profile = () => {
     //eslint-disable-next-line
   }, []);
 
-  const updateInfo = () => {
+  const updateInfo = async () => {
     if (
       name === user.name &&
       memberId === user.acmMemberId &&
       college === user.college &&
       !localURL
     ) {
-      return alert(
-        "One or more editable values must be edited for changes to be saved"
-      );
+      setAlertMsg("One or more editable values must be edited for changes to be saved");
+			setAlertType("warning");
+			setShowAlert(true);
+			return;
     }
-    let data = {
+    const data = {
       ...user,
       name,
       college,
@@ -63,10 +69,23 @@ const Profile = () => {
       profilePhoto: localURL,
     };
     if (!name) {
-      alert("Please fill in all the required fields");
-      return;
+      setAlertMsg("Please fill in all the required fields");
+			setAlertType("warning");
+			setShowAlert(true);
+			return;
     }
-    dispatch(updateProfile(data));
+    const updateRes = await updateProfile(data);
+    if (updateRes?.error) {			
+			setAlertMsg(updateRes?.error);
+			setAlertType("error");
+			setShowAlert(true);
+		} else {
+			localStorage.setItem("user", JSON.stringify(updateRes.user));
+			dispatch(setUser(updateRes.user));
+      setAlertMsg("Profile update successfully");
+			setAlertType("success");
+			setShowAlert(true);
+		}
     setDisabled(true);
     setCursor({ cursor: "pointer" });
     setLocalURL("");
@@ -85,6 +104,12 @@ const Profile = () => {
 
   return (
     <Container className="mt-0" fluid="xxl">
+      <SweetAlert
+				open={showAlert}
+				setOpen={setShowAlert}
+				msg={alertMsg}
+				type={alertType}
+			/>
       <UserHeader />
       {/* Page content */}
       <Container className="profileContainer" fluid>
@@ -239,7 +264,7 @@ const Profile = () => {
                             <span>Member ID</span>
                             {!user?.acmMemberId && (
                               <a
-                                href="https://services.acm.org/public/qj/proflevel/proflevel_control.cfm?level=3&country=India&form_type=Student&promo=LEVEL&pay=DD"
+                                href="https://usict.acm.org/benefits.php#registration"
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >

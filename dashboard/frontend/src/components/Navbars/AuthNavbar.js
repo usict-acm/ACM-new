@@ -44,6 +44,16 @@ const AuthNavbar = () => {
               className="navbarLogo"
               alt="..."
               src={
+                require("../../assets/img/brand/acm1.png")
+                  .default
+              }
+            />
+          </NavbarBrand>
+          <NavbarBrand to="/" tag={Link} className="oslogo text-center">
+            <img
+              className="navbarLogo"
+              alt="..."
+              src={
                 require("../../assets/img/brand/outstanding-website.png")
                   .default
               }
@@ -60,7 +70,7 @@ const AuthNavbar = () => {
                     <img
                       alt="..."
                       src={
-                        require("../../assets/img/brand/outstanding-website.png")
+                        require("../../assets/img/brand/acm1.png")
                           .default
                       }
                     />

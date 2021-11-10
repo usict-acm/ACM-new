@@ -59,7 +59,7 @@ class PostEvent {
   }
   public function readYearEvent($year,$start,$limit) {
       // Create query
-      $query = 'SELECT b.* FROM ' . $this->table2 .' b WHERE b.year=' . $year . ' LIMIT ' . $start . ',' . $limit . '';                                 
+      $query = ' SELECT * FROM event  WHERE year=' . $year . ' ORDER BY startDate DESC LIMIT ' . $start . ',' . $limit . ' ';                 
       // echo $query;
       $stmt = $this->conn->query($query); 
       // echo "statement".$stmt;  

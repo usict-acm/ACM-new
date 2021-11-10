@@ -36,9 +36,13 @@ import {
 import { signup } from "api/user";
 import { COLLEGES } from "utils/Constants";
 import { BRANCHES } from "utils/Constants";
+import { useHistory } from "react-router";
+import SweetAlert from "components/SweetAlert";
+import { setUser, resetUser } from "redux/slices/userSlice";
 
 const Register = () => {
-	const dispatch = useDispatch(),
+	const history = useHistory(),
+		dispatch = useDispatch(),
 		[loading, setLoading] = useState(false),
 		[email, setEmail] = useState(""),
 		[name, setName] = useState(""),
@@ -47,7 +51,10 @@ const Register = () => {
 		[course, setCourse] = useState(""),
 		[branch, setBranch] = useState(""),
 		[rollNo, setRollNo] = useState(""),
-		[college, setCollege] = useState("");
+		[college, setCollege] = useState(""),
+		[showAlert, setShowAlert] = useState(false),
+		[alertMsg, setAlertMsg] = useState(""),
+		[alertType, setAlertType] = useState("warning");
 
 	useEffect(() => {
 		return () => {
@@ -56,7 +63,7 @@ const Register = () => {
 	}, []);
 
 	const registerHandler = async (e) => {
-		e.preventDefault();
+		e.preventDefault();		
 		if (
 			email === "" ||
 			name === "" ||
@@ -66,7 +73,10 @@ const Register = () => {
 			rollNo === "" ||
 			college === ""
 		) {
-			return alert("Please fill all the required fields.");
+			setAlertMsg("Please fill all the required fields.");
+			setAlertType("warning");
+			setShowAlert(true);			
+			return;
 		}
 		setLoading(true);
 		const data = {
@@ -79,11 +89,28 @@ const Register = () => {
 			rollNo,
 			college,
 		};
-		dispatch(signup(data, setLoading));
+		const signUpRes = await signup(data);		
+		if (signUpRes?.error) {
+			localStorage.removeItem("user");
+			dispatch(resetUser());
+			setAlertMsg(signUpRes?.error);
+			setAlertType("error");
+			setShowAlert(true);
+		} else {
+			localStorage.setItem("user", JSON.stringify(signUpRes?.user));
+			dispatch(setUser(signUpRes?.user));
+		}
+		setLoading(false);		
 	};
 
 	return (
 		<div className="registerPage">
+			<SweetAlert
+				open={showAlert}
+				setOpen={setShowAlert}
+				msg={alertMsg}
+				type={alertType}
+			/>
 			<div className="registerLeft glass">
 				<h2 style={{ marginBottom: "20px" }}>Why Join Us?</h2>
 				<ul>
@@ -275,7 +302,12 @@ const Register = () => {
 				</Card>
 				<Row className="mt-3">
 					<Col className="text-right" xs="12">
-						<a className="text-light" href="/login">
+						{/* eslint-disable-next-line */}
+						<a
+							style={{cursor: "pointer"}}
+							className="text-light"
+							onClick={() => history.push("/login")}
+						>
 							<small>Already registered? Login</small>
 						</a>
 					</Col>

@@ -1,34 +1,54 @@
-import React from 'react'
-import {Card, CardBody} from "reactstrap";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Card, CardBody } from "reactstrap";
+import { useSelector } from "react-redux";
+import { useHistory } from "react-router";
+import "../../assets/css/dashboard/recentblog.css";
+import moment from "moment";
+import { fetchUserBlogs } from "api/blog";
+import { selectUser } from "redux/slices/userSlice";
 
-import "../../assets/css/dashboard/recentblog.css"
+const RecentBlog = () => {
+	const history = useHistory(),
+	 user = useSelector(selectUser),
+	 [blogs, setBlogs] = useState([]);
 
-const RecentBlog = (props)=>{
-    return(
-      <>
-        <Card className="blogcard shadow-lg mb-4">
-          <CardBody className="parent">
-                <div className="date ">
-                    <h2>Nov 14</h2>
-                </div>
-                <div className="contents">
-                  <h2>{props.type?"BLOG TITLE":"EVENT TITLE"}</h2>
-                  <p className="text-muted">
-                      {props.text?.length > 180 ?
-                      (
-                        <>
-                        {props.text?.slice(0, 180)}
-                        <span> ...<Link>read more</Link> </span>
-                        </>
-                      )
-                     : props.text}
-                  </p>
-                </div>
-            </CardBody>
-        </Card>
-      </>
-    )
-  }
+	useEffect(() => {
+		const fetchData = async () => {
+			const allBlogs = await fetchUserBlogs({ userEmail: user?.email });
+			if (allBlogs) {
+				setBlogs(allBlogs);
+			}
+		};
+		fetchData();
+	}, [user]);
 
-export default RecentBlog
+	return blogs?.filter((blog) => blog.isDraft === false)
+		.slice(0, 3)
+		.map((filterdata) => (
+			<Card
+				className="dashboardCard shadow-lg mb-4"
+				onClick={() => history.push(`/blog/${filterdata.blogId}`)}
+				key={filterdata.blogId}
+			>
+				<CardBody className="dashboardCard__container">
+					<div className="dashboardCard__date">
+						<h2 id="bold">
+							{moment(filterdata?.published).format("DD MMM, YY")}
+						</h2>
+					</div>
+					<div className="dashboardCard__contents">
+						<h2 id="bold">{filterdata.blogTitle}</h2>
+						<p className="dashboardCard__tags text-muted tags">
+							{filterdata.tags?.map((tag, i) => (
+								<span className="tag_style px-2" key={i}>
+									{tag}
+								</span>
+							))}
+						</p>
+					</div>
+				</CardBody>
+			</Card>
+		));
+};
+
+export default RecentBlog;

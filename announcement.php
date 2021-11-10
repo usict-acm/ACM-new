@@ -3,7 +3,7 @@
   $database = new Database();
   $db = $database->connect();
   $table = "event";
-  $query = 'SELECT * FROM event WHERE EXTRACT(MONTH FROM CURRENT_TIMESTAMP)=EXTRACT(MONTH FROM endDate)';
+  $query = 'SELECT * FROM event WHERE EXTRACT(MONTH FROM CURRENT_TIMESTAMP)=EXTRACT(MONTH FROM endDate) AND EXTRACT(YEAR FROM CURRENT_TIMESTAMP)=EXTRACT(YEAR FROM endDate)';
   function UIAnn() {
     
   }
@@ -59,7 +59,7 @@
         echo "</div></div></section>";
        mysqli_free_result($result);
     } else {
-        $query = 'SELECT * FROM event ORDER BY endDate DESC LIMIT 1';
+        $query = 'SELECT * FROM event ORDER BY endDate DESC LIMIT 0,1';
         $result = mysqli_query($db, $query);
 
         echo "<section class='announcement'>";

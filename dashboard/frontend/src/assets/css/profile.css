@@ -28,6 +28,10 @@
   place-items: center;
   transition: all 0.3s ease-in-out;
 }
+.profileImage > .overlay > .overlay__icon > i {
+  font-size: x-large;
+  margin: 0;
+}
 .profileImage > .overlay > .overlay__icon:hover {
   border-radius: 50%;
   background-color: #888;

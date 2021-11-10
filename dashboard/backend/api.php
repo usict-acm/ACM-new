@@ -30,8 +30,11 @@ switch ($q) {
     case 'deleteBlog':
         deleteBlog();
         break;
-    case 'blogs':
+    case 'allBlogs':
         fetchUserBlogs();
+        break;
+    case 'singleBlog':
+        fetchSingleBlog();
         break;
     case 'allEvents':
         fetchAllEvents();
