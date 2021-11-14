@@ -1,25 +1,26 @@
 <?php
 
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
-    use PHPMailer\PHPMailer\Exception;
-    require 'vendor/autoload.php';
+    // use PHPMailer\PHPMailer\PHPMailer;
+    // use PHPMailer\PHPMailer\SMTP;
+    // use PHPMailer\PHPMailer\Exception;
+    // require 'vendor/autoload.php';
 
-    include(__DIR__.'/enviornment.php');
-
-    $mail = new PHPMailer; 
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
-    $mail->isSMTP();
-    $mail->Host = 'smtp.hostinger.in';
-    $mail->SMTPAuth = true;
-    $mail->Username = $env_SMTP_Username;
-    $mail->Password = $env_SMTP_Password;
-    $mail->SMTPSecure = 'tls';
-    $mail->Port = 587;
+    // include(__DIR__.'/enviornment.php');
+    // echo $env_SMTP_Username;
+    // echo $env_SMTP_Password;
+    // $mail = new PHPMailer; 
+    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+    // $mail->isSMTP();
+    // $mail->Host = 'mail.usict.hosting2.acm.org';
+    // $mail->SMTPAuth = true;
+    // $mail->Username = $env_SMTP_Username;
+    // $mail->Password = $env_SMTP_Password;
+    // $mail->SMTPSecure = 'tls';
+    // $mail->Port = 465;
      
     // Sender info 
-    $mail->From = $env_SMTP_Username;
-    $mail->FromName = 'ACM USICT';
+    // $mail->From = $env_SMTP_Username;
+    // $mail->FromName = 'ACM USICT';
 
     // $mail->WordWrap = 50;
 
@@ -37,5 +38,12 @@
             echo 'Message has been sent';
         }
     */
-
+    // function sendMail () {
+        $to = "anuj.04216403219@ipu.ac.in";
+        $subject = "Testing Mail";
+        $body = "Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum";
+        $header = "From:hackathon@usict.acm.org";
+        echo "Sending";
+        mail($to, $subject, $body, $header);
+    // }
 ?>
