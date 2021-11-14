@@ -3,17 +3,7 @@
 
   <head>
     <?php
-      include("head.php");
-      include("mail.php");
-      
-      // $mail->addAddress('jainabhishek7204@gmail.com');
-      // $mail->Subject = 'Hello';
-      // $mail->Body    = 'Testing some Mailgun awesomness';
-      // if(!$mail->send()) {
-      //     echo 'Message could not be sent.';
-      // } else {
-      //     echo 'Message has been sent';
-      // }
+      include("head.php")
     ?>
     <title>USICT ACM</title>
     <link href='./assets/CSS/styles.css' rel="stylesheet" />
@@ -49,13 +39,11 @@
             <a href="./"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
         </div>
     </div>
-      <div class="collapse navbar-collapse" id="navbarCollapse1">        
+      <div class="collapse navbar-collapse" id="navbarCollapse1">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active"> <a class="nav-link" href="#myCarousel">Home <span
                 class="sr-only">(current)</span></a> </li>
-          <li class="nav-item"> 
-            <a class="nav-link" href="#">Blogs</a> 
-          </li>
+          <li class="nav-item"> <a class="nav-link" href="./blogs.php">Blogs</a> </li>
           <li class="nav-item"> <a class="nav-link" href="./benefits.php">Why Join Us?</a> </li>
           <li class="nav-item"> <a class="nav-link" href="./clubs.php">Clubs</a> </li>
           <li class="nav-item"> <a class="nav-link" href="./team.php">Our Team</a> </li>
@@ -94,6 +82,7 @@
       <div class="swiper-button-next"><i class="fa fa-chevron-right"></i></div>
     </div>
   </div>
+
   <section id="about" class="p-t-80"
     style="background-color:#fff;background-image: url('./assets/images/right_up.png');">
     <div class="text-center" style="font-size:16px;font-weight: bold; margin-bottom: 5vh;">
