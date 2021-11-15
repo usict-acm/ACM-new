@@ -23,36 +23,44 @@ export default function AllBlogs() {
 		dispatch = useDispatch(),
 		user = useSelector(selectUser),
 		[blogs, setBlogs] = useState([]),
-	 	[showDrafts, setShowDrafts] = useState(false),
+		[type, setType] = useState(0),
+		// 0 -> published
+		// 1 -> draft
+		// 2 -> waiting approval
 		[searchQuery, setSearchQuery] = useState(""),
 		[filterData, setFilterData] = useState([]);
-	
+
 	useEffect(() => {
 		const fetchData = async () => {
 			dispatch(setLoading(true));
-			const allBlogs = await fetchUserBlogs({userEmail: user?.email});
+			const allBlogs = await fetchUserBlogs({ userEmail: user?.email });
 			if (allBlogs) {
 				setBlogs(allBlogs);
 				dispatch(setLoading(false));
-			}else dispatch(setLoading(false));
+			} else dispatch(setLoading(false));
 		};
 		fetchData();
 		return () => {
 			setBlogs([]);
-		}
-	}, [user, dispatch])
+		};
+	}, [user, dispatch]);
 
 	useEffect(() => {
 		setFilterData(() => {
 			return blogs
-				.filter((blog) => blog.isDraft === showDrafts)
+				.filter(
+					(blog) =>
+						(type === 1 && blog.isDraft) ||
+						(type === 0 && !blog.isDraft && blog.approved) ||
+						(type === 2 && !blog.isDraft && !blog.approved)
+				)
 				.filter(
 					(blog) =>
 						searchQuery === "" ||
 						blog.blogTitle.toLowerCase().includes(searchQuery.toLowerCase())
 				);
 		});
-	}, [blogs, showDrafts, searchQuery]);
+	}, [blogs, type, searchQuery]);
 
 	return (
 		<Container className="BlogContainer mt-4" fluid>
@@ -66,18 +74,26 @@ export default function AllBlogs() {
 										<Button
 											outline
 											color="info"
-											onClick={() => setShowDrafts(true)}
-											active={showDrafts}
+											onClick={() => setType(0)}
+											active={type === 0}
+										>
+											Published
+										</Button>
+										<Button
+											outline
+											color="info"
+											onClick={() => setType(1)}
+											active={type === 1}
 										>
 											Drafts
 										</Button>
 										<Button
 											outline
 											color="info"
-											onClick={() => setShowDrafts(false)}
-											active={!showDrafts}
+											onClick={() => setType(2)}
+											active={type === 2}
 										>
-											Published
+											Waiting Approval
 										</Button>
 									</ButtonGroup>
 								</Col>
@@ -85,7 +101,7 @@ export default function AllBlogs() {
 									<Button
 										type="button"
 										color="info"
-										onClick={() => history.push("/createBlog")}										
+										onClick={() => history.push("/createBlog")}
 										className="postBtn"
 									>
 										New Post
@@ -100,10 +116,7 @@ export default function AllBlogs() {
 										<Card className="bg-secondary">
 											<CardHeader className="bg-white border-0 pb-0">
 												<Row className="p-0">
-													<Col
-														className="px-2 search-row"
-														lg="12"
-													>
+													<Col className="px-2 search-row" lg="12">
 														<Input
 															className="form-control me-2"
 															type="search"
@@ -111,7 +124,9 @@ export default function AllBlogs() {
 															placeholder="Search"
 															aria-label="Search"
 														/>
-							<p className="my-1 font-weight-normal">Results found: {filterData?.length}</p>
+														<p className="my-1 font-weight-normal">
+															Results found: {filterData?.length}
+														</p>
 													</Col>
 												</Row>
 											</CardHeader>

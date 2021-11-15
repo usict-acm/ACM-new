@@ -17,14 +17,15 @@ class Blog
 
         $query =
             "INSERT INTO $this->table
-                (userEmail, userName, blogTitle, content, tags, isDraft)
+                (userEmail, userName, blogTitle, content, tags, isDraft, approved)
                 VALUES (
                     '$details[userEmail]',
                     '$details[userName]',
                     '$details[blogTitle]',
                     '$details[content]',
                     '$tags',
-                    '$isDraft'
+                    '$isDraft',
+                    '0'
                 )";
         $res = $this->conn->query($query);
         return $res;

@@ -36,7 +36,8 @@ function createBlog()
                         "tags" => unserialize($row["tags"]),
                         "created" => $row["created"],
                         "published" => $row["published"],
-                        "lastUpdated" => $row["lastUpdated"]
+                        "lastUpdated" => $row["lastUpdated"],
+                        "approved" => boolval($row["approved"])
                     );
                     array_push($allBlogsArr, $blogRow);
                 }
@@ -75,7 +76,8 @@ function fetchUserBlogs()
                     "tags" => unserialize($row["tags"]),
                     "created" => $row["created"],
                     "published" => $row["published"],
-                    "lastUpdated" => $row["lastUpdated"]
+                    "lastUpdated" => $row["lastUpdated"],
+                    "approved" => boolval($row["approved"])
                 );
                 array_push($allBlogsArr, $blogRow);
             }
@@ -113,7 +115,8 @@ function fetchSingleBlog()
                     "tags" => unserialize($singleBlog["tags"]),
                     "created" => $singleBlog["created"],
                     "published" => $singleBlog["published"],
-                    "lastUpdated" => $singleBlog["lastUpdated"]
+                    "lastUpdated" => $singleBlog["lastUpdated"],
+                    "approved" => boolval($singleBlog["approved"])
                 )
             ));
         } else {

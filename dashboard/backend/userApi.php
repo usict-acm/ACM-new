@@ -115,6 +115,7 @@
             $result = $user->register($req);
             if ($result) {
                 $user_data = fetchUserByEmail($user, $req["email"]);
+                // send mail logic here
                 if ($user_data) {                
                     echo json_encode(array(
                         'message' => 'Signup successful',
