@@ -48,26 +48,42 @@ class User
         $updatedCollege = $userDoc["college"];
 
         $query = $updatedProfilePhoto === "" ?
-            
+
             "UPDATE $this->table
              SET name ='$updatedName', acmMemberId = '$updatedAcmId', college = '$updatedCollege'
-             WHERE email = '$email'" :        
-            
+             WHERE email = '$email'" :
+
             "UPDATE $this->table
              SET name ='$updatedName', acmMemberId = '$updatedAcmId', profilePhoto = '$updatedProfilePhoto', college = '$updatedCollege'
              WHERE email = '$email'";
-        
+
         $res = $this->conn->query($query);
         return $res;
     }
 
-    public function checkUserExist($user) {
+    public function resetUserPassword($email, $userDoc)
+    {
+        $updatedPass = $userDoc["newPass"];
+        $hashedNewPassword = password_hash($updatedPass, PASSWORD_BCRYPT);
+
+        $query =
+
+            "UPDATE $this->table
+             SET password ='$hashedNewPassword'
+             WHERE email = '$email'";
+
+        $res = $this->conn->query($query);
+        return $res;
+    }
+
+    public function checkUserExist($user)
+    {
         $userByEmailQuery =
             "SELECT * from $this->table
             WHERE email = '$user[email]'";
         $userByEmail = $this->conn->query($userByEmailQuery);
 
-        $userByRollNoQuery = 
+        $userByRollNoQuery =
             "SELECT * from $this->table
             WHERE rollNo = '$user[rollNo]'
             AND college = '$user[college]'";
@@ -76,8 +92,8 @@ class User
         $userByMemberIDQuery =
             "SELECT * from $this->table
             WHERE acmMemberId = '$user[acmMemberId]'";
-        $userByMemberID = $this->conn->query($userByMemberIDQuery);        
+        $userByMemberID = $this->conn->query($userByMemberIDQuery);
 
-        return ($userByEmail->num_rows > 0 || $userByRollNo->num_rows > 0 || ( $user['acmMemberId'] && $user['acmMemberId'] !== '' && $userByMemberID->num_rows > 0));
+        return ($userByEmail->num_rows > 0 || $userByRollNo->num_rows > 0 || ($user['acmMemberId'] && $user['acmMemberId'] !== '' && $userByMemberID->num_rows > 0));
     }
 }
