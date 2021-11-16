@@ -39,7 +39,7 @@ export default function Preview() {
 		blog && editorInstance?.setData(blog?.content);
 	}, [editorInstance, blog]);
 
-	async function unPublish(draft) {
+	async function unPublish() {
 		let data = {
 			blogId: blog?.blogId,
 			blogTitle: blog?.blogTitle,
@@ -47,8 +47,9 @@ export default function Preview() {
 			userName: blog?.userName,
 			content: blog?.content,
 			tags: blog?.tags,
-			isDraft: draft,
-			isPublished: !draft,
+			approved: blog?.approved,
+			isDraft: true,
+			isPublished: false,
 		};
 		let res;
 
@@ -80,13 +81,13 @@ export default function Preview() {
 							color="info"
 							className="bx bxs-pencil py-1"
 						></Button>
-						<Button
-							onClick={() => unPublish(true)}
+						{blog?.published && blog?.approved && <Button
+							onClick={unPublish}
 							color="danger"
 							className="py-2"
 						>
 							UNPUBLISH
-						</Button>
+						</Button>}
 					</Col>
 				</Row>
 			</CardHeader>

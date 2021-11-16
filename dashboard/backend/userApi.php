@@ -1,6 +1,7 @@
 <?php
 
     include_once './userFunctions.php';
+    include_once './mail.php';
 
     function userInit(){
         $database = new Database();
@@ -116,6 +117,7 @@
             if ($result) {
                 $user_data = fetchUserByEmail($user, $req["email"]);
                 // send mail logic here
+                welcomeMail($req["email"], $req["name"]);
                 if ($user_data) {                
                     echo json_encode(array(
                         'message' => 'Signup successful',
