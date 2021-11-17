@@ -73,6 +73,24 @@ export const updateProfile = async (body) => {
 		.catch((err) => ({ error: err.message || "Update Failed" }));
 };
 
+export const resetPassword = async (body) => {
+	return await fetch(process.env.REACT_APP_BASE_URL + "/api.php?q=resetPassword", {
+		method: "POST",
+		body: JSON.stringify(body),
+	})
+		.then((res) => res.json())
+		.then((res) => {
+			if (res.message === "Password changed successfully") {
+				return { user: res.user, message: res.message };
+				// localStorage.setItem("user", JSON.stringify(res.user));
+				// dispatch(setUser(res.user));
+			} else {
+				return { error: res.error || "Update Failed" };
+			}
+		})
+		.catch((err) => ({ error: err.message || "Update Failed" }));
+}
+
 export const logout = () => (dispatch) => {
 	localStorage.removeItem("user");
 	dispatch(resetUser());
