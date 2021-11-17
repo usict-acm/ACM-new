@@ -16,9 +16,10 @@
 
 */
 import { logout } from "api/user";
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import ResetPassword from "../ResetPassword";
 // reactstrap components
 import {
   DropdownMenu,
@@ -34,14 +35,17 @@ import { selectUser } from "redux/slices/userSlice";
 
 import "../../assets/css/navbar.css";
 
+
 const AdminNavbar = (props) => {
+  const [showModal, setShowModal] = useState(false);
+  const handleOpen = () => setShowModal(true);
   const dispatch = useDispatch(),
     user = useSelector(selectUser);
 
   const logoutHandler = () => {
     dispatch(logout());
   };
-
+ 
   return (
     <>
       <Navbar className="navbar-light p-0 p-md-2" expand="md" id="navbar-main">
@@ -93,6 +97,11 @@ const AdminNavbar = (props) => {
                   <i className="ni ni-support-16" />
                   <span>Support</span>
                 </DropdownItem>
+                <DropdownItem onClick={handleOpen}>
+                  <i className="ni ni-lock-circle-open"/>
+                  <span>Reset Password</span>
+                </DropdownItem>
+                <ResetPassword closeModal={()=>setShowModal(false)} show={showModal}/>
                 <DropdownItem divider />
                 <DropdownItem onClick={logoutHandler}>
                   <i className="ni ni-user-run" />
