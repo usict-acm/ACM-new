@@ -64,8 +64,6 @@
                     $link = $database->connect();
                     $connection = $link;
 
-
-
                     $sql = "SELECT * FROM forms";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
@@ -82,12 +80,9 @@
                                     echo "<tr>";
                                         echo "<td>" . $row['formID'] . "</td>";
                                         echo "<td>" . $row['formName'] . "</td>";
-
-                                        $value = explode(" ",$row['formName']);
-                                        $val = join("_",$value);
-
+                                        
                                         echo "<td>";
-                                            echo "<a href='../blogAdmin/responses.php?q=readResponses&Id=".$row['formID'] ."&name=".$val."' title='View Record' data-toggle='tooltip'><button class='btn btn-primary' type='button'>Responses</button></span></a>";
+                                            echo "<a href='../blogAdmin/responses.php?q=readResponses&Id=".$row['formID']."'title='View Record' data-toggle='tooltip'><button class='btn btn-primary' type='button'>Responses</button></span></a>";
                                             echo "<a href='../../UI/index.php?Id=".$row['formID'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
                                             echo "<a href='faqadmin/delete.php?Sno=". $row['formID'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                             // echo "<a href='faqadmin/update.php?Sno=". $row['Sno'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
@@ -96,9 +91,7 @@
 
                                     echo "</tr>";
                                 }
-                                
-
-                                echo "</tbody>";                            
+                            echo "</tbody>";                            
                             echo "</table>";
                             // Free result set
                             mysqli_free_result($result);
@@ -108,7 +101,6 @@
                     } else{
                         echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
                     }
-
                     // Close connection
                     mysqli_close($link);
                     ?>
@@ -118,3 +110,5 @@
     </div>
 </body>
 </html>
+
+

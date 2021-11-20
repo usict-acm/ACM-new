@@ -652,7 +652,7 @@ function readResponses(){
  
 
     $ID = $_GET['Id'];
-    $formName = $_GET['name'];
+    $formName = "";
 
 
     $allFields = $post->readFields($ID,$formName);
@@ -724,7 +724,7 @@ function readResponses(){
   // Instantiate blog post object
    $post = new Form($db);
 //    echo "check3";
-$Id = $_GET["Id"];  
+   $Id = $_GET["Id"];  
    // Blog post query
    $result = $post->fieldsQuery($Id);
 //    echo "check4";
@@ -760,6 +760,24 @@ $Id = $_GET["Id"];
    }
 };
 
+function postForm(){
+    $database = new Database();
+    $db = $database->connect();
+    $fieldID1 = $_POST["fieldID1"];
+
+    $formTitle = $_POST["formTitle"];
+    // $sql = "INSERT INTO `event` (`sno`, `name`, `description`, `startDate`, `endDate` , `button1Text`, `button1Link`, `button2Text`, `button2Link` , `partners` , `speakers` , `poster` , `year` , `time`) VALUES ('0', '$txtTitle', '$txtDescription','$txtStartdate','$txtEnddate','$txtButton1Text', '$txtButton1Link', '$txtButton2Text', '$txtButton2Link', '$txtPartners','$txtSpeakers', '$destinationfile', '$txtYear', '$txtTime');";
+    if($db->query($sql) == true){
+        echo json_encode(
+            array('message' => 'Form has been submitted')
+        );       
+    } else{
+        echo json_encode(
+            array('message' => 'Internal Server Error. Try Again')
+        );
+    }
+};
+
 function saveForm(){
     $database = new Database();
     $db = $database->connect();
@@ -781,9 +799,31 @@ function saveForm(){
         array_push($request,$field_array);
     }
 
-    $form->saveFormInFormsTable($name);
-    $form->saveFormFields($name,$request);
+    $form->saveFormInFormsTable($name,$request);
     $result = $form->createResponseTable($request);
+}
+
+function dataForm(){
+    $database = new Database();
+    $db = $database->connect();
+    $form = new Form($db);
+    $txtTitle = $_POST["responses"];
+//  echo.json_encode
+    // $name = "event 1";
+print_r($txtTitle);
+    // $value = explode(" ",$name);
+    // $val = join("_",$value);
+
+    // $response = array();
+    // array_push($response,$val);
+
+    // for($i = 0; $i < 3; $i++){
+    //     $response_array = array();
+    //     array_push($response,$response_array);
+    // }
+
+    // $form->saveFormInFormsTable($name,$request);
+    // $result = $form->createResponseTable($request);
 }
 
 $q = $_GET['q'];
@@ -838,6 +878,9 @@ switch ($q) {
         break;
     case 'saveForm':
         saveForm();
+        break;
+    case 'dataForm':
+        dataForm();
         break;
     case 'HardFetchResponses':
         testResponses();

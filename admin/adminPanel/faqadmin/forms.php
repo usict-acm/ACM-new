@@ -188,8 +188,7 @@ require_once "config.php";
             array_push($request,$field_array);
         }
 
-        $form->saveFormInFormsTable($name);
-        $form->saveFormFields($name,$request);
+        $form->saveFormInFormsTable($name,$request);
         $result = $form->createResponseTable($request);
         echo "<script>window.location.replace('http://localhost/ACM-new/admin/adminPanel/index.php?table=formCreation')</script>";
 

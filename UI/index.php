@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Contact V10</title>
+    <title>Form</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--===============================================================================================-->
@@ -26,33 +26,14 @@
     <?php $Id = $_GET["Id"]; ?>
     
 <script>
-      function submit_form(){
-    var formData = new FormData();
-    formData.append('name',  $("#name").val());
 
-
-    $.ajax({
-        type: "POST",
-        url: "../../blogAdmin/api.php/?q=postAnnouncement",
-        data : formData,
-        cache: false,
-        processData: false,
-        contentType: false,
-        success: function(data){
-            alert(data.message);
-            window.location.reload();
-        },
-        error: function(xhr, status, error){
-            alert("Fill in the details");
-        },
-    });
-    }
 </script>
 
     <script>
-let url = '../admin/blogAdmin/api.php/?q=fields&Id=' + <?php echo $Id ?>;
-      let divTag = document.getElementById("formPage");
-      $(document).ready(function () {
+
+      // $(document).ready(function () {
+        let url = '../admin/blogAdmin/api.php/?q=fields&Id=' + '<?php echo $Id ?>';
+        let divTag = document.getElementById("formPage");
 
         $.ajax({
           url: url,
@@ -60,102 +41,79 @@ let url = '../admin/blogAdmin/api.php/?q=fields&Id=' + <?php echo $Id ?>;
           dataType: "JSON",
           success: function (data) {
             console.log("check data ", data);
-            // console.log("1");
-            data.forEach(allForms);
+            divTag.innerHTML += `<span id="formTitle" class="contact100-form-title">
+                    ${data[0].formName}
+                </span>`;
 
-            function allForms(form) {
-              divTag.innerHTML += `<span class="contact100-form-title">
-                    ${form.formName}
-                </span>
-
-                <div class="wrap-input100 validate-input bold" data-validate = "Please enter your email: e@a.x">
-                    <input id="fieldID" class="input100" type="text" name="email" placeholder="${form.fieldName}">
-                    <span class="focus-input100"></span>
-                </div>
-
-`;
-            }
-            divTag.innerHTML += `<div class="container-contact100-form-btn bold height" >
-                    <button class="contact100-form-btn" onclick="submit_form()">
-                        <span>
-                            <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
-                            Submit
-                        </span>
-                    </button>
+            // data.forEach(allForms);
+            for(let i=0; i<data.length; i++){
+              divTag.innerHTML += `<div class="wrap-input100 validate-input bold">
+                    <input id="field${i}" class="input100" type="text" placeholder="${data[i].fieldName}">
                 </div>`;
+            }
+            divTag.innerHTML += `<div class="container-contact100-form-btn bold height">
+                    <input type="button" id="buttonSubmit" name="submit" value="submit">                    
+                </div>`;
+
+    document.getElementById("buttonSubmit").addEventListener("click", function() {
+    // function submit_form(){
+      console.log("data inside",data);
+      // empty array initialize
+      var res = [];
+      res.push(data[0].formName);
+      // formData.append('formTitle', data[0].formName);
+      for(let i=0; i<data.length; i++){
+        var tableData = {
+        "fieldName": data[i].fieldName,
+        "fieldValue": "",
+        }
+
+        var field = "field"+i;
+        tableData["fieldValue"] = $(`#${field}`).val();
+        res.push(tableData);
+
+      }
+
+      var formData = new FormData();
+      // formData.append('formTitle', data[0].formName);
+      formData.append('responses', res);
+
+      // for(let i=0; i<data.length; i++){
+      //   var field = "field"+i;
+      //   formData.append(`${data[i].fieldName}`,$(`#${field}`).val());
+      // }
+      for (var key of formData.keys()) {
+       console.log("key formData",key);
+    }
+      for (var value of formData.values()) {
+       console.log("value formData",value);
+    }
+console.log("bjhzb", res);
+
+      $.ajax({
+          type: "POST",
+          url: "../admin/blogadmin/api.php?q=dataForm",
+          data : formData,
+          cache: false,
+          processData: false,
+          contentType: false,
+          success: function(data){
+              alert(data.message);
+              window.location.reload();
+          },
+          error: function(xhr, status, error){
+              alert("Fill in the details");
+          },
+      });
+    // }
+  });
 
           },
         });
-      });
-// let url = "../admin/blogAdmin/api.php/?q=fields";
-//       let divTag = document.getElementById("formPage");
-// $(document).ready(function() {
-//       $.ajax({
-//         url: url,
-//         method: 'GET',
-//         dataType: 'JSON',
-//         success: function(data) {
-//           console.log("check data 1234", data);
-//           data.forEach(formArrItem);
+      // });
 
-//           function formArrItem(form) {
-//             let urlName = '../admin/blogAdmin/api.php/?q=fields&formName=' + form.formName;
-//             $.ajax({
-//               url: urlName,
-//               method: 'GET',
-//               async: false,
-//               dataType: 'JSON',
-//               success: function() {
-//                 console.log(urlName);
-//                 // console.log("dataNumber", dataNumber);
-//                 // numberOfEvents = dataNumber[1];
-//                 // console.log("numberrrr", numberOfEvents);
-//                 divTag.innerHTML += `<span class="contact100-form-title">
-//                     ${form.formName}
-//                 </span>
-
-            
-// 				<!-- Email -->
-//                 <div class="wrap-input100 validate-input bold" data-validate = "Please enter your email: e@a.x">
-//                     <input class="input100" type="${form.fieldType}" name="email" placeholder="${form.fieldName}">
-//                     <span class="focus-input100"></span>
-//                 </div>
-
-//                 <div class="container-contact100-form-btn bold height" >
-//                     <button class="contact100-form-btn">
-//                         <span>
-//                             <i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
-//                             Send
-//                         </span>
-//                     </button>
-//                 </div>
-// `;
-//               }
-//             })
-//           }
-//         },
-//         error: function(error) {
-//           console.log(error);
-//         },
-//       });
-//     });
     </script>
 
-    <div id="dropDownSelect1"></div>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-23581568-13");
-    </script>
   </body>
 </html>
