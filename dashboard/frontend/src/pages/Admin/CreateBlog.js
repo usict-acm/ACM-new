@@ -17,7 +17,7 @@ import { selectUser } from "redux/slices/userSlice";
 import { useHistory, useParams } from "react-router";
 import { addBlog, updateBlog } from "api/blog";
 import { fetchSingleBlog } from "api/blog";
-import { setLoading } from "redux/slices/mainSlice";
+import Loader from "components/Loader";
 
 const CreateBlog = () => {
 	const dispatch = useDispatch(),
@@ -29,11 +29,12 @@ const CreateBlog = () => {
 		[content, setContent] = useState(""),
 		[tags, setTags] = useState([]),
 		[editorInstance, setEditorInstance] = useState(null),
-		[editingBlog, setEditingBlog] = useState(null);
+		[editingBlog, setEditingBlog] = useState(null),
+		[loading, setLoading] = useState(true);
 
-	useEffect(() => {
-		dispatch(setLoading(true));
-	}, [dispatch]);
+	// useEffect(() => {
+		// setLoading(true);
+	// }, [dispatch]);
 
 	useEffect(() => {
 		const setData = async () => {
@@ -43,12 +44,12 @@ const CreateBlog = () => {
 			setTags(blog?.tags || []);
 			setContent(blog?.content || "");
 			setTitle(blog?.blogTitle || "");
-			dispatch(setLoading(false));
+			setLoading(false);
 		};
 		if (blogId) {
 			setData();
 		}else{
-			dispatch(setLoading(false));
+			setLoading(false);
 		}
 	}, [dispatch, user, blogId, editorInstance]);
 
@@ -118,6 +119,7 @@ const CreateBlog = () => {
 
 	return (
 		<Container className="mt-4" fluid="xxl">
+			{loading && <Loader />}
 			<Container className="BlogContainer" fluid>
 				<Row>
 					<Col className="order-xl-1">

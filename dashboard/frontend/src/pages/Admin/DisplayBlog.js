@@ -9,7 +9,7 @@ import SideBar from "components/Blogs/DisplayBlogSideBar.js";
 import { selectUser } from "redux/slices/userSlice";
 import { fetchSingleBlog, updateBlog } from "api/blog";
 import "assets/css/CreateBlog.css";
-import { setLoading } from "redux/slices/mainSlice";
+import Loader from "components/Loader";
 
 export default function Preview() {
 	const dispatch = useDispatch(),
@@ -18,19 +18,20 @@ export default function Preview() {
 		history = useHistory(),
 		user = useSelector(selectUser),
 		[editorInstance, setEditorInstance] = useState(null),
-		[blog, setBlog] = useState(null);
+		[blog, setBlog] = useState(null),
+		[loading, setLoading] = useState(true);
 
-	useEffect(() => {
-		dispatch(setLoading(true));
-	}, [dispatch]);
+	// useEffect(() => {
+	// 	setLoading(true);
+	// }, []);
 
 	useEffect(() => {
 		const fetchBlog = async () => {
 			const blog = await fetchSingleBlog({ userEmail: user?.email, blogId });
 			if (blog) {
 				setBlog(blog);
-				dispatch(setLoading(false));
-			} else dispatch(setLoading(false));
+				setLoading(false);
+			} else setLoading(false);
 		};
 		fetchBlog();
 	}, [dispatch, blogId, user]);
@@ -70,6 +71,7 @@ export default function Preview() {
 
 	return (
 		<Container fluid className="p-2 mt-4">
+			{loading && <Loader />}
 			<CardHeader className="px-2 bg-secondary">
 				<Row className="titleEdit">
 					<Col xs="8">
