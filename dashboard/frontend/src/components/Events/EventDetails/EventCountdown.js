@@ -1,29 +1,33 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
+import ReactHtmlParser from "react-html-parser";
 
 const EventCountdown = ({ event }) => {
-	const startTime = moment(event?.startDate);
-	const endTime = moment(event?.endDate);
-	const [currentTime, setCurrentTime] = useState(moment());
-	const [isEventOver, setIsEventOver] = useState(currentTime >= endTime);
-	const [eventStatus, setEventStatus] = useState({
-		text:
-			startTime > currentTime
-				? "STARTS IN :"
-				: endTime > currentTime
-				? "ENDS IN :"
-				: "EVENT IS OVER",
-		targetTime:
-			startTime > currentTime
-				? startTime
-				: endTime > currentTime
-				? endTime
-				: null,
-	});
+	const [, rerender] = useState(false),
+		[statusText, setStatusText] = useState("<h1>Loading Event...</h1>"),
+		[targetTime, setTargetTime] = useState(null),
+		timeBetween = moment.duration(targetTime?.diff());
 
-	const timeBetween = moment.duration(
-		eventStatus?.targetTime?.diff(currentTime)
-	);
+	useEffect(() => {
+		if (event) {
+			if (new Date(event?.startDate) > new Date()) {
+				setStatusText("<h3>STARTS IN :</h3>");
+				setTargetTime(moment(event?.startDate));
+			} else {
+				if (new Date(event?.endDate) > new Date()) {
+					setStatusText("<h3>ENDS IN :</h3>");
+					setTargetTime(moment(event?.endDate));
+				} else {
+					setStatusText("<h1>EVENT IS OVER</h1>");
+					setTargetTime(null);
+				}
+			}
+		}
+		return () => {
+			setStatusText("");
+			setTargetTime(null);
+		};
+	}, [event]);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -33,46 +37,46 @@ const EventCountdown = ({ event }) => {
 				timeBetween.minutes() <= 0 &&
 				timeBetween.seconds() <= 0
 			) {
-				if (endTime > startTime && eventStatus?.text === "STARTS IN :") {
-					setEventStatus({
-						text: "ENDS IN :",
-						targetTime: endTime,
-					});
+				if (
+					new Date(event?.endDate) > new Date(event?.startDate) &&
+					statusText === "<h3>STARTS IN :</h3>"
+				) {
+					setStatusText("<h3>ENDS IN :</h3>");
+					setTargetTime(moment(event?.endDate));
 				} else {
-					setIsEventOver(true);
 					clearInterval(interval);
 				}
 			} else {
-				setCurrentTime(moment());
+				rerender((p) => !p);
 			}
 		}, 1000);
 
 		return () => clearInterval(interval);
-	}, [eventStatus, timeBetween, startTime, endTime]);
+	}, [statusText, timeBetween, event]);
 
-	return isEventOver ? (
-		<h1>EVENT IS OVER</h1>
-	) : (
+	return (
 		<>
-			<h3> {eventStatus?.text} </h3>
-			<div className="countdown">
-				<div className="countsContainer">
-					<h1>{timeBetween.days()} </h1>
-					<h4>Days</h4>
+			{ReactHtmlParser(statusText)}
+			{event && targetTime && (
+				<div className="countdown">
+					<div className="countsContainer">
+						<h1>{timeBetween.days()} </h1>
+						<h4>Days</h4>
+					</div>
+					<div className="countsContainer">
+						<h1>{timeBetween.hours()}</h1>
+						<h4>Hours</h4>
+					</div>
+					<div className="countsContainer">
+						<h1>{timeBetween.minutes()}</h1>
+						<h4>min</h4>
+					</div>
+					<div className="countsContainer">
+						<h1>{moment.duration(targetTime.diff(moment.now())).seconds()}</h1>
+						<h4>sec</h4>
+					</div>
 				</div>
-				<div className="countsContainer">
-					<h1>{timeBetween.hours()}</h1>
-					<h4>Hours</h4>
-				</div>
-				<div className="countsContainer">
-					<h1>{timeBetween.minutes()}</h1>
-					<h4>min</h4>
-				</div>
-				<div className="countsContainer">
-					<h1>{timeBetween.seconds()}</h1>
-					<h4>sec</h4>
-				</div>
-			</div>
+			)}
 		</>
 	);
 };
