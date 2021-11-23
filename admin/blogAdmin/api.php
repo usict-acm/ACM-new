@@ -532,7 +532,7 @@ function postAnnouncement(){
     $fileextstored = array('png','jpg','jpeg');
     
     if(in_array($filecheck,$fileextstored)){
-        $destinationfile = 'upload/announcements/'.$filename;
+        $destinationfile = './upload/announcements/'.$filename;
         $uploadLocation = '../../upload/announcements/'.$filename;
         move_uploaded_file($filetemppath,$uploadLocation);
 
@@ -808,12 +808,14 @@ function dataForm(){
     $db = $database->connect();
     $form = new Form($db);
     $txtTitle = $_POST["responses"];
-//  echo.json_encode
-    // $name = "event 1";
-print_r($txtTitle);
-    // $value = explode(" ",$name);
-    // $val = join("_",$value);
 
+    //  echo.json_encode
+    // $name = "event 1";
+    // print_r($txtTitle);
+    $value = explode(" ",$txtTitle[0]);
+    $val = join("_",$value);
+    // echo $val;
+    $form->saveDataResponsesInTable($val,$txtTitle);
     // $response = array();
     // array_push($response,$val);
 

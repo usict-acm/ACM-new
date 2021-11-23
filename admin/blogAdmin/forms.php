@@ -29,7 +29,8 @@
                for($i = 1; $i < count($request); $i++){
                     $valueText = $request[$i][0];
                     $valueType = $request[$i][1];
-                    $query = "INSERT INTO `fields` (`formID`,`formName`,`fieldName`,`fieldType`) VALUES ('$formID','$name','$valueText','$valueType')";
+                    $valueRequired = $request[$i][2];
+                    $query = "INSERT INTO `fields` (`formID`,`formName`,`fieldName`,`fieldType`, `required`) VALUES ('$formID','$name','$valueText','$valueType', '$valueRequired')";
                     $this->conn->query($query);
                }
           }
@@ -125,9 +126,25 @@
                return $count;
           }
 
-          public function saveDataResponseInTable($txtTitle) {
+          public function saveDataResponsesInTable($name,$txtTitle) {
+               $tableName = "responses_" . $name;
+               $one = "INSERT INTO " . $tableName . "(";
+               $two = "";
+               $three = "";
+               // var_dump($txtTitle);
+
+               for($i=1; $i<count($txtTitle)-1; $i++){
+                    $two = $two . $txtTitle[$i][0] . ",";
+                    $three = $three . "'" . $txtTitle[$i][1] . "'"  . ",";
+               }
+
+               $countw = count($txtTitle)-1;
+               $two = $two . $txtTitle[$countw][0] . ") VALUES(";
+               $three = $three . "'" . $txtTitle[$countw][1] . "'" . ')';
+
+               $query = $one . $two . $three . ";";
+               $this->conn->query($query);
                
-               // $tableName = "Responses_" . $request[0];
           }
      }
 

@@ -104,7 +104,10 @@ require_once "config.php";
                                 </div>
                                 <div id="required">
                                     <label > Required?</label>
-                                    <input type="checkbox" id="required1" name="required1[]"  />
+                                    <input onChange= type="checkbox" id="required1" name="required1[]" />
+                                    <script>
+                                        console.log($("#required1").val())
+                                        </script>
                                 </div>
                             </div>
                             </div>
@@ -137,7 +140,7 @@ require_once "config.php";
                                 </div>
                                 <div id="required">
                                 <label > Required?</label>
-                                <input type="checkbox" id="required1" name="required1[]" value="true" />
+                                <input type="checkbox" id="required1" name="required1[]" />
                                 </div>
                             </div>
                             </div>`;
@@ -185,14 +188,13 @@ require_once "config.php";
             $field_array = array();
             array_push($field_array,$result[$i][0]);
             array_push($field_array,$result[$i][1]);
+            array_push($field_array,$result[$i][2]);
             array_push($request,$field_array);
         }
 
         $form->saveFormInFormsTable($name,$request);
         $result = $form->createResponseTable($request);
         echo "<script>window.location.replace('http://localhost/ACM-new/admin/adminPanel/index.php?table=formCreation')</script>";
-
-        
     }
 ?>
 </body>

@@ -63,13 +63,15 @@
       res.push(data[0].formName);
       // formData.append('formTitle', data[0].formName);
       for(let i=0; i<data.length; i++){
-        var tableData = {
-        "fieldName": data[i].fieldName,
-        "fieldValue": "",
-        }
-
+        // var tableData = {
+        // "fieldName": data[i].fieldName,
+        // "fieldValue": "",
+        // }
+        var tableData = [];
+        tableData.push(data[i].fieldName);
         var field = "field"+i;
-        tableData["fieldValue"] = $(`#${field}`).val();
+        tableData.push($(`#${field}`).val());
+        // tableData["fieldValue"] = $(`#${field}`).val();
         res.push(tableData);
 
       }
@@ -101,9 +103,9 @@ console.log("bjhzb", res);
               alert(data.message);
               window.location.reload();
           },
-          error: function(xhr, status, error){
-              alert("Fill in the details");
-          },
+          // error: function(xhr, status, error){
+          //     alert("Fill in the details");
+          // },
       });
     // }
   });

@@ -77,7 +77,7 @@ require_once "./faqadmin/config1.php";
 
     $.ajax({
         type: "POST",
-        url: "../../blogAdmin/api.php/?q=postAnnouncement",
+        url: "../blogAdmin/api.php/?q=postAnnouncement",
         data : formData,
         cache: false,
         processData: false,
