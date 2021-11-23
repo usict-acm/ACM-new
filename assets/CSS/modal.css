@@ -1,0 +1,49 @@
+.bg-color {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+	width: 25%;
+	margin: auto;
+	box-sizing: border-box;
+	border: 2px solid #48db71;
+	background-color: #fff;
+	padding: 2em 3em;
+	text-align: center;
+	border-radius: 0.5em;
+	display: none;
+}
+.modal-image {
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+	border-radius: 50%;
+	box-shadow: 0 0 0 2px #48db71;
+	padding: 11px;
+	margin-bottom: 2em;
+}
+.modal-heading {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+.modal-message {
+	margin-bottom: 2em;
+	color: #666;
+}
+.btn-open {
+	display: none;
+}
+.is-active {
+	display: block;
+}
+.modal-btn {
+	background-color:#2250fc;
+	color:#fff; 
+	font-size: 1.2rem;
+	border: none;
+	padding: 0.5em 1em;
+	border-radius: 0.25em;
+	cursor: pointer;
+	transition: background 0.4s ease, color 0.4s ease;
+}
