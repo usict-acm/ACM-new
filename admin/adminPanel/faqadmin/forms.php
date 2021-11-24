@@ -45,10 +45,6 @@
             position:relative;
             top:-40px;
         }
-        #dropDown{
-            /* margin-left:20px;  */
-            /* float:left; */
-        }
         #required{
             position: relative;
             top: -54px;
@@ -97,14 +93,11 @@
 </head>
 <script>
 let count=0;
-
-
-<script>
-    function check(){
+   function check(){
         console.log($('#required1').is(':checked'))
 
     }
-                                        </script>
+</script>
 
 <body>
 
@@ -121,11 +114,11 @@ let count=0;
                         <br>
                         <div >
                             <div id="container">
-                            <div class="form-group">
+                            <div id="field0" class="form-group">
                                 <input type="text" id="fieldName" class='form-control alignment123 titleField' name="fieldName[]" placeholder="Enter Field Name" />
                                 <div class="alignment2">
                                     <label>Choose Answer Type:</label>
-                                    <select  id="dropDown" name="dropDown[]" onchange="changeDD()" name="cars" id="cars">
+                                    <select  id="dropDown" name="dropDown[]" onchange="changeDD(0)" name="cars" id="cars">
                                         <option value="">Select an Option</option>
                                         <option value="checkbox" >Checkbox</option>
                                         <option value="text">Short answer</option>
@@ -135,9 +128,6 @@ let count=0;
                                 <div id="required">
                                     <label > Required?</label>
                                     <input onChange="check();" type="checkbox" id="required1" name="required1[]" value="valueCheckBox" />                                    
-                                </div>
-                                <div class="form-group" id="innerCheck"+count>
-                                    
                                 </div>
                             </div>
                             </div>
@@ -172,25 +162,6 @@ function changeDD(){
             $("#container").append(prevCheckbox);
         }
 }
-        var html=`          <div>
-                            <div class="form-group">
-                                <input type="text" name="fieldName[]" id="childFieldName" class='form-control alignment123 titleField' placeholder="Enter Field Name" />
-                                <div class="alignment2">
-                                    <label>Choose Answer Type:</label>
-                                    <select   id="dropDown"  name="dropDown[]" name="cars"  onchange="changeDD()" id="cars">
-                                        <option value="">Select an Option</option>
-                                        <option value="checkbox">checkbox</option>
-                                        <option value="text">Short answer</option>
-                                        <option value="text">Paragraph</option>
-                                    </select>
-                                </div>
-                                <div id="required">
-                                <label > Required?</label>
-                                <input type="checkbox" id="required1" name="required1[]" value="valueCheckBox" />
-                                </div>
-                                
-                            </div>
-                            </div>`;
         let checkboxHTML=`  <div class="form-group">
                                 <div class="col-xs-7">
                                 <input type="text" id="ex2" class='form-control topCheck topCheck2'name="" placeholder="Fill only if checkbox is selected" />
@@ -205,8 +176,27 @@ function changeDD(){
 
                     $(document).ready(function(e){
                         $("#addBtn").click(function(e){
-                            count++;
-                            // console.log(count);
+                            count = count + 1;
+                            var html=`<div>
+                            <div id="field`+ count +`" class="form-group">
+                                <input type="text" name="fieldName[]" id="childFieldName" class='form-control alignment123 titleField' placeholder="Enter Field Name" />
+                                <div class="alignment2">
+                                    <label>Choose Answer Type:</label>
+                                    <select   id="dropDown"  name="dropDown[]" name="cars"  onchange="changeDD(`+count+`)" id="cars">
+                                        <option value="">Select an Option</option>
+                                        <option value="checkbox">checkbox</option>
+                                        <option value="text">Short answer</option>
+                                        <option value="text">Paragraph</option>
+                                    </select>
+                                </div>
+                                <div id="required">
+                                <label > Required?</label>
+                                <input type="checkbox" id="required1" name="required1[]" value="valueCheckBox" />
+                                </div>
+                                
+                            </div>
+                            </div>`;
+                            console.log(count);
                             $("#container").append(html);
                         });
                     });
