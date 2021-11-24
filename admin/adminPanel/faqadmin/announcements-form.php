@@ -81,7 +81,7 @@ require_once "./faqadmin/config1.php";
 
     $.ajax({
         type: "POST",
-        url: "../../blogAdmin/api.php/?q=postAnnouncement",
+        url: "../blogAdmin/api.php/?q=postAnnouncement",
         data : formData,
         cache: false,
         processData: false,
@@ -91,7 +91,8 @@ require_once "./faqadmin/config1.php";
             window.location.reload();
         },
         error: function(xhr, status, error){
-            alert("Fill in the details");
+            window.location.reload();
+            // alert("Fill in the details");
         },
     });
     }
