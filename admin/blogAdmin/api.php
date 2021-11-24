@@ -542,7 +542,7 @@ function postAnnouncement(){
     $fileextstored = array('png','jpg','jpeg');
     
     if(in_array($filecheck,$fileextstored)){
-        $destinationfile = 'upload/announcements/'.$filename;
+        $destinationfile = './upload/announcements/'.$filename;
         $uploadLocation = '../../upload/announcements/'.$filename;
         move_uploaded_file($filetemppath,$uploadLocation);
 
