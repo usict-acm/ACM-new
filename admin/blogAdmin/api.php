@@ -806,26 +806,16 @@ function saveForm(){
 function dataForm(){
     $database = new Database();
     $db = $database->connect();
-    $form = new Form($db);
-    $txtTitle = $_POST["responses"];
-
-    //  echo.json_encode
-    // $name = "event 1";
+    // print_r($_POST);
+    // $txtTitle = $_REQUEST["responses"];
+    $txtTitle = $_REQUEST["res"];
     // print_r($txtTitle);
+    // echo gettype($txtTitle);
+    $form = new Form($db);
+
     $value = explode(" ",$txtTitle[0]);
     $val = join("_",$value);
-    // echo $val;
-    $form->saveDataResponsesInTable($val,$txtTitle);
-    // $response = array();
-    // array_push($response,$val);
-
-    // for($i = 0; $i < 3; $i++){
-    //     $response_array = array();
-    //     array_push($response,$response_array);
-    // }
-
-    // $form->saveFormInFormsTable($name,$request);
-    // $result = $form->createResponseTable($request);
+    $form->saveDataResponsesInTable($val,json_decode($txtTitle));
 }
 
 $q = $_GET['q'];

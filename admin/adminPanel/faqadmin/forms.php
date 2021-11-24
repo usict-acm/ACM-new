@@ -77,6 +77,14 @@ require_once "config.php";
     </style>
 </head>
 
+
+<script>
+    function check(){
+        console.log($('#required1').is(':checked'))
+
+    }
+                                        </script>
+
 <body>
 
     <div class="wrapper">
@@ -104,20 +112,15 @@ require_once "config.php";
                                 </div>
                                 <div id="required">
                                     <label > Required?</label>
-                                    <input onChange= type="checkbox" id="required1" name="required1[]" />
-                                    <script>
-                                        console.log($("#required1").val())
-                                        </script>
+                                    <input onChange="check();" type="checkbox" id="required1" name="required1[]" value="valueCheckBox" />                                    
                                 </div>
                             </div>
                             </div>
                             <a  id="addBtn" class=" repeatBtn btn btn-primary" >Add More Field?</a>
-
                         </div>
                         <hr>
                         <button id="submitForm" class="btn btn-primary" type="submit"  name="submit" value="submit">Submit</button>
                         <a href="../index.php" class="btn btn-default">Cancel</a>
-
                     </form>
                     <p id="pText"></p>
                 </div>
@@ -140,7 +143,7 @@ require_once "config.php";
                                 </div>
                                 <div id="required">
                                 <label > Required?</label>
-                                <input type="checkbox" id="required1" name="required1[]" />
+                                <input type="checkbox" id="required1" name="required1[]" value="valueCheckBox" />
                                 </div>
                             </div>
                             </div>`;
@@ -148,7 +151,7 @@ require_once "config.php";
                     $(document).ready(function(e){
                         $("#addBtn").click(function(e){
                             $("#container").append(html);
-                        })
+                        });
                     });
 
 </script>
@@ -162,8 +165,12 @@ require_once "config.php";
         array_push($result,$_POST["formNameMain"]);
         $fieldName= $_POST['fieldName'];
         $dropDown= $_POST['dropDown'];
-        $required1=$_POST['required1'];
-
+        if(isset($_POST["required1"])){
+            $required1 = true;
+        } else {
+            $required1 = false;
+        }
+        // echo $required1;
         for($i=0;$i<sizeof($fieldName);$i++){
             $subArr=array();
             array_push($subArr,$fieldName[$i]);

@@ -57,7 +57,7 @@
 
     document.getElementById("buttonSubmit").addEventListener("click", function() {
     // function submit_form(){
-      console.log("data inside",data);
+      // console.log("data inside",data);
       // empty array initialize
       var res = [];
       res.push(data[0].formName);
@@ -71,41 +71,29 @@
         tableData.push(data[i].fieldName);
         var field = "field"+i;
         tableData.push($(`#${field}`).val());
-        // tableData["fieldValue"] = $(`#${field}`).val();
         res.push(tableData);
 
       }
 
       var formData = new FormData();
-      // formData.append('formTitle', data[0].formName);
       formData.append('responses', res);
 
-      // for(let i=0; i<data.length; i++){
-      //   var field = "field"+i;
-      //   formData.append(`${data[i].fieldName}`,$(`#${field}`).val());
-      // }
-      for (var key of formData.keys()) {
-       console.log("key formData",key);
-    }
-      for (var value of formData.values()) {
-       console.log("value formData",value);
-    }
-console.log("bjhzb", res);
-
+      let ur = "../admin/blogAdmin/api.php/?q=dataForm";
       $.ajax({
           type: "POST",
-          url: "../admin/blogadmin/api.php?q=dataForm",
-          data : formData,
-          cache: false,
-          processData: false,
-          contentType: false,
+          url: ur,
+          data : JSON.stringify(res),
+          // contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+          // cache: false,
+          // processData: false,
+          // contentType: false,
           success: function(data){
-              alert(data.message);
+              alert(data);
               window.location.reload();
           },
-          // error: function(xhr, status, error){
-          //     alert("Fill in the details");
-          // },
+          error: function(xhr, status, error){
+              alert("Fill in the details");
+          },
       });
     // }
   });

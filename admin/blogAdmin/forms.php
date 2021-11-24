@@ -128,23 +128,21 @@
 
           public function saveDataResponsesInTable($name,$txtTitle) {
                $tableName = "responses_" . $name;
-               $one = "INSERT INTO " . $tableName . "(";
+               $one = "INSERT INTO " . $txtTitle[0] . "(";
                $two = "";
                $three = "";
-               // var_dump($txtTitle);
-
-               for($i=1; $i<count($txtTitle)-1; $i++){
+                  
+               for($i=1; $i<count($txtTitle[1])-1; $i++){
                     $two = $two . $txtTitle[$i][0] . ",";
-                    $three = $three . "'" . $txtTitle[$i][1] . "'"  . ",";
+                    $three = $three . '"' . $txtTitle[$i][1] . '"'  . ",";
                }
 
-               $countw = count($txtTitle)-1;
+               $countw = count($txtTitle[1])-1;
                $two = $two . $txtTitle[$countw][0] . ") VALUES(";
-               $three = $three . "'" . $txtTitle[$countw][1] . "'" . ')';
+               $three = $three . '"' . $txtTitle[$countw][1] . '"' . ')';
 
                $query = $one . $two . $three . ";";
                $this->conn->query($query);
-               
           }
      }
 
