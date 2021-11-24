@@ -2448,3 +2448,16 @@ ul {
 .team-mobile-btn {
 	margin-top: -40px;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.imag {
+		width: 11rem;
+		height: 11rem;
+	}
+}
+
+@media (min-width: 500px) and (max-width: 767px) {
+	.imag {
+		margin: auto;
+	}
+}
