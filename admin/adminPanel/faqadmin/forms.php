@@ -41,6 +41,10 @@
         #addBtn{
             margin-left:165px; 
         }
+        #lastThree{
+            position:relative;
+            top:-40px;
+        }
         #dropDown{
             /* margin-left:20px;  */
             /* float:left; */
@@ -59,6 +63,31 @@
             left:220px;
             top:-27px;
         }
+        .topCheck{
+            position: relative;
+            top:-40px;
+            right:290px;
+        }
+        .topCheck2{
+            position: relative;
+            top:-55px;
+            right:290px;
+        }
+        .topCheck1{
+            position: relative;
+            top:-55px;
+            right:290px;
+        }
+        .topPlus{
+            position: relative;
+            top:-55px;
+            right:290px;
+        }
+        .plus{
+            position: relative;
+            top:-40px;
+            right:300px;
+        }
         header a,
         header a:hover {
             text-decoration: none;
@@ -66,7 +95,10 @@
         }
     </style>
 </head>
+<script>
+let count=0;
 
+</script>
 <body>
 
     <div class="wrapper">
@@ -86,9 +118,9 @@
                                 <input type="text" id="fieldName" class='form-control alignment123 titleField' name="fieldName[]" placeholder="Enter Field Name" />
                                 <div class="alignment2">
                                     <label>Choose Answer Type:</label>
-                                    <select  id="dropDown" name="dropDown[]" name="cars" id="cars">
+                                    <select  id="dropDown" name="dropDown[]" onchange="changeDD()" name="cars" id="cars">
                                         <option value="">Select an Option</option>
-                                        <option value="checkbox">Checkbox</option>
+                                        <option value="checkbox" >Checkbox</option>
                                         <option value="text">Short answer</option>
                                         <option value="text">Paragraph</option>
                                     </select>
@@ -97,43 +129,78 @@
                                     <label > Required?</label>
                                     <input type="checkbox" id="required1" name="required1[]"  />
                                 </div>
+                                <div class="form-group" id="innerCheck"+count>
+                                    
+                                </div>
                             </div>
                             </div>
+                            <div id="lastThree">
                             <a  id="addBtn" class=" repeatBtn btn btn-primary" >Add More Field?</a>
 
-                        </div>
+                        <script></script>
                         <hr>
-                        <input id="submitForm"class="btn btn-primary" type="submit"  name="submit" value="submit" />
+                        <button id="submitForm" class="btn btn-primary" type="submit"  name="submit" value="submit">Submit</button>
                         <a href="../index.php" class="btn btn-default">Cancel</a>
+                        </div>
+                        </div>
                     </form>
-                    <p id="pText"></p>
                 </div>
             </div>
         </div>
     </div>
-    
-<script type="text/javascript">
 
+<script type="text/javascript">
+let prevCheckbox=`  <div class="col-xs-7">
+                        <input type="text" id="ex2" class='form-control topCheck topCheck1 'name="" placeholder="Fill only if checkbox is selected" />
+                    </div>
+                    <a id="plusBtn${count}" class=" btn btn-primary plus topPlus" onclick="myFunc()">+</a>`;
+
+function changeDD(){
+        var eva = document.getElementById("dropDown");
+
+        var strUser = eva.value;
+        // console.log(strUser);
+        if(strUser==="checkbox"){
+            // console.log(`${#container}`);
+            console.log(document.getElementById('container'));
+            $("#container").append(prevCheckbox);
+        }
+}
         var html=`          <div>
                             <div class="form-group">
                                 <input type="text" name="fieldName[]" id="childFieldName" class='form-control alignment123 titleField' placeholder="Enter Field Name" />
                                 <div class="alignment2">
                                     <label>Choose Answer Type:</label>
-                                    <select   id="dropDown"  name="dropDown[]" name="cars" id="cars">
+                                    <select   id="dropDown"  name="dropDown[]" name="cars"  onchange="changeDD()" id="cars">
                                         <option value="">Select an Option</option>
-                                        <option value="checkbox">Checkbox</option>
-                                        <option value="textarea">Textarea</option>
+                                        <option value="checkbox">checkbox</option>
+                                        <option value="text">Short answer</option>
+                                        <option value="text">Paragraph</option>
                                     </select>
                                 </div>
                                 <div id="required">
                                 <label > Required?</label>
                                 <input type="checkbox" id="required1" name="required1[]" value="true" />
                                 </div>
+                                
                             </div>
                             </div>`;
+        let checkboxHTML=`  <div class="form-group">
+                                <div class="col-xs-7">
+                                <input type="text" id="ex2" class='form-control topCheck topCheck2'name="" placeholder="Fill only if checkbox is selected" />
+                                </div>
+                            </div>`;
+                                
+                            
+                            function myFunc(){
+                                $("#container").append(checkboxHTML);
+                            }
+                             
 
                     $(document).ready(function(e){
                         $("#addBtn").click(function(e){
+                            count++;
+                            // console.log(count);
                             $("#container").append(html);
                         })
                     });
@@ -181,6 +248,9 @@
         $form->saveFormInFormsTable($name);
         $form->saveFormFields($name,$request);
         $result = $form->createResponseTable($request);
+        echo "<script>window.location.replace('http://localhost/ACM-new/admin/adminPanel/index.php?table=formCreation')</script>";
+
+        
     }
 ?>
 </body>

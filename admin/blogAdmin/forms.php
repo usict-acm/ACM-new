@@ -116,4 +116,17 @@
                $stmt = $this->conn->query($query);
                return $stmt;
              }
+
+          public function latestID(){
+               $query = ' SELECT formID FROM forms ORDER BY formID DESC LIMIT 1; ';
+               $stmt = $this->conn->query($query);
+               
+               $countID =  $stmt->fetch_assoc();
+               foreach ($countID as $key => $item) {
+                    $count = $item;
+                }
+               return $count;
+               
+          }
      }
+
