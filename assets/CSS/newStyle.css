@@ -537,7 +537,11 @@ a:hover {
 .s-form-group:hover {
 	color: #ffffff;
 }
-
+@media screen and (max-height:500px){
+	.s-form-group{
+		margin-bottom: 5px;
+	}
+}
 .contact-button:active {
 	color: #fff;
 	border: none;
@@ -2199,6 +2203,16 @@ ul {
 	border-radius: 0 10px 10px 0;
 }
 
+@media screen and (max-height:500px){
+	.holderc{
+		height: 16px;
+	}
+}
+@media screen and (max-width:796px){
+	.contactUs{
+		border-radius: 10px;
+	}
+}
 .contact-btn {
 	margin: 10px 0px 0px 12px;
 }

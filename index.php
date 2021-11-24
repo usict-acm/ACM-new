@@ -470,7 +470,7 @@
 							<input type="text" name="college" class="form-control" placeholder="College/ Organization" />
 						</div>
 					</div>
-					<textarea type="text" name="message" rows="5" placeholder="Message *" class="form-control col-md-12 contact-message"></textarea>
+					<textarea type="text" name="message" rows="5" placeholder="Message *" class="form-control col-md-12 contact-message holderc"></textarea>
 					<div class="row">
 						<button type="submit" class="btn btn-primary s-form-group contact-btn col-md-3 col-sm-2">Submit</button>
 					</div>
