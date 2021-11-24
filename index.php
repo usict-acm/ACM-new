@@ -22,7 +22,7 @@
 				<a href="./"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
 			</div>
 		</div>
-		<button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="margin-right:2rem;">
 			<i class="fas fa-bars text-black"></i>
 		</button>
 		<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
@@ -83,9 +83,9 @@
 			<div class="swiper-button-next"></div>
 			<div class="swiper-button-prev"></div>
 		</div>
-		<div id="typewriter">
+		<!-- <div id="typewriter">
 			<span class="typewriter-box" data-wait="400" data-content='["USICT ACM STUDENT CHAPTER"]'> </span>
-		</div>
+		</div> -->
 	</section>
 	<!-- end of hero slider -->
 
@@ -108,11 +108,11 @@
 					computing world as well as allow them to understand the advancements going on in the computing
 					sphere worldwide.
 				</p>
-				<div class="py-3 mt-2 d-md-flex justify-content-sm-center">
-					<div class="col-md-4 col mb-2">
+				<div class="py-3 mt-2 d-lg-flex justify-content-sm-center">
+					<div class=" col mb-2">
 						<a href="./about.php" class="about-button">Know More</a>
 					</div>
-					<div class="col-md-4 col">
+					<div class=" col">
 						<div class="drop-down">
 							<p>ACM Newsletter</p>
 							<i class="fas fa-chevron-down arrow"></i>
@@ -150,8 +150,8 @@
 				<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-blue"> Blogs</span></h2>
 			</div>
 			<div class="b-container" id="threeBlogsRow"></div>
-			<div class="py-3 mt-2 d-md-flex justify-content-sm-center">
-				<div class="col-md-2 col mb-2">
+			<div class="py-3 mt-2 d-sm-flex justify-content-sm-center">
+				<div class="col-lg-3 col-md-6 col-9 mb-2 mx-auto">
 					<a href="./blogs.php" class="about-button blog-mobile-btn">Read More Blogs</a>
 				</div>
 			</div>
@@ -240,7 +240,7 @@
 					</div>
 
 
-					<div class="col-md-8">
+					<div class="col-md-8 webTeam">
 						<div class="our-team-row row">
 							<div class="our-team col-md-6 col-lg-4">
 								<div class="our-team-right">
@@ -402,8 +402,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="py-3 mt-2 d-md-flex justify-content-sm-center">
-			<div class="col-md-2 col mb-2 mt-4 mt-sm-0">
+		<div class="py-3 mt-2 d-flex justify-content-sm-center">
+			<div class="col-lg-2 col-md-4 col mb-2 mt-4 mt-lg-0">
 				<a href="./team.php" class="about-button team-mobile-btn">Meet the Team</a>
 			</div>
 		</div>

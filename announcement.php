@@ -77,11 +77,11 @@
 
                 echo "<div class='row det-row'>";
                 
-                echo "<div class='col-md-5 list'>";
-                echo "<img class='imag imag_trell' src=" . $row["poster"] . " alt=''>";
+                echo "<div class='col-lg-5 list text-center'>";
+                echo "<img class='imag imag_trell mx-auto' src=" . $row["poster"] . " alt=''>";
                 echo "</div>";
 
-                echo "<div class='col-md-7 divide'>";
+                echo "<div class='col-lg-7 divide'>";
                         echo "<div class='detai'>";
                             echo "<p>" . $row["description"] . " ";
                             echo "<br> <p>Date : " . $row["startDate"] . "  to  " . $row["endDate"] ." </p>";
