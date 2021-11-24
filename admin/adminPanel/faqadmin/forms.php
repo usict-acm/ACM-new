@@ -98,7 +98,14 @@
 <script>
 let count=0;
 
-</script>
+
+<script>
+    function check(){
+        console.log($('#required1').is(':checked'))
+
+    }
+                                        </script>
+
 <body>
 
     <div class="wrapper">
@@ -127,7 +134,7 @@ let count=0;
                                 </div>
                                 <div id="required">
                                     <label > Required?</label>
-                                    <input type="checkbox" id="required1" name="required1[]"  />
+                                    <input onChange="check();" type="checkbox" id="required1" name="required1[]" value="valueCheckBox" />                                    
                                 </div>
                                 <div class="form-group" id="innerCheck"+count>
                                     
@@ -136,8 +143,7 @@ let count=0;
                             </div>
                             <div id="lastThree">
                             <a  id="addBtn" class=" repeatBtn btn btn-primary" >Add More Field?</a>
-
-                        <script></script>
+                        </div>
                         <hr>
                         <button id="submitForm" class="btn btn-primary" type="submit"  name="submit" value="submit">Submit</button>
                         <a href="../index.php" class="btn btn-default">Cancel</a>
@@ -180,7 +186,7 @@ function changeDD(){
                                 </div>
                                 <div id="required">
                                 <label > Required?</label>
-                                <input type="checkbox" id="required1" name="required1[]" value="true" />
+                                <input type="checkbox" id="required1" name="required1[]" value="valueCheckBox" />
                                 </div>
                                 
                             </div>
@@ -202,7 +208,7 @@ function changeDD(){
                             count++;
                             // console.log(count);
                             $("#container").append(html);
-                        })
+                        });
                     });
 
 </script>
@@ -216,8 +222,12 @@ function changeDD(){
         array_push($result,$_POST["formNameMain"]);
         $fieldName= $_POST['fieldName'];
         $dropDown= $_POST['dropDown'];
-        $required1=$_POST['required1'];
-
+        if(isset($_POST["required1"])){
+            $required1 = true;
+        } else {
+            $required1 = false;
+        }
+        // echo $required1;
         for($i=0;$i<sizeof($fieldName);$i++){
             $subArr=array();
             array_push($subArr,$fieldName[$i]);
@@ -242,15 +252,13 @@ function changeDD(){
             $field_array = array();
             array_push($field_array,$result[$i][0]);
             array_push($field_array,$result[$i][1]);
+            array_push($field_array,$result[$i][2]);
             array_push($request,$field_array);
         }
 
-        $form->saveFormInFormsTable($name);
-        $form->saveFormFields($name,$request);
+        $form->saveFormInFormsTable($name,$request);
         $result = $form->createResponseTable($request);
         echo "<script>window.location.replace('http://localhost/ACM-new/admin/adminPanel/index.php?table=formCreation')</script>";
-
-        
     }
 ?>
 </body>

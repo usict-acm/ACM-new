@@ -53,31 +53,19 @@ require_once "config1.php";
 
     <?php
     include_once '../blogAdmin/forms.php';
-    //      // Instantiate DB & connect
         $database = new Database();
         $db = $database->connect();
-        
-    //    // Instantiate blog post object
-        $post = new Form($db);
-    
+        $post = new Form($db);    
     ?>
 
     <?php
     $formID = $post->latestID();
-    // echo ($formID);
-    
     ?>
 
     <script>
         function copy(){
-            // console.log("hello world!")
-            
-
-            var copyText = "http://localhost/ACM-new/UI/index.php?Id=" + <?php echo $formID ?>;
+            var copyText = "http://localhost/ACM-new/UI/index.php?Id=" + '<?php echo $formID ?>';
             navigator.clipboard.writeText(copyText);
-            
-            // console.log(copyText)
-
         }
     </script>
     
@@ -89,14 +77,14 @@ require_once "config1.php";
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-header"></div>
-                    <h2>Your form was created.</h2> 
+                    <h2>Your form has been created.</h2> 
                     <br>
-                    <h2>Copy the form link from here.</h2><br>
+                    <h2>You may copy the link from below.</h2><br>
                 <div>
             <div>
         <div>
     <div>
-    <button class="btn btn-primary" onclick=copy()>Here</button>
+    <button class="btn btn-primary" onclick=copy()>Copy</button>
 
     
 </body>

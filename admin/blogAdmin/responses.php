@@ -52,7 +52,7 @@
     ?>
 
     <script>
-        let urlll = './api.php/?q=readResponses&Id=' + <?php echo $ID ?>;
+        let urlll = './api.php/?q=readResponses&Id=' + '<?php echo $ID ?>';
         $(document).ready(function() {       
             getdata();
         });
@@ -62,7 +62,7 @@
                 type: 'GET',
                 url: urlll,
                 success: function(data) {
-                    console.log(data);
+                    console.log("data responses",data);
                     let responses = document.getElementById("responsestable");
                     for(let i=0; i<data.length; i++){
                         var tr = "<tr>";

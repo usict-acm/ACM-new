@@ -21,26 +21,16 @@
                $this->conn = $db;
           }
 
-          public function saveFormInFormsTable($name){
-               $result = $this->conn->query("SELECT COUNT(*) FROM forms");
-               $r = $result->fetch_assoc();
-               foreach ($r as $key => $item) {
-                    $formID = $item;
-               }
+          public function saveFormInFormsTable($name,$request){
+               $formID = bin2hex(random_bytes(4));
                $query = "INSERT INTO `forms` (`formID`,`formName`) VALUES ('$formID','$name')";
                $this->conn->query($query);
-          }
 
-          public function saveFormFields($name,$request){
-               $result = $this->conn->query("SELECT COUNT(*) FROM forms");
-               $r = $result->fetch_assoc();
-               foreach ($r as $key => $item) {
-                    $formID = $item;
-               }
                for($i = 1; $i < count($request); $i++){
                     $valueText = $request[$i][0];
                     $valueType = $request[$i][1];
-                    $query = "INSERT INTO `fields` (`formID`,`formName`,`fieldName`,`fieldType`) VALUES ('$formID','$name','$valueText','$valueType')";
+                    $valueRequired = $request[$i][2];
+                    $query = "INSERT INTO `fields` (`formID`,`formName`,`fieldName`,`fieldType`, `required`) VALUES ('$formID','$name','$valueText','$valueType', '$valueRequired')";
                     $this->conn->query($query);
                }
           }
@@ -79,22 +69,30 @@
           }
 
           public function readAllResponses($ID,$formName) {
+
+               $q = "SELECT formName FROM forms WHERE formID='$ID'";
+               $r = $this->conn->query($q);
+
+               $form =  $r->fetch_assoc();
+               foreach ($form as $key => $item) {
+                    $formItem = $item;
+                }
                // Create query
-               // $formName = $formName;
-               // $value = explode(" ",$formName);
-               // $val = join("_",$value);
-               $tableName = "responses_" . $formName;
+               $value = explode(" ",$formItem);
+               $val = join("_",$value);
+               $tableName = "responses_" . $val;
                $query = 'SELECT * FROM ' . $tableName .'';                                 
                // echo $query;
-               $stmt = $this->conn->query($query); 
-               // echo "statement".$stmt;  
+               $stmt = $this->conn->query($query);   
                return $stmt;
                }
 
           public function readFields($id,$formname) {
                $value = explode("_",$formname);
                $val = join(" ",$value);
-               $query = ' SELECT f.* FROM fields f WHERE f.formID = '.$id.' '; 
+               // echo $id;
+               $query = "SELECT f.* FROM fields f WHERE f.formID='$id'"; 
+               // echo $query;
                $stmt = $this->conn->query($query); 
                // echo "statement".$stmt;  
                // echo $query;
@@ -103,7 +101,7 @@
           }
 
           public function countFields($id,$formname) {
-               $query = ' SELECT COUNT(*) FROM fields WHERE formID = '.$id.' '; 
+               $query = "SELECT COUNT(*) FROM fields WHERE formID='$id'"; 
                $stmt = $this->conn->query($query); 
                // echo "statement".$stmt;  
                // echo $query;
@@ -112,21 +110,39 @@
 
           public function fieldsQuery($Id) {
                // Create query
-               $query = 'SELECT * FROM fields WHERE formID='.$Id;
+               $query = "SELECT * FROM fields WHERE formID='$Id'";
                $stmt = $this->conn->query($query);
                return $stmt;
              }
 
           public function latestID(){
-               $query = ' SELECT formID FROM forms ORDER BY formID DESC LIMIT 1; ';
+               $query = 'SELECT formID FROM forms ORDER BY id DESC LIMIT 1';
                $stmt = $this->conn->query($query);
-               
                $countID =  $stmt->fetch_assoc();
                foreach ($countID as $key => $item) {
                     $count = $item;
                 }
+               echo $count;
                return $count;
-               
+          }
+
+          public function saveDataResponsesInTable($name,$txtTitle) {
+               $tableName = "responses_" . $name;
+               $one = "INSERT INTO " . $txtTitle[0] . "(";
+               $two = "";
+               $three = "";
+                  
+               for($i=1; $i<count($txtTitle[1])-1; $i++){
+                    $two = $two . $txtTitle[$i][0] . ",";
+                    $three = $three . '"' . $txtTitle[$i][1] . '"'  . ",";
+               }
+
+               $countw = count($txtTitle[1])-1;
+               $two = $two . $txtTitle[$countw][0] . ") VALUES(";
+               $three = $three . '"' . $txtTitle[$countw][1] . '"' . ')';
+
+               $query = $one . $two . $three . ";";
+               $this->conn->query($query);
           }
      }
 
