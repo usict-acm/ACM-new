@@ -3,7 +3,7 @@ import "../assets/css/error404.css"
 
 const Error404 = () => {
     return (
-        <>
+        <div className="Error_404">
               {/* <!-- Content Wrapper --> */}
     <div id="wrapper">
       <div className="container">
@@ -44,7 +44,7 @@ const Error404 = () => {
       {/* <!-- end container --> */}
     </div>
 
-        </>
+        </div>
     )
 }
 

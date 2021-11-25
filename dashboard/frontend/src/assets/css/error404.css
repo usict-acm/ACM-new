@@ -3,22 +3,16 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
-body {
+.Error_404 {
   color: #5a5a5a;
   font-family: "Lato", sans-serif;
-  margin-left: 1px;
+  overflow: hidden;
   position: relative;
-  height: 100%;
+  width: 100%;
+  height: 100vh;
   background-color: #266cc7d0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Montserrat", sans-serif;
-}
 
 ul {
   list-style: none;
@@ -26,7 +20,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: black;
 }
 
 /* TOP HEADER
@@ -110,9 +103,6 @@ a {
   border-radius: 0;
 }
 
-img {
-  background-size: auto;
-}
 
 .error {
   border-color: red !important;
@@ -176,7 +166,7 @@ img {
     Wrapper
 -------------------- */
 #wrapper {
-  margin-top: 5%;
+  padding-top: 5%;
   min-height: 100%;
   height: 100%;
   width: 100%;
@@ -199,9 +189,8 @@ img {
 --------------------*/
 .number {
   position: relative;
-  /* z-index: 100; */
+  z-index: 100;
   text-align: right;
-  margin-top: 79px;
 }
 
 .number .four {
@@ -211,7 +200,7 @@ img {
   background-image: url("../img/404/four.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  /* z-index: 19; */
+  z-index: 19;
   position: relative;
 }
 
@@ -224,7 +213,7 @@ img {
   background-size: 100%;
   background-position: 0px 20px;
   position: relative;
-  /* z-index: 18; */
+  z-index: 18;
   -moz-animation: 4s ease 0s normal none infinite zero;
   -moz-transform-origin: center top;
   -webkit-animation: zero 4s infinite ease-in-out;
@@ -320,12 +309,13 @@ img {
 .info {
   text-align: right;
   position: relative;
-  /* z-index: 999; */
+  z-index: 999;
+
 }
 
 .info h2 {
   font-size: 50px;
-  font-weight: 300;
+  font-weight: 500;
   color: #ffc938;
 }
 
@@ -346,8 +336,8 @@ img {
 
 .worker {
   position: absolute;
-  left: -100px;
-  top: 69px;
+  left: -10px;
+  top: -24px;
   width: 300px;
   height: 371px;
   background-size: 100%;
@@ -364,6 +354,12 @@ img {
 }
 .visible {
   visibility: visible;
+}
+
+@media screen and (max-width : 1200px) {
+  .worker{
+    left: -70px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -384,13 +380,9 @@ img {
     min-height: 0px;
     height: auto;
   }
-  #footer {
-    height: auto;
-    margin-top: 0;
-  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .brick {
     width: 256px;
   }
@@ -416,8 +408,8 @@ img {
   .worker {
     left: 10px;
     top: 300px;
-    width: 150px;
-    height: 200px;
+    width: 200px;
+    height: 260px;
   }
 
   .tools {
@@ -435,7 +427,11 @@ img {
     font-size: 16px;
   }
 }
-
+@media screen and (max-width : 500px) {
+    .worker{
+      width: 170px;
+    }
+}
 @media (max-width: 440px) {
   .brick {
     width: 156px;
@@ -502,9 +498,3 @@ img {
   }
 }
 
-@media (min-width: 350px) and (max-width: 1200px) {
-  .footer-info {
-    display: flex;
-    flex-direction: column !important;
-  }
-}
