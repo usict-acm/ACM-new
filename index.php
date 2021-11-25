@@ -22,7 +22,7 @@
 				<a href="./"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
 			</div>
 		</div>
-		<button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="margin-right:2rem;">
 			<i class="fas fa-bars text-black"></i>
 		</button>
 		<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
@@ -83,9 +83,9 @@
 			<div class="swiper-button-next"></div>
 			<div class="swiper-button-prev"></div>
 		</div>
-		<div id="typewriter">
+		<!-- <div id="typewriter">
 			<span class="typewriter-box" data-wait="400" data-content='["USICT ACM STUDENT CHAPTER"]'> </span>
-		</div>
+		</div> -->
 	</section>
 	<!-- end of hero slider -->
 
@@ -108,11 +108,11 @@
 					computing world as well as allow them to understand the advancements going on in the computing
 					sphere worldwide.
 				</p>
-				<div class="py-3 mt-2 d-md-flex justify-content-sm-center">
-					<div class="col-md-4 col mb-2">
+				<div class="py-3 mt-2 d-lg-flex justify-content-sm-center">
+					<div class=" col mb-2">
 						<a href="./about.php" class="about-button">Know More</a>
 					</div>
-					<div class="col-md-4 col">
+					<div class=" col">
 						<div class="drop-down">
 							<p>ACM Newsletter</p>
 							<i class="fas fa-chevron-down arrow"></i>
@@ -150,8 +150,8 @@
 				<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-blue"> Blogs</span></h2>
 			</div>
 			<div class="b-container" id="threeBlogsRow"></div>
-			<div class="py-3 mt-2 d-md-flex justify-content-sm-center">
-				<div class="col-md-2 col mb-2">
+			<div class="py-3 mt-2 d-sm-flex justify-content-sm-center">
+				<div class="col-lg-3 col-md-6 col-9 mb-2 mx-auto">
 					<a href="./blogs.php" class="about-button blog-mobile-btn">Read More Blogs</a>
 				</div>
 			</div>
@@ -240,170 +240,105 @@
 					</div>
 
 
-					<div class="col-md-8">
+					<div class="col-md-8 webTeam">
 						<div class="our-team-row row">
-							<div class="our-team col-md-6 col-lg-4">
+							<div class="our-team col-6 col-md-6 col-lg-4">
 								<div class="our-team-right">
 									<div class="social">										
-										<a href="https://www.linkedin.com/in/gauravj22/" target="_blank">
+										<a href="https://www.linkedin.com/in/harsh-goyal-195255b9/" target="_blank">
 										  <i class="fab fa-linkedin" arial-hidden="true"></i>
 										</a>
 									</div>
 									<div class="name">
-										<h5 class="text-center">Gaurav Jain</h5>
+										<h5 class="text-center">Harsh Goyal</h5>
 										<p class="text-center">Chair</p>
 									</div>	
-									<img src="./assets/images/team/Gaurav.png" alt="">
+									<img src="./assets/images/team/harshGoyal.png" alt="">
 								</div>
 							</div>
 
-							<div class="our-team col-md-6 col-lg-4">
+							<div class="our-team col-6 col-md-6 col-lg-4">
 								<div class="our-team-right">
 									<div class="social">										
-										<a href="https://www.linkedin.com/in/vardaan-grover-8a64141a0/" target="_blank">
+										<a href="https://www.linkedin.com/in/anuj-talwar/" target="_blank">
 										  <i class="fab fa-linkedin" arial-hidden="true"></i>
 										</a>
 									</div>
 									<div class="name">
-										<h5 class="text-center">Vardaan Grover</h5>
+										<h5 class="text-center">Anuj Talwar</h5>
 										<p class="text-center">Vice Chair</p>
 									</div>	
-									<img src="./assets/images/team/vardaan.jpg" alt="">
+									<img src="./assets/images/team/Anuj.jpg" alt="">
 								</div>
 							</div>
 
-							<!-- <div class="col-md-6 col-lg-4">
-								<div class="our-team-box">
-									<img src="./assets/images/team/vardaan.jpg" alt="">
-									<div class="t-overlay">
-									<div class="icons">
-										<a href="https://www.linkedin.com/in/vardaan-grover-8a64141a0/" target="_blank"><i class="fab fa-linkedin"></i></a>
-										<h5 class="text-center">Vardaan Grover</h5>
-										<p class="fadddd">Vice Chair</p>
-									</div>				
-									</div>
-								</div>
-							</div> -->
-							<div class="our-team col-md-6 col-lg-4">
+							<div class="our-team col-6 col-md-6 col-lg-4">
 								<div class="our-team-right">
 									<div class="social">										
-										<a href="https://www.linkedin.com/in/akshad-bhandula-073202113/" target="_blank">
+										<a href="https://www.linkedin.com/in/tarun-shekhawat-037091194/" target="_blank">
 										  <i class="fab fa-linkedin" arial-hidden="true"></i>
 										</a>
 									</div>
 									<div class="name">
-										<h5 class="text-center">Akshad Bhandula</h5>
+										<h5 class="text-center">Tarun</h5>
 										<p class="text-center">Secretary</p>
 									</div>	
-									<img src="./assets/images/team/Akshad.jpg" alt="">
+									<img src="./assets/images/team/Tarun.jpg" alt="">
 								</div>
 							</div>
 
-							<!-- <div class="col-md-6 col-lg-4">
-								<div class="our-team-box">
-									<img src="./assets/images/team/Akshad.jpg" alt="">
-									<div class="t-overlay">
-									<div class="icons">
-										<a href="https://www.linkedin.com/in/akshad-bhandula-073202113/" target="_blank"><i class="fab fa-linkedin"></i></a>
-										<h5 class="text-center">Akshad Bhandula</h5>
-										<p class="fadddd">Secretary</p>
-									</div>				
-									</div>
-								</div>
-							</div> -->
-
-							<div class="our-team col-md-6 col-lg-4">
+							<div class="our-team col-6 col-md-6 col-lg-4">
 								<div class="our-team-right">
 									<div class="social">										
-										<a href="https://www.linkedin.com/in/divyansh-rastogi-08a44a171/" target="_blank">
+										<a href="https://www.linkedin.com/in/karan-deep/" target="_blank">
 										  <i class="fab fa-linkedin" arial-hidden="true"></i>
 										</a>
 									</div>
 									<div class="name">
-										<h5 class="text-center">Divyansh Rastogi</h5>
-										<p class="text-center">Joint Secretary</p>
-									</div>	
-									<img src="./assets/images/team/Divyansh.jpg" alt="">
-								</div>
-							</div>
-
-							<!-- <div class="col-md-6 col-lg-4">
-								<div class="our-team-box">
-									<img src="./assets/images/team/Divyansh.jpg" alt="">
-									<div class="t-overlay">
-									<div class="icons">
-										<a href="https://www.linkedin.com/in/divyansh-rastogi-08a44a171/" target="_blank"><i class="fab fa-linkedin"></i></a>
-										<h5 class="text-center">Divyansh Rastogi</h5>
-										<p class="fadddd">Joint Secretary</p>
-									</div>				
-									</div>
-								</div>
-							</div> -->
-
-							<div class="our-team col-md-6 col-lg-4">
-								<div class="our-team-right">
-									<div class="social">										
-										<a href="https://www.linkedin.com/in/chaitan-dev/" target="_blank">
-										  <i class="fab fa-linkedin" arial-hidden="true"></i>
-										</a>
-									</div>
-									<div class="name">
-										<h5 class="text-center">Chaitan Dev</h5>
+										<h5 class="text-center">Karan Deep Singh</h5>
 										<p class="text-center">Treasurer</p>
 									</div>	
-									<img src="./assets/images/team/chaitanDev.jpg" alt="">
+									<img src="./assets/images/team/Karan.jpeg" alt="">
 								</div>
 							</div>
 
-							<!-- <div class="col-md-6 col-lg-4">
-								<div class="our-team-box">
-									<img src="./assets/images/team/chaitanDev.jpg" alt="">
-									<div class="t-overlay">
-									<div class="icons">
-										<a href="https://www.linkedin.com/in/chaitan-dev/" target="_blank"><i class="fab fa-linkedin"></i></a>
-										<h5 class="text-center">Chaitan Dev</h5>
-										<p class="fadddd">Treasurer</p>
-									</div>				
-									</div>
-								</div>
-							</div> -->
-
-							<div class="our-team col-md-6 col-lg-4">
+							<div class="our-team col-6 col-md-6 col-lg-4">
 								<div class="our-team-right">
 									<div class="social">										
-										<a href="https://www.linkedin.com/in/anmol-goel-13b447178/" target="_blank">
+										<a href="https://www.linkedin.com/in/moulik-agrawal/" target="_blank">
 										  <i class="fab fa-linkedin" arial-hidden="true"></i>
 										</a>
 									</div>
 									<div class="name">
-										<h5 class="text-center">Anmol Goel</h5>
+										<h5 class="text-center">Moulik Agrawal</h5>
 										<p class="text-center">Web Chair</p>
 									</div>	
-									<img src="./assets/images/team/anmol.jpeg" alt="">
+									<img src="./assets/images/team/Moulik.jpg" alt="">
 								</div>
 							</div>
 
-							<!-- <div class="col-md-6 col-lg-4">
-								<div class="our-team-box">
-									<img src="./assets/images/team/anmol.jpeg" alt="">
-									<div class="t-overlay">
-									<div class="icons">
-										<a href="https://www.linkedin.com/in/chaitan-dev/" target="_blank"><i class="fab fa-linkedin"></i></a>
-										<h5 class="text-center">Anmol Jain</h5>
-										<p class="fadddd">Web Chair</p>
+							<div class="our-team col-6 col-md-6 col-lg-4">
+								<div class="our-team-right">
+									<div class="social">										
+										<a href="https://www.linkedin.com/in/anurag-parashar/" target="_blank">
+										  <i class="fab fa-linkedin" arial-hidden="true"></i>
+										</a>
 									</div>
-									</div>
-									</div>
+									<div class="name">
+										<h5 class="text-center">Anurag Parashar</h5>
+										<p class="text-center">Membership Chair</p>
+									</div>	
+									<img src="./assets/images/team/anurag.jpg" alt="">
 								</div>
-							</div> -->
+							</div>
 
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="py-3 mt-2 d-md-flex justify-content-sm-center">
-			<div class="col-md-2 col mb-2 mt-4 mt-sm-0">
+		<div class="py-3 mt-2 d-flex justify-content-sm-center">
+			<div class="col-lg-2 col-md-4 col mb-2 mt-4 mt-lg-0">
 				<a href="./team.php" class="about-button team-mobile-btn">Meet the Team</a>
 			</div>
 		</div>
@@ -470,7 +405,7 @@
 							<input type="text" name="college" class="form-control" placeholder="College/ Organization" />
 						</div>
 					</div>
-					<textarea type="text" name="message" rows="5" placeholder="Message *" class="form-control col-md-12 contact-message"></textarea>
+					<textarea type="text" name="message" rows="5" placeholder="Message *" class="form-control col-md-12 contact-message holderc"></textarea>
 					<div class="row">
 						<button type="submit" class="btn btn-primary s-form-group contact-btn col-md-3 col-sm-2">Submit</button>
 					</div>
@@ -488,7 +423,7 @@
 				<div class="row justify-content-center align-items-center">
 					<div class="col-xl-4 col-md-4 mb-30">
 						<div class="single-cta justify-content-md-center">
-							<i class="fas fa-map-marker-alt"></i>
+							<i class="fas fa-map-marker-alt" style="margin-left: 8px;"></i>
 							<div class="cta-text">
 								<h4>Find us</h4>
 								<span>Dean Office, USICT, GGSIPU Sector 16C, Dwarka, Delhi</span>
@@ -506,8 +441,8 @@
 					</div>
 					<div class="col-xl-4 col-md-4 mb-30">
 						<div class="single-cta justify-content-md-center">
-							<i class="far fa-envelope-open"></i>
-							<div class="cta-text">
+							<i class="far fa-envelope-open" style="margin-left: 5px;"></i>
+							<div class="cta-text" style="padding-left: 10px;">
 								<h4>Mail us</h4>
 								<span><a href="mailto:info@usict.acm.org" target="_blank">info@usict.acm.org</a></span>
 							</div>

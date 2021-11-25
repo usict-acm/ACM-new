@@ -489,7 +489,7 @@ a:hover {
 }
 /* typewriter effect */
 #typewriter {
-	top: calc(50% - 3rem);
+	top: calc(40% - 3rem);
 	height: 5rem;
 	width: 53vw;
 	left: calc(50% - 25vw);
@@ -509,7 +509,7 @@ a:hover {
 	position: absolute;
 	content: '';
 	width: 5px;
-	height: 72%;
+	height: 3rem;
 	background: rgb(255, 255, 255);
 	margin: 0 0 0 1px;
 	bottom: 0.5rem;
@@ -537,7 +537,11 @@ a:hover {
 .s-form-group:hover {
 	color: #ffffff;
 }
-
+@media screen and (max-height:500px){
+	.s-form-group{
+		margin-bottom: 5px;
+	}
+}
 .contact-button:active {
 	color: #fff;
 	border: none;
@@ -903,11 +907,10 @@ ul {
 		top: 130px;
 	}
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 	.b-container {
-		display: block;
 		margin-top: 6px;
-		margin-left: 32%;
+		flex-direction: column;
 	}
 	.b-card {
 		margin: 0;
@@ -1133,6 +1136,7 @@ ul {
 	margin: 0 auto;
 	padding: 100px 5%;
 }
+
 @media screen and (max-width: 799px) {
 	.t-wrapper .t-module-team .t-team {
 		padding: 50px 0%;
@@ -1162,6 +1166,11 @@ ul {
 	border-radius: 50px;
 	bottom: 0;
 	opacity: 0.2;
+}
+@media (min-width: 768px) {
+	.webTeam {
+		border-left: 2px #cfcece solid;
+	}
 }
 @media screen and (max-width: 799px) {
 	.t-wrapper .t-module-team .t-team .t-title:before {
@@ -1685,7 +1694,8 @@ ul {
 	border-radius: 0.6rem;
 	line-height: 1;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
+	column-gap: 1rem;
 	align-items: baseline;
 	cursor: pointer;
 	transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
@@ -2193,6 +2203,16 @@ ul {
 	border-radius: 0 10px 10px 0;
 }
 
+@media screen and (max-height:500px){
+	.holderc{
+		height: 16px;
+	}
+}
+@media screen and (max-width:796px){
+	.contactUs{
+		border-radius: 10px;
+	}
+}
 .contact-btn {
 	margin: 10px 0px 0px 12px;
 }
@@ -2260,6 +2280,7 @@ ul {
 		width: 18rem;
 	}
 	#typewriter {
+		top: calc(50% - 3rem);
 		left: 0;
 		width: 100vw;
 	}
@@ -2268,6 +2289,7 @@ ul {
 	}
 	.typewriter-box::after {
 		bottom: 0.2rem;
+		height: 1.5rem;
 	}
 	.footer-logo .img-secondary {
 		max-width: 300px;
@@ -2425,4 +2447,17 @@ ul {
 
 .team-mobile-btn {
 	margin-top: -40px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.imag {
+		width: 11rem;
+		height: 11rem;
+	}
+}
+
+@media (min-width: 500px) and (max-width: 767px) {
+	.imag {
+		margin: auto;
+	}
 }
