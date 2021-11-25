@@ -11,14 +11,10 @@ function showcontact() {
 }
 function closecontact() {
 	document.getElementById('contact').style.display = 'none';
-	document.getElementById('contactus').style.display = 'block';
-	// document.getElementById('navbar').style.display = 'flex';
-	// document.getElementById('myCarousel').style.display = 'flex';
-	// document.getElementById('about1').style.display = 'block';
-	// document.getElementById('about2').style.display = 'block';
-	// document.getElementById('blogs').style.display = 'block';
-	// document.getElementById('team').style.display = 'block';
-	// document.getElementById('footer').style.display = 'block';
+	var fields = document.getElementsByClassName("form-control");
+	for (x in fields) {
+		fields[x].value = "";
+	}
 }
 // ****************************contact us function end*******************************************
 

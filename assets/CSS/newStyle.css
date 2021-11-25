@@ -2556,11 +2556,10 @@ ul {
   border-radius: 0 10px 10px 0;
 }
 
-@media screen and (max-height: 500px) {
-  .holderc {
-    height: 16px;
-  }
+.about-text {
+	font-size: 1.2rem;
 }
+
 @media screen and (max-width: 796px) {
   .contactUs {
     border-radius: 10px;
@@ -2568,6 +2567,11 @@ ul {
 }
 .contact-btn {
   margin: 10px 0px 0px 12px;
+}
+
+.contact-msg {
+  display: flex;
+  justify-content: space-around;
 }
 
 .contact-btn:hover {
@@ -2584,6 +2588,9 @@ ul {
   .about-us {
     margin-top: 120px;
   }
+  .about-text {
+	font-size: 1.1rem;
+}
   .about-us > div .text {
     margin-top: -10px;
   }
@@ -2605,7 +2612,7 @@ ul {
     margin-left: 10px;
   }
   .b-card img {
-    width: 200px;
+    width: 275px;
     height: 200px;
   }
   .b-card .b-infos {
@@ -2655,7 +2662,7 @@ ul {
 .tag {
   opacity: 0;
   transform: translate(0, 10vh);
-  transition: all 3s;
+  transition: all 2s;
 }
 
 .tag.visible {
@@ -2813,4 +2820,8 @@ ul {
   .imag {
     margin: auto;
   }
+}
+
+.form-row {
+  justify-content: space-evenly;
 }

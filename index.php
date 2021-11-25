@@ -101,7 +101,7 @@
 				<h2 class="mb-4 display-4 fw-bolder text-center text-md-start">
 					About <span class="text-blue">Our Chapter</span>
 				</h2>
-				<p class="text-secondary fs-5">
+				<p class="text-secondary about-text">
 					ACM Student Chapter, USICT is an official student body incepted in 2019 under the University
 					School USICT, GGSIPU. The chapter will conduct events including programming contests, talks by
 					renowned speakers, workshops etc.which give the students an exposure to the competitive
@@ -377,24 +377,26 @@
 				</div>
 				<form class="s-form" name="contact" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse" onsubmit="return validateform();" >
 					<h2 class="my-4 display-4 fw-bolder text-center">Contact<span class="text-blue"> Us</span></h2>
-					<div class="row">
-						<div class="form-group s-form-group col-md-6">
+					<div class="row form-row">
+						<div class="form-group s-form-group col-md-5">
 							<input type="text" name="name" class="form-control" placeholder="Name *" />
 						</div>
-						<div class="form-group s-form-group col-md-6">
+						<div class="form-group s-form-group col-md-5">
 							<input type="text" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Email *" />
 						</div>
 					</div>
-					<div class="row">
-					<div class="form-group s-form-group col-md-6">
+					<div class="row form-row">
+					<div class="form-group s-form-group col-md-5">
 							<input type="text" name="phone" class="form-control" placeholder="Phone No." />
 						</div>
-						<div class="form-group s-form-group col-md-6">
+						<div class="form-group s-form-group col-md-5">
 							<input type="text" name="college" class="form-control" placeholder="College/ Organization" />
 						</div>
 					</div>
-					<textarea type="text" name="message" rows="5" placeholder="Message *" class="form-control col-md-12 contact-message holderc"></textarea>
-					<div class="row">
+					<div class="contact-msg">
+					<textarea type="text" name="message" rows="5" placeholder="Message *" class="form-control col-md-11 contact-message"></textarea>
+					</div>
+					<div class="row contact-msg">
 						<button type="submit" class="btn btn-primary s-form-group contact-btn col-md-3 col-sm-2">Submit</button>
 					</div>
 				</form>
