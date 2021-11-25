@@ -778,10 +778,6 @@ ul {
 	color: #5b5a5b;
 }
 
-.social-menu ul li a i:hover {
-	color: #fff;
-}
-
 .social-menu ul li a {
 	display: block;
 	width: 50px;
@@ -796,10 +792,11 @@ ul {
 .social-menu ul li a:hover {
 	transform: translate(0, -10%);
 	color: #fff;
+	background-color: #0397fe;
 }
 
-.social-menu ul li a:hover {
-	background-color: #0397fe;
+.social-menu ul li a:hover i{
+	color: #fff;
 }
 
 /* **************************footer style end************************************************** */
@@ -1167,7 +1164,7 @@ ul {
 	bottom: 0;
 	opacity: 0.2;
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 	.webTeam {
 		border-left: 2px #cfcece solid;
 	}
@@ -2072,13 +2069,11 @@ ul {
 	max-height: 100%;
 }
 .our-team-left:hover {
-	width: 170px;
-	height: 170px;
+	padding: 10px;
+	/* width: auto; */
 }
 .our-team-right:hover {
 	padding: 20px;
-	width: 170px;
-	height: 170px;
 }
 .our-team-box:hover .social {
 	transition: 0.5s;
@@ -2101,7 +2096,7 @@ ul {
 	width: max-content;
 	color: black;
 	transition: 0.5s;
-	transform: translateY(130px);
+	transform: translateY(110px);
 }
 .our-team-right:hover .name {
 	color: black;
