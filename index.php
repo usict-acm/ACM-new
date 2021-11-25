@@ -109,11 +109,11 @@
 					sphere worldwide.
 				</p>
 				<div class="py-3 mt-2 d-lg-flex justify-content-sm-center">
-					<div class=" col mb-2">
+					<div class="col mb-2">
 						<a href="./about.php" class="about-button">Know More</a>
 					</div>
-					<div class=" col">
-						<div class="drop-down">
+					<div class="col">
+						<div class="drop-down about-button">
 							<p>ACM Newsletter</p>
 							<i class="fas fa-chevron-down arrow"></i>
 						</div>
@@ -244,11 +244,9 @@
 						<div class="our-team-row row">
 							<div class="our-team col-6 col-md-6 col-lg-4">
 								<div class="our-team-right">
-									<div class="social">										
-										<a href="https://www.linkedin.com/in/harsh-goyal-195255b9/" target="_blank">
-										  <i class="fab fa-linkedin" arial-hidden="true"></i>
-										</a>
-									</div>
+									<a class="social" class="social" href="https://www.linkedin.com/in/harsh-goyal-195255b9/" target="_blank">
+										<i class="fab fa-linkedin" arial-hidden="true"></i>
+									</a>
 									<div class="name">
 										<h5 class="text-center">Harsh Goyal</h5>
 										<p class="text-center">Chair</p>
@@ -258,12 +256,10 @@
 							</div>
 
 							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">
-									<div class="social">										
-										<a href="https://www.linkedin.com/in/anuj-talwar/" target="_blank">
-										  <i class="fab fa-linkedin" arial-hidden="true"></i>
-										</a>
-									</div>
+								<div class="our-team-right">										
+									<a class="social" href="https://www.linkedin.com/in/anuj-talwar/" target="_blank">
+										<i class="fab fa-linkedin" arial-hidden="true"></i>
+									</a>
 									<div class="name">
 										<h5 class="text-center">Anuj Talwar</h5>
 										<p class="text-center">Vice Chair</p>
@@ -273,12 +269,10 @@
 							</div>
 
 							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">
-									<div class="social">										
-										<a href="https://www.linkedin.com/in/tarun-shekhawat-037091194/" target="_blank">
-										  <i class="fab fa-linkedin" arial-hidden="true"></i>
-										</a>
-									</div>
+								<div class="our-team-right">										
+									<a class="social" href="https://www.linkedin.com/in/tarun-shekhawat-037091194/" target="_blank">
+										<i class="fab fa-linkedin" arial-hidden="true"></i>
+									</a>
 									<div class="name">
 										<h5 class="text-center">Tarun</h5>
 										<p class="text-center">Secretary</p>
@@ -288,12 +282,10 @@
 							</div>
 
 							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">
-									<div class="social">										
-										<a href="https://www.linkedin.com/in/karan-deep/" target="_blank">
-										  <i class="fab fa-linkedin" arial-hidden="true"></i>
-										</a>
-									</div>
+								<div class="our-team-right">										
+									<a class="social" href="https://www.linkedin.com/in/karan-deep/" target="_blank">
+										<i class="fab fa-linkedin" arial-hidden="true"></i>
+									</a>
 									<div class="name">
 										<h5 class="text-center">Karan Deep Singh</h5>
 										<p class="text-center">Treasurer</p>
@@ -303,12 +295,10 @@
 							</div>
 
 							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">
-									<div class="social">										
-										<a href="https://www.linkedin.com/in/moulik-agrawal/" target="_blank">
-										  <i class="fab fa-linkedin" arial-hidden="true"></i>
-										</a>
-									</div>
+								<div class="our-team-right">										
+									<a class="social" href="https://www.linkedin.com/in/moulik-agrawal/" target="_blank">
+										<i class="fab fa-linkedin" arial-hidden="true"></i>
+									</a>
 									<div class="name">
 										<h5 class="text-center">Moulik Agrawal</h5>
 										<p class="text-center">Web Chair</p>
@@ -318,12 +308,10 @@
 							</div>
 
 							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">
-									<div class="social">										
-										<a href="https://www.linkedin.com/in/anurag-parashar/" target="_blank">
-										  <i class="fab fa-linkedin" arial-hidden="true"></i>
-										</a>
-									</div>
+								<div class="our-team-right">										
+									<a class="social" href="https://www.linkedin.com/in/anurag-parashar/" target="_blank">
+										<i class="fab fa-linkedin" arial-hidden="true"></i>
+									</a>
 									<div class="name">
 										<h5 class="text-center">Anurag Parashar</h5>
 										<p class="text-center">Membership Chair</p>
@@ -423,7 +411,7 @@
 				<div class="row justify-content-center align-items-center">
 					<div class="col-xl-4 col-md-4 mb-30">
 						<div class="single-cta justify-content-md-center">
-							<i class="fas fa-map-marker-alt" style="margin-left: 8px;"></i>
+							<i class="fas fa-map-marker-alt my-auto" style="margin-left: 8px;"></i>
 							<div class="cta-text">
 								<h4>Find us</h4>
 								<span>Dean Office, USICT, GGSIPU Sector 16C, Dwarka, Delhi</span>
@@ -432,7 +420,7 @@
 					</div>
 					<div class="col-xl-4 col-md-4 mb-30">
 						<div class="single-cta justify-content-md-center">
-							<i class="fas fa-phone ro-nine"></i>
+							<i class="fas fa-phone ro-nine my-auto"></i>
 							<div class="cta-text">
 								<h4>Call us</h4>
 								<span><a href="tel:011-25302702">011-25302702</a></span>
@@ -441,7 +429,7 @@
 					</div>
 					<div class="col-xl-4 col-md-4 mb-30">
 						<div class="single-cta justify-content-md-center">
-							<i class="far fa-envelope-open" style="margin-left: 5px;"></i>
+							<i class="far fa-envelope-open my-auto" style="margin-left: 5px;"></i>
 							<div class="cta-text" style="padding-left: 10px;">
 								<h4>Mail us</h4>
 								<span><a href="mailto:info@usict.acm.org" target="_blank">info@usict.acm.org</a></span>
