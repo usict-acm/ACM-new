@@ -55,6 +55,7 @@ require_once "./faqadmin/config1.php";
 </head>
 
 <body>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
@@ -87,7 +88,8 @@ require_once "./faqadmin/config1.php";
             window.location.reload();
         },
         error: function(xhr, status, error){
-            alert("Fill in the details");
+            window.location.reload();
+            // alert("Fill in the details");
         },
     });
     }

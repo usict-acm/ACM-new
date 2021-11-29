@@ -437,11 +437,21 @@ function carouselFunctionAPI(){
     $post = new PostEvent($db);
     // echo "4";
     
-    //    echo $year;
-    // echo "helllo";
-    // $year = $_GET['year'];
-    // Blog post query
-    $result = $post->carouselquerry();
+    $numEvents = $post->countEvents();
+
+    foreach ($numEvents as $key => $item) {
+        $count = $item;
+    }
+    // echo $count;
+    // var_dump($count);
+    // echo sizeof($count);
+
+    if(sizeof($count==1)){
+        // echo "dfgh";
+        $result = $post->carouselquerryOne();
+    }else{
+        $result = $post->carouselquerry();
+    }
     // echo "5";
 
    // Check if any posts

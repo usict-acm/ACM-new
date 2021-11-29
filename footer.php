@@ -5,7 +5,7 @@
           <div class="col-lg-5 col-md-6">
             <div class="footer-info row">
               <div class="col-lg-4 col-12 d-flex justify-content-center">
-                <a href="#about" class="scrollto"
+                <a href="./index.php" class="scrollto"
                   ><img
                     src="assets/images/acm1.png"
                     alt="logo"
@@ -21,7 +21,7 @@
               <div
                 class="col-lg-8 col-12 d-flex justify-content-center align-items-center"
               >
-                <a href="#about" class="scrollto"
+                <a href="./index.php" class="scrollto"
                   ><img
                     src="assets/images/outstanding-website.png"
                     alt="logo"
@@ -46,33 +46,33 @@
             <ul style="padding-left: 0">
               <li>
                 <i class="fa fa-angle-right"></i>
-                <a href="https://www.ipu.ac.in/"> IPU-Home</a>
+                <a href="http://www.ipu.ac.in/" target="_blank"> IPU-Home</a>
               </li>
               <li>
                 <i class="fa fa-angle-right"></i>
-                <a href="https://india.acm.org/"> ACM-India</a>
+                <a href="https://india.acm.org/" target="_blank"> ACM-India</a>
               </li>
               <li>
                 <i class="fa fa-angle-right"></i>
-                <a href="https://www.acm.org/governance/acm-india-council">
+                <a href="https://www.acm.org/governance/acm-india-council" target="_blank">
                   ACM-India Office Bearers</a
                 >
               </li>
               <li>
                 <i class="fa fa-angle-right"></i>
                 <a
-                  href="https://amturing.acm.org/award_winners/reddy_9634208.cfm"
+                  href="https://amturing.acm.org/award_winners/reddy_9634208.cfm" target="_blank"
                 >
                   ACM Turing Award</a
                 >
               </li>
               <li>
                 <i class="fa fa-angle-right"></i>
-                <a href="./clubs.php">Our Clubs</a>
+                <a href="./clubs.php" target="_blank">Our Clubs</a>
               </li>
               <li>
                 <i class="fa fa-angle-right"></i>
-                <a href="./collab.php">Our Sponsors</a>
+                <a href="./collab.php" target="_blank">Our Sponsors</a>
               </li>
             </ul>
           </div>
@@ -89,12 +89,12 @@
             </p>
 
             <div class="social-links" style="    text-align-last: justify; font-size: x-large;">
-              <a href="https://www.facebook.com/acmusict" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="https://www.youtube.com/channel/UCI7her-mYrb7QM0t9S_nA_Q" class="youtube"><i class="fa fa-youtube"></i></a>
-              <a href="https://www.instagram.com/acmusict/" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="mailto:acmusit@gmail.com" class="envelope"><i class="fa fa-envelope-o"></i></a>
-              <a href="https://github.com/usict-acm/ACM-new" class="github"><i class="fab fa-github"></i></a>
-              <a href="https://discord.gg/74d2u7rv" class="discord"><i class="fab fa-discord"></i></a>
+              <a target="_blank" href="https://www.facebook.com/acmusict" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a target="_blank" href="https://www.youtube.com/channel/UCI7her-mYrb7QM0t9S_nA_Q" class="youtube"><i class="fa fa-youtube"></i></a>
+              <a target="_blank" href="https://www.instagram.com/acmusict/" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a target="_blank" href="mailto:acmusit@gmail.com" class="envelope"><i class="fa fa-envelope-o"></i></a>
+              <a target="_blank" href="https://github.com/usict-acm/ACM-new" class="github"><i class="fab fa-github"></i></a>
+              <a target="_blank" href="http://usict.acm.org/discord" class="discord"><i class="fab fa-discord"></i></a>
             </div>
 
           </div>
@@ -107,7 +107,7 @@
     <div class="copyright-content">
       <div class="container">
         <br>
-        <div class="copyright-text text-center">© Conceptualized,Designed and Developed by Office Bearers of ACM USICT chapter.</div>
+        <div class="copyright-text text-center">© Conceptualized,Designed and Developed by Office Bearers of USICT ACM chapter.</div>
       </div>
       <br>
     </div>
