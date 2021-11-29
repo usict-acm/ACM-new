@@ -63,17 +63,9 @@
                 </div>`;
 
     document.getElementById("buttonSubmit").addEventListener("click", function() {
-    // function submit_form(){
-      // console.log("data inside",data);
-      // empty array initialize
       var res = [];
       res.push(data[0].formName);
-      // formData.append('formTitle', data[0].formName);
       for(let i=0; i<data.length; i++){
-        // var tableData = {
-        // "fieldName": data[i].fieldName,
-        // "fieldValue": "",
-        // }
         var tableData = [];
         tableData.push(data[i].fieldName);
         var field = "field"+i;
@@ -82,27 +74,19 @@
 
       }
 
-      var formData = new FormData();
-      formData.append('responses', res);
-
-      let ur = "../admin/blogAdmin/api.php/?q=dataForm";
       $.ajax({
           type: "POST",
-          url: ur,
-          data : JSON.stringify(res),
-          // contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-          // cache: false,
-          // processData: false,
-          // contentType: false,
+          url: "../admin/blogAdmin/api.php/?q=dataForm",
+          data: {text1: JSON.stringify(res)},
           success: function(data){
               alert(data);
-              window.location.reload();
+              // window.location.reload();
           },
-          error: function(xhr, status, error){
-              alert("Fill in the details");
+          error: function(xhr, status, error){  
+              // alert("Fill in the details");
+              window.location.replace('./thankYou/index.php')
           },
       });
-    // }
   });
 
           },

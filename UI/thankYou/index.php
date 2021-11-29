@@ -13,8 +13,6 @@
       <h1 class="display-3">Thank You!!</h1>
 
       <span class="lead" style="padding-top:20px; padding-bottom:10px; border-bottom:1px solid black;" ><strong>Please check your email regularly</strong>. We will catch you there.</span>
-  
-
 
       <p style="margin-top:35px;">
         Having trouble? <a href="">Contact us</a>

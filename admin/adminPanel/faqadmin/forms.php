@@ -204,8 +204,9 @@ function changeDD(){
 </script>
 
 <?php
-    require_once "./config.php";
+    // require_once "./config.php";
     include_once '../blogAdmin/forms.php';
+    include_once '../blogAdmin/database.php';
 
     if(isset($_POST['submit'])){
         $result=array();

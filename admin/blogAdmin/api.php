@@ -806,16 +806,12 @@ function saveForm(){
 function dataForm(){
     $database = new Database();
     $db = $database->connect();
-    // print_r($_POST);
-    // $txtTitle = $_REQUEST["responses"];
-    $txtTitle = $_REQUEST["res"];
-    // print_r($txtTitle);
-    // echo gettype($txtTitle);
+    $textt = $_POST["text1"];
+    $txtTitle = json_decode($textt);
     $form = new Form($db);
-
     $value = explode(" ",$txtTitle[0]);
     $val = join("_",$value);
-    $form->saveDataResponsesInTable($val,json_decode($txtTitle));
+    $form->saveDataResponsesInTable($val,$txtTitle);
 }
 
 $q = $_GET['q'];
