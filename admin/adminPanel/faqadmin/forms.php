@@ -50,9 +50,14 @@
             top: -54px;
             left: 550px;
         }
+        #container{
+            position: relative;
+            top: 5px;
+        }
         .alignment123{
             position:relative;
             right:300px;
+            top:-10px;
         }
         .alignment2{
             position:relative;
@@ -61,7 +66,7 @@
         }
         .topCheck{
             position: relative;
-            top:-40px;
+            top:-55px;
             right:290px;
         }
         .topCheck2{
@@ -69,21 +74,17 @@
             top:-55px;
             right:290px;
         }
-        .topCheck1{
-            position: relative;
-            top:-55px;
-            right:290px;
-        }
         .topPlus{
             position: relative;
-            top:-55px;
+            top:-60px;
             right:290px;
         }
         .plus{
             position: relative;
-            top:-40px;
+            top:-55px;
             right:300px;
         }
+
         header a,
         header a:hover {
             text-decoration: none;
@@ -92,7 +93,7 @@
     </style>
 </head>
 <script>
-let count=0;
+
    function check(){
         console.log($('#required1').is(':checked'))
 
@@ -114,29 +115,29 @@ let count=0;
                         <br>
                         <div >
                             <div id="container">
-                            <div id="field0" class="form-group">
-                                <input type="text" id="fieldName" class='form-control alignment123 titleField' name="fieldName[]" placeholder="Enter Field Name" />
-                                <div class="alignment2">
-                                    <label>Choose Answer Type:</label>
-                                    <select  id="dropDown" name="dropDown[]" onchange="changeDD(0)" name="cars" id="cars">
-                                        <option value="">Select an Option</option>
-                                        <option value="checkbox" >Checkbox</option>
-                                        <option value="text">Short answer</option>
-                                        <option value="text">Paragraph</option>
-                                    </select>
+                                <div id="field0" class="form-group">
+                                    <input type="text" id="fieldName" class='form-control alignment123 titleField' name="fieldName[]" placeholder="Enter Field Name" />
+                                    <div class="alignment2">
+                                        <label>Choose Answer Type:</label>
+                                        <select  id="dropDown" class="classDD0"  name="dropDown[]" onchange="changeDD(0)" name="cars" >
+                                            <option value="">Select an Option</option>
+                                            <option value="checkbox" >Checkbox</option>
+                                            <option value="shortAns">Short answer</option>
+                                            <option value="paraAns">Paragraph</option>
+                                        </select>
+                                    </div>
+                                    <div id="required">
+                                        <label > Required?</label>
+                                        <input onChange="check();" type="checkbox" id="required1" name="required1[]" value="valueCheckBox" />                                    
+                                    </div>
                                 </div>
-                                <div id="required">
-                                    <label > Required?</label>
-                                    <input onChange="check();" type="checkbox" id="required1" name="required1[]" value="valueCheckBox" />                                    
-                                </div>
-                            </div>
                             </div>
                             <div id="lastThree">
-                            <a  id="addBtn" class=" repeatBtn btn btn-primary" >Add More Field?</a>
-                        </div>
-                        <hr>
-                        <button id="submitForm" class="btn btn-primary" type="submit"  name="submit" value="submit">Submit</button>
-                        <a href="../index.php" class="btn btn-default">Cancel</a>
+                                <a  id="addBtn" class=" repeatBtn btn btn-primary" >Add More Field?</a>
+                            </div>
+                            <hr>
+                            <button id="submitForm" class="btn btn-primary" type="submit"  name="submit" value="submit">Submit</button>
+                            <a href="../index.php" class="btn btn-default">Cancel</a>
                         </div>
                         </div>
                     </form>
@@ -146,57 +147,62 @@ let count=0;
     </div>
 
 <script type="text/javascript">
-let prevCheckbox=`  <div class="col-xs-7">
-                        <input type="text" id="ex2" class='form-control topCheck topCheck1 'name="" placeholder="Fill only if checkbox is selected" />
-                    </div>
-                    <a id="plusBtn${count}" class=" btn btn-primary plus topPlus" onclick="myFunc()">+</a>`;
+let count=0;
 
-function changeDD(){
-        var eva = document.getElementById("dropDown");
+
+function changeDD(count){
+    // console.log(count);
+    let prevCheckbox=`  <div class="col-xs-7">
+                        <input type="text" id="checkboxInput`+count+`" name="checkboxInput`+count+`[]" class='form-control topCheck topCheck1 'name="" placeholder="Fill only if checkbox is selected" />
+                    </div>
+                    <a id="plusBtn`+count+`" class=" btn btn-primary plus topPlus prevplus" onclick="myFunc(`+count+`)">+</a>`;
+        // var eva = document.getElementById("dropDown");
+        var eva = document.querySelector(".classDD"+count);
 
         var strUser = eva.value;
-        // console.log(strUser);
+        console.log(strUser);
         if(strUser==="checkbox"){
             // console.log(`${#container}`);
-            console.log(document.getElementById('container'));
-            $("#container").append(prevCheckbox);
+            // console.log(document.getElementById('container'));
+            $("#field"+count).append(prevCheckbox);
         }
 }
-        let checkboxHTML=`  <div class="form-group">
-                                <div class="col-xs-7">
-                                <input type="text" id="ex2" class='form-control topCheck topCheck2'name="" placeholder="Fill only if checkbox is selected" />
-                                </div>
-                            </div>`;
+        
                                 
                             
-                            function myFunc(){
-                                $("#container").append(checkboxHTML);
-                            }
+                function myFunc(count){
+                    let checkboxHTML=`  <div class="form-group">
+                    <div class="col-xs-7">
+                    <input type="text" id="checkboxInput`+count+`" name="checkboxInput`+count+`[]" class='form-control topCheck topCheck2'name="" placeholder="Fill only if checkbox is selected" />
+                    </div>
+                </div>`;
+                    $("#field"+count).append(checkboxHTML);
+                }
                              
 
                     $(document).ready(function(e){
                         $("#addBtn").click(function(e){
                             count = count + 1;
                             var html=`<div>
-                            <div id="field`+ count +`" class="form-group">
-                                <input type="text" name="fieldName[]" id="childFieldName" class='form-control alignment123 titleField' placeholder="Enter Field Name" />
-                                <div class="alignment2">
-                                    <label>Choose Answer Type:</label>
-                                    <select   id="dropDown"  name="dropDown[]" name="cars"  onchange="changeDD(`+count+`)" id="cars">
-                                        <option value="">Select an Option</option>
-                                        <option value="checkbox">checkbox</option>
-                                        <option value="text">Short answer</option>
-                                        <option value="text">Paragraph</option>
-                                    </select>
-                                </div>
-                                <div id="required">
-                                <label > Required?</label>
-                                <input type="checkbox" id="required1" name="required1[]" value="valueCheckBox" />
-                                </div>
-                                
-                            </div>
-                            </div>`;
-                            console.log(count);
+                                        <div id="field`+ count +`" class="form-group">
+                                            <input type="text" name="fieldName[]" id="childFieldName" class='form-control alignment123 titleField' placeholder="Enter Field Name" />
+                                            <div class="alignment2">
+                                                <label>Choose Answer Type:</label>
+                                                <select   id="dropDown"  name="dropDown[]" class="classDD`+count+`" name="cars"  onchange="changeDD(`+count+`)" >
+                                                    <option value="">Select an Option</option>
+                                                    <option value="checkbox">checkbox</option>
+                                                    <option value="shortAns">Short answer</option>
+                                                    <option value="paraAns">Paragraph</option>
+                                                </select>
+                                            </div>
+                                            <div id="required">
+                                            <label > Required?</label>
+                                            <input type="checkbox" id="required1" name="required1[]" value="valueCheckBox" />
+                                            </div>
+                                            
+                                        </div>
+                                        </div>`;
+                            // console.log(count);
                             $("#container").append(html);
                         });
                     });
@@ -206,7 +212,6 @@ function changeDD(){
 <?php
     // require_once "./config.php";
     include_once '../blogAdmin/forms.php';
-    include_once '../blogAdmin/database.php';
 
     if(isset($_POST['submit'])){
         $result=array();
@@ -218,15 +223,25 @@ function changeDD(){
         } else {
             $required1 = false;
         }
-        // echo $required1;
+        
+       
         for($i=0;$i<sizeof($fieldName);$i++){
+            $val="checkboxInput".$i;
+            // $checkboxInput= $_POST[$val];
+            // print_r( $checkboxInput);
             $subArr=array();
             array_push($subArr,$fieldName[$i]);
             array_push($subArr,$dropDown[$i]);
             array_push($subArr,$required1[$i]);
+
+            // echo $_POST[`checkboxInput{$i}`];
+            if($_POST[$val]){
+                $checkboxInput=$_POST[$val];
+                array_push($subArr,$checkboxInput);
+            }
             array_push($result,$subArr);
         }
-
+        print_r($result);
         $database = new Database();
         $db = $database->connect();
 
