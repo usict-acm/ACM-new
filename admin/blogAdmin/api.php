@@ -678,7 +678,9 @@ function readResponses(){
     $i=0;
     
     while ($row=$allFields->fetch_assoc()){
-        array_push($fieldItem,$row['fieldName']);
+        $value = explode(" ",$row['fieldName']);
+        $val = join("_",$value);
+        array_push($fieldItem,$val);
         $i++;
     }
 
@@ -753,6 +755,7 @@ function readResponses(){
            'fieldName' => $row["fieldName"],
            'fieldType' => $row["fieldType"],
            'formID' => $row["formID"],
+           'required' => $row["required"],
        );
            // Push to "data"
            array_push($posts_arr, $post_item);
