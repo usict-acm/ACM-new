@@ -756,7 +756,13 @@ function readResponses(){
            'fieldType' => $row["fieldType"],
            'formID' => $row["formID"],
            'required' => $row["required"],
+           'ifCheckbox' => $row["ifCheckbox"],
+
        );
+    //    if($row["ifCheckbox"]) {
+    //     array_push('ifCheckbox' => $row["ifCheckbox"]);
+
+    //    }
            // Push to "data"
            array_push($posts_arr, $post_item);
    }

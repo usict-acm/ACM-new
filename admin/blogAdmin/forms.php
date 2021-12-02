@@ -17,6 +17,8 @@
           public $formId;
           public $fieldName;
           public $fieldType;
+          public $required;
+
           public function __construct($db){
                $this->conn = $db;
           }
