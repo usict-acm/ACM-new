@@ -91,8 +91,7 @@ const Admin = (props) => {
       <Redirect exact from='/' to='/home' />
       <Redirect exact from='/login' to='/home' />
       <Redirect exact from='/register' to='/home' />
-      <Route path='/404' component={Error404} />
-      <Redirect from='*' to='/404' />
+      <Route component={Error404} />
     </Switch>
   )
 }
