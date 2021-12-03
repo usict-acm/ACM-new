@@ -128,7 +128,7 @@
                                     </div>
                                     <div id="required">
                                         <label > Required?</label>
-                                        <input onChange="check();" type="checkbox" id="required1" name="required1[]" value="valueCheckBox" />                                    
+                                        <input onChange="check();" type="checkbox" id="required1" name="required1[]" />                                    
                                     </div>
                                 <div id="field0" class="form-group">
                                 </div>
@@ -212,7 +212,7 @@ function changeDD(count){
                                             </div>
                                             <div id="required">
                                             <label > Required?</label>
-                                            <input type="checkbox" id="required1" name="required1[]" value="valueCheckBox" />
+                                            <input type="checkbox" id="required1" name="required1[]"  />
                                             </div>
                                             <div id="field`+ count +`" class="form-group">
                                         </div>
@@ -227,6 +227,7 @@ function changeDD(count){
 <?php
     require_once "./config.php";
     include_once '../blogAdmin/forms.php';
+    include_once '../blogAdmin/database.php';
 
     if(isset($_POST['submit'])){
         $result=array();
