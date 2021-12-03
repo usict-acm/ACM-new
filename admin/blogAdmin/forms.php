@@ -32,7 +32,16 @@
                     $valueText = $request[$i][0];
                     $valueType = $request[$i][1];
                     $valueRequired = $request[$i][2];
-                    $query = "INSERT INTO `fields` (`formID`,`formName`,`fieldName`,`fieldType`, `required`) VALUES ('$formID','$name','$valueText','$valueType', '$valueRequired')";
+                    $check="";
+                    if($valueType == "checkbox"){
+                         $valueCheckbox = $request[$i][3];
+                         for($j=0; $j<count($valueCheckbox)-1; $j++){
+                              $check = $check.$valueCheckbox[$j].",";
+                         }
+                         $check = $check.$valueCheckbox[count($valueCheckbox)-1];
+                    }
+
+                    $query = "INSERT INTO `fields` (`formID`,`formName`,`fieldName`,`fieldType`, `ifCheckbox`, `required`) VALUES ('$formID','$name','$valueText','$valueType', '$check' , '$valueRequired')";
                     $this->conn->query($query);
                }
           }
@@ -40,7 +49,7 @@
           public function createResponseTable($request){
                $tableName = "Responses_" . $request[0];
                $query = "CREATE TABLE $tableName (
-                    id INT(6) PRIMARY KEY
+                    id INT(6) AUTO_INCREMENT PRIMARY KEY
                )";
                $this->conn->query($query);
                for($i = 1; $i < count($request); $i++){
@@ -133,6 +142,8 @@
                $one = "INSERT INTO " . $tableName . "(";
                $two = "";
                $three = "";
+
+               // print_r($txtTitle);
                   
                for($i=1; $i<count($txtTitle)-1; $i++){
                     $value = explode(" ",$txtTitle[$i][0]);

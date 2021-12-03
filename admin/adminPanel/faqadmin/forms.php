@@ -128,7 +128,7 @@
                                     </div>
                                     <div id="required">
                                         <label > Required?</label>
-                                        <input onChange="check();" type="checkbox" id="required1" name="required1[]" value="valueCheckBox" />                                    
+                                        <input onChange="check();" type="checkbox" id="required1" name="required1[]" />                                    
                                     </div>
                                 <div id="field0" class="form-group">
                                 </div>
@@ -149,7 +149,6 @@
 
 <script type="text/javascript">
 let count=0;
-
 
 function changeDD(count){
     // console.log(count);
@@ -212,7 +211,7 @@ function changeDD(count){
                                             </div>
                                             <div id="required">
                                             <label > Required?</label>
-                                            <input type="checkbox" id="required1" name="required1[]" value="valueCheckBox" />
+                                            <input type="checkbox" id="required1" name="required1[]"/>
                                             </div>
                                             <div id="field`+ count +`" class="form-group">
                                         </div>
@@ -225,38 +224,42 @@ function changeDD(count){
 </script>
 
 <?php
-    require_once "./config.php";
+    // require_once "./config.php";
     include_once '../blogAdmin/forms.php';
+    include_once "../blogAdmin/database.php";
 
     if(isset($_POST['submit'])){
         $result=array();
         array_push($result,$_POST["formNameMain"]);
         $fieldName= $_POST['fieldName'];
         $dropDown= $_POST['dropDown'];
-        if(isset($_POST["required1"])){
-            $required1 = true;
-        } else {
-            $required1 = false;
-        }
-        
-       
+        $required=$_POST['required1'];
+        // if(isset($_POST["required1"])){
+        //     $required1 = true;
+        // } else {
+        //     $required1 = false;
+        // }
+        // print_r($required);
         for($i=0;$i<sizeof($fieldName);$i++){
             $val="checkboxInput".$i;
-            // $checkboxInput= $_POST[$val];
-            // print_r( $checkboxInput);
             $subArr=array();
             array_push($subArr,$fieldName[$i]);
             array_push($subArr,$dropDown[$i]);
-            array_push($subArr,$required1[$i]);
+            // array_push($subArr,$required1[$i]);
+            if($required[$i] && $required[$i] == "on"){
+                array_push($subArr,1);
+            }else{
+                array_push($subArr,0);
+            }
 
-            // echo $_POST[`checkboxInput{$i}`];
-            if($_POST[$val]){
+            if(isset($_POST[$val])){
                 $checkboxInput=$_POST[$val];
                 array_push($subArr,$checkboxInput);
             }
+
             array_push($result,$subArr);
         }
-        print_r($result);
+        // print_r($result);
         $database = new Database();
         $db = $database->connect();
 
@@ -274,12 +277,15 @@ function changeDD(count){
             array_push($field_array,$result[$i][0]);
             array_push($field_array,$result[$i][1]);
             array_push($field_array,$result[$i][2]);
+            if($result[$i][3]){
+                array_push($field_array,$result[$i][3]);
+            }
             array_push($request,$field_array);
         }
-
+        // print_r($request);
         $form->saveFormInFormsTable($name,$request);
         $result = $form->createResponseTable($request);
-        echo "<script>window.location.replace('http://localhost/ACM-new/admin/adminPanel/index.php?table=formCreation')</script>";
+        echo "<script>window.location.replace('./index.php?table=formCreation')</script>";
     }
 ?>
 </body>

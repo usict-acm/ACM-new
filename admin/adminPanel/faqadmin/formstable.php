@@ -70,7 +70,7 @@
                             echo "<table class='table table-bordered table-striped'>";
                                 echo "<thead>";
                                     echo "<tr>";
-                                        echo "<th>#</th>";
+                                        echo "<th>Form Id</th>";
                                         echo "<th>Title</th>";
                                         echo "<th>Action</th>";
                                     echo "</tr>";
@@ -82,7 +82,8 @@
                                         echo "<td>" . $row['formName'] . "</td>";
                                         
                                         echo "<td>";
-                                            echo "<a href='../blogAdmin/responses.php?q=readResponses&Id=".$row['formID']."'title='View Record' data-toggle='tooltip'><button class='btn btn-primary' type='button'>Responses</button></span></a>";
+                                            // echo "<a href='../blogAdmin/responses.php?q=readResponses&Id=".$row['formID']."'title='View Record' data-toggle='tooltip'><button class='btn btn-primary' type='button'>Responses</button></span></a>";
+                                            echo "<a href='?table=ResponsesForm&q=readResponses&Id=".$row['formID']."'title='View Record' data-toggle='tooltip'><button class='btn btn-primary' type='button'>Responses</button></span></a>";
                                             echo "<a href='../../UI/index.php?Id=".$row['formID'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
                                             echo "<a href='faqadmin/delete.php?Sno=". $row['formID'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                             // echo "<a href='faqadmin/update.php?Sno=". $row['Sno'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";

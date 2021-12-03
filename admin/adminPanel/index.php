@@ -12,7 +12,9 @@
 ?>
 
 <?php	 include('includes/header.php');
-		 include('includes/navbar.php');		?>
+		 include('includes/navbar.php');		
+        //  include_once("../blogAdmin/forms.php");
+         ?>
 
 
         <!-- Content Wrapper -->
@@ -135,10 +137,8 @@
                     $table='f';
                     if (isset($_GET['table'])){
                         $table = $_GET['table'];
-                        
                     }
-                    switch ($table) {
-                    
+                    switch ($table) {                    
                         case 'AddAnnouncement':
                             include('./faqadmin/announcements-form.php');
                             break;
@@ -154,7 +154,7 @@
                         case 'Forms':
                             include('./faqadmin/formstable.php');
                             break;
-                        case 'allResponses':
+                        case 'ResponsesForm':
                             include('../blogAdmin/responses.php');
                             break;
                         case 'formCreation':

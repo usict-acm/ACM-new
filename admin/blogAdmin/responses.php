@@ -11,11 +11,30 @@
     <title>Responses</title>
   </head>
   <body>
-
-  <?php
-    include_once './forms.php';
-
-  ?>
+  <style type="text/css">
+        .wrapper{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .page-header h2{
+            margin-top: 0;
+        }
+        table tr td:last-child a{
+            margin-right: 15px;
+        }
+    header {
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    }
+    header a,  header a:hover {
+        text-decoration: none;
+        color: white;
+    }
+    </style>
+    <?php
+        include_once 'forms.php';
+    ?>
 
 
     <div class="wrapper">
@@ -24,13 +43,15 @@
                 <div class="col-md-12">
                     <div class="page-header clearfix">
                         <h2 class="pull-left">Responses</h2>
-                        <table class="table table-bordered" >
+                    </div>
+                    <table class='table table-bordered table-striped'>
+                            <thead  class="responsedata" id="responsestableHeading">
+                            
+                            </thead>
                             <tbody class="responsedata" id="responsestable">
 
                             </tbody>
                         </table>
-
-                    </div>
 
                 </div>
 
@@ -48,7 +69,6 @@
 
     <?php
         $ID = $_GET["Id"];
-        // $formName = $_GET["name"];
     ?>
 
     <script>
@@ -64,7 +84,16 @@
                 success: function(data) {
                     console.log("data responses",data);
                     let responses = document.getElementById("responsestable");
-                    for(let i=0; i<data.length; i++){
+                    var tr = "<tr>";
+                    var td = "";
+                    $("#responsestableHeading").append(tr);
+                    for(let k=0; k<data[0].length;k++){
+                        td += `<th>${data[0][k]}</th>`;
+                    }
+                    $("#responsestableHeading").append(td);
+                    var trend = "</tr>";
+                    $("#responsestableHeading").append(trend);
+                    for(let i=1; i<data.length; i++){
                         var tr = "<tr>";
                         $("#responsestable").append(tr);
                         var td = "";
