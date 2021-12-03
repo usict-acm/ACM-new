@@ -115,7 +115,7 @@
                         <br>
                         <div >
                             <div id="container">
-                                <div id="field0" class="form-group">
+                                
                                     <input type="text" id="fieldName" class='form-control alignment123 titleField' name="fieldName[]" placeholder="Enter Field Name" />
                                     <div class="alignment2">
                                         <label>Choose Answer Type:</label>
@@ -130,6 +130,7 @@
                                         <label > Required?</label>
                                         <input onChange="check();" type="checkbox" id="required1" name="required1[]" value="valueCheckBox" />                                    
                                     </div>
+                                <div id="field0" class="form-group">
                                 </div>
                             </div>
                             <div id="lastThree">
@@ -153,9 +154,9 @@ let count=0;
 function changeDD(count){
     // console.log(count);
     let prevCheckbox=`  <div class="col-xs-7">
-                        <input type="text" id="checkboxInput`+count+`" name="checkboxInput`+count+`[]" class='form-control topCheck topCheck1 'name="" placeholder="Fill only if checkbox is selected" />
-                    </div>
-                    <a id="plusBtn`+count+`" class=" btn btn-primary plus topPlus prevplus" onclick="myFunc(`+count+`)">+</a>`;
+                        <input type="text" id="checkboxInput`+count+`" name="checkboxInput`+count+`[]" class="form-control topCheck topCheck1 checkClass" name="" placeholder="Fill only if checkbox is selected" />
+                        </div>
+                        <a id="plusBtn`+count+`" class=" btn btn-primary plus topPlus prevplus" onclick="myFunc(`+count+`)">+</a>`;
         // var eva = document.getElementById("dropDown");
         var eva = document.querySelector(".classDD"+count);
 
@@ -166,16 +167,30 @@ function changeDD(count){
             // console.log(document.getElementById('container'));
             $("#field"+count).append(prevCheckbox);
         }
+        if(strUser==="shortAns"){
+            // var elem = document.getElementById('field'+count);
+            // elem.parentNode.removeChild(elem);
+            jQuery('#field'+count).html('');
+    
+        }
+        if(strUser==="paraAns"){
+            // var elem = document.getElementById('field'+count);
+            // elem.parentNode.removeChild(elem);
+            jQuery('#field'+count).html('');
+
+
+        }
 }
         
                                 
                             
                 function myFunc(count){
-                    let checkboxHTML=`  <div class="form-group">
-                    <div class="col-xs-7">
-                    <input type="text" id="checkboxInput`+count+`" name="checkboxInput`+count+`[]" class='form-control topCheck topCheck2'name="" placeholder="Fill only if checkbox is selected" />
-                    </div>
-                </div>`;
+                    let checkboxHTML=` 
+                                            <div class="form-group">
+                                                <div class="col-xs-7">
+                                                    <input type="text" id="checkboxInput`+count+`" name="checkboxInput`+count+`[]" class='form-control topCheck topCheck2 checkClass'name="" placeholder="Fill only if checkbox is selected" />
+                                                </div>
+                                        `;
                     $("#field"+count).append(checkboxHTML);
                 }
                              
@@ -184,7 +199,7 @@ function changeDD(count){
                         $("#addBtn").click(function(e){
                             count = count + 1;
                             var html=`<div>
-                                        <div id="field`+ count +`" class="form-group">
+                                       
                                             <input type="text" name="fieldName[]" id="childFieldName" class='form-control alignment123 titleField' placeholder="Enter Field Name" />
                                             <div class="alignment2">
                                                 <label>Choose Answer Type:</label>
@@ -199,7 +214,7 @@ function changeDD(count){
                                             <label > Required?</label>
                                             <input type="checkbox" id="required1" name="required1[]" value="valueCheckBox" />
                                             </div>
-                                            
+                                            <div id="field`+ count +`" class="form-group">
                                         </div>
                                         </div>`;
                             // console.log(count);
@@ -210,7 +225,7 @@ function changeDD(count){
 </script>
 
 <?php
-    // require_once "./config.php";
+    require_once "./config.php";
     include_once '../blogAdmin/forms.php';
 
     if(isset($_POST['submit'])){
