@@ -132,10 +132,10 @@
 	</div>
 	<!-- end of about section -->
 	<!-- announcement section begins-->
-	<?php 
-    require_once "./announcement.php";
-  	?>
-	
+	<?php
+	require_once "./announcement.php";
+	?>
+
 	<!-- announcement section ends-->
 	<!--***********************blog section***************************************** -->
 	<section class="blogs">
@@ -145,7 +145,7 @@
 			<span class="fas fa-file-alt  sticker"></span>
 			<span class="far fa-bookmark sticker"></span>
 		</div>
-		<div class = "tag">
+		<div class="tag">
 			<div class="bloghead">
 				<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-blue"> Blogs</span></h2>
 			</div>
@@ -223,7 +223,7 @@
 									<div class="name">
 										<h5 class="text-center">Prof. Pravin Chandra</h5>
 										<p class="text-center">Dean, USICT</p>
-									</div>	
+									</div>
 									<img src="./assets/images/team/deanSir.jpeg" alt="">
 								</div>
 							</div>
@@ -232,7 +232,7 @@
 									<div class="name">
 										<h5 class="text-center">Dr. Rahul Johari</h5>
 										<p class="text-center">Branch Head, ACM USICT</p>
-									</div>	
+									</div>
 									<img src="./assets/images/team/rahulsir.jpg" alt="">
 								</div>
 							</div>
@@ -250,72 +250,72 @@
 									<div class="name">
 										<h5 class="text-center">Harsh Goyal</h5>
 										<p class="text-center">Chair</p>
-									</div>	
+									</div>
 									<img src="./assets/images/team/harshGoyal.png" alt="">
 								</div>
 							</div>
 
 							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">										
+								<div class="our-team-right">
 									<a class="social" href="https://www.linkedin.com/in/anuj-talwar/" target="_blank">
 										<i class="fab fa-linkedin" arial-hidden="true"></i>
 									</a>
 									<div class="name">
 										<h5 class="text-center">Anuj Talwar</h5>
 										<p class="text-center">Vice Chair</p>
-									</div>	
+									</div>
 									<img src="./assets/images/team/Anuj.jpg" alt="">
 								</div>
 							</div>
 
 							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">										
+								<div class="our-team-right">
 									<a class="social" href="https://www.linkedin.com/in/tarun-shekhawat-037091194/" target="_blank">
 										<i class="fab fa-linkedin" arial-hidden="true"></i>
 									</a>
 									<div class="name">
 										<h5 class="text-center">Tarun</h5>
 										<p class="text-center">Secretary</p>
-									</div>	
+									</div>
 									<img src="./assets/images/team/Tarun.jpg" alt="">
 								</div>
 							</div>
 
 							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">										
+								<div class="our-team-right">
 									<a class="social" href="https://www.linkedin.com/in/karan-deep/" target="_blank">
 										<i class="fab fa-linkedin" arial-hidden="true"></i>
 									</a>
 									<div class="name">
 										<h5 class="text-center">Karan Deep Singh</h5>
 										<p class="text-center">Treasurer</p>
-									</div>	
+									</div>
 									<img src="./assets/images/team/Karan.jpeg" alt="">
 								</div>
 							</div>
 
 							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">										
+								<div class="our-team-right">
 									<a class="social" href="https://www.linkedin.com/in/moulik-agrawal/" target="_blank">
 										<i class="fab fa-linkedin" arial-hidden="true"></i>
 									</a>
 									<div class="name">
 										<h5 class="text-center">Moulik Agrawal</h5>
 										<p class="text-center">Web Chair</p>
-									</div>	
+									</div>
 									<img src="./assets/images/team/Moulik.jpg" alt="">
 								</div>
 							</div>
 
 							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">										
+								<div class="our-team-right">
 									<a class="social" href="https://www.linkedin.com/in/anurag-parashar/" target="_blank">
 										<i class="fab fa-linkedin" arial-hidden="true"></i>
 									</a>
 									<div class="name">
 										<h5 class="text-center">Anurag Parashar</h5>
 										<p class="text-center">Membership Chair</p>
-									</div>	
+									</div>
 									<img src="./assets/images/team/anurag.jpg" alt="">
 								</div>
 							</div>
@@ -333,38 +333,38 @@
 		</div>
 	</section>
 	<!-- *****************************our team end************************************************** -->
-		<!-- socail bar******************************* -->
- 	<div class="social-btns tag">
-     <div class="try1">
-      <a class="btn facebook" href="https://facebook.com/acmusict" target="_blank"><i class="fa fa-facebook"></i></a>
-      <div class="write" id="wrete">
-        <h1 class="sob-heading">700</h1>
-        <p class="gratext">Facebook Followers</p>
-      </div>
-    </div>
-    <div class="try1">
-      <a class="btn twitter" href="https://linkedin.com/company/acmusict" target="_blank"><i class="fab fa fa-linkedin"></i></a>
-      <div class="write" id="wrete">
-        <h1 class="sob-heading">1000</h1>
-        <p class="gratext">LinkedIn Reach</p>
-      </div>
-    </div>
-    <div class="try1">
-      <a class="btn dribbble" href="https://instagram.com/acmusict/" target="_blank"><i class=" fa fa fa-instagram"></i></a>
-      <div class="write" id="wrete">
-        <h1 class="sob-heading">300+</h1>
-        <p class="gratext">Instagram Followers</p>
-      </div>
-    </div>
-    <div class="try1">
-      <a class="btn skype"><i class="fa fa fa-child"></i></a>
-      <div class="write" id="wrete">
-        <h1 class="sob-heading">1000+</h1>
-        <p class="gratext">Connected Students</p>
-      </div>
-    </div>
+	<!-- socail bar******************************* -->
+	<div class="social-btns tag">
+		<div class="try1">
+			<a class="btn facebook" href="https://facebook.com/acmusict" target="_blank"><i class="fa fa-facebook"></i></a>
+			<div class="write" id="wrete">
+				<h1 class="sob-heading">700</h1>
+				<p class="gratext">Facebook Followers</p>
+			</div>
+		</div>
+		<div class="try1">
+			<a class="btn twitter" href="https://linkedin.com/company/acmusict" target="_blank"><i class="fab fa fa-linkedin"></i></a>
+			<div class="write" id="wrete">
+				<h1 class="sob-heading">1000</h1>
+				<p class="gratext">LinkedIn Reach</p>
+			</div>
+		</div>
+		<div class="try1">
+			<a class="btn dribbble" href="https://instagram.com/acmusict/" target="_blank"><i class=" fa fa fa-instagram"></i></a>
+			<div class="write" id="wrete">
+				<h1 class="sob-heading">300+</h1>
+				<p class="gratext">Instagram Followers</p>
+			</div>
+		</div>
+		<div class="try1">
+			<a class="btn skype"><i class="fa fa fa-child"></i></a>
+			<div class="write" id="wrete">
+				<h1 class="sob-heading">1000+</h1>
+				<p class="gratext">Connected Students</p>
+			</div>
+		</div>
 
-  </div>
+	</div>
 	<!-- ****************************************************contact us ***************************** -->
 	<div class="dsph" id="contact">
 		<div class="d-flex justify-content-center mt-md-5">
@@ -375,7 +375,7 @@
 				<div class="closebtn">
 					<button class="btn btn-primary s-form-group contact-btn" onclick="closecontact()"><i class="fas fa-times"></i></button>
 				</div>
-				<form class="s-form" name="contact" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse" onsubmit="return validateform();" >
+				<form class="s-form" name="contact" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse" onsubmit="return validateform();">
 					<h2 class="my-4 display-4 fw-bolder text-center">Contact<span class="text-blue"> Us</span></h2>
 					<div class="row form-row">
 						<div class="form-group s-form-group col-md-5">
@@ -386,7 +386,7 @@
 						</div>
 					</div>
 					<div class="row form-row">
-					<div class="form-group s-form-group col-md-5">
+						<div class="form-group s-form-group col-md-5">
 							<input type="text" name="phone" class="form-control" placeholder="Phone No." />
 						</div>
 						<div class="form-group s-form-group col-md-5">
@@ -394,7 +394,7 @@
 						</div>
 					</div>
 					<div class="contact-msg">
-					<textarea type="text" name="message" rows="5" placeholder="Message *" class="form-control col-md-11 contact-message"></textarea>
+						<textarea type="text" name="message" rows="5" placeholder="Message *" class="form-control col-md-11 contact-message"></textarea>
 					</div>
 					<div class="row contact-msg">
 						<button type="submit" class="btn btn-primary s-form-group contact-btn col-md-3 col-sm-2">Submit</button>
@@ -547,7 +547,7 @@
 		</a>
 	</div>
 
-	
+
 
 	<!-- Swiper JS -->
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

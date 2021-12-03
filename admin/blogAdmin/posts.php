@@ -3,7 +3,7 @@ class Post
 {
   // DB stuff
   private $conn;
-  private $table = 'blog';
+  private $table = 'blogs';
 
   // Post Properties
   public $Sno;
@@ -25,7 +25,7 @@ class Post
   // Get Posts
   public function read($start, $limit)
   {
-    $query = 'SELECT b.Sno, b.Title, b.Author, b.Content, b.Category, b.Event, b.Image, b.Date FROM ' . $this->table . ' b ORDER BY b.Date DESC LIMIT ' . $start . ',' . $limit;
+    $query = 'SELECT b.blogId, b.blogTitle, b.userName, b.content, b.published, b.coverImage FROM ' . $this->table . ' b WHERE approved=1 ORDER BY published DESC LIMIT ' . $start . ',' . $limit;
     $stmt = $this->conn->query($query);
     return $stmt;
   }
@@ -68,7 +68,7 @@ class Post
 
   public function countBlogs()
   {
-    $query = 'SELECT COUNT(*) FROM blog';
+    $query = 'SELECT COUNT(*) FROM blogs';
     $stmt = $this->conn->query($query);
     return $stmt->fetch_assoc();
   }
@@ -76,25 +76,20 @@ class Post
   public function readThree()
   {
     // Create query
-    $query = 'SELECT b.Sno, b.Title, b.Author, b.Content, b.Category, b.Event, b.Image, b.Date
+    $query = 'SELECT b.blogId, b.blogTitle, b.userName, b.content, b.published, b.coverImage
                                 FROM ' . $this->table . ' b
-                                ORDER BY Sno DESC LIMIT 3';
+                                WHERE approved=1 ORDER BY blogId DESC LIMIT 3';
 
     $stmt = $this->conn->query($query);
-    // Prepare statement
-    // $stmt = $this->conn->prepare($query);
-
-    // Execute query
-    // $stmt->execute();
 
     return $stmt;
   }
   public function readOne($Sno)
   {
     // Create query
-    $query = 'SELECT b.Sno, b.Title, b.Author, b.Content, b.Category, b.Event, b.Image, b.Date
+    $query = 'SELECT b.blogId, b.blogTitle, b.userName, b.content, b.published, b.coverImage
                                 FROM ' . $this->table . ' b
-                                WHERE Sno=' . $Sno;
+                                WHERE blogId=' . $Sno;
 
     $stmt = $this->conn->query($query);
 
