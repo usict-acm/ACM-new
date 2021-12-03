@@ -226,7 +226,7 @@ function changeDD(count){
 <?php
     // require_once "./config.php";
     include_once '../blogAdmin/forms.php';
-    include_once "../blogAdmin/database.php";
+    include_once '../blogAdmin/database.php';
 
     if(isset($_POST['submit'])){
         $result=array();
