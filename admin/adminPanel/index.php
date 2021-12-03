@@ -135,6 +135,7 @@
                 <div class="row">
                 <?php
                     $table='f';
+
                     if (isset($_GET['table'])){
                         $table = $_GET['table'];
                     }

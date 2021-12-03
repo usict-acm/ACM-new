@@ -42,7 +42,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-header clearfix">
-                        <h2 class="pull-left">Responses</h2>
+                        <h4 class="pull-left">Responses</h4>
                     </div>
                     <table class='table table-bordered table-striped'>
                             <thead  class="responsedata" id="responsestableHeading">
@@ -72,7 +72,7 @@
     ?>
 
     <script>
-        let urlll = './api.php/?q=readResponses&Id=' + '<?php echo $ID ?>';
+        let urlll = '../blogAdmin/api.php/?q=readResponses&Id=' + '<?php echo $ID ?>';
         $(document).ready(function() {       
             getdata();
         });

@@ -656,15 +656,11 @@ function readResponses(){
 //      // Instantiate DB & connect
     $database = new Database();
     $db = $database->connect();
-    
 //    // Instantiate blog post object
     $post = new Form($db);
- 
-
     $ID = $_GET['Id'];
+    // echo($ID);
     $formName = "";
-
-
     $allFields = $post->readFields($ID,$formName);
     $responses = $post->readAllResponses($ID,$formName);
     $countNumberOfFields = $post->countFields($ID,$formName);
