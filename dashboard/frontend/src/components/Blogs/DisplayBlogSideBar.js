@@ -1,17 +1,21 @@
 import React from "react";
 import { formatDate } from "utils/commonFunctions";
 
-export default function DisplayBlogSideBar(props) {
+export default function DisplayBlogSideBar({ blog }) {
 	return (
 		<>
 			<div>
 				<h3>Blog Info</h3>
 			</div>
 			<hr />
+			<h4>Cover Image</h4>
+			<div className="blog__cover">
+				<img className="blog__coverImage" src={blog?.coverImage} alt="cover" />
+			</div>
 			<div>
 				<h4>All Tags</h4>
 				<div className="tagContainer">
-					{props.blog?.tags.map((item, i) => (
+					{blog?.tags.map((item, i) => (
 						<div key={i} className="tag_style px-2">
 							{item}
 						</div>
@@ -19,14 +23,14 @@ export default function DisplayBlogSideBar(props) {
 				</div>
 				<hr />
 				<div>
-					<p>
+					<div>
 						<h3>Published :</h3>
-						{formatDate(props.blog?.published)}
-					</p>
-					<p>
+						{formatDate(blog?.published)}
+					</div>
+					<div>
 						<h3>Last updated:</h3>
-						{formatDate(props.blog?.lastUpdated)}
-					</p>
+						{formatDate(blog?.lastUpdated)}
+					</div>
 				</div>
 			</div>
 		</>

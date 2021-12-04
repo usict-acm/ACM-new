@@ -19,7 +19,7 @@ function createBlog()
 
     $blog = blogInit();
     $req = json_decode(file_get_contents('php://input'), true);
-    if ($req["blogTitle"] && $req["userEmail"] && $req["userName"] && $req["content"]) {
+    if ($req["blogTitle"] && $req["userEmail"] && $req["userName"] && $req["content"] && $req["coverImage"]) {
         $result = $blog->createBlog($req);
         if ($result) {
             $allBlogs = $blog->fetchAllBlogs($req["userEmail"]);
@@ -29,6 +29,7 @@ function createBlog()
                     $blogRow = array(
                         "blogId" => $row["blogId"],
                         "blogTitle" => $row["blogTitle"],
+                        "coverImage" => $row["coverImage"],
                         "content" => $row["content"],
                         "userEmail" => $row["userEmail"],
                         "userName" => $row["userName"],
@@ -69,6 +70,7 @@ function fetchUserBlogs()
                 $blogRow = array(
                     "blogId" => $row["blogId"],
                     "blogTitle" => $row["blogTitle"],
+                    "coverImage" => $row["coverImage"],
                     "content" => $row["content"],
                     "userEmail" => $row["userEmail"],
                     "userName" => $row["userName"],
@@ -108,6 +110,7 @@ function fetchSingleBlog()
                 'blog' => array(
                     "blogId" => $singleBlog["blogId"],
                     "blogTitle" => $singleBlog["blogTitle"],
+                    "coverImage" => $singleBlog["coverImage"],
                     "content" => $singleBlog["content"],
                     "userEmail" => $singleBlog["userEmail"],
                     "userName" => $singleBlog["userName"],
@@ -138,7 +141,7 @@ function updateBlog()
 
     $blog = blogInit();
     $req = json_decode(file_get_contents('php://input'), true);
-    if ($req["blogId"] && $req["blogTitle"] && $req["userEmail"] && $req["content"]) {
+    if ($req["blogId"] && $req["blogTitle"] && $req["userEmail"] && $req["content"] && $req["coverImage"]) {
         $result = $blog->updateBlog($req);
         if ($result) {
             $allBlogs = $blog->fetchAllBlogs($req["userEmail"]);
@@ -148,6 +151,7 @@ function updateBlog()
                     $blogRow = array(
                         "blogId" => $row["blogId"],
                         "blogTitle" => $row["blogTitle"],
+                        "coverImage" => $row["coverImage"],
                         "content" => $row["content"],
                         "userEmail" => $row["userEmail"],
                         "userName" => $row["userName"],
@@ -189,6 +193,7 @@ function deleteBlog()
                     $blogRow = array(
                         "blogId" => $row["blogId"],
                         "blogTitle" => $row["blogTitle"],
+                        "coverImage" => $row["coverImage"],
                         "content" => $row["content"],
                         "userEmail" => $row["userEmail"],
                         "userName" => $row["userName"],

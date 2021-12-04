@@ -29,12 +29,16 @@ export default function Preview() {
 		const fetchBlog = async () => {
 			const blog = await fetchSingleBlog({ userEmail: user?.email, blogId });
 			if (blog) {
+				console.log(blog);
 				setBlog(blog);
 				setLoading(false);
-			} else setLoading(false);
+			} else {
+				history.replace("/blogs");
+				setLoading(false);
+			}
 		};
 		fetchBlog();
-	}, [dispatch, blogId, user]);
+	}, [dispatch, blogId, user, history]);
 
 	useEffect(() => {
 		blog && editorInstance?.setData(blog?.content);
@@ -46,6 +50,7 @@ export default function Preview() {
 			blogTitle: blog?.blogTitle,
 			userEmail: blog?.userEmail,
 			userName: blog?.userName,
+			coverImage: blog?.coverImage,
 			content: blog?.content,
 			tags: blog?.tags,
 			approved: blog?.approved,
@@ -78,18 +83,18 @@ export default function Preview() {
 						<h1 className="blogTitle">{blog?.blogTitle}</h1>
 					</Col>
 					<Col xs="12" sm="4" className="editbtnCol justify-content-center justify-content-sm-end">
-						<Button
-							onClick={() => history.push(`/createBlog/${blogId}`)}
-							color="info"
-							className="bx bxs-pencil py-1"
-						></Button>
-						{blog?.published && blog?.approved && <Button
-							onClick={unPublish}
-							color="danger"
-							className="py-2"
-						>
-							UNPUBLISH
-						</Button>}
+						{!blog?.approved && (
+							<Button
+								onClick={() => history.push(`/createBlog/${blogId}`)}
+								color="info"
+								className="bx bxs-pencil py-1"
+							></Button>
+						)}
+						{blog?.published && blog?.approved && (
+							<Button onClick={unPublish} color="danger" className="py-2">
+								UNPUBLISH
+							</Button>
+						)}
 					</Col>
 				</Row>
 			</CardHeader>

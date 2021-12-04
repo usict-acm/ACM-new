@@ -28,10 +28,10 @@ const BlogCard = ({ blogDetails }) => {
     <div
       onClick={() =>
         !isBtn &&
-        history.push(
-          blogDetails.isDraft
-            ? `/createBlog/${blogDetails.blogId}`
-            : `/blog/${blogDetails.blogId}`
+        history.push(`/blog/${blogDetails.blogId}`
+          // blogDetails.isDraft
+          //   ? `/createBlog/${blogDetails.blogId}`
+          //   : `/blog/${blogDetails.blogId}`
         )
       }
       className='contentBox'

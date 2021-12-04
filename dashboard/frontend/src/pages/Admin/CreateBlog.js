@@ -1,13 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-	Button,
-	Card,
-	CardHeader,
-	Input,
-	Container,
-	Row,
-	Col,
-} from "reactstrap";
+import { Button, Card, CardHeader, Input, Container, Row, Col } from "reactstrap";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import documentEditor from "ckeditor5-custom-build";
 import "assets/css/CreateBlog.css";
@@ -30,42 +22,45 @@ const CreateBlog = () => {
 		[tags, setTags] = useState([]),
 		[editorInstance, setEditorInstance] = useState(null),
 		[editingBlog, setEditingBlog] = useState(null),
-		[loading, setLoading] = useState(true);
+		[loading, setLoading] = useState(true),
+		[coverImage, setCoverImage] = useState("https://picsum.photos/400");
 
 	// useEffect(() => {
-		// setLoading(true);
+	// setLoading(true);
 	// }, [dispatch]);
 
 	useEffect(() => {
 		const setData = async () => {
 			const blog = await fetchSingleBlog({ userEmail: user?.email, blogId });
+			if (!blog || blog?.approved) return history.replace("/blogs");
 			setEditingBlog(blog);
 			blog && editorInstance && editorInstance.setData(blog?.content || "");
 			setTags(blog?.tags || []);
 			setContent(blog?.content || "");
 			setTitle(blog?.blogTitle || "");
+			setCoverImage(blog?.coverImage || "https://picsum.photos/400");
 			setLoading(false);
 		};
 		if (blogId) {
 			setData();
-		}else{
+		} else {
 			setLoading(false);
 		}
-	}, [dispatch, user, blogId, editorInstance]);
+	}, [dispatch, user, blogId, editorInstance, history]);
 
 	const reset = () => {
-		if (blogId) {
+		if (editingBlog) {
 			setTags(editingBlog?.tags || []);
 			setContent(editingBlog?.content || "");
 			setTitle(editingBlog?.blogTitle || "");
-			editingBlog &&
-				editorInstance &&
-				editorInstance.setData(editingBlog?.content || "");
+			setCoverImage(editingBlog?.coverImage);
+			editingBlog && editorInstance && editorInstance.setData(editingBlog?.content || "");
 		} else {
 			setTitle("");
 			setContent("");
 			setTags([]);
 			setEditingBlog(null);
+			setCoverImage("https://picsum.photos/400");
 			editorInstance && editorInstance.setData("");
 		}
 	};
@@ -75,23 +70,26 @@ const CreateBlog = () => {
 			return (
 				title !== editingBlog?.blogTitle ||
 				content !== editingBlog?.content ||
-				tags !== editingBlog?.tags
+				tags !== editingBlog?.tags ||
+				coverImage !== editingBlog?.coverImage
 			);
 		} else {
-			return title !== "" || content !== "" || tags.length > 0;
+			return title !== "" && content !== "";
 		}
 	};
 
 	async function createBlog(draft) {
-		if (!title || !content) {
+		if (!title || !content || !coverImage) {
 			return alert("Title and Content must be mentioned !!");
 		}
 		let data = {
 			blogTitle: title,
 			userEmail: user?.email,
 			userName: user?.name,
+			coverImage: coverImage || editingBlog?.coverImage,
 			content,
 			tags,
+			approved: false,
 			isDraft: draft,
 		};
 		let res;
@@ -110,6 +108,7 @@ const CreateBlog = () => {
 			setTitle("");
 			setContent("");
 			setTags([]);
+			setCoverImage("https://picsum.photos/400");
 
 			history.replace("/blogs");
 		} else if (res.status === "failed") {
@@ -147,17 +146,15 @@ const CreateBlog = () => {
 												<p className="btn_txt">Cancel</p>
 											</Button>
 										)}
-										{!blogId && (
-											<Button
-												className="bx bx-save save-btn py-1 px-3"
-												type="button"
-												color="info"
-												onClick={() => createBlog(true)}
-												disabled={!hasChanged()}
-											>
-												<p className="btn_txt">Save</p>
-											</Button>
-										)}
+										<Button
+											className="bx bx-save save-btn py-1 px-3"
+											type="button"
+											color="info"
+											onClick={() => createBlog(editingBlog ? editingBlog.isDraft : true)}
+											disabled={!hasChanged()}
+										>
+											<p className="btn_txt">Save</p>
+										</Button>
 										{!editingBlog || editingBlog?.isDraft ? (
 											<Button
 												className="bx bxs-cloud-upload save-btn py-1 px-3"
@@ -177,7 +174,7 @@ const CreateBlog = () => {
 												disabled={!hasChanged()}
 											>
 												<p className="btn_txt">Save Changes</p>
-											</Button>											
+											</Button>
 										)}
 									</div>
 								</Row>
@@ -252,11 +249,8 @@ const CreateBlog = () => {
 											}}
 											onReady={(editor) => {
 												setEditorInstance(editor);
-												const toolbarContainer =
-													document.querySelector("#toolbar-container");
-												toolbarContainer.appendChild(
-													editor.ui.view.toolbar.element
-												);
+												const toolbarContainer = document.querySelector("#toolbar-container");
+												toolbarContainer.appendChild(editor.ui.view.toolbar.element);
 												console.log("Editor is ready to use!");
 											}}
 											onChange={(_, editor) => {
@@ -267,6 +261,8 @@ const CreateBlog = () => {
 									</div>
 									<div className="PostSetting">
 										<SideNav
+											coverImage={coverImage}
+											setCoverImage={setCoverImage}
 											tags={tags}
 											setTags={setTags}
 											editingBlog={editingBlog}
