@@ -134,21 +134,18 @@ const Login = () => {
 								{loading ? <Spinner color="light" size="sm" /> : "Sign in"}
 							</Button>
 						</div>
+						<div className="text-center">
+							<a
+							style={{ cursor: "pointer" }}
+							className="text-primary"
+							onClick={() => history.push("/register")}
+							>
+							<small>Create new account</small>
+						</a>
+						</div>
 					</Form>
 				</CardBody>
 			</Card>
-			<Row className="mt-3">
-				<Col className="text-right" xs="12">
-					{/* eslint-disable-next-line */}
-					<a
-						style={{ cursor: "pointer" }}
-						className="text-light"
-						onClick={() => history.push("/register")}
-					>
-						<small>Create new account</small>
-					</a>
-				</Col>
-			</Row>
 		</div>
 	);
 };
