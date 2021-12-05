@@ -31,8 +31,6 @@ import {
 	InputGroupAddon,
 	InputGroupText,
 	InputGroup,
-	Row,
-	Col,
 	Spinner,
 } from "reactstrap";
 import { useHistory } from "react-router";
@@ -135,13 +133,13 @@ const Login = () => {
 							</Button>
 						</div>
 						<div className="text-center">
-							<a
-							style={{ cursor: "pointer" }}
-							className="text-primary"
-							onClick={() => history.push("/register")}
+							<p
+								style={{ width: "fit-content" }}
+								className="link__behaviour mx-auto"
+								onClick={() => history.push("/register")}
 							>
-							<small>Create new account</small>
-						</a>
+								<small>Create new account</small>
+							</p>
 						</div>
 					</Form>
 				</CardBody>

@@ -3,7 +3,6 @@ import { useLocation, Route, Switch, Redirect } from "react-router-dom";
 
 // core components
 import AuthNavbar from "components/Navbars/AuthNavbar.js";
-import AuthFooter from "components/Footers/AuthFooter.js";
 
 import routes from "routes.js";
 import Error404 from "pages/Error404";
@@ -28,7 +27,7 @@ const Auth = () => {
 								<div style={{ padding: "0 30px" }}>
 									<div className="justify-content-center">
 										<prop.component />
-										<AuthFooter />
+										{/* <AuthFooter /> */}
 									</div>
 								</div>
 							</div>

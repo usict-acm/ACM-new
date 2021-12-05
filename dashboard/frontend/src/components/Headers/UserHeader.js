@@ -21,7 +21,7 @@ import "./UserHeader.css";
 const UserHeader = () => {
   return (
     <>
-      <div className="header  d-flex align-items-center head">
+      <div className="header d-flex align-items-center head">
         {/* Mask */}
         <span className="mask bg-gradient-default opacity-8" />
       </div>

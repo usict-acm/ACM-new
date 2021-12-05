@@ -18,6 +18,8 @@ const UpcomingEvents = () => {
     fetchData()
   }, [])
 
+  console.log(data);
+
   return (
     <>
       {data.length === 0 ? (

@@ -1,7 +1,7 @@
 <?php
 
     include_once './userFunctions.php';
-    include_once './mail.php';
+    include_once '../../mail.php';
 
 function userInit()
 {

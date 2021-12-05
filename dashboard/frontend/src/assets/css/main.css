@@ -1,0 +1,7 @@
+.link__behaviour {
+    cursor: pointer;
+    color: #5e72e4;
+}
+.link__behaviour:hover {
+    color: #233dd2;
+}

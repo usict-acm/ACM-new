@@ -1,8 +1,6 @@
 import React from 'react'
 import { useLocation, Route, Switch, Redirect } from 'react-router-dom'
-import { Container } from 'reactstrap'
 import AdminNavbar from 'components/Navbars/AdminNavbar.js'
-import AdminFooter from 'components/Footers/AdminFooter.js'
 import Sidebar from 'components/Sidebar/Sidebar.js'
 
 import routes from 'routes.js'
@@ -48,9 +46,9 @@ const Admin = (props) => {
                 brandText={getBrandText(location.pathname)}
               />
               <prop.component />
-              <Container fluid>
+              {/* <Container fluid>
                 <AdminFooter />
-              </Container>
+              </Container> */}
             </div>
           </Route>
         )
@@ -74,9 +72,9 @@ const Admin = (props) => {
       <div className='main-content' ref={mainContent}>
         <AdminNavbar {...props} brandText={getBrandText(location.pathname)} />
         <details.component />
-        <Container fluid>
+        {/* <Container fluid>
           <AdminFooter />
-        </Container>
+        </Container> */}
       </div>
     </Route>
   )

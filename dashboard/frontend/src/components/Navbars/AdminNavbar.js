@@ -48,7 +48,7 @@ const AdminNavbar = (props) => {
 	return (
 		<>
 			<ResetPassword closeModal={() => setShowModal(false)} show={showModal} />
-			<Navbar className="navbar-light p-0 p-md-2" expand="md" id="navbar-main">
+			<Navbar className="navbar-light p-0 p-md-2 border-bottom" expand="md" id="navbar-main">
 				<Container fluid>
 					<div className="h4 mb-0 text-uppercase d-none d-lg-inline-block">
 						{props.brandText}

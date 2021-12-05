@@ -29,7 +29,6 @@ import {
 	InputGroupAddon,
 	InputGroupText,
 	InputGroup,
-	Row,
 	Col,
 	Spinner,
 } from "reactstrap";
@@ -63,7 +62,7 @@ const Register = () => {
 	}, []);
 
 	const registerHandler = async (e) => {
-		e.preventDefault();		
+		e.preventDefault();
 		if (
 			email === "" ||
 			name === "" ||
@@ -75,7 +74,7 @@ const Register = () => {
 		) {
 			setAlertMsg("Please fill all the required fields.");
 			setAlertType("warning");
-			setShowAlert(true);			
+			setShowAlert(true);
 			return;
 		}
 		setLoading(true);
@@ -89,7 +88,7 @@ const Register = () => {
 			rollNo,
 			college,
 		};
-		const signUpRes = await signup(data);		
+		const signUpRes = await signup(data);
 		if (signUpRes?.error) {
 			localStorage.removeItem("user");
 			dispatch(resetUser());
@@ -100,43 +99,32 @@ const Register = () => {
 			localStorage.setItem("user", JSON.stringify(signUpRes?.user));
 			dispatch(setUser(signUpRes?.user));
 		}
-		setLoading(false);		
+		setLoading(false);
 	};
 
 	return (
 		<div className="registerPage">
-			<SweetAlert
-				open={showAlert}
-				setOpen={setShowAlert}
-				msg={alertMsg}
-				type={alertType}
-			/>
+			<SweetAlert open={showAlert} setOpen={setShowAlert} msg={alertMsg} type={alertType} />
 			<div className="registerLeft glass">
 				<h2 style={{ marginBottom: "20px" }}>Why Join Us?</h2>
 				<ul>
 					<li style={{ marginBottom: "10px" }}>ACM’s flagship publication</li>
 					<li style={{ marginBottom: "10px" }}>ACM’s Popular E-Newsletters</li>
 					<li style={{ marginBottom: "10px" }}>Lifelong Learning Center</li>
-					<li style={{ marginBottom: "10px" }}>
-						ACM Student Research Competition
-					</li>
-					<li style={{ marginBottom: "10px" }}>
-						Have access to Clubs Under ACM USICT
-					</li>
+					<li style={{ marginBottom: "10px" }}>ACM Student Research Competition</li>
+					<li style={{ marginBottom: "10px" }}>Have access to Clubs Under ACM USICT</li>
 					<li style={{ marginBottom: "10px" }}>ACM Career & Job Center</li>
 					<li style={{ marginBottom: "10px" }}>Specific Interest Groups</li>
-					<li style={{ marginBottom: "10px" }}>
-						Sponsored Conferences and Tours
-					</li>
+					<li style={{ marginBottom: "10px" }}>Sponsored Conferences and Tours</li>
 					<li style={{ marginBottom: "10px" }}>ACM Summer and Winter School</li>
 				</ul>
 				<div className="w-100 text-right">
-						<a
-						style={{ cursor: "pointer" }}
-						className="text-primary"
+					<a
+						className="link__behaviour"
 						href="https://usict.acm.org/benefits.php"
 						target="_blank"
-						>
+						rel="noopener noreferrer"
+					>
 						<small>Learn More...</small>
 					</a>
 				</div>
@@ -300,21 +288,17 @@ const Register = () => {
 							</FormGroup>
 							<div className="text-center">
 								<Button className="mt-4 w-100" color="primary" type="submit">
-									{loading ? (
-										<Spinner color="light" size="sm" />
-									) : (
-										"Create account"
-									)}
+									{loading ? <Spinner color="light" size="sm" /> : "Create account"}
 								</Button>
 							</div>
 							<div className="text-center mt-3">
-								<a
-								style={{cursor: "pointer"}}
-								className="text-primary"
-								onClick={() => history.push("/login")}
+								<p
+									style={{ width: "fit-content" }}
+									className="link__behaviour mx-auto"
+									onClick={() => history.push("/login")}
 								>
-								<small>Already registered? Login</small>
-							</a>
+									<small>Already registered? Login</small>
+								</p>
 							</div>
 						</Form>
 					</CardBody>
