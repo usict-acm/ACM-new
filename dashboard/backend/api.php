@@ -18,6 +18,9 @@ switch ($q) {
     case 'update':
         update();
         break;
+    case 'resetPassword':
+        resetPassword();
+        break;
     case 'fetchUserDoc':
         fetchUserDoc();
         break;

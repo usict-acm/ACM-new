@@ -9,7 +9,7 @@ import SideBar from "components/Blogs/DisplayBlogSideBar.js";
 import { selectUser } from "redux/slices/userSlice";
 import { fetchSingleBlog, updateBlog } from "api/blog";
 import "assets/css/CreateBlog.css";
-import { setLoading } from "redux/slices/mainSlice";
+import Loader from "components/Loader";
 
 export default function Preview() {
 	const dispatch = useDispatch(),
@@ -18,37 +18,44 @@ export default function Preview() {
 		history = useHistory(),
 		user = useSelector(selectUser),
 		[editorInstance, setEditorInstance] = useState(null),
-		[blog, setBlog] = useState(null);
+		[blog, setBlog] = useState(null),
+		[loading, setLoading] = useState(true);
 
-	useEffect(() => {
-		dispatch(setLoading(true));
-	}, [dispatch]);
+	// useEffect(() => {
+	// 	setLoading(true);
+	// }, []);
 
 	useEffect(() => {
 		const fetchBlog = async () => {
 			const blog = await fetchSingleBlog({ userEmail: user?.email, blogId });
 			if (blog) {
+				console.log(blog);
 				setBlog(blog);
-				dispatch(setLoading(false));
-			} else dispatch(setLoading(false));
+				setLoading(false);
+			} else {
+				history.replace("/blogs");
+				setLoading(false);
+			}
 		};
 		fetchBlog();
-	}, [dispatch, blogId, user]);
+	}, [dispatch, blogId, user, history]);
 
 	useEffect(() => {
 		blog && editorInstance?.setData(blog?.content);
 	}, [editorInstance, blog]);
 
-	async function unPublish(draft) {
+	async function unPublish() {
 		let data = {
 			blogId: blog?.blogId,
 			blogTitle: blog?.blogTitle,
 			userEmail: blog?.userEmail,
 			userName: blog?.userName,
+			coverImage: blog?.coverImage,
 			content: blog?.content,
 			tags: blog?.tags,
-			isDraft: draft,
-			isPublished: !draft,
+			approved: blog?.approved,
+			isDraft: true,
+			isPublished: false,
 		};
 		let res;
 
@@ -69,24 +76,25 @@ export default function Preview() {
 
 	return (
 		<Container fluid className="p-2 mt-4">
+			{loading && <Loader />}
 			<CardHeader className="px-2 bg-secondary">
 				<Row className="titleEdit">
 					<Col xs="8">
 						<h1 className="blogTitle">{blog?.blogTitle}</h1>
 					</Col>
 					<Col xs="12" sm="4" className="editbtnCol justify-content-center justify-content-sm-end">
-						<Button
-							onClick={() => history.push(`/createBlog/${blogId}`)}
-							color="info"
-							className="bx bxs-pencil py-1"
-						></Button>
-						<Button
-							onClick={() => unPublish(true)}
-							color="danger"
-							className="py-2"
-						>
-							UNPUBLISH
-						</Button>
+						{!blog?.approved && (
+							<Button
+								onClick={() => history.push(`/createBlog/${blogId}`)}
+								color="info"
+								className="bx bxs-pencil py-1"
+							></Button>
+						)}
+						{blog?.published && blog?.approved && (
+							<Button onClick={unPublish} color="danger" className="py-2">
+								UNPUBLISH
+							</Button>
+						)}
 					</Col>
 				</Row>
 			</CardHeader>

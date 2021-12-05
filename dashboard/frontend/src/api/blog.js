@@ -62,6 +62,7 @@ export const addBlog = (body) => (dispatch) => {
 };
 
 export const updateBlog = (body) => (dispatch) => {
+  console.log(body)
   return fetch(
     process.env.REACT_APP_BASE_URL +
       "/api.php?q=updateBlog",

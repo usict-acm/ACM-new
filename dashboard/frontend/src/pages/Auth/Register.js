@@ -130,6 +130,16 @@ const Register = () => {
 					</li>
 					<li style={{ marginBottom: "10px" }}>ACM Summer and Winter School</li>
 				</ul>
+				<div className="w-100 text-right">
+						<a
+						style={{ cursor: "pointer" }}
+						className="text-primary"
+						href="https://usict.acm.org/benefits.php"
+						target="_blank"
+						>
+						<small>Learn More...</small>
+					</a>
+				</div>
 			</div>
 			<Col className="mt-5 registerRight">
 				<Card className="bg-secondary shadow border-0">
@@ -297,21 +307,18 @@ const Register = () => {
 									)}
 								</Button>
 							</div>
+							<div className="text-center mt-3">
+								<a
+								style={{cursor: "pointer"}}
+								className="text-primary"
+								onClick={() => history.push("/login")}
+								>
+								<small>Already registered? Login</small>
+							</a>
+							</div>
 						</Form>
 					</CardBody>
 				</Card>
-				<Row className="mt-3">
-					<Col className="text-right" xs="12">
-						{/* eslint-disable-next-line */}
-						<a
-							style={{cursor: "pointer"}}
-							className="text-light"
-							onClick={() => history.push("/login")}
-						>
-							<small>Already registered? Login</small>
-						</a>
-					</Col>
-				</Row>
 			</Col>
 		</div>
 	);
