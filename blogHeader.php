@@ -20,7 +20,7 @@
           })
           threePosts.innerHTML += "<div class='col-md-4 col-lg-4'>\
                                       <div id=" + row.Sno + "_image onClick = redirectHeaderThree(" + row.Sno + ") class='effect-layla figure'>\
-                                      <img src='./" + row.Image + "' />\
+                                      <img src='" + row.Image + "' />\
                                         <div class='figcaption'>\
                                           <h2><span>" + row.Title + "</span></h2>" + spanTag + "\
                                           <p>" + row.Date + "</p>\
@@ -54,7 +54,7 @@
           rightThreePost.innerHTML += "<div id=" + row.Sno + " class='row rightCard' onClick = redirectRightThree(" + row.Sno + ")>\
             <div class='col-5'>\
               <div class='rightImage'>\
-                <img id=rightBlog" + index + "_image src='./" + row.Image + "' alt= />\
+                <img id=rightBlog" + index + "_image src='" + row.Image + "' alt= />\
               </div>\
             </div>\
             <div class='col-7 rightText'>\
@@ -117,7 +117,7 @@
             posts.innerHTML += "<div class=col-md-6 col-lg-6 col-12>\
                     <div class=card id=" + row.Sno + " onClick = redirec(" + row.Sno + ") >\
                       <img\
-                      src = ./" + row.Image + "\
+                      src = '" + row.Image + "'\
                         id=blog" + index + "_image\
                         class=card-img-top\
                         alt=Card image cap\

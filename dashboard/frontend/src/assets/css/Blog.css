@@ -7,6 +7,10 @@
 .post-btn {
 	margin-right: 35px;
 }
+.postBtn {
+	width: fit-content;
+	height: 100%;
+}
 
 /* post section */
 .post-section {
@@ -50,16 +54,15 @@
 }
 
 .details {
+	flex: 1;
 	display: flex;
 	flex-direction: column;
 	padding-right: 15px;
 }
 
 .blog-buttons {
-	display: flex;
-}
-.blog-buttons > button {
 	z-index: 100;
+	display: flex;
 }
 
 /* sidebar cover image section */
@@ -102,6 +105,61 @@
 .blog__coverInput::file-selector-button{
   cursor: pointer;
 }
+
+@media screen and (max-width: 400px) {
+	.BlogContainer {
+		padding: 0;
+	}
+
+	.drop-text {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.postBtn {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.search-row {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
+
+	.bg-white.border-0 {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.content-card {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.contentBox {
+		flex-direction: column;
+		position: relative;
+		text-align: center;
+		padding: 10px 0;
+	}
+	.details {
+		width: 100%;
+		padding-right: 0px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.content-card {
+		margin: 0;
+		padding: 0;
+	}
+	.postBtn {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 900px) {
+	.groupBtn, .postBtn{
+		max-height: max-content !important;
+	}
+	
+}
 @media only screen and (max-width: 1150px) {
 	.blog__cover {
 		display: flex;
@@ -111,93 +169,5 @@
 	.blog__coverForm {
 		width: 300px;
     text-align: center;
-	}
-}
-
-@media screen and (max-width: 400px) {
-	.BlogContainer {
-		padding: 0;
-	}
-
-	.drop-text {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-	.postBtn {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-	.search-row {
-		padding-left: 15px !important;
-		padding-right: 15px !important;
-	}
-
-	.bg-white.border-0 {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-	.content-card {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-
-	.contentBox {
-		flex-direction: column;
-		position: relative;
-		text-align: center;
-	}
-	.details {
-		padding-right: 0px;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.content-card {
-		margin: 0;
-		padding: 0;
-	}
-}
-
-@media screen and (max-width: 400px) {
-	.BlogContainer {
-		padding: 0;
-	}
-
-	.drop-text {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-	.postBtn {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-	.search-row {
-		padding-left: 15px !important;
-		padding-right: 15px !important;
-	}
-
-	.bg-white.border-0 {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-	.content-card {
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-
-	.contentBox {
-		flex-direction: column;
-		position: relative;
-		text-align: center;
-	}
-	.details {
-		padding-right: 0px;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.content-card {
-		margin: 0;
-		padding: 0;
 	}
 }

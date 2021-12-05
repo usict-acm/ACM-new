@@ -55,7 +55,37 @@ export default function Preview() {
 			tags: blog?.tags,
 			approved: blog?.approved,
 			isDraft: true,
-			isPublished: false,
+			isPublished: blog?.isDraft,
+		};
+		let res;
+
+		res = await dispatch(updateBlog(data));
+
+		// cleanup
+		if (res.status === "success") {
+			editorInstance?.setData("");
+			// setTitle('')
+			// setContent('')
+			// setTags([])
+
+			history.replace("/blogs");
+		} else if (res.status === "failed") {
+			alert("Process Failed");
+		}
+	}
+
+	async function publish() {
+		let data = {
+			blogId: blog?.blogId,
+			blogTitle: blog?.blogTitle,
+			userEmail: blog?.userEmail,
+			userName: blog?.userName,
+			coverImage: blog?.coverImage,
+			content: blog?.content,
+			tags: blog?.tags,
+			approved: blog?.approved,
+			isDraft: false,
+			isPublished: true,
 		};
 		let res;
 
@@ -83,18 +113,23 @@ export default function Preview() {
 						<h1 className="blogTitle">{blog?.blogTitle}</h1>
 					</Col>
 					<Col xs="12" sm="4" className="editbtnCol justify-content-center justify-content-sm-end">
-						{!blog?.approved && (
+						{!blog?.approved && blog?.isDraft && (
 							<Button
 								onClick={() => history.push(`/createBlog/${blogId}`)}
 								color="info"
 								className="bx bxs-pencil py-1"
-							></Button>
+							/>
 						)}
-						{blog?.published && blog?.approved && (
-							<Button onClick={unPublish} color="danger" className="py-2">
-								UNPUBLISH
-							</Button>
-						)}
+						{blog?.approved &&
+							(blog.isDraft ? (
+								<Button onClick={publish} color="success" className="py-2">
+									PUBLISH
+								</Button>
+							) : (
+								<Button onClick={unPublish} color="danger" className="py-2">
+									UNPUBLISH
+								</Button>
+							))}
 					</Col>
 				</Row>
 			</CardHeader>

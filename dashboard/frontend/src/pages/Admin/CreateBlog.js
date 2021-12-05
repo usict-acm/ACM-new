@@ -32,7 +32,7 @@ const CreateBlog = () => {
 	useEffect(() => {
 		const setData = async () => {
 			const blog = await fetchSingleBlog({ userEmail: user?.email, blogId });
-			if (!blog || blog?.approved) return history.replace("/blogs");
+			if (!blog || blog?.approved || !blog.isDraft) return history.replace("/blogs");
 			setEditingBlog(blog);
 			blog && editorInstance && editorInstance.setData(blog?.content || "");
 			setTags(blog?.tags || []);
@@ -155,7 +155,7 @@ const CreateBlog = () => {
 										>
 											<p className="btn_txt">Save</p>
 										</Button>
-										{!editingBlog || editingBlog?.isDraft ? (
+										{(!editingBlog || editingBlog?.isDraft) && (
 											<Button
 												className="bx bxs-cloud-upload save-btn py-1 px-3"
 												type="button"
@@ -164,16 +164,6 @@ const CreateBlog = () => {
 												disabled={!editingBlog && !hasChanged()}
 											>
 												<p className="btn_txt">Publish</p>
-											</Button>
-										) : (
-											<Button
-												className="bx bxs-cloud-upload save-btn py-1 px-3"
-												type="button"
-												color="success"
-												onClick={() => createBlog(false)}
-												disabled={!hasChanged()}
-											>
-												<p className="btn_txt">Save Changes</p>
 											</Button>
 										)}
 									</div>

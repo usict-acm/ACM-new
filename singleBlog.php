@@ -89,7 +89,7 @@
               <h1 id='blog_title' class='singleBlog-title'>" + data[0].Title + "</h1>\
               <div class='singleBlog'>\
               <img\
-              src='./" + data[0].Image + "'\
+              src='" + data[0].Image + "'\
                 id='blog_image'\
                 class='card-img-top'\
                 alt='Card image cap'\

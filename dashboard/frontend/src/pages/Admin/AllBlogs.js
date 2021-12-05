@@ -67,15 +67,16 @@ export default function AllBlogs() {
 			<Row className="m-0 p-0">
 				<Col className="order-xl-1 p-0">
 					<Card>
-						<CardHeader className="bg-white border-0">
+						<CardHeader className="bg-white border-0 pb-0 pb-md-3 align-items-stretch">
 							<Row className="CardHeader m-0 p-0">
-								<Col xs="4" className="p-0">
-									<ButtonGroup>
+								<Col md="6" className="col-12 p-0">
+									<ButtonGroup className="w-100">
 										<Button
 											outline
 											color="info"
 											onClick={() => setType(0)}
 											active={type === 0}
+											className="groupBtn"
 										>
 											Published
 										</Button>
@@ -84,6 +85,7 @@ export default function AllBlogs() {
 											color="info"
 											onClick={() => setType(1)}
 											active={type === 1}
+											className="groupBtn"
 										>
 											Drafts
 										</Button>
@@ -92,12 +94,13 @@ export default function AllBlogs() {
 											color="info"
 											onClick={() => setType(2)}
 											active={type === 2}
+											className="groupBtn"
 										>
 											Waiting Approval
 										</Button>
 									</ButtonGroup>
 								</Col>
-								<Col className="text-right post-btn p-0 m-0">
+								<Col className="col-12 col-md text-right post-btn p-0 mx-0 my-2 my-md-0">
 									<Button
 										type="button"
 										color="info"
