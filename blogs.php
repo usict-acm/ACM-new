@@ -42,12 +42,12 @@
         </div>
         <div id="row4"></div>
 
-        <div class="row categoryCards">
+        <!-- <div class="row categoryCards">
           <div class="col">
             <h4>Categories</h4>
           </div>
         </div>
-        <hr style="width: 100%; text-align: centre" />
+        <hr style="width: 100%; text-align: centre" /> -->
         <!-- ===========================================================Show Ctegories=================================== -->
         <div id="row3">
 
@@ -76,6 +76,10 @@
                 function myfunc(row, index) {
                   var desc = row.Content;
                   var descSub = desc.substring(0, 70) + "...";
+                  let spanTag = "";
+                  row.Category.forEach((element) => {
+                    spanTag += "<span id=blog" + index + "_category class=category>" + element + "</span>"
+                  })
                   posts.innerHTML += "<div class=col-md-6 col-lg-6 col-12>\
                   <div class=card id=" + row.Sno + " onClick = redirec(" + row.Sno + ") >\
                     <img\
@@ -87,8 +91,8 @@
                     />\
                     <div class=card-body>\
                       <div class=post-meta>\
-                        <span id=blog" + index + "_category class=category>" + row.Category + "</span>\
-                        <span id=blog" + index + "_date class=mx-2 card-span>" + row.Date + "</span>\
+                      " +
+                    spanTag + "<span id=blog" + index + "_date class=mx-2 card-span>" + row.Date + "</span>\
                         <span class=mx-2 card-span card-span-dot\
                           ><i class=fas fa-circle></i>\
                         </span>\

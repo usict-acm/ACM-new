@@ -96,7 +96,9 @@
                                     if (boolval($row["approved"])) {
                                         echo "<td> Approved </td>";
                                     } else {
-                                        echo "<td><a href='../../admin/blogAdmin/api.php/?q=updateBlog&Id=" . $row['blogId'] . "' class='btn btn-primary'>Approve</a></td>";
+                                        echo "<td><button onclick=approveRequest(" . $row['blogId'] . ") class='btn btn-primary'>Approve</button>      ";
+                                        echo "<button onclick=rejectRequest(" . $row['blogId'] . ") class='btn btn-primary'>Reject</button>";
+                                        echo "</td>";
                                     }
                                     echo "<td>";
                                     echo "<a href='../../singleBlog.php?Id=" . $row['blogId'] . "' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
@@ -127,5 +129,31 @@
         </div>
     </div>
 </body>
+
+<script>
+    function approveRequest(id) {
+        let url = `../../admin/blogAdmin/api.php/?q=approveRequest&Id=${id}`
+        $.ajax({
+            url: url,
+            method: 'PATCH',
+            success: function(data) {
+                console.log(data);
+            }
+
+        })
+    }
+
+    function rejectRequest(id) {
+        let url = `../../admin/blogAdmin/api.php/?q=rejectRequest&Id=${id}`
+        $.ajax({
+            url: url,
+            method: 'PATCH',
+            success: function(data) {
+                console.log(data);
+            }
+
+        })
+    }
+</script>
 
 </html>

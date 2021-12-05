@@ -25,7 +25,7 @@ class Post
   // Get Posts
   public function read($start, $limit)
   {
-    $query = 'SELECT b.blogId, b.blogTitle, b.userName, b.content, b.published, b.coverImage FROM ' . $this->table . ' b WHERE approved=1 ORDER BY published DESC LIMIT ' . $start . ',' . $limit;
+    $query = 'SELECT b.blogId, b.blogTitle, b.userName, b.content, b.published, b.coverImage, b.tags FROM ' . $this->table . ' b WHERE approved=1 ORDER BY published DESC LIMIT ' . $start . ',' . $limit;
     $stmt = $this->conn->query($query);
     return $stmt;
   }
@@ -52,7 +52,7 @@ class Post
   public function readCategories($Category)
   {
     // Create query
-    $query = 'SELECT b.Sno, b.Title, b.Author, b.Content, b.Category, b.Event, b.Image, b.Date
+    $query = 'SELECT b.Sno, b.Title, b.Author, b.Content, b.Category, b.Event, b.Image, b.Date, b.tags
                                 FROM ' . $this->table . ' b 
                                 WHERE Category=' . $Category;
 
@@ -76,7 +76,7 @@ class Post
   public function readThree()
   {
     // Create query
-    $query = 'SELECT b.blogId, b.blogTitle, b.userName, b.content, b.published, b.coverImage
+    $query = 'SELECT b.blogId, b.blogTitle, b.userName, b.content, b.published, b.coverImage, b.tags
                                 FROM ' . $this->table . ' b
                                 WHERE approved=1 ORDER BY blogId DESC LIMIT 3';
 
@@ -87,7 +87,7 @@ class Post
   public function readOne($Sno)
   {
     // Create query
-    $query = 'SELECT b.blogId, b.blogTitle, b.userName, b.content, b.published, b.coverImage
+    $query = 'SELECT b.blogId, b.blogTitle, b.userName, b.content, b.published, b.coverImage, b.tags
                                 FROM ' . $this->table . ' b
                                 WHERE blogId=' . $Sno;
 

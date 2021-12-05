@@ -42,7 +42,7 @@ function read()
                 'Title' => $row["blogTitle"],
                 'Author' => $row["userName"],
                 'Content' => $row["content"],
-                // 'Category' => $row["Category"],
+                'Category' => unserialize($row["tags"]),
                 // 'Event' => $row["Event"],
                 'Image' => $row["coverImage"],
                 'Date' => $row["published"],
@@ -125,7 +125,7 @@ function showCategory()
                 'Author' => $row["Author"],
                 'Content' => $row["Content"],
                 'Category' => $row["Category"],
-                'Event' => $row["Event"],
+                // 'Event' => $row["Event"],
                 'Image' => $row["coverImage"],
                 'Date' => $row["Date"],
             );
@@ -166,7 +166,7 @@ function read_home()
                 'Title' => $row["blogTitle"],
                 'Author' => $row["userName"],
                 'Content' => $row["content"],
-                // 'Category' => $row["Category"],
+                'Category' => unserialize($row["tags"]),
                 // 'Event' => $row["Event"],
                 'Image' => $row["coverImage"],
                 'Date' => $row["published"],
@@ -211,7 +211,7 @@ function read_one()
                 'Title' => $row["blogTitle"],
                 'Author' => $row["userName"],
                 'Content' => $row["content"],
-                // 'Category' => $row["Category"],
+                'Category' => unserialize($row["tags"]),
                 // 'Event' => $row["Event"],
                 'Image' => $row["coverImage"],
                 'Date' => $row["published"],
@@ -358,12 +358,29 @@ function yearWiseEvent1()
     }
 };
 
-function updateBlogStatus($blogUpdateId)
+function approveRequest()
 {
     $database = new Database();
     $db = $database->connect();
+    $id = $_GET["Id"];
+    $sql = "UPDATE `blogs` SET approved = '1' WHERE blogId='" . $id . "'";
+    if ($db->query($sql) == true) {
+        echo json_encode(
+            array('message' => 'Form has been submitted')
+        );
+    } else {
+        echo json_encode(
+            array('message' => 'Internal Server Error. Try Again')
+        );
+    }
+}
 
-    $sql = "UPDATE `blogs` SET approved = '1' WHERE blogId='$blogUpdateId";
+function rejectRequest()
+{
+    $database = new Database();
+    $db = $database->connect();
+    $id = $_GET["Id"];
+    $sql = "UPDATE `blogs` SET approved = '0',isDraft='1' WHERE blogId='" . $id . "'";
     if ($db->query($sql) == true) {
         echo json_encode(
             array('message' => 'Form has been submitted')
@@ -860,8 +877,11 @@ switch ($q) {
     case 'readResponses':
         readResponses();
         break;
-    case 'updateBlog':
-        updateBlogStatus($_GET["Id"]);
+    case 'approveRequest':
+        approveRequest();
+        break;
+    case 'rejectRequest':
+        rejectRequest();
         break;
     case 'fields':
         getFields();
