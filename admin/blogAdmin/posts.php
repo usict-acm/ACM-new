@@ -87,7 +87,7 @@ class Post
   public function readOne($Sno)
   {
     // Create query
-    $query = 'SELECT b.blogId, b.blogTitle, b.userName, b.content, b.published, b.coverImage, b.tags
+    $query = 'SELECT b.blogId, b.blogTitle, b.userEmail, b.userName, b.content, b.published, b.coverImage, b.tags
                                 FROM ' . $this->table . ' b
                                 WHERE blogId=' . $Sno;
 

@@ -23,7 +23,7 @@
         ";
         return mail($userEmail, $subject, $body, $headers);
     };
-    function blogMail ($userEmail, $blogTitle, $blogId) {
+    function blogApprovedMail ($userEmail, $blogTitle, $blogId) {
         $blogUrl = "https://usict.acm.org/test_acm/dashboard/user-portal/blog/$blogId";
         $subject = "Your blog has been approved";
 
@@ -40,6 +40,30 @@
                     <p>Your recent blog titled $blogTitle is approved by the team and is published <a herf='$blogUrl'>here</a>.</p>
                     <br />
                     <p>Share the word to your friends and keep writing.</p>
+                    <br />
+                    <p>Regards</p>
+                    <p>USICT ACM Student Chapter</p>
+                </body>
+            </html>
+        ";        
+    };
+    function blogRejectedMail ($userEmail, $blogTitle, $blogId) {
+        $blogUrl = "https://usict.acm.org/test_acm/dashboard/user-portal/blog/$blogId";
+        $subject = "Your blog has been rejected";
+
+        $headers  = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+        $headers .= "From:usict.acm.org";
+
+        $body = "
+            <html>
+                <head><title>Your blog has been approved</title></head>
+                <body>
+                    <p>Attention writer!</p>
+                    <br />
+                    <p>Your recent blog titled $blogTitle has been rejected by the team and now added to your drafts. Please try publishing again. Find your blog <a herf='$blogUrl'>here</a>.</p>
+                    <br />
+                    <p>Keep writing.</p>
                     <br />
                     <p>Regards</p>
                     <p>USICT ACM Student Chapter</p>

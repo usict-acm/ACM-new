@@ -5,6 +5,7 @@ header('Content-Type: application/json');
 include_once './database.php';
 include_once './posts.php';
 include_once '../../events/eventPost.php';
+include_once '../../mail.php';
 // include_once './forms.php';
 
 
@@ -363,8 +364,16 @@ function approveRequest()
     $database = new Database();
     $db = $database->connect();
     $id = $_GET["Id"];
-    $sql = "UPDATE `blogs` SET approved = '1' WHERE blogId='" . $id . "'";
+    $sql = "UPDATE `blogs` SET approved = '1' WHERE blogId='" . $id . "'";    
+
+    // Instantiate blog post object
+    $post = new Post($db);
+    // Blog post query
+    $result = $post->readOne($id);
+    $blogData = $result->fetch_assoc();
+
     if ($db->query($sql) == true) {
+        blogApprovedMail($blogData["userEmail"], $blogData["blogTitle"], $blogData["blogId"]);
         echo json_encode(
             array('message' => 'Form has been submitted')
         );
@@ -381,7 +390,15 @@ function rejectRequest()
     $db = $database->connect();
     $id = $_GET["Id"];
     $sql = "UPDATE `blogs` SET approved = '0',isDraft='1' WHERE blogId='" . $id . "'";
+
+    // Instantiate blog post object
+    $post = new Post($db);
+    // Blog post query
+    $result = $post->readOne($id);
+    $blogData = $result->fetch_assoc();
+    
     if ($db->query($sql) == true) {
+        blogRejectedMail($blogData["userEmail"], $blogData["blogTitle"], $blogData["blogId"]);
         echo json_encode(
             array('message' => 'Form has been submitted')
         );
