@@ -25,7 +25,7 @@ class Post
   // Get Posts
   public function read($start, $limit)
   {
-    $query = 'SELECT b.blogId, b.blogTitle, b.userName, b.content, b.published, b.coverImage, b.tags FROM ' . $this->table . ' b WHERE approved=1 ORDER BY published DESC LIMIT ' . $start . ',' . $limit;
+    $query = 'SELECT b.blogId, b.blogTitle, b.userName, b.content, b.published, b.coverImage, b.tags FROM ' . $this->table . ' b WHERE approved=1 AND isDraft=0 ORDER BY published DESC LIMIT ' . $start . ',' . $limit;
     $stmt = $this->conn->query($query);
     return $stmt;
   }
@@ -78,7 +78,7 @@ class Post
     // Create query
     $query = 'SELECT b.blogId, b.blogTitle, b.userName, b.content, b.published, b.coverImage, b.tags
                                 FROM ' . $this->table . ' b
-                                WHERE approved=1 ORDER BY blogId DESC LIMIT 3';
+                                WHERE approved=1 AND isDraft=0 ORDER BY blogId DESC LIMIT 3';
 
     $stmt = $this->conn->query($query);
 
