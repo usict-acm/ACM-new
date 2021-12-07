@@ -64,7 +64,7 @@ require_once "config1.php";
 
     <script>
         function copy(){
-            var copyText = "http://localhost/ACM-new/UI/index.php?Id=" + '<?php echo $formID ?>';
+            var copyText = "http://localhost/ACM-new/forms/index.php?Id=" + '<?php echo $formID ?>';
             navigator.clipboard.writeText(copyText);
         }
     </script>

@@ -263,32 +263,6 @@ textarea.input100 {
   height: 62px;
   border-radius: 31px;
   font-size: 16px;
-  background-color: #827ffe;
-  color: #fff;
-  line-height: 1.2;
-  text-transform: uppercase;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-  position: relative;
-  z-index: 1;
-}
-
-/* .contact100-form-btn {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #827ffe;
-  padding: 0 20px;
-  min-width: 150px;
-  height: 62px;
-  border-radius: 31px;
-  font-size: 16px;
   color: #fff;
   line-height: 1.2;
   text-transform: uppercase;
@@ -340,6 +314,7 @@ input::placeholder {
   font-size: 18.5px;
   font-family: monospace;
 }
+
 
 /*------------------------------------------------------------------
 [ Alert validate ]*/
