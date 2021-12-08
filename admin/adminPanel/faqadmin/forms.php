@@ -110,20 +110,20 @@
                 <p>Please fill this form and submit to create the FORM.</p>
                     <form id="googleForm"  method="POST" enctype="multipart/form-data">
                         <div class="">
-                            <input type="text" name="formNameMain" id="formNameMain"  class='form-control' placeholder="Enter the Name of Form" />
+                            <input type="text" name="formNameMain" id="formNameMain"  class='form-control' placeholder="Enter the Name of Form" required/>
                         </div>
                         <br>
                         <div >
                             <div id="container">
-                                
-                                    <input type="text" id="fieldName" class='form-control alignment123 titleField' name="fieldName[]" placeholder="Enter Field Name" />
+                                    <input type="text" id="fieldName" class='form-control alignment123 titleField reqField0' name="fieldName[]" placeholder="Enter Field Name" required/>
                                     <div class="alignment2">
                                         <label>Choose Answer Type:</label>
-                                        <select  id="dropDown" class="classDD0"  name="dropDown[]" onchange="changeDD(0)" name="cars" >
-                                            <option value="">Select an Option</option>
+                                        <select  id="dropDown" class="classDD0"  name="dropDown[]" onchange="changeDD(0)" name="cars" required>
+                                            <option value="noVal">Select an Option</option>
                                             <option value="checkbox" >Checkbox</option>
                                             <option value="shortAns">Short answer</option>
                                             <option value="paraAns">Paragraph</option>
+                                            <option value="radioAns">Radio Btns</option>
                                         </select>
                                     </div>
                                     <div id="required">
@@ -134,6 +134,8 @@
                                 </div>
                             </div>
                             <div id="lastThree">
+                            <div id="f0" class="form-group">
+                                </div>
                                 <a  id="addBtn" class=" repeatBtn btn btn-primary" >Add More Field?</a>
                             </div>
                             <hr>
@@ -149,64 +151,128 @@
 
 <script type="text/javascript">
 let count=0;
-
+let ok=0;
+let checkFilledFieldName=0;
+let once=1;
 function changeDD(count){
+    ok=1;
     // console.log(count);
     let prevCheckbox=`  <div class="col-xs-7">
-                        <input type="text" id="checkboxInput`+count+`" name="checkboxInput`+count+`[]" class="form-control topCheck topCheck1 checkClass" name="" placeholder="Fill only if checkbox is selected" />
+                        <input type="text" id="checkboxInput`+count+`" name="checkboxInput`+count+`[]" class="form-control topCheck topCheck1 " name="" placeholder="Fill only if checkbox is selected" required/>
                         </div>
-                        <a id="plusBtn`+count+`" class=" btn btn-primary plus topPlus prevplus" onclick="myFunc(`+count+`)">+</a>`;
+                        <a id="plusBtn`+count+`" class=" btn btn-primary plus topPlus " onclick="myFunc(`+count+`)">+</a>`;
+    let prevRadioInput=`  <div class="col-xs-7">
+                            <input type="text" id="radioBtn`+count+`" name="radioBtn`+count+`[]" class="form-control topCheck topCheck1 " name="" placeholder="radioBtn Value" required/>
+                        </div>
+                        <a id="plusBtn`+count+`" class=" btn btn-primary plus topPlus " onclick="myFuncRadio(`+count+`)">+</a>`;
+    let checkFormNameFilled=document.querySelector('#formNameMain').value.length;
+        let temp=document.querySelector(".reqField"+count).value.length;
         // var eva = document.getElementById("dropDown");
         var eva = document.querySelector(".classDD"+count);
 
         var strUser = eva.value;
-        console.log(strUser);
+        // console.log(strUser);
+        if(strUser==="radioAns"){
+            jQuery('#field'+count).html('');
+            $("#field"+count).append(prevRadioInput);
+           
+            if(checkFormNameFilled!=0 && temp!=0){
+                once=1;
+                jQuery('#f0').html('');
+            }
+
+        }
         if(strUser==="checkbox"){
-            // console.log(`${#container}`);
-            // console.log(document.getElementById('container'));
+            jQuery('#field'+count).html('');
             $("#field"+count).append(prevCheckbox);
+            
+            if(checkFormNameFilled!=0 && temp!=0){
+                once=1;
+                jQuery('#f0').html('');
+            }
         }
         if(strUser==="shortAns"){
-            // var elem = document.getElementById('field'+count);
-            // elem.parentNode.removeChild(elem);
             jQuery('#field'+count).html('');
+            
+            if(checkFormNameFilled!=0 && temp!=0){
+                once=1;
+                jQuery('#f0').html('');
+            }
     
         }
         if(strUser==="paraAns"){
-            // var elem = document.getElementById('field'+count);
-            // elem.parentNode.removeChild(elem);
             jQuery('#field'+count).html('');
-
-
+           
+            if(checkFormNameFilled!=0 && temp!=0){
+                once=1;
+                jQuery('#f0').html('');
+            }
+            
         }
-}
+        if(strUser==="noVal"){
+            once==1;
+            ok=0;
+            jQuery('#field'+count).html('');
+            checkRequiredFields();
+        }
+       
         
-                                
+}
+                function checkRequiredFields(){
+                    // console.log(once);   
+                    let warnHTML=`Please fill ->  &nbsp &nbsp;   Field Name , drop Down , Form Name <br> `;
+                    if(once===1){
+                        // console.log("sdfghh");
+                        $("#f0").append(warnHTML);
+                        once++;
+                    }
+                };
+               
+                             
                             
                 function myFunc(count){
                     let checkboxHTML=` 
                                             <div class="form-group">
                                                 <div class="col-xs-7">
-                                                    <input type="text" id="checkboxInput`+count+`" name="checkboxInput`+count+`[]" class='form-control topCheck topCheck2 checkClass'name="" placeholder="Fill only if checkbox is selected" />
+                                                    <input type="text" id="checkboxInput`+count+`" name="checkboxInput`+count+`[]" class='form-control topCheck topCheck2 'name="" placeholder="Fill only if checkbox is selected" required/>
                                                 </div>
                                         `;
                     $("#field"+count).append(checkboxHTML);
+                }
+                function myFuncRadio(count){
+                    let RadioBtnHTML=` 
+                                        <div class="col-xs-7">
+                                                <input type="text" id="radioBtn`+count+`" name="radioBtn`+count+`[]" class="form-control topCheck topCheck1 " name="" placeholder="radioBtn Value" required/>
+                                        </div>
+                                        `;
+                    
+                    $("#field"+count).append(RadioBtnHTML);
                 }
                              
 
                     $(document).ready(function(e){
                         $("#addBtn").click(function(e){
-                            count = count + 1;
+                            
+                            let checkFormNameFilled=document.querySelector('#formNameMain').value.length;
+                            let temp=document.querySelector(".reqField"+count).value.length;
+                            // console.log(checkFormNameFilled);
+
+                            // console.log(temp);
+                           
+                        if(ok==1  && temp!=0 && checkFormNameFilled!=0){
+                            once=1;
+                                count = count + 1;
                             var html=`<div>
                                        
-                                            <input type="text" name="fieldName[]" id="childFieldName" class='form-control alignment123 titleField' placeholder="Enter Field Name" />
+                                            <input type="text" name="fieldName[]" id="childFieldName" class='form-control alignment123 titleField reqField`+count+`' placeholder="Enter Field Name" required/>
                                             <div class="alignment2">
                                                 <label>Choose Answer Type:</label>
-                                                <select   id="dropDown"  name="dropDown[]" class="classDD`+count+`" name="cars"  onchange="changeDD(`+count+`)" >
-                                                    <option value="">Select an Option</option>
+                                                <select   id="dropDown"  name="dropDown[]" class="classDD`+count+`" name="cars"  onchange="changeDD(`+count+`)" required>
+                                                    <option value="noVal">Select an Option</option>
                                                     <option value="checkbox">checkbox</option>
                                                     <option value="shortAns">Short answer</option>
                                                     <option value="paraAns">Paragraph</option>
+                                                    <option value="radioAns">Radio Btns</option>
                                                 </select>
                                             </div>
                                             <div id="required">
@@ -216,15 +282,22 @@ function changeDD(count){
                                             <div id="field`+ count +`" class="form-group">
                                         </div>
                                         </div>`;
-                            // console.log(count);
-                            $("#container").append(html);
+                                // console.log(count);
+                                $("#container").append(html);
+                                ok=0;
+                                jQuery('#f0').html('');
+                        }else{
+                            // console.log("erty");
+                            checkRequiredFields();
+                        }
+                            
                         });
                     });
 
 </script>
 
 <?php
-    // require_once "./config.php";
+    require_once "./config.php";
     include_once '../blogAdmin/forms.php';
     include_once '../blogAdmin/database.php';
 
@@ -242,6 +315,9 @@ function changeDD(count){
         // print_r($required);
         for($i=0;$i<sizeof($fieldName);$i++){
             $val="checkboxInput".$i;
+            $valRadio="radioBtn".$i;
+            // $checkboxInput= $_POST[$val];
+            // print_r( $checkboxInput);
             $subArr=array();
             array_push($subArr,$fieldName[$i]);
             array_push($subArr,$dropDown[$i]);
@@ -256,10 +332,13 @@ function changeDD(count){
                 $checkboxInput=$_POST[$val];
                 array_push($subArr,$checkboxInput);
             }
-
+            if($_POST[$valRadio]){
+                $radioBtn=$_POST[$valRadio];
+                array_push($subArr,$radioBtn);
+            }
             array_push($result,$subArr);
         }
-        // print_r($result);
+        print_r($result);
         $database = new Database();
         $db = $database->connect();
 
@@ -282,7 +361,7 @@ function changeDD(count){
             }
             array_push($request,$field_array);
         }
-        // print_r($request);
+        print_r($request);
         $form->saveFormInFormsTable($name,$request);
         $result = $form->createResponseTable($request);
         echo "<script>window.location.replace('./index.php?table=formCreation')</script>";
