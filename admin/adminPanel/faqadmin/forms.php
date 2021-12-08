@@ -124,6 +124,7 @@
                                             <option value="shortAns">Short answer</option>
                                             <option value="paraAns">Paragraph</option>
                                             <option value="radioAns">Radio Btns</option>
+                                            <option value="fileUpload">File</option>
                                         </select>
                                     </div>
                                     <div id="required">
@@ -209,6 +210,15 @@ function changeDD(count){
             }
             
         }
+        if(strUser==="fileUpload"){
+            jQuery('#field'+count).html('');
+           
+            if(checkFormNameFilled!=0 && temp!=0){
+                once=1;
+                jQuery('#f0').html('');
+            }
+            
+        }
         if(strUser==="noVal"){
             once==1;
             ok=0;
@@ -273,6 +283,7 @@ function changeDD(count){
                                                     <option value="shortAns">Short answer</option>
                                                     <option value="paraAns">Paragraph</option>
                                                     <option value="radioAns">Radio Btns</option>
+                                                    <option value="fileUpload">File</option>
                                                 </select>
                                             </div>
                                             <div id="required">
