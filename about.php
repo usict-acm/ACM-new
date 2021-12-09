@@ -8,8 +8,8 @@
      <title>USICT ACM</title>
      <link href="assets/CSS/aboutStyle.css" rel="stylesheet" />
      <link href="assets/CSS/glider.css" rel="stylesheet" />
-     <link href="assets/CSS/header.css" rel="stylesheet" />
-     <link href="assets/CSS/footer.css" rel="stylesheet" />
+     <!-- <link href="assets/CSS/header.css" rel="stylesheet" />
+     <link href="assets/CSS/footer.css" rel="stylesheet" /> -->
      <link rel="stylesheet" href="./assets/CSS/newStyle.css" />
 
 </head>
