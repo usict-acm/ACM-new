@@ -11,7 +11,7 @@ export const fetchUserBlogs = async (body) => {
       if (res.message === "success") {
         return res.blogs;
       } else {
-        alert(res.error || "process failed");
+        console.log(res.error || "process failed");
       }
     })
     .catch((err) => console.log(err.message));
@@ -30,7 +30,7 @@ export const fetchSingleBlog = async (body) => {
       if (res.message === "success") {
         return res.blog;
       } else {
-        alert(res.error || "process failed");
+        console.log(res.error || "process failed");
       }
     })
     .catch((err) => console.log(err.message));

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { deleteBlog } from "api/blog";
 import { useDispatch, useSelector } from "react-redux";
 import { Button } from "reactstrap";
@@ -6,11 +7,15 @@ import { formatDate } from "utils/commonFunctions";
 import { useHistory } from "react-router";
 import { updateBlog } from "api/blog";
 import { Link } from "react-router-dom";
+import SweetAlert from "components/SweetAlert";
 
 const BlogCard = ({ blogDetails }) => {
 	const dispatch = useDispatch(),
 		history = useHistory(),
-		user = useSelector(selectUser);
+		user = useSelector(selectUser),
+		[alertOpen, setAlertOpen] = useState(false),
+		[alertMsg, setAlertMsg] = useState(""),
+		[alertType, setAlertType] = useState("error");
 
 	//eslint-disable-next-line
 	const deleteHandler = async () => {
@@ -19,7 +24,11 @@ const BlogCard = ({ blogDetails }) => {
 			blogId: blogDetails?.blogId,
 		};
 		const res = await dispatch(deleteBlog(body));
-		if (res.status === "failed") alert("Failed to Delete");
+		if (res.status === "failed") {
+			setAlertMsg("Failed to Delete");
+			setAlertType("error");
+			setAlertOpen(true);
+		}
 	};
 
 	async function publishHandler() {
@@ -38,9 +47,16 @@ const BlogCard = ({ blogDetails }) => {
 		let res;
 
 		res = await updateBlog(data);
-		if (res.status === "success") window.location.reload();
+		if (res.status === "success") {
+			setAlertMsg("Unpublished Successfully!!");
+			setAlertType("success");
+			setAlertOpen(true);
+			window.location.reload();
+		}
 		if (res.status === "failed") {
-			alert("Process Failed");
+			setAlertMsg("Process Failed");
+			setAlertType("error");
+			setAlertOpen(true);
 		}
 	}
 	
@@ -60,14 +76,27 @@ const BlogCard = ({ blogDetails }) => {
 
 		let res;
 		res = await updateBlog(data);
-		if (res.status === "success") window.location.reload();
+		if (res.status === "success") {
+			setAlertMsg("Unpublished Successfully!!");
+			setAlertType("success");
+			setAlertOpen(true);
+			window.location.reload();
+		}
 		if (res.status === "failed") {
-			alert("Process Failed");
+			setAlertMsg("Process Failed");
+			setAlertType("error");
+			setAlertOpen(true);
 		}
 	}
 
 	return (
 		<Link to={`/blog/${blogDetails?.blogId}`} className="contentBox">
+			<SweetAlert
+				open={alertOpen}
+				setOpen={setAlertOpen}
+				msg={alertMsg}
+				type={alertType}
+			/>
 			<div className="details">
 				<h3>{blogDetails?.blogTitle}</h3>
 				<p>{formatDate(blogDetails?.lastUpdated)}</p>

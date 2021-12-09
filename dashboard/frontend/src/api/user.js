@@ -11,7 +11,7 @@ export const fetchUserDoc = (body) => async (dispatch) => {
 			if (res.message === "success") {
 				dispatch(setUser(res.user));
 			} else {
-				alert(res.error || "Login Failed");
+				console.log(res.error || "Login Failed");
 				localStorage.removeItem("user");
 				dispatch(resetUser());
 			}

@@ -10,6 +10,7 @@ import { useHistory, useParams } from "react-router";
 import { addBlog, updateBlog } from "api/blog";
 import { fetchSingleBlog } from "api/blog";
 import Loader from "components/Loader";
+import SweetAlert from "components/SweetAlert";
 
 const CreateBlog = () => {
 	const dispatch = useDispatch(),
@@ -24,6 +25,10 @@ const CreateBlog = () => {
 		[editingBlog, setEditingBlog] = useState(null),
 		[loading, setLoading] = useState(true),
 		[coverImage, setCoverImage] = useState("https://picsum.photos/400");
+
+	const [alertOpen, setAlertOpen] = useState(false),
+	[alertMsg, setAlertMsg] = useState(""),
+	[alertType, setAlertType] = useState("error");
 
 	// useEffect(() => {
 	// setLoading(true);
@@ -112,13 +117,21 @@ const CreateBlog = () => {
 
 			history.replace("/blogs");
 		} else if (res.status === "failed") {
-			alert("Process Failed");
+			setAlertMsg("Process Failed");
+			setAlertType("error");
+			setAlertOpen(true);
 		}
 	}
 
 	return (
 		<Container className="mt-4" fluid="xxl">
 			{loading && <Loader />}
+			<SweetAlert
+				open={alertOpen}
+				setOpen={setAlertOpen}
+				msg={alertMsg}
+				type={alertType}
+			/>
 			<Container className="BlogContainer" fluid>
 				<Row>
 					<Col className="order-xl-1">
