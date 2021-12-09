@@ -17,7 +17,7 @@
       include('header.php');
     ?>
     <!-- ************************************************All Clubs************************************************************************* -->
-    <section style="background: white">
+    <section style="background: white; padding-top:10px;">
       <img
         src="./assets/images/clubs/Background_shapes/Bg_shape_5.svg"
         class="bg-shape"

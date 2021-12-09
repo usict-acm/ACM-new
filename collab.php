@@ -18,7 +18,7 @@
       include('header.php');
     ?>
   <!-- ****************************************************Header Image**************************************************************** -->
-    <div style="margin-left:10%; margin-right:10%; margin-top:3%; margin-bottom:0%;">
+    <div style="margin-left:10%; margin-right:10%; padding-top:3%; margin-bottom:0%;">
       <section id='header'>
         <div class="pt-card row" style="background-image: url('assets/images/collab-banner.png');">
           <div class="heading col-xl-9 col-lg-9 col-md-9">

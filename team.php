@@ -26,7 +26,7 @@
   <div style="
         margin-left: 10%;
         margin-right: 10%;
-        margin-top: 3%;
+        padding-top: 3%;
         margin-bottom: 0%;
       ">
     <section id="header">
