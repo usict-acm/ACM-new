@@ -1,9 +1,17 @@
-export const BRANCHES = {
-  "B.Tech.": ["CSE", "IT", "ECE","Other"],
-  "M.Tech.": ["CSE", "IT", "ECE","Other"],
-  "MCA": ["Software Engineering","Other"],
-  "Other":["Other"]
-};
+export const BRANCHES = [
+  "CSE",
+  "IT",
+  "ECE",
+  "Software Engineering",
+  "Other"
+];
+
+export const COURSES = [
+  "B.Tech",
+  "M.Tech",
+  "MCA",
+  "Other",
+];
  
 export const COLLEGES = [
   "University School of Information, Communication & Technology (USICT)",

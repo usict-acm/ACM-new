@@ -38,6 +38,7 @@ import { BRANCHES } from "utils/Constants";
 import { useHistory } from "react-router";
 import SweetAlert from "components/SweetAlert";
 import { setUser, resetUser } from "redux/slices/userSlice";
+import { COURSES } from "utils/Constants";
  
 const Register = () => {
     const history = useHistory(),
@@ -105,7 +106,6 @@ const Register = () => {
         if(data.branch === "Other"){
             data.branch=otherBranch;
         }
- 
         const signUpRes = await signup(data);      
         if (signUpRes?.error) {
             localStorage.removeItem("user");
@@ -214,17 +214,19 @@ const Register = () => {
                                     <Input
                                         list="colleges"
                                         placeholder="College Name*"
-                                        type="text"
+                                        type="select"
                                         value={college}
                                         onChange={(e) => setCollege(e.target.value)}
                                         required
-                                    />
+                                    >
+                                     <option value="">Select College*</option>
+                                        {COLLEGES.map((value, index) => (
+                                            <option key={index} value={value}>
+                                                {value}
+                                            </option>
+                                        ))}
+                                    </Input>
                                 </InputGroup>
-                                <datalist id="colleges">
-                                    {COLLEGES.map((value, index) => (
-                                        <option key={index} value={value} />
-                                    ))}
-                                </datalist>
                             </FormGroup>
                             {college==="Other"
                             ?
@@ -262,7 +264,7 @@ const Register = () => {
                                         onChange={(e) => setCourse(e.target.value)}
                                     >
                                         <option value="">Select Course*</option>
-                                        {Object.keys(BRANCHES).map((value, index) => (
+                                        {COURSES.map((value, index) => (
                                             <option key={index} value={value}>
                                                 {value}
                                             </option>
@@ -309,10 +311,9 @@ const Register = () => {
                                         required
                                         value={branch}
                                         onChange={(e) => setBranch(e.target.value)}
-                                        disabled={course === ""}
                                     >
                                         <option value="">Select Branch*</option>
-                                        {BRANCHES[course]?.map((value, index) => (
+                                        {BRANCHES?.map((value, index) => (
                                             <option key={index} value={value}>
                                                 {value}
                                             </option>
