@@ -209,7 +209,7 @@ const Profile = () => {
                             list="colleges"
                             type="text"
                             placeholder="NA"
-                            readOnly={disabled}
+                            readOnly
                             value={college}
                             onChange={(e) => setCollege(e.target.value)}
                           />
