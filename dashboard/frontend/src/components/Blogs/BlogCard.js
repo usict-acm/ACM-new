@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { deleteBlog } from "api/blog";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Button } from "reactstrap";
 import { selectUser } from "redux/slices/userSlice";
 import { formatDate } from "utils/commonFunctions";
@@ -9,9 +9,8 @@ import { updateBlog } from "api/blog";
 import { Link } from "react-router-dom";
 import SweetAlert from "components/SweetAlert";
 
-const BlogCard = ({ blogDetails }) => {
-	const dispatch = useDispatch(),
-		history = useHistory(),
+const BlogCard = ({ blogDetails, setFetchAgain }) => {
+	const history = useHistory(),
 		user = useSelector(selectUser),
 		[alertOpen, setAlertOpen] = useState(false),
 		[alertMsg, setAlertMsg] = useState(""),
@@ -23,11 +22,13 @@ const BlogCard = ({ blogDetails }) => {
 			userEmail: user?.email,
 			blogId: blogDetails?.blogId,
 		};
-		const res = await dispatch(deleteBlog(body));
+		const res = await deleteBlog(body);
 		if (res.status === "failed") {
 			setAlertMsg("Failed to Delete");
 			setAlertType("error");
 			setAlertOpen(true);
+		}else {
+			setFetchAgain((prev) => !prev)
 		}
 	};
 

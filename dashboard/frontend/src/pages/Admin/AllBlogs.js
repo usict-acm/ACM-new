@@ -28,7 +28,8 @@ export default function AllBlogs() {
 		// 1 -> draft
 		// 2 -> waiting approval
 		[searchQuery, setSearchQuery] = useState(""),
-		[filterData, setFilterData] = useState([]);
+		[filterData, setFilterData] = useState([]),
+		[fetchAgain, setFetchAgain] = useState(false);
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -43,7 +44,7 @@ export default function AllBlogs() {
 		return () => {
 			setBlogs([]);
 		};
-	}, [user, dispatch]);
+	}, [user, dispatch, fetchAgain]);
 
 	useEffect(() => {
 		setFilterData(() => {
@@ -136,7 +137,7 @@ export default function AllBlogs() {
 											<hr className="h-line" />
 											<CardBody className="post-section">
 												<div>
-													<BlogsList blogData={filterData} />
+													<BlogsList blogData={filterData} setFetchAgain={setFetchAgain} />
 												</div>
 											</CardBody>
 										</Card>

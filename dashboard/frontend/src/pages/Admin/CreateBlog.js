@@ -104,8 +104,8 @@ const CreateBlog = () => {
 				blogId: editingBlog.blogId,
 				isPublished: !editingBlog.isDraft,
 			};
-			res = await dispatch(updateBlog(data));
-		} else res = await dispatch(addBlog(data));
+			res = await updateBlog(data);
+		} else res = await addBlog(data);
 
 		// cleanup
 		if (res.status === "success") {

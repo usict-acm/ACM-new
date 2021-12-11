@@ -59,7 +59,7 @@ export default function Preview() {
 		};
 		let res;
 
-		res = await dispatch(updateBlog(data));
+		res = await updateBlog(data);
 
 		// cleanup
 		if (res.status === "success") {
@@ -89,7 +89,7 @@ export default function Preview() {
 		};
 		let res;
 
-		res = await dispatch(updateBlog(data));
+		res = await updateBlog(data);
 
 		// cleanup
 		if (res.status === "success") {
