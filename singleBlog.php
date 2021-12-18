@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <?php
-  include("head.php")
-  ?>
-  <title>ACM BLOG</title>
-  <link href="./assets/CSS/singleBlog.css" rel="stylesheet" />
-  <link href="./assets/CSS/glider.css" rel="stylesheet" />
-  <link href="./assets/CSS/header.css" rel="stylesheet" />
-  <link href="./assets/CSS/footer.css" rel="stylesheet" />
-</head>
+  <head>
+    <?php
+      include("head.php")
+    ?>
+    <title>ACM BLOG</title>
+    <link href="./assets/CSS/singleBlog.css" rel="stylesheet" />
+    <link href="./assets/CSS/glider.css" rel="stylesheet" />
+    <link href="./assets/CSS/header.css" rel="stylesheet" />
+    <link href="./assets/CSS/footer.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="./assets/CSS/newStyle.css"> -->
+  </head>
 
 <body>
   <?php

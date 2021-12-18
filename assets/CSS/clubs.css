@@ -1,666 +1,668 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 
-* {
-  box-sizing: border-box;
-  font-family: 'Lato';
-}
+/* * {
+	box-sizing: border-box;
+	font-family: 'Lato';
+} */
 
 body {
-  overflow-x: hidden;
+	box-sizing: border-box;
+	font-family: 'Lato';
+	overflow-x: hidden;
 }
 
 .club-container {
-  position: relative;
+	position: relative;
 }
 
 .pageTitle {
-  max-width: 800px;
-  position: relative;
-  color: white;
-  margin-top: 120px;
+	max-width: 800px;
+	position: relative;
+	color: white;
+	margin-top: 120px;
 }
 
 a {
-  text-decoration: none;
-  color: black;
+	text-decoration: none;
+	color: black;
 }
 
 .pt-card {
-  padding: 8%;
-  border-radius: 30px;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  box-shadow: 0 0 3.5px #0297ff;
-  margin-bottom: -13%;
+	padding: 8%;
+	border-radius: 30px;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	box-shadow: 0 0 3.5px #0297ff;
+	margin-bottom: -13%;
 }
 .uheading {
-  font-size: 36px;
+	font-size: 36px;
 }
 .lheading {
-  font-size: 36px;
+	font-size: 36px;
 }
 @media (min-width: 300px) and (max-width: 580px) {
-  .uheading {
-    font-size: 20px;
-  }
-  .lheading {
-    font-size: 20px;
-  }
-  .pt-card {
-    margin-top: 10px;
-  }
+	.uheading {
+		font-size: 20px;
+	}
+	.lheading {
+		font-size: 20px;
+	}
+	.pt-card {
+		margin-top: 10px;
+	}
 }
 @media (min-width: 580px) and (max-width: 780px) {
-  .uheading {
-    font-size: 26px;
-  }
-  .lheading {
-    font-size: 26px;
-  }
+	.uheading {
+		font-size: 26px;
+	}
+	.lheading {
+		font-size: 26px;
+	}
 }
 
 .pageTitle h1 {
-  font-size: 100px;
-  font-weight: bold;
-  font-family: 'Raleway';
-  letter-spacing: 0.025em;
-  padding: 0;
-  margin-bottom: 0;
-  color: white;
-  z-index: 10;
+	font-size: 100px;
+	font-weight: bold;
+	font-family: 'Raleway';
+	letter-spacing: 0.025em;
+	padding: 0;
+	margin-bottom: 0;
+	color: white;
+	z-index: 10;
 }
 
 .pageTitle p {
-  font-family: 'Lato';
-  font-size: 18px;
-  color: white;
-  z-index: 10;
+	font-family: 'Lato';
+	font-size: 18px;
+	color: white;
+	z-index: 10;
 }
 
 .aboutclub,
 .aboutclub-right {
-  float: left;
-  width: 50%;
-  z-index: 10;
-  padding-right: 40px;
+	float: left;
+	width: 50%;
+	z-index: 10;
+	padding-right: 40px;
 }
 
 .aboutclub-right {
-  padding-left: 40px;
-  padding-right: 0;
+	padding-left: 40px;
+	padding-right: 0;
 }
 .lead {
-  float: left;
-  width: 25%;
-  z-index: 10;
-  padding: 5px;
+	float: left;
+	width: 25%;
+	z-index: 10;
+	padding: 5px;
 }
 .vicelead {
-  float: left;
-  width: 25%;
-  z-index: 10;
-  padding: 5px;
+	float: left;
+	width: 25%;
+	z-index: 10;
+	padding: 5px;
 }
 
 .club {
-  position: relative;
-  display: flex;
-  align-items: center;
+	position: relative;
+	display: flex;
+	align-items: center;
 }
 
 .club-row {
-  margin: 100px 0;
+	margin: 100px 0;
 }
 /* Clearfix (clear floats) */
 .row::after {
-  content: '';
-  clear: both;
-  display: table;
+	content: '';
+	clear: both;
+	display: table;
 }
 
 .lvlimg {
-  display: contents;
+	display: contents;
 }
 
 .aboutclub h2 {
-  font-size: 50px;
-  font-family: 'Lato';
-  color: #0297ff;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: justify;
+	font-size: 50px;
+	font-family: 'Lato';
+	color: #0297ff;
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-align: justify;
 }
 
 .aboutclub p {
-  font-size: 16px;
-  color: #595959;
-  line-height: initial;
-  text-align: justify;
-  font-weight: 700;
+	font-size: 16px;
+	color: #595959;
+	line-height: initial;
+	text-align: justify;
+	font-weight: 700;
 }
 
 .lead img,
 .vicelead img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
 }
 
 .lead .img,
 .vicelead .img {
-  position: relative;
-  width: 100%;
-  padding-top: 100%;
+	position: relative;
+	width: 100%;
+	padding-top: 100%;
 }
 
 .club h4 {
-  margin-top: 6px;
-  margin-bottom: 0px;
-  font-size: 20px;
-  text-align: center;
-  font-family: 'Lato';
-  font-weight: bold;
-  color: white;
+	margin-top: 6px;
+	margin-bottom: 0px;
+	font-size: 20px;
+	text-align: center;
+	font-family: 'Lato';
+	font-weight: bold;
+	color: white;
 }
 
 .club h6 {
-  font-size: 16px;
-  text-align: center;
-  margin: 0;
-  font-family: 'Lato';
-  color: #0297ff;
+	font-size: 16px;
+	text-align: center;
+	margin: 0;
+	font-family: 'Lato';
+	color: #0297ff;
 }
 
 .aboutclub.white h2 {
-  color: white;
+	color: white;
 }
 
 .aboutclub.white p {
-  color: white;
-  opacity: 1;
+	color: white;
+	opacity: 1;
 }
 
 .lead h4,
 .vicelead h4 {
-  color: #0297ff;
+	color: #0297ff;
 }
 .lead.white h4,
 .vicelead.white h4 {
-  color: white;
+	color: white;
 }
 
 .lead.white h6,
 .vicelead.white h6 {
-  color: white;
+	color: white;
 }
 
 /* BG SHAPES */
 
 .bg-shape {
-  position: absolute;
-  z-index: 9;
+	position: absolute;
+	z-index: 9;
 }
 
 #bg-shape-1 {
-  opacity: 0.8;
-  left: -493px;
-  top: -144px;
+	opacity: 0.8;
+	left: -493px;
+	top: -144px;
 }
 
 #bg-shape-2 {
-  top: -200px;
+	top: -200px;
 }
 
 #bg-shape-3 {
-  right: -58px;
-  opacity: 0.8;
+	right: -58px;
+	opacity: 0.8;
 }
 #bg-shape-3-white {
-  right: -58px;
-  mix-blend-mode: color;
-  z-index: 11;
+	right: -58px;
+	mix-blend-mode: color;
+	z-index: 11;
 }
 #bg-shape-4 {
-  left: -145px;
-  top: -140px;
+	left: -145px;
+	top: -140px;
 }
 #bg-shape-5 {
-  top: -491px;
-  right: 0;
+	top: -491px;
+	right: 0;
 }
 #bg-shape-6 {
-  background-color: #0297ff;
-  height: 226%;
-  width: 100%;
-  top: -73%;
-  clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75%);
+	background-color: #0297ff;
+	height: 226%;
+	width: 100%;
+	top: -73%;
+	clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75%);
 }
 #bg-shape-7 {
-  top: -160px;
+	top: -160px;
 }
 #bg-shape-8 {
-  top: -72%;
-  left: -5%;
+	top: -72%;
+	left: -5%;
 }
 #bg-shape-9 {
-  left: -300px;
-  top: 212px;
-  z-index: 0;
+	left: -300px;
+	top: 212px;
+	z-index: 0;
 }
 
 #bg-shape-10 {
-  background-color: #0297ff;
-  height: 150px;
-  width: 100%;
-  bottom: 0;
-  clip-path: polygon(100% 20%, 100% 0%, 100% 100%, 60% 100%);
-  margin-bottom: -40px;
+	background-color: #0297ff;
+	height: 150px;
+	width: 100%;
+	bottom: 0;
+	clip-path: polygon(100% 20%, 100% 0%, 100% 100%, 60% 100%);
+	margin-bottom: -40px;
 }
 
 #bg-shape-11 {
-  right: 0px;
-  top: -200px;
+	right: 0px;
+	top: -200px;
 }
 
 @media (min-width: 300px) and (max-width: 786px) {
-  .club h4 {
-    color: black;
-  }
+	.club h4 {
+		color: black;
+	}
 
-  .club h6 {
-    color: black;
-  }
+	.club h6 {
+		color: black;
+	}
 
-  .aboutclub.white h2 {
-    color: black;
-  }
+	.aboutclub.white h2 {
+		color: black;
+	}
 
-  .aboutclub.white p {
-    color: black;
-  }
+	.aboutclub.white p {
+		color: black;
+	}
 
-  .lead h4,
-  .vicelead h4 {
-    color: black;
-  }
-  .lead.white h4,
-  .vicelead.white h4 {
-    color: black;
-  }
+	.lead h4,
+	.vicelead h4 {
+		color: black;
+	}
+	.lead.white h4,
+	.vicelead.white h4 {
+		color: black;
+	}
 
-  .lead.white h6,
-  .vicelead.white h6 {
-    color: black;
-  }
-  .aboutclub h2 {
-    color: black;
-  }
+	.lead.white h6,
+	.vicelead.white h6 {
+		color: black;
+	}
+	.aboutclub h2 {
+		color: black;
+	}
 
-  .aboutclub p {
-    color: black;
-  }
+	.aboutclub p {
+		color: black;
+	}
 
-  .pageTitle h1 {
-    color: black;
-  }
+	.pageTitle h1 {
+		color: black;
+	}
 
-  .pageTitle p {
-    color: black;
-  }
+	.pageTitle p {
+		color: black;
+	}
 
-  .aboutclub,
-  .aboutclub-right {
-    float: left;
-    width: 100%;
-    z-index: 10;
-    padding-right: 10px;
-  }
+	.aboutclub,
+	.aboutclub-right {
+		float: left;
+		width: 100%;
+		z-index: 10;
+		padding-right: 10px;
+	}
 
-  .aboutclub-right {
-    padding-left: 10px;
-    padding-right: 0;
-  }
-  .lead {
-    float: left;
-    width: 50%;
-    z-index: 10;
-    padding: 5px;
-  }
-  .vicelead {
-    float: right;
-    width: 50%;
-    z-index: 10;
-    padding: 5px;
-  }
+	.aboutclub-right {
+		padding-left: 10px;
+		padding-right: 0;
+	}
+	.lead {
+		float: left;
+		width: 50%;
+		z-index: 10;
+		padding: 5px;
+	}
+	.vicelead {
+		float: right;
+		width: 50%;
+		z-index: 10;
+		padding: 5px;
+	}
 
-  .club {
-    position: relative;
-    display: grid;
-    align-items: center;
-  }
+	.club {
+		position: relative;
+		display: grid;
+		align-items: center;
+	}
 
-  .club-row {
-    margin: 100px 0;
-  }
-  /* Clearfix (clear floats) */
-  .row::after {
-    content: '';
-    clear: both;
-    display: table;
-  }
+	.club-row {
+		margin: 100px 0;
+	}
+	/* Clearfix (clear floats) */
+	.row::after {
+		content: '';
+		clear: both;
+		display: table;
+	}
 
-  .lvlimg {
-    display: block;
-    position: relative;
-    align-items: center;
-    z-index: 10;
-  }
+	.lvlimg {
+		display: block;
+		position: relative;
+		align-items: center;
+		z-index: 10;
+	}
 
-  #bg-shape-3 {
-    top: -89px;
-    right: 88px;
-    opacity: 0.4;
-  }
+	#bg-shape-3 {
+		top: -89px;
+		right: 88px;
+		opacity: 0.4;
+	}
 
-  #bg-shape-4 {
-    left: -405px;
-    top: -140px;
-  }
+	#bg-shape-4 {
+		left: -405px;
+		top: -140px;
+	}
 }
 
 @media (min-width: 690px) and (max-width: 786px) {
-  #bg-shape-1 {
-    opacity: 0.8;
-    left: -830px;
-    top: -144px;
-  }
+	#bg-shape-1 {
+		opacity: 0.8;
+		left: -830px;
+		top: -144px;
+	}
 
-  .pageTitle h1 {
-    font-size: 70px;
-    font-weight: bold;
-    font-family: 'Raleway';
-    letter-spacing: 0.025em;
-    padding: 0;
-    margin-bottom: 0;
-    color: white;
-    z-index: 10;
-  }
+	.pageTitle h1 {
+		font-size: 70px;
+		font-weight: bold;
+		font-family: 'Raleway';
+		letter-spacing: 0.025em;
+		padding: 0;
+		margin-bottom: 0;
+		color: white;
+		z-index: 10;
+	}
 
-  .pageTitle p {
-    font-family: 'Lato';
-    font-size: 15px;
-    padding-right: 170px;
-    color: white;
-    z-index: 10;
-  }
+	.pageTitle p {
+		font-family: 'Lato';
+		font-size: 15px;
+		padding-right: 170px;
+		color: white;
+		z-index: 10;
+	}
 
-  #bg-shape-8 {
-    top: -72%;
-    left: -60%;
-  }
+	#bg-shape-8 {
+		top: -72%;
+		left: -60%;
+	}
 }
 
 @media (min-width: 300px) and (max-width: 689px) {
-  #bg-shape-8 {
-    top: -72%;
-    left: -140%;
-  }
+	#bg-shape-8 {
+		top: -72%;
+		left: -140%;
+	}
 }
 
 @media (min-width: 549px) and (max-width: 689px) {
-  #bg-shape-1 {
-    opacity: 0.8;
-    left: -890px;
-    top: -144px;
-  }
+	#bg-shape-1 {
+		opacity: 0.8;
+		left: -890px;
+		top: -144px;
+	}
 
-  .pageTitle h1 {
-    font-size: 60px;
-    margin-left: 20px;
-    font-weight: bold;
-    font-family: 'Raleway';
-    letter-spacing: 0.025em;
-    padding: 0;
-    margin-bottom: 0;
-    color: white;
-    z-index: 10;
-  }
+	.pageTitle h1 {
+		font-size: 60px;
+		margin-left: 20px;
+		font-weight: bold;
+		font-family: 'Raleway';
+		letter-spacing: 0.025em;
+		padding: 0;
+		margin-bottom: 0;
+		color: white;
+		z-index: 10;
+	}
 
-  .pageTitle p {
-    font-family: 'Lato';
-    font-size: 14px;
-    color: white;
-    z-index: 10;
-    margin-left: 20px;
-    margin-right: 100px;
-  }
+	.pageTitle p {
+		font-family: 'Lato';
+		font-size: 14px;
+		color: white;
+		z-index: 10;
+		margin-left: 20px;
+		margin-right: 100px;
+	}
 }
 
 @media (min-width: 459px) and (max-width: 548px) {
-  #bg-shape-1 {
-    opacity: 0.8;
-    left: -980px;
-    top: -144px;
-  }
+	#bg-shape-1 {
+		opacity: 0.8;
+		left: -980px;
+		top: -144px;
+	}
 
-  .pageTitle h1 {
-    font-size: 50px;
-    margin-left: 20px;
-    font-weight: bold;
-    font-family: 'Raleway';
-    letter-spacing: 0.025em;
-    padding: 0;
-    margin-bottom: 0;
-    color: white;
-    z-index: 10;
-  }
+	.pageTitle h1 {
+		font-size: 50px;
+		margin-left: 20px;
+		font-weight: bold;
+		font-family: 'Raleway';
+		letter-spacing: 0.025em;
+		padding: 0;
+		margin-bottom: 0;
+		color: white;
+		z-index: 10;
+	}
 
-  .pageTitle p {
-    font-family: 'Lato';
-    font-size: 14px;
-    color: white;
-    z-index: 10;
-    margin-left: 20px;
-    margin-right: 190px;
-  }
+	.pageTitle p {
+		font-family: 'Lato';
+		font-size: 14px;
+		color: white;
+		z-index: 10;
+		margin-left: 20px;
+		margin-right: 190px;
+	}
 
-  .aboutclub h2 {
-    font-size: 40px;
-    font-family: 'Lato';
-    color: black;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: justify;
-  }
+	.aboutclub h2 {
+		font-size: 40px;
+		font-family: 'Lato';
+		color: black;
+		font-weight: bold;
+		margin-bottom: 20px;
+		text-align: justify;
+	}
 
-  .aboutclub.white h2 {
-    font-size: 40px;
-    font-family: 'Lato';
-    color: black;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: justify;
-  }
+	.aboutclub.white h2 {
+		font-size: 40px;
+		font-family: 'Lato';
+		color: black;
+		font-weight: bold;
+		margin-bottom: 20px;
+		text-align: justify;
+	}
 
-  #bg-shape-6 {
-    background-color: #0297ff;
-    height: 226%;
-    width: 100%;
-    top: -73%;
-    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75%);
-    opacity: 0.9;
-  }
+	#bg-shape-6 {
+		background-color: #0297ff;
+		height: 226%;
+		width: 100%;
+		top: -73%;
+		clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75%);
+		opacity: 0.9;
+	}
 }
 
 @media (min-width: 430px) and (max-width: 459px) {
-  #bg-shape-1 {
-    opacity: 0.8;
-    left: -1010px;
-    top: -144px;
-  }
+	#bg-shape-1 {
+		opacity: 0.8;
+		left: -1010px;
+		top: -144px;
+	}
 
-  .pageTitle h1 {
-    font-size: 40px;
-    margin-left: 20px;
-    font-weight: bold;
-    font-family: 'Raleway';
-    letter-spacing: 0.025em;
-    padding: 0;
-    margin-bottom: 0;
-    color: white;
-    z-index: 10;
-  }
+	.pageTitle h1 {
+		font-size: 40px;
+		margin-left: 20px;
+		font-weight: bold;
+		font-family: 'Raleway';
+		letter-spacing: 0.025em;
+		padding: 0;
+		margin-bottom: 0;
+		color: white;
+		z-index: 10;
+	}
 
-  .pageTitle p {
-    font-family: 'Lato';
-    font-size: 14px;
-    color: white;
-    z-index: 10;
-    margin-left: 20px;
-    margin-right: 120px;
-  }
+	.pageTitle p {
+		font-family: 'Lato';
+		font-size: 14px;
+		color: white;
+		z-index: 10;
+		margin-left: 20px;
+		margin-right: 120px;
+	}
 }
 
 @media (min-width: 390px) and (max-width: 429px) {
-  #bg-shape-1 {
-    opacity: 0.8;
-    left: -1050px;
-    top: -144px;
-  }
+	#bg-shape-1 {
+		opacity: 0.8;
+		left: -1050px;
+		top: -144px;
+	}
 
-  .pageTitle h1 {
-    font-size: 35px;
-    margin-left: 20px;
-    font-weight: bold;
-    font-family: 'Raleway';
-    letter-spacing: 0.025em;
-    padding: 0;
-    margin-bottom: 0;
-    color: white;
-    z-index: 10;
-  }
+	.pageTitle h1 {
+		font-size: 35px;
+		margin-left: 20px;
+		font-weight: bold;
+		font-family: 'Raleway';
+		letter-spacing: 0.025em;
+		padding: 0;
+		margin-bottom: 0;
+		color: white;
+		z-index: 10;
+	}
 
-  .pageTitle p {
-    font-family: 'Lato';
-    font-size: 14px;
-    color: white;
-    z-index: 10;
-    margin-left: 20px;
-    margin-right: 140px;
-  }
+	.pageTitle p {
+		font-family: 'Lato';
+		font-size: 14px;
+		color: white;
+		z-index: 10;
+		margin-left: 20px;
+		margin-right: 140px;
+	}
 }
 
 @media (min-width: 350px) and (max-width: 389px) {
-  #bg-shape-1 {
-    opacity: 0.8;
-    left: -1090px;
-    top: -144px;
-  }
+	#bg-shape-1 {
+		opacity: 0.8;
+		left: -1090px;
+		top: -144px;
+	}
 
-  .pageTitle h1 {
-    font-size: 30px;
-    margin-left: 20px;
-    font-weight: bold;
-    font-family: 'Raleway';
-    letter-spacing: 0.025em;
-    padding: 0;
-    margin-bottom: 0;
-    color: white;
-    z-index: 10;
-  }
+	.pageTitle h1 {
+		font-size: 30px;
+		margin-left: 20px;
+		font-weight: bold;
+		font-family: 'Raleway';
+		letter-spacing: 0.025em;
+		padding: 0;
+		margin-bottom: 0;
+		color: white;
+		z-index: 10;
+	}
 
-  .pageTitle p {
-    font-family: 'Lato';
-    font-size: 14px;
-    color: white;
-    z-index: 10;
-    margin-left: 20px;
-    margin-right: 140px;
-  }
+	.pageTitle p {
+		font-family: 'Lato';
+		font-size: 14px;
+		color: white;
+		z-index: 10;
+		margin-left: 20px;
+		margin-right: 140px;
+	}
 
-  #bg-shape-4 {
-    left: -450px;
-    top: -140px;
-  }
+	#bg-shape-4 {
+		left: -450px;
+		top: -140px;
+	}
 
-  #bg-shape-8 {
-    top: -72%;
-    left: -170%;
-  }
+	#bg-shape-8 {
+		top: -72%;
+		left: -170%;
+	}
 }
 
 @media (min-width: 787px) and (max-width: 1000px) {
-  #bg-shape-1 {
-    opacity: 0.8;
-    left: -688px;
-    top: -144px;
-  }
+	#bg-shape-1 {
+		opacity: 0.8;
+		left: -688px;
+		top: -144px;
+	}
 
-  #bg-shape-3 {
-    right: 18px;
-    opacity: 0.8;
-  }
+	#bg-shape-3 {
+		right: 18px;
+		opacity: 0.8;
+	}
 
-  #bg-shape-8 {
-    top: -72%;
-    left: -20%;
-  }
+	#bg-shape-8 {
+		top: -72%;
+		left: -20%;
+	}
 
-  .club h4 {
-    color: black;
-  }
+	.club h4 {
+		color: black;
+	}
 
-  .club h6 {
-    color: black;
-  }
+	.club h6 {
+		color: black;
+	}
 
-  .aboutclub.white h2 {
-    color: black;
-  }
+	.aboutclub.white h2 {
+		color: black;
+	}
 
-  .aboutclub.white p {
-    color: black;
-  }
+	.aboutclub.white p {
+		color: black;
+	}
 
-  .lead h4,
-  .vicelead h4 {
-    color: black;
-  }
-  .lead.white h4,
-  .vicelead.white h4 {
-    color: black;
-  }
+	.lead h4,
+	.vicelead h4 {
+		color: black;
+	}
+	.lead.white h4,
+	.vicelead.white h4 {
+		color: black;
+	}
 
-  .lead.white h6,
-  .vicelead.white h6 {
-    color: black;
-  }
-  .aboutclub h2 {
-    color: black;
-  }
+	.lead.white h6,
+	.vicelead.white h6 {
+		color: black;
+	}
+	.aboutclub h2 {
+		color: black;
+	}
 
-  .aboutclub p {
-    color: black;
-  }
+	.aboutclub p {
+		color: black;
+	}
 
-  .pageTitle h1 {
-    color: white;
-  }
+	.pageTitle h1 {
+		color: white;
+	}
 
-  .pageTitle p {
-    color: white;
-    margin-right: 100px;
-  }
+	.pageTitle p {
+		color: white;
+		margin-right: 100px;
+	}
 }
 
 @media (min-width: 1000px) and (max-width: 1199px) {
-  #black_research {
-    color: black;
-  }
+	#black_research {
+		color: black;
+	}
 }
