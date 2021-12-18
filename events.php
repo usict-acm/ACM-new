@@ -6,8 +6,11 @@
   include('./head.php');
   ?>
   <title>USICT ACM</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
   <link href="./assets/CSS/events.css" rel="stylesheet" />
+  <link href="assets/CSS/header.css" rel="stylesheet" />
+  <link href="assets/CSS/footer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/CSS/newStyle.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -185,12 +188,60 @@
       });
     });
   </script>
+   <!-- ****************************************************contact us ***************************** -->
+	<div class="dsph" id="contact">
+		<div class="d-flex justify-content-center mt-md-5">
 
+			<img src="./assets/images/contact_us_img.webp" class="svg-media" alt="" />
+
+			<div class="contactUs">
+				<div class="closebtn">
+					<button class="btn btn-primary s-form-group contact-btn" onclick="closecontact()"><i class="fas fa-times"></i></button>
+				</div>
+				<form class="s-form" name="contact" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse" onsubmit="return validateform();" >
+					<h2 class="my-4 display-4 fw-bolder text-center" style="font-weight:bolder;">Contact<span class="text-blue"> Us</span></h2>
+					<div class="row form-row">
+						<div class="form-group s-form-group col-md-5">
+							<input type="text" name="name" class="form-control" placeholder="Name *" />
+						</div>
+						<div class="form-group s-form-group col-md-5">
+							<input type="text" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Email *" />
+						</div>
+					</div>
+					<div class="row form-row">
+					<div class="form-group s-form-group col-md-5">
+							<input type="text" name="phone" class="form-control" placeholder="Phone No." />
+						</div>
+						<div class="form-group s-form-group col-md-5">
+							<input type="text" name="college" class="form-control" placeholder="College/ Organization" />
+						</div>
+					</div>
+					<div class="contact-msg">
+					<textarea type="text" name="message" rows="5" placeholder="Message *" class="form-control col-md-11 contact-message"></textarea>
+					</div>
+					<div class="row contact-msg">
+						<button type="submit" class="btn btn-primary s-form-group contact-btn col-md-3 col-sm-2">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+  <!-- back to top -->
+	<div class="scrolltop">
+		<div class="scroll icon"><i class="fa fa-rocket" aria-hidden="true"></i></div>
+	</div>
+	<!-- contact us -->
+	<div class="contact-bottom-btn">
+		<a href="javascript:showcontact()">
+			<div class="contact-icon"><i class="fas fa-comments" aria-hidden="true"></i></div>
+		</a>
+	</div>
   <!-- ***********************************************Footer************************************************************************ -->
   <?php
   include('footer.php');
   ?>
-
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="assets\JS\home_new.js"></script>
 </body>
 
 </html>
