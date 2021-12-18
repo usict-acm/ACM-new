@@ -8,49 +8,17 @@
 	?>
 	<title>USICT ACM</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" /> -->
 	<link rel="stylesheet" href="./assets/CSS/newStyle.css" />
+	<link rel="stylesheet" href="./assets/CSS/header.css">
+	<link rel="stylesheet" href="./assets/CSS/footer.css">
 </head>
 
 <body>
 	<!-- nav bar -->
-	<nav class="navbar navbar-expand-custom navbar-mainbg">
-		<div class="d-flex main-logo">
-			<a href="./"><img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm logo" /></a>
-			<div class="text-and-logo">
-				<a style="font-size: 16px; color: #000; padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto fw-bolder text-center" href="./">USICT<span class="text-primary"> ACM</span></a>
-				<a href="./"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
-			</div>
-		</div>
-		<button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="margin-right:2rem;">
-			<i class="fas fa-bars text-black"></i>
-		</button>
-		<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-			<ul class="navbar-nav ml-auto mr-5">
-				<li class="nav-item active">
-					<a class="nav-link" href="./">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./blogs.php">Blogs</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./events.php">Events</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./benefits.php">Why Join Us?</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./clubs.php">Clubs</a>
-				</li>
-				<!-- <li class="nav-item">
-					<a class="nav-link" href="./team.php">Our Team</a>
-				</li> -->
-				<li class="nav-item">
-					<a class="nav-link" href="./collab.php"> Sponsors</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
+	<?php
+	include("header.php")
+	?>
 	<!-- nav-bar end -->
 	<!-- hero Section -->
 	<section class="hero-slider hero-style">
@@ -407,134 +375,9 @@
 	<!-- ********************************contact_us end**************************************************** -->
 
 	<!--  footer -->
-	<footer class="footer-section">
-		<div class="container">
-			<div class="footer-cta pt-4 pb-3">
-				<div class="row justify-content-center align-items-center">
-					<div class="col-xl-4 col-md-4 mb-30">
-						<div class="single-cta justify-content-md-center">
-							<i class="fas fa-map-marker-alt my-auto" style="margin-left: 8px;"></i>
-							<div class="cta-text">
-								<h4>Find us</h4>
-								<span>Dean Office, USICT, GGSIPU Sector 16C, Dwarka, Delhi</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-4 col-md-4 mb-30">
-						<div class="single-cta justify-content-md-center">
-							<i class="fas fa-phone ro-nine my-auto"></i>
-							<div class="cta-text">
-								<h4>Call us</h4>
-								<span><a href="tel:011-25302702">011-25302702</a></span>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-4 col-md-4 mb-30">
-						<div class="single-cta justify-content-md-center">
-							<i class="far fa-envelope-open my-auto" style="margin-left: 5px;"></i>
-							<div class="cta-text" style="padding-left: 10px;">
-								<h4>Mail us</h4>
-								<span><a href="mailto:info@usict.acm.org" target="_blank">info@usict.acm.org</a></span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="footer-content pt-4 pb-2">
-				<div class="row">
-					<div class="col-xl-5 col-lg-5 mb-50">
-						<div class="footer-widget">
-							<div class="footer-logo text-center">
-								<a href="./">
-									<img src="./assets/images/acm1.png" class="img-primary" alt="logo" />
-									<img src="./assets/images/outstanding-website.png" class="img-secondary" alt="" />
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-3 col-md-6 mb-30">
-						<div class="footer-widget">
-							<div class="footer-widget-heading">
-								<h3>Quick Links</h3>
-							</div>
-							<ul>
-								<li>
-									<a href="http://www.ipu.ac.in/" target="_blank"><i class="fa fa-angle-right"></i> IPU-Home</a>
-								</li>
-								<li>
-									<a href="https://india.acm.org/" target="_blank"><i class="fa fa-angle-right"></i> ACM-India</a>
-								</li>
-								<li>
-									<a href="https://www.acm.org/about-acm/acm-india-council" target="_blank"><i class="fa fa-angle-right"></i> ACM-India Office Bearers</a>
-								</li>
-								<li>
-									<a href="https://amturing.acm.org/award_winners/reddy_9634208.cfm" target="_blank"><i class="fa fa-angle-right"></i> ACM Turing Award</a>
-								</li>
-								<li>
-									<a href="https://usict.acm.org/clubs.html" target="_blank"><i class="fa fa-angle-right"></i> Our Clubs</a>
-								</li>
-								<li>
-									<a href="./benefits.php#registration" target="_blank"><i class="fa fa-angle-right"></i> Join ACM</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-						<div class="footer-widget">
-							<div class="footer-widget-heading">
-								<h3>Social Links</h3>
-								<div class="social-menu">
-									<ul>
-										<li>
-											<a href="https://www.facebook.com/acmusict" target="_blank"><i class="fab fa-facebook"></i></a>
-										</li>
-										<li>
-											<a href="https://www.youtube.com/channel/UCI7her-mYrb7QM0t9S_nA_Q" target="_blank">
-												<i class="fab fa-youtube"></i>
-											</a>
-										</li>
-										<li>
-											<a href="https://www.instagram.com/acmusict/" target="_blank"><i class="fab fa-instagram"></i></a>
-										</li>
-										<li>
-											<a href="https://github.com/usict-acm/ACM-new" target="_blank"><i class="fab fa-github"></i></a>
-										</li>
-										<li>
-											<a href="#" target="_blank">
-												<i class="fab fa-discord"></i>
-											</a>
-										</li>
-										<li>
-											<a href="mailto:acmusit@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="footer-text">
-								<p>
-									The USICT ACM Student Chapter is an official student body incepted in 2019 under
-									the University School USICT, GGSIPU.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="copyright-area">
-			<div class="container">
-				<div class="row">
-					<div class="col text-center">
-						<div class="copyright-text">
-							<p>
-								&copy; Conceptualized, Designed and Developed by Office Bearers of ACM USICT chapter
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+	<?php
+	include("footer.php")
+	?>
 	<!--  footer ends -->
 	<!-- back to top -->
 	<div class="scrolltop">
