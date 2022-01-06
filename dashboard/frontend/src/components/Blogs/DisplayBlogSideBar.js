@@ -7,7 +7,7 @@ export default function DisplayBlogSideBar({ blog }) {
 			<div>
 				<h3>Blog Info</h3>
 			</div>
-			<hr />
+			<hr className="mt-2 mb-3" />
 			<h4>Cover Image</h4>
 			<div className="blog__cover">
 				<img className="blog__coverImage" src={blog?.coverImage} alt="cover" />
@@ -21,7 +21,7 @@ export default function DisplayBlogSideBar({ blog }) {
 						</div>
 					))}
 				</div>
-				<hr />
+				<hr className="my-3" />
 				<div>
 					<div>
 						<h3>Published :</h3>
