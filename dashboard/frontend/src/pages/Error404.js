@@ -28,7 +28,7 @@ const Error404 = () => {
               The page you are looking for was moved, removed, renamed or might
               never existed.
             </p>
-            <a href="./" className="btn Error_404__info-btn Error_404__info--a">
+            <a href={process.env.REACT_APP_HOSTED_BASE_URL + "/home"} className="btn Error_404__info-btn Error_404__info--a">
               Go Home
             </a>
           </div>
