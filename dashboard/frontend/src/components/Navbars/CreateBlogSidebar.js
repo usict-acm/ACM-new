@@ -3,7 +3,7 @@ import { Input } from "reactstrap";
 import { formatDate } from "utils/commonFunctions";
 import "../../assets/css/CreateBlog.css";
 
-const SideNav = ({ tags, setTags, editingBlog }) => {
+const SideNav = ({ tags, setTags, editingBlog, coverImage, setCoverImage }) => {
 	const [item, setItem] = useState("");
 
 	const addTags = () => {
@@ -20,8 +20,18 @@ const SideNav = ({ tags, setTags, editingBlog }) => {
 		const filteredArray = tags.filter((item, index) => {
 			return index !== i;
 		});
-		console.log(filteredArray);
 		setTags(filteredArray);
+	};
+
+	const imageChange = (e) => {
+		const fileReader = new FileReader();
+		fileReader.readAsDataURL(e.target.files[0]);
+		fileReader.onload = () => {
+			setCoverImage(fileReader.result);
+		};
+		fileReader.onerror = (err) => {
+			console.log(err);
+		};
 	};
 
 	return (
@@ -30,6 +40,22 @@ const SideNav = ({ tags, setTags, editingBlog }) => {
 				<h3>Post Settings</h3>
 			</div>
 			<hr />
+			<div className="blog__cover">
+				<img className="blog__coverImage" src={coverImage} alt="cover" />
+				<div className="blog__coverForm">
+					<input
+						width="600px"
+						onChange={imageChange}
+						className="blog__coverInput"
+						name="cover"
+						type="file"
+						accept="image/*"
+					/>
+					<label className="blog__coverLabel" htmlFor="cover">
+						Change cover image
+					</label>
+				</div>
+			</div>
 			<div>
 				<h4>Tags</h4>
 				<form
@@ -56,10 +82,7 @@ const SideNav = ({ tags, setTags, editingBlog }) => {
 				{tags.map((tag, i) => {
 					return (
 						<div key={i} className="tag_style">
-							<span
-								className="ni ni-fat-remove"
-								onClick={() => removeTags(i)}
-							></span>
+							<span className="ni ni-fat-remove" onClick={() => removeTags(i)}></span>
 							<span className="tag_text">{tag}</span>
 						</div>
 					);
@@ -69,14 +92,14 @@ const SideNav = ({ tags, setTags, editingBlog }) => {
 				<>
 					<hr />
 					<div>
-						<p>
+						<div>
 							<h3>Created :</h3>
 							{formatDate(editingBlog?.created)}
-						</p>
-						<p>
+						</div>
+						<div>
 							<h3>Last updated:</h3>
 							{formatDate(editingBlog?.lastUpdated)}
-						</p>
+						</div>
 					</div>
 				</>
 			) : null}

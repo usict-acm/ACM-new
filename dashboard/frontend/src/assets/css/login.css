@@ -12,6 +12,7 @@
   clip-path: ellipse(115% 70% at 100% -5%);
 }
 .registerPage {
+  padding-bottom: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;

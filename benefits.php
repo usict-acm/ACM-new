@@ -289,33 +289,33 @@
               <form class="widget-contact-form" action="https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse" role="form" method="post" target="_self" novalidate="novalidate">
                 <div class="row" style="margin-top:2rem">
                   <div class="form-group col-md-6">
-                    <input type="text" aria-required="true" name="entry.73813921" class="form-input-boxes-manual form-control required fname" placeholder="First Name" style="color: grey;">
+                    <input id="NameinForm" required type="text" aria-required="true" name="entry.73813921" class="form-input-boxes-manual form-control required fname" placeholder="First Name" style="color: grey;">
                   </div>
                   <div class="form-group col-md-6">
-                    <input type="text" aria-required="true" name="entry.1318071106" class="form-input-boxes-manual form-control required lname" placeholder="Last Name" style="color: grey;">
+                    <input id="LastNameinForm" required type="text" aria-required="true" name="entry.1318071106" class="form-input-boxes-manual form-control required lname" placeholder="Last Name" style="color: grey;">
                   </div>
                 </div>
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <input type="email" name="entry.2086820351" class="form-input-boxes-manual form-control" placeholder="Email" style="color: grey;">
+                    <input id="EmailinForm" required type="email" name="entry.2086820351" class="form-input-boxes-manual form-control" placeholder="Email" style="color: grey;">
                   </div>
                   <div class="form-group col-md-6">
-                    <input type="number" name="entry.2128372508" class="form-input-boxes-manual form-control" placeholder="Phone Number" style="color: grey;">
+                    <input id="PhoneinForm" required type="number" name="entry.2128372508" class="form-input-boxes-manual form-control" placeholder="Phone Number" style="color: grey;">
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="number" name="entry.1857583496" class="form-control form-input-boxes-manual required" placeholder="Enrollment Number" style="color: grey;" aria-required="true">
+                  <input id="EnrollmentinForm" required type="number" name="entry.1857583496" class="form-control form-input-boxes-manual required" placeholder="Enrollment Number" style="color: grey;" aria-required="true">
                 </div>
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <input type="number" name="entry.715926692" class="form-input-boxes-manual form-control" placeholder="Year Of Admission" style="color: grey;">
+                    <input id="YearofAdmissioninForm" required type="number" name="entry.715926692" class="form-input-boxes-manual form-control" placeholder="Year Of Admission" style="color: grey;">
                   </div>
                   <div class="form-group col-md-6">
-                    <input type="number" name="entry.114256127" class="form-input-boxes-manual form-control" placeholder="ACM Membership No." style="color: grey;">
+                    <input id="ACMMembershipNoinForm" required type="number" name="entry.114256127" class="form-input-boxes-manual form-control" placeholder="ACM Membership No." style="color: grey;">
                   </div>
                 </div>
                 <div class="form-group">
-                  <input list="course" name="entry.1307853061" class="form-control form-input-boxes-manual required" placeholder="Select Course" style="color: grey;" aria-required="true">
+                  <input id="CourseinForm" required list="course" name="entry.1307853061" class="form-control form-input-boxes-manual required" placeholder="Select Course" style="color: grey;" aria-required="true">
                   <datalist id="course">
                     <option value="B.Tech CSE">
                     <option value="B.Tech IT">
@@ -332,36 +332,40 @@
                   <div class="row no-gutters">
                     <br>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice1" name="entry.332679571" value="ACM Webify - The Web Development Group">
-                      <label class="label-course" for="contactChoice1">ACM Webify</label>
+                      <input type="checkbox" id="courseChoice1" name="entry.332679571" value="USICT ACM DevSource - The Development and Open Source Group">
+                      <label class="label-course" for="contactChoice1">USICT ACM DevSource</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice2" name="entry.332679571" value="ACM Appetite - The App Development Group">
-                      <label class="label-course" for="contactChoice2">ACM Appetite</label>
+                      <input type="checkbox" id="courseChoice2" name="entry.332679571" value="USICT ACM enGame - The Gaming Group">
+                      <label class="label-course" for="contactChoice2">USICT ACM enGame</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="ICPC Club - The Competitive Programming Group">
-                      <label class="label-course" for="contactChoice3">ICPC Club</label>
+                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM ICPC Club - The Competitive Programming Group">
+                      <label class="label-course" for="contactChoice3">USICT ACM ICPC Club</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="ACM Innovate AI - The Machine Learning, Data Science and AI Group">
-                      <label class="label-course" for="contactChoice4">ACM Innovate AI</label><br>
+                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Innovate AI - The Machine Learning, Data Science and AI Group">
+                      <label class="label-course" for="contactChoice4">USICT ACM Innovate AI</label><br>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="ACM Cyber Cell - The Cybersecurity Group">
-                      <label class="label-course" for="contactChoice5">ACM Cyber Cell</label>
+                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Cyber Cell - The Cybersecurity Group">
+                      <label class="label-course" for="contactChoice5">USICT ACM Cyber Cell</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="ACM RobIOTics - The Robotics and IoT Group">
-                      <label class="label-course" for="contactChoice6">ACM RobIOTics</label>
+                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM RobIOTics - The Robotics and IoT Group">
+                      <label class="label-course" for="contactChoice6">USICT ACM RobIOTics</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="ACM Entrepreneurs' Arena - The Entrepreneurship Group">
+                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Entrepreneurs' Arena - The Entrepreneurship Group">
                       <label class="label-course" for="contactChoice7">Entrepreneurs' Arena</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="ACM Research Cell - The Research and Development Group">
-                      <label class="label-course" for="contactChoice8">ACM Research Cell</label>
+                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Research Cell - The Research and Development Group">
+                      <label class="label-course" for="contactChoice8">USICT ACM Research Cell</label>
+                    </div>
+                    <div class="col-lg-6 col-md-6 club">
+                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM XD - The Experience and Design group">
+                      <label class="label-course" for="contactChoice8">USICT ACM XD</label>
                     </div>
                   </div>
                 </div>
@@ -370,7 +374,8 @@
                   <div class="form-group col-md-2"></div>
                   <div class="form-group col-md-2 button-center">
                     <div class="form-group">
-                      <button class="btn signin" type="submit" style="background-color: #0297ff; color:#fff;" onclick="setColor(event)">&nbsp;Submit</button>
+                      <button id="submitSingupForm" type="submit" style="display:none;"></button>
+                      <button type="button" class="btn signin" style="background-color: #0297ff; color:#fff;" onclick="validateForm()">&nbsp;Submit</button>
                     </div>
                   </div>
                 </div>
@@ -439,6 +444,26 @@
     <script src="./assets/JS/glider.js"></script>
     <script>
       // For winners sections
+      function validateForm(){
+        // var x = document.forms["contact"]["name"].value;
+        var x = document.getElementById("NameinForm").value;
+        var y = document.getElementById("LastNameinForm").value;
+        console.log(document.getElementById("EmailinForm"), "Email");
+        var z = document.getElementById("EmailinForm").value;
+        var a = document.getElementById("CourseinForm").value;
+        var b = document.getElementById("PhoneinForm").value;
+        var c = document.getElementById("YearofAdmissioninForm").value;
+        var d = document.getElementById("ACMMembershipNoinForm").value;
+        var e = document.getElementById("EnrollmentinForm").value;
+        if (x == "" || !x || y == "" || !y || z == "" || !z || a == "" || !a || b == "" || !b || c == "" || !c || d == "" || !d || e == "" || !e) {
+          alert("Please fill all the fields");
+          return false;
+        }
+        else{
+          var button = document.getElementById("submitSingupForm");
+          button.click();
+        }
+      }
       window.addEventListener('load', function(){
         new Glider(document.querySelector('.glider1'), {
           slidesToShow: 1,
