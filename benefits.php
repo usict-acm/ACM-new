@@ -289,33 +289,33 @@
               <form class="widget-contact-form" action="https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse" role="form" method="post" target="_self" novalidate="novalidate">
                 <div class="row" style="margin-top:2rem">
                   <div class="form-group col-md-6">
-                    <input required type="text" aria-required="true" name="entry.73813921" class="form-input-boxes-manual form-control required fname" placeholder="First Name" style="color: grey;">
+                    <input id="NameinForm" required type="text" aria-required="true" name="entry.73813921" class="form-input-boxes-manual form-control required fname" placeholder="First Name" style="color: grey;">
                   </div>
                   <div class="form-group col-md-6">
-                    <input required type="text" aria-required="true" name="entry.1318071106" class="form-input-boxes-manual form-control required lname" placeholder="Last Name" style="color: grey;">
+                    <input id="LastNameinForm" required type="text" aria-required="true" name="entry.1318071106" class="form-input-boxes-manual form-control required lname" placeholder="Last Name" style="color: grey;">
                   </div>
                 </div>
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <input required type="email" name="entry.2086820351" class="form-input-boxes-manual form-control" placeholder="Email" style="color: grey;">
+                    <input id="EmailinForm" required type="email" name="entry.2086820351" class="form-input-boxes-manual form-control" placeholder="Email" style="color: grey;">
                   </div>
                   <div class="form-group col-md-6">
-                    <input required type="number" name="entry.2128372508" class="form-input-boxes-manual form-control" placeholder="Phone Number" style="color: grey;">
+                    <input id="PhoneinForm" required type="number" name="entry.2128372508" class="form-input-boxes-manual form-control" placeholder="Phone Number" style="color: grey;">
                   </div>
                 </div>
                 <div class="form-group">
-                  <input required type="number" name="entry.1857583496" class="form-control form-input-boxes-manual required" placeholder="Enrollment Number" style="color: grey;" aria-required="true">
+                  <input id="EnrollmentinForm" required type="number" name="entry.1857583496" class="form-control form-input-boxes-manual required" placeholder="Enrollment Number" style="color: grey;" aria-required="true">
                 </div>
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <input required type="number" name="entry.715926692" class="form-input-boxes-manual form-control" placeholder="Year Of Admission" style="color: grey;">
+                    <input id="YearofAdmissioninForm" required type="number" name="entry.715926692" class="form-input-boxes-manual form-control" placeholder="Year Of Admission" style="color: grey;">
                   </div>
                   <div class="form-group col-md-6">
-                    <input required type="number" name="entry.114256127" class="form-input-boxes-manual form-control" placeholder="ACM Membership No." style="color: grey;">
+                    <input id="ACMMembershipNoinForm" required type="number" name="entry.114256127" class="form-input-boxes-manual form-control" placeholder="ACM Membership No." style="color: grey;">
                   </div>
                 </div>
                 <div class="form-group">
-                  <input required list="course" name="entry.1307853061" class="form-control form-input-boxes-manual required" placeholder="Select Course" style="color: grey;" aria-required="true">
+                  <input id="CourseinForm" required list="course" name="entry.1307853061" class="form-control form-input-boxes-manual required" placeholder="Select Course" style="color: grey;" aria-required="true">
                   <datalist id="course">
                     <option value="B.Tech CSE">
                     <option value="B.Tech IT">
@@ -374,7 +374,8 @@
                   <div class="form-group col-md-2"></div>
                   <div class="form-group col-md-2 button-center">
                     <div class="form-group">
-                      <button class="btn signin" type="submit" style="background-color: #0297ff; color:#fff;" onclick="setColor(event)">&nbsp;Submit</button>
+                      <button id="submitSingupForm" type="submit" style="display:none;"></button>
+                      <button type="button" class="btn signin" style="background-color: #0297ff; color:#fff;" onclick="validateForm()">&nbsp;Submit</button>
                     </div>
                   </div>
                 </div>
@@ -443,6 +444,26 @@
     <script src="./assets/JS/glider.js"></script>
     <script>
       // For winners sections
+      function validateForm(){
+        // var x = document.forms["contact"]["name"].value;
+        var x = document.getElementById("NameinForm").value;
+        var y = document.getElementById("LastNameinForm").value;
+        console.log(document.getElementById("EmailinForm"), "Email");
+        var z = document.getElementById("EmailinForm").value;
+        var a = document.getElementById("CourseinForm").value;
+        var b = document.getElementById("PhoneinForm").value;
+        var c = document.getElementById("YearofAdmissioninForm").value;
+        var d = document.getElementById("ACMMembershipNoinForm").value;
+        var e = document.getElementById("EnrollmentinForm").value;
+        if (x == "" || !x || y == "" || !y || z == "" || !z || a == "" || !a || b == "" || !b || c == "" || !c || d == "" || !d || e == "" || !e) {
+          alert("Please fill all the fields");
+          return false;
+        }
+        else{
+          var button = document.getElementById("submitSingupForm");
+          button.click();
+        }
+      }
       window.addEventListener('load', function(){
         new Glider(document.querySelector('.glider1'), {
           slidesToShow: 1,
