@@ -14,12 +14,23 @@
       $currentPage = 'blogs';
       include('header.php');
     ?>
-    <!-- ==============================================header Three Blogs========================================== -->
+        <!-- ==============================================header Three Blogs========================================== -->
     <section style="padding-top: 80px;">
       <div class="container" style="margin-top: 3%;">
         <div class="row" id="row2"></div>
       </div>
-      <div class="right-side">
+    </section>
+    <section class="container" style="margin-top: 4%;">
+      <h1 class="category-heading">Let The Words Speak</h1>
+      <div class="lower">
+        <!-- ====================================================Show All Blogs========================================= -->
+        <div class="left-side">
+          <div class="row" id="row1"></div>
+          <div class="row">
+            <div style="margin:auto;" id="pagination_row"></div>
+          </div>
+        </div>
+        <div class="right-side">
         <!-- ==============================================Show rightside three blogs================================== -->
         <div class="row categoryCards mt-0">
           <div class="col">
@@ -28,15 +39,23 @@
         </div>
         <div id="row4"></div>
 
-        <!-- <div class="row categoryCards">
+        <div class="row categoryCards">
           <div class="col">
             <h4>Categories</h4>
           </div>
         </div>
-        <hr style="width: 100%; text-align: centre" /> -->
+        <hr style="width: 100%; text-align: centre" />
         <!-- ===========================================================Show Ctegories=================================== -->
         <div id="row3">
-
+          <div class= 'row categories'>
+            <div id=" + row.Category + " class= 'col-6 categoryLeft'>AI</div>
+            <div class= 'col-6 categoryRight' >1</div>
+          </div> 
+          <hr style= 'width: 100%; text-align: centre' />
+          <div class= 'row categories'>
+            <div id=" + row.Category + " class= 'col-6 categoryLeft'>MIL</div>
+            <div class= 'col-6 categoryRight' >1</div>
+          </div> 
         </div>
         <?php
         include('./blogHeader.php');
