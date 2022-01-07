@@ -46,7 +46,7 @@
         </div>
         <hr style="width: 100%; text-align: centre" />
         <!-- ===========================================================Show Ctegories=================================== -->
-        <div id="row3">
+        <!-- <div id="row3">
           <div class= 'row categories'>
             <div id=" + row.Category + " class= 'col-6 categoryLeft'>AI</div>
             <div class= 'col-6 categoryRight' >1</div>
@@ -56,7 +56,7 @@
             <div id=" + row.Category + " class= 'col-6 categoryLeft'>MIL</div>
             <div class= 'col-6 categoryRight' >1</div>
           </div> 
-        </div>
+        </div> -->
         <?php
         include('./blogHeader.php');
         ?>
