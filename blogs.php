@@ -5,8 +5,6 @@
       include('head.php');
     ?>
     <title>USICT ACM</title>
-    <link href="assets/CSS/header.css" rel="stylesheet" />
-    <link href="assets/CSS/footer.css" rel="stylesheet" />
     <link href="./assets/CSS/blogs.css" rel="stylesheet" />
     <link href="./assets/CSS/glider.css" rel="stylesheet"/>
 	  <link rel="stylesheet" href="./assets/CSS/newStyle.css" />
@@ -174,13 +172,7 @@
       font-size: 23px;
       margin: 40px 10px 20px 10px !important;
     }
-  </style>
-  <!-- ***********************************************Footer************************************************************************ -->
-  <?php
-  include('footer.php');
-  ?>
-
-      .disabled-pagination {
+   .disabled-pagination {
         color: lightgray;
         pointer-events: none;
         cursor: default;
@@ -242,7 +234,6 @@
     <?php
       include('footer.php');
     ?>
-
     <script>
       function redirec(id) {
         window.document.location = "./singleBlog.php?Id=" + id; //Connecting Second page

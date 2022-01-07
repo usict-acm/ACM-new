@@ -25,7 +25,7 @@
 						<i class="far fa-envelope-open my-auto" style="margin-left: 5px"></i>
 						<div class="cta-text" style="padding-left: 10px">
 							<h4>Mail us</h4>
-							<span><a href="mailto:info@usict.acm.org" target="_blank">info@usict.acm.org</a></span>
+							<span><a href="#">info@usict.acm.org</a></span>
 						</div>
 					</div>
 				</div>
@@ -70,7 +70,7 @@
 								>
 							</li>
 							<li>
-								<a href="https://usict.acm.org/clubs.html" target="_blank"
+								<a href="https://usict.acm.org/clubs.php" target="_blank"
 									><i class="fa fa-angle-right"></i> Our Clubs</a
 								>
 							</li>
@@ -89,20 +89,17 @@
 							<div class="social-menu">
 								<ul>
 									<li>
-										<a href="https://www.facebook.com/acmusict" target="_blank"
+										<a href="https://usict.acm.org/facebook" target="_blank"
 											><i class="fab fa-facebook"></i
 										></a>
 									</li>
 									<li>
-										<a
-											href="https://www.youtube.com/channel/UCI7her-mYrb7QM0t9S_nA_Q"
-											target="_blank"
-										>
-											<i class="fab fa-youtube"></i>
+										<a href="https://usict.acm.org/youtube" target="_blank"
+											><i class="fab fa-youtube"></i>
 										</a>
 									</li>
 									<li>
-										<a href="https://www.instagram.com/acmusict/" target="_blank"
+										<a href="https://usict.acm.org/instagram" target="_blank"
 											><i class="fab fa-instagram"></i
 										></a>
 									</li>
@@ -112,12 +109,12 @@
 										></a>
 									</li>
 									<li>
-										<a href="#" target="_blank">
+										<a href="https://usict.acm.org/discord" target="_blank">
 											<i class="fab fa-discord"></i>
 										</a>
 									</li>
 									<li>
-										<a href="mailto:acmusit@gmail.com" target="_blank"
+										<a href="#" 
 											><i class="fas fa-envelope"></i
 										></a>
 									</li>
