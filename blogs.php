@@ -39,12 +39,12 @@
         </div>
         <div id="row4"></div>
 
-        <div class="row categoryCards">
+        <!-- <div class="row categoryCards">
           <div class="col">
             <h4>Categories</h4>
           </div>
         </div>
-        <hr style="width: 100%; text-align: centre" />
+        <hr style="width: 100%; text-align: centre" /> -->
         <!-- ===========================================================Show Ctegories=================================== -->
         <!-- <div id="row3">
           <div class= 'row categories'>
