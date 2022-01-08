@@ -11,7 +11,7 @@ export const fetchUserBlogs = async (body) => {
       if (res.message === "success") {
         return res.blogs;
       } else {
-        alert(res.error || "process failed");
+        console.log(res.error || "process failed");
       }
     })
     .catch((err) => console.log(err.message));
@@ -30,13 +30,13 @@ export const fetchSingleBlog = async (body) => {
       if (res.message === "success") {
         return res.blog;
       } else {
-        alert(res.error || "process failed");
+        console.log(res.error || "process failed");
       }
     })
     .catch((err) => console.log(err.message));
 };
 
-export const addBlog = (body) => (dispatch) => {
+export const addBlog = async (body) => {
   return fetch(
     process.env.REACT_APP_BASE_URL +
       "/api.php?q=createBlog",
@@ -61,7 +61,7 @@ export const addBlog = (body) => (dispatch) => {
     });
 };
 
-export const updateBlog = (body) => (dispatch) => {
+export const updateBlog = async (body) => {
   return fetch(
     process.env.REACT_APP_BASE_URL +
       "/api.php?q=updateBlog",
@@ -72,7 +72,7 @@ export const updateBlog = (body) => (dispatch) => {
   )
     .then((res) => res.json())
     .then((res) => {
-      // console.log(res);
+      console.log(res);
       if (res.message === "success") {
         // dispatch(setBlogs(res.blogs));
         return { status: "success" };
@@ -87,7 +87,7 @@ export const updateBlog = (body) => (dispatch) => {
     });
 };
 
-export const deleteBlog = (body) => (dispatch) => {
+export const deleteBlog = async (body) => {
   return fetch(
     process.env.REACT_APP_BASE_URL +
       "/api.php?q=deleteBlog",

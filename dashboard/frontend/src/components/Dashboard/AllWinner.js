@@ -1,27 +1,27 @@
 const winner = [
   {
     winId: 1,
-    name: "NAME ",
-    eventName: "EVENT NAME",
-    img:"https://www.unmc.edu/cihc/_images/faculty/default.jpg" 
+    name: "Mansi Prabhakaran & Anjana Jayalakshmi KR",
+    eventName: "ACM Write It Loud",
+    img: "https://usict.acm.org/assets/images/TrophyOneWinner.jpg"
   },
   {
     winId: 2,
-    name: "NAME ",
-    eventName: "EVENT NAME",
-    img:"https://www.unmc.edu/cihc/_images/faculty/default.jpg"
+    name: "Samir Mahapatra",
+    eventName: "ACM Valorant Tournament",
+    img: "https://usict.acm.org/assets/images/TrophyOneWinner.jpg"
   },
   {
     winId: 3,
-    name: "NAME ",
-    eventName: "EVENT NAME",
-    img:"https://www.unmc.edu/cihc/_images/faculty/default.jpg"
+    name: "Rajesh Devanda & Raj Kishor Panigrahi",
+    eventName: "ACM CODM Tournament",
+    img: "https://usict.acm.org/assets/images/TrophyOneWinner.jpg"
   },
   {
     winId: 4,
-    name: "NAME ",
-    eventName: "EVENT NAME",
-    img:"https://www.unmc.edu/cihc/_images/faculty/default.jpg"
+    name: "Kashish Jain",
+    eventName: "Quiz",
+    img: "https://usict.acm.org/assets/images/TrophyOneWinner.jpg"
   },
 ];
 

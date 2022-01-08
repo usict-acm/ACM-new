@@ -7,12 +7,12 @@ export const fetchAllEvents = async () => {
 			if (res.message === "success") {
 				return res.events;
 			} else {
-				alert(res.error || "process failed");
+				console.log(res.error || "process failed");
                 return false;
 			}
 		})
 		.catch((err) => {
-            alert(err.message || "process failed")
+            console.log(err.message || "process failed")
             return false;
         });
 };
@@ -27,12 +27,12 @@ export const fetchSingleEvent = async (eventId) => {
 			if (res.message === "success") {
 				return res.event;
 			} else {
-				alert(res.error || "process failed");
+				console.log(res.error || "process failed");
                 return false;
 			}
 		})
 		.catch((err) => {
-            alert(err.message || "process failed")
+            console.log(err.message || "process failed")
             return false;
         });
 };

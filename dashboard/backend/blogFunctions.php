@@ -14,17 +14,20 @@ class Blog
     {
         boolval($details['isDraft']) ? $isDraft = 1 : $isDraft = 0;
         $tags = $details['tags'] ? serialize($details['tags']) : serialize([]);
+        $content = str_replace("'", "`", $details['content']);
 
         $query =
             "INSERT INTO $this->table
-                (userEmail, userName, blogTitle, content, tags, isDraft)
+                (userEmail, userName, blogTitle, coverImage, content, tags, isDraft, approved)
                 VALUES (
                     '$details[userEmail]',
                     '$details[userName]',
                     '$details[blogTitle]',
-                    '$details[content]',
+                    '$details[coverImage]',
+                    '$content',
                     '$tags',
-                    '$isDraft'
+                    $isDraft,
+                    0
                 )";
         $res = $this->conn->query($query);
         return $res;
@@ -60,6 +63,7 @@ class Blog
             "UPDATE $this->table
                     SET 
                         blogTitle = '$details[blogTitle]',
+                        coverImage = '$details[coverImage]',
                         content = '$details[content]',
                         tags = '$tags',
                         isDraft = '$isDraft',
@@ -69,6 +73,7 @@ class Blog
             "UPDATE $this->table
                     SET 
                         blogTitle = '$details[blogTitle]',
+                        coverImage = '$details[coverImage]',
                         content = '$details[content]',
                         tags = '$tags',
                         isDraft = '$isDraft'
