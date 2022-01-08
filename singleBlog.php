@@ -25,11 +25,11 @@
   </section>
 
   <!-- =====================================Header Three Blogs============================================ -->
-  <section style="padding-top:80px;">
+  <!-- <section style="padding-top:80px;">
     <div class="container topRow" style="margin-top: 3%;">
       <div class="row justify-content-center" id="row2"></div>
     </div>
-  </section>
+  </section> -->
 
   <section class="container" style="margin-top: 60px; margin-bottom:60px">
     <div class="lower">

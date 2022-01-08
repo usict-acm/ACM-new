@@ -5,8 +5,6 @@
       include('head.php');
     ?>
     <title>USICT ACM</title>
-    <link href="assets/CSS/header.css" rel="stylesheet" />
-    <link href="assets/CSS/footer.css" rel="stylesheet" />
     <link href="./assets/CSS/blogs.css" rel="stylesheet" />
     <link href="./assets/CSS/glider.css" rel="stylesheet"/>
 	  <link rel="stylesheet" href="./assets/CSS/newStyle.css" />
@@ -16,12 +14,23 @@
       $currentPage = 'blogs';
       include('header.php');
     ?>
-    <!-- ==============================================header Three Blogs========================================== -->
+        <!-- ==============================================header Three Blogs========================================== -->
     <section style="padding-top: 80px;">
       <div class="container" style="margin-top: 3%;">
         <div class="row" id="row2"></div>
       </div>
-      <div class="right-side">
+    </section>
+    <section class="container" style="margin-top: 4%;">
+      <h1 class="category-heading">Let The Words Speak</h1>
+      <div class="lower">
+        <!-- ====================================================Show All Blogs========================================= -->
+        <div class="left-side">
+          <div class="row" id="row1"></div>
+          <div class="row">
+            <div style="margin:auto;" id="pagination_row"></div>
+          </div>
+        </div>
+        <div class="right-side">
         <!-- ==============================================Show rightside three blogs================================== -->
         <div class="row categoryCards mt-0">
           <div class="col">
@@ -37,9 +46,17 @@
         </div>
         <hr style="width: 100%; text-align: centre" /> -->
         <!-- ===========================================================Show Ctegories=================================== -->
-        <div id="row3">
-
-        </div>
+        <!-- <div id="row3">
+          <div class= 'row categories'>
+            <div id=" + row.Category + " class= 'col-6 categoryLeft'>AI</div>
+            <div class= 'col-6 categoryRight' >1</div>
+          </div> 
+          <hr style= 'width: 100%; text-align: centre' />
+          <div class= 'row categories'>
+            <div id=" + row.Category + " class= 'col-6 categoryLeft'>MIL</div>
+            <div class= 'col-6 categoryRight' >1</div>
+          </div> 
+        </div> -->
         <?php
         include('./blogHeader.php');
         ?>
@@ -174,13 +191,7 @@
       font-size: 23px;
       margin: 40px 10px 20px 10px !important;
     }
-  </style>
-  <!-- ***********************************************Footer************************************************************************ -->
-  <?php
-  include('footer.php');
-  ?>
-
-      .disabled-pagination {
+   .disabled-pagination {
         color: lightgray;
         pointer-events: none;
         cursor: default;
@@ -242,7 +253,6 @@
     <?php
       include('footer.php');
     ?>
-
     <script>
       function redirec(id) {
         window.document.location = "./singleBlog.php?Id=" + id; //Connecting Second page
