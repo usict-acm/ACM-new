@@ -324,6 +324,7 @@
                     <option value="M.Tech IT">
                     <option value="M.Tech ECE">
                     <option value="M.Tech RA">
+                    <option value="MCA">
                     <option value="PhD">
                   </datalist>
                 </div>
