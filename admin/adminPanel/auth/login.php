@@ -35,6 +35,10 @@
         echo "Coming to Post";
         $username = $_POST['username'];
         $password = $_POST['password'];
+        $username = stripcslashes($username);
+        $password = stripcslashes($password);
+        $username = mysqli_real_escape_string($connection, $username);
+        $password = mysqli_real_escape_string($connection, $password);
         $query = "SELECT * from users where username='$username' and password='$password'";
         $result = mysqli_query($connection,$query);
         if(mysqli_num_rows($result)==1){
