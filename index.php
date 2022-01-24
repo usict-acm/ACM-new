@@ -16,7 +16,7 @@
         }
 
         .button-center {
-          text-align: center;
+          text-align: left;
         }
       }
     </style>
