@@ -37,7 +37,7 @@
             <h6 class="alert-header md-text-custom">Registration</h6>
             <p class="mb-0">Join Us today and be a part of International Society of Computer Professionals and Scientists!</p>
           </div class="col-md-1 col-sm-1 col-1">
-          <button style="height:5%" class="sm-text-custom btn btn-outline-info"><a target="_blank" href="https://bit.do/acmusict">Join Us</a></button>
+          <button style="height:5%" class="sm-text-custom btn btn-outline-info"><a target="_blank" href="./benefits.php#registration">Join Us</a></button>
           <div>
           </div>
         </div>
