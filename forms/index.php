@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+
+  
   <title>Form</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,6 +15,8 @@
 
   <link rel="stylesheet" type="text/css" href="css/main.css" />
   <!--===============================================================================================-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <style>
     textarea::placeholder {
       font-size: 18px;
@@ -23,12 +27,52 @@
 </head>
 
 <body>
-  <div class="container-contact100">
-    <div class="wrap-contact100">
-      <form class="contact100-form validate-form">
-        <div id="formPage"></div>
-      </form>
-    </div>
+        <div id="formPage">
+        <div class="registration-form">
+        <form>
+            <span> <h5 class = "contact100-form-title">ACM FORM<h5></span>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control item" id="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="phone-number" placeholder="Phone Number">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="birth-date" placeholder="Birth Date">
+            </div>
+            <div class= "form-group">
+            <p>Please select your favorite Web language:*</p>
+                <input type="radio" id="html" name="fav_language" value="HTML" required>
+                 <label for="html">HTML</label><br>
+                 <input type="radio" id="css" name="fav_language" value="CSS">
+                  <label for="css">CSS</label><br>
+                   <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+               <label for="javascript">JavaScript</label>
+                </div>
+                <div class = "form-group">
+                  <p>Checkbox:</p>
+                  <input type="checkbox" id="Checkbox1" name="Checkbox1" value="Checkbox1" class="checkbox">
+                  <label for="vehicle1">Check box 1</label><br>
+                  <input type="checkbox" id="Checkbox2" name="Checkbox2" value="Checkbox2" class="checkbox">
+                  <label for="vehicle2">Check box 2</label><br>
+                  <input type="checkbox" id="Checkbox3" name="Checkbox3" value="Checkbox3" class="checkbox">
+                  <label for="vehicle3">Check box 3</label>
+                </div>
+                <div class = "form-group">
+                  <label for="myfile">Select a file:</label><br/>
+                  <input type="file" id="myfile" name="myfile" class="button"><br>
+                </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-block create-account">Submit</button>
+            </div>
+        </form>
+  </div>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -178,5 +222,7 @@
 
 
 </body>
+
+
 
 </html>
