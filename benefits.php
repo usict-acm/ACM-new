@@ -299,7 +299,18 @@
                   <div class="form-group col-md-6">
                     <input id="EmailinForm" required type="email" name="entry.2086820351" class="form-input-boxes-manual form-control" placeholder="Email" style="color: grey;">
                   </div>
-                  <div class="form-group col-md-6">
+                  <style>
+                       input::-webkit-outer-spin-button,
+                       input::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                       margin: 0;
+                      }
+  
+                        input[type=number] {
+                         -moz-appearance: textfield;
+                         }
+                  </style>
+                 <div class="form-group col-md-6">
                     <input id="PhoneinForm" required type="number" name="entry.2128372508" class="form-input-boxes-manual form-control" placeholder="Phone Number" style="color: grey;">
                   </div>
                 </div>
