@@ -4,10 +4,10 @@
 			<div class="row justify-content-center align-items-center">
 				<div class="col-xl-4 col-md-4 mb-30">
 					<div class="single-cta justify-content-md-center">
-						<i class="fas fa-map-marker-alt my-auto" style="margin-left: 8px"></i>
+						<a href="https://goo.gl/maps/4ALxZAv4fb7sGXrZ9" target="_blank"><i class="fas fa-map-marker-alt my-auto" style="margin-left: 8px"></i></a>
 						<div class="cta-text">
 							<h4>Find us</h4>
-							<span>Dean Office, USICT, GGSIPU Sector 16C, Dwarka, Delhi</span>
+							<span><a href="https://goo.gl/maps/4ALxZAv4fb7sGXrZ9" target="_blank">Dean Office, USICT, GGSIPU Sector 16C, Dwarka, Delhi</a></span>
 						</div>
 					</div>
 				</div>
