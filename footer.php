@@ -22,7 +22,7 @@
 				</div>
 				<div class="col-xl-4 col-md-4 mb-30">
 					<div class="single-cta justify-content-md-center">
-						<i class="far fa-envelope-open my-auto" style="margin-left: 5px"></i>
+					<a href="mailto:info@usict.acm.org"><i class="far fa-envelope-open my-auto" style="margin-left: 5px"></i></a>
 						<div class="cta-text" style="padding-left: 10px">
 							<h4>Mail us</h4>
 							<span><a href="mailto:info@usict.acm.org">info@usict.acm.org</a></span>
