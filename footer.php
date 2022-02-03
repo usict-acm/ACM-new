@@ -25,7 +25,7 @@
 						<i class="far fa-envelope-open my-auto" style="margin-left: 5px"></i>
 						<div class="cta-text" style="padding-left: 10px">
 							<h4>Mail us</h4>
-							<span><a href="#">info@usict.acm.org</a></span>
+							<span><a href="mailto:info@usict.acm.org">info@usict.acm.org</a></span>
 						</div>
 					</div>
 				</div>
