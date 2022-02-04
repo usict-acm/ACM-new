@@ -123,7 +123,7 @@
           data.forEach(myFunc);
 
           function myFunc(row, index) {
-            galleryImage.innerHTML += " <img class='quote-img' src=" + row.Image + " alt=' ' />";
+            galleryImage.innerHTML += " <img class='quote-img' style='transition: 2s;' src=" + row.Image + " alt=' ' />";
           }
         }
       })
