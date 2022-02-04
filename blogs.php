@@ -5,9 +5,10 @@
       include('head.php');
     ?>
     <title>USICT ACM</title>
-    <link href="./assets/CSS/blogs.css" rel="stylesheet" />
+    
     <link href="./assets/CSS/glider.css" rel="stylesheet"/>
 	  <link rel="stylesheet" href="./assets/CSS/newStyle.css" />
+    <link href="./assets/CSS/blogs.css" rel="stylesheet" />
   </head>
   <body>
     <?php
@@ -17,7 +18,7 @@
         <!-- ==============================================header Three Blogs========================================== -->
     <section style="padding-top: 80px;">
       <div class="container" style="margin-top: 3%;">
-        <h1 style="text-align: left; margin-top: 30px;">BLOGS</h1>
+        <h1 style="text-align: left; margin-top: 30px;" class="blog-heading">BLOGS</h1>
         <div class="row" id="row2"></div>
       </div>
     </section>
@@ -224,8 +225,19 @@
 					</div>
 					<div class="row form-row">
 					<div class="form-group s-form-group col-md-5">
-							<input type="text" name="phone" class="form-control" placeholder="Phone No." />
+							<input type="number" name="phone" class="form-control" placeholder="Phone No." />
 						</div>
+            <style>
+                       input::-webkit-outer-spin-button,
+                       input::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                       margin: 0;
+                      }
+  
+                        input[type=number] {
+                         -moz-appearance: textfield;
+                         }
+                  </style>
 						<div class="form-group s-form-group col-md-5">
 							<input type="text" name="college" class="form-control" placeholder="College/ Organization" />
 						</div>
