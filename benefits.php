@@ -129,8 +129,8 @@
               </div>
             </div>
           </div>
-          <button aria-label="Previous" class="glider-prev alumni-prev"><i class="fas fa-angle-left"></i></button>
-          <button aria-label="Next" class="glider-next alumni-next"><i class="fas fa-angle-right"></i></button>
+          <div aria-label="Previous" class="glider-prev alumni-prev"><i class="fas fa-angle-left"></i></div>
+          <div aria-label="Next" class="glider-next alumni-next"><i class="fas fa-angle-right"></i></div>
           <div role="tablist" class="dots"></div>
         </div>
       </div>
@@ -265,8 +265,8 @@
                 </div>
               </div>
             </div>
-            <button aria-label="Previous" class="glider-prev alumni-prev1"><i class="fas fa-angle-left"></i></button>
-                <button aria-label="Next" class="glider-next alumni-next1"><i class="fas fa-angle-right"></i></button>
+            <div aria-label="Previous" class="glider-prev alumni-prev1"><i class="fas fa-angle-left"></i></div>
+                <div aria-label="Next" class="glider-next alumni-next1"><i class="fas fa-angle-right"></i></div>
                 <div role="tablist" class="dots1"></div>
           </div>
         </div>
