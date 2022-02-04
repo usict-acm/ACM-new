@@ -114,7 +114,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="#" 
+										<a href="mailto:info@usict.acm.org" 
 											><i class="fas fa-envelope"></i
 										></a>
 									</li>
