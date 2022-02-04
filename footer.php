@@ -15,7 +15,7 @@
 					<div class="single-cta justify-content-md-center">
 						<i class="fas fa-phone ro-nine my-auto"></i>
 						<div class="cta-text">
-							<h4>Call us</h4>
+						<a href="tel:011-25302702"><h4>Call us</h4></a>
 							<span><a href="tel:011-25302702">011-25302702</a></span>
 						</div>
 					</div>
