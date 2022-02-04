@@ -6,7 +6,7 @@
 					<div class="single-cta justify-content-md-center">
 						<a href="https://goo.gl/maps/4ALxZAv4fb7sGXrZ9" target="_blank"><i class="fas fa-map-marker-alt my-auto" style="margin-left: 8px"></i></a>
 						<div class="cta-text">
-							<h4>Find us</h4>
+						<a href="https://goo.gl/maps/4ALxZAv4fb7sGXrZ9" target="_blank"><h4>Find us</h4></a>
 							<span><a href="https://goo.gl/maps/4ALxZAv4fb7sGXrZ9" target="_blank">Dean Office, USICT, GGSIPU Sector 16C, Dwarka, Delhi</a></span>
 						</div>
 					</div>
@@ -24,7 +24,7 @@
 					<div class="single-cta justify-content-md-center">
 					<a href="mailto:info@usict.acm.org"><i class="far fa-envelope-open my-auto" style="margin-left: 5px"></i></a>
 						<div class="cta-text" style="padding-left: 10px">
-							<h4>Mail us</h4>
+						<a href="mailto:info@usict.acm.org"><h4>Mail us</h4></a>
 							<span><a href="mailto:info@usict.acm.org">info@usict.acm.org</a></span>
 						</div>
 					</div>
