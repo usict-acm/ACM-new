@@ -44,40 +44,6 @@ if(isset($_POST['submit'])){
         echo ' alert("Image submit karo sir")';
         echo '</script>';
     }
-}
-
-
-
-
-// class databaseConnection{
-//     private $server;
-//     private $username;
-//     private $password;
-//     private $database_name;
-
-//     protected function connect(){
-//     $this->server = "localhost";
-//     $this->username = "root";
-//     $this->password = "";
-//     $this->database_name = "acmbackend";
-
-//     $conn = new mysqli($this->server, $this->username, $this->password, $this->detabase_name);
-
-//     return $conn;
-//     }
-// }
-
-
-
-
-    
-
-    
+}    
     
     $con->close();
-?>
-
-
-
-
-

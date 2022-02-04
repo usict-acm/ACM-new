@@ -33,6 +33,7 @@
                     $valueType = $request[$i][1];
                     $valueRequired = $request[$i][2];
                     $check="";
+                    $radio="";
                     if($valueType == "checkbox"){
                          $valueCheckbox = $request[$i][3];
                          for($j=0; $j<count($valueCheckbox)-1; $j++){
@@ -40,8 +41,15 @@
                          }
                          $check = $check.$valueCheckbox[count($valueCheckbox)-1];
                     }
+                    if($valueType == "radioAns"){
+                         $valueRadio = $request[$i][3];
+                         for($j=0; $j<count($valueRadio)-1; $j++){
+                              $radio = $radio.$valueRadio[$j].",";
+                         }
+                         $radio = $radio.$valueRadio[count($valueRadio)-1];
+                    }
 
-                    $query = "INSERT INTO `fields` (`formID`,`formName`,`fieldName`,`fieldType`, `ifCheckbox`, `required`) VALUES ('$formID','$name','$valueText','$valueType', '$check' , '$valueRequired')";
+                    $query = "INSERT INTO `fields` (`formID`,`formName`,`fieldName`,`fieldType`, `ifCheckbox`, `ifRadio`, `required`) VALUES ('$formID','$name','$valueText','$valueType', '$check' ,'$radio' , '$valueRequired')";
                     $this->conn->query($query);
                }
           }

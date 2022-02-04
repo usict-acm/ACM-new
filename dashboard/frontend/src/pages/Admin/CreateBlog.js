@@ -1,13 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-	Button,
-	Card,
-	CardHeader,
-	Input,
-	Container,
-	Row,
-	Col,
-} from "reactstrap";
+import { Button, Card, CardHeader, Input, Container, Row, Col } from "reactstrap";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import documentEditor from "ckeditor5-custom-build";
 import "assets/css/CreateBlog.css";
@@ -17,7 +9,8 @@ import { selectUser } from "redux/slices/userSlice";
 import { useHistory, useParams } from "react-router";
 import { addBlog, updateBlog } from "api/blog";
 import { fetchSingleBlog } from "api/blog";
-import { setLoading } from "redux/slices/mainSlice";
+import Loader from "components/Loader";
+import SweetAlert from "components/SweetAlert";
 
 const CreateBlog = () => {
 	const dispatch = useDispatch(),
@@ -29,42 +22,50 @@ const CreateBlog = () => {
 		[content, setContent] = useState(""),
 		[tags, setTags] = useState([]),
 		[editorInstance, setEditorInstance] = useState(null),
-		[editingBlog, setEditingBlog] = useState(null);
+		[editingBlog, setEditingBlog] = useState(null),
+		[loading, setLoading] = useState(true),
+		[coverImage, setCoverImage] = useState("https://picsum.photos/400");
 
-	useEffect(() => {
-		dispatch(setLoading(true));
-	}, [dispatch]);
+	const [alertOpen, setAlertOpen] = useState(false),
+	[alertMsg, setAlertMsg] = useState(""),
+	[alertType, setAlertType] = useState("error");
+
+	// useEffect(() => {
+	// setLoading(true);
+	// }, [dispatch]);
 
 	useEffect(() => {
 		const setData = async () => {
 			const blog = await fetchSingleBlog({ userEmail: user?.email, blogId });
+			if (!blog || blog?.approved || !blog.isDraft) return history.replace("/blogs");
 			setEditingBlog(blog);
 			blog && editorInstance && editorInstance.setData(blog?.content || "");
 			setTags(blog?.tags || []);
 			setContent(blog?.content || "");
 			setTitle(blog?.blogTitle || "");
-			dispatch(setLoading(false));
+			setCoverImage(blog?.coverImage || "https://picsum.photos/400");
+			setLoading(false);
 		};
 		if (blogId) {
 			setData();
-		}else{
-			dispatch(setLoading(false));
+		} else {
+			setLoading(false);
 		}
-	}, [dispatch, user, blogId, editorInstance]);
+	}, [dispatch, user, blogId, editorInstance, history]);
 
 	const reset = () => {
-		if (blogId) {
+		if (editingBlog) {
 			setTags(editingBlog?.tags || []);
 			setContent(editingBlog?.content || "");
 			setTitle(editingBlog?.blogTitle || "");
-			editingBlog &&
-				editorInstance &&
-				editorInstance.setData(editingBlog?.content || "");
+			setCoverImage(editingBlog?.coverImage);
+			editingBlog && editorInstance && editorInstance.setData(editingBlog?.content || "");
 		} else {
 			setTitle("");
 			setContent("");
 			setTags([]);
 			setEditingBlog(null);
+			setCoverImage("https://picsum.photos/400");
 			editorInstance && editorInstance.setData("");
 		}
 	};
@@ -74,23 +75,26 @@ const CreateBlog = () => {
 			return (
 				title !== editingBlog?.blogTitle ||
 				content !== editingBlog?.content ||
-				tags !== editingBlog?.tags
+				tags !== editingBlog?.tags ||
+				coverImage !== editingBlog?.coverImage
 			);
 		} else {
-			return title !== "" || content !== "" || tags.length > 0;
+			return title !== "" && content !== "";
 		}
 	};
 
 	async function createBlog(draft) {
-		if (!title || !content) {
+		if (!title || !content || !coverImage) {
 			return alert("Title and Content must be mentioned !!");
 		}
 		let data = {
 			blogTitle: title,
 			userEmail: user?.email,
 			userName: user?.name,
+			coverImage: coverImage || editingBlog?.coverImage,
 			content,
 			tags,
+			approved: false,
 			isDraft: draft,
 		};
 		let res;
@@ -100,8 +104,8 @@ const CreateBlog = () => {
 				blogId: editingBlog.blogId,
 				isPublished: !editingBlog.isDraft,
 			};
-			res = await dispatch(updateBlog(data));
-		} else res = await dispatch(addBlog(data));
+			res = await updateBlog(data);
+		} else res = await addBlog(data);
 
 		// cleanup
 		if (res.status === "success") {
@@ -109,15 +113,25 @@ const CreateBlog = () => {
 			setTitle("");
 			setContent("");
 			setTags([]);
+			setCoverImage("https://picsum.photos/400");
 
 			history.replace("/blogs");
 		} else if (res.status === "failed") {
-			alert("Process Failed");
+			setAlertMsg("Process Failed");
+			setAlertType("error");
+			setAlertOpen(true);
 		}
 	}
 
 	return (
 		<Container className="mt-4" fluid="xxl">
+			{loading && <Loader />}
+			<SweetAlert
+				open={alertOpen}
+				setOpen={setAlertOpen}
+				msg={alertMsg}
+				type={alertType}
+			/>
 			<Container className="BlogContainer" fluid>
 				<Row>
 					<Col className="order-xl-1">
@@ -145,18 +159,16 @@ const CreateBlog = () => {
 												<p className="btn_txt">Cancel</p>
 											</Button>
 										)}
-										{!blogId && (
-											<Button
-												className="bx bx-save save-btn py-1 px-3"
-												type="button"
-												color="info"
-												onClick={() => createBlog(true)}
-												disabled={!hasChanged()}
-											>
-												<p className="btn_txt">Save</p>
-											</Button>
-										)}
-										{!editingBlog || editingBlog?.isDraft ? (
+										<Button
+											className="bx bx-save save-btn py-1 px-3"
+											type="button"
+											color="info"
+											onClick={() => createBlog(editingBlog ? editingBlog.isDraft : true)}
+											disabled={!hasChanged()}
+										>
+											<p className="btn_txt">Save</p>
+										</Button>
+										{(!editingBlog || editingBlog?.isDraft) && (
 											<Button
 												className="bx bxs-cloud-upload save-btn py-1 px-3"
 												type="button"
@@ -166,16 +178,6 @@ const CreateBlog = () => {
 											>
 												<p className="btn_txt">Publish</p>
 											</Button>
-										) : (
-											<Button
-												className="bx bxs-cloud-upload save-btn py-1 px-3"
-												type="button"
-												color="success"
-												onClick={() => createBlog(false)}
-												disabled={!hasChanged()}
-											>
-												<p className="btn_txt">Save Changes</p>
-											</Button>											
 										)}
 									</div>
 								</Row>
@@ -250,11 +252,8 @@ const CreateBlog = () => {
 											}}
 											onReady={(editor) => {
 												setEditorInstance(editor);
-												const toolbarContainer =
-													document.querySelector("#toolbar-container");
-												toolbarContainer.appendChild(
-													editor.ui.view.toolbar.element
-												);
+												const toolbarContainer = document.querySelector("#toolbar-container");
+												toolbarContainer.appendChild(editor.ui.view.toolbar.element);
 												console.log("Editor is ready to use!");
 											}}
 											onChange={(_, editor) => {
@@ -265,6 +264,8 @@ const CreateBlog = () => {
 									</div>
 									<div className="PostSetting">
 										<SideNav
+											coverImage={coverImage}
+											setCoverImage={setCoverImage}
 											tags={tags}
 											setTags={setTags}
 											editingBlog={editingBlog}

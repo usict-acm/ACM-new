@@ -753,7 +753,8 @@ function readResponses(){
            'formID' => $row["formID"],
            'required' => $row["required"],
            'ifCheckbox' => $row["ifCheckbox"],
-
+           'ifRadio' => $row["ifRadio"],
+           
        );
     //    if($row["ifCheckbox"]) {
     //     array_push('ifCheckbox' => $row["ifCheckbox"]);

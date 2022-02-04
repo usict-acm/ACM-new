@@ -1,6 +1,6 @@
 import BlogCard from "./BlogCard";
 
-const BlogsList = ({ blogData }) => {
+const BlogsList = ({ blogData, setFetchAgain }) => {
   if (blogData?.length === 0) {
     return (
       <div className="cont-nodata">
@@ -11,7 +11,7 @@ const BlogsList = ({ blogData }) => {
     return (
       <div className="post-component">
         {blogData.map((blog, i) => (
-          <BlogCard key={i} id="post-content" index={i} blogDetails={blog} />
+          <BlogCard key={i} id="post-content" index={i} blogDetails={blog} setFetchAgain={setFetchAgain} />
         ))}
       </div>
     );

@@ -8,49 +8,17 @@
 	?>
 	<title>USICT ACM</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" /> -->
 	<link rel="stylesheet" href="./assets/CSS/newStyle.css" />
+	<link rel="stylesheet" href="./assets/CSS/header.css">
+	<link rel="stylesheet" href="./assets/CSS/footer.css">
 </head>
 
 <body>
 	<!-- nav bar -->
-	<nav class="navbar navbar-expand-custom navbar-mainbg">
-		<div class="d-flex main-logo">
-			<a href="./"><img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm logo" /></a>
-			<div class="text-and-logo">
-				<a style="font-size: 16px; color: #000; padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto fw-bolder text-center" href="./">USICT<span class="text-primary"> ACM</span></a>
-				<a href="./"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
-			</div>
-		</div>
-		<button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="margin-right:2rem;">
-			<i class="fas fa-bars text-black"></i>
-		</button>
-		<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-			<ul class="navbar-nav ml-auto mr-5">
-				<li class="nav-item active">
-					<a class="nav-link" href="./">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./blogs.php">Blogs</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./events.php">Events</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./benefits.php">Why Join Us?</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./clubs.php">Clubs</a>
-				</li>
-				<!-- <li class="nav-item">
-					<a class="nav-link" href="./team.php">Our Team</a>
-				</li> -->
-				<li class="nav-item">
-					<a class="nav-link" href="./collab.php"> Sponsors</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
+	<?php
+	include("header.php")
+	?>
 	<!-- nav-bar end -->
 	<!-- hero Section -->
 	<section class="hero-slider hero-style">
@@ -132,10 +100,10 @@
 	</div>
 	<!-- end of about section -->
 	<!-- announcement section begins-->
-	<?php 
-    require_once "./announcement.php";
-  	?>
-	
+	<?php
+	require_once "./announcement.php";
+	?>
+
 	<!-- announcement section ends-->
 	<!--***********************blog section***************************************** -->
 	<section class="blogs">
@@ -145,7 +113,7 @@
 			<span class="fas fa-file-alt  sticker"></span>
 			<span class="far fa-bookmark sticker"></span>
 		</div>
-		<div class = "tag">
+		<div class="tag">
 			<div class="bloghead">
 				<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-blue"> Blogs</span></h2>
 			</div>
@@ -223,7 +191,7 @@
 									<div class="name">
 										<h5 class="text-center">Prof. Pravin Chandra</h5>
 										<p class="text-center">Dean, USICT</p>
-									</div>	
+									</div>
 									<img src="./assets/images/team/deanSir.jpeg" alt="">
 								</div>
 							</div>
@@ -232,7 +200,7 @@
 									<div class="name">
 										<h5 class="text-center">Dr. Rahul Johari</h5>
 										<p class="text-center">Branch Head, ACM USICT</p>
-									</div>	
+									</div>
 									<img src="./assets/images/team/rahulsir.jpg" alt="">
 								</div>
 							</div>
@@ -250,72 +218,72 @@
 									<div class="name">
 										<h5 class="text-center">Harsh Goyal</h5>
 										<p class="text-center">Chair</p>
-									</div>	
+									</div>
 									<img src="./assets/images/team/harshGoyal.png" alt="">
 								</div>
 							</div>
 
 							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">										
+								<div class="our-team-right">
 									<a class="social" href="https://www.linkedin.com/in/anuj-talwar/" target="_blank">
 										<i class="fab fa-linkedin" arial-hidden="true"></i>
 									</a>
 									<div class="name">
 										<h5 class="text-center">Anuj Talwar</h5>
 										<p class="text-center">Vice Chair</p>
-									</div>	
+									</div>
 									<img src="./assets/images/team/Anuj.jpg" alt="">
 								</div>
 							</div>
 
 							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">										
+								<div class="our-team-right">
 									<a class="social" href="https://www.linkedin.com/in/tarun-shekhawat-037091194/" target="_blank">
 										<i class="fab fa-linkedin" arial-hidden="true"></i>
 									</a>
 									<div class="name">
 										<h5 class="text-center">Tarun</h5>
 										<p class="text-center">Secretary</p>
-									</div>	
+									</div>
 									<img src="./assets/images/team/Tarun.jpg" alt="">
 								</div>
 							</div>
 
 							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">										
+								<div class="our-team-right">
 									<a class="social" href="https://www.linkedin.com/in/karan-deep/" target="_blank">
 										<i class="fab fa-linkedin" arial-hidden="true"></i>
 									</a>
 									<div class="name">
 										<h5 class="text-center">Karan Deep Singh</h5>
 										<p class="text-center">Treasurer</p>
-									</div>	
+									</div>
 									<img src="./assets/images/team/Karan.jpeg" alt="">
 								</div>
 							</div>
 
 							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">										
+								<div class="our-team-right">
 									<a class="social" href="https://www.linkedin.com/in/moulik-agrawal/" target="_blank">
 										<i class="fab fa-linkedin" arial-hidden="true"></i>
 									</a>
 									<div class="name">
 										<h5 class="text-center">Moulik Agrawal</h5>
 										<p class="text-center">Web Chair</p>
-									</div>	
+									</div>
 									<img src="./assets/images/team/Moulik.jpg" alt="">
 								</div>
 							</div>
 
 							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">										
+								<div class="our-team-right">
 									<a class="social" href="https://www.linkedin.com/in/anurag-parashar/" target="_blank">
 										<i class="fab fa-linkedin" arial-hidden="true"></i>
 									</a>
 									<div class="name">
 										<h5 class="text-center">Anurag Parashar</h5>
 										<p class="text-center">Membership Chair</p>
-									</div>	
+									</div>
 									<img src="./assets/images/team/anurag.jpg" alt="">
 								</div>
 							</div>
@@ -333,38 +301,38 @@
 		</div>
 	</section>
 	<!-- *****************************our team end************************************************** -->
-		<!-- socail bar******************************* -->
- 	<div class="social-btns tag">
-     <div class="try1">
-      <a class="btn facebook" href="https://facebook.com/acmusict" target="_blank"><i class="fa fa-facebook"></i></a>
-      <div class="write" id="wrete">
-        <h1 class="sob-heading">700</h1>
-        <p class="gratext">Facebook Followers</p>
-      </div>
-    </div>
-    <div class="try1">
-      <a class="btn twitter" href="https://linkedin.com/company/acmusict" target="_blank"><i class="fab fa fa-linkedin"></i></a>
-      <div class="write" id="wrete">
-        <h1 class="sob-heading">1000</h1>
-        <p class="gratext">LinkedIn Reach</p>
-      </div>
-    </div>
-    <div class="try1">
-      <a class="btn dribbble" href="https://instagram.com/acmusict/" target="_blank"><i class=" fa fa fa-instagram"></i></a>
-      <div class="write" id="wrete">
-        <h1 class="sob-heading">300+</h1>
-        <p class="gratext">Instagram Followers</p>
-      </div>
-    </div>
-    <div class="try1">
-      <a class="btn skype"><i class="fa fa fa-child"></i></a>
-      <div class="write" id="wrete">
-        <h1 class="sob-heading">1000+</h1>
-        <p class="gratext">Connected Students</p>
-      </div>
-    </div>
+	<!-- socail bar******************************* -->
+	<div class="social-btns tag">
+		<div class="try1">
+			<a class="btn facebook" href="https://facebook.com/acmusict" target="_blank"><i class="fa fa-facebook"></i></a>
+			<div class="write" id="wrete">
+				<h1 class="sob-heading">700</h1>
+				<p class="gratext">Facebook Followers</p>
+			</div>
+		</div>
+		<div class="try1">
+			<a class="btn twitter" href="https://linkedin.com/company/acmusict" target="_blank"><i class="fab fa fa-linkedin"></i></a>
+			<div class="write" id="wrete">
+				<h1 class="sob-heading">1000</h1>
+				<p class="gratext">LinkedIn Reach</p>
+			</div>
+		</div>
+		<div class="try1">
+			<a class="btn dribbble" href="https://instagram.com/acmusict/" target="_blank"><i class=" fa fa fa-instagram"></i></a>
+			<div class="write" id="wrete">
+				<h1 class="sob-heading">300+</h1>
+				<p class="gratext">Instagram Followers</p>
+			</div>
+		</div>
+		<div class="try1">
+			<a class="btn skype"><i class="fa fa fa-child"></i></a>
+			<div class="write" id="wrete">
+				<h1 class="sob-heading">1000+</h1>
+				<p class="gratext">Connected Students</p>
+			</div>
+		</div>
 
-  </div>
+	</div>
 	<!-- ****************************************************contact us ***************************** -->
 	<div class="dsph" id="contact">
 		<div class="d-flex justify-content-center mt-md-5">
@@ -375,7 +343,7 @@
 				<div class="closebtn">
 					<button class="btn btn-primary s-form-group contact-btn" onclick="closecontact()"><i class="fas fa-times"></i></button>
 				</div>
-				<form class="s-form" name="contact" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse" onsubmit="return validateform();" >
+				<form class="s-form" name="contact" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse" onsubmit="return validateform();">
 					<h2 class="my-4 display-4 fw-bolder text-center">Contact<span class="text-blue"> Us</span></h2>
 					<div class="row form-row">
 						<div class="form-group s-form-group col-md-5">
@@ -386,7 +354,7 @@
 						</div>
 					</div>
 					<div class="row form-row">
-					<div class="form-group s-form-group col-md-5">
+						<div class="form-group s-form-group col-md-5">
 							<input type="text" name="phone" class="form-control" placeholder="Phone No." />
 						</div>
 						<div class="form-group s-form-group col-md-5">
@@ -394,7 +362,7 @@
 						</div>
 					</div>
 					<div class="contact-msg">
-					<textarea type="text" name="message" rows="5" placeholder="Message *" class="form-control col-md-11 contact-message"></textarea>
+						<textarea type="text" name="message" rows="5" placeholder="Message *" class="form-control col-md-11 contact-message"></textarea>
 					</div>
 					<div class="row contact-msg">
 						<button type="submit" class="btn btn-primary s-form-group contact-btn col-md-3 col-sm-2">Submit</button>
@@ -407,134 +375,9 @@
 	<!-- ********************************contact_us end**************************************************** -->
 
 	<!--  footer -->
-	<footer class="footer-section">
-		<div class="container">
-			<div class="footer-cta pt-4 pb-3">
-				<div class="row justify-content-center align-items-center">
-					<div class="col-xl-4 col-md-4 mb-30">
-						<div class="single-cta justify-content-md-center">
-							<i class="fas fa-map-marker-alt my-auto" style="margin-left: 8px;"></i>
-							<div class="cta-text">
-								<h4>Find us</h4>
-								<span>Dean Office, USICT, GGSIPU Sector 16C, Dwarka, Delhi</span>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-4 col-md-4 mb-30">
-						<div class="single-cta justify-content-md-center">
-							<i class="fas fa-phone ro-nine my-auto"></i>
-							<div class="cta-text">
-								<h4>Call us</h4>
-								<span><a href="tel:011-25302702">011-25302702</a></span>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-4 col-md-4 mb-30">
-						<div class="single-cta justify-content-md-center">
-							<i class="far fa-envelope-open my-auto" style="margin-left: 5px;"></i>
-							<div class="cta-text" style="padding-left: 10px;">
-								<h4>Mail us</h4>
-								<span><a href="mailto:info@usict.acm.org" target="_blank">info@usict.acm.org</a></span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="footer-content pt-4 pb-2">
-				<div class="row">
-					<div class="col-xl-5 col-lg-5 mb-50">
-						<div class="footer-widget">
-							<div class="footer-logo text-center">
-								<a href="./">
-									<img src="./assets/images/acm1.png" class="img-primary" alt="logo" />
-									<img src="./assets/images/outstanding-website.png" class="img-secondary" alt="" />
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-3 col-md-6 mb-30">
-						<div class="footer-widget">
-							<div class="footer-widget-heading">
-								<h3>Quick Links</h3>
-							</div>
-							<ul>
-								<li>
-									<a href="http://www.ipu.ac.in/" target="_blank"><i class="fa fa-angle-right"></i> IPU-Home</a>
-								</li>
-								<li>
-									<a href="https://india.acm.org/" target="_blank"><i class="fa fa-angle-right"></i> ACM-India</a>
-								</li>
-								<li>
-									<a href="https://www.acm.org/about-acm/acm-india-council" target="_blank"><i class="fa fa-angle-right"></i> ACM-India Office Bearers</a>
-								</li>
-								<li>
-									<a href="https://amturing.acm.org/award_winners/reddy_9634208.cfm" target="_blank"><i class="fa fa-angle-right"></i> ACM Turing Award</a>
-								</li>
-								<li>
-									<a href="https://usict.acm.org/clubs.html" target="_blank"><i class="fa fa-angle-right"></i> Our Clubs</a>
-								</li>
-								<li>
-									<a href="./benefits.php#registration" target="_blank"><i class="fa fa-angle-right"></i> Join ACM</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-						<div class="footer-widget">
-							<div class="footer-widget-heading">
-								<h3>Social Links</h3>
-								<div class="social-menu">
-									<ul>
-										<li>
-											<a href="https://www.facebook.com/acmusict" target="_blank"><i class="fab fa-facebook"></i></a>
-										</li>
-										<li>
-											<a href="https://www.youtube.com/channel/UCI7her-mYrb7QM0t9S_nA_Q" target="_blank">
-												<i class="fab fa-youtube"></i>
-											</a>
-										</li>
-										<li>
-											<a href="https://www.instagram.com/acmusict/" target="_blank"><i class="fab fa-instagram"></i></a>
-										</li>
-										<li>
-											<a href="https://github.com/usict-acm/ACM-new" target="_blank"><i class="fab fa-github"></i></a>
-										</li>
-										<li>
-											<a href="#" target="_blank">
-												<i class="fab fa-discord"></i>
-											</a>
-										</li>
-										<li>
-											<a href="mailto:acmusit@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="footer-text">
-								<p>
-									The USICT ACM Student Chapter is an official student body incepted in 2019 under
-									the University School USICT, GGSIPU.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="copyright-area">
-			<div class="container">
-				<div class="row">
-					<div class="col text-center">
-						<div class="copyright-text">
-							<p>
-								&copy; Conceptualized, Designed and Developed by Office Bearers of ACM USICT chapter
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+	<?php
+	include("footer.php")
+	?>
 	<!--  footer ends -->
 	<!-- back to top -->
 	<div class="scrolltop">
@@ -547,7 +390,7 @@
 		</a>
 	</div>
 
-	
+
 
 	<!-- Swiper JS -->
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

@@ -306,9 +306,8 @@ function changeDD(count){
                     });
 
 </script>
-
 <?php
-    require_once "./config.php";
+    // require_once "./config.php";
     include_once '../blogAdmin/forms.php';
     include_once '../blogAdmin/database.php';
 
@@ -327,8 +326,6 @@ function changeDD(count){
         for($i=0;$i<sizeof($fieldName);$i++){
             $val="checkboxInput".$i;
             $valRadio="radioBtn".$i;
-            // $checkboxInput= $_POST[$val];
-            // print_r( $checkboxInput);
             $subArr=array();
             array_push($subArr,$fieldName[$i]);
             array_push($subArr,$dropDown[$i]);
@@ -338,15 +335,16 @@ function changeDD(count){
             }else{
                 array_push($subArr,0);
             }
+            if($_POST[$valRadio]){
+                $radioBtn=$_POST[$valRadio];
+                array_push($subArr,$radioBtn);
+            }
 
             if(isset($_POST[$val])){
                 $checkboxInput=$_POST[$val];
                 array_push($subArr,$checkboxInput);
             }
-            if($_POST[$valRadio]){
-                $radioBtn=$_POST[$valRadio];
-                array_push($subArr,$radioBtn);
-            }
+
             array_push($result,$subArr);
         }
         print_r($result);
