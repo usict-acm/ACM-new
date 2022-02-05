@@ -273,6 +273,33 @@
                 // checkboxArray.push(text);
                 tableData.push(text);
               }
+            } else  if (data[i].fieldType == "fileAns") {
+              // var checkboxArray = [];
+              // var count = 0;
+              // tableData.push(data[i].fieldName);
+              // var temp1 = [];
+              // var arr = (data[i].ifRadio).split(',');
+              // console.log(arr.length)
+              // for (j = 0; j < arr.length; j++) {
+              //   var field = "field" + i + j;
+              //   if ($(`#${field}`).is(':checked')) {
+              //     temp1.push($(`#${field}`).val())
+              //   } else {
+              //     count++;
+              //   }
+              // }
+              // var fieldRequired = "fieldRequiredRadio" + i;
+              // if (count == arr.length && data[i].required == 1) {
+              //   $(`#${fieldRequired}`).css('display', 'block');
+              //   setTimeout(function() {
+              //     $(".fieldCheckRadio").css('display', 'none');
+              //   }, 4000);
+              //   temp = 0;
+              // } else {
+              //   let text = temp1.join(",");
+              //   // checkboxArray.push(text);
+              //   tableData.push(text);
+              // }
             } else {
               tableData.push(data[i].fieldName);
               var field = "field" + i;

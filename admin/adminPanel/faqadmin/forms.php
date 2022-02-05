@@ -215,11 +215,9 @@ function changeDD(count){
         }
         if(strUser==="fileAns"){
             jQuery('#field'+count).html('');
-            $(".reqField"+count).val("Upload Supported Documents:");
 
             if(checkFormNameFilled!=0 && temp!=0){
                 once=1;
-                $(".reqField"+count).val("Upload Supported Documents:");
                 jQuery('#f0').html('');
             }
             

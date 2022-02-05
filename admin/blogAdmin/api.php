@@ -754,7 +754,6 @@ function readResponses(){
            'required' => $row["required"],
            'ifCheckbox' => $row["ifCheckbox"],
            'ifRadio' => $row["ifRadio"],
-           'fileYorN' => $row["fileYorN"],
            
        );
     //    if($row["ifCheckbox"]) {
