@@ -93,6 +93,9 @@
     </style>
 </head>
 <script>
+// $("#required1").attr("checked", false);
+// document.getElementById("required1").checked = false;
+
 
    function check(){
         console.log($('#required1').is(':checked'))
@@ -124,7 +127,7 @@
                                             <option value="shortAns">Short answer</option>
                                             <option value="paraAns">Paragraph</option>
                                             <option value="radioAns">Radio Btns</option>
-                                            <option value="fileUpload">File</option>
+                                            <option value="fileAns">File</option>
                                         </select>
                                     </div>
                                     <div id="required">
@@ -210,11 +213,13 @@ function changeDD(count){
             }
             
         }
-        if(strUser==="fileUpload"){
+        if(strUser==="fileAns"){
             jQuery('#field'+count).html('');
-           
+            $(".reqField"+count).val("Upload Supported Documents:");
+
             if(checkFormNameFilled!=0 && temp!=0){
                 once=1;
+                $(".reqField"+count).val("Upload Supported Documents:");
                 jQuery('#f0').html('');
             }
             
@@ -283,12 +288,12 @@ function changeDD(count){
                                                     <option value="shortAns">Short answer</option>
                                                     <option value="paraAns">Paragraph</option>
                                                     <option value="radioAns">Radio Btns</option>
-                                                    <option value="fileUpload">File</option>
+                                                    <option value="fileAns">File</option>
                                                 </select>
                                             </div>
                                             <div id="required">
                                             <label > Required?</label>
-                                            <input type="checkbox" id="required1" name="required1[]"/>
+                                            <input onChange="check();" type="checkbox" id="required1" name="required1[]" value="off"/>
                                             </div>
                                             <div id="field`+ count +`" class="form-group">
                                         </div>
@@ -317,6 +322,10 @@ function changeDD(count){
         $fieldName= $_POST['fieldName'];
         $dropDown= $_POST['dropDown'];
         $required=$_POST['required1'];
+        // print_r( $fieldName); 
+        // print_r( $dropDown); 
+        // print_r( $required); 
+        // echo gettype($required);
         // if(isset($_POST["required1"])){
         //     $required1 = true;
         // } else {
@@ -330,24 +339,24 @@ function changeDD(count){
             array_push($subArr,$fieldName[$i]);
             array_push($subArr,$dropDown[$i]);
             // array_push($subArr,$required1[$i]);
-            if($required[$i] && $required[$i] == "on"){
+            if($required[$i] == "on"){
                 array_push($subArr,1);
             }else{
                 array_push($subArr,0);
-            }
-            if($_POST[$valRadio]){
-                $radioBtn=$_POST[$valRadio];
-                array_push($subArr,$radioBtn);
             }
 
             if(isset($_POST[$val])){
                 $checkboxInput=$_POST[$val];
                 array_push($subArr,$checkboxInput);
             }
+            if($_POST[$valRadio]){
+                $radioBtn=$_POST[$valRadio];
+                array_push($subArr,$radioBtn);
+            }
 
             array_push($result,$subArr);
         }
-        print_r($result);
+        // print_r($result);
         $database = new Database();
         $db = $database->connect();
 
@@ -378,3 +387,4 @@ function changeDD(count){
 ?>
 </body>
 </html>
+
