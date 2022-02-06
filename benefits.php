@@ -386,8 +386,8 @@
                   <div class="form-group col-md-2"></div>
                   <div class="form-group col-md-2 button-center">
                     <div class="form-group">
-                      <button id="submitSingupForm" type="submit" style="display:none;"></button>
-                      <button type="button" class="btn signin" style="background-color: #0297ff; color:#fff;" onclick="validateForm()">&nbsp;Submit</button>
+                      <!-- <button id="submitSingupForm" type="submit" style="display:none;"></button> -->
+                      <button type="button" class="btn signin" onclick="validateForm()">&nbsp;Submit</button>
                     </div>
                   </div>
                 </div>

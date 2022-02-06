@@ -1416,6 +1416,20 @@ ul {
 .text-box.hover-effect:hover p {
   opacity: 1;
 }
+.signin{
+  color: white;
+  background-color:#0297ff;
+  border-color: #0297ff;
+  border-style: solid;
+  border-width: 2px;
+  font-weight: 600;
+  /* position: absolute; */
+}
+.signin:hover{
+  color: #007aff;
+  background-color: white;
+
+}
 
 /* ----------------------------------------------------------------
       Featured Boxes
