@@ -187,26 +187,31 @@ ul {
   color: #fff;
 }
 
-.social-menu ul li a:hover .fa-facebook {
-  color: #4867aa;
+.social-menu ul li a.facebook-footer:hover {
+  background-color: #4867aa;
 }
 
-.social-menu ul li a:hover .fa-youtube {
-  color: #ff0000;
+.social-menu ul li a.youtube-footer:hover {
+  background-color: #ff0000;
 }
 
-.social-menu ul li a:hover .fa-instagram {
-  color: rgba(177, 42, 176);
+.social-menu ul li a.instagram-footer:hover {
+  background: rgb(177, 42, 176);
+  background: linear-gradient(
+    200deg,
+    rgba(177, 42, 176, 1) 0%,
+    rgba(249, 125, 31, 1) 100%
+  );
 }
 
-.social-menu ul li a:hover .fa-github {
-  color: #1b1f23;
+.social-menu ul li a.github-footer:hover {
+  background-color: #1b1f23;
 }
 
-.social-menu ul li a:hover .fa-discord {
-  color: #4d60e9;
+.social-menu ul li a.discord-footer:hover {
+  background-color: #4d60e9;
 }
 
-.social-menu ul li a:hover .fa-envelope {
-  color: #c74941;
+.social-menu ul li a.mail-footer:hover {
+  background-color: #c74941;
 }
