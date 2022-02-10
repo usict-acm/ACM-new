@@ -89,32 +89,32 @@
 							<div class="social-menu">
 								<ul>
 									<li>
-										<a href="https://usict.acm.org/facebook" target="_blank"
+										<a class="facebook-footer" href="https://usict.acm.org/facebook" target="_blank"
 											><i class="fab fa-facebook"></i
 										></a>
 									</li>
 									<li>
-										<a href="https://usict.acm.org/youtube" target="_blank"
+										<a class="youtube-footer" href="https://usict.acm.org/youtube" target="_blank"
 											><i class="fab fa-youtube"></i>
 										</a>
 									</li>
 									<li>
-										<a href="https://usict.acm.org/instagram" target="_blank"
+										<a class="instagram-footer" href="https://usict.acm.org/instagram" target="_blank"
 											><i class="fab fa-instagram"></i
 										></a>
 									</li>
 									<li>
-										<a href="https://github.com/usict-acm/ACM-new" target="_blank"
+										<a class="github-footer" href="https://github.com/usict-acm/ACM-new" target="_blank"
 											><i class="fab fa-github"></i
 										></a>
 									</li>
 									<li>
-										<a href="https://usict.acm.org/discord" target="_blank">
+										<a class="discord-footer" href="https://usict.acm.org/discord" target="_blank">
 											<i class="fab fa-discord"></i>
 										</a>
 									</li>
 									<li>
-										<a href="mailto:info@usict.acm.org" 
+										<a class="mail-footer" href="mailto:info@usict.acm.org" 
 											><i class="fas fa-envelope"></i
 										></a>
 									</li>

@@ -1013,3 +1013,18 @@ background: url(../images/graph.jpeg);
           gap:50px
      }
 }
+
+.collab-btn{
+     background-color:#0297ff;
+     color: white;
+     border-color: #0297ff;
+     border-style: solid;
+     border-width: 2px;
+     font-weight: 630;
+     border-radius: 8px;
+     font-size: 1.2rem;
+}
+.collab-btn:hover{
+     background-color: white;
+    color: #0297ff;
+}

@@ -18,7 +18,7 @@
       include('header.php');
     ?>
     <!--***********************************************Banner*****************************************************************************-->
-    <div style="margin-left:10%; margin-right:10%; padding-top:3%; margin-bottom: 0%;">
+    <div class="join-us-banner">
       <section id='header'>
         <div class="pt-card row" style="background-image: url('assets/images/benefits-banner.png');">
           <div class="heading col-xl-9 col-lg-9 col-md-9 col-sm-6">
@@ -386,8 +386,8 @@
                   <div class="form-group col-md-2"></div>
                   <div class="form-group col-md-2 button-center">
                     <div class="form-group">
-                      <button id="submitSingupForm" type="submit" style="display:none;"></button>
-                      <button type="button" class="btn signin" style="background-color: #0297ff; color:#fff;" onclick="validateForm()">&nbsp;Submit</button>
+                      <!-- <button id="submitSingupForm" type="submit" style="display:none;"></button> -->
+                      <button type="button" class="btn signin" onclick="validateForm()">&nbsp;Submit</button>
                     </div>
                   </div>
                 </div>
