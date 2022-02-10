@@ -523,11 +523,7 @@ a {
      background-color: #2250fc;
      margin-top: 20px;
    }
-   .collab-btn-name{
-        color: #fff;
-        font-size: 1.2rem;
-   }
-   
+
    input::-webkit-outer-spin-button,
    input::-webkit-inner-spin-button {
      -webkit-appearance: none;
