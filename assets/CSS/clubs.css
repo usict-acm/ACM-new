@@ -12,6 +12,11 @@ body {
 	overflow-x: hidden;
 }
 
+.clubs-head{
+	background: #fff;
+	padding-top: 20px;
+}
+
 .club-container {
 	position: relative;
 }
@@ -43,6 +48,17 @@ a {
 .lheading {
 	font-size: 36px;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+	margin: 0;
+}
+  
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 @media (min-width: 300px) and (max-width: 580px) {
 	.uheading {
 		font-size: 20px;
