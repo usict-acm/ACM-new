@@ -153,8 +153,8 @@
       <!-- <h2 class="display-4 font-weight-bold my-3">Recent Blogs</h2> -->
       <div class="row justify-content-center" id="threeBlogsRow"></div>
       <a href="./collab.php">
-        <button class="btn meet-us" style="background-color:#2250fc; margin-top: 20px; ">
-          <span style="color:#fff; font-size: 1.2rem">COLLABORATIONS</span>
+        <button class="btn meet-us">
+          <span class="collab-btn-name">COLLABORATIONS</span>
         </button>
       </a>
     </div>    
@@ -824,7 +824,7 @@
 					<button class="btn btn-primary s-form-group contact-btn" onclick="closecontact()"><i class="fas fa-times"></i></button>
 				</div>
 				<form class="s-form" name="contact" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse" onsubmit="return validateform();" >
-					<h2 class="my-4 display-4 fw-bolder text-center" style="font-weight:bolder;">Contact<span class="text-blue"> Us</span></h2>
+					<h2 class="my-4 display-4 fw-bolder text-center">Contact<span class="text-blue"> Us</span></h2>
 					<div class="row form-row">
 						<div class="form-group s-form-group col-md-5">
 							<input type="text" name="name" class="form-control" placeholder="Name *" />
@@ -837,17 +837,6 @@
 					<div class="form-group s-form-group col-md-5">
 							<input type="number" name="phone" class="form-control" placeholder="Phone No." pattern="[0-9]+"/>
 						</div>
-                              <style>
-                       input::-webkit-outer-spin-button,
-                       input::-webkit-inner-spin-button {
-                        -webkit-appearance: none;
-                       margin: 0;
-                      }
-  
-                        input[type=number] {
-                         -moz-appearance: textfield;
-                         }
-                  </style>
 						<div class="form-group s-form-group col-md-5">
 							<input type="text" name="college" class="form-control" placeholder="College/ Organization" />
 						</div>
