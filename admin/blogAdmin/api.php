@@ -535,7 +535,6 @@ function postAnnouncement(){
 
     $filename = $file['name'];
     $filetemppath= $file['tmp_name'];
-
     $fileext = explode('.',$filename);
     $filecheck = strtolower(end($fileext));
 
@@ -829,6 +828,20 @@ function dataForm(){
     $val = join("_",$value);
     $form->saveDataResponsesInTable($val,$txtTitle);
 }
+function fileupload(){
+    // $uploadLocation = '../../upload/announcements/'.$filename;
+    $id = $_POST["id"];
+    echo $id;
+    $filename = $_FILES["file"]["name"];
+    $filetemppath= $_FILES["file"]['tmp_name'];
+    $fileerror = $_FILES["file"]["error"];
+    echo $filename;
+    echo $filetemppath;
+    echo $fileerror;
+    // $destinationfile = './upload/announcements/'.$filename;
+    $uploadLocation = '../../forms/responsesfile/'.$id.'_'.$filename;
+    move_uploaded_file($filetemppath,$uploadLocation);  
+}
 
 $q = $_GET['q'];
 switch ($q) {
@@ -885,6 +898,9 @@ switch ($q) {
         break;
     case 'dataForm':
         dataForm();
+        break;
+    case 'fileupload':
+        fileupload();
         break;
     case 'HardFetchResponses':
         testResponses();

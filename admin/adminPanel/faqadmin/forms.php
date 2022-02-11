@@ -131,9 +131,11 @@
                                         </select>
                                     </div>
                                     <div id="required">
-                                        <label > Required?</label>
-                                        <input onChange="check();" type="checkbox" id="required1" name="required1[]" />                                    
-                                    </div>
+                                            <label > Required?</label>
+                                            <input onChange="check();" type="radio"  name="required0" value="on"/>
+                                            <label >NOT Required?</label>
+                                            <input onChange="check();" type="radio" name="required0" value="off"/>
+                                            </div>
                                 <div id="field0" class="form-group">
                                 </div>
                             </div>
@@ -291,7 +293,9 @@ function changeDD(count){
                                             </div>
                                             <div id="required">
                                             <label > Required?</label>
-                                            <input onChange="check();" type="checkbox" id="required1" name="required1[]" value="off"/>
+                                            <input onChange="check();" type="radio"  name="required`+count+`" value="on"/>
+                                            <label >NOT Required?</label>
+                                            <input onChange="check();" type="radio"  name="required`+count+`" value="off"/>
                                             </div>
                                             <div id="field`+ count +`" class="form-group">
                                         </div>
@@ -319,7 +323,8 @@ function changeDD(count){
         array_push($result,$_POST["formNameMain"]);
         $fieldName= $_POST['fieldName'];
         $dropDown= $_POST['dropDown'];
-        $required=$_POST['required1'];
+        
+        
         // print_r( $fieldName); 
         // print_r( $dropDown); 
         // print_r( $required); 
@@ -337,7 +342,9 @@ function changeDD(count){
             array_push($subArr,$fieldName[$i]);
             array_push($subArr,$dropDown[$i]);
             // array_push($subArr,$required1[$i]);
-            if($required[$i] == "on"){
+            $requiredName = "required".$i;
+            $required=$_POST[$requiredName];
+            if($required == "on"){
                 array_push($subArr,1);
             }else{
                 array_push($subArr,0);
@@ -354,7 +361,7 @@ function changeDD(count){
 
             array_push($result,$subArr);
         }
-        // print_r($result);
+        print_r($result);
         $database = new Database();
         $db = $database->connect();
 
