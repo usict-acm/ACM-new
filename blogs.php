@@ -15,10 +15,21 @@
       $currentPage = 'blogs';
       include('header.php');
     ?>
+
+    <!-- ***********************************************Blog-Banner************************************************ -->
+    <div class="blog-banner">
+      <section id='header-blog'>
+        <div class="pt-card-blog row">
+          <div class="heading col-xl-9 col-lg-9 col-md-9 col-sm-6">
+            <h2><span class="uheading-blog">BLOGS</span></h2>
+          </div>
+        </div>
+      </section>
+    </div>
+
         <!-- ==============================================header Three Blogs========================================== -->
     <section class="blog-header">
       <div class="container mt-4">
-        <h1 class="blog-heading">BLOGS</h1>
         <div class="row" id="row2"></div>
       </div>
     </section>
