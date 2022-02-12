@@ -6,15 +6,17 @@ header('Content-Type: application/json');
     include_once './posts.php';
     include_once '../../events/eventPost.php';
     include_once './forms.php';
- 
 
-    $method = $_SERVER['REQUEST_METHOD'];
-    function read(){
-         // Instantiate DB & connect
-        $database = new Database();
-        $db = $database->connect();
-        // Instantiate blog post object
-        $post = new Post($db);
+include_once '../../mail.php';
+
+$method = $_SERVER['REQUEST_METHOD'];
+function read()
+{
+    // Instantiate DB & connect
+    $database = new Database();
+    $db = $database->connect();
+    // Instantiate blog post object
+    $post = new Post($db);
 
     $limit = 10;
     $page = isset($_GET['page']) ? $_GET["page"] : 1;
@@ -37,14 +39,14 @@ header('Content-Type: application/json');
 
         while ($row = $result->fetch_assoc()) {
             $post_item = array(
-                'Sno' => $row["Sno"],
-                'Title' => $row["Title"],
-                'Author' => $row["Author"],
-                'Content' => $row["Content"],
-                'Category' => $row["Category"],
-                'Event' => $row["Event"],
-                'Image' => $row["Image"],
-                'Date' => $row["Date"],
+                'Sno' => $row["blogId"],
+                'Title' => $row["blogTitle"],
+                'Author' => $row["userName"],
+                'Content' => $row["content"],
+                'Category' => unserialize($row["tags"]),
+                // 'Event' => $row["Event"],
+                'Image' => $row["coverImage"],
+                'Date' => $row["published"],
             );
             // Push to "data"
             array_push($posts_arr, $post_item);
@@ -124,8 +126,8 @@ function showCategory()
                 'Author' => $row["Author"],
                 'Content' => $row["Content"],
                 'Category' => $row["Category"],
-                'Event' => $row["Event"],
-                'Image' => $row["Image"],
+                // 'Event' => $row["Event"],
+                'Image' => $row["coverImage"],
                 'Date' => $row["Date"],
             );
             // Push to "data"
@@ -161,14 +163,14 @@ function read_home()
 
         while ($row = $result->fetch_assoc()) {
             $post_item = array(
-                'Sno' => $row["Sno"],
-                'Title' => $row["Title"],
-                'Author' => $row["Author"],
-                'Content' => $row["Content"],
-                'Category' => $row["Category"],
-                'Event' => $row["Event"],
-                'Image' => $row["Image"],
-                'Date' => $row["Date"],
+                'Sno' => $row["blogId"],
+                'Title' => $row["blogTitle"],
+                'Author' => $row["userName"],
+                'Content' => $row["content"],
+                'Category' => unserialize($row["tags"]),
+                // 'Event' => $row["Event"],
+                'Image' => $row["coverImage"],
+                'Date' => $row["published"],
             );
             // Push to "data"
             array_push($posts_arr, $post_item);
@@ -190,7 +192,7 @@ function read_one()
     $database = new Database();
     $db = $database->connect();
     $id = $_GET['id'];
-    
+
     // echo $db;
 
     // Instantiate blog post object
@@ -206,14 +208,14 @@ function read_one()
 
         while ($row = $result->fetch_assoc()) {
             $post_item = array(
-                'Sno' => $row["Sno"],
-                'Title' => $row["Title"],
-                'Author' => $row["Author"],
-                'Content' => $row["Content"],
-                'Category' => $row["Category"],
-                'Event' => $row["Event"],
-                'Image' => $row["Image"],
-                'Date' => $row["Date"],
+                'Sno' => $row["blogId"],
+                'Title' => $row["blogTitle"],
+                'Author' => $row["userName"],
+                'Content' => $row["content"],
+                'Category' => unserialize($row["tags"]),
+                // 'Event' => $row["Event"],
+                'Image' => $row["coverImage"],
+                'Date' => $row["published"],
             );
             // Push to "data"
             array_push($posts_arr, $post_item);
@@ -274,7 +276,7 @@ function postblog()
         $content = $_POST['content'];
         $event = $_POST['event'];
         $file = $_FILES['file'];
-
+        $approved = 1;
         print_r($file);
 
         $filename = $file['name'];
@@ -291,7 +293,7 @@ function postblog()
             $uploadLocation = '../../upload/blogs/' . $filename;
             move_uploaded_file($filetemppath, $uploadLocation);
 
-            $sql = "INSERT INTO `blog` (`Title`, `Author`, `Content`, `Category`, `Event`, `Image`, `Date`) VALUES ('$title', '$author', '$content', '$category','$event', '$destinationfile', current_timestamp());";
+            $sql = "INSERT INTO `blogs` (`blogTitle`, `userName`, `content`, `published`, `approved`) VALUES ('$title', '$author', '$content', current_timestamp(), '$approved');";
             if ($db->query($sql) == true) {
                 echo '<script type="text/javascript">';
                 echo ' alert("Ho Gaya submit, ja aram kar")';
@@ -305,8 +307,9 @@ function postblog()
             echo '</script>';
         }
     }
-   };
-   function yearWiseEvent1(){
+};
+function yearWiseEvent1()
+{
     // include_once '../../events/eventPost.php';
     //   echo "checing";
     // Instantiate DB & connect
@@ -316,115 +319,167 @@ function postblog()
     // echo "check2";
     // echo $db;
     // echo "checking";
-  // Instantiate blog post object
-   $post = new PostEvent($db);
-//    echo "check3";
-  
-   // Blog post query
-   $result = $post->eventFolder();
-//    echo "check4";
-// var_dump($result);
-   
-   // Check if any posts
-   if($result) {
+    // Instantiate blog post object
+    $post = new PostEvent($db);
+    //    echo "check3";
+
+    // Blog post query
+    $result = $post->eventFolder();
+    //    echo "check4";
+    // var_dump($result);
+
+    // Check if any posts
+    if ($result) {
+
+        // Post array
+        $posts_arr = array();
+
+        while ($row = $result->fetch_assoc()) {
+            //    echo $row;
+            $post_item = array(
+                'sno' => $row["sno"],
+                'year' => $row["year"],
+                'numberOfEvents' => $row["numberOfEvents"],
+                'heading' => $row["heading"],
+                'more' => $row["more"],
+            );
+            // Push to "data"
+            array_push($posts_arr, $post_item);
+        }
+
+        // Turn to JSON & output
+        echo json_encode($posts_arr);
+        //    echo "5";
+
+    } else {
+        // No Posts
+        echo json_encode(
+            array('message' => 'No Posts Found')
+        );
+    }
+};
+
+function approveRequest()
+{
+    $database = new Database();
+    $db = $database->connect();
+    $id = $_GET["Id"];
+    $sql = "UPDATE `blogs` SET approved = '1' WHERE blogId='" . $id . "'";    
+
+    // Instantiate blog post object
+    $post = new Post($db);
+    // Blog post query
+    $result = $post->readOne($id);
+    $blogData = $result->fetch_assoc();
+
+    if ($db->query($sql) == true) {
+        blogApprovedMail($blogData["userEmail"], $blogData["blogTitle"], $blogData["blogId"]);
+        echo json_encode(
+            array('message' => 'Form has been submitted')
+        );
+    } else {
+        echo json_encode(
+            array('message' => 'Internal Server Error. Try Again')
+        );
+    }
+}
+
+function rejectRequest()
+{
+    $database = new Database();
+    $db = $database->connect();
+    $id = $_GET["Id"];
+    $sql = "UPDATE `blogs` SET approved = '0',isDraft='1' WHERE blogId='" . $id . "'";
+
+    // Instantiate blog post object
+    $post = new Post($db);
+    // Blog post query
+    $result = $post->readOne($id);
+    $blogData = $result->fetch_assoc();
     
-   // Post array
-   $posts_arr = array();
+    if ($db->query($sql) == true) {
+        blogRejectedMail($blogData["userEmail"], $blogData["blogTitle"], $blogData["blogId"]);
+        echo json_encode(
+            array('message' => 'Form has been submitted')
+        );
+    } else {
+        echo json_encode(
+            array('message' => 'Internal Server Error. Try Again')
+        );
+    }
+}
 
-   while($row=$result->fetch_assoc()){
-    //    echo $row;
-       $post_item = array(
-           'sno' => $row["sno"],
-           'year' => $row["year"],
-           'numberOfEvents' => $row["numberOfEvents"],
-           'heading' => $row["heading"],
-           'more' => $row["more"],
-       );
-           // Push to "data"
-           array_push($posts_arr, $post_item);
-   }
-
-   // Turn to JSON & output
-   echo json_encode($posts_arr);
-//    echo "5";
-
-   } else {
-   // No Posts
-   echo json_encode(
-       array('message' => 'No Posts Found')
-   );
-   }
-};
-function readEvents(){
-   include_once '../../events/eventPost.php';
+function readEvents()
+{
+    include_once '../../events/eventPost.php';
     // Instantiate DB & connect
-   $database = new Database();
-   $db = $database->connect();
-// echo $db;
-  // Instantiate blog post object
-   $post = new PostEvent($db);
+    $database = new Database();
+    $db = $database->connect();
+    // echo $db;
+    // Instantiate blog post object
+    $post = new PostEvent($db);
 
-//    echo $year;
-// echo "helllo";
-   $year = $_GET['year'];
-   $limit = 7;
-   $page = isset($_GET['page']) ? $_GET["page"] : 1;
-//    echo $page;
-   $start = ($page - 1) * $limit;
-   // Blog post query
-   $result = $post->readYearEvent($year,$start,$limit);
-   $countYear = $post->countEventsPerYear($year);
-   foreach ($countYear as $key => $item) {
-       $count = $item;
-   }
+    //    echo $year;
+    // echo "helllo";
+    $year = $_GET['year'];
+    $limit = 7;
+    $page = isset($_GET['page']) ? $_GET["page"] : 1;
+    //    echo $page;
+    $start = ($page - 1) * $limit;
+    // Blog post query
+    $result = $post->readYearEvent($year, $start, $limit);
+    $countYear = $post->countEventsPerYear($year);
+    foreach ($countYear as $key => $item) {
+        $count = $item;
+    }
 
-   $pages = ceil($count/$limit);
+    $pages = ceil($count / $limit);
 
-   $numRows = mysqli_num_rows($result);
+    $numRows = mysqli_num_rows($result);
     // echo $numRows;
-   // Check if any posts
-   if($result) {
+    // Check if any posts
+    if ($result) {
 
-   // Post array
-   $posts_arr = array();
-   $multi_array = array();
+        // Post array
+        $posts_arr = array();
+        $multi_array = array();
 
-   while($row=$result->fetch_assoc()){
-       $post_item = array(
-           'sno' => $row["sno"],
-           'name' => $row["name"],
-           'description' => $row["description"],
-           'button2Text' => $row["button2Text"],
-           'startDate' => $row["startDate"],
-           'endDate' => $row["endDate"],
-           'button1Text' => $row["button1Text"],
-           'button1Link' => $row["button1Link"],
-           'button2Link' => $row["button2Link"],
-           'partners' => $row["partners"],
-           'speakers' => $row["speakers"],
-           'poster' => $row["poster"],
-           'year' => $row["year"],
-           'time' => $row["time"],
-       );
-           // Push to "data"
-           array_push($posts_arr, $post_item);
-   }
+        while ($row = $result->fetch_assoc()) {
+            $post_item = array(
+                'sno' => $row["sno"],
+                'name' => $row["name"],
+                'description' => $row["description"],
+                'button2Text' => $row["button2Text"],
+                'startDate' => $row["startDate"],
+                'endDate' => $row["endDate"],
+                'button1Text' => $row["button1Text"],
+                'button1Link' => $row["button1Link"],
+                'button2Link' => $row["button2Link"],
+                'partners' => $row["partners"],
+                'speakers' => $row["speakers"],
+                'poster' => $row["poster"],
+                'year' => $row["year"],
+                'time' => $row["time"],
+            );
+            // Push to "data"
+            array_push($posts_arr, $post_item);
+        }
 
-   array_push($multi_array,$posts_arr);
-   array_push($multi_array,$count);
-   array_push($multi_array,$pages);
-   // Turn to JSON & output
-   echo json_encode($multi_array);
-
-   } else {
-   // No Posts
-   echo json_encode(
-       array('message' => 'No Posts Found')
-   );
-   }
+        array_push($multi_array, $posts_arr);
+        array_push($multi_array, $count);
+        array_push($multi_array, $pages);
+        // Turn to JSON & output
+        echo json_encode($multi_array);
+    } else {
+        // No Posts
+        echo json_encode(
+            array('message' => 'No Posts Found')
+        );
+    }
 };
 
-function carouselFunctionAPI(){
+function carouselFunctionAPI()
+{
     include_once '../../events/eventPost.php';
     // echo "1";
     // Instantiate DB & connect
@@ -436,7 +491,7 @@ function carouselFunctionAPI(){
     // Instantiate blog post object
     $post = new PostEvent($db);
     // echo "4";
-    
+
     $numEvents = $post->countEvents();
 
     foreach ($numEvents as $key => $item) {
@@ -446,49 +501,49 @@ function carouselFunctionAPI(){
     // var_dump($count);
     // echo sizeof($count);
 
-    if(sizeof($count==1)){
+    if (sizeof($count == 1)) {
         // echo "dfgh";
         $result = $post->carouselquerryOne();
-    }else{
+    } else {
         $result = $post->carouselquerry();
     }
     // echo "5";
 
-   // Check if any posts
-if($result) {
+    // Check if any posts
+    if ($result) {
 
-   // Post array
-   $posts_arr = array();
+        // Post array
+        $posts_arr = array();
 
-   while($row=$result->fetch_assoc()){
-       $post_item = array(
-           'poster' => $row["poster"],
-       );
-           // Push to "data"
-           array_push($posts_arr, $post_item);
-   }
+        while ($row = $result->fetch_assoc()) {
+            $post_item = array(
+                'poster' => $row["poster"],
+            );
+            // Push to "data"
+            array_push($posts_arr, $post_item);
+        }
 
-   // Turn to JSON & output
-   echo json_encode($posts_arr);
-
-   } else {
-   // No Posts
-   echo json_encode(
-       array('message' => 'No Posts Found')
-   );
-   }
+        // Turn to JSON & output
+        echo json_encode($posts_arr);
+    } else {
+        // No Posts
+        echo json_encode(
+            array('message' => 'No Posts Found')
+        );
+    }
 };
 
-function readAllAnnouncements(){
+function readAllAnnouncements()
+{
     $database = new Database();
     $db = $database->connect();
     $announcement = new Announcement($db);
 
     $result = $announcement->getAnnouncements();
 
-    if($result){
+    if ($result) {
         $announcements_arr = array();
-        while($row=$result->fetch_assoc()){
+        while ($row = $result->fetch_assoc()) {
             $announcement_item = array(
                 'sno' => $row["sno"],
                 'name' => $row["name"],
@@ -505,12 +560,13 @@ function readAllAnnouncements(){
 
             );
             array_push($announcements_arr, $announcement_item);
-        } 
+        }
         echo json_encode($announcements_arr);
     }
 }
 
-function postAnnouncement(){
+function postAnnouncement()
+{
     $database = new Database();
     $db = $database->connect();
     $txtTitle = $_POST["name"];
@@ -527,7 +583,7 @@ function postAnnouncement(){
     $txtTime = $_POST["time"];
     $file = isset($_FILES['poster']) ? $_FILES['poster'] : false;
 
-    if(!$file){
+    if (!$file) {
         echo json_encode(
             array('message' => 'Insert the image')
         );
@@ -538,24 +594,24 @@ function postAnnouncement(){
     $fileext = explode('.',$filename);
     $filecheck = strtolower(end($fileext));
 
-    $fileextstored = array('png','jpg','jpeg');
-    
-    if(in_array($filecheck,$fileextstored)){
-        $destinationfile = './upload/announcements/'.$filename;
-        $uploadLocation = '../../upload/announcements/'.$filename;
-        move_uploaded_file($filetemppath,$uploadLocation);
+    $fileextstored = array('png', 'jpg', 'jpeg');
+
+    if (in_array($filecheck, $fileextstored)) {
+        $destinationfile = './upload/announcements/' . $filename;
+        $uploadLocation = '../../upload/announcements/' . $filename;
+        move_uploaded_file($filetemppath, $uploadLocation);
 
         $sql = "INSERT INTO `event` (`sno`, `name`, `description`, `startDate`, `endDate` , `button1Text`, `button1Link`, `button2Text`, `button2Link` , `partners` , `speakers` , `poster` , `year` , `time`) VALUES ('0', '$txtTitle', '$txtDescription','$txtStartdate','$txtEnddate','$txtButton1Text', '$txtButton1Link', '$txtButton2Text', '$txtButton2Link', '$txtPartners','$txtSpeakers', '$destinationfile', '$txtYear', '$txtTime');";
-        if($db->query($sql) == true){
+        if ($db->query($sql) == true) {
             echo json_encode(
                 array('message' => 'Form has been submitted')
-            );       
-        } else{
+            );
+        } else {
             echo json_encode(
                 array('message' => 'Internal Server Error. Try Again')
             );
         }
-    } else{
+    } else {
         echo json_encode(
             array('message' => 'Insert the image')
         );
@@ -601,52 +657,53 @@ function postImage()
     }
 };
 
-function getForms(){
+function getForms()
+{
     // Instantiate DB & connect
-   $database = new Database();
-   $db = $database->connect();
-   // Instantiate blog post object
-   $post = new Form($db);
+    $database = new Database();
+    $db = $database->connect();
+    // Instantiate blog post object
+    $post = new Form($db);
 
-$limit = 10;
-$page = isset($_GET['page']) ? $_GET["page"] : 1;
-$start = ($page - 1) * $limit;
+    $limit = 10;
+    $page = isset($_GET['page']) ? $_GET["page"] : 1;
+    $start = ($page - 1) * $limit;
 
-// Blog post query
-$result = $post->read($start, $limit);
-$countForms = $post->countForms();
-foreach ($countForms as $key => $item) {
-   $count = $item;
-}
-$pages = ceil($count / $limit);
-// echo $pages;
+    // Blog post query
+    $result = $post->read($start, $limit);
+    $countForms = $post->countForms();
+    foreach ($countForms as $key => $item) {
+        $count = $item;
+    }
+    $pages = ceil($count / $limit);
+    // echo $pages;
 
-// Check if any posts
-if ($result) {
-   // Post array
-   $posts_arr = array();
-   $multi_array_posts = array();
+    // Check if any posts
+    if ($result) {
+        // Post array
+        $posts_arr = array();
+        $multi_array_posts = array();
 
-   while ($row = $result->fetch_assoc()) {
-       $post_item = array(
-           'formID' => $row["Id"],
-           'formName' => $row["name"],
-       );
-       // Push to "data"
-       array_push($posts_arr, $post_item);
-   }
+        while ($row = $result->fetch_assoc()) {
+            $post_item = array(
+                'formID' => $row["Id"],
+                'formName' => $row["name"],
+            );
+            // Push to "data"
+            array_push($posts_arr, $post_item);
+        }
 
-   array_push($multi_array_posts, $posts_arr);
-   array_push($multi_array_posts, $pages);
+        array_push($multi_array_posts, $posts_arr);
+        array_push($multi_array_posts, $pages);
 
-   // Turn to JSON & output
-   echo json_encode($multi_array_posts);
-   // echo json_encode($pages);
+        // Turn to JSON & output
+        echo json_encode($multi_array_posts);
+        // echo json_encode($pages);
 
-} else {
-   // No Posts
-   echo json_encode(array('message' => 'No Posts Found'));
-}
+    } else {
+        // No Posts
+        echo json_encode(array('message' => 'No Posts Found'));
+    }
 };
 
 
@@ -838,23 +895,9 @@ function fileupload(){
     echo $filename;
     echo $filetemppath;
     echo $fileerror;
-
-    // $fileext = explode('.', $filename);
-    // $filecheck = strtolower(end($fileext));
-    // var_dump($filecheck);
-
-    // $fileextstored = array('png', 'jpg', 'jpeg');
-
-    // if (in_array($filecheck, $fileextstored)) {
-        // $destinationfile = './upload/announcements/'.$filename;
+    
         $uploadLocation = '../../forms/responsesfile/'.$id.'_'.$filename;
         move_uploaded_file($filetemppath,$uploadLocation);
-    
-    // } else {
-    //     echo '<script type="text/javascript">';
-    //     echo ' alert("Image submit karo sir")';
-    //     echo '</script>';
-    // }
 }
 
 $q = $_GET['q'];
@@ -904,6 +947,12 @@ switch ($q) {
     case 'readResponses':
         readResponses();
         break;
+    case 'approveRequest':
+        approveRequest();
+        break;
+    case 'rejectRequest':
+        rejectRequest();
+        break;
     case 'fields':
         getFields();
         break;
@@ -922,4 +971,3 @@ switch ($q) {
     default:
         echo "Invalid Query";
 }
-?>

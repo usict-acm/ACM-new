@@ -104,7 +104,7 @@
                                       </div>`;
             if (data[i].required == 1) {
               divTag.innerHTML += `<div class = "form-group">
-                                      <label for="myfile">Select a file:</label><br/>
+                                      <label for="myfile">Select a file: *</label><br/>
                                       <input type="file" id="field${i}" name="myfile" class="button" required><br>
                                     </div><br>`;
             } else {
@@ -297,19 +297,6 @@
               var input = document.getElementById("field"+i);
               file = input.files[0];
 
-              var extensions = ["jpg", "jpeg", "png" , "pdf"];  
-
-              console.log("fileeeeee",file.name);
-
-              // let extension = (file.name).split('.').pop();
-              var extension = file.name.replace(/.*\./, '').toLowerCase();
-              console.log("ext",extension);
-
-              if (extensions.indexOf(extension) < 0) {  // Wasn't found
-                  done =0;
-                  alert("Insert only .jpg , .jpeg , .png ");
-              }
-
 
               formData.append("file", file);
               formData.append("id", data[i].formID);
@@ -323,6 +310,20 @@
               console.log($(`#${field}`).val() );
               if($(`#${field}`).val()!= ""){
               tableData.push((`/forms/responsesfile/${data[i].formID}_${file.name}`));
+
+              var extensions = ["jpg", "jpeg", "png" , "pdf"];  
+
+              console.log("fileeeeee",file.name);
+
+              // let extension = (file.name).split('.').pop();
+              var extension = file.name.replace(/.*\./, '').toLowerCase();
+              console.log("ext",extension);
+
+              if (extensions.indexOf(extension) < 0) {  // Wasn't found
+                  done =0;
+                  alert("Insert only .jpg , .jpeg , .png ");
+              }
+
               $.ajax({
                 type: "POST",
                 url: "../admin/blogAdmin/api.php/?q=fileupload",
