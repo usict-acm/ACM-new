@@ -838,9 +838,23 @@ function fileupload(){
     echo $filename;
     echo $filetemppath;
     echo $fileerror;
-    // $destinationfile = './upload/announcements/'.$filename;
-    $uploadLocation = '../../forms/responsesfile/'.$id.'_'.$filename;
-    move_uploaded_file($filetemppath,$uploadLocation);  
+
+    // $fileext = explode('.', $filename);
+    // $filecheck = strtolower(end($fileext));
+    // var_dump($filecheck);
+
+    // $fileextstored = array('png', 'jpg', 'jpeg');
+
+    // if (in_array($filecheck, $fileextstored)) {
+        // $destinationfile = './upload/announcements/'.$filename;
+        $uploadLocation = '../../forms/responsesfile/'.$id.'_'.$filename;
+        move_uploaded_file($filetemppath,$uploadLocation);
+    
+    // } else {
+    //     echo '<script type="text/javascript">';
+    //     echo ' alert("Image submit karo sir")';
+    //     echo '</script>';
+    // }
 }
 
 $q = $_GET['q'];
