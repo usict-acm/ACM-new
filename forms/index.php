@@ -271,7 +271,6 @@
               }
             } else if (data[i].fieldType == "fileAns") {
               tableData.push(data[i].fieldName)
-              console.log(data[i])
               var formData = new FormData();
               var field = "field" + i;
               var fieldRequired = "fieldRequired" + i;
@@ -289,7 +288,8 @@
                 }, 4000);
                 temp = 0;
               }
-              if($(`#${field}`).val() != ""){
+              console.log($(`#${field}`).val() );
+              if($(`#${field}`).val()!= ""){
               tableData.push((`./forms/responsesfile/${data[i].formID}_${file.name}`));
               $.ajax({
                 type: "POST",
@@ -362,12 +362,12 @@
               data: {
                 text1: JSON.stringify(res)
               },
-              success: function(data) {
-                window.location.replace('./thankYou/index.php')
-              },
-              error: function(xhr, status, error) {
-                window.location.replace('./thankYou/index.php')
-              },
+              // success: function(data) {
+              //   window.location.replace('./thankYou/index.php')
+              // },
+              // error: function(xhr, status, error) {
+              //   window.location.replace('./thankYou/index.php')
+              // },
             });
           }
 
