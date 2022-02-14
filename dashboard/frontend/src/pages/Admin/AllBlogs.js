@@ -15,8 +15,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "redux/slices/userSlice";
 import { fetchUserBlogs } from "api/blog";
 import "assets/css/Blog.css";
-import { setLoading } from "redux/slices/mainSlice";
 import { useHistory } from "react-router";
+import Loader from "components/Loader";
 
 export default function AllBlogs() {
 	const history = useHistory(),
@@ -29,16 +29,17 @@ export default function AllBlogs() {
 		// 2 -> waiting approval
 		[searchQuery, setSearchQuery] = useState(""),
 		[filterData, setFilterData] = useState([]),
-		[fetchAgain, setFetchAgain] = useState(false);
+		[fetchAgain, setFetchAgain] = useState(false),
+		[loading, setLoading] = useState(true);
 
 	useEffect(() => {
 		const fetchData = async () => {
-			dispatch(setLoading(true));
+			setLoading(true);
 			const allBlogs = await fetchUserBlogs({ userEmail: user?.email });
 			if (allBlogs) {
 				setBlogs(allBlogs);
-				dispatch(setLoading(false));
-			} else dispatch(setLoading(false));
+				setLoading(false);
+			} else setLoading(false);
 		};
 		fetchData();
 		return () => {
@@ -63,7 +64,7 @@ export default function AllBlogs() {
 		});
 	}, [blogs, type, searchQuery]);
 
-	return (
+	return loading ? <Loader /> : (
 		<Container className="BlogContainer mt-4" fluid>
 			<Row className="m-0 p-0">
 				<Col className="order-xl-1 p-0">

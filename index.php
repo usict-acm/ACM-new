@@ -165,9 +165,9 @@
 							row.Sno +
 							')" class="b-button" style="text-decoration:none; cursor:pointer; font-size: 14px;padding: 12px; margin-top:5px">Read Blog <i class="fas fa-long-arrow-alt-right"></i></a></span>\
 				</div>\
-				<img src="./' +
+				<img src="' +
 							row.Image +
-							'" class="blog-img"/>\
+							'" class="blog-img" style="object-fit:contain;"/>\
 			</div>\
 			<div>';
 					}
