@@ -1,43 +1,49 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { useParams } from "react-router";
 import DetailSidebar from "components/Events/EventDetails/DetailSideBar";
 import "../../../assets/css/events/eventDetails.css";
 import { fetchSingleEvent } from "api/event";
 import ReactHtmlParser from "react-html-parser";
-import { useDispatch } from "react-redux";
-import { setLoading } from "redux/slices/mainSlice";
+import Loader from "components/Loader";
 
 export default function EventDetails() {
-	const { eventId } = useParams();
-	const dispatch = useDispatch();
-	const [event, setEvent] = React.useState({});
+	const { eventId } = useParams(),
+		[event, setEvent] = useState({}),
+		[localLoading, setLocalLoading] = useState(true);
 
 	useEffect(() => {
-		const fetchData = async () => {
-			dispatch(setLoading(true));
-			const event = await fetchSingleEvent(eventId);
-			if (event) {
-				setEvent(event);
-				dispatch(setLoading(false));
-			}else{
-				dispatch(setLoading(false));
+		const fetchData = new Promise(async (resolve, reject) => {
+			setLocalLoading(true);
+			const e = await fetchSingleEvent(eventId);
+			if (e) {
+				resolve(e);
+			} else {
+				reject();
 			}
-		};
-		fetchData();
-	}, [dispatch, eventId]);
+		});
+		fetchData
+			.then((e) => {
+				setEvent(e);
+			})
+			.catch(() => {})
+			.finally(() => setLocalLoading(false));
 
-	return (
+		return () => {
+			setEvent({});
+		};
+	}, [eventId]);
+
+	return localLoading ? (
+		<Loader />
+	) : (
 		<Container className="px-5 mt-4 eventDetails__content" fluid="xs">
 			<Container fluid="xs">
 				<Row className="m-0">
 					<Col lg="6" className="px-0 eventDetails__imageCol bg-white shadow">
 						<img
 							className="eventImage"
-							src={
-								event?.poster &&
-								"https://usict.acm.org" + event?.poster?.slice(1)
-							}
+							src={event?.poster && "https://usict.acm.org" + event?.poster?.slice(1)}
 							alt="event_poster"
 						/>
 					</Col>
@@ -58,14 +64,14 @@ export default function EventDetails() {
 					<div className="speakersAndPartners mb-4">
 						{event?.speakers && (
 							<h3>
-								<i class="bx bx-user-voice"></i>
+								<i className="bx bx-user-voice"></i>
 								<span>Speakers : </span>
 								{ReactHtmlParser(event?.speakers)}
 							</h3>
 						)}
 						{event?.partners && (
 							<h3>
-								<i class="bx bx-group"></i>
+								<i className="bx bx-group"></i>
 								<span>Partners : </span>
 								{ReactHtmlParser(event?.partners)}
 							</h3>
