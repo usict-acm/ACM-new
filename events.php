@@ -210,6 +210,10 @@
 					</div>
 					<div class="row form-row">
 					<div class="form-group s-form-group col-md-5">
+<<<<<<< HEAD
+							<input type="text" name="phone" class="form-control" placeholder="Phone No." />
+						</div>
+=======
 							<input type="number" name="phone" class="form-control" placeholder="Phone No." />
 						</div>
             <style>
@@ -223,6 +227,7 @@
                          -moz-appearance: textfield;
                          }
                   </style>
+>>>>>>> e80fb4c5d90316a9a580217fa0c024d7d247d23d
 						<div class="form-group s-form-group col-md-5">
 							<input type="text" name="college" class="form-control" placeholder="College/ Organization" />
 						</div>
