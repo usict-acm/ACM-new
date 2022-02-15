@@ -15,8 +15,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "redux/slices/userSlice";
 import { fetchUserBlogs } from "api/blog";
 import "assets/css/Blog.css";
-import { setLoading } from "redux/slices/mainSlice";
 import { useHistory } from "react-router";
+import Loader from "components/Loader";
 
 export default function AllBlogs() {
 	const history = useHistory(),
@@ -29,6 +29,7 @@ export default function AllBlogs() {
 		// 2 -> waiting approval
 		[searchQuery, setSearchQuery] = useState(""),
 		[filterData, setFilterData] = useState([]),
+<<<<<<< HEAD
 		[fetchAgain, setFetchAgain] = useState(false);
 
 	useEffect(() => {
@@ -39,6 +40,19 @@ export default function AllBlogs() {
 				setBlogs(allBlogs);
 				dispatch(setLoading(false));
 			} else dispatch(setLoading(false));
+=======
+		[fetchAgain, setFetchAgain] = useState(false),
+		[loading, setLoading] = useState(true);
+
+	useEffect(() => {
+		const fetchData = async () => {
+			setLoading(true);
+			const allBlogs = await fetchUserBlogs({ userEmail: user?.email });
+			if (allBlogs) {
+				setBlogs(allBlogs);
+				setLoading(false);
+			} else setLoading(false);
+>>>>>>> e80fb4c5d90316a9a580217fa0c024d7d247d23d
 		};
 		fetchData();
 		return () => {
@@ -63,7 +77,7 @@ export default function AllBlogs() {
 		});
 	}, [blogs, type, searchQuery]);
 
-	return (
+	return loading ? <Loader /> : (
 		<Container className="BlogContainer mt-4" fluid>
 			<Row className="m-0 p-0">
 				<Col className="order-xl-1 p-0">
