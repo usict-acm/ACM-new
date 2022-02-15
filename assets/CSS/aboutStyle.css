@@ -518,6 +518,22 @@ a {
      font-weight: 500;
      color: #222;
    }
+
+   .meet-us{
+     background-color: #2250fc;
+     margin-top: 20px;
+   }
+
+   input::-webkit-outer-spin-button,
+   input::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+    margin: 0;
+     }
+
+     input[type=number] {
+          -moz-appearance: textfield;
+     }
+
    .container-btn {  
       
      display: grid;  
@@ -992,4 +1008,19 @@ background: url(../images/graph.jpeg);
           grid-gap:50px;
           gap:50px
      }
+}
+
+.collab-btn{
+     background-color:#0297ff;
+     color: white;
+     border-color: #0297ff;
+     border-style: solid;
+     border-width: 2px;
+     font-weight: 630;
+     border-radius: 8px;
+     font-size: 1.2rem;
+}
+.collab-btn:hover{
+     background-color: white;
+    color: #0297ff;
 }
