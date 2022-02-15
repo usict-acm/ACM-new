@@ -9,8 +9,32 @@
 </head>
 
 <body>
-    <h1>hello dfdg</h1>
-    <p>lorem</p>
+    <section class="section-1">
+
+    </section>
+    <section class="section-2">
+
+    </section>
+    <section class="section-3">
+
+    </section>
+    <section class="section-4">
+
+    </section>
+    <section class="section-5">
+
+    </section>
+    <section class="section-6">
+
+    </section>
+    <section class="section-7">
+
+    </section>
+    <section class="section-8">
+        
+    </section>
 </body>
 
 </html>
+<!-- git pull --> X1
+<!-- git pull origin develop -- 
