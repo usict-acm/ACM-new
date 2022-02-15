@@ -23,7 +23,7 @@ const RecentBlog = () => {
     }
     fetchData()
   }, [user])
-  publishedData = blogs?.filter((blog) => blog.isDraft === false).slice(0, 3)
+  publishedData = blogs?.filter((blog) => blog.isDraft === false && blog.approved).slice(0, 3)
 
   return publishedData.length === 0 ? (
     <>
@@ -31,7 +31,7 @@ const RecentBlog = () => {
       <Button
         onClick={() => history.push('/createBlog')}
         color='success'
-        className='py-2 mt-2'
+        className='py-2 mt-2 mb-4'
       >
         Create Your Blog
       </Button>
