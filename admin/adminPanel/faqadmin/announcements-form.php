@@ -1,4 +1,3 @@
-
 <?php
 // header('location: ../../blogAdmin/blogAdmin.html')
 ?>
@@ -54,8 +53,6 @@ require_once "./faqadmin/config1.php";
         }
     </style>
 </head>
-
-
 
 <body>
 
@@ -141,6 +138,9 @@ require_once "./faqadmin/config1.php";
                         <div class="form-group">
                             <input type="text" name="txtButton2Link" id="button2Link" class='form-control' placeholder="Button2 Link" />
                         </div>
+                        <!-- <div class="form-group">
+                            <input type="text" name="txtviewResource" id="viewResource" class='form-control' placeholder="View resources" />
+                        </div> -->
                         <div class="form-group">
                             <input type="text" name="txtPartners" id="partners" class='form-control' placeholder="Partners" />
                         </div>

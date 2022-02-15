@@ -50,7 +50,7 @@
     <div class="d-flex">
       <a href="./index.html"><img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm logo" />
       <div class="text-and-logo"></a>
-          <a style="font-size: 16px; padding: 0; margin-bottom: -11px" class="navbar-brand mx-auto"
+          <a class="navbar-gap" class="navbar-brand mx-auto"
               href="./index.html">ACM<span> USICT</span></a>
           <a href="./index.html"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
       </div>
@@ -70,16 +70,16 @@
 
 <!-- ****************************************************Header Image**************************************************************** -->
 
-  <div style="margin-left:10%; margin-right:10%; margin-top:3%; margin-bottom:0%;">
+  <div class="decodisasterimg-head">
     <section id='header'>
-      <div class="pt-card row" style="background-image: url('assets/images/DecoDisaster/WhatsApp\ Image\ 2021-02-25\ at\ 1.08.04\ PM\ \(1\).jpeg');">
+      <div class="pt-card row">
       </div>
     </section>
   </div>
 
 <!-- ****************************************************Collaborators******************************************************************** -->
 
-  <section id="collab" style="margin-top:0%; padding-bottom: 0;">
+  <section id="collab">
     <div class="container">
       <h1 class="collab-main-heading">Deco<span class="highlight">Disaster</span>:</h1>
       <div class="row d-flex justify-content-center">
@@ -143,7 +143,7 @@
 
 <!-- ***********************************************Footer************************************************************************ -->
 
-  <footer style="background-color:#F7F9FB;" id="footer">
+  <footer id="footer">
     <div class="footer-top">
       <div class="container">
         <div class="row">
@@ -151,16 +151,10 @@
             <div class="footer-info row">
               <div class="col-lg-4 col-12 d-flex justify-content-center">
                 <a href="#about" class="scrollto"
-                  ><img
+                  ><img class="acm1img"
                     src="assets/images/acm1.png"
                     alt="logo"
                     title=""
-                    style="
-                      width: 160px;
-                      padding-top: 10px;
-                      padding-left: 25px;
-                      padding-right: 25px;
-                    "
                 /></a>
               </div>
               <div
@@ -171,12 +165,7 @@
                     src="assets/images/outstanding-website.png"
                     alt="logo"
                     title=""
-                    style="
-                      width: 320px;
-                      padding-top: 10px;
-                      padding-left: 25px;
-                      padding-right: 25px;
-                    "
+                    class="acm2img"
                 /></a>
               </div>
             </div>
@@ -185,10 +174,10 @@
             <p>incepted in 2019 under the University School USICT, GGSIPU.</p>
           </div>
 
-          <div class="col-lg-4 col-md-6 footer-links" style="padding: 0 4%">
+          <div class="col-lg-4 col-md-6 footer-links">
             <br />
-            <h4 style="padding: 2px" id="quick">Quick Links</h4>
-            <ul style="padding-left: 0">
+            <h4 id="quick">Quick Links</h4>
+            <ul class="quickul">
               <li>
                 <i class="fa fa-angle-right"></i>
                 <a href="https://www.ipu.ac.in/"> IPU-Home</a>
@@ -220,7 +209,7 @@
 
           <div class="col-lg-3 col-md-6 footer-contact">
             <br>
-            <h4 style="padding:2px">Contact Us</h4>
+            <h4 class="contactus-footer">Contact Us</h4>
             <p>
               Dean Office, <br>
               USICT, GGSIPU<br>
@@ -229,7 +218,7 @@
               <strong>Email:</strong> info@usict.acm.org<br>
             </p>
 
-            <div class="social-links" style="    text-align-last: justify; font-size: x-large;">
+            <div class="social-links">
               <a href="https://www.facebook.com/acmusict" class="facebook"><i class="fa fa-facebook"></i></a>
               <a href="https://www.youtube.com/channel/UCI7her-mYrb7QM0t9S_nA_Q" class="youtube"><i class="fa fa-youtube"></i></a>
               <a href="https://www.instagram.com/acmusict/" class="instagram"><i class="fa fa-instagram"></i></a>
@@ -246,7 +235,7 @@
   </footer>
 
 
-  <footer style="background-color:#eff1f4;" id="footer">
+  <footer id="footer">
     <div class="copyright-content">
       <div class="container">
         <br>

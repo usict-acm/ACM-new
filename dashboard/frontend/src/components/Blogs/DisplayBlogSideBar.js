@@ -7,7 +7,11 @@ export default function DisplayBlogSideBar({ blog }) {
 			<div>
 				<h3>Blog Info</h3>
 			</div>
+<<<<<<< HEAD
+			<hr />
+=======
 			<hr className="mt-2 mb-3" />
+>>>>>>> e80fb4c5d90316a9a580217fa0c024d7d247d23d
 			<h4>Cover Image</h4>
 			<div className="blog__cover">
 				<img className="blog__coverImage" src={blog?.coverImage} alt="cover" />

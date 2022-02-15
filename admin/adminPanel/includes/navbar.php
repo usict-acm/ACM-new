@@ -14,7 +14,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.php">
+                <a class="nav-link" href=".\index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -108,6 +108,14 @@
                 <a class="nav-link" href="?table=Blog">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Blogs</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" href="?table=Forms">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Forms</span></a>
             </li>
 
             <!-- Nav Item - Tables -->

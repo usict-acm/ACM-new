@@ -112,6 +112,10 @@ section {
   border-radius: 0;
 }
 
+.decodisasterimg-head{
+  margin: 3% 10% 0 10%;
+}
+
 .pt-card {
   padding: 8%;
   border-radius: 30px;
@@ -120,6 +124,7 @@ section {
   background-position: center;
   box-shadow: 0 0 3.5px #0297ff;
   margin-bottom: -13%;
+  background-image: url('../images/DecoDisaster/WhatsApp\ Image\ 2021-02-25\ at\ 1.08.04\ PM\ \(1\).jpeg');
 }
 .uheading {
   font-size: 36px;
@@ -127,6 +132,51 @@ section {
 .lheading {
   font-size: 36px;
 }
+
+#collab{
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+#footer{
+  background-color: #F7F9FB;
+}
+
+.acm1img{
+  width: 160px;
+  padding-top: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.acm2img{
+  width: 320px;
+  padding-top: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.footer-links{
+  padding: 0 4%;
+}
+
+#quick{
+  padding: 2px;
+}
+
+.quickul{
+  padding-left: 0;
+}
+
+.social-links{
+  font-size: x-large;
+  text-align-last: justify;
+}
+
+.contactus-footer{
+  padding: 2px;
+}
+
 @media (min-width: 300px) and (max-width: 580px) {
   .uheading {
     font-size: 20px;
@@ -375,6 +425,13 @@ section {
   display: flex;
   flex-direction: column;
 }
+
+.navbar-gap{
+  font-size: 16px;
+  padding: 0;
+  margin-bottom: -11px;
+}
+
 .outstanding-logo {
   width: 160px;
   animation-name: scale-up-center;
