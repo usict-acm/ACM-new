@@ -132,7 +132,7 @@
                                     </div>
                                     <div id="required">
                                             <label > Required?</label>
-                                            <input onChange="check();" type="radio"  name="required0" value="on"/>
+                                            <input onChange="check();" type="radio"  name="required0" value="on"required/>
                                             <label >NOT Required?</label>
                                             <input onChange="check();" type="radio" name="required0" value="off"/>
                                             </div>
@@ -293,7 +293,7 @@ function changeDD(count){
                                             </div>
                                             <div id="required">
                                             <label > Required?</label>
-                                            <input onChange="check();" type="radio"  name="required`+count+`" value="on"/>
+                                            <input onChange="check();" type="radio"  name="required`+count+`" value="on" required/>
                                             <label >NOT Required?</label>
                                             <input onChange="check();" type="radio"  name="required`+count+`" value="off"/>
                                             </div>
