@@ -12,6 +12,11 @@
 html {
   font-size: 62.5%;
 }
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .container {
   background-color: #eee;

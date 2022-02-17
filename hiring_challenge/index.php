@@ -32,7 +32,7 @@
 
       <nav id="navbar">
         <div class="acm-logo">
-          <img src="images/logo-acm.png" alt="" class="acm-img">
+          <img src="acm1.png" alt="" class="acm-img">
         </div>
         <ul>
           <li class="item"><a href="#about">About</a></li>
@@ -70,7 +70,7 @@
     </div>
     <!-- End of Header -->
 
-    
+
 <!-- start of About Section -->
 
 
