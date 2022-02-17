@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
   <div class="container">
     <!-- Header -->
     <div class="area">
@@ -75,6 +76,7 @@
 
   </div>
   <script src="script.js"></script>
+ 
 </body>
 
 </html>
