@@ -4,10 +4,10 @@
 			<div class="row justify-content-center align-items-center">
 				<div class="col-xl-4 col-md-4 mb-30">
 					<div class="single-cta justify-content-md-center">
-						<i class="fas fa-map-marker-alt my-auto" style="margin-left: 8px"></i>
+						<a href="https://goo.gl/maps/4ALxZAv4fb7sGXrZ9" target="_blank"><i class="fas fa-map-marker-alt my-auto" style="margin-left: 8px"></i></a>
 						<div class="cta-text">
-							<h4>Find us</h4>
-							<span>Dean Office, USICT, GGSIPU Sector 16C, Dwarka, Delhi</span>
+						<a href="https://goo.gl/maps/4ALxZAv4fb7sGXrZ9" target="_blank"><h4>Find us</h4></a>
+							<span><a href="https://goo.gl/maps/4ALxZAv4fb7sGXrZ9" target="_blank">Dean Office, USICT, GGSIPU Sector 16C, Dwarka, Delhi</a></span>
 						</div>
 					</div>
 				</div>
@@ -15,17 +15,17 @@
 					<div class="single-cta justify-content-md-center">
 						<i class="fas fa-phone ro-nine my-auto"></i>
 						<div class="cta-text">
-							<h4>Call us</h4>
+						<a href="tel:011-25302702"><h4>Call us</h4></a>
 							<span><a href="tel:011-25302702">011-25302702</a></span>
 						</div>
 					</div>
 				</div>
 				<div class="col-xl-4 col-md-4 mb-30">
 					<div class="single-cta justify-content-md-center">
-						<i class="far fa-envelope-open my-auto" style="margin-left: 5px"></i>
+					<a href="mailto:info@usict.acm.org"><i class="far fa-envelope-open my-auto" style="margin-left: 5px"></i></a>
 						<div class="cta-text" style="padding-left: 10px">
-							<h4>Mail us</h4>
-							<span><a href="#">info@usict.acm.org</a></span>
+						<a href="mailto:info@usict.acm.org"><h4>Mail us</h4></a>
+							<span><a href="mailto:info@usict.acm.org">info@usict.acm.org</a></span>
 						</div>
 					</div>
 				</div>
@@ -89,32 +89,32 @@
 							<div class="social-menu">
 								<ul>
 									<li>
-										<a href="https://usict.acm.org/facebook" target="_blank"
+										<a class="facebook-footer" href="https://usict.acm.org/facebook" target="_blank"
 											><i class="fab fa-facebook"></i
 										></a>
 									</li>
 									<li>
-										<a href="https://usict.acm.org/youtube" target="_blank"
+										<a class="youtube-footer" href="https://usict.acm.org/youtube" target="_blank"
 											><i class="fab fa-youtube"></i>
 										</a>
 									</li>
 									<li>
-										<a href="https://usict.acm.org/instagram" target="_blank"
+										<a class="instagram-footer" href="https://usict.acm.org/instagram" target="_blank"
 											><i class="fab fa-instagram"></i
 										></a>
 									</li>
 									<li>
-										<a href="https://github.com/usict-acm/ACM-new" target="_blank"
+										<a class="github-footer" href="https://github.com/usict-acm/ACM-new" target="_blank"
 											><i class="fab fa-github"></i
 										></a>
 									</li>
 									<li>
-										<a href="https://usict.acm.org/discord" target="_blank">
+										<a class="discord-footer" href="https://usict.acm.org/discord" target="_blank">
 											<i class="fab fa-discord"></i>
 										</a>
 									</li>
 									<li>
-										<a href="#" 
+										<a class="mail-footer" href="mailto:info@usict.acm.org" 
 											><i class="fas fa-envelope"></i
 										></a>
 									</li>

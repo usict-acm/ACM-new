@@ -18,9 +18,9 @@
       include('header.php');
     ?>
     <!--***********************************************Banner*****************************************************************************-->
-    <div style="margin-left:10%; margin-right:10%; padding-top:3%; margin-bottom: 0%;">
+    <div class="join-us-banner">
       <section id='header'>
-        <div class="pt-card row" style="background-image: url('assets/images/benefits-banner.png');">
+        <div class="pt-card row">
           <div class="heading col-xl-9 col-lg-9 col-md-9 col-sm-6">
             <h3><span class="uheading">Why Join</span><br>
               <span class="lheading">ACM USICT Chapter?</span></h3>
@@ -29,15 +29,15 @@
       </section>
     </div>
     <!--***********************************************Registration Alert***************************************************************8-->
-    <div class="alert alert-info new2 p-4" style="margin-top: 7%;">
+    <div class="alert alert-info new2 p-4">
       <span class="alert-body">
-        <div class="row" style="align-items: center;">
+        <div class="row test-dev1" >
           <i class="fa fa-info-circle" aria-hidden="true"></i>
           <div class="col-lg-10 col-md-9 col-sm-8 col-7">
             <h6 class="alert-header md-text-custom">Registration</h6>
             <p class="mb-0">Join Us today and be a part of International Society of Computer Professionals and Scientists!</p>
           </div class="col-md-1 col-sm-1 col-1">
-          <button style="height:5%" class="sm-text-custom btn btn-outline-info"><a target="_blank" href="https://bit.do/acmusict">Join Us</a></button>
+          <button class="sm-text-custom btn btn-outline-info"><a  href="./benefits.php#registration">Join Us</a></button>
           <div>
           </div>
         </div>
@@ -129,8 +129,8 @@
               </div>
             </div>
           </div>
-          <button aria-label="Previous" class="glider-prev alumni-prev"><i class="fas fa-angle-left"></i></button>
-          <button aria-label="Next" class="glider-next alumni-next"><i class="fas fa-angle-right"></i></button>
+          <div aria-label="Previous" class="glider-prev alumni-prev"><i class="fas fa-angle-left"></i></div>
+          <div aria-label="Next" class="glider-next alumni-next"><i class="fas fa-angle-right"></i></div>
           <div role="tablist" class="dots"></div>
         </div>
       </div>
@@ -265,8 +265,8 @@
                 </div>
               </div>
             </div>
-            <button aria-label="Previous" class="glider-prev alumni-prev1"><i class="fas fa-angle-left"></i></button>
-                <button aria-label="Next" class="glider-next alumni-next1"><i class="fas fa-angle-right"></i></button>
+            <div aria-label="Previous" class="glider-prev alumni-prev1"><i class="fas fa-angle-left"></i></div>
+                <div aria-label="Next" class="glider-next alumni-next1"><i class="fas fa-angle-right"></i></div>
                 <div role="tablist" class="dots1"></div>
           </div>
         </div>
@@ -278,7 +278,7 @@
     <section id="registration">
       <div class="container">
       <p class="registration-heading">JOIN NOW</p>
-      <div class="registration-form-div" style="padding:0% !important">
+      <div class="registration-form-div">
         <hr class="blue-hr">
         <div class="row no-gutters">
           <div class="col-lg-6">
@@ -287,35 +287,35 @@
           <div class="col-lg-6 col-md-12 col-sm-12">
             <div class="registration-inner-div d-flex justify-content-center">
               <form class="widget-contact-form" action="https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse" role="form" method="post" target="_self" novalidate="novalidate">
-                <div class="row" style="margin-top:2rem">
+                <div class="row test-dev2">
                   <div class="form-group col-md-6">
-                    <input id="NameinForm" required type="text" aria-required="true" name="entry.73813921" class="form-input-boxes-manual form-control required fname" placeholder="First Name" style="color: grey;">
+                    <input id="NameinForm" required type="text" aria-required="true" name="entry.73813921" class="form-input-boxes-manual form-control required fname test-dev3" placeholder="First Name" >
                   </div>
                   <div class="form-group col-md-6">
-                    <input id="LastNameinForm" required type="text" aria-required="true" name="entry.1318071106" class="form-input-boxes-manual form-control required lname" placeholder="Last Name" style="color: grey;">
+                    <input id="LastNameinForm" required type="text" aria-required="true" name="entry.1318071106" class="form-input-boxes-manual form-control required lname test-dev3" placeholder="Last Name" >
                   </div>
                 </div>
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <input id="EmailinForm" required type="email" name="entry.2086820351" class="form-input-boxes-manual form-control" placeholder="Email" style="color: grey;">
+                    <input id="EmailinForm" required type="email" name="entry.2086820351" class="form-input-boxes-manual form-control test-dev3" placeholder="Email" >
                   </div>
-                  <div class="form-group col-md-6">
-                    <input id="PhoneinForm" required type="number" name="entry.2128372508" class="form-input-boxes-manual form-control" placeholder="Phone Number" style="color: grey;">
+                 <div class="form-group col-md-6">
+                    <input id="PhoneinForm" required type="number" name="entry.2128372508" class="form-input-boxes-manual form-control test-dev3" placeholder="Phone Number">
                   </div>
                 </div>
                 <div class="form-group">
-                  <input id="EnrollmentinForm" required type="number" name="entry.1857583496" class="form-control form-input-boxes-manual required" placeholder="Enrollment Number" style="color: grey;" aria-required="true">
+                  <input id="EnrollmentinForm" required type="number" name="entry.1857583496" class="form-control form-input-boxes-manual required test-dev3" placeholder="Enrollment Number"  aria-required="true">
                 </div>
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <input id="YearofAdmissioninForm" required type="number" name="entry.715926692" class="form-input-boxes-manual form-control" placeholder="Year Of Admission" style="color: grey;">
+                    <input id="YearofAdmissioninForm" required type="number" name="entry.715926692" class="form-input-boxes-manual form-control test-dev3" placeholder="Year Of Admission" >
                   </div>
                   <div class="form-group col-md-6">
-                    <input id="ACMMembershipNoinForm" required type="number" name="entry.114256127" class="form-input-boxes-manual form-control" placeholder="ACM Membership No." style="color: grey;">
+                    <input id="ACMMembershipNoinForm" required type="number" name="entry.114256127" class="form-input-boxes-manual form-control test-dev3" placeholder="ACM Membership No." >
                   </div>
                 </div>
                 <div class="form-group">
-                  <input id="CourseinForm" required list="course" name="entry.1307853061" class="form-control form-input-boxes-manual required" placeholder="Select Course" style="color: grey;" aria-required="true">
+                  <input id="CourseinForm" required list="course" name="entry.1307853061" class="form-control form-input-boxes-manual required test-dev3" placeholder="Select Course"  aria-required="true">
                   <datalist id="course">
                     <option value="B.Tech CSE">
                     <option value="B.Tech IT">
@@ -329,7 +329,7 @@
                   </datalist>
                 </div>
                 <div class="form-group">
-                  <p style="font-size:16px;text-align:left;">Select Your Clubs:</p>
+                  <p class = "test-dev4" >Select Your Clubs:</p>
                   <div class="row no-gutters">
                     <br>
                     <div class="col-lg-6 col-md-6 club">
@@ -375,8 +375,8 @@
                   <div class="form-group col-md-2"></div>
                   <div class="form-group col-md-2 button-center">
                     <div class="form-group">
-                      <button id="submitSingupForm" type="submit" style="display:none;"></button>
-                      <button type="button" class="btn signin" style="background-color: #0297ff; color:#fff;" onclick="validateForm()">&nbsp;Submit</button>
+                      <!-- <button id="submitSingupForm" type="submit" style="display:none;"></button> -->
+                      <button type="button" class="btn signin" onclick="validateForm()">&nbsp;Submit</button>
                     </div>
                   </div>
                 </div>
@@ -398,7 +398,7 @@
 					<button class="btn btn-primary s-form-group contact-btn" onclick="closecontact()"><i class="fas fa-times"></i></button>
 				</div>
 				<form class="s-form" name="contact" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse" onsubmit="return validateform();" >
-					<h2 class="my-4 display-4 fw-bolder text-center" style="font-weight:bolder;">Contact<span class="text-blue"> Us</span></h2>
+					<h2 class="my-4 display-4 fw-bolder text-center">Contact<span class="text-blue"> Us</span></h2>
 					<div class="row form-row">
 						<div class="form-group s-form-group col-md-5">
 							<input type="text" name="name" class="form-control" placeholder="Name *" />
@@ -409,7 +409,7 @@
 					</div>
 					<div class="row form-row">
 					<div class="form-group s-form-group col-md-5">
-							<input type="text" name="phone" class="form-control" placeholder="Phone No." />
+							<input type="number" name="phone" class="form-control" placeholder="Phone No." />
 						</div>
 						<div class="form-group s-form-group col-md-5">
 							<input type="text" name="college" class="form-control" placeholder="College/ Organization" />
