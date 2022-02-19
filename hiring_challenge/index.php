@@ -33,7 +33,23 @@
 
 
       <nav id="navbar">
+        <div class='test'>
           <div id="acmimg"><img src="acm1.png" alt="" class="acm-img"></div>
+          <div class="logo">
+            <h1>
+              <span class="text-center pt-2">H</span>
+              <span class="text-center pt-2">a</span>
+              <span class="text-center pt-2">c</span>
+              <span class="text-center pt-2">k</span>
+              <span class="text-center pt-2">a</span>
+              <span class="text-center pt-2">t</span>
+              <span class="text-center pt-2">h</span>
+              <span class="text-center pt-2">o</span>
+              <span class="text-center pt-2">n</span>
+            </h1>
+          </div>
+        </div>
+
           <ul>
             <li class="item"><a href="#about">About</a></li>
             <li class="item"><a href="#timeline">Timeline</a></li>
@@ -45,19 +61,7 @@
           </ul>
       </nav>
 
-      <div class="logo">
-          <h1>
-            <span class="text-center pt-2">H</span>
-            <span class="text-center pt-2">a</span>
-            <span class="text-center pt-2">c</span>
-            <span class="text-center pt-2">k</span>
-            <span class="text-center pt-2">a</span>
-            <span class="text-center pt-2">t</span>
-            <span class="text-center pt-2">h</span>
-            <span class="text-center pt-2">o</span>
-            <span class="text-center pt-2">n</span>
-          </h1>
-        </div>
+      
 
       <div class="header-text">
         <h1 class="heading">TRELLATHON</h1>
