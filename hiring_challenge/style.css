@@ -12,20 +12,6 @@
 html {
   font-size: 62.5%;
 }
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container {
-  background-color: #eee;
-  margin: 3.5rem;
-  box-shadow: 0 1rem 3rem #555;
-  overflow: hidden;
-}
-
-/* End of Common styles */
 
 
 
@@ -33,7 +19,7 @@ html {
 .area{
   background:linear-gradient(-120deg, #002147, #000000, #666666);
   width: 100%;
-  height:96vh;
+  height:100vh;
   
 }
 
@@ -151,60 +137,46 @@ html {
   }
 
 }
-/* End of home-background */
-/* Navbar */
+
+/* NAVBAR */
 #navbar{
-  display:flex;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px 0 5px;
+}
+.acm-img{
+  width: 80px;
+  height: 80px;
 }
 
 #navbar ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  font-weight: 400px;
+  align-items: center;
+  font-size: 2.3rem;
 }
 
 #navbar ul li a{
+  padding: 0.5rem;
+  margin: 0.5rem;
   color: white;
-  display: block;
-  padding: 3px 22px;
-  border-radius: 20px;
-  /* text-decoration: none ; */
-  
+  text-decoration: none;
 }
-#navbar ul li{
-  
-  /* list-style:none; */
-  font-size: 1.6rem;
-  font-weight: bold;
-  
-}
-
-#navbar::before{
-  content: "";
-  z-index: -1;
-}
-
-#navbar ul li a:hover{
-  color: rgb(239, 243, 32);
- 
-
-}
-
-#navbar ul{
+.logo{
   position: absolute;
-  left: 50vw;
-  top: 4vh;
+  top: 2.8rem;
+  right: 78rem;
 }
-
-.item:hover{
+a:hover{
   transform: rotate(-10deg);
   box-shadow: 0 2rem 3rem rgb(67, 55, 128);
 }
-/* End of Navbar */
+/* NAVBAR */
 
 /* Header */
-
-
 .header-text {
   text-align: center;
   text-transform: uppercase;
@@ -225,22 +197,6 @@ html {
   color: #eee;
   max-width: 70rem;
   margin: auto;
-}
-
-.acm-logo{
-  position: absolute;
-  top: 0.5rem;
-  right: 136rem;
-}
-
-.acm-img{
-  height: 80px;
-  width: 80px;
-}
-.logo {
-  position: absolute;
-  top: 2rem;
-  right: 95rem;
 }
 
 .logo h1 {
