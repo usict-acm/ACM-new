@@ -262,7 +262,7 @@ html {
 /* End of Header */
 /*** End of Home Section ***/
 
-/* ABOUT */
+/************************************************************ ABOUT *****************************************************/
 
 .about-a{
   font-family: 'Raleway', sans-serif;
@@ -589,9 +589,7 @@ html {
   border: 1px solid rgba(255, 0, 88, 0.4);
   box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
 }
-/* html{
-    background-color: #000000;
-} */
+
 #about_heading_a{
     text-align: center;
     justify-content: center;
@@ -606,7 +604,7 @@ html {
   display: flex;
   flex-direction: row;
 }
-/* ABOUT */
+/*****************************************************End of ABOUT ************************************************************/
 
 /* TEAM */
 .heading {
