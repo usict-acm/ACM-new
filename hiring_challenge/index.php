@@ -74,24 +74,50 @@
 
     <!-- ABOUT -->
     <section class="about-section">
-        <div class="inner-container">
-            <h1>About Us</h1>
-            <p class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus velit ducimus, enim inventore earum,
-                eligendi nostrum pariatur necessitatibus eius dicta a voluptates sit deleniti autem error eos totam nisi
-                neque voluptates sit deleniti autem error eos totam nisi neque.
-            </p>
-            <div class="skills">
-                <span>Web Design</span>
-                <span>Photoshop & Illustrator</span>
-                <span>Coding</span>
+        <div id="about">
+            <div id="about_heading">
+                <a class="about-a" id="about_heading_a" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    for('Everyone'){<br>
+                    Char Event = "Trellathon";}
+                </a>
+            </div>
+
+            <div id="about_cards">
+                <div class="container-about">
+
+                    <div class="box" id="about_info_box">
+                        <span></span>
+                        <div class="content">
+                            <h2>Trellathon</h2>
+                            <p>Trellathon is the largest, one of its kind, hackathon for GGSIPU students. While most of
+                                the
+                                hackathons focus on code, we at Trellathon consider the uniqueness and potential of the
+                                idea
+                                as well. Trellathon provides a platform for all the innovators out there to come out and
+                                test their creation on the market parameters. We aim to separate “a good idea” from a
+                                “market product” and fill the gap in that journey. </p>
+
+                        </div>
+                    </div>
+
+                    <div class="about_info_image">
+                        <img src="https://usict.acm.org/assets/images/trellposter.jpeg" height="500vh" width="300vw"
+                            alt="error">
+                    </div>
+
+
+                </div>
             </div>
         </div>
     </section>
     <!-- ABOUT -->
 
     <!-- TEAM -->
-    <div class="container">
+    <div class= "container">
         <h1 class="heading">Our Team</h1>
         <div class="hr">
             <hr>
