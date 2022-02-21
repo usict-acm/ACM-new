@@ -2,21 +2,12 @@
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
-<<<<<<< HEAD
-    include_once './database.php';
-    include_once './posts.php';
-    include_once '../../events/eventPost.php';
-    include_once './forms.php';
-
-include_once '../../mail.php';
-=======
 include_once './database.php';
 include_once './posts.php';
 include_once '../../events/eventPost.php';
 include_once '../../mail.php';
 // include_once './forms.php';
 
->>>>>>> e80fb4c5d90316a9a580217fa0c024d7d247d23d
 
 $method = $_SERVER['REQUEST_METHOD'];
 function read()
@@ -599,14 +590,9 @@ function postAnnouncement()
     }
 
     $filename = $file['name'];
-<<<<<<< HEAD
-    $filetemppath= $file['tmp_name'];
-    $fileext = explode('.',$filename);
-=======
     $filetemppath = $file['tmp_name'];
 
     $fileext = explode('.', $filename);
->>>>>>> e80fb4c5d90316a9a580217fa0c024d7d247d23d
     $filecheck = strtolower(end($fileext));
 
     $fileextstored = array('png', 'jpg', 'jpeg');
@@ -722,78 +708,6 @@ function getForms()
 };
 
 
-<<<<<<< HEAD
-function readResponses(){
-    include_once './forms.php';
-//      // Instantiate DB & connect
-    $database = new Database();
-    $db = $database->connect();
-//    // Instantiate blog post object
-    $post = new Form($db);
-    $ID = $_GET['Id'];
-    // echo($ID);
-    $formName = "";
-    $allFields = $post->readFields($ID,$formName);
-    $responses = $post->readAllResponses($ID,$formName);
-    $countNumberOfFields = $post->countFields($ID,$formName);
-
-    foreach ($countNumberOfFields as $key => $item) {
-        $count = $item;
-    }
-
-    $allResponses = array();
-    $fieldItem = array();
-    $i=0;
-    
-    while ($row=$allFields->fetch_assoc()){
-        $value = explode(" ",$row['fieldName']);
-        $val = join("_",$value);
-        array_push($fieldItem,$val);
-        $i++;
-    }
-
-    array_push($allResponses,$fieldItem);
-
-    while($row=$responses->fetch_assoc()){
-        $fieldItem = array();
-        $i=0;
-        while($i < $count){
-            array_push($fieldItem,$row[$allResponses[0][$i]]);
-            $i++;
-        }
-        array_push($allResponses,$fieldItem);
-    }
-
-    echo json_encode($allResponses);
-
- };
-
-//  function testResponses(){
-
-//     $conn = mysqli_connect("localhost","root","","acmbackend");
-
-//     $query = 'SELECT * FROM responses_event_1_registration';
-//     $query_run = mysqli_query($conn,$query);
-//     $result_array = [];
-
-//     if (mysqli_num_rows($query_run)>0)
-//     {
-//         foreach($query_run as $row)
-//         {
-//             array_push($result_array,$row);
-//         }
-//         header('Content-type: application/json');
-//         echo json_encode($result_array);
-//     }
-//     else{}
-//     // {
-//     //     echo $return = "<h4>No record found.</h4>"
-//     // }
-//  }
-
- function getFields(){
-    include_once './forms.php';
-=======
 function readResponses()
 {
     //     include_once './forms.php';
@@ -887,7 +801,6 @@ function readResponses()
 
 function getFields()
 {
->>>>>>> e80fb4c5d90316a9a580217fa0c024d7d247d23d
 
     // Instantiate DB & connect
     $database = new Database();
@@ -896,53 +809,6 @@ function getFields()
     // echo "check2";
     // echo $db;
     // echo "checking";
-<<<<<<< HEAD
-  // Instantiate blog post object
-   $post = new Form($db);
-//    echo "check3";
-   $Id = $_GET["Id"];  
-   // Blog post query
-   $result = $post->fieldsQuery($Id);
-//    echo "check4";
-// var_dump($result);
-   
-   // Check if any posts
-   if($result) {
-    
-   // Post array
-   $posts_arr = array();
-
-   while($row=$result->fetch_assoc()){
-    //    echo $row;
-       $post_item = array(
-           'formName' => $row["formName"],
-           'fieldName' => $row["fieldName"],
-           'fieldType' => $row["fieldType"],
-           'formID' => $row["formID"],
-           'required' => $row["required"],
-           'ifCheckbox' => $row["ifCheckbox"],
-           'ifRadio' => $row["ifRadio"],
-           
-       );
-    //    if($row["ifCheckbox"]) {
-    //     array_push('ifCheckbox' => $row["ifCheckbox"]);
-
-    //    }
-           // Push to "data"
-           array_push($posts_arr, $post_item);
-   }
-
-   // Turn to JSON & output
-   echo json_encode($posts_arr);
-//    echo "5";
-
-   } else {
-   // No Posts
-   echo json_encode(
-       array('message' => 'No Posts Found')
-   );
-   }
-=======
     // Instantiate blog post object
     $post = new Form($db);
     //    echo "check3";
@@ -980,7 +846,6 @@ function getFields()
             array('message' => 'No Posts Found')
         );
     }
->>>>>>> e80fb4c5d90316a9a580217fa0c024d7d247d23d
 };
 
 function postForm(){
