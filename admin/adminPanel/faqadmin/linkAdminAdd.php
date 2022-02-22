@@ -1,7 +1,30 @@
 <?php 
 
-  $db = mysqli_connect('localhost', 'root', 'root', 'acmbackend');
-  
+/*                      included database.php           */
+class Database{
+  private $server;
+  private $username;
+  private $password;
+  private $database;
+  private $port;
+
+  public function connect(){
+    include(__DIR__.'/../../../enviornment.php');
+    $this->server = $env_server;
+    $this->username = $env_username;
+    $this->password = $env_password;
+    $this->database = $env_database;
+    $this->port = $env_port;
+    
+    $conn = new mysqli($this->server, $this->username, $this->password, $this->database, $this->port);
+    return $conn;
+  }
+}
+$database = new Database();
+$link = $database->connect();
+$connection = $link;
+
+/*                      *********           */
   $username = "";
   if (isset($_POST['reg'])) {
   	$linkFor = $_POST['in1'];
@@ -12,7 +35,7 @@
     $s2Link = join("_",$exx);
     $shortLink=$s1Link.$s2Link;
   	$sql_u = "SELECT * FROM link WHERE shortLink='$shortLink'";
-  	$res_u = mysqli_query($db, $sql_u);
+  	$res_u = mysqli_query($link, $sql_u);
 
   	if (mysqli_num_rows($res_u) > 0) {
         echo "<div style='position:absolute;margin:400px 0px 0px 460px; color:red;'>";
@@ -23,7 +46,7 @@
 
            $query = "INSERT INTO link (linkFor, originalLink, shortLink) 
       	    	  VALUES ('$linkFor', '$originalLink', '$shortLink')";
-           $results = mysqli_query($db, $query);
+           $results = mysqli_query($link, $query);
 
            echo "<div style='position:absolute;margin:200px 0px 0px 360px; color:green; font-weight:bold;'>";
            echo "<h2 style=' font-weight:bold; margin-left:100px;'> &nbsp;&nbsp; Congratulations..🥳</h2>"	;
