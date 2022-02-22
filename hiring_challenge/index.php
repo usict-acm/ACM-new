@@ -116,12 +116,13 @@
     </section>
     <!--**************************************************** END OF ABOUT *****************************************************-->
 
-    <!-- TEAM -->
-    <div class= "container">
-        <h1 class="heading">Our Team</h1>
-        <div class="hr">
+    <!--***************************************************** TEAM **********************************************************-->
+    <section id="team-section">
+    <div class= "container-team">
+        <h1 class="heading-team">Web Team</h1>
+        <!-- <div class="hr">
             <hr>
-        </div>
+        </div> -->
 
         <div class="row">
             <div class="col-md-2 col-sm-6 box-1">
@@ -307,7 +308,8 @@
 
 
     </div>
-    <!-- TEAM -->
+    </section>
+    <!--**************************************************** End of TEAM ****************************************************-->
 
 
     <!--************************************************* Contact us ****************************************************-->
@@ -364,20 +366,20 @@
     <!--*****************************************************End of Contact us ***********************************************-->
 
     <!--****************************************************** FOOTER *******************************************************-->
-    <section class="fluid-container mt-5 mb-3">
-        <div class="card bg-white mx-5">
+    <section id="container-footer" class="fluid-container bg-black">
+        <div class="card bg-black mx-5">
             <div class="row mb-4">
                 <div class="col-md-4 col-sm-4 col-xs-4">
                     <div class="footer-text pull-left">
                         <div class="d-flex">
                             <img src="acm1.png" alt="" class="footer-acm">
                         </div>
-                        <h1>USICT ACM Student Chapter</h1>
+                        <h1 class="footerh1" >USICT ACM Student Chapter</h1>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi non
                             pariatur numquam animi nam at impedit odit nisi.</p>
                         <div class="social mt-3 mb-3"> <i class="fa fa-facebook-official fa-lg"></i> <i
                                 class="fa fa-instagram fa-lg"></i> <i class="fa fa-twitter fa-lg"></i> <i
-                                class="fa fa-linkedin-square fa-lg"></i> <i class="fa fa-facebook"></i> </div>
+                                class="fa fa-linkedin-square fa-lg"></i></div>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-2"></div>
@@ -411,8 +413,8 @@
             </div>
             <div class="divider mb-4"> </div>
 
-            <div class="d-flex">
-                <p id="copyright" style="margin-left: 30rem;">© Conceptualized,Designed and Developed by Office Bearers
+            <div class="copyright-footer">
+                <p id="copyright" class="">© Conceptualized,Designed and Developed by Office Bearers
                     of ACM USICT chapter.
                 </p>
             </div>

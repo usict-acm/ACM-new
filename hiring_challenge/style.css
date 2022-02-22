@@ -606,11 +606,23 @@ html {
 }
 /*****************************************************End of ABOUT ************************************************************/
 
-/* TEAM */
-.heading {
+/********************************************************** TEAM *************************************************************/
+.heading-team {
   text-align: center;
-  margin: 2% auto 1% auto;
+  font-size: 5rem;
+  /* margin: 2% auto 1% auto; */
   font-weight: 700;
+  /* text-decoration: underline;
+  text-decoration-thickness: 3px; */
+  color: #1cc9f5;
+}
+#team-section{
+  background-color: #000000;
+}
+.container-team{
+  width: 80%;
+  margin: auto;
+  /* background-color: #000000; */
 }
 
 .our-team {
@@ -621,7 +633,7 @@ html {
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  margin-left: 16.5%;
+  margin-left: 13%;
   width: 140px;
   height: 140px;
 }
@@ -654,7 +666,7 @@ html {
 .our-team .title {
   font-size: 26px;
   font-weight: bold;
-  color: #222;
+  color: rgb(221, 4, 58);
   padding-bottom: 10px;
   margin: 15px 0 10px 0;
   position: relative;
@@ -663,7 +675,7 @@ html {
   content: "";
   width: 30px;
   height: 2px;
-  background: #222;
+  background: rgb(113, 3, 146);
   margin: 0 auto;
   position: absolute;
   bottom: 0;
@@ -712,12 +724,8 @@ html {
   }
 }
 
-.hr {
-  width: 10%;
-  text-align: center;
-  margin: 0 auto;
-}
-/* TEAM */
+
+/********************************************************* End of TEAM ******************************************************/
 
 
 
@@ -727,7 +735,8 @@ html {
   background: #fff;
   border-radius: 6px;
   padding: 20px 60px 30px 40px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(133, 132, 132, 0.2);
+  background:linear-gradient(120deg, #dd0017, #000000);
 }
 #contact-us{
     width: 90%;
@@ -737,6 +746,7 @@ html {
     /* padding: 20px 60px 30px 40px; */
     min-height: 100vh;
   width: 100%;
+  background-color: #000000;
     
 }
 .container-contact .content{
@@ -776,6 +786,7 @@ html {
 .content .left-side .details .topic{
   font-size: 18px;
   font-weight: 500;
+  color: #00d0ff;
 }
 .content .left-side .details .text-one,
 .content .left-side .details .text-two{
@@ -897,13 +908,18 @@ html {
 
 
 /********************************************************** FOOTER ******************************************************/
-body {
-  background-color: #f3f6fd;
+/* body {
+  background-color: #000000;
   font-size: 13px;
   font-weight: bold;
   color: rgb(189, 196, 203);
-}
+} */
 
+#container-footer{
+background-color: #000000;
+padding: 0;
+margin: 0;
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -924,13 +940,24 @@ hr {
   border-width: 3px;
 }
 
+.card-text{
+  color: #757474;
+  font-size: 15px;
+}
+
 .card {
   padding: 2% 7%;
+  /* background-color: #000000; */
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  position: absolute;
+  top: -15px;
 }
 
 .social > i {
-  padding: 1%;
-  font-size: 15px;
+  padding: 3%;
+  font-size: 28px;
+  color: #fffafa;
+  
 }
 
 .social > i:hover {
@@ -944,7 +971,7 @@ hr {
 
 .heading_footer {
   font-family: "Titillium Web", sans-serif;
-  color: black;
+  color: rgb(121, 121, 121);
   font-size: 17px;
   padding-left: 18px;
 }
@@ -954,13 +981,24 @@ hr {
 }
 
 .footer-acm {
-  height: 11vh;
-  width: 6vw;
+  height: 20vh;
+  width: 10vw;
 }
 
 .footli {
   font-size: 15px;
   padding-left: 0;
+}
+
+.footerh1{
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.copyright-footer{
+  margin: auto;
+  font-size: 18px;
+  color: white;
 }
 
 /******************************************************* End of FOOTER *******************************************************/
