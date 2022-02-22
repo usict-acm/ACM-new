@@ -310,7 +310,7 @@
     <!-- TEAM -->
 
 
-    <!-- Contact us -->
+    <!--************************************************* Contact us ****************************************************-->
     <section id="contact-us">
         <div class="container-contact">
             <div class="content">
@@ -361,9 +361,9 @@
             </div>
         </div>
     </section>
-    <!--End of Contact us -->
+    <!--*****************************************************End of Contact us ***********************************************-->
 
-    <!-- FOOTER -->
+    <!--****************************************************** FOOTER *******************************************************-->
     <section class="fluid-container mt-5 mb-3">
         <div class="card bg-white mx-5">
             <div class="row mb-4">
@@ -418,7 +418,7 @@
             </div>
         </div>
     </section>
-    <!-- FOOTER -->
+    <!--************************************************* End of FOOTER **************************************************-->
 
 
     <script src="https://kit.fontawesome.com/833875f75e.js" crossorigin="anonymous"></script>
