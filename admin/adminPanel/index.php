@@ -155,6 +155,9 @@
                         case 'Forms':
                             include('./faqadmin/formstable.php');
                             break;
+                        case 'Files';
+                            include('./faqadmin/file.php');
+                            break;
                         case 'ResponsesForm':
                             include('../blogAdmin/responses.php');
                             break;
