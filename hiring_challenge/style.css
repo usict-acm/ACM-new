@@ -735,8 +735,8 @@ html {
   background: #fff;
   border-radius: 6px;
   padding: 20px 60px 30px 40px;
-  box-shadow: 0 5px 10px rgba(133, 132, 132, 0.2);
-  background:linear-gradient(120deg, #dd0017, #000000);
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  background:linear-gradient(120deg, #026370, #000000);
 }
 #contact-us{
     width: 90%;
