@@ -1,3 +1,39 @@
+<?php 
+
+  $db = mysqli_connect('localhost', 'root', 'root', 'acmbackend');
+  
+  $username = "";
+  if (isset($_POST['reg'])) {
+  	$linkFor = $_POST['in1'];
+  	$originalLink = $_POST['in2'];
+    $s1Link='https://usict.acm.org/';
+  	$s2Link = $_POST['in3'];
+    $exx = explode(" ",$s2Link);
+    $s2Link = join("_",$exx);
+    $shortLink=$s1Link.$s2Link;
+  	$sql_u = "SELECT * FROM link WHERE shortLink='$shortLink'";
+  	$res_u = mysqli_query($db, $sql_u);
+
+  	if (mysqli_num_rows($res_u) > 0) {
+        echo "<div style='position:absolute;margin:400px 0px 0px 460px; color:red;'>";
+        echo "<h2>Custom name Already Taken !!</h2>"	;
+        echo "<h2> &nbsp; Try Another Custom Name..</h2>"	;
+        echo "</div>";
+  	}else{
+
+           $query = "INSERT INTO link (linkFor, originalLink, shortLink) 
+      	    	  VALUES ('$linkFor', '$originalLink', '$shortLink')";
+           $results = mysqli_query($db, $query);
+
+           echo "<div style='position:absolute;margin:200px 0px 0px 360px; color:green; font-weight:bold;'>";
+           echo "<h2 style=' font-weight:bold; margin-left:100px;'> &nbsp;&nbsp; Congratulations..🥳</h2>"	;
+           echo "<h2 >Your Short link has been Generated !!</h2>"	;
+           echo "</div>";
+           exit();
+  	}
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,7 +98,7 @@
             position:relative;
             width:500px;
         }
-        #custID{
+        #in3{
             padding:20px 5px 20px 170px;
             font-weight:100em;
             width:100%;
@@ -94,34 +130,48 @@
                         <h2 class="pull-left">Shorten Link Admin Panel</h2>
                         <!-- <a href="?table=AddLink" class="btn btn-primary pull-right">Add New File</a> -->
                     </div>
-                    <form action="">
                     <div id="container">
-                        <input type="text" class='form-control alignment123' name="file0" placeholder="Link is for" required />
-                        <br>
-                        <input type="text" id="file" class='form-control' name="file1" placeholder="Enter previous link" required />
-                        <br>
-                        <!-- <div class="input-group mb-3">
-                            <div class="input-group-addon">
-                                <span class="input-group-text" id="basic-addon3">https://usict.acm.org/</span>
-                            </div>
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Custom Link">
-                        </div> -->
-
-
-                        <div class="form-text new">
-                            <input type=text class="form-control" placeholder="Custom Link Name" id="custID"/ required>
-                            <label for="custID" class="static-value">https://usict.acm.org/  </label>
-                        </div> 
-                        <button id="" class="btn btn-primary new" type="" name="" value="">Get Preview</button>
-                        <br>
-                        <br>
-                        <br>
-                        <input id="submitForm" class="btn btn-primary" type="submit" name="submit" value="Check & Confirm" />
-
-
+                        <form method="POST">
+                            <input type="text" id="in1" class='form-control alignment123' name="in1" placeholder="Link is for" required />
+                            <br>
+                            <input type="text" id="in2" class='form-control' name="in2" placeholder="Enter previous link" required />
+                            <br>
+                            <!-- <div class="input-group mb-3">
+                                <div class="input-group-addon">
+                                    <span class="input-group-text" id="basic-addon3">https://usict.acm.org/</span>
+                                </div>
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Custom Link">
+                            </div> -->
+                            <div class="form-text new">
+                                <input type=text class="form-control" name="in3" placeholder="Custom Link Name" id="in3" required />
+                                <label for="in3" class="static-value">https://usict.acm.org/  </label>
+                            </div> 
+                            <button id="" class="btn btn-primary new" type="" name="" value="">Get Preview</button>
+                            <br><br><br>
+                            <button type="submit" class="btn btn-primary" id="submitForm" name="reg" >Check & Confirm</button>
+                        </form>
                     </div>
-                    </form>
                 </div>
             </div>
         </div>
+    </div>
+    <script>
+        // document.getElementById("submitForm").addEventListener("click", function(e) {
+        //     e.preventDefault();
+        //     // console.log("dsfg");
+        //     let in11= document.querySelector('#in1').value;
+        //     // console.log(in11);
+        //     let in22= document.querySelector('#in2').value;
+        //     // console.log(in22);
+        //     let in33= document.querySelector('#in3').value;
+        //     // console.log(in33);
+        //     console.log("dsfgh");
+        //     if(in11=="" || in22=="" || in33==""){
+        //         // console.log("error");
+        //         alert("Fill all fields");
+        //     }
+        // });
+    </script>
+   
 </body>
+</html>
