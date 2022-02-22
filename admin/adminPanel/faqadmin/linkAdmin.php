@@ -70,6 +70,7 @@
                             echo "<table class='table table-bordered table-striped'>";
                                 echo "<thead>";
                                     echo "<tr>";
+                                        echo "<th>Link For</th>";
                                         echo "<th>Original Link</th>";
                                         echo "<th>Shortened Link</th>";
                                         echo "<th>Action</th>";
@@ -78,7 +79,10 @@
                                 echo "<tbody>";
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
-                                        echo "<td>" . $row['originalLink'] . "</td>";
+                                        $ii = $row['originalLink'];
+                                        $ii = substr($ii,0,51);
+                                        echo "<td>" . $row['linkFor'] . "</td>";
+                                        echo "<td>" . $ii . "....</td>";
                                         echo "<td>" . $row['shortLink'] . "</td>";
                                         
                                         echo "<td>";

@@ -96,7 +96,9 @@
                     </div>
                     <form action="">
                     <div id="container">
-                        <input type="text" id="file" class='form-control alignment123' name="file" placeholder="Enter previous link" required />
+                        <input type="text" class='form-control alignment123' name="file0" placeholder="Link is for" required />
+                        <br>
+                        <input type="text" id="file" class='form-control' name="file1" placeholder="Enter previous link" required />
                         <br>
                         <!-- <div class="input-group mb-3">
                             <div class="input-group-addon">
