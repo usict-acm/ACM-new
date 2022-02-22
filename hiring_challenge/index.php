@@ -309,6 +309,60 @@
     </div>
     <!-- TEAM -->
 
+
+    <!-- Contact us -->
+    <section id="contact-us">
+        <div class="container-contact">
+            <div class="content">
+                <div class="left-side">
+                    <div class="address details">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="topic">Address</div>
+                        <div class="text-one">Usict Delhi Sector-14</div>
+
+                    </div>
+                    <div class="phone details">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="topic">Phone</div>
+                        <div class="text-one">+0098 9893 5647</div>
+                        <div class="text-two">+0096 3434 5678</div>
+                    </div>
+                    <div class="email details">
+                        <i class="fas fa-envelope"></i>
+                        <div class="topic">Email</div>
+                        <div class="text-two">info@usict.acm.org</div>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="topic-text">Leave a Message</div>
+                    <form action="#">
+                        <div class="row">
+                            <div class="input-box col">
+                                <input type="text" placeholder="Enter your name">
+                            </div>
+                            <div class="input-box col">
+                                <input type="text" placeholder="Phone no.">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-box col">
+                                <input type="email" placeholder="Enter your email">
+                            </div>
+                            <div class="input-box col">
+                                <input type="text" placeholder="Company">
+                            </div>
+                        </div>
+                        <textarea name="text" class="feedback-input" placeholder="Message"></textarea>
+                        <div class="button">
+                            <input type="button" value="Send Now">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End of Contact us -->
+
     <!-- FOOTER -->
     <section class="fluid-container mt-5 mb-3">
         <div class="card bg-white mx-5">
