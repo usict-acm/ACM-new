@@ -58,6 +58,30 @@
             position: relative;
             top: -10px;
         }
+        .form-text{
+            position:relative;
+            width:500px;
+        }
+        #custID{
+            padding:20px 5px 20px 170px;
+            font-weight:100em;
+            width:100%;
+
+        }
+        .new{
+            display:inline-block;
+        }
+        .static-value{
+            position:absolute;
+            /* background-color:#337ab7; */
+            color:white;
+            left:10px;
+            font-weight:bold;
+            font-size:1.1em;
+            color:#444;
+            top:9px;
+        }
+
     </style>
 </head>
 
@@ -67,25 +91,34 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-header clearfix">
-                        <h2 class="pull-left">Files Admin Panel</h2>
-                        <a href="?table=AddFile" class="btn btn-primary pull-right">Add New File</a>
+                        <h2 class="pull-left">Shorten Link Admin Panel</h2>
+                        <!-- <a href="?table=AddLink" class="btn btn-primary pull-right">Add New File</a> -->
                     </div>
+                    <form action="">
                     <div id="container">
-                        <input type="text" id="file" class='form-control alignment123 titleField reqField0' name="file" placeholder="Enter previous link" required />
+                        <input type="text" id="file" class='form-control alignment123' name="file" placeholder="Enter previous link" required />
                         <br>
-                        <div class="input-group mb-3">
+                        <!-- <div class="input-group mb-3">
                             <div class="input-group-addon">
                                 <span class="input-group-text" id="basic-addon3">https://usict.acm.org/</span>
                             </div>
                             <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Custom Link">
-                        </div>
+                        </div> -->
+
+
+                        <div class="form-text new">
+                            <input type=text class="form-control" placeholder="Custom Link Name" id="custID"/ required>
+                            <label for="custID" class="static-value">https://usict.acm.org/  </label>
+                        </div> 
+                        <button id="" class="btn btn-primary new" type="" name="" value="">Get Preview</button>
                         <br>
-                        <button id="submitForm" class="btn btn-primary" type="submit" name="submit" value="submit">Previous Link</button>
-                        <button id="submitForm" class="btn btn-primary" type="submit" name="submit" value="submit">Get Preview</button>
-                        <button id="submitForm" class="btn btn-primary" type="submit" name="submit" value="submit">Check&confirm</button>
+                        <br>
+                        <br>
+                        <input id="submitForm" class="btn btn-primary" type="submit" name="submit" value="Check & Confirm" />
 
 
                     </div>
+                    </form>
                 </div>
             </div>
         </div>

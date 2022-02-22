@@ -120,9 +120,9 @@
             <hr class="sidebar-divider">
 
             <li class="nav-item">
-                <a class="nav-link" href="?table=Forms">
+                <a class="nav-link" href="?table=ShortLink">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Files</span></a>
+                    <span>Link</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
