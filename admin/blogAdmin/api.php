@@ -847,6 +847,75 @@ function getFields()
         );
     }
 };
+
+function postForm(){
+    $database = new Database();
+    $db = $database->connect();
+    $fieldID1 = $_POST["fieldID1"];
+
+    $formTitle = $_POST["formTitle"];
+    // $sql = "INSERT INTO `event` (`sno`, `name`, `description`, `startDate`, `endDate` , `button1Text`, `button1Link`, `button2Text`, `button2Link` , `partners` , `speakers` , `poster` , `year` , `time`) VALUES ('0', '$txtTitle', '$txtDescription','$txtStartdate','$txtEnddate','$txtButton1Text', '$txtButton1Link', '$txtButton2Text', '$txtButton2Link', '$txtPartners','$txtSpeakers', '$destinationfile', '$txtYear', '$txtTime');";
+    if($db->query($sql) == true){
+        echo json_encode(
+            array('message' => 'Form has been submitted')
+        );       
+    } else{
+        echo json_encode(
+            array('message' => 'Internal Server Error. Try Again')
+        );
+    }
+};
+
+function saveForm(){
+    $database = new Database();
+    $db = $database->connect();
+
+    $form = new Form($db);
+
+    $name = "event 1";
+
+    $value = explode(" ",$name);
+    $val = join("_",$value);
+
+    $request = array();
+    array_push($request,$val);
+
+    for($i = 0; $i < 3; $i++){
+        $field_array = array();
+        array_push($field_array,"Email$i");
+        array_push($field_array,"textbox");
+        array_push($request,$field_array);
+    }
+
+    $form->saveFormInFormsTable($name,$request);
+    $result = $form->createResponseTable($request);
+}
+
+function dataForm(){
+    $database = new Database();
+    $db = $database->connect();
+    $textt = $_POST["text1"];
+    $txtTitle = json_decode($textt);
+    $form = new Form($db);
+    $value = explode(" ",$txtTitle[0]);
+    $val = join("_",$value);
+    $form->saveDataResponsesInTable($val,$txtTitle);
+}
+function fileupload(){
+    // $uploadLocation = '../../upload/announcements/'.$filename;
+    $id = $_POST["id"];
+    echo $id;
+    $filename = $_FILES["file"]["name"];
+    $filetemppath= $_FILES["file"]['tmp_name'];
+    $fileerror = $_FILES["file"]["error"];
+    echo $filename;
+    echo $filetemppath;
+    echo $fileerror;
+    
+        $uploadLocation = '../../forms/responsesfile/'.$id.'_'.$filename;
+        move_uploaded_file($filetemppath,$uploadLocation);
+}
+
 $q = $_GET['q'];
 switch ($q) {
     case 'readAll':
@@ -902,6 +971,18 @@ switch ($q) {
         break;
     case 'fields':
         getFields();
+        break;
+    case 'saveForm':
+        saveForm();
+        break;
+    case 'dataForm':
+        dataForm();
+        break;
+    case 'fileupload':
+        fileupload();
+        break;
+    case 'HardFetchResponses':
+        testResponses();
         break;
     default:
         echo "Invalid Query";

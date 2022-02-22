@@ -27,8 +27,64 @@ if(isset($_POST["Sno"]) && !empty($_POST["Sno"])){
     // Close statement
     mysqli_stmt_close($stmt);
     
-    // Close connection
-    mysqli_close($link);
+    // // Close connection
+    // mysqli_close($link);
+    // class Database
+    // {
+    //   private $server;
+    //   private $username;
+    //   private $password;
+    //   private $database;
+    //   private $port;
+    
+    //   public function connect()
+    //   {
+    //     // include(__DIR__.'/../../enviornment.php');
+    //     $env_server = "localhost";
+    //     $env_username = "root";
+    //     $env_password = "root";
+    //     $env_database = "acmbackend";
+    //     $env_port = "8889";
+        
+    //     $this->server = $env_server;
+    //     $this->username = $env_username;
+    //     $this->password = $env_password;
+    //     $this->database = $env_database;
+    //     $this->port = $env_port;
+    //     // echo "ewrty".$env_password;
+
+        
+    //     $conn = new mysqli($this->server, $this->username, $this->password, $this->database, $this->port);
+    //     return $conn;
+    //   }
+    // }
+// echo "dfghj";
+    
+
+    // require('admin/blogAdmin/database.php');
+    // $database = new Database();
+    // $link = $database->connect();
+    // $connection = $link;
+    
+    // if(!$connection){
+    //     // die(mysqli_connect_error());
+    //     echo "error h bhaiya ";
+    //     // die();
+    // }
+    // echo "srdtfg";
+
+    // $sql = "DELETE FROM forms WHERE formID =".$Sno;
+
+    // if($conn->query($sql)==true){
+    //     echo "Sucessfully Deleted";
+    // }else {
+    //     echo "ERROR: $sql <br> $conn->error";
+    // }
+    // mysqli_close($link);
+
+
+    
+
 } else{
     // Check existence of Sno parameter
     if(empty(trim($_GET["Sno"]))){

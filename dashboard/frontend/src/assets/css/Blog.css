@@ -62,7 +62,11 @@
 /* sidebar cover image section */
 .blog__cover {
 	width: 100%;
+<<<<<<< HEAD
+	margin-top: -1rem;
+=======
 	/* margin-top: -1rem; */
+>>>>>>> e80fb4c5d90316a9a580217fa0c024d7d247d23d
 	margin-bottom: 1rem;
 }
 .blog__coverImage {
