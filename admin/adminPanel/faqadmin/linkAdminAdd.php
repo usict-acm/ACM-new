@@ -36,23 +36,31 @@ $connection = $link;
         $shortLink=$s1Link.$s2Link;
         $sql_u = "SELECT * FROM link WHERE shortLink='$shortLink'";
         $res_u = mysqli_query($link, $sql_u);
-  
+        
+       
+
         if (mysqli_num_rows($res_u) > 0) {
             echo "<div style='position:absolute;margin:400px 0px 0px 460px; color:red;'>";
             echo "<h2>Custom name Already Taken !!</h2>"    ;
             echo "<h2> &nbsp; Try Another Custom Name..</h2>"   ;
             echo "</div>";
         }else{
+            if (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $s2Link)){
+                echo "<div style='position:absolute;margin:260px 0px 0px 285px; color:red; font-weight:bold;'>";
+                echo "<h5 style=' margin-left:100px;'> &nbsp;&nbsp; Don't use special characters in custom name</h5>"  ;
+                echo "</div>";
+            }else{
   
-             $query = "INSERT INTO link (linkFor, originalLink, shortLink) 
-                      VALUES ('$linkFor', '$originalLink', '$shortLink')";
-             $results = mysqli_query($link, $query);
-  
-             echo "<div style='position:absolute;margin:200px 0px 0px 360px; color:green; font-weight:bold;'>";
-             echo "<h2 style=' font-weight:bold; margin-left:100px;'> &nbsp;&nbsp; Congratulations..🥳</h2>"  ;
-             echo "<h2 >Your Short link has been Generated !!</h2>"   ;
-             echo "</div>";
-             exit();
+                $query = "INSERT INTO link (linkFor, originalLink, shortLink) 
+                        VALUES ('$linkFor', '$originalLink', '$shortLink')";
+                $results = mysqli_query($link, $query);
+                echo "<div style='position:absolute;margin:200px 0px 0px 360px; color:green; font-weight:bold;'>";
+                echo "<h2 style=' font-weight:bold; margin-left:100px;'> &nbsp;&nbsp; Congratulations..🥳</h2>"  ;
+                echo "<h2 >Your Short link has been Generated !!</h2>"   ;
+                echo "</div>";
+                exit();
+            }
+
         }
     } else {
         echo "<div style='position:absolute;margin:400px 0px 0px 550px; color:red;'>";
@@ -161,7 +169,7 @@ $connection = $link;
                         <!-- <a href="?table=AddLink" class="btn btn-primary pull-right">Add New File</a> -->
                     </div>
                     <div id="container">
-                        <form method="POST">
+                        <form method="POST" > 
                             <input type="text" id="in1" class='form-control alignment123' name="in1" placeholder="Link is for" required />
                             <br>
                             <input type="text" id="in2" class='form-control' name="in2" placeholder="Enter previous link" required />
