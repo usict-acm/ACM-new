@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 @import 'https://fonts.googleapis.com/css?family=Montserrat';
-* {
-  font-family: Montserrat;
-}
 /* Common Styles */
 * {
   margin: 0;
@@ -18,21 +15,11 @@ html {
   font-size: 62.5%;
 }
 
-/* home-background */
-
-
-/* body {
-  margin: 0;
-} */
-
 a {
   color: #777;
   text-decoration: none;
 }
-
-
-
-/* - link under - */
+/******************************************************* Start of Home Section *********************************************/
 
 .link-arrow:after {
   content: '';
@@ -99,11 +86,6 @@ a {
   background: #ffd300
 }
 
-
-
-
-
-
 /* header   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1); */
 
 .header {
@@ -144,9 +126,10 @@ a {
   color: #ffd300;
   display: block;
   float: left;
-  font-size: 2.2em;
-  padding: 2px 0px;
+  font-size: 2.9em;
+  /* padding: 2px 0px; */
   margin-left: 85px;
+  font-family: Montserrat;
   text-decoration: none;
   font-weight: bold;
 }
@@ -155,8 +138,8 @@ a {
     height: 72px;
     width: 68px;
     position:absolute;
-    left: 10px;
-    top: 15px;
+    left: 7px;
+    top: 6px;
 }
 
 /* menu */
@@ -235,12 +218,6 @@ a {
   top: 0;
 }
 
-
-
-
-
-
-
 /* 48em = 768px */
 
 @media (min-width: 875px) {
@@ -268,8 +245,10 @@ a {
     width: 50%;
   }
 }
-/* End of Header */
-/*** End of Home Section ***/
+
+/*************************************************** End of Home Section ******************************************************/
+
+
 
 /********************************************************** ABOUT US ********************************************************/
 
