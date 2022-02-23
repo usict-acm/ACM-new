@@ -15,59 +15,20 @@
 
 <body>
     <!-- Header -->
-    <section class="fluid-container">
-        <div class="area">
-            <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-
-                <!-- NAVBAR -->
-            <nav id="navbar">
-                    <div class='test'>
-                        <div id="acmimg"><img src="acm1.png" alt="" class="acm-img"></div>
-                        <div class="logo">
-                            <h1>
-                                <span class="text-center pt-2">H</span>
-                                <span class="text-center pt-2">a</span>
-                                <span class="text-center pt-2">c</span>
-                                <span class="text-center pt-2">k</span>
-                                <span class="text-center pt-2">a</span>
-                                <span class="text-center pt-2">t</span>
-                                <span class="text-center pt-2">h</span>
-                                <span class="text-center pt-2">o</span>
-                                <span class="text-center pt-2">n</span>
-                            </h1>
-                        </div>
-                    </div>
-
-                    <ul>
-                        <li class="item"><a href="#about">About</a></li>
-                        <li class="item"><a href="#timeline">Timeline</a></li>
-                        <li class="item"><a href="#themes">Themes</a></li>
-                        <li class="item"><a href="#partners">Partners</a></li>
-                        <li class="item"><a href="#team">Team</a></li>
-                        <li class="item"><a href="#faq">FAQ</a></li>
-                        <li class="item"><a href="#contact">Contact</a></li>
-                    </ul>
-            </nav>
-                <!-- NAVBAR -->
-
-            <div class="header-text">
-                <h1 class="heading">TRELLATHON</h1>
-                <p class="header-paragraph">
-                    24-HOUR HACKATHON
-                    9TH MARCH 2021
-                </p>
-            </div>
+    <section id="home">
+        <div class="header">
+        <a class="logo-navbar" href="">TRELLATHON</a>
+        <img src="acm1.png" alt="" class="logo-acm">
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><a href="#about" class="link link-theme link-arrow">About</a></li>
+            <li><a href="#timeline" class="link link-theme link-arrow">Timeline</a></li>
+            <li><a href="#partner" class="link link-theme link-arrow">Partner</a></li>
+            <li><a href="#team" class="link link-theme link-arrow">Team</a></li>
+            <li><a href="#faq" class="link link-theme link-arrow">FAQ</a></li>
+            <li><a href="#contact" class="link link-theme link-arrow">Contact us</a></li>
+        </ul>
         </div>
     </section>
     <!-- End of Header -->

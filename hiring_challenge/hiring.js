@@ -5,7 +5,7 @@ const editor = CodeMirror.fromTextArea(code, {
   matchBrackets: true,
   scrollbarStyle: "overlay",
   Tab: "indentMore",
-  defaultTab: function(cm) {
+  defaultTab: function (cm) {
     if (cm.somethingSelected()) cm.indentSelection("add");
     else cm.replaceSelection("  ", "end");
   },
@@ -22,3 +22,14 @@ const changeMode = () => {
   mode = mode === "css" ? "javascript" : "css"
   editor.setOption("mode", mode)
 }
+
+
+
+
+
+$('a').click(function (e) {
+  e.preventDefault();
+  $('body, html').animate({
+    scrollTop: $($(this).attr('href')).offset().top - 120
+  }, 1000);
+});
