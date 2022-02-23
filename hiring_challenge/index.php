@@ -77,6 +77,32 @@
     </section>
     <!--**************************************************** END OF ABOUT *****************************************************-->
 
+    <!-- ************************************************* Start of Partner ************************************************* -->
+    <section id="partner">
+
+<div class="container-partner">
+    <h2 class="mb-sm text-center heading-partner">Our <strong>Partners</strong></h2>
+    <strong>
+        <div class="row d-flex justify-content-center">
+            <div class=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-3">
+                <div class="square-holder">
+                    <img alt="" src="trell_logo.png" />
+                    <h2 class="pat-heading text-center">TRELL</h2>
+                </div>
+            </div>
+            <div class=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-3">
+                <div class="square-holder">
+                    <img alt="" src="ensvee-logo.png" />
+                    <h2 class="pat-heading text-center">ENSVEE</h2>
+                </div>
+            </div>
+        </div>
+    </strong>
+</div>
+</section>
+
+    <!-- ************************************************* END of Partner ************************************************* -->
+
     <!--***************************************************** TEAM **********************************************************-->
     <section id="team-section">
     <div class= "container-team">
