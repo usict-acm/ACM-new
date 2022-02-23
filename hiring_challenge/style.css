@@ -630,13 +630,14 @@ a {
 }
 #partner{
     /* margin-bottom: 50px; */
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     background-color: #000;
 }
 
 .heading-partner{
   color: yellow;
   font-size: 4.3rem;
+  padding-top: 45px;
 }
 
 .pat-heading{
@@ -658,7 +659,7 @@ a {
   font-weight: 700;
   /* text-decoration: underline;
   text-decoration-thickness: 3px; */
-  color: #1cc9f5;
+  color: yellow;
 }
 #team-section{
   background-color: #000000;
@@ -694,7 +695,7 @@ a {
   left: 0;
 }
 .our-team .pic:after {
-  border-color: #37b0f1 #e6e5e5 #e6e5e5 #37b0f1;
+  border-color: #3ab5fc #e6e5e5 #e6e5e5 #41c1fc;
   z-index: 1;
   transform: rotate(-10deg);
   transition: all 0.5s ease 0s;
@@ -710,7 +711,7 @@ a {
 .our-team .title {
   font-size: 26px;
   font-weight: bold;
-  color: rgb(221, 4, 58);
+  color: #7a7a7a;
   padding-bottom: 10px;
   margin: 15px 0 10px 0;
   position: relative;
@@ -719,7 +720,7 @@ a {
   content: "";
   width: 30px;
   height: 2px;
-  background: rgb(113, 3, 146);
+  background: #ffff00;
   margin: 0 auto;
   position: absolute;
   bottom: 0;
@@ -753,7 +754,7 @@ a {
   transition: all 0.3s ease-out 0s;
 }
 .our-team .icon li a:hover {
-  background: #37b0f1;
+  background: #2a2b28;
   color: #fff;
 }
 @media only screen and (max-width: 990px) {
