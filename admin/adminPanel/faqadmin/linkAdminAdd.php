@@ -38,10 +38,10 @@ $connection = $link;
         $res_u = mysqli_query($link, $sql_u);
   
         if (mysqli_num_rows($res_u) > 0) {
-          echo "<div style='position:absolute;margin:400px 0px 0px 420px; color:red;'>";
-          echo "<h2  style='font-weight:bold;'>Kitni baar same custom name daaloge 😒!!</h2>"	;
-          echo "<h2 style='margin-left: 75px; font-weight:bold;'> &nbsp; Kuch aur name daal kr try kro 🤔</h2>"	;
-          echo "</div>";
+            echo "<div style='position:absolute;margin:400px 0px 0px 460px; color:red;'>";
+            echo "<h2>Custom name Already Taken !!</h2>"    ;
+            echo "<h2> &nbsp; Try Another Custom Name..</h2>"   ;
+            echo "</div>";
         }else{
   
              $query = "INSERT INTO link (linkFor, originalLink, shortLink) 
@@ -49,15 +49,15 @@ $connection = $link;
              $results = mysqli_query($link, $query);
   
              echo "<div style='position:absolute;margin:200px 0px 0px 360px; color:green; font-weight:bold;'>";
-             echo "<h2 style=' font-weight:bold; margin-left:100px;'> &nbsp;&nbsp; Congratulations..🥳</h2>"	;
-             echo "<h2 style='margin-left: 120px; font-weight:bold; font-size:3rem;'> Aapka kaam ho gya 😉!!</h2>"	;
+             echo "<h2 style=' font-weight:bold; margin-left:100px;'> &nbsp;&nbsp; Congratulations..🥳</h2>"  ;
+             echo "<h2 >Your Short link has been Generated !!</h2>"   ;
              echo "</div>";
              exit();
         }
     } else {
         echo "<div style='position:absolute;margin:400px 0px 0px 550px; color:red;'>";
-        echo "<h2 style='font-weight: bold; margin-left: 30px;'>URL glt hai bhai 🤦‍♀️!!</h2>"	;
-        echo "<h2 style='font-weight: bold;'> Sahi URL daalo na 😠</h2>"	;
+        echo "<h2 style='font-weight: bold; margin-left: 30px;'>URL is Invalid !!</h2>"	;
+        echo "<h2 style='font-weight: bold;'> Try with Correct URL 😠</h2>"	;
         echo "</div>";
     }
 

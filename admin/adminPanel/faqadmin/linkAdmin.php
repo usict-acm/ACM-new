@@ -83,7 +83,7 @@
                                         $ii = substr($ii,0,51);
                                         echo "<td>" . $row['linkFor'] . "</td>";
                                         echo "<td>" . $ii . "....</td>";
-                                        echo "<td>" . $row['shortLink'] . "</td>";
+                                        echo "<td><a target='_blank' href='". $row['shortLink'] ."'>". $row['shortLink'] ."</a></td>";
                                         
                                         echo "<td>";
                                             // echo "<a href='../blogAdmin/responses.php?q=readResponses&Id=".$row['formID']."'title='View Record' data-toggle='tooltip'><button class='btn btn-primary' type='button'>Responses</button></span></a>";
