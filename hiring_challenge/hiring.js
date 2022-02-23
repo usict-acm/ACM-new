@@ -23,10 +23,6 @@ const changeMode = () => {
   editor.setOption("mode", mode)
 }
 
-
-
-
-
 $('a').click(function (e) {
   e.preventDefault();
   $('body, html').animate({

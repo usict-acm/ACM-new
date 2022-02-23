@@ -897,6 +897,123 @@ a {
 /********************************************************End of Contact us ****************************************************/
 
 
+/********************************************************FAQs ****************************************************/
+body {
+  padding:0;
+  margin:0;
+  background:#131617;
+  overflow-x: hidden;
+}
+.main-section {
+  float: left;
+  width: 100%;
+  display: block;
+  background: #0A192F;
+  height: 100vh;
+}
+.container {
+    float: left;
+    width: 80%;
+    margin: 2rem 10%;
+}
+.fullwidth-container {display:block;width:80%;margin:2rem 10%}
+#faqs {}
+.line-heading {
+  font-family: sans-serif;
+  color: #ccd6f6;
+  font-weight: 600;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 10px 0 40px 10%;
+  white-space: nowrap;
+  font-size: 26px;
+  text-shadow: 1px 1px 1px rgb(0,0,0);
+}
+.line-heading:after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 1px;
+  margin: 0 0 0 20px;
+  background: rgba(204,214,246,.2);
+  text-shadow: none;
+  transition: all .6s ease-in-out 0s
+}
+.line-heading:hover:after{
+  width: 180px;
+  background: rgba(204,214,246,.6);
+}
+/** The Faq Section **/
+#faqSection div {
+  float: left;
+  display: inline-block;
+  width: 46%;
+  margin: 0 2%;
+  overflow: hidden;
+}
+#faqSection .collapsible {
+  background-color: #112240;
+  border: 1px solid hsla(0,0%,51.4%,.16);
+  border-radius: 7px;
+  box-shadow: 0 10px 30px -15px rgb(0 0 0);
+  transition: box-shadow .2s ease 0s;
+  color: #ccd6f6;
+  margin: 0 0 8px;
+  width: 100%;
+  padding: 12px;
+  font-family: sans-serif;
+  font-size: 15px;
+  text-align:left;
+}
+#faqSection .collapsible:hover {
+  box-shadow: 0 10px 60px -15px rgba(0,0,0,1);
+}
+#faqSection .active, #faqSection .collapsible:hover {}
+#faqSection .collapsible:after {content:"\002B";font-weight:bold;float:right;margin-left:5px}
+#faqSection .active:after {content:"\2212"}
+#faqSection .faq-content {
+  overflow: hidden;
+  width: calc(100% - 8%);
+  padding: 5px 2%;
+  transition: all .25s ease-in-out 0s;
+  background: #0b1629;
+  border: 1px solid hsla(0,0%,51.4%,.16);
+  border-radius: 7px;
+  max-height: 0px;
+  visibility: hidden;
+}
+#faqSection .faq-content p {
+  font-family: sans-serif;
+  color: #c2c2c2;
+  line-height: 140%;
+  font-size: 14px;
+  margin: 0 0 12px;
+  text-shadow: 1px 1px 0 rgb(0 0 0 / 80%);
+  font-weight: 100;
+}
+#faqSection .faq-content a {
+  color: #00C58E;
+  font-weight: 600;
+  letter-spacing: .05rem;
+}
+#faqSection .faq-content ul {border-left:2px solid #00C58E}
+#faqSection .faq-content li {
+  color: #bad2e2;
+  font-size: .85rem;
+  line-height: 160%;
+  font-weight: 200;
+  margin: 8px 0 8px 2%;
+  list-style: none;
+  width: 90%;
+  font-family: sans-serif;
+  text-shadow: 1px 1px 0 rgb(0 0 0);
+}
+
+/********************************************************FAQs ****************************************************/
+
 /********************************************************** FOOTER ******************************************************/
 /* body {
   background-color: #000000;
