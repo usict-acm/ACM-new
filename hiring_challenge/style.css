@@ -612,6 +612,7 @@ a {
   margin-top:50px;
   background-color:#000000;
   /* min-height:200px */
+  box-shadow: rgba(246, 250, 32, 0.4) -5px 5px, rgba(247, 250, 96, 0.3) -10px 10px, rgba(252, 234, 78, 0.2) -15px 15px, rgba(240, 227, 46, 0.1) -20px 20px, rgba(240, 237, 46, 0.05) -25px 25px;
 }
 
 .square-holder img {
@@ -624,6 +625,9 @@ a {
   filter:none;
 }
 
+.square-holder:hover h2{
+  color: yellow;
+}
 #partner{
     /* margin-bottom: 50px; */
     padding-bottom: 50px;
@@ -640,9 +644,7 @@ a {
   font-weight: bold;
   color: grey;
 }
-.pat-heading:hover{
-  color:yellow;
-}
+
 
  /* ************************************************** End of Partner *************************************************  */
 
