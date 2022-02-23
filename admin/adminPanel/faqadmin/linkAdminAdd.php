@@ -1,6 +1,33 @@
 <?php 
 
 /*                      included database.php           */
+
+class Link{
+          // DB stuff
+          private $conn;
+
+            // Post Properties
+            public $id;
+
+            public function __construct($db){
+                $this->conn = $db;
+            }
+
+            public function latestLink(){
+                $query = 'SELECT shortLink FROM link ORDER BY id DESC LIMIT 1';
+                $stmt = $this->conn->query($query);
+                $countID =  $stmt->fetch_assoc();
+                foreach ($countID as $key => $item) {
+                        $count = $item;
+                    }
+                // echo $count;
+                return $count;
+            }
+
+
+     }
+
+
 class Database{
   private $server;
   private $username;
@@ -51,13 +78,40 @@ $connection = $link;
                 echo "</div>";
             }else{
   
-                $query = "INSERT INTO link (linkFor, originalLink, shortLink) 
+                $query = "INSERT INTO link (`linkFor`, `originalLink`, `shortLink`) 
                         VALUES ('$linkFor', '$originalLink', '$shortLink')";
                 $results = mysqli_query($link, $query);
-                echo "<div style='position:absolute;margin:200px 0px 0px 360px; color:green; font-weight:bold;'>";
-                echo "<h2 style=' font-weight:bold; margin-left:100px;'> &nbsp;&nbsp; Congratulations..🥳</h2>"  ;
-                echo "<h2 >Your Short link has been Generated !!</h2>"   ;
-                echo "</div>";
+                // echo "<div style='position:absolute;margin:0px 0px 0px 360px; color:green; font-weight:bold;'>";
+                // echo "<h2 style=' font-weight:bold; margin-left:100px;'> &nbsp;&nbsp; Congratulations..🥳</h2>"  ;
+                // echo "<h2 >Your Short link has been Generated !!</h2>"   ;
+                // echo "</div>";
+                $oneLink = new Link($link);  
+                $latestLink = $oneLink->latestLink();
+                // echo $latestLink;
+                // echo $latestLink;
+                // echo $latestLink;
+                // echo $latestLink;
+                // echo $latestLink;
+
+
+                echo "<script>function copy(){navigator.clipboard.writeText('".$latestLink."');}</script>";
+            
+
+                echo "<div class='wrapper' style='margin:100px 0px 0px 350px;'>";
+                    echo "<div class='container-fluid'>";
+                        echo "<div class='row'>";
+                            echo "<div class='col-md-12'>";
+                                echo "<div class='page-header'></div>";
+                                echo "<h2>Your Link has been created..🥳</h2> ";
+                                echo "<br>";
+                                // echo "<h2>You may copy the link from below.</h2><br>";
+                            echo "<div>";
+                        echo "<div>";
+                    echo "<div>";
+                echo "<div>";
+                echo "<h4 style='display:inline-block; color:#4e73df; font-weight:bold;'>".$latestLink."</h4>";
+                echo "<button style='margin-left:20px; display:inline-block;' class='btn btn-primary' onclick=copy()>Copy</button>";
+
                 exit();
             }
 
