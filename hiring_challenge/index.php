@@ -79,8 +79,8 @@
 
     <!--****************************************************** TIMELINE *******************************************************-->
 
-    <div id="container-timeline">
-    <h1 class = "timeline-heading">Timeline</h1>
+    <div class="container-timeline">
+    <h1 class = "timeline-heading mb-sm text-center heading-partner">Timeline</h1>
     <div class="timeline">
 		<div class="timeline-row">
 			<div class="timeline-time">
@@ -200,7 +200,7 @@
 
 		<div class="timeline-row">
 			<div class="timeline-time">
-				7:45PM<small>Dec 21</small>
+				7:45 PM<small>Dec 21</small>
 			</div>
 			<div class="timeline-content">
 				<i class="icon-attachment"></i>
@@ -214,12 +214,6 @@
 					<span class="badge badge-pill">Orders</span>
 					<span class="badge badge-pill">Sales</span>
 				</div> -->
-			</div>
-		</div>
-
-		<div class="timeline-row">
-			<div class="timeline-content">
-				<p class="m-0">Loading...</p>
 			</div>
 		</div>
 
