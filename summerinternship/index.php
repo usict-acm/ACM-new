@@ -97,11 +97,11 @@
         </div>
         <div class="col-md-8 my-2 text-center-md">
           <h6 class="alert-header md-text-custom">Registration</h6>
-          <p class="mb-0 mx-auto">Register now for working on trending technologies under top notch mentors.</p>
+          <p class="mb-0 mx-auto">We will be back soon with an another phase of the internship.</p>
         </div>
-        <div class="col-md-3 d-flex justify-content-center align-items-center">
+        <!-- <div class="col-md-3 d-flex justify-content-center align-items-center">
           <a class="sm-text-custom btn btn-outline-info" style="text-decoration: none;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSccJURrpgR_SKgxatV0NlAnQOKHY-oVGRrmW1wSV-doopOXtg/viewform">Register Now</a>
-        </div>
+        </div> -->
       </div>
     </span>
   </div>
