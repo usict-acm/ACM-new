@@ -62,59 +62,89 @@ $connection = $link;
         $s2Link = join("_",$exx);
         $shortLink=$s1Link.$s2Link;
         $sql_u = "SELECT * FROM link WHERE shortLink='$shortLink'";
+        $sql_o = "SELECT * FROM link WHERE originalLink='$originalLink'";
+        $res_o = mysqli_query($link, $sql_o);
         $res_u = mysqli_query($link, $sql_u);
         
        
-
-        if (mysqli_num_rows($res_u) > 0) {
-            echo "<div style='position:absolute;margin:400px 0px 0px 460px; color:red;'>";
-            echo "<h2>Custom name Already Taken !!</h2>"    ;
-            echo "<h2> &nbsp; Try Another Custom Name..</h2>"   ;
-            echo "</div>";
-        }else{
-            if (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $s2Link)){
-                echo "<div style='position:absolute;margin:260px 0px 0px 285px; color:red; font-weight:bold;'>";
-                echo "<h5 style=' margin-left:100px;'> &nbsp;&nbsp; Don't use special characters in custom name</h5>"  ;
-                echo "</div>";
-            }else{
-  
-                $query = "INSERT INTO link (`linkFor`, `originalLink`, `shortLink`) 
-                        VALUES ('$linkFor', '$originalLink', '$shortLink')";
-                $results = mysqli_query($link, $query);
-                // echo "<div style='position:absolute;margin:0px 0px 0px 360px; color:green; font-weight:bold;'>";
-                // echo "<h2 style=' font-weight:bold; margin-left:100px;'> &nbsp;&nbsp; Congratulations..🥳</h2>"  ;
-                // echo "<h2 >Your Short link has been Generated !!</h2>"   ;
-                // echo "</div>";
-                $oneLink = new Link($link);  
-                $latestLink = $oneLink->latestLink();
-                // echo $latestLink;
-                // echo $latestLink;
-                // echo $latestLink;
-                // echo $latestLink;
-                // echo $latestLink;
-
-
-                echo "<script>function copy(){navigator.clipboard.writeText('".$latestLink."');}</script>";
-            
-
-                echo "<div class='wrapper' style='margin:100px 0px 0px 350px;'>";
-                    echo "<div class='container-fluid'>";
-                        echo "<div class='row'>";
-                            echo "<div class='col-md-12'>";
-                                echo "<div class='page-header'></div>";
-                                echo "<h2>Your Link has been created..🥳</h2> ";
-                                echo "<br>";
-                                // echo "<h2>You may copy the link from below.</h2><br>";
+        if (mysqli_num_rows($res_o) > 0) {
+                    echo "<div class='wrapper' style='margin:50px 0px 0px 270px;'>";
+                        echo "<div class='container-fluid'>";
+                            echo "<div class='row'>";
+                                echo "<div class='col-md-12'>";
+                                    echo "<div class='page-header'></div>";
+                                    echo "<h2>ShortedLink for Given Link has Been Generated previously..</h2> ";
+                                    echo "<br>";
+                                echo "<div>";
                             echo "<div>";
                         echo "<div>";
                     echo "<div>";
-                echo "<div>";
-                echo "<h4 style='display:inline-block; color:#4e73df; font-weight:bold;'>".$latestLink."</h4>";
-                echo "<button style='margin-left:20px; display:inline-block;' class='btn btn-primary' onclick=copy()>Copy</button>";
+            $sql = "SELECT * FROM link";
+            if($result = mysqli_query($link, $sql)){
+                if(mysqli_num_rows($result) > 0){
+                        while($row = mysqli_fetch_array($result)){
+                            if($row['originalLink']==$originalLink){
+                                echo "<h6>Original Link</h6>";
+                                echo "<input type='text' class='form-control ' value='".$originalLink."' readonly />";
+                                echo "<br>";
+                                echo "<script>function copyAlGen(){navigator.clipboard.writeText('".$row['shortLink']."');}</script>";
+                                echo "<button style='position:absolute;left:-55px;top:187px; display:inline-block;' class='btn btn-primary' onclick=copyAlGen()>Copy</button>";
 
-                exit();
+                                echo "<h6>Shorted Link</h6>";
+                                echo "<input type='text' class='form-control ' value='".$row['shortLink']."' readonly />";
+                            }
+                        }
+                    mysqli_free_result($result);
+                } else{
+                    echo "<p class='lead'><em>No Record Found.</em></p>";
+                }
+            } else{
+                echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
             }
+            // echo "<br><h2> Wanna change Shorted Link ?</h2>"   ;
+            // echo "</div>";
+            exit();
+        }else{
+            if (mysqli_num_rows($res_u) > 0) {
+                echo "<div style='position:absolute;margin:400px 0px 0px 460px; color:red;'>";
+                echo "<h2>Custom name Already Taken !!</h2>"    ;
+                echo "<h2> &nbsp; Try Another Custom Name..</h2>"   ;
+                echo "</div>";
+            }else{
+                if (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $s2Link)){
+                    echo "<div style='position:absolute;margin:260px 0px 0px 285px; color:red; font-weight:bold;'>";
+                    echo "<h5 style=' margin-left:100px;'> &nbsp;&nbsp; Don't use special characters in custom name</h5>"  ;
+                    echo "</div>";
+                }else{
+    
+                    $query = "INSERT INTO link (`linkFor`, `originalLink`, `shortLink`) 
+                            VALUES ('$linkFor', '$originalLink', '$shortLink')";
+                    $results = mysqli_query($link, $query);
+                    $oneLink = new Link($link);  
+                    $latestLink = $oneLink->latestLink();
 
+
+                    echo "<script>function copy(){navigator.clipboard.writeText('".$latestLink."');}</script>";
+                
+
+                    echo "<div class='wrapper' style='margin:100px 0px 0px 350px;'>";
+                        echo "<div class='container-fluid'>";
+                            echo "<div class='row'>";
+                                echo "<div class='col-md-12'>";
+                                    echo "<div class='page-header'></div>";
+                                    echo "<h2>Your Link has been created..🥳</h2> ";
+                                    echo "<br>";
+                                echo "<div>";
+                            echo "<div>";
+                        echo "<div>";
+                    echo "<div>";
+                    echo "<h4 style='display:inline-block; color:#4e73df; font-weight:bold;'>".$latestLink."</h4>";
+                    echo "<button style='margin-left:20px; display:inline-block;' class='btn btn-primary' onclick=copy()>Copy</button>";
+                    // echo "<br><br><a style='margin:300px 0px 0px 70px; color:#4e73df; font-weight:20px;' href='?table=ShortLink'  ><- Back to Link Dashboard</a>";
+                    exit();
+                }
+
+            }
         }
     } else {
         echo "<div style='position:absolute;margin:400px 0px 0px 550px; color:red;'>";
@@ -124,6 +154,7 @@ $connection = $link;
     }
 
   }
+  mysqli_close($link);
 ?>
 
 <!DOCTYPE html>
@@ -235,7 +266,7 @@ $connection = $link;
                                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Custom Link">
                             </div> -->
                             <div class="form-text new">
-                                <input type=text class="form-control" name="in3" placeholder="Custom Link Name" id="in3" required />
+                                <input type=text class="form-control" name="in3" placeholder="Custom Link Name" onchange="checkSpec()" id="in3" required />
                                 <label for="in3" class="static-value">https://usict.acm.org/  </label>
                             </div> 
                             <button id="" class="btn btn-primary new" type="" name="" value="">Get Preview</button>
@@ -263,6 +294,9 @@ $connection = $link;
         //         alert("Fill all fields");
         //     }
         // });
+        function checkSpec(){
+            console.log("aa");
+        }
     </script>
    
 </body>
