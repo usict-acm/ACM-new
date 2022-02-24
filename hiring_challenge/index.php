@@ -84,7 +84,7 @@
     <div class="timeline">
 		<div class="timeline-row">
 			<div class="timeline-time">
-				7:45PM<small>Dec 21</small>
+				7:45 PM<small>Dec 21</small>
 			</div>
 			<div class="timeline-content">
 				<i class="icon-attachment"></i>
