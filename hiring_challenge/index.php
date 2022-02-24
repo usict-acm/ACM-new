@@ -79,7 +79,7 @@
 
     <!--****************************************************** TIMELINE *******************************************************-->
 
-    <div class="container-timeline">
+    <div id="container-timeline">
     <h1 class = "timeline-heading">Timeline</h1>
     <div class="timeline">
 		<div class="timeline-row">

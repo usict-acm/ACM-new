@@ -9,6 +9,7 @@
   text-decoration: none;
   box-sizing: border-box;
   outline: none;
+  overflow-x: hidden;
 }
 
 html {
@@ -604,7 +605,7 @@ a {
   background: #1A233A;
 } */
 
-.container-timeline{
+#container-timeline{
   font-family: "Raleway", sans-serif;
 }
 
@@ -621,9 +622,9 @@ a {
 .timeline {
   position: relative;
   background: #000000;
-  -webkit-border-radius: 4px;
+  /* -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  border-radius: 4px;
+  border-radius: 4px; */
   padding: 5rem;
   /* margin: 0 auto 1rem auto; */
   overflow: hidden;
