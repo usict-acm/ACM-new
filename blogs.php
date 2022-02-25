@@ -5,29 +5,42 @@
       include('head.php');
     ?>
     <title>USICT ACM</title>
-    <link href="./assets/CSS/blogs.css" rel="stylesheet" />
+    
     <link href="./assets/CSS/glider.css" rel="stylesheet"/>
 	  <link rel="stylesheet" href="./assets/CSS/newStyle.css" />
+    <link href="./assets/CSS/blogs.css" rel="stylesheet" />
   </head>
   <body>
     <?php
       $currentPage = 'blogs';
       include('header.php');
     ?>
+
+    <!-- ***********************************************Blog-Banner************************************************ -->
+    <div class="blog-banner">
+      <section id='header-blog'>
+        <div class="pt-card-blog row">
+          <div class="heading col-xl-9 col-lg-9 col-md-9 col-sm-6">
+            <h2><span class="uheading-blog">BLOGS</span></h2>
+          </div>
+        </div>
+      </section>
+    </div>
+
         <!-- ==============================================header Three Blogs========================================== -->
-    <section style="padding-top: 80px;">
-      <div class="container" style="margin-top: 3%;">
+    <section class="blog-header">
+      <div class="container mt-4">
         <div class="row" id="row2"></div>
       </div>
     </section>
-    <section class="container" style="margin-top: 4%;">
+    <section class="container mt-5">
       <h1 class="category-heading">Let The Words Speak</h1>
       <div class="lower">
         <!-- ====================================================Show All Blogs========================================= -->
         <div class="left-side">
           <div class="row" id="row1"></div>
           <div class="row">
-            <div style="margin:auto;" id="pagination_row"></div>
+            <div class="m-auto" id="pagination_row"></div>
           </div>
         </div>
         <div class="right-side">
@@ -110,7 +123,7 @@
                   </div>\
               </div>"
                 }
-                pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
+                pagination.innerHTML += "<nav class='d-inline-block' aria-label=Page navigation example>\
             <ul class=pagination>\
             <li class=page-item >\
               <a id='previous-pagination' class='page-link pagination-option-next-prev' href=./blogs.php?q=readAll&page=<?php echo $previous ?> disabled>\
@@ -124,7 +137,7 @@
                 }
                 for (var i = 1; i <= data[1]; i++) {
                   var id = "link_pagination" + i;
-                  pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
+                  pagination.innerHTML += "<nav class='d-inline-block' aria-label=Page navigation example>\
             <ul class=pagination>\
             <li class=page-item>\
               <a id=" + id + " class='page-link pagination-numbers pagination-option-next-prev '" + "href=./blogs.php?q=readAll&page=" + i + ">\
@@ -139,7 +152,7 @@
                   }
                 }
                 var next = <?php echo $page ?> === data[1] ? data[1] : <?php echo $page + 1 ?>;
-                pagination.innerHTML += "<nav style=display:inline-block; aria-label=Page navigation example>\
+                pagination.innerHTML += "<nav class='d-inline-block' aria-label=Page navigation example>\
             <ul class=pagination>\
             <li class=page-item>\
               <a id='next-pagination' class='page-link pagination-option-next-prev' href=./blogs.php?q=readAll&page=" + next + ">\
@@ -156,51 +169,6 @@
           });
         </script>
   </section>
-  <style>
-    .pagination-option-next-prev {
-      border: 0.5px solid gray;
-      color: black;
-      box-shadow: rgb(0 0 0 / 17%) 2px 2px 10px;
-      font-size: 23px;
-      margin: 40px 10px 20px 10px !important;
-    }
-
-    .pagination-numbers {
-      border: 2px solid #0297ff;
-      box-shadow: none;
-      padding-left: 15px !important;
-      padding-right: 15px !important;
-      border-radius: 50% !important;
-    }
-
-    .active_pagination {
-      border: 2px solid #0297ff;
-      background-color: #0297ff;
-      color: white;
-      padding-left: 15px !important;
-      padding-right: 15px !important;
-      border-radius: 50% !important;
-    }
-
-    .disabled-pagination {
-      color: lightgray;
-      pointer-events: none;
-      cursor: default;
-      border: none;
-      box-shadow: none;
-      font-size: 23px;
-      margin: 40px 10px 20px 10px !important;
-    }
-   .disabled-pagination {
-        color: lightgray;
-        pointer-events: none;
-        cursor: default;
-        border: none;
-        box-shadow: none;
-        font-size: 23px;
-        margin: 40px 10px 20px 10px !important;
-      }
-    </style>
      <!-- ****************************************************contact us ***************************** -->
 	<div class="dsph" id="contact">
 		<div class="d-flex justify-content-center mt-md-5">
@@ -212,7 +180,7 @@
 					<button class="btn btn-primary s-form-group contact-btn" onclick="closecontact()"><i class="fas fa-times"></i></button>
 				</div>
 				<form class="s-form" name="contact" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse" onsubmit="return validateform();" >
-					<h2 class="my-4 display-4 fw-bolder text-center" style="font-weight:bolder;">Contact<span class="text-blue"> Us</span></h2>
+					<h2 class="my-4 display-4 fw-bolder text-center">Contact<span class="text-blue"> Us</span></h2>
 					<div class="row form-row">
 						<div class="form-group s-form-group col-md-5">
 							<input type="text" name="name" class="form-control" placeholder="Name *" />
@@ -223,7 +191,7 @@
 					</div>
 					<div class="row form-row">
 					<div class="form-group s-form-group col-md-5">
-							<input type="text" name="phone" class="form-control" placeholder="Phone No." />
+							<input type="number" name="phone" class="form-control" placeholder="Phone No." />
 						</div>
 						<div class="form-group s-form-group col-md-5">
 							<input type="text" name="college" class="form-control" placeholder="College/ Organization" />

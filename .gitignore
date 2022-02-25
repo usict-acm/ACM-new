@@ -3,6 +3,7 @@
 upload/*
 enviornment.php
 .DS_Store
+forms/responsesfile/*
 
 # react
 /build

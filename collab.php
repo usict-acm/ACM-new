@@ -18,17 +18,17 @@
       include('header.php');
     ?>
   <!-- ****************************************************Header Image**************************************************************** -->
-    <div style="margin-left:10%; margin-right:10%; padding-top:3%; margin-bottom:0%;">
+    <div class="img-header">
       <section id='header'>
-        <div class="pt-card row" style="background-image: url('assets/images/collab-banner.png');">
+        <div class="pt-card row">
           <div class="heading col-xl-9 col-lg-9 col-md-9">
             <h3><span class="uheading">Let's Collaborate</span></h3>
           </div>
-        </div>
+</div>
       </section>
     </div>
   <!-- ****************************************************Collaborators******************************************************************** -->
-    <section id="collab" style="margin-top:0%">
+    <section id="collab">
       <div class="container">
         <h1 class="collab-main-heading">Collaborations and<span class="highlight"> Sponsors</span>:</h1>
         <div class="row d-flex justify-content-center">
@@ -138,7 +138,7 @@
 					<button class="btn btn-primary s-form-group contact-btn" onclick="closecontact()"><i class="fas fa-times"></i></button>
 				</div>
 				<form class="s-form" name="contact" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse" onsubmit="return validateform();" >
-					<h2 class="my-4 display-4 fw-bolder text-center" style="font-weight:bolder;">Contact<span class="text-blue"> Us</span></h2>
+					<h2 class="my-4 display-4 fw-bolder text-center">Contact<span class="text-blue"> Us</span></h2>
 					<div class="row form-row">
 						<div class="form-group s-form-group col-md-5">
 							<input type="text" name="name" class="form-control" placeholder="Name *" />
@@ -149,7 +149,7 @@
 					</div>
 					<div class="row form-row">
 					<div class="form-group s-form-group col-md-5">
-							<input type="text" name="phone" class="form-control" placeholder="Phone No." />
+							<input type="number" name="phone" class="form-control" placeholder="Phone No." />
 						</div>
 						<div class="form-group s-form-group col-md-5">
 							<input type="text" name="college" class="form-control" placeholder="College/ Organization" />
