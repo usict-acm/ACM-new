@@ -19,13 +19,11 @@ class Link{
                 $countID =  $stmt->fetch_assoc();
                 foreach ($countID as $key => $item) {
                         $count = $item;
-                    }
+                }
                 // echo $count;
                 return $count;
             }
-
-
-     }
+}
 
 
 class Database{
@@ -88,10 +86,9 @@ $connection = $link;
                                 echo "<input type='text' class='form-control ' value='".$originalLink."' readonly />";
                                 echo "<br>";
                                 echo "<script>function copyAlGen(){navigator.clipboard.writeText('".$row['shortLink']."');}</script>";
-                                echo "<button style='position:absolute;left:-55px;top:187px; display:inline-block;' class='btn btn-primary' onclick=copyAlGen()>Copy</button>";
-
                                 echo "<h6>Shorted Link</h6>";
                                 echo "<input type='text' class='form-control ' value='".$row['shortLink']."' readonly />";
+                                echo "<button style='position:absolute;left:800px;top:187px; display:inline-block;' class='btn btn-primary' onclick=copyAlGen()>Copy</button>";
                             }
                         }
                     mysqli_free_result($result);
@@ -113,7 +110,7 @@ $connection = $link;
             }else{
                 if (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $s2Link)){
                     echo "<div style='position:absolute;margin:260px 0px 0px 285px; color:red; font-weight:bold;'>";
-                    echo "<h5 style=' margin-left:100px;'> &nbsp;&nbsp; Don't use special characters in custom name</h5>"  ;
+                    echo "<h5 style=' margin-left:70px;'>  Don't use special characters in custom name</h5>"  ;
                     echo "</div>";
                 }else{
     
@@ -149,7 +146,7 @@ $connection = $link;
     } else {
         echo "<div style='position:absolute;margin:400px 0px 0px 550px; color:red;'>";
         echo "<h2 style='font-weight: bold; margin-left: 30px;'>URL is Invalid !!</h2>"	;
-        echo "<h2 style='font-weight: bold;'> Try with Correct URL 😠</h2>"	;
+        echo "<h2 style='font-weight: bold;'> Try with Correct 'http' URL 😠</h2>"	;
         echo "</div>";
     }
 
@@ -240,6 +237,9 @@ $connection = $link;
             color:#444;
             top:9px;
         }
+        .randDiv{
+            margin:20px 0 0 150px;
+        }
 
     </style>
 </head>
@@ -270,7 +270,12 @@ $connection = $link;
                                 <label for="in3" class="static-value">https://usict.acm.org/  </label>
                             </div> 
                             <button id="" class="btn btn-primary new" type="" name="" value="">Get Preview</button>
-                            <br><br><br>
+                            <br>
+                            <div class="randDiv">
+                                <span style="font-weight:bold;">OR</span>
+                                <button type="button" class="btn btn-primary" id="randomBtn" name="random" >Genrate Random Short Link ??</button>
+                            </div>
+                            <br><br>
                             <button type="submit" class="btn btn-primary" id="submitForm" name="reg" >Check & Confirm</button>
                         </form>
                     </div>
@@ -294,6 +299,11 @@ $connection = $link;
         //         alert("Fill all fields");
         //     }
         // });
+            document.querySelector('#randomBtn').addEventListener("click",function(){
+                <?php $randNum= bin2hex(random_bytes(3));?>
+                console.log('<?php echo $randNum; ?>');
+                document.querySelector('#in3').value='<?php echo $randNum; ?>';
+            });
         function checkSpec(){
             console.log("aa");
         }
