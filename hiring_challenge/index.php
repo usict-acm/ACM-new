@@ -222,6 +222,29 @@
 
     <!--****************************************************** END OF TIMELINE *******************************************************-->
 
+    <!--****************************************************** PRIZE SECTION *******************************************************-->
+
+    <section id="prize" class="fluid-container pt-5 pb-5">
+        <h1 class="mb-sm text-center prize_heading"><code>#include"prizes"</code></h1>
+        <div class="prize_parent">
+            <div class="prize_item">
+                <img src="https://www.wbwn.com/wp-content/uploads/sites/380/2015/03/ACM-1427305270_stretch.png" alt="">
+            </div>
+            <div class="prize_item">
+                <img src="https://www.wbwn.com/wp-content/uploads/sites/380/2015/03/ACM-1427305270_stretch.png" alt="">
+            </div>
+            <div class="prize_item">
+                <img src="https://www.wbwn.com/wp-content/uploads/sites/380/2015/03/ACM-1427305270_stretch.png" alt="">
+            </div>
+            <div class="prize_item">
+                <img src="https://www.wbwn.com/wp-content/uploads/sites/380/2015/03/ACM-1427305270_stretch.png" alt="">
+            </div>
+        </div>
+        <script src="vanilla-tilt.min.js"></script>
+    </section>
+
+    <!--****************************************************** PRIZE SECTION *******************************************************-->
+
     <!-- ************************************************* Start of Partner ************************************************* -->
     <section id="partner">
 
