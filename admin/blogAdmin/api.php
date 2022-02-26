@@ -2,12 +2,12 @@
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
-include_once './database.php';
-include_once './posts.php';
-include_once '../../events/eventPost.php';
-include_once '../../mail.php';
-// include_once './forms.php';
+    include_once './database.php';
+    include_once './posts.php';
+    include_once '../../events/eventPost.php';
+    include_once './forms.php';
 
+include_once '../../mail.php';
 
 $method = $_SERVER['REQUEST_METHOD'];
 function read()
@@ -590,9 +590,8 @@ function postAnnouncement()
     }
 
     $filename = $file['name'];
-    $filetemppath = $file['tmp_name'];
-
-    $fileext = explode('.', $filename);
+    $filetemppath= $file['tmp_name'];
+    $fileext = explode('.',$filename);
     $filecheck = strtolower(end($fileext));
 
     $fileextstored = array('png', 'jpg', 'jpeg');
@@ -708,99 +707,76 @@ function getForms()
 };
 
 
-function readResponses()
-{
-    //     include_once './forms.php';
-    //      // Instantiate DB & connect
-    //     $database = new Database();
-    //     $db = $database->connect();
-    //  // echo $db;
-    //    // Instantiate blog post object
-    //     $post = new Form($db);
+function readResponses(){
+    include_once './forms.php';
+//      // Instantiate DB & connect
+    $database = new Database();
+    $db = $database->connect();
+//    // Instantiate blog post object
+    $post = new Form($db);
+    $ID = $_GET['Id'];
+    // echo($ID);
+    $formName = "";
+    $allFields = $post->readFields($ID,$formName);
+    $responses = $post->readAllResponses($ID,$formName);
+    $countNumberOfFields = $post->countFields($ID,$formName);
 
+    foreach ($countNumberOfFields as $key => $item) {
+        $count = $item;
+    }
 
-    //     $ID = $_GET['Id'];
-    //     $formName = $_GET['name'];
+    $allResponses = array();
+    $fieldItem = array();
+    $i=0;
+    
+    while ($row=$allFields->fetch_assoc()){
+        $value = explode(" ",$row['fieldName']);
+        $val = join("_",$value);
+        array_push($fieldItem,$val);
+        $i++;
+    }
 
+    array_push($allResponses,$fieldItem);
 
-    //     $result0 = $post->readFields($ID,$formName);
+    while($row=$responses->fetch_assoc()){
+        $fieldItem = array();
+        $i=0;
+        while($i < $count){
+            array_push($fieldItem,$row[$allResponses[0][$i]]);
+            $i++;
+        }
+        array_push($allResponses,$fieldItem);
+    }
 
+    echo json_encode($allResponses);
 
-    //     $result = $post->readAllResponses($ID,$formName);
+ };
 
+//  function testResponses(){
 
-    //     $result3 = $post->countFields($ID,$formName);
-    //     foreach ($result3 as $key => $item) {
-    //         $count = $item;
-    //     }
+//     $conn = mysqli_connect("localhost","root","","acmbackend");
 
+//     $query = 'SELECT * FROM responses_event_1_registration';
+//     $query_run = mysqli_query($conn,$query);
+//     $result_array = [];
 
+//     if (mysqli_num_rows($query_run)>0)
+//     {
+//         foreach($query_run as $row)
+//         {
+//             array_push($result_array,$row);
+//         }
+//         header('Content-type: application/json');
+//         echo json_encode($result_array);
+//     }
+//     else{}
+//     // {
+//     //     echo $return = "<h4>No record found.</h4>"
+//     // }
+//  }
 
-    //     $fielditem = array();
-    //     $i=0;
-
-    //     // while ($i<$count){
-    //     //     array_push($fielditem,$row['fieldName']);
-    //     //     $i++;
-    //     // }
-
-
-    //     while($row=$result0->fetch_assoc()){
-    //         $i=0;
-    //         // while ($i<$count){
-    //         //     $formitem = array(
-    //         //         $row[$i] => $row[$row[$i]]
-    //         //     );
-    //         // }
-    //         $post_item = array(
-    //             'fieldName' => $row["fieldName"]
-    //         );
-    //         array_push($fielditem,$post_item);
-    //         // print_r($row);
-    //     }
-
-    //     $sizeofarray = sizeof($fielditem);
-    //     $responses_array = array();
-
-    //     while($row=$result->fetch_assoc()){
-    //         echo json_encode($row);
-
-    //         $i=0;
-    //         while($i<$sizeofarray){
-    //             $fielditem[$i].$fieldName=>$row[$fielditem[$i].$fieldName]
-    //             $i++;
-
-    //         }
-    //         echo json_encode($post_item);
-
-    //     }
-
-
-
-    // echo json_encode($fielditem);
-
-
-
-    // array_push($multi_array,$posts_arr);
-    // array_push($multi_array,$count);
-    // array_push($multi_array,$pages);
-    // // Turn to JSON & output
-    // echo json_encode($multi_array);
-
-    // } else {
-    // // No Posts
-    // echo json_encode(
-    //     array('message' => 'No Posts Found')
-    // );
-    // }
-    // print_r($result0);
-
-
-
-};
-
-function getFields()
-{
+ function getFields(){
+    include_once './forms.php';
 
     // Instantiate DB & connect
     $database = new Database();
@@ -809,43 +785,51 @@ function getFields()
     // echo "check2";
     // echo $db;
     // echo "checking";
-    // Instantiate blog post object
-    $post = new Form($db);
-    //    echo "check3";
+  // Instantiate blog post object
+   $post = new Form($db);
+//    echo "check3";
+   $Id = $_GET["Id"];  
+   // Blog post query
+   $result = $post->fieldsQuery($Id);
+//    echo "check4";
+// var_dump($result);
+   
+   // Check if any posts
+   if($result) {
+    
+   // Post array
+   $posts_arr = array();
 
-    // Blog post query
-    $result = $post->fieldsQuery();
-    //    echo "check4";
-    // var_dump($result);
+   while($row=$result->fetch_assoc()){
+    //    echo $row;
+       $post_item = array(
+           'formName' => $row["formName"],
+           'fieldName' => $row["fieldName"],
+           'fieldType' => $row["fieldType"],
+           'formID' => $row["formID"],
+           'required' => $row["required"],
+           'ifCheckbox' => $row["ifCheckbox"],
+           'ifRadio' => $row["ifRadio"],
+           
+       );
+    //    if($row["ifCheckbox"]) {
+    //     array_push('ifCheckbox' => $row["ifCheckbox"]);
 
-    // Check if any posts
-    if ($result) {
+    //    }
+           // Push to "data"
+           array_push($posts_arr, $post_item);
+   }
 
-        // Post array
-        $posts_arr = array();
+   // Turn to JSON & output
+   echo json_encode($posts_arr);
+//    echo "5";
 
-        while ($row = $result->fetch_assoc()) {
-            //    echo $row;
-            $post_item = array(
-                'formName' => $row["formName"],
-                'fieldName' => $row["fieldName"],
-                'fieldType' => $row["fieldType"],
-                'formID' => $row["formID"],
-            );
-            // Push to "data"
-            array_push($posts_arr, $post_item);
-        }
-
-        // Turn to JSON & output
-        echo json_encode($posts_arr);
-        //    echo "5";
-
-    } else {
-        // No Posts
-        echo json_encode(
-            array('message' => 'No Posts Found')
-        );
-    }
+   } else {
+   // No Posts
+   echo json_encode(
+       array('message' => 'No Posts Found')
+   );
+   }
 };
 
 function postForm(){
