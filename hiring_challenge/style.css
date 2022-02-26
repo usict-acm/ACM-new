@@ -9,7 +9,7 @@
   text-decoration: none;
   box-sizing: border-box;
   outline: none;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 html {
@@ -871,6 +871,7 @@ canvas {
  /* ************************************************** Start of Partner *************************************************  */
  .square-holder {
   padding:30px;
+  overflow-y: hidden;
   border: 3px solid #faee45;
   align-items: center;
   height: 220px;
@@ -1245,6 +1246,7 @@ canvas {
 .fullwidth-container {display:block;width:80%;margin:2rem 10%}
 #faqs {}
 .line-heading {
+  overflow-y: hidden;
   /* font-family: sans-serif; */
   color: #f2fd56;
   font-weight: 600;
