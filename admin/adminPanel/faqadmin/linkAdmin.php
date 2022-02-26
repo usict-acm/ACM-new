@@ -45,9 +45,23 @@
         text-decoration: none;
         color: white;
     }
+    .copybutton {
+        border-width: 0;
+    color: #337ab7;
+    background-color: #f9f9f9;
+    }
     </style>
 </head>
 <body>
+    <script>
+        // function copylink(link){
+        //     console.log("hello")
+        //     navigator.clipboard.writeText(link);
+        // }
+        document.querySelector("#copylink").addEventListener("click",function(){
+                console.log("hello");
+            });
+    </script>
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
@@ -84,14 +98,17 @@
                                         echo "<td>" . $row['linkFor'] . "</td>";
                                         echo "<td>" . $ii . "....</td>";
                                         echo "<td><a target='_blank' href='". $row['shortLink'] ."'>". $row['shortLink'] ."</a></td>";
+                                        $short = $row['shortLink'];
+                                        echo "<script>function copy2(){navigator.clipboard.writeText('".$short."');}</script>";
                                         
                                         echo "<td>";
                                             // echo "<a href='../blogAdmin/responses.php?q=readResponses&Id=".$row['formID']."'title='View Record' data-toggle='tooltip'><button class='btn btn-primary' type='button'>Responses</button></span></a>";
                                             // echo "<a href='?table=ResponsesForm&q=readResponses&Id=".$row['formID']."'title='View Record' data-toggle='tooltip'><button class='btn btn-primary' type='button'>Responses</button></span></a>";
-                                            // echo "<a href='../../forms/index.php?Id=".$row['formID'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
+                                            //echo "<a  onclick = ' return copy(". $row['shortLink'] .");' title='Copy Record' data-toggle='tooltip'><span class='glyphicon glyphicon-duplicate'></span></a>";
                                             echo "<a href='faqadmin/del.php?Sno=". $row['shortLink'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                             // echo "<a href='faqadmin/editLink.php?linkFor=". $row['linkFor'] ."&&originalLink=".$row['originalLink']."&&shortLink=". $row['shortLink']."' title='Edit Record' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
                                             echo "<a href='?table=editLink&&linkFor=". $row['linkFor'] ."&&originalLink=".$row['originalLink']."&&shortLink=". $row['shortLink']."' title='Edit Record' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
+                                            echo "<button class = 'copybutton' onclick = copy2()><span class = 'glyphicon glyphicon-duplicate'></span></button>";
                                             // echo "<a href='faqadmin/update.php?Sno=". $row['Sno'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
                                             // echo "<a href='faqadmin/delete.php?Sno=". $row['id'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                         echo "</td>";
@@ -107,6 +124,7 @@
                         }
                     } else{
                         echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+
                     }
                     // Close connection
                     mysqli_close($link);
