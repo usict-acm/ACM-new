@@ -9,7 +9,7 @@
   text-decoration: none;
   box-sizing: border-box;
   outline: none;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 html {
@@ -20,6 +20,7 @@ a {
   color: #777;
   text-decoration: none;
 }
+
 /******************************************************* Start of Home Section *********************************************/
 
 .link-arrow:after {
@@ -696,6 +697,7 @@ a {
   z-index: 10;
   background: #272e48;
   border: 2px dashed #4b546f;
+  z-index: 1;
 }
 .timeline-row .timeline-content h4 {
   margin: 0 0 20px 0;
