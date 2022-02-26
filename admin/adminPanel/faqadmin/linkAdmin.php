@@ -107,6 +107,9 @@
                                             echo "<button class = 'copybutton' onclick = copy2(".$count.")><span class = 'glyphicon glyphicon-duplicate'></span></button>";
                                             // echo "<a href='faqadmin/update.php?Sno=". $row['Sno'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
                                             // echo "<a href='faqadmin/delete.php?Sno=". $row['id'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                            //echo "<button class = 'copybutton' onclick = copy2()><span class = 'glyphicon glyphicon-duplicate'></span></button>";
+                                           // echo "<a href='?table=editLink&&linkFor=". $row['linkFor'] ."&&originalLink=".$row['originalLink']."&&shortLink=". $row['shortLink']."' title='Edit Record' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
+                                           // echo "<a href='faqadmin/del.php?Sno=". $row['shortLink'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                         echo "</td>";
 
                                     echo "</tr>";
