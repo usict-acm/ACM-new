@@ -111,7 +111,7 @@
                                             <input type='text' class='form-control' name='in3' placeholder='Custom Link Name' value='".$sl."' id='in3' required />
                                             <label for='in3' class='static-value'>https://usict.acm.org/  </label>
                                         </div> 
-                                        <button id='' class='btn btn-primary new' type='' name='' value=''>Get Preview</button>
+                                        <button id = 'previewBtn' type = 'button' class='btn btn-primary new' data-toggle='modal' data-target='#myModal'>Get Preview</button>
                                         <br>
                                         <div class='randDiv'>
                                             <span style='font-weight:bold;'>OR</span>
@@ -125,7 +125,8 @@
                         </div>
                     </div>
                 </div>
-
+              
+              
 
 
                 
@@ -134,6 +135,7 @@
                             // console.log('".$randNum."');
                             document.querySelector('#in3').value='". $randNum."';
                         });
+                        
                 </script>
                 
                 ";
