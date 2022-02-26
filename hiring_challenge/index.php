@@ -30,6 +30,8 @@
             <li><a href="#contact" class="link link-theme link-arrow">Contact us</a></li>
         </ul>
         </div>
+        <canvas></canvas>
+        <canvas></canvas>
     </section>
     <!-- End of Header -->
 
@@ -640,6 +642,7 @@
         crossorigin="anonymous"></script>
         <script src="hiring.js"></script>
         <script src="hiring2.js"></script>
+        <script src="home.js"></script>
 </body>
 
 </html>
