@@ -40,6 +40,7 @@ if(isset($_GET["table"]) && isset($_GET["linkFor"]) && isset($_GET["shortLink"])
 
 if (isset($_POST['reg'])) {
     $sl = $_POST['in3'];
+    $lf = $_POST['in1'];
     $s1Link='https://usict.acm.org/';
     $exx = explode(" ",$sl);
     $sl = join("_",$exx);
@@ -60,7 +61,7 @@ if (isset($_POST['reg'])) {
                               <div class='form-text new' style='display:inline-block;'>
                               <div style='width: 700px; margin-left: 300px;'>
                               <h6>Link For</h6>
-                              <input type='text' class='form-control ' value='".$linkFor."' readonly /> <br>
+                              <input type='text' class='form-control ' value='".$lf."'  /> <br>
                   
                               <h6>Original Link</h6>
                               <input type='text' class='form-control ' value='".$originalLink."' readonly />
@@ -104,7 +105,7 @@ if (isset($_POST['reg'])) {
                           <div class='form-text new' style='display:inline-block;'>
                           <div style='width: 700px; margin-left: 300px;'>
                           <h6>Link For</h6>
-                          <input type='text' class='form-control ' value='".$linkFor."' readonly /> <br>
+                          <input type='text' class='form-control ' value='".$lf."' /> <br>
               
                           <h6>Original Link</h6>
                           <input type='text' class='form-control ' value='".$originalLink."' readonly />
@@ -135,6 +136,8 @@ if (isset($_POST['reg'])) {
   echo "</div>";
   }else{
         $query = "UPDATE link SET shortLink = '". $sl."'";
+        $query1 = "UPDATE link SET linkFor = '". $lf."'";
+        $results1 = mysqli_query($link, $query1);
         $results = mysqli_query($link, $query);
         // echo "<br>" . $query;
         echo "<script>function copy2(){navigator.clipboard.writeText('".$sl."');}</script>";
@@ -271,7 +274,7 @@ if (isset($_POST['reg'])) {
                         <form method="POST" > 
                             <div class="form-text">
                             <h5 class="sub-head">Link For</h5>
-                            <input type="text" id="in1" class='form-control alignment123' name="in1" placeholder="<?php echo $linkFor  ?>" required readonly/>
+                            <input type="text" id="in1" class='form-control alignment123' name="in1" value="<?php echo $linkFor  ?>" required />
                             <h5 class="sub-head org-head">Original Link</h5>
                             <input type="text" id="in2" class='form-control' name="in2" placeholder="<?php echo $originalLink  ?>" required readonly/>
                             <br>
