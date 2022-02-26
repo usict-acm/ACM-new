@@ -397,6 +397,7 @@ canvas {
   align-items: center;
   margin: 40px 30px;
   transition: 0.5s;
+  overflow-y: hidden;
 }
 
 .container-about .box::before
@@ -466,6 +467,7 @@ canvas {
   bottom: 0;
   z-index: 5;
   pointer-events: none;
+  overflow-y: hidden;
 }
 
 .container-about .box span::before
@@ -597,6 +599,7 @@ canvas {
     justify-content: center;
     align-items: center;
     cursor:pointer;
+    overflow-y: hidden;
 }
 #about_info_box{
   width: 40vw;
