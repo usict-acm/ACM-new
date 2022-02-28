@@ -10,14 +10,11 @@ body {
 	box-sizing: border-box;
 	font-family: 'Lato';
 	overflow-x: hidden;
-<<<<<<< HEAD
-=======
 }
 
 .clubs-head{
 	background: #fff;
 	padding-top: 20px;
->>>>>>> e80fb4c5d90316a9a580217fa0c024d7d247d23d
 }
 
 .club-container {
