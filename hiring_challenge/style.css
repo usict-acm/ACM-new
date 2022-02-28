@@ -60,6 +60,8 @@ a {
   color: rgb(133, 133, 133);
 }
 
+
+
 .link:active,
 .link:focus,
 .link:hover {
@@ -103,7 +105,7 @@ a {
 
 #home{
   width: 100%;
-  height: 92vh;
+  height: 100vh;
   background-color: #020202;
 }
 /* html, body, canvas { height: 100%; } */
@@ -374,8 +376,8 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
- margin-top: 98px;
-  min-height: 100vh;
+ margin-top: 20px;
+  height: 100vh;
   background: #000000
 }
 
