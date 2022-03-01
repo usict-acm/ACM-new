@@ -3,7 +3,7 @@
   $database = new Database();
   $db = $database->connect();
   $table = "event";
-  $query = 'SELECT * FROM event WHERE EXTRACT(MONTH FROM CURRENT_TIMESTAMP)=EXTRACT(MONTH FROM endDate) AND EXTRACT(YEAR FROM CURRENT_TIMESTAMP)=EXTRACT(YEAR FROM endDate)';
+  $query = 'SELECT * FROM event WHERE EXTRACT(MONTH FROM CURRENT_TIMESTAMP)<=EXTRACT(MONTH FROM endDate) AND EXTRACT(YEAR FROM CURRENT_TIMESTAMP)=EXTRACT(YEAR FROM endDate)';
   function UIAnn() {
     
   }
