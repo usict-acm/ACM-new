@@ -135,8 +135,8 @@ if (isset($_POST['reg'])) {
   echo "<h2> &nbsp; Try Another Custom Name..</h2>"   ;
   echo "</div>";
   }else{
-        $query = "UPDATE link SET shortLink = '". $sl."'";
-        $query1 = "UPDATE link SET linkFor = '". $lf."'";
+        $query = "UPDATE link SET shortLink = '". $sl."' WHERE originalLink='".$originalLink."'";
+        $query1 = "UPDATE link SET linkFor = '". $lf."' WHERE originalLink='".$originalLink."'";
         $results1 = mysqli_query($link, $query1);
         $results = mysqli_query($link, $query);
         // echo "<br>" . $query;

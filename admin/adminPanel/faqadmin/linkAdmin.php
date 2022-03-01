@@ -46,9 +46,18 @@
         color: white;
     }
     .copybutton {
+        /* position: absolute; */
         border-width: 0;
-    color: #337ab7;
-    background-color: #f9f9f9;
+        color: #337ab7;
+        background-color: #f9f9f9;
+    }
+    .edit-logo{
+        position: absolute;
+        margin: 0 0 0px 10px;
+    }
+    .tash-bin{
+        position: relative;
+        margin:0px 0 0  15px;
     }
     </style>
 </head>
@@ -98,18 +107,9 @@
                                         echo "<script>links.push('".$short."'); </script>";
                                         
                                         echo "<td>";
-                                            // echo "<a href='../blogAdmin/responses.php?q=readResponses&Id=".$row['formID']."'title='View Record' data-toggle='tooltip'><button class='btn btn-primary' type='button'>Responses</button></span></a>";
-                                            // echo "<a href='?table=ResponsesForm&q=readResponses&Id=".$row['formID']."'title='View Record' data-toggle='tooltip'><button class='btn btn-primary' type='button'>Responses</button></span></a>";
-                                            //echo "<a  onclick = ' return copy(". $row['shortLink'] .");' title='Copy Record' data-toggle='tooltip'><span class='glyphicon glyphicon-duplicate'></span></a>";
-                                            echo "<a href='faqadmin/del.php?Sno=". $row['shortLink'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
-                                            // echo "<a href='faqadmin/editLink.php?linkFor=". $row['linkFor'] ."&&originalLink=".$row['originalLink']."&&shortLink=". $row['shortLink']."' title='Edit Record' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
-                                            echo "<a href='?table=editLink&&linkFor=". $row['linkFor'] ."&&originalLink=".$row['originalLink']."&&shortLink=". $row['shortLink']."' title='Edit Record' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
                                             echo "<button class = 'copybutton' onclick = copy2(".$count.")><span class = 'glyphicon glyphicon-duplicate'></span></button>";
-                                            // echo "<a href='faqadmin/update.php?Sno=". $row['Sno'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
-                                            // echo "<a href='faqadmin/delete.php?Sno=". $row['id'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
-                                            //echo "<button class = 'copybutton' onclick = copy2()><span class = 'glyphicon glyphicon-duplicate'></span></button>";
-                                           // echo "<a href='?table=editLink&&linkFor=". $row['linkFor'] ."&&originalLink=".$row['originalLink']."&&shortLink=". $row['shortLink']."' title='Edit Record' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
-                                           // echo "<a href='faqadmin/del.php?Sno=". $row['shortLink'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                            echo "<a class='edit-logo' href='?table=editLink&&linkFor=". $row['linkFor'] ."&&originalLink=".$row['originalLink']."&&shortLink=". $row['shortLink']."' title='Edit Record' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
+                                            echo "<a class='tash-bin' href='faqadmin/del.php?Sno=". $row['shortLink'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                         echo "</td>";
 
                                     echo "</tr>";
