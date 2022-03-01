@@ -75,13 +75,13 @@
             <h1 class="collab-heading">Clue 6</h1>
           </div>
           </a>
-          <a href="./assets/images/DecoDisaster/Clue 7.pdf" target="_blank" class="collab-card">
+          <!-- <a href="./assets/images/DecoDisaster/Clue 7.pdf" target="_blank" class="collab-card">
             <div>
               <hr class="blue-hr">
               <div class="card-6"></div>
               <h1 class="collab-heading">Clue 7</h1>
             </div>
-            </a>
+            </a> -->
           <!-- <div class="collab-card">
             <hr class="blue-hr">
             <div class="card-7"></div>
