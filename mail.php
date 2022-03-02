@@ -24,7 +24,7 @@
         return mail($userEmail, $subject, $body, $headers);
     };
     function blogApprovedMail ($userEmail, $blogTitle, $blogId) {
-        $blogUrl = "https://usict.acm.org/test_acm/dashboard/user-portal/blog/$blogId";
+        $blogUrl = "https://usict.acm.org/dashboard/user-portal/blog/$blogId";
         $subject = "Your blog has been approved";
 
         $headers  = 'MIME-Version: 1.0' . "\r\n";
@@ -48,7 +48,7 @@
         ";        
     };
     function blogRejectedMail ($userEmail, $blogTitle, $blogId) {
-        $blogUrl = "https://usict.acm.org/test_acm/dashboard/user-portal/blog/$blogId";
+        $blogUrl = "https://usict.acm.org/dashboard/user-portal/blog/$blogId";
         $subject = "Your blog has been rejected";
 
         $headers  = 'MIME-Version: 1.0' . "\r\n";

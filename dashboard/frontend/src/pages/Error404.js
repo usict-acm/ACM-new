@@ -6,9 +6,9 @@ const Error404 = () => {
 		const pathArr = window.location.pathname.split("/");
 		if (pathArr[1] === "test_acm") {
 			if (pathArr.length >= 4 && pathArr[3] === "user-portal") {
-				return "/test_acm/dashboard/user-portal/home";
+				return "/dashboard/user-portal/home";
 			} else {
-				return "/test_acm";
+				return "/";
 			}
 		} else {
 			if (pathArr.length >= 3 && pathArr[2] === "user-portal") {
