@@ -7,14 +7,20 @@
 	}
 }
 
+.main-logo {
+	margin: 5px 0 5px 100px;
+}
+
 @media (min-width: 200px) and (max-width: 580px) {
 	.acm-logo-navbar {
 		margin-left: 10px;
 	}
+	
+	.main-logo {
+		margin: 5px 0 5px 10px;
+	}
 }
-.main-logo {
-	margin: 5px 0 5px 100px;
-}
+
 .text-and-logo {
 	margin-left: 20px;
 	display: flex;
