@@ -14,6 +14,7 @@
 		"argon-dashboard-react"
 	],
 	"license": "MIT",
+	"homepage": "http://usict.acm.org/dashboard/user-portal",
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",

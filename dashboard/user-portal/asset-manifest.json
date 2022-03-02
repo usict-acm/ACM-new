@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/dashboard/user-portal/static/css/main.9c826155.chunk.css",
-    "main.js": "/dashboard/user-portal/static/js/main.a5cfcd56.chunk.js",
-    "main.js.map": "/dashboard/user-portal/static/js/main.a5cfcd56.chunk.js.map",
+    "main.css": "/dashboard/user-portal/static/css/main.804f7de2.chunk.css",
+    "main.js": "/dashboard/user-portal/static/js/main.402233b2.chunk.js",
+    "main.js.map": "/dashboard/user-portal/static/js/main.402233b2.chunk.js.map",
     "runtime-main.js": "/dashboard/user-portal/static/js/runtime-main.3c2ae09e.js",
     "runtime-main.js.map": "/dashboard/user-portal/static/js/runtime-main.3c2ae09e.js.map",
     "static/css/2.7044f3c5.chunk.css": "/dashboard/user-portal/static/css/2.7044f3c5.chunk.css",
-    "static/js/2.ba0f5c7c.chunk.js": "/dashboard/user-portal/static/js/2.ba0f5c7c.chunk.js",
-    "static/js/2.ba0f5c7c.chunk.js.map": "/dashboard/user-portal/static/js/2.ba0f5c7c.chunk.js.map",
+    "static/js/2.55ce1d87.chunk.js": "/dashboard/user-portal/static/js/2.55ce1d87.chunk.js",
+    "static/js/2.55ce1d87.chunk.js.map": "/dashboard/user-portal/static/js/2.55ce1d87.chunk.js.map",
     "index.html": "/dashboard/user-portal/index.html",
     "static/css/2.7044f3c5.chunk.css.map": "/dashboard/user-portal/static/css/2.7044f3c5.chunk.css.map",
-    "static/css/main.9c826155.chunk.css.map": "/dashboard/user-portal/static/css/main.9c826155.chunk.css.map",
-    "static/js/2.ba0f5c7c.chunk.js.LICENSE.txt": "/dashboard/user-portal/static/js/2.ba0f5c7c.chunk.js.LICENSE.txt",
+    "static/css/main.804f7de2.chunk.css.map": "/dashboard/user-portal/static/css/main.804f7de2.chunk.css.map",
+    "static/js/2.55ce1d87.chunk.js.LICENSE.txt": "/dashboard/user-portal/static/js/2.55ce1d87.chunk.js.LICENSE.txt",
     "static/media/acm1.png": "/dashboard/user-portal/static/media/acm1.5d0a90f9.png",
     "static/media/UserHeader.css": "/dashboard/user-portal/static/media/acm_banner.cbcb2392.png",
     "static/media/argon-react.png": "/dashboard/user-portal/static/media/argon-react.128d71d3.png",
@@ -19,13 +19,13 @@
     "static/media/error404.css": "/dashboard/user-portal/static/media/zero.90c52de9.png",
     "static/media/nucleo.css": "/dashboard/user-portal/static/media/nucleo-icons.d6a66724.ttf",
     "static/media/outstanding-website.png": "/dashboard/user-portal/static/media/outstanding-website.910f4857.png",
-    "static/media/team-1-800x800.jpg": "/dashboard/user-portal/static/media/team-1-800x800.fa5a7ac2.jpg"
+    "static/media/user.png": "/dashboard/user-portal/static/media/user.6f757d04.png"
   },
   "entrypoints": [
     "static/js/runtime-main.3c2ae09e.js",
     "static/css/2.7044f3c5.chunk.css",
-    "static/js/2.ba0f5c7c.chunk.js",
-    "static/css/main.9c826155.chunk.css",
-    "static/js/main.a5cfcd56.chunk.js"
+    "static/js/2.55ce1d87.chunk.js",
+    "static/css/main.804f7de2.chunk.css",
+    "static/js/main.402233b2.chunk.js"
   ]
 }

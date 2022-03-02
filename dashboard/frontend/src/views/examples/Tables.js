@@ -90,7 +90,7 @@ const Tables = () => {
                             alt="..."
                             className="rounded-circle"
                             src={
-                              require("../../assets/img/theme/team-1-800x800.jpg")
+                              require("../../assets/img/user.png")
                                 .default
                             }
                           />
@@ -255,7 +255,7 @@ const Tables = () => {
                             alt="..."
                             className="rounded-circle"
                             src={
-                              require("../../assets/img/theme/team-1-800x800.jpg")
+                              require("../../assets/img/user.png")
                                 .default
                             }
                           />
@@ -418,7 +418,7 @@ const Tables = () => {
                             alt="..."
                             className="rounded-circle"
                             src={
-                              require("../../assets/img/theme/team-1-800x800.jpg")
+                              require("../../assets/img/user.png")
                                 .default
                             }
                           />
@@ -583,7 +583,7 @@ const Tables = () => {
                             alt="..."
                             className="rounded-circle"
                             src={
-                              require("../../assets/img/theme/team-1-800x800.jpg")
+                              require("../../assets/img/user.png")
                                 .default
                             }
                           />
@@ -747,7 +747,7 @@ const Tables = () => {
                             alt="..."
                             className="rounded-circle"
                             src={
-                              require("../../assets/img/theme/team-1-800x800.jpg")
+                              require("../../assets/img/user.png")
                                 .default
                             }
                           />
@@ -991,7 +991,7 @@ const Tables = () => {
                             alt="..."
                             className="rounded-circle"
                             src={
-                              require("../../assets/img/theme/team-1-800x800.jpg")
+                              require("../../assets/img/user.png")
                                 .default
                             }
                           />
@@ -1156,7 +1156,7 @@ const Tables = () => {
                             alt="..."
                             className="rounded-circle"
                             src={
-                              require("../../assets/img/theme/team-1-800x800.jpg")
+                              require("../../assets/img/user.png")
                                 .default
                             }
                           />
@@ -1316,7 +1316,7 @@ const Tables = () => {
                             alt="..."
                             className="rounded-circle"
                             src={
-                              require("../../assets/img/theme/team-1-800x800.jpg")
+                              require("../../assets/img/user.png")
                                 .default
                             }
                           />
@@ -1481,7 +1481,7 @@ const Tables = () => {
                             alt="..."
                             className="rounded-circle"
                             src={
-                              require("../../assets/img/theme/team-1-800x800.jpg")
+                              require("../../assets/img/user.png")
                                 .default
                             }
                           />
@@ -1645,7 +1645,7 @@ const Tables = () => {
                             alt="..."
                             className="rounded-circle"
                             src={
-                              require("../../assets/img/theme/team-1-800x800.jpg")
+                              require("../../assets/img/user.png")
                                 .default
                             }
                           />
