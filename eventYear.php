@@ -43,7 +43,7 @@
     ?>
     <script>
         let allEvents = document.getElementById("eventPage");
-        if (<?php echo $year ?> != 2019 && <?php echo $year ?> != 2020 && <?php echo $year ?> != 2021) {
+        if (<?php echo $year ?> != 2019 && <?php echo $year ?> != 2020 && <?php echo $year ?> != 2021 && <?php echo $year ?> != 2022) {
             allEvents.innerHTML += `<h1 class='noEvents'>No Events for this year</h1>`;
         } else {
             let urlEvent = './admin/blogAdmin/api.php/?q=readAllEvent&year=' + <?php echo $year ?> + '&page=' + <?php echo $page ?>;

@@ -29,9 +29,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="./collab.php">Sponsors</a>
             </li>
-            <!-- <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="./dashboard">Dashboard</a>
-            </li> -->
+            </li>
         </ul>
     </div>
 </nav>
