@@ -10,8 +10,8 @@
   if($result = mysqli_query($db, $query)){
     if(mysqli_num_rows($result) > 0){
         echo "<section class='announcement'>";
-            echo "<h2 class='mb-2 display-4 fw-bolder text-center'>Announcements</h2>";
-            echo "<div class='container-fluid text overflow-hidden'>";
+            echo "<h2 class='mb-2 display-4 mobile-head fw-bolder text-center'>Announcements</h2>";
+            echo "<div class='container-fluid text announcement-carousel overflow-hidden'>";
             echo "<div class='swiper mySwiper'>";
             echo "<div class='swiper-wrapper'>";
         while($row = mysqli_fetch_array($result)){
