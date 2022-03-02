@@ -1410,6 +1410,10 @@ a:hover {
 	background-blend-mode: lighten;
 }
 
+.announcement-carousel {
+	overflow: hidden;
+}
+
 .detai {
 	background-color: #cbe9ff;
 	border-radius: 1rem;
@@ -1525,6 +1529,9 @@ a:hover {
 	}
 	.announcement-button-group {
 		flex-direction: column;
+	}
+	.mobile-head {
+		font-size: 3rem;
 	}
 }
 .mySwiper .swiper-wrapper {
