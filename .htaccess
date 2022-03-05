@@ -1,0 +1,9 @@
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+Options +FollowSymLinks
+RewriteEngine On
+RewriteRule ^tiny/([0-9a-zA-Z_]+)$ tiny/index.php?code=$1 
+

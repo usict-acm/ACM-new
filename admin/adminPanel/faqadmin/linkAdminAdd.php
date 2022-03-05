@@ -14,14 +14,14 @@ class Link{
     }
 
     public function latestLink(){
-        $query = 'SELECT shortLink FROM link ORDER BY id DESC LIMIT 1';
+        $query = 'SELECT code FROM link ORDER BY id DESC LIMIT 1';
         $stmt = $this->conn->query($query);
-        $countID =  $stmt->fetch_assoc();
-        foreach ($countID as $key => $item) {
-                $count = $item;
+        $codeID =  $stmt->fetch_assoc();
+        foreach ($codeID as $key => $item) {
+                $code = $item;
         }
         // echo $count;
-        return $count;
+        return "http://localhost/ACM-new/tiny/$code";
     }
 }
 
@@ -53,14 +53,14 @@ $connection = $link;
 if (isset($_POST['reg1'])) {
     $link_for = $_POST['inn1'];
     $original_link = $_POST['inn2'];
-      $s1Link='https://usict.acm.org/';
+      /*$s1Link='https://usict.acm.org/'; */
     $short_link = $_POST['inn3'];
       $exx = explode(" ",$short_link);
       $short_link = join("_",$exx);
-      $short_link=$s1Link.$short_link;
+      $short_link=$short_link;
     //   echo $short_link;
     //  echo $original_link;
-    $sql_u = "SELECT * FROM link WHERE shortLink='$short_link'";
+    $sql_u = "SELECT * FROM link WHERE code='$short_link'";
     $res_u = mysqli_query($link, $sql_u);
     if (preg_match('/[\'^£$%&*(}){@#~?><>,|=+¬]/', $short_link)){
   
@@ -92,7 +92,7 @@ if (isset($_POST['reg1'])) {
                     while($row = mysqli_fetch_array($result)){
                         if($row['originalLink']==$original_link){
                          
-                            $query = "UPDATE link SET shortLink = '". $short_link."'";
+                            $query = "UPDATE link SET code = '". $short_link."'";
                             $results = mysqli_query($link, $query);
                             // echo "<br>" . $query;
                             echo "<script>function copy2(){navigator.clipboard.writeText('".$short_link."');}</script>";
@@ -133,12 +133,11 @@ if (isset($_POST['reg1'])) {
   if (isset($_POST['reg'])) {
     $linkFor = $_POST['in1'];
     $originalLink = $_POST['in2'];
-    $s1Link='https://usict.acm.org/';
-    $s2Link = $_POST['in3'];
-    $exx = explode(" ",$s2Link);
-    $s2Link = join("_",$exx);
-    $shortLink=$s1Link.$s2Link;
-    $sql_u = "SELECT * FROM link WHERE shortLink='$shortLink'";
+   /* $s1Link='https://usict.acm.org/'; */
+    $shortLink = $_POST['in3'];
+    $exx = explode(" ",$shortLink);
+    $shortLink = join("_",$exx);
+    $sql_u = "SELECT * FROM link WHERE code='$shortLink'";
     $sql_o = "SELECT * FROM link WHERE originalLink='$originalLink'";
     $res_o = mysqli_query($link, $sql_o);
     $res_u = mysqli_query($link, $sql_u);
@@ -167,15 +166,15 @@ if (isset($_POST['reg1'])) {
                         while($row = mysqli_fetch_array($result)){
                             if($row['originalLink']==$originalLink){
                                 $val_original = $row['originalLink'];
-                                $val_short = $row['shortLink'];
+                                $val_short = $row['code'];
                                 $val_link_for = $row['linkFor'];
 
                                 echo "<h6>Original Link</h6>";
                                 echo "<input type='text' class='form-control ' value='".$originalLink."' readonly />";
                                 echo "<br>";
-                                echo "<script>function copyAlGen(){navigator.clipboard.writeText('".$row['shortLink']."');}</script>";
+                                echo "<script>function copyAlGen(){navigator.clipboard.writeText('http://localhost/ACM-new/tiny/".$row['code']."');}</script>";
                                 echo "<h6>Shorted Link</h6>";
-                                echo "<input type='text' class='form-control ' value='".$row['shortLink']."' readonly />";
+                                echo "<input type='text' class='form-control ' value='http://localhost/ACM-new/tiny/".$row['code']."' readonly />";
                                 echo "<button style='position:absolute;left:800px;top:187px; display:inline-block;' class='btn btn-primary' onclick=copyAlGen()>Copy</button>";
                             }
                         }
@@ -234,7 +233,7 @@ if (isset($_POST['reg1'])) {
                 include('linkPanel.php');
                 exit();
             }else{
-                if (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $s2Link)){
+                if (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $shortLink)){
                     echo "<div style='position:absolute;margin:260px 0px 0px 285px; color:red; font-weight:bold;'>";
                     echo "<h5 style=' margin-left:70px;'>  Don't use special characters in custom name</h5>"  ;
                     echo "</div>";
@@ -245,8 +244,8 @@ if (isset($_POST['reg1'])) {
                     exit();
                 }else{
     
-                    $query = "INSERT INTO link (`linkFor`, `originalLink`, `shortLink`) 
-                            VALUES ('$linkFor', '$originalLink', '$shortLink')";
+                    $query = "INSERT INTO link (`linkFor`, `originalLink`, `code`, `count`) 
+                            VALUES ('$linkFor', '$originalLink', '$shortLink', 0)";
                     $results = mysqli_query($link, $query);
                     $oneLink = new Link($link);  
                     $latestLink = $oneLink->latestLink();
@@ -280,7 +279,7 @@ if (isset($_POST['reg1'])) {
         echo "<h2 style='font-weight: bold;'> Try with Correct 'http' URL 😠</h2>"  ;
         echo "</div>";
         $lf=$linkFor;
-        $sl=$s2Link;
+        $sl=$shortLink;
         $ol="";
         include('linkPanel.php');
         exit();

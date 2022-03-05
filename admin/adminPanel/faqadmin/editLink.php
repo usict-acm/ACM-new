@@ -41,12 +41,12 @@ if(isset($_GET["table"]) && isset($_GET["linkFor"]) && isset($_GET["shortLink"])
 if (isset($_POST['reg'])) {
     $sl = $_POST['in3'];
     $lf = $_POST['in1'];
-    $s1Link='https://usict.acm.org/';
+    //$s1Link='https://usict.acm.org/';
     $exx = explode(" ",$sl);
     $sl = join("_",$exx);
-    $sl=$s1Link.$sl;
+    //$sl=$s1Link.$sl;
 
-    $sql_u = "SELECT * FROM link WHERE shortLink='$sl'";
+    $sql_u = "SELECT * FROM link WHERE code='$sl'";
     $res_u = mysqli_query($link, $sql_u);
 
 
@@ -135,12 +135,12 @@ if (isset($_POST['reg'])) {
   echo "<h2> &nbsp; Try Another Custom Name..</h2>"   ;
   echo "</div>";
   }else{
-        $query = "UPDATE link SET shortLink = '". $sl."' WHERE originalLink='".$originalLink."'";
+        $query = "UPDATE link SET code = '". $sl."' WHERE originalLink='".$originalLink."'";
         $query1 = "UPDATE link SET linkFor = '". $lf."' WHERE originalLink='".$originalLink."'";
         $results1 = mysqli_query($link, $query1);
         $results = mysqli_query($link, $query);
         // echo "<br>" . $query;
-        echo "<script>function copy2(){navigator.clipboard.writeText('".$sl."');}</script>";
+        echo "<script>function copy2(){navigator.clipboard.writeText('http://localhost/ACM-new/tiny/".$sl."');}</script>";
 
 
         echo "<div class='wrapper' style='margin:100px 0px 0px 350px;'>";
@@ -154,7 +154,7 @@ if (isset($_POST['reg'])) {
                 echo "<div>";
             echo "<div>";
         echo "<div>";
-        echo "<h4 style='display:inline-block; color:#4e73df; font-weight:bold;'>".$sl."</h4>";
+        echo "<h4 style='display:inline-block; color:#4e73df; font-weight:bold;'>'http://localhost/ACM-new/tiny/".$sl."'</h4>";
         echo "<button style='margin-left:20px; display:inline-block;' class='btn btn-primary' onclick=copy2()>Copy</button>";
   }
 

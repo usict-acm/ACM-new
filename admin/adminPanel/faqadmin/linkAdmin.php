@@ -95,21 +95,21 @@
                                     echo "<script>
                                     let links = [];
                                     
-                                        function copy2 (count){navigator.clipboard.writeText(links[count]);}</script>";
+                                        function copy2 (count){navigator.clipboard.writeText('http://localhost/ACM-new/tiny/'+links[count]);}</script>";
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
                                         $ii = $row['originalLink'];
                                         $ii = substr($ii,0,51);
                                         echo "<td>" . $row['linkFor'] . "</td>";
                                         echo "<td>" . $ii . "....</td>";
-                                        echo "<td><a target='_blank' href='". $row['shortLink'] ."'>". $row['shortLink'] ."</a></td>";
-                                        $short = $row['shortLink'];
+                                        echo "<td><a target='_blank' href='http://localhost/ACM-new/tiny/". $row['code'] ."'>http://localhost/ACM-new/tiny/". $row['code'] ."</a></td>";
+                                        $short = $row['code'];
                                         echo "<script>links.push('".$short."'); </script>";
                                         
                                         echo "<td>";
                                             echo "<button class = 'copybutton' onclick = copy2(".$count.")><span class = 'glyphicon glyphicon-duplicate'></span></button>";
-                                            echo "<a class='edit-logo' href='?table=editLink&&linkFor=". $row['linkFor'] ."&&originalLink=".$row['originalLink']."&&shortLink=". $row['shortLink']."' title='Edit Record' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
-                                            echo "<a class='tash-bin' href='faqadmin/del.php?Sno=". $row['shortLink'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                            echo "<a class='edit-logo' href='?table=editLink&&linkFor=". $row['linkFor'] ."&&originalLink=".$row['originalLink']."&&shortLink=". $row['code']."' title='Edit Record' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
+                                            echo "<a class='tash-bin' href='faqadmin/del.php?Sno=". $row['code'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                         echo "</td>";
 
                                     echo "</tr>";
