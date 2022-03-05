@@ -70,7 +70,7 @@ if (isset($_POST['reg1'])) {
         include('linkPanel2.php');
 
                     echo "<div style='position:absolute;margin:225px 0px 0px 255px; color:red; font-weight:bold;'>";
-                    echo "<h6 style=' margin-left:70px; font-size: 1rem;'>  Don't use special characters in custom name</h6>"  ;
+                    echo "<h6 style=' margin-left:140px; font-size: 1.4rem; margin-top:42px;'>  Don't use special characters in custom name</h6>"  ;
                     echo "</div>";
         // echo "<br>";
         // echo "<script>function copyAlGen(){navigator.clipboard.writeText('".$row['shortLink']."');}</script>";

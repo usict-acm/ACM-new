@@ -61,7 +61,7 @@ if (isset($_POST['reg'])) {
                               <div class='form-text new' style='display:inline-block;'>
                               <div style='width: 700px; margin-left: 300px;'>
                               <h6>Link For</h6>
-                              <input type='text' class='form-control ' value='".$lf."'  /> <br>
+                              <input type='text' class='form-control' name='in1' value='".$lf."'  /> <br>
                   
                               <h6>Original Link</h6>
                               <input type='text' class='form-control ' value='".$originalLink."' readonly />
@@ -139,15 +139,6 @@ if (isset($_POST['reg'])) {
         $query1 = "UPDATE link SET linkFor = '". $lf."' WHERE originalLink='".$originalLink."'";
         $results1 = mysqli_query($link, $query1);
         $results = mysqli_query($link, $query);
-        echo $query;
-        echo $query;
-        echo $query;
-        echo $query;
-        echo $query;
-        echo $query;
-        echo $query;
-        echo $query;
-        echo $query;
         // echo "<br>" . $query;
         echo "<script>function copy2(){navigator.clipboard.writeText('http://localhost/ACM-new/tiny/".$sl."');}</script>";
 

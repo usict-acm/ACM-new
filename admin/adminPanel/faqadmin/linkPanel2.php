@@ -103,12 +103,12 @@
                                 </div>
                                 <div id='container'>
                                     <form method='POST' > 
-                                        <input type='text' id='in1' class='form-control alignment123' name='in1' placeholder='Link is for' value='".$lf."' required readonly />
+                                        <input type='text' id='in1' class='form-control alignment123' name='inn1' placeholder='Link is for' value='".$lf."' required readonly />
                                         <br>
-                                        <input type='text' id='in2' class='form-control' name='in2' placeholder='Enter Original Link' value='".$ol."' required readonly/>
+                                        <input type='text' id='in2' class='form-control' name='inn2' placeholder='Enter Original Link' value='".$ol."' required readonly/>
                                         <br>
                                         <div class='form-text new'>
-                                            <input type='text' class='form-control' name='in3' placeholder='Custom Link Name' value='".$sl."' id='in3' required />
+                                            <input type='text' class='form-control' name='inn3' placeholder='Custom Link Name' value='".$sl."' id='in3' required />
                                             <label for='in3' class='static-value'>https://usict.acm.org/  </label>
                                         </div> 
                                         <button id = 'previewBtn' type = 'button' class='btn btn-primary new' data-toggle='modal' data-target='#myModal'>Get Preview</button>
