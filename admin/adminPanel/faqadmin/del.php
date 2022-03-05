@@ -12,7 +12,7 @@ if(isset($_GET["Sno"]) ){
   
   
     // Prepare a delete statement
-    $sql = "DELETE FROM link WHERE shortLink ='".$Sno."'";
+    $sql = "DELETE FROM link WHERE code ='".$Sno."'";
     // $sql = "DELETE FROM forms WHERE formID ='df17d23b'";
     // echo $sql;
     // echo $Sno;

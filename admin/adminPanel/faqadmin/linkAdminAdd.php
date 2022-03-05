@@ -62,7 +62,7 @@ if (isset($_POST['reg1'])) {
     //  echo $original_link;
     $sql_u = "SELECT * FROM link WHERE code='$short_link'";
     $res_u = mysqli_query($link, $sql_u);
-    if (preg_match('/[\'^£$%&*(}){@#~?><>,|=+¬]/', $short_link)){
+    if (preg_match('/[\'^£$%&*}{@#~?><>,|=+)(¬]/', $short_link)){
   
         $lf=$link_for;
         $sl="";
@@ -109,7 +109,7 @@ if (isset($_POST['reg1'])) {
                                     echo "<div>";
                                 echo "<div>";
                             echo "<div>";
-                            echo "<h4 style='display:inline-block; color:#4e73df; font-weight:bold;'>".$short_link."</h4>";
+                            echo "<h4 style='display:inline-block; color:#4e73df; font-weight:bold;'>http://localhost/ACM-new/tiny/".$short_link."</h4>";
                             echo "<button style='margin-left:20px; display:inline-block;' class='btn btn-primary' onclick=copy2()>Copy</button>";
                             
                         }
@@ -233,7 +233,7 @@ if (isset($_POST['reg1'])) {
                 include('linkPanel.php');
                 exit();
             }else{
-                if (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $shortLink)){
+                if (preg_match('/[\'^£$%&*}{@#~?><>,|=+)(¬]/', $shortLink)){
                     echo "<div style='position:absolute;margin:260px 0px 0px 285px; color:red; font-weight:bold;'>";
                     echo "<h5 style=' margin-left:70px;'>  Don't use special characters in custom name</h5>"  ;
                     echo "</div>";

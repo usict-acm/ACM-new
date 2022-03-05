@@ -50,7 +50,7 @@ if (isset($_POST['reg'])) {
     $res_u = mysqli_query($link, $sql_u);
 
 
-  if (preg_match('/[\'^£$%&*(}){@#~?><>,|=+¬]/', $sl)){
+  if (preg_match('/[\'^£$%&*}{@#~?><>,|=+)(¬]/', $sl)){
 
           echo "<div class='wrapper'>
           <div class='container-fluid'>
@@ -139,6 +139,15 @@ if (isset($_POST['reg'])) {
         $query1 = "UPDATE link SET linkFor = '". $lf."' WHERE originalLink='".$originalLink."'";
         $results1 = mysqli_query($link, $query1);
         $results = mysqli_query($link, $query);
+        echo $query;
+        echo $query;
+        echo $query;
+        echo $query;
+        echo $query;
+        echo $query;
+        echo $query;
+        echo $query;
+        echo $query;
         // echo "<br>" . $query;
         echo "<script>function copy2(){navigator.clipboard.writeText('http://localhost/ACM-new/tiny/".$sl."');}</script>";
 
@@ -154,7 +163,7 @@ if (isset($_POST['reg'])) {
                 echo "<div>";
             echo "<div>";
         echo "<div>";
-        echo "<h4 style='display:inline-block; color:#4e73df; font-weight:bold;'>'http://localhost/ACM-new/tiny/".$sl."'</h4>";
+        echo "<h4 style='display:inline-block; color:#4e73df; font-weight:bold;'>http://localhost/ACM-new/tiny/".$sl."</h4>";
         echo "<button style='margin-left:20px; display:inline-block;' class='btn btn-primary' onclick=copy2()>Copy</button>";
   }
 
