@@ -51,9 +51,6 @@
 			<div class="swiper-button-next"></div>
 			<div class="swiper-button-prev"></div>
 		</div>
-		<!-- <div id="typewriter">
-			<span class="typewriter-box" data-wait="400" data-content='["USICT ACM STUDENT CHAPTER"]'> </span>
-		</div> -->
 	</section>
 	<!-- end of hero slider -->
 

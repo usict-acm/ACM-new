@@ -26,9 +26,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="./clubs.php">Clubs</a>
             </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="./team.php">Our Team</a>
-            </li> -->
             <li class="nav-item">
                 <a class="nav-link" href="./collab.php">Sponsors</a>
             </li>
