@@ -1,4 +1,5 @@
 <?php 
+    include(__DIR__.'/../../../tiny/siteName.php');
 
 /*                      included database.php           */
 
@@ -21,7 +22,7 @@ class Link{
                 $code = $item;
         }
         // echo $count;
-        return "http://localhost/ACM-new/tiny/$code";
+        return "".$siteLink."$code";
     }
 }
 
@@ -53,7 +54,7 @@ $connection = $link;
 if (isset($_POST['reg1'])) {
     $link_for = $_POST['inn1'];
     $original_link = $_POST['inn2'];
-      /*$s1Link='https://usict.acm.org/'; */
+
     $short_link = $_POST['inn3'];
       $exx = explode(" ",$short_link);
       $short_link = join("_",$exx);
@@ -70,7 +71,7 @@ if (isset($_POST['reg1'])) {
         include('linkPanel2.php');
 
                     echo "<div style='position:absolute;margin:225px 0px 0px 255px; color:red; font-weight:bold;'>";
-                    echo "<h6 style=' margin-left:140px; font-size: 1.4rem; margin-top:42px;'>  Don't use special characters in custom name</h6>"  ;
+                    echo "<h6 style=' margin-left:100px; font-size: 1.4rem; margin-top:42px;'>  Don't use special characters in custom name</h6>"  ;
                     echo "</div>";
         // echo "<br>";
         // echo "<script>function copyAlGen(){navigator.clipboard.writeText('".$row['shortLink']."');}</script>";
@@ -95,7 +96,7 @@ if (isset($_POST['reg1'])) {
                             $query = "UPDATE link SET code = '". $short_link."'";
                             $results = mysqli_query($link, $query);
                             // echo "<br>" . $query;
-                            echo "<script>function copy2(){navigator.clipboard.writeText('".$short_link."');}</script>";
+                            echo "<script>function copy2(){navigator.clipboard.writeText('".$siteLink."".$short_link."');}</script>";
                     
     
                             echo "<div class='wrapper' style='margin:100px 0px 0px 350px;'>";
@@ -109,7 +110,7 @@ if (isset($_POST['reg1'])) {
                                     echo "<div>";
                                 echo "<div>";
                             echo "<div>";
-                            echo "<h4 style='display:inline-block; color:#4e73df; font-weight:bold;'>http://localhost/ACM-new/tiny/".$short_link."</h4>";
+                            echo "<h4 style='display:inline-block; color:#4e73df; font-weight:bold;'>".$siteLink."".$short_link."</h4>";
                             echo "<button style='margin-left:20px; display:inline-block;' class='btn btn-primary' onclick=copy2()>Copy</button>";
                             
                         }
@@ -133,7 +134,7 @@ if (isset($_POST['reg1'])) {
   if (isset($_POST['reg'])) {
     $linkFor = $_POST['in1'];
     $originalLink = $_POST['in2'];
-   /* $s1Link='https://usict.acm.org/'; */
+
     $shortLink = $_POST['in3'];
     $exx = explode(" ",$shortLink);
     $shortLink = join("_",$exx);
@@ -172,9 +173,9 @@ if (isset($_POST['reg1'])) {
                                 echo "<h6>Original Link</h6>";
                                 echo "<input type='text' class='form-control ' value='".$originalLink."' readonly />";
                                 echo "<br>";
-                                echo "<script>function copyAlGen(){navigator.clipboard.writeText('http://localhost/ACM-new/tiny/".$row['code']."');}</script>";
+                                echo "<script>function copyAlGen(){navigator.clipboard.writeText('".$siteLink."".$row['code']."');}</script>";
                                 echo "<h6>Shorted Link</h6>";
-                                echo "<input type='text' class='form-control ' value='http://localhost/ACM-new/tiny/".$row['code']."' readonly />";
+                                echo "<input type='text' class='form-control ' value='".$siteLink."".$row['code']."' readonly />";
                                 echo "<button style='position:absolute;left:800px;top:187px; display:inline-block;' class='btn btn-primary' onclick=copyAlGen()>Copy</button>";
                             }
                         }
@@ -207,7 +208,7 @@ if (isset($_POST['reg1'])) {
                                                     font-weight:bold;
                                                     font-size:1.1em;
                                                     color:#444;
-                                                    top:12px;'>https://usict.acm.org/  
+                                                    top:12px;'>".$siteName."
                                                 </label>
                                             </div> 
                                             <br><br>
@@ -251,7 +252,7 @@ if (isset($_POST['reg1'])) {
                     $latestLink = $oneLink->latestLink();
 
 
-                    echo "<script>function copy(){navigator.clipboard.writeText('".$latestLink."');}</script>";
+                    echo "<script>function copy(){navigator.clipboard.writeText('".$siteLink."".$latestLink."');}</script>";
                 
 
                     echo "<div class='wrapper' style='margin:100px 0px 0px 350px;'>";
@@ -265,7 +266,7 @@ if (isset($_POST['reg1'])) {
                             echo "<div>";
                         echo "<div>";
                     echo "<div>";
-                    echo "<h4 style='display:inline-block; color:#4e73df; font-weight:bold;'>".$latestLink."</h4>";
+                    echo "<h4 style='display:inline-block; color:#4e73df; font-weight:bold;'>".$siteLink."".$latestLink."</h4>";
                     echo "<button style='margin-left:20px; display:inline-block;' class='btn btn-primary' onclick=copy()>Copy</button>";
                     // echo "<br><br><a style='margin:300px 0px 0px 70px; color:#4e73df; font-weight:20px;' href='?table=ShortLink'  ><- Back to Link Dashboard</a>";
                     exit();

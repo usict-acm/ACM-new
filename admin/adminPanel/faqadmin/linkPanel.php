@@ -1,4 +1,6 @@
 <?php
+    include(__DIR__.'/../../../tiny/siteName.php');
+
     $randNum = bin2hex(random_bytes(3));;
     
     echo "      
@@ -118,7 +120,7 @@
                                         <br>
                                         <div class='form-text new'>
                                             <input type='text' class='form-control' name='in3' placeholder='Custom Link Name' value='".$sl."' id='in3' required />
-                                            <label for='in3' class='static-value'>https://usict.acm.org/  </label>
+                                            <label for='in3' class='static-value'>".$siteName."  </label>
                                         </div> 
                                         <button  class='btn btn-primary new' type='button'  data-toggle='modal' data-target='#myModal' onclick = join()>Get Preview</button>
                                         <br>
@@ -139,7 +141,7 @@
                 function join(){
                     var value = $('#in3').val();
                     var new_text = value.split(' ').join('_');
-                    var shortlink = 'https://usict.acm.org/'+new_text;
+                    var shortlink = '".$siteLink."'+new_text;
                     $('#modal').html(shortlink);
                     console.log(new_text);
 

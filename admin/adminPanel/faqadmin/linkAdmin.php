@@ -1,3 +1,5 @@
+<?php     include(__DIR__.'/../../../tiny/siteName.php');
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,14 +97,14 @@
                                     echo "<script>
                                     let links = [];
                                     
-                                        function copy2 (count){navigator.clipboard.writeText('http://localhost/ACM-new/tiny/'+links[count]);}</script>";
+                                        function copy2 (count){navigator.clipboard.writeText('".$siteLink."'+links[count]);}</script>";
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
                                         $ii = $row['originalLink'];
                                         $ii = substr($ii,0,51);
                                         echo "<td>" . $row['linkFor'] . "</td>";
                                         echo "<td>" . $ii . "....</td>";
-                                        echo "<td><a target='_blank' href='http://localhost/ACM-new/tiny/". $row['code'] ."'>http://localhost/ACM-new/tiny/". $row['code'] ."</a></td>";
+                                        echo "<td><a target='_blank' href='".$siteLink."". $row['code'] ."'>".$siteLink."". $row['code'] ."</a></td>";
                                         $short = $row['code'];
                                         echo "<script>links.push('".$short."'); </script>";
                                         

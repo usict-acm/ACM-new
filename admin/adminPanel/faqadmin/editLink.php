@@ -1,4 +1,6 @@
 <?php 
+    include(__DIR__.'/../../../tiny/siteName.php');
+
 
 /*                      included database.php           */
 
@@ -41,7 +43,7 @@ if(isset($_GET["table"]) && isset($_GET["linkFor"]) && isset($_GET["shortLink"])
 if (isset($_POST['reg'])) {
     $sl = $_POST['in3'];
     $lf = $_POST['in1'];
-    //$s1Link='https://usict.acm.org/';
+
     $exx = explode(" ",$sl);
     $sl = join("_",$exx);
     //$sl=$s1Link.$sl;
@@ -75,7 +77,7 @@ if (isset($_POST['reg'])) {
                                       font-weight:bold;
                                       font-size:1.1em;
                                       color:#444;
-                                      top:190px;'>https://usict.acm.org/  
+                                      top:190px;'>".$siteName."
                                   </label>
                               </div> 
                           </div>
@@ -117,7 +119,7 @@ if (isset($_POST['reg'])) {
                                   font-weight:bold;
                                   font-size:1.1em;
                                   color:#444;
-                                  top:190px;'>https://usict.acm.org/  
+                                  top:190px;'>".$siteName."
                               </label>
                           </div> 
                       </div>
@@ -140,7 +142,7 @@ if (isset($_POST['reg'])) {
         $results1 = mysqli_query($link, $query1);
         $results = mysqli_query($link, $query);
         // echo "<br>" . $query;
-        echo "<script>function copy2(){navigator.clipboard.writeText('http://localhost/ACM-new/tiny/".$sl."');}</script>";
+        echo "<script>function copy2(){navigator.clipboard.writeText('".$siteLink."".$sl."');}</script>";
 
 
         echo "<div class='wrapper' style='margin:100px 0px 0px 350px;'>";
@@ -154,7 +156,7 @@ if (isset($_POST['reg'])) {
                 echo "<div>";
             echo "<div>";
         echo "<div>";
-        echo "<h4 style='display:inline-block; color:#4e73df; font-weight:bold;'>http://localhost/ACM-new/tiny/".$sl."</h4>";
+        echo "<h4 style='display:inline-block; color:#4e73df; font-weight:bold;'>".$siteLink."".$sl."</h4>";
         echo "<button style='margin-left:20px; display:inline-block;' class='btn btn-primary' onclick=copy2()>Copy</button>";
   }
 
@@ -280,7 +282,7 @@ if (isset($_POST['reg'])) {
                             <br>
                             <div class="form-text new">
                                 <input type=text class="form-control" name="in3" placeholder="Custom Link Name" id="in3" required />
-                                <label for="in3" class="static-value">https://usict.acm.org/  </label>
+                                <label for="in3" class="static-value"><?php echo $siteName ?>  </label>
                             </div> 
                    
                             <div class="randDiv">

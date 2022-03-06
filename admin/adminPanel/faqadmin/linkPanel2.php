@@ -1,4 +1,6 @@
 <?php
+    include(__DIR__.'/../../../tiny/siteName.php');
+
     $randNum = bin2hex(random_bytes(3));;
     echo "      
     <head>
@@ -83,6 +85,12 @@
             .randDiv{
                 margin:20px 0 0 150px;
             }
+            .modal-background{
+                background-color: white;
+            }
+            .modal-head{
+                flex-direction: row-reverse
+            }
     
         </style>
     </head>
@@ -108,10 +116,10 @@
                                         <input type='text' id='in2' class='form-control' name='inn2' placeholder='Enter Original Link' value='".$ol."' required readonly/>
                                         <br>
                                         <div class='form-text new'>
-                                            <input type='text' class='form-control' name='inn3' placeholder='Custom Link Name' value='".$sl."' id='in3' required />
-                                            <label for='in3' class='static-value'>https://usict.acm.org/  </label>
+                                            <input type='text' class='form-control mod' name='inn3' placeholder='Custom Link Name' value='".$sl."' id='in3' required />
+                                            <label for='in3' class='static-value'>".$siteName."  </label>
                                         </div> 
-                                        <button id = 'previewBtn' type = 'button' class='btn btn-primary new' data-toggle='modal' data-target='#myModal'>Get Preview</button>
+                                        <button  class='btn btn-primary new ' type='button'  data-toggle='modal' data-target='#myModal' onclick = join()>Get Preview</button>
                                         <br>
                                         <div class='randDiv'>
                                             <span style='font-weight:bold;'>OR</span>
@@ -125,6 +133,41 @@
                         </div>
                     </div>
                 </div>
+
+
+
+                <script>
+                function join(){
+                    var value = $('.mod').val();
+                    var new_text = value.split(' ').join('_');
+                    var shortlink = '".$siteLink."'+new_text;
+                    $('#modal').html(shortlink);
+
+                    // console.log(value);
+                    console.log(new_text);
+
+                }
+                </script>
+                
+
+                <div class='modal fade' id='myModal' role='dialog'>
+                <div class='modal-dialog'>
+                
+                  <div class=modal-content modal-background'>
+                    <div class='modal-header modal-head'>
+                      <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                      <h4 class='modal-title'>Your Shortlink!!</h4>
+                    </div>
+                    <div class='modal-body' id = 'modal'>
+                      
+                    </div>
+                    <div class='modal-footer'>
+                      <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
+                    </div>
+                  </div>
+                  </div>
+                  </div>
+              
               
               
 
