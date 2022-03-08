@@ -6,7 +6,7 @@
 	<?php
 	include("head.php")
 	?>
-	<title>USICT ACM</title>
+	<title>GGSIP University USS ACM Student Chapter</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
 	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" /> -->
 	<link rel="stylesheet" href="./assets/CSS/newStyle.css" />
@@ -41,7 +41,7 @@
 				<div class="swiper-button-prev"></div>
 			</div>
 			<div id="typewriter">
-				<span class="typewriter-box" data-wait="200" data-content='["USICT ACM STUDENT CHAPTER"]'> </span>
+				<span class="typewriter-box" data-wait="200" data-content='["GGSIP University USS ACM Student Chapter"]'> </span>
 				<!-- end swiper-slide -->
 			</div>
 			<!-- end swiper-wrapper -->
@@ -67,7 +67,7 @@
 					About <span class="text-blue">Our Chapter</span>
 				</h2>
 				<p class="text-secondary about-text">
-					ACM Student Chapter, USICT is an official student body incepted in 2019 under the University
+					GGSIP University USS ACM Student Chapter is an official student body incepted in 2019 under the University
 					School USICT, GGSIPU. The chapter will conduct events including programming contests, talks by
 					renowned speakers, workshops etc.which give the students an exposure to the competitive
 					computing world as well as allow them to understand the advancements going on in the computing
@@ -83,6 +83,9 @@
 							<i class="fas fa-chevron-down arrow"></i>
 						</div>
 						<div class="dropdown">
+							<a href="./assets/newsletter3.pdf" id="adobeXd">2022
+								<span></span>
+							</a>
 							<a href="./assets/newsletter2.pdf" id="adobeXd">2021
 								<span></span>
 							</a>

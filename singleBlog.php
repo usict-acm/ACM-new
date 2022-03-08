@@ -4,7 +4,7 @@
     <?php
       include("head.php")
     ?>
-    <title>ACM BLOG</title>
+    <title>GGSIP University USS ACM Student Chapter</title>
     <link href="./assets/CSS/singleBlog.css" rel="stylesheet" />
     <link href="./assets/CSS/glider.css" rel="stylesheet" />
     <link href="./assets/CSS/header.css" rel="stylesheet" />

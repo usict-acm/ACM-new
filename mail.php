@@ -8,7 +8,7 @@
 
         $body = "
             <html>
-                <head><title>Welcome to USICT ACM Student Chapter</title></head>
+                <head><title>Welcome to GGSIP University USS ACM Student Chapter</title></head>
                 <body>
                     <p>Dear $userName</p>
                     <br />
@@ -17,7 +17,7 @@
                     <p>For more community events, join our discord by clicking <a href='https://usict.acm.org/discord'>here</a>.</p>
                     <br />
                     <p>Regards</p>
-                    <p>USICT ACM Student Chapter</p>
+                    <p>GGSIP University USS ACM Student Chapter</p>
                 </body>
             </html>
         ";
@@ -42,7 +42,7 @@
                     <p>Share the word to your friends and keep writing.</p>
                     <br />
                     <p>Regards</p>
-                    <p>USICT ACM Student Chapter</p>
+                    <p>GGSIP University USS ACM Student Chapter</p>
                 </body>
             </html>
         ";        
@@ -66,7 +66,7 @@
                     <p>Keep writing.</p>
                     <br />
                     <p>Regards</p>
-                    <p>USICT ACM Student Chapter</p>
+                    <p>GGSIP University USS ACM Student Chapter</p>
                 </body>
             </html>
         ";        
