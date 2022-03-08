@@ -5,7 +5,7 @@
   <?php
   include('head.php');
   ?>
-  <title>USICT ACM</title>
+  <title>GGSIP University USS ACM Student Chapter</title>
   <link href="assets/CSS/summerInternship.css" rel="stylesheet" />
   <link href="assets/CSS/header.css" rel="stylesheet" />
   <link href="assets/CSS/footer.css" rel="stylesheet" />
@@ -26,7 +26,7 @@
       <div class="pt-card row" style="background-image: url('./assets/images/internship-banner.jpeg'); margin-top:5%">
         <div class="heading col-xl-9 col-lg-9 col-md-9 col-sm-6">
           <h3 style="color:transparent"><span class="uheading">Why Join</span><br>
-            <span class="lheading">ACM USICT Chapter?</span></h3>
+            <span class="lheading">GGSIP University USS ACM Student Chapter?</span></h3>
         </div>
       </div>
     </section>

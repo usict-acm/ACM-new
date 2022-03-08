@@ -4,7 +4,7 @@
     <?php
       include('head.php');
     ?>
-    <title>USICT ACM</title>
+    <title>GGSIP University USS ACM Student Chapter</title>
     <link href='./assets/CSS/benefits.css' rel="stylesheet" />
     <link href="./assets/CSS/glider.css" rel="stylesheet" />
     <link href="./assets/CSS/header.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
         <div class="pt-card row">
           <div class="heading col-xl-9 col-lg-9 col-md-9 col-sm-6">
             <h3><span class="uheading">Why Join</span><br>
-              <span class="lheading">ACM USICT Chapter?</span></h3>
+              <span class="lheading">GGSIP University USS ACM Student Chapter?</span></h3>
           </div>
         </div>
       </section>
@@ -65,8 +65,8 @@
               <p>Sponsored by Microsoft, an internationally recognized venue enabling students to experience the research world, share and exchange ideas, rub shoulders with academic and industry luminaries.</p>
             </div>
             <div class="perk-card"> <img src="./assets/images/perks/clubs.png" height="80" width="80">
-              <h3>Clubs Under ACM USICT</h3>
-              <p>ACM USICT has a total of 8 daughter clubs under its aegis. Namely Appetite, Webify, Research & Development Cell, Entreprenurs' Arena, Cyber Security Cell, Innovate AI and RobIOTics.</p>
+              <h3>Clubs Under GGSIP University USS ACM Student Chapter</h3>
+              <p>GGSIP University USS ACM Student Chapter has a total of 8 daughter clubs under its aegis. Namely Appetite, Webify, Research & Development Cell, Entreprenurs' Arena, Cyber Security Cell, Innovate AI and RobIOTics.</p>
             </div>
             <div class="perk-card"> <img src="./assets/images/perks/career.png" height="80" width="80">
               <h3>ACM Career & Job Center</h3>
@@ -334,27 +334,27 @@
                     <br>
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice1" name="entry.332679571" value="USICT ACM DevSource - The Development and Open Source Group">
-                      <label class="label-course" for="contactChoice1">USICT ACM DevSource</label>
+                      <label class="label-course" for="contactChoice1">DevSource</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice2" name="entry.332679571" value="USICT ACM enGame - The Gaming Group">
-                      <label class="label-course" for="contactChoice2">USICT ACM enGame</label>
+                      <label class="label-course" for="contactChoice2">enGame</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM ICPC Club - The Competitive Programming Group">
-                      <label class="label-course" for="contactChoice3">USICT ACM ICPC Club</label>
+                      <label class="label-course" for="contactChoice3">ICPC Club</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Innovate AI - The Machine Learning, Data Science and AI Group">
-                      <label class="label-course" for="contactChoice4">USICT ACM Innovate AI</label><br>
+                      <label class="label-course" for="contactChoice4">Innovate AI</label><br>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Cyber Cell - The Cybersecurity Group">
-                      <label class="label-course" for="contactChoice5">USICT ACM Cyber Cell</label>
+                      <label class="label-course" for="contactChoice5">Cyber Chain</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM RobIOTics - The Robotics and IoT Group">
-                      <label class="label-course" for="contactChoice6">USICT ACM RobIOTics</label>
+                      <label class="label-course" for="contactChoice6">RobIOTics</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Entrepreneurs' Arena - The Entrepreneurship Group">
@@ -362,11 +362,11 @@
                     </div>
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Research Cell - The Research and Development Group">
-                      <label class="label-course" for="contactChoice8">USICT ACM Research Cell</label>
+                      <label class="label-course" for="contactChoice8">Research Cell</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM XD - The Experience and Design group">
-                      <label class="label-course" for="contactChoice8">USICT ACM XD</label>
+                      <label class="label-course" for="contactChoice8">XD</label>
                     </div>
                   </div>
                 </div>
