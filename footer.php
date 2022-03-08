@@ -123,7 +123,7 @@
 						</div>
 						<div class="footer-text">
 							<p>
-								The USICT ACM Student Chapter is an official student body incepted in 2019 under the
+								The GGSIP University USS ACM Student Chapter is an official student body incepted in 2019 under the
 								University School USICT, GGSIPU.
 							</p>
 						</div>
@@ -137,7 +137,7 @@
 			<div class="row">
 				<div class="col text-center">
 					<div class="copyright-text">
-						<p>&copy; Conceptualized, Designed and Developed by Office Bearers of ACM USICT chapter</p>
+						<p>&copy; Conceptualized, Designed and Developed by Office Bearers of GGSIP University USS ACM Student Chapter</p>
 					</div>
 				</div>
 			</div>
