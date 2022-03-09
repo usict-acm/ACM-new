@@ -1,5 +1,5 @@
 <?php 
-    include(__DIR__.'/../../../tiny/siteName.php');
+    include(__DIR__.'/../../../link/siteName.php');
 
 
 /*                      included database.php           */
