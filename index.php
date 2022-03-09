@@ -83,13 +83,13 @@
 							<i class="fas fa-chevron-down arrow"></i>
 						</div>
 						<div class="dropdown">
-							<a href="./assets/newsletter3.pdf" id="adobeXd">2022
+							<a href="./assets/newsletter3.pdf" target="_blank" id="adobeXd">2022
 								<span></span>
 							</a>
-							<a href="./assets/newsletter2.pdf" id="adobeXd">2021
+							<a href="./assets/newsletter2.pdf" target="_blank" id="adobeXd">2021
 								<span></span>
 							</a>
-							<a href="./assets/newsletter.pdf" id="sketch">2020
+							<a href="./assets/newsletter.pdf" target="_blank" id="sketch">2020
 								<span></span>
 							</a>
 						</div>
