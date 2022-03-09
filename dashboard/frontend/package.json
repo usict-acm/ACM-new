@@ -1,7 +1,7 @@
 {
 	"name": "acm-usict",
 	"version": "1.2.0",
-	"description": "User portal for ACM USICT chapter",
+	"description": "User portal for GGSIP University USS ACM Student Chapter",
 	"main": "index.js",
 	"keywords": [
 		"react",
