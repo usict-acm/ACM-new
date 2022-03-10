@@ -8,8 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,600,700,900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="https://rawcdn.githack.com/SochavaAG/example-mycode/master/_common/css/reset.css"> -->
     <title>ACM HACKATHON</title>
 </head>
 
@@ -17,18 +18,18 @@
     <!-- Header -->
     <section id="home">
         <div class="header">
-        <a class="logo-navbar" href="">TRELLATHON</a>
-        <img src="acm1.png" alt="" class="logo-acm">
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-        <ul class="menu">
-            <li><a href="#about" class="link link-theme link-arrow">About</a></li>
-            <li><a href="#timeline" class="link link-theme link-arrow">Timeline</a></li>
-            <li><a href="#partner" class="link link-theme link-arrow">Partner</a></li>
-            <li><a href="#team" class="link link-theme link-arrow">Team</a></li>
-            <li><a href="#faq" class="link link-theme link-arrow">FAQ</a></li>
-            <li><a href="#contact" class="link link-theme link-arrow">Contact us</a></li>
-        </ul>
+            <a class="logo-navbar" href="">TRELLATHON</a>
+            <img src="acm1.png" alt="" class="logo-acm">
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li><a href="#about" class="link link-theme link-arrow">About</a></li>
+                <li><a href="#timeline" class="link link-theme link-arrow">Timeline</a></li>
+                <li><a href="#partner" class="link link-theme link-arrow">Partner</a></li>
+                <li><a href="#team" class="link link-theme link-arrow">Team</a></li>
+                <li><a href="#faq" class="link link-theme link-arrow">FAQ</a></li>
+                <li><a href="#contact" class="link link-theme link-arrow">Contact us</a></li>
+            </ul>
         </div>
         <canvas></canvas>
         <canvas></canvas>
@@ -68,8 +69,7 @@
                     </div>
 
                     <div class="about_info_image">
-                        <img src="https://usict.acm.org/assets/images/trellposter.jpeg" height="500vh" width="300vw"
-                            alt="error">
+                        <img src="https://usict.acm.org/assets/images/trellposter.jpeg" height="500vh" width="300vw" alt="error">
                     </div>
 
 
@@ -81,7 +81,7 @@
 
     <!--****************************************************** TIMELINE *******************************************************-->
 
-    <div class="container-timeline">
+    <!-- <div class="container-timeline">
     <h1 class = "timeline-heading mb-sm text-center heading-partner">Timeline</h1>
     <div class="timeline">
 		<div class="timeline-row">
@@ -92,15 +92,7 @@
 				<i class="icon-attachment"></i>
 				<h4>Admin theme!</h4>
 				<p>Maxwell Admin Dashboard contains C3 graphs, flot graphs, data tables, calendar, drag &amp; drop and ion slider.</p>
-				<!-- <div class="thumbs">
-					<img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Maxwell Admin">
-					<img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="Maxwell Admin">
-					<img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="Maxwell Admin">
-				</div> -->
-				<!-- <div class="">
-					<span class="badge badge-pill">Sales</span>
-					<span class="badge badge-pill">Admin</span>
-				</div> -->
+
 			</div>
 		</div>
 
@@ -114,17 +106,7 @@
 				<p>
 					Maxwell Admin Dashboard contains C3 graphs, flot graphs, data tables, calendar.
 				</p>
-				<!-- <div class="thumbs">
-					<div class="thumbs">
-					<img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Maxwell Admin">
-					<img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="Maxwell Admin">
-					<img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="Maxwell Admin">
-				</div> -->
-				<!-- </div> -->
-				<!-- <div class="">
-					<span class="badge badge-pill">Graphs</span>
-					<span class="badge badge-pill">Chat</span>
-				</div> -->
+
 			</div>
 		</div>
 
@@ -136,10 +118,7 @@
 				<i class="icon-turned_in_not"></i>
 				<h4>Best Admin Template!</h4>
 				<p>Custom C3 graphs, Custom flot graphs, flot graphs, small graphs, Sass, profile and timeline.</p>
-				<!-- <div>
-					<span class="badge badge-pill">Invoice</span>
-					<span class="badge badge-pill">Tasks</span>
-				</div> -->
+
 			</div>
 		</div>
 
@@ -151,10 +130,7 @@
 				<i class="icon-directions"></i>
 				<h4>Maxwell Admin</h4>
 				<p>Maxwell Admin Dashboard contains C3 graphs, flot graphs, data tables, calendar, drag &amp; drop and ion slider.</p>
-				<!-- <div>
-					<span class="badge badge-pill">Profile</span>
-					<span class="badge badge-pill">Sales</span>
-				</div> -->
+
 			</div>
 		</div>
 
@@ -166,15 +142,7 @@
 				<i class="icon-change_history"></i>
 				<h4>Maxwell Dashboard</h4>
 				<p class="no-margin">Maxwell Admin dashboard includes invoice, profile, tasks, gallery, projects, maintanence.</p>
-				<!-- <div class="thumbs">
-					<img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
-					<img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Maxwell Admin">
-					<img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="Maxwell Admin">
-				</div> -->
-				<!-- <div>
-					<span class="badge badge-pill">Analytics</span>
-					<span class="badge badge-pill">Contacts</span>
-				</div> -->
+
 			</div>
 		</div>
 
@@ -188,15 +156,7 @@
 				<p>
 					Maxwell Admin Dashboard contains C3 graphs, flot graphs, data tables, calendar.
 				</p>
-				<!-- <div class="thumbs">
-					<img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
-					<img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="Maxwell Admin">
-					<img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="Maxwell Admin">
-				</div> -->
-				<!-- <div class="">
-					<span class="badge badge-pill">Ecommerce</span>
-					<span class="badge badge-pill">CRM</span>
-				</div> -->
+
 			</div>
 		</div>
 
@@ -208,19 +168,77 @@
 				<i class="icon-attachment"></i>
 				<h4>Admin Template!</h4>
 				<p>Maxwell Admin Dashboard contains C3 graphs, flot graphs, data tables, calendar, drag &amp; drop and ion slider.</p>
-				<!-- <div class="thumbs">
-					<img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="Maxwell Admin">
-					<img class="img-fluid rounded" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="Maxwell Admin">
-				</div> -->
-				<!-- <div class="">
-					<span class="badge badge-pill">Orders</span>
-					<span class="badge badge-pill">Sales</span>
-				</div> -->
+
 			</div>
 		</div>
 
 	</div>
-</div>
+</div> -->
+
+<div class="timeline">
+        <h1>Timeline</h1>
+        <h1 class="timeline-trellathon">TRELLATHON</h1>
+        <div>
+          <ul>
+            <li>
+              <div class="timeline-li">
+                <time>9th - 20th March 2021
+                    REGISTRATION</time>
+                <p> <a href="#">Register Now</a> 
+      </p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-li">
+                <time>16th March 2021
+                    PROBLEM STATEMENT RELEASE</time>
+                <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+      </p> -->
+              </div>
+            </li>
+            <li>
+              <div class="timeline-li">
+                <time>16th - 20th March 2021
+                    IDEATION ROUND</time>
+                <p>Draft your solution for the problem statement of Trell.</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-li">
+                <time>22nd March 2021
+                    RESULTS OF IDEATION ROUND</time>
+                <p>Shortlisted teams will move forward to the next round.</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-li">
+                <time>23rd March 2021
+                    PROTOTYPING ROUND</time>
+                <p>Develop a prototype for the solution of the ideation round.</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-li">
+                <time>24th March 2021
+                    PITCH DAY</time>
+                <p>Pitch your prototype to Trell and Judges.</p>
+              </div>
+            </li>
+          </ul>
+          
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 
     <!--****************************************************** END OF TIMELINE *******************************************************-->
 
@@ -250,277 +268,257 @@
     <!-- ************************************************* Start of Partner ************************************************* -->
     <section id="partner">
 
-<div class="container-partner">
-    <h2 class="mb-sm text-center heading-partner">Our <strong>Partners</strong></h2>
-    <strong>
-        <div class="row d-flex justify-content-center">
-            <div class=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-3">
-                <div class="square-holder">
-                    <img alt="" src="trell_logo.png" />
-                    <h2 class="pat-heading text-center">TRELL</h2>
+        <div class="container-partner">
+            <h2 class="mb-sm text-center heading-partner">Our <strong>Partners</strong></h2>
+            <strong>
+                <div class="row d-flex justify-content-center">
+                    <div class=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-3">
+                        <div class="square-holder">
+                            <img alt="" src="trell_logo.png" />
+                            <h2 class="pat-heading text-center">TRELL</h2>
+                        </div>
+                    </div>
+                    <div class=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-3">
+                        <div class="square-holder">
+                            <img alt="" src="ensvee-logo.png" />
+                            <h2 class="pat-heading text-center">ENSVEE</h2>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-3">
-                <div class="square-holder">
-                    <img alt="" src="ensvee-logo.png" />
-                    <h2 class="pat-heading text-center">ENSVEE</h2>
-                </div>
-            </div>
+            </strong>
         </div>
-    </strong>
-</div>
-</section>
+    </section>
 
     <!-- ************************************************* END of Partner ************************************************* -->
 
     <!--***************************************************** TEAM **********************************************************-->
     <section id="team-section">
-    <div class= "container-team">
-        <h1 class="heading-team">Web Team</h1>
-        <!-- <div class="hr">
+        <div class="container-team">
+            <h1 class="heading-team">Web Team</h1>
+            <!-- <div class="hr">
             <hr>
         </div> -->
 
-        <div class="row">
-            <div class="col-md-2 col-sm-6 box-1">
-                <div class="our-team">
-                    <div class="pic"><img class="image" src="image4-modified.png" alt=""></div>
-                    <h3 class="title">Williamson</h3>
-                    <span class="post">Web Developer</span>
-                    <ul class="icon">
-                        <li><a href="#" class="fab fa-twitter"></a></li>
-                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                        <li><a href="#" class="fab fa-instagram"></a></li>
-                    </ul>
+            <div class="row">
+                <div class="col-md-2 col-sm-6 box-1">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="image4-modified.png" alt=""></div>
+                        <h3 class="title">Williamson</h3>
+                        <span class="post">Web Developer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
                 </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="col-md-2 col-sm-6">
-                <div class="our-team">
-                    <div class="pic"><img class="image"
-                            src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg"
-                            alt=""></div>
-                    <h3 class="title">Kristiana</h3>
-                    <span class="post">Web Designer</span>
-                    <ul class="icon">
-                        <li><a href="#" class="fab fa-twitter"></a></li>
-                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                        <li><a href="#" class="fab fa-instagram"></a></li>
-                    </ul>
+            <div class="row">
+                <div class="col-md-2 col-sm-6 box-1">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="image4-modified.png" alt=""></div>
+                        <h3 class="title">Williamson</h3>
+                        <span class="post">Web Developer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
                 </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="col-md-2 col-sm-6">
-                <div class="our-team">
-                    <div class="pic"><img class="image"
-                            src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg"
-                            alt=""></div>
-                    <h3 class="title">Kristiana</h3>
-                    <span class="post">Web Designer</span>
-                    <ul class="icon">
-                        <li><a href="#" class="fab fa-twitter"></a></li>
-                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                        <li><a href="#" class="fab fa-instagram"></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-2 col-sm-6">
-                <div class="our-team">
-                    <div class="pic"><img class="image"
-                            src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg"
-                            alt=""></div>
-                    <h3 class="title">Kristiana</h3>
-                    <span class="post">Web Designer</span>
-                    <ul class="icon">
-                        <li><a href="#" class="fab fa-twitter"></a></li>
-                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                        <li><a href="#" class="fab fa-instagram"></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-2 col-sm-6">
-                <div class="our-team">
-                    <div class="pic"><img class="image"
-                            src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg"
-                            alt=""></div>
-                    <h3 class="title">Kristiana</h3>
-                    <span class="post">Web Designer</span>
-                    <ul class="icon">
-                        <li><a href="#" class="fab fa-twitter"></a></li>
-                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                        <li><a href="#" class="fab fa-instagram"></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-2 col-sm-6">
-                <div class="our-team">
-                    <div class="pic"><img class="image"
-                            src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg"
-                            alt=""></div>
-                    <h3 class="title">Kristiana</h3>
-                    <span class="post">Web Designer</span>
-                    <ul class="icon">
-                        <li><a href="#" class="fab fa-twitter"></a></li>
-                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                        <li><a href="#" class="fab fa-instagram"></a></li>
-                    </ul>
-                </div>
-            </div>
 
         </div>
-
-        <div class="row">
-            <div class="col-md-2 col-sm-6 box-1">
-                <div class="our-team">
-                    <div class="pic"><img class="image" src="image4-modified.png" alt=""></div>
-                    <h3 class="title">Williamson</h3>
-                    <span class="post">Web Developer</span>
-                    <ul class="icon">
-                        <li><a href="#" class="fab fa-twitter"></a></li>
-                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                        <li><a href="#" class="fab fa-instagram"></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-2 col-sm-6">
-                <div class="our-team">
-                    <div class="pic"><img class="image"
-                            src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg"
-                            alt=""></div>
-                    <h3 class="title">Kristiana</h3>
-                    <span class="post">Web Designer</span>
-                    <ul class="icon">
-                        <li><a href="#" class="fab fa-twitter"></a></li>
-                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                        <li><a href="#" class="fab fa-instagram"></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-2 col-sm-6">
-                <div class="our-team">
-                    <div class="pic"><img class="image"
-                            src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg"
-                            alt=""></div>
-                    <h3 class="title">Kristiana</h3>
-                    <span class="post">Web Designer</span>
-                    <ul class="icon">
-                        <li><a href="#" class="fab fa-twitter"></a></li>
-                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                        <li><a href="#" class="fab fa-instagram"></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-2 col-sm-6">
-                <div class="our-team">
-                    <div class="pic"><img class="image"
-                            src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg"
-                            alt=""></div>
-                    <h3 class="title">Kristiana</h3>
-                    <span class="post">Web Designer</span>
-                    <ul class="icon">
-                        <li><a href="#" class="fab fa-twitter"></a></li>
-                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                        <li><a href="#" class="fab fa-instagram"></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-2 col-sm-6">
-                <div class="our-team">
-                    <div class="pic"><img class="image"
-                            src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg"
-                            alt=""></div>
-                    <h3 class="title">Kristiana</h3>
-                    <span class="post">Web Designer</span>
-                    <ul class="icon">
-                        <li><a href="#" class="fab fa-twitter"></a></li>
-                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                        <li><a href="#" class="fab fa-instagram"></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-2 col-sm-6">
-                <div class="our-team">
-                    <div class="pic"><img class="image"
-                            src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg"
-                            alt=""></div>
-                    <h3 class="title">Kristiana</h3>
-                    <span class="post">Web Designer</span>
-                    <ul class="icon">
-                        <li><a href="#" class="fab fa-twitter"></a></li>
-                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                        <li><a href="#" class="fab fa-instagram"></a></li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
-
-    </div>
     </section>
     <!--**************************************************** End of TEAM ****************************************************-->
 
 
-<!--************************************************* FAQS Section ****************************************************-->
+    <!--************************************************* FAQS Section ****************************************************-->
 
-<section class="main-section">
-  <div id="faqs" class="container">
-    <h2 class="line-heading">Frequently Asked Questions</h2>
-    <div id="faqSection" class="fullwidth-container">
-      <div>
-        <button class="collapsible">Do you work full time as a developer?</button>
-        <div class="faq-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisu oat rhoncus. Curabitur vulputate porttitor lectus, vitae tincidunt dolor eleifend vitae. osuere.m odio, sit amet tincidunt est tincidundisse vingilla in eu justo.</p>
-        </div>
-        <button class="collapsible">Do you require a deposit before working?</button>
-        <div class="faq-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec convallis, porta consequat erat rhoncus. Curabitur vulputate porttitor lectus, vitae tincidunt dolor eleifend vitae.unt est tincidunt at.olutpat. Nulla sit amet sem non elit posuere fringilla in eu justo.</p>
-        </div>
-        <button class="collapsible">Will I own the website?</button>
-        <div class="faq-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisciat r r eleifend vitae. Praespis arcu. Sed condimentum elit ac elit rhoncus, volutpionsecmet sem non elit posuere fringilla in eu justo.</p>
-        </div>
-        <button class="collapsible">Are there other costs involved?</button>
-        <div class="faq-content">
-          <p>Lorem ipsum dolor sit amet, consectetur  urna. Suspendis elit posuere fringilla in eu justo.</p>
-          
-          <p>Lorem ipsum dos, volutpaiat orci accumsan.Contact me via <a href="mailto:#" target="_blank">EMAIL</a> and I will be more than happy to answer your queries.</p>
-        </div>
-      </div>
-      <div>
-        <button class="collapsible">What is hosting? Will I need it?</button>
-        <div class="faq-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscintate po condimentum elit ac elit rhoncus, volutpat feugiat orci accumsan.</p>
-          <p>Maecenas tinciabitur viverra bibendum fringilla in eu justo.</p>
-        </div>
-        <button class="collapsible">Will you work for equity on a new idea I have?</button>
-        <div class="faq-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consrat rhoncus. Curabitur vulputate porttitor lectus, vitae tincidunt dolor eleifend vitae. Praesent sollicitudin eros in finibus posuere. Quisqu elit ac elit rhoncus, volutpat feugiat orci accumsan.</p>
-          <p>Maecenas tincidunt diaali Curabitur viverrafringilla in eu justo.</p>
-        </div>
-        <button class="collapsible">How much experience do you have?</button>
-        <div class="faq-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elialibuimentum elit ac elit rhoncus, volutpat feugiat orci accumsan.</p>
-        </div>
-        <button class="collapsible">What if I need changes. Can I edit it myself?</button>
-        <div class="faq-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing fit ac us, volutpat feugiat orci accumsan.</p>
-          <p>Maecenas tincidit coravida vel diam ngilla in eu justo.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    <section class="main-section">
+        <div id="faqs" class="container">
+            <h2 class="line-heading">Frequently Asked Questions</h2>
+            <div id="faqSection" class="fullwidth-container">
+                <div>
+                    <button class="collapsible">Do you work full time as a developer?</button>
+                    <div class="faq-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisu oat rhoncus. Curabitur vulputate porttitor lectus, vitae tincidunt dolor eleifend vitae. osuere.m odio, sit amet tincidunt est tincidundisse vingilla in eu justo.</p>
+                    </div>
+                    <button class="collapsible">Do you require a deposit before working?</button>
+                    <div class="faq-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec convallis, porta consequat erat rhoncus. Curabitur vulputate porttitor lectus, vitae tincidunt dolor eleifend vitae.unt est tincidunt at.olutpat. Nulla sit amet sem non elit posuere fringilla in eu justo.</p>
+                    </div>
+                    <button class="collapsible">Will I own the website?</button>
+                    <div class="faq-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisciat r r eleifend vitae. Praespis arcu. Sed condimentum elit ac elit rhoncus, volutpionsecmet sem non elit posuere fringilla in eu justo.</p>
+                    </div>
+                    <button class="collapsible">Are there other costs involved?</button>
+                    <div class="faq-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur urna. Suspendis elit posuere fringilla in eu justo.</p>
 
-<!--************************************************* End of FAQ Section ****************************************************-->
+                        <p>Lorem ipsum dos, volutpaiat orci accumsan.Contact me via <a href="mailto:#" target="_blank">EMAIL</a> and I will be more than happy to answer your queries.</p>
+                    </div>
+                </div>
+                <div>
+                    <button class="collapsible">What is hosting? Will I need it?</button>
+                    <div class="faq-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscintate po condimentum elit ac elit rhoncus, volutpat feugiat orci accumsan.</p>
+                        <p>Maecenas tinciabitur viverra bibendum fringilla in eu justo.</p>
+                    </div>
+                    <button class="collapsible">Will you work for equity on a new idea I have?</button>
+                    <div class="faq-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consrat rhoncus. Curabitur vulputate porttitor lectus, vitae tincidunt dolor eleifend vitae. Praesent sollicitudin eros in finibus posuere. Quisqu elit ac elit rhoncus, volutpat feugiat orci accumsan.</p>
+                        <p>Maecenas tincidunt diaali Curabitur viverrafringilla in eu justo.</p>
+                    </div>
+                    <button class="collapsible">How much experience do you have?</button>
+                    <div class="faq-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elialibuimentum elit ac elit rhoncus, volutpat feugiat orci accumsan.</p>
+                    </div>
+                    <button class="collapsible">What if I need changes. Can I edit it myself?</button>
+                    <div class="faq-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing fit ac us, volutpat feugiat orci accumsan.</p>
+                        <p>Maecenas tincidit coravida vel diam ngilla in eu justo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--************************************************* End of FAQ Section ****************************************************-->
 
 
     <!--************************************************* Contact us ****************************************************-->
@@ -575,8 +573,8 @@
         </div>
     </section>
     <!--*****************************************************End of Contact us ***********************************************-->
-    
-    
+
+
 
     <!--****************************************************** FOOTER *******************************************************-->
     <section id="container-footer" class="fluid-container bg-black">
@@ -587,12 +585,10 @@
                         <div class="d-flex">
                             <img src="acm1.png" alt="" class="footer-acm">
                         </div>
-                        <h1 class="footerh1" >USICT ACM Student Chapter</h1>
+                        <h1 class="footerh1">USICT ACM Student Chapter</h1>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi non
                             pariatur numquam animi nam at impedit odit nisi.</p>
-                        <div class="social mt-3 mb-3"> <i class="fa fa-facebook-official fa-lg"></i> <i
-                                class="fa fa-instagram fa-lg"></i> <i class="fa fa-twitter fa-lg"></i> <i
-                                class="fa fa-linkedin-square fa-lg"></i></div>
+                        <div class="social mt-3 mb-3"> <i class="fa fa-facebook-official fa-lg"></i> <i class="fa fa-instagram fa-lg"></i> <i class="fa fa-twitter fa-lg"></i> <i class="fa fa-linkedin-square fa-lg"></i></div>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-2"></div>
@@ -637,12 +633,10 @@
 
 
     <script src="https://kit.fontawesome.com/833875f75e.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-        <script src="hiring.js"></script>
-        <script src="hiring2.js"></script>
-        <script src="home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="hiring.js"></script>
+    <script src="hiring2.js"></script>
+    <script src="home.js"></script>
 </body>
 
 </html>
