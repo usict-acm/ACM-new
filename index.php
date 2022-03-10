@@ -25,16 +25,22 @@
 		<div class="swiper-container" id="myCarousel">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/banner-high-mobile.png" data-background="./assets/images/banner-high.png"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-1-mobile.JPG" data-background="./assets/images/carousel-img-1.jpeg"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/img1-mobile.png" data-background="./assets/images/img1.jpg"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-2-mobile.JPG" data-background="./assets/images/carousel-img-2.jpeg"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/img3-mobile.png" data-background="./assets/images/img3.jpg"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-3-mobile.JPG" data-background="./assets/images/carousel-img-3.JPG"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/img2-mobile.png" data-background="./assets/images/img2.jpg"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-4-mobile.JPG" data-background="./assets/images/carousel-img-4.JPG"></div>
+				</div>
+				<div class="swiper-slide">
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-5-mobile.JPG" data-background="./assets/images/carousel-img-5.JPG"></div>
+				</div>
+				<div class="swiper-slide">
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-6-mobile.JPG" data-background="./assets/images/carousel-img-6.JPG"></div>
 				</div>
 
 				<div class="swiper-button-next"></div>
@@ -406,6 +412,6 @@
 	<!-- Swiper JS -->
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="assets\JS\home_new.js"></script>
-</body>
+	</body>
 
 </html>
