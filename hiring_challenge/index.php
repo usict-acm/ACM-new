@@ -30,8 +30,15 @@
             <li><a href="#contact" class="link link-theme link-arrow">Contact us</a></li>
         </ul>
         </div>
+        
         <canvas></canvas>
         <canvas></canvas>
+        <div class="home-text">
+        <h1>TRELLATHON</h1>
+        <h2 style="font-size:30px; font-weight:bold;">4-HOUR HACKATHON</h2>
+        <h2 style="font-size:25px;">9TH MARCH 2021</h2>
+        </div>
+
     </section>
     <!-- End of Header -->
 
