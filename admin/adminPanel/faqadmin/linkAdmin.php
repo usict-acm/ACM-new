@@ -1,4 +1,4 @@
-<?php     include(__DIR__.'/../../../tiny/siteName.php');
+<?php     include(__DIR__.'/../../../link/siteName.php');
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,6 +61,9 @@
         position: relative;
         margin:0px 0 0  15px;
     }
+    .centerAlign{
+        text-align:center;
+    }
     </style>
 </head>
 <body>
@@ -89,6 +92,7 @@
                                         echo "<th>Link For</th>";
                                         echo "<th>Original Link</th>";
                                         echo "<th>Shortened Link</th>";
+                                        echo "<th>Clicks</th>";
                                         echo "<th>Action</th>";
                                     echo "</tr>";
                                 echo "</thead>";
@@ -107,6 +111,7 @@
                                         echo "<td><a target='_blank' href='".$siteLink."". $row['code'] ."'>".$siteLink."". $row['code'] ."</a></td>";
                                         $short = $row['code'];
                                         echo "<script>links.push('".$short."'); </script>";
+                                        echo "<td class='centerAlign'>" . $row['count'] . "</td>";
                                         
                                         echo "<td>";
                                             echo "<button class = 'copybutton' onclick = copy2(".$count.")><span class = 'glyphicon glyphicon-duplicate'></span></button>";
