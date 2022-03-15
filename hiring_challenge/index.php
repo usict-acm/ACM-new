@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,600,700,900&display=swap" rel="stylesheet" />
+    <link href="../assets/CSS/submission.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -31,9 +32,18 @@
                 <li><a href="#contact" class="link link-theme link-arrow">Contact us</a></li>
             </ul>
         </div>
+        
         <canvas></canvas>
         <canvas></canvas>
+        <div class="home-text">
+        <h1>TRELLATHON</h1>
+        <h2 style="font-size:30px; font-weight:bold;">4-HOUR HACKATHON</h2>
+        <h2 style="font-size:25px;">9TH MARCH 2021</h2>
+        </div>
+ 
+
     </section>
+    <!-- <p>sadfcbv</p> -->
     <!-- End of Header -->
 
     <!--****************************************************** ABOUT *******************************************************-->
