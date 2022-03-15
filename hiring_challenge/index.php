@@ -26,7 +26,7 @@
                 <li><a href="#about" class="link link-theme link-arrow">About</a></li>
                 <li><a href="#timeline" class="link link-theme link-arrow">Timeline</a></li>
                 <li><a href="#partner" class="link link-theme link-arrow">Partner</a></li>
-                <li><a href="#team" class="link link-theme link-arrow">Team</a></li>
+                <li><a href="#team-section" class="link link-theme link-arrow">Team</a></li>
                 <li><a href="#faq" class="link link-theme link-arrow">FAQ</a></li>
                 <li><a href="#contact" class="link link-theme link-arrow">Contact us</a></li>
             </ul>
@@ -175,7 +175,7 @@
 	</div>
 </div> -->
 
-<div class="timeline">
+<div class="timeline" id="timeline">
         <h1>Timeline</h1>
         <h1 class="timeline-trellathon">TRELLATHON</h1>
         <div>
@@ -469,7 +469,7 @@
 
     <!--************************************************* FAQS Section ****************************************************-->
 
-    <section class="main-section">
+    <section class="main-section" id="faq">
         <div id="faqs" class="container">
             <h2 class="line-heading">Frequently Asked Questions</h2>
             <div id="faqSection" class="fullwidth-container">
@@ -523,7 +523,7 @@
 
     <!--************************************************* Contact us ****************************************************-->
     <section id="contact-us">
-        <div class="container-contact">
+        <div class="container-contact" id="contact">
             <div class="content">
                 <div class="left-side">
                     <div class="address details">
