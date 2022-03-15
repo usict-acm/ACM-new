@@ -31,6 +31,7 @@
             <li><a href="#contact" class="link link-theme link-arrow">Contact us</a></li>
         </ul>
         </div>
+        
         <canvas></canvas>
         <canvas></canvas>
         <div class="hero-hackathon">

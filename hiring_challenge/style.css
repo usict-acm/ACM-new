@@ -23,6 +23,20 @@ a {
 
 /******************************************************* Start of Home Section *********************************************/
 
+.home-text{
+  color:yellow;
+  margin-top:89px;
+  position: absolute;
+ top: 190px;
+ left: 150px;
+}
+
+h1:first-child{
+  font-weight: bold;
+  font-size: 75px;
+  margin-bottom: 20px;
+}
+
 .link-arrow:after {
   content: "";
   background-size: 100% 100%;
