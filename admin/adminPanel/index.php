@@ -170,6 +170,12 @@
                         case 'formCreation':
                             include('./faqadmin/form-created.php');
                             break;
+                        case 'Certificate':
+                            include('./faqadmin/certificate/admin.php');
+                            break;
+                        case 'AddCertificate':
+                            include('./faqadmin/certificate/adminAdd.php');
+                            break;
                         default:
                             include('./faqadmin/index.php');
                             break;
