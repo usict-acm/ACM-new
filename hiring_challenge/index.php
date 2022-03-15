@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,600,700,900&display=swap" rel="stylesheet" />
+    <link href="../assets/CSS/submission.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -32,7 +33,60 @@
         </div>
         <canvas></canvas>
         <canvas></canvas>
+        <div class="hero-hackathon">
+            <div class="hero-container">
+                <div class="row">
+                    <div class="col col-xl-6 hero-left-div">
+                        <!-- <p><img src="https://res-2.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco/sjcmigra2nk4slozmfnu" width="60px" style="margin-top:-10px; margin-right:10px;"/>ATHON</p> -->
+                        <p>TRELLATHON</p>
+                        <h2 style="margin-left: 1%">
+                        <b
+                            >24-HOUR HACKATHON <br />
+                            9th MARCH 2021 </b
+                        ><br />
+                        </h2>
+                        <a href="#registration">
+                        <button class="hero-register-button" type="button" name="button">
+                            <span class="blink_me">Submissions are closed!</span>
+                        </button>
+                        </a>
+                    </div>
+                    <div class="col col-xl-2 hide_below_960"></div>
+                    <div class="col col-xl-4 hero-right-div">
+                        <br />
+                        if(problem)<br />{<br />
+                        &emsp;codeTosolve( );
+                        <br/>
+                        &emsp;round1(submission.pdf);<br />}
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                <div class="col"></div>
+                </div>
+            </div>
+            <!-- <h1 id="headline"></h1> -->
+            <div id="countdown">
+                <ul>
+                <li style="color: #ebff00" class="countdown-item">
+                    <span class="countdown-span" >0</span>days
+                </li>
+                <li style="color: #ff00b8" class="countdown-item">
+                    <span class="countdown-span" 0>0</span>Hours
+                </li>
+                <li style="color: #00e0ff" class="countdown-item">
+                    <span class="countdown-span" >0</span>Min(s)
+                </li>
+                <li style="color: #70ff00" class="countdown-item">
+                    <span class="countdown-span" >0</span>Sec(s)
+                </li>
+                </ul>
+            </div>
+        </div>
+ 
+
     </section>
+    <!-- <p>sadfcbv</p> -->
     <!-- End of Header -->
 
     <!--****************************************************** ABOUT *******************************************************-->
