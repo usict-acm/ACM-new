@@ -1632,6 +1632,7 @@ img {
   background-color: #000000;
   padding: 0;
   margin: 0;
+  padding-top: 30px;
 }
 ul {
   list-style-type: none;
@@ -1859,5 +1860,27 @@ a:active {
     background-color: #ffffff;
     color: #bb0000;
   }
+
+  .scroll-up-btn{
+    width: 5rem;
+    height: 5rem;
+    background-color: #fcf80ffb;
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    color: rgb(31, 31, 31);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s;
+    text-decoration: none;
+}
+
+.scroll-up-btn:hover{
+    background-color:#ffb007 ;
+    color: #000;
+}
 
 /******************************************************* End of FOOTER *******************************************************/
