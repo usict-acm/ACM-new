@@ -29,18 +29,6 @@ export default function AllBlogs() {
 		// 2 -> waiting approval
 		[searchQuery, setSearchQuery] = useState(""),
 		[filterData, setFilterData] = useState([]),
-<<<<<<< HEAD
-		[fetchAgain, setFetchAgain] = useState(false);
-
-	useEffect(() => {
-		const fetchData = async () => {
-			dispatch(setLoading(true));
-			const allBlogs = await fetchUserBlogs({ userEmail: user?.email });
-			if (allBlogs) {
-				setBlogs(allBlogs);
-				dispatch(setLoading(false));
-			} else dispatch(setLoading(false));
-=======
 		[fetchAgain, setFetchAgain] = useState(false),
 		[loading, setLoading] = useState(true);
 
@@ -52,7 +40,6 @@ export default function AllBlogs() {
 				setBlogs(allBlogs);
 				setLoading(false);
 			} else setLoading(false);
->>>>>>> e80fb4c5d90316a9a580217fa0c024d7d247d23d
 		};
 		fetchData();
 		return () => {

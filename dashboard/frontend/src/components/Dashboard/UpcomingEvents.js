@@ -12,7 +12,7 @@ const UpcomingEvents = () => {
     const fetchData = async () => {
       const allEvents = await fetchAllEvents()
       if (allEvents) {
-        setData(allEvents)
+        setData(allEvents.filter((event) => new Date() < new Date(event.startDate)))
       }
     }
     fetchData()

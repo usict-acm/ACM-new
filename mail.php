@@ -1,6 +1,6 @@
 <?php
     function welcomeMail ($userEmail, $userName) {
-        $subject = "Welcome to USICT ACM Student Chapter";
+        $subject = "Welcome to GGSIP University USS ACM Student Chapter";
 
         $headers  = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
@@ -8,7 +8,7 @@
 
         $body = "
             <html>
-                <head><title>Welcome to USICT ACM Student Chapter</title></head>
+                <head><title>Welcome to GGSIP University USS ACM Student Chapter</title></head>
                 <body>
                     <p>Dear $userName</p>
                     <br />
@@ -17,14 +17,14 @@
                     <p>For more community events, join our discord by clicking <a href='https://usict.acm.org/discord'>here</a>.</p>
                     <br />
                     <p>Regards</p>
-                    <p>USICT ACM Student Chapter</p>
+                    <p>GGSIP University USS ACM Student Chapter</p>
                 </body>
             </html>
         ";
         return mail($userEmail, $subject, $body, $headers);
     };
     function blogApprovedMail ($userEmail, $blogTitle, $blogId) {
-        $blogUrl = "https://usict.acm.org/test_acm/dashboard/user-portal/blog/$blogId";
+        $blogUrl = "https://usict.acm.org/dashboard/user-portal/blog/$blogId";
         $subject = "Your blog has been approved";
 
         $headers  = 'MIME-Version: 1.0' . "\r\n";
@@ -42,13 +42,13 @@
                     <p>Share the word to your friends and keep writing.</p>
                     <br />
                     <p>Regards</p>
-                    <p>USICT ACM Student Chapter</p>
+                    <p>GGSIP University USS ACM Student Chapter</p>
                 </body>
             </html>
         ";        
     };
     function blogRejectedMail ($userEmail, $blogTitle, $blogId) {
-        $blogUrl = "https://usict.acm.org/test_acm/dashboard/user-portal/blog/$blogId";
+        $blogUrl = "https://usict.acm.org/dashboard/user-portal/blog/$blogId";
         $subject = "Your blog has been rejected";
 
         $headers  = 'MIME-Version: 1.0' . "\r\n";
@@ -66,7 +66,7 @@
                     <p>Keep writing.</p>
                     <br />
                     <p>Regards</p>
-                    <p>USICT ACM Student Chapter</p>
+                    <p>GGSIP University USS ACM Student Chapter</p>
                 </body>
             </html>
         ";        

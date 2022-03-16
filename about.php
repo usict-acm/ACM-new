@@ -5,7 +5,7 @@
      <?php
       include("head.php")
     ?>
-     <title>USICT ACM</title>
+     <title>GGSIP University USS ACM Student Chapter</title>
      <link href="assets/CSS/aboutStyle.css" rel="stylesheet" />
      <link href="assets/CSS/glider.css" rel="stylesheet" />
      <!-- <link href="assets/CSS/header.css" rel="stylesheet" />
@@ -27,12 +27,12 @@
                     <div class="container-lg">
                          <div class="header-content">
                               <h1 class="head-1 common-PageTitle header-title">
-                                   <strong>About Us</strong><br />ACM | USICT
+                                   <strong>About Us</strong><br />GGSIP University USS ACM Student Chapter
                               </h1>
 
                               <p class="common-IntroText header-intro">
-                                   USICT ACM Student Chapter was launched in 2019 to promote the Computer Science
-                                   culture in USICT. At USICT ACM Student Chapter, we see a world where computing helps
+                                   GGSIP University USS ACM Student Chapter was launched in 2019 to promote the Computer Science
+                                   culture in USICT. At the Student Chapter, we see a world where computing helps
                                    solve tomorrow’s problems, where we use our knowledge and skills to advance the
                                    profession and make a positive impact.<br>
 
@@ -71,7 +71,7 @@
                                    <h3 class="head-3 today-title">INTRODUCTION</h3>
 
                                    <p class="common-MediumBodyText">
-                                        USICT ACM Student Chapter organizes various events, webinars, and workshops to
+                                        GGSIP University USS ACM Student Chapter organizes various events, webinars, and workshops to
                                         enhance the computer and scientific knowledge among the students. Chapter
                                         members are offered many opportunities, from mentors providing essential
                                         technical knowledge to information about lucrative internships up for grabs. We
@@ -759,7 +759,7 @@
                               <div class="content">
                                    <div class="time">2019</div>
                                    <div>
-                                        <p>Inaugration of ACM USICT</p>
+                                        <p>Inaugration of GGSIP University USS ACM Student Chapter</p>
                                         <!-- <p>7 Million Web Pages Created</p> -->
                                    </div>
                               </div>
@@ -791,8 +791,7 @@
                          <div>
                               <h2 class="heading">Addressing Today's Need For An Online Presence</h2>
                               <p>
-                                   ACM (Association for Computing Machinery)
-                                   Student Chapter of USICT aims to provide
+                                   GGSIP University USS ACM Student Chapter aims to provide
                                    students, research scholars, faculty members
                                    and the whole community, opportunities to
                                    explore the world of computers.

@@ -52,8 +52,8 @@
 }
 @media screen and (max-width : 580px) {
     .AllContent{
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 

@@ -5,7 +5,7 @@
     <?php
       include("head.php")
     ?>
-    <title>USICT ACM</title>
+    <title>GGSIP University USS ACM Student Chapter</title>
     <link href="assets/CSS/team.css" rel="stylesheet" />
     <link href="assets/CSS/glider.css" rel="stylesheet" />
     <link href="assets/CSS/header.css" rel="stylesheet" />
