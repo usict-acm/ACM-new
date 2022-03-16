@@ -1641,11 +1641,11 @@ ul {
 
 ul > li {
   padding: 4px;
-  color: #c5cae9;
+  color: #ffffff;
 }
 
 ul > li:hover {
-  color: #957bda;
+  color: #fffb07;
   cursor: pointer;
 }
 
@@ -1673,7 +1673,7 @@ hr {
 }
 
 .social > i:hover {
-  color: #957bda;
+  color: #f8fc23;
   cursor: pointer;
 }
 
@@ -1684,12 +1684,13 @@ hr {
 .heading_footer {
   font-family: "Titillium Web", sans-serif;
   color: rgb(121, 121, 121);
-  font-size: 17px;
+  font-size: 24px;
   padding-left: 18px;
 }
 
 .divider {
-  border-top: 2px solid;
+  border-top: 3px solid;
+  color: rgb(82, 82, 82);
 }
 
 .footer-acm {
