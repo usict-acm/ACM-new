@@ -668,7 +668,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="divider mb-4"> </div>
+            <div class="divider-f mb-4"> </div>
 
             <div class="copyright-footer">
                 <p id="copyright" class="">© Conceptualized,Designed and Developed by Office Bearers

@@ -1682,9 +1682,12 @@ hr {
   padding-left: 18px;
 }
 
-.divider {
+.divider-f {
   border-top: 3px solid;
   color: rgb(82, 82, 82);
+  width: 70%;
+  margin: auto;
+  margin-top: 10px;
 }
 
 .footer-acm {
@@ -1732,7 +1735,7 @@ padding: 10px;
 /* width: 100rem; */
 /* margin-left: 20rem; */
 left: 79rem;
-top: 24rem;
+top: 22rem;
 }
 a,
 a:hover,
