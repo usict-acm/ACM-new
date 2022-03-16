@@ -676,7 +676,7 @@
                 </p>
             </div>
             <a href="#home" class="scroll-up-btn">
-            <i class="fas fa-arrow-up"></i>
+            <i class="fa fa-hand-pointer-o"></i>
         </a>
         </div>
     </section>
