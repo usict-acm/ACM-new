@@ -1653,6 +1653,11 @@ hr {
   border-width: 3px;
 }
 
+.empty-box{
+  height: 40px;
+  width: 50px;
+}
+
 .card-text {
   color: #757474;
   font-size: 15px;
@@ -1664,17 +1669,6 @@ hr {
   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
   position: absolute;
   top: -15px;
-}
-
-.social > i {
-  padding: 3%;
-  font-size: 28px;
-  color: #fffafa;
-}
-
-.social > i:hover {
-  color: #f8fc23;
-  cursor: pointer;
 }
 
 .policy > div {
@@ -1713,5 +1707,154 @@ hr {
   font-size: 18px;
   color: white;
 }
+
+/* Social Icon */
+
+/* .social-buttons{
+  display:inline-block;
+  background: rgba(256,256,256,0.5);
+  padding:20px;
+  padding-bottom: 5px;
+  border-radius:10px;
+  text-align:center;
+  margin:20px 10px;
+  box-shadow: 0px 0px 32px -7px #00199f;
+} */
+  
+/* Helper class to divide the icons */
+.social-margin {
+  margin-right: 15px;
+}
+.social-buttons{
+  position: absolute;
+  /* margin-top: 25px; */
+padding: 10px;
+/* width: 100rem; */
+/* margin-left: 20rem; */
+left: 79rem;
+top: 24rem;
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+.social-icon {
+  margin-bottom: 15px;
+   box-sizing: border-box;
+  -moz-border-radius: 138px;
+  -webkit-border-radius: 138px;
+  border-radius: 138px;
+  border: 5px solid;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  line-height: 1px;
+  padding-top: 11px;
+  transition: all 0.5s;
+}
+.social-icon:hover {
+    transform: rotate(360deg)scale(1.3);
+  }
+  /* Facebook Button Styling */
+ .facebook {
+    font-size: 22px;
+    padding-top: 9px;
+    border-color: #3b5998;
+    background-color: #3b5998;
+    color: #ffffff;
+   
+  }
+  .facebook:hover {
+    background-color: #ffffff;
+    color: #3b5998;
+  }
+  /* Twitter Button Styling */
+.twitter {
+    font-size: 22px;
+    padding-top: 10px;
+    padding-left: 2px;
+    border-color: #55acee;
+    background-color: #55acee;
+    color: #ffffff;
+    
+  }
+  .twitter:hover {
+    background-color: #ffffff;
+    color: #55acee;
+  }
+  /* Google+ Button Styling */
+  .google-plus {
+    font-size: 22px;
+    padding-top: 9px;
+    padding-left: 2px;
+    background-color: #dd4b39;
+    color: #ffffff;
+    border-color: #dd4b39;
+    
+  }
+  .google-plus :hover {
+    background-color: #ffffff;
+    color: #dd4b39;
+  }
+  /* Linkedin Button Styling */
+  .linkedin {
+    font-size: 24px;
+    padding-top: 8px;
+    padding-left: 1px;
+    background-color: #0976b4;
+    color: #ffffff;
+    border-color: #0976b4;
+    
+  }
+  .linkedin:hover {
+    background-color: #ffffff;
+    color: #0976b4;
+  }
+  /* Pinterest Button Styling */
+.instagram{
+    font-size: 22px;
+    padding-top: 9px;
+    background-color:  #cb2027;
+    color: #ffffff;
+    border-color:  #cb2027;
+    
+  }
+  .instagram:hover {
+    background-color: #ffffff;
+    color:  #cb2027;
+  }
+ 
+
+  /* Github Button Styling */
+ .github {
+    font-size: 22px;
+    padding-top: 9px;
+    background-color: #4183c4;
+    color: #ffffff;
+    border-color: #4183c4;
+    
+  }
+  .github:hover {
+    background-color: #ffffff;
+    color: #4183c4;
+  }
+  /* Youtube Button Styling */
+ .youtube {
+    font-size: 22px;
+    padding-top: 9px;
+    padding-left: 0px;
+    background-color: #bb0000;
+    color: #ffffff;
+    border-color: #bb0000;
+    
+  }
+  .youtube:hover {
+    background-color: #ffffff;
+    color: #bb0000;
+  }
 
 /******************************************************* End of FOOTER *******************************************************/

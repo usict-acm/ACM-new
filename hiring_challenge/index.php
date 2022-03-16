@@ -598,10 +598,48 @@
                         <h1 class="footerh1">USICT ACM Student Chapter</h1>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi non
                             pariatur numquam animi nam at impedit odit nisi.</p>
-                        <div class="social mt-3 mb-3"> <i class="fa fa-facebook-official fa-lg"></i> <i class="fa fa-instagram fa-lg"></i> <i class="fa fa-twitter fa-lg"></i> <i class="fa fa-linkedin-square fa-lg"></i></div>
+                            <div class="social-buttons">
+            <!-- facebook  Button -->
+            <a href="http://www.facebook.com" target="blank" class="social-margin">
+                <div class="social-icon facebook">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </div>
+            </a>
+            <!-- pinterest Button -->
+            <a href="https://pinterest.com/" target="blank" class="social-margin">
+                <div class="social-icon instagram">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </div>
+            </a>
+            <!-- LinkedIn Button -->
+            <a href="http://linkedin.com/" class="social-margin" target="blank">
+                <div class="social-icon linkedin">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </div>
+            </a>
+            <!-- Github Button -->
+            <a href="https://github.com/" target="blank" class="social-margin">
+                <div class="social-icon github">
+                    <i class="fa fa-github-alt" aria-hidden="true"></i>
+                </div>
+            </a>
+            <!-- Youtube Button -->
+            <a href="http://youtube.com/" target="blank" class="social-margin">
+                <div class="social-icon youtube">
+                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                </div>
+            </a>
+
+            <!-- TwitterButton -->
+            <a href="http://twitter.com/" target="blank" class="social-margin">
+                <div class="social-icon twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </div>
+            </a>
+        </div>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                <div class="empty-box col-md-2 col-sm-2 col-xs-2"></div>
                 <div class="col-md-2 col-sm-2 col-xs-2">
                     <h5 class="heading_footer">Quick Links</h5>
                     <ul>
