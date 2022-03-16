@@ -10,21 +10,6 @@ body {
   margin-left: 1px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Montserrat", sans-serif;
-}
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
 .section-heading {
   color: #4169e1;
   font-weight: bold;
@@ -39,87 +24,6 @@ a {
   padding: 80px 0;
 }
 
-/* TOP HEADER
--------------------------------------------------- */
-.navbar.top-bar {
-  border-radius: 0;
-  padding: 16px 0;
-  z-index: 16;
-}
-
-.navbar-toggler {
-  border: 1px solid #fff;
-  color: #fff;
-  /* position: absolute; */
-  /* right: 21px; */
-  margin-right: 21px;
-}
-
-.sps {
-  padding: 1em 0.5em;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: all 0.25s ease;
-  width: 100%;
-}
-
-.sps--abv {
-  background-color: transparent;
-  color: #000;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
-}
-
-.sps--blw {
-  background-color: #fff;
-  color: #fff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.top-bar a.navbar-brand {
-  color: #000;
-  font-size: 26px;
-  font-weight: 1000;
-  padding: 5px 0 0 10px;
-  text-transform: uppercase;
-}
-
-.sps--blw.top-bar a.navbar-brand {
-  color: #000;
-}
-
-.top-bar a.navbar-brand span {
-  color: #0297ff;
-}
-
-.top-bar .nav-link {
-  color: #000;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 12px 18px !important;
-}
-
-.sps--blw.top-bar .nav-link {
-  color: #000;
-}
-
-.top-bar .navbar-nav .nav-item {
-  margin: 0;
-}
-
-.top-bar .nav-link:hover,
-.top-bar .nav-item.active a {
-  color: #0297ff;
-  border-bottom: 2px solid #fff;
-  border-radius: 0;
-}
-
-.sps--blw.top-bar .nav-link:hover,
-.sps--blw.top-bar .nav-item.active a {
-  color: #0297ff;
-  border-bottom: none;
-  border-radius: 0;
-}
 
 .pt-card {
   padding: 6.5%;
@@ -129,7 +33,7 @@ a {
   background-position: center;
   box-shadow: 0 0 3.5px #0297ff;
   /* margin-bottom: -13%; */
-  background-image: url("./../images/Internship-banner.png");
+  background-image: url("../images/internship-banner.jpeg");
 }
 
 .uheading {

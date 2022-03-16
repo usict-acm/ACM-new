@@ -155,7 +155,7 @@ const Profile = () => {
                     src={
                       localURL ||
                       user?.profilePhoto ||
-                      require("../../assets/img/theme/team-1-800x800.jpg")
+                      require("../../assets/img/user.png")
                         .default
                     }
                     alt="Card image cap"

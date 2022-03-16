@@ -6,7 +6,7 @@
 	<?php
 	include("head.php")
 	?>
-	<title>USICT ACM</title>
+	<title>GGSIP University USS ACM Student Chapter</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
 	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" /> -->
 	<link rel="stylesheet" href="./assets/CSS/newStyle.css" />
@@ -25,23 +25,29 @@
 		<div class="swiper-container" id="myCarousel">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/banner-high-mobile.png" data-background="./assets/images/banner-high.png"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-1-mobile.JPG" data-background="./assets/images/carousel-img-1.jpeg"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/img1-mobile.png" data-background="./assets/images/img1.jpg"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-2-mobile.JPG" data-background="./assets/images/carousel-img-2.jpeg"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/img3-mobile.png" data-background="./assets/images/img3.jpg"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-3-mobile.JPG" data-background="./assets/images/carousel-img-3.JPG"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/img2-mobile.png" data-background="./assets/images/img2.jpg"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-4-mobile.JPG" data-background="./assets/images/carousel-img-4.JPG"></div>
+				</div>
+				<div class="swiper-slide">
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-5-mobile.JPG" data-background="./assets/images/carousel-img-5.JPG"></div>
+				</div>
+				<div class="swiper-slide">
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-6-mobile.JPG" data-background="./assets/images/carousel-img-6.JPG"></div>
 				</div>
 
 				<div class="swiper-button-next"></div>
 				<div class="swiper-button-prev"></div>
 			</div>
 			<div id="typewriter">
-				<span class="typewriter-box" data-wait="200" data-content='["USICT ACM STUDENT CHAPTER"]'> </span>
+				<span class="typewriter-box" data-wait="200" data-content='["GGSIP University USS ACM Student Chapter"]'> </span>
 				<!-- end swiper-slide -->
 			</div>
 			<!-- end swiper-wrapper -->
@@ -51,9 +57,6 @@
 			<div class="swiper-button-next"></div>
 			<div class="swiper-button-prev"></div>
 		</div>
-		<!-- <div id="typewriter">
-			<span class="typewriter-box" data-wait="400" data-content='["USICT ACM STUDENT CHAPTER"]'> </span>
-		</div> -->
 	</section>
 	<!-- end of hero slider -->
 
@@ -70,7 +73,7 @@
 					About <span class="text-blue">Our Chapter</span>
 				</h2>
 				<p class="text-secondary about-text">
-					ACM Student Chapter, USICT is an official student body incepted in 2019 under the University
+					GGSIP University USS ACM Student Chapter is an official student body incepted in 2019 under the University
 					School USICT, GGSIPU. The chapter will conduct events including programming contests, talks by
 					renowned speakers, workshops etc.which give the students an exposure to the competitive
 					computing world as well as allow them to understand the advancements going on in the computing
@@ -86,10 +89,13 @@
 							<i class="fas fa-chevron-down arrow"></i>
 						</div>
 						<div class="dropdown">
-							<a href="./assets/newsletter2.pdf" id="adobeXd">2021
+							<a href="./assets/newsletter3.pdf" target="_blank" id="adobeXd">2022
 								<span></span>
 							</a>
-							<a href="./assets/newsletter.pdf" id="sketch">2020
+							<a href="./assets/newsletter2.pdf" target="_blank" id="adobeXd">2021
+								<span></span>
+							</a>
+							<a href="./assets/newsletter.pdf" target="_blank" id="sketch">2020
 								<span></span>
 							</a>
 						</div>
@@ -406,7 +412,6 @@
 	<!-- Swiper JS -->
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="assets\JS\home_new.js"></script>
-	<script src="navbar.js"></script>
-</body>
+	</body>
 
 </html>

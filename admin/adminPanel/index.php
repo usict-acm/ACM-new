@@ -155,6 +155,15 @@
                         case 'Forms':
                             include('./faqadmin/formstable.php');
                             break;
+                        case 'ShortLink';
+                            include('./faqadmin/linkAdmin.php');
+                            break;
+                        case 'AddLink':
+                            include('./faqadmin/linkAdminAdd.php');
+                            break;
+                        case 'editLink':
+                            include('./faqadmin/editLink.php');
+                            break;
                         case 'ResponsesForm':
                             include('../blogAdmin/responses.php');
                             break;

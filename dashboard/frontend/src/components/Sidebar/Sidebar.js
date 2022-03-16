@@ -114,7 +114,7 @@ const Sidebar = (props) => {
                     alt="..."
                     src={
                       user?.profilePhoto ||
-                      require("../../assets/img/theme/team-1-800x800.jpg")
+                      require("../../assets/img/user.png")
                         .default
                     }
                   />
@@ -128,18 +128,6 @@ const Sidebar = (props) => {
               <DropdownItem to="/profile" tag={Link}>
                 <i className="ni ni-single-02" />
                 <span>My profile</span>
-              </DropdownItem>
-              <DropdownItem to="/profile" tag={Link}>
-                <i className="ni ni-settings-gear-65" />
-                <span>Settings</span>
-              </DropdownItem>
-              <DropdownItem to="/profile" tag={Link}>
-                <i className="ni ni-calendar-grid-58" />
-                <span>Activity</span>
-              </DropdownItem>
-              <DropdownItem to="/profile" tag={Link}>
-                <i className="ni ni-support-16" />
-                <span>Support</span>
               </DropdownItem>
               <DropdownItem onClick={handleOpen}>
                 <i className="ni ni-lock-circle-open" />

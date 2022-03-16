@@ -222,3 +222,86 @@ addEventListener('resize', init, false);
 addEventListener('mousemove', function(e) {
 	source = { 'x': e.clientX, 'y': e.clientY };
 }, false);
+
+let mode = "css"
+const editor = CodeMirror.fromTextArea(code, {
+  lineNumbers: true,
+  styleActiveLine: true,
+  matchBrackets: true,
+  scrollbarStyle: "overlay",
+  Tab: "indentMore",
+  defaultTab: function (cm) {
+    if (cm.somethingSelected()) cm.indentSelection("add");
+    else cm.replaceSelection("  ", "end");
+  },
+  mode
+})
+editor.setOption("theme", "highcontrast-dark")
+const x = document.querySelector(".code")
+const ro = new ResizeObserver(entries => {
+  editor.setSize(x.offsetWidth, x.offsetHeight)
+})
+ro.observe(document.querySelector(".code-container"))
+
+const changeMode = () => {
+  mode = mode === "css" ? "javascript" : "css"
+  editor.setOption("mode", mode)
+}
+
+$('a').click(function (e) {
+  e.preventDefault();
+  $('body, html').animate({
+    scrollTop: $($(this).attr('href')).offset().top - 120
+  }, 1000);
+});
+
+
+//////////////////////////FAQs/////////////////////////////
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++){
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+      content.style.visibility = "hidden";
+      content.style.margin = "0 2%";
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.visibility = "visible";
+      content.style.margin = "12px 2%";
+    }
+  });
+}
+
+
+
+
+
+
+var items = document.getElementsByClassName("timeline-li");
+
+function isItemInView(item){
+  var rect = item.getBoundingClientRect();
+  return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+      if (isItemInView(items[i])) {
+        items[i].classList.add("show");
+      }
+    }
+  }
+
+  // listen for events
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("resize", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);

@@ -5,24 +5,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="../assets/images/acm1.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,600,700,900&display=swap" rel="stylesheet" />
-    <!-- <link href="../assets/CSS/submission.css" rel="stylesheet" /> -->
     <link rel="stylesheet" href="style.css" />
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <!-- <link rel="stylesheet" href="https://rawcdn.githack.com/SochavaAG/example-mycode/master/_common/css/reset.css"> -->
-    <title>ACM HACKATHON</title>
+    <title>Hackathon</title>
 </head>
 
 <body>
     <!-- Header -->
     <section id="home">
         <div class="header">
-            <a class="logo-navbar" href="">TRELLATHON</a>
-            <img src="acm1.png" alt="" class="logo-acm">
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <a class="logo-navbar" href="">Hackathon</a>
+            <img src="../assets/images/acm1.png" alt="" class="logo-acm">
             <ul class="menu">
                 <li><a href="#about" class="link link-theme link-arrow">About</a></li>
                 <li><a href="#timeline" class="link link-theme link-arrow">Timeline</a></li>
@@ -593,7 +588,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-4">
                     <div class="footer-text pull-left">
                         <div class="d-flex">
-                            <img src="acm1.png" alt="" class="footer-acm">
+                            <img src="../assets/images/acm1.png" alt="" class="footer-acm">
                         </div>
                         <h1 class="footerh1">USICT ACM Student Chapter</h1>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi non
@@ -685,8 +680,6 @@
 
     <script src="https://kit.fontawesome.com/833875f75e.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="hiring.js"></script>
-    <script src="hiring2.js"></script>
     <script src="home.js"></script>
 </body>
 
