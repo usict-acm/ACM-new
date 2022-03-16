@@ -1841,24 +1841,28 @@ a:active {
   }
 
   .scroll-up-btn{
-    width: 5rem;
-    height: 5rem;
+    width: 4.5rem;
+    height: 4.5rem;
     background-color: #fcf80ffb;
+    border: 5px solid;
+    border-color: yellow;
     position: fixed;
     bottom: 5rem;
     right: 5rem;
     border-radius: 50%;
+   
     font-size: 1.7rem;
     color: rgb(31, 31, 31);
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.5s;
+    transition: background-color 1s;
     text-decoration: none;
+    box-shadow: rgba(240, 237, 46, 0.4) 0px 5px, rgba(237, 240, 46, 0.3) 0px 10px, rgba(240, 237, 46, 0.2) 0px 15px, rgba(240, 237, 46, 0.1) 0px 20px, rgba(240, 227, 46, 0.05) 0px 25px;
 }
 
 .scroll-up-btn:hover{
-    background-color:#ffb007 ;
+    background-color:#ffffff ;
     color: #000;
 }
 
