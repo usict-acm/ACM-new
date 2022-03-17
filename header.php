@@ -2,7 +2,7 @@
     <div class="d-flex main-logo">
         <a href="./"><img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm logo" /></a>
         <div class="text-and-logo">
-            <a style="font-size: 16px; color: #000; padding: 0; margin-bottom: -11px; font-weight:700" class="navbar-brand mx-auto text-center" href="./">USICT<span class="text-primary"> ACM</span></a>
+            <a style="font-size: 16px; color: #000; padding: 0; margin-bottom: -11px; font-weight:700" class="navbar-brand mx-auto text-center" href="./">USS<span class="text-primary"> ACM</span></a>
             <a href="./"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>
         </div>
     </div>
@@ -26,11 +26,11 @@
             <li class="nav-item">
                 <a class="nav-link" id="clubs" href="./clubs.php">Clubs</a>
             </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="./team.php">Our Team</a>
-            </li> -->
             <li class="nav-item">
-                <a class="nav-link" id="sponsors" href="./collab.php"> Sponsors</a>
+                <a class="nav-link" href="./collab.php">Sponsors</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./dashboard">Dashboard</a>
             </li>
         </ul>
     </div>
