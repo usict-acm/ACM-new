@@ -34,7 +34,7 @@ a {
 h1:first-child {
   font-weight: bold;
   font-size: 75px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 .home-text {
   color: yellow;
@@ -44,11 +44,7 @@ h1:first-child {
   left: 150px;
 }
 
-h1:first-child {
-  font-weight: bold;
-  font-size: 75px;
-  margin-bottom: 20px;
-}
+
 
 .link-arrow:after {
   content: "";
@@ -285,11 +281,11 @@ canvas {
 
 /* 48em = 768px */
 
-@media (min-width: 48em) {
+/* @media (min-width: 48em) {
   .section-split a {
     width: 50%;
   }
-}
+} */
 
 /*************************************************** End of Home Section ******************************************************/
 
@@ -402,7 +398,7 @@ canvas {
   justify-content: center;
   align-items: center;
   /* margin-top: 20px; */
-  height: 100vh;
+  height: auto;
   background: #000000;
 }
 
@@ -614,6 +610,17 @@ canvas {
 #about_cards {
   display: flex;
   flex-direction: row;
+}
+
+@media(width<700px){
+  #about_cards{
+    flex-direction: column;
+  }
+  #about_info_box{
+    width: 70vw;
+    height: auto;
+    
+  }
 }
 /*****************************************************End of ABOUT ************************************************************/
 
