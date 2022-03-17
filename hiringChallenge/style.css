@@ -34,8 +34,20 @@ a {
 h1:first-child {
   font-weight: bold;
   font-size: 75px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
+<<<<<<< HEAD:hiring_challenge/style.css
+.home-text {
+  color: yellow;
+  margin-top: 89px;
+  position: absolute;
+  top: 190px;
+  left: 150px;
+}
+
+
+=======
+>>>>>>> fb5eaf1edde0bf5c745846b9661979182ec4d2d0:hiringChallenge/style.css
 
 .link-arrow:after {
   content: "";
@@ -264,11 +276,11 @@ canvas {
 
 /* 48em = 768px */
 
-@media (min-width: 48em) {
+/* @media (min-width: 48em) {
   .section-split a {
     width: 50%;
   }
-}
+} */
 
 /*************************************************** End of Home Section ******************************************************/
 
@@ -381,7 +393,7 @@ canvas {
   justify-content: center;
   align-items: center;
   /* margin-top: 20px; */
-  height: 100vh;
+  height: auto;
   background: #000000;
 }
 
@@ -593,6 +605,17 @@ canvas {
 #about_cards {
   display: flex;
   flex-direction: row;
+}
+
+@media(width<700px){
+  #about_cards{
+    flex-direction: column;
+  }
+  #about_info_box{
+    width: 70vw;
+    height: auto;
+    
+  }
 }
 /*****************************************************End of ABOUT ************************************************************/
 
@@ -1503,7 +1526,7 @@ img {
   margin: 80px 0 60px 7%;
   white-space: nowrap;
   font-size: 34px;
-  text-shadow: 4px 4px 4px rgb(251, 253, 121);
+  text-shadow: 2px 2px 4px rgb(251, 253, 121);
 }
 .line-heading:after {
   content: "";
