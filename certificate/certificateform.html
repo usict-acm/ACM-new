@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Certificate Generator</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+<body onload="generate()">
+    <div class="registration-form">
+        <form>
+            <span> <h5 id="formTitle" class = "contact100-form-title">CERTIFICATE<h5></span>
+            <p id="cno">Certificate Number #</p>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="Name of Participant" placeholder="Name of Participant">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="Contribution" placeholder="Contribution">
+            </div>
+            <label for="Start Date">
+                Start Date:
+                <input class="date" type="date" name="date">
+            </label>
+            <label for="End Date">
+                End Date:
+                <input class="date" type="date" name="date">
+            </label>
+            <div class="form-group">
+                <button type="button" class="btn btn-block create-account">Generate</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        function generate() {
+        console.log("called");
+        var length = 10;
+        var cno = document.getElementById("cno");
+        const characters = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,'a','b','c','d','e','f'];
+	    const generated = Array.from({ length }, () => {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+		    return characters[randomIndex];
+	    });
+        cno.textContent += generated.join('');
+    }
+    </script>
+</body>
+</html>
