@@ -244,7 +244,7 @@
 
 							<div class="our-team col-6 col-md-6 col-lg-4">
 								<div class="our-team-right">
-									<a class="social" href="https://www.linkedin.com/in/tarun-shekhawat-037091194/" target="_blank">
+									<a class="social" href="https://www.linkedin.com/in/tarun-037091194" target="_blank">
 										<i class="fab fa-linkedin" arial-hidden="true"></i>
 									</a>
 									<div class="name">
