@@ -4,6 +4,7 @@ upload/*
 enviornment.php
 .DS_Store
 forms/responsesfile/*
+.htaccess
 
 # react
 /build
