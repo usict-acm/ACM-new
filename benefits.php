@@ -418,6 +418,7 @@
         var e = document.getElementById("EnrollmentinForm").value;
         if (x == "" || !x || y == "" || !y || z == "" || !z || a == "" || !a || b == "" || !b || c == "" || !c || d == "" || !d || e == "" || !e) {
           alert("Please fill all the fields");
+          document.location.reload()
           return false;
         }
         else{
