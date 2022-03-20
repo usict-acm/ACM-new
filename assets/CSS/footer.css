@@ -215,3 +215,7 @@ ul {
 .social-menu ul li a.mail-footer:hover {
   background-color: #c74941;
 }
+
+#meet-the-team-btn{
+  margin-top: 2vh;
+}
