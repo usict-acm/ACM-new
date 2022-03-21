@@ -39,12 +39,12 @@ section {
   z-index: 16;
 }
 
-.navbar-toggler {
+ .navbar-toggler {
   border: 1px solid #fff;
   color: #000;
-  position: absolute;
+  /*position: absolute;*/
   right: 21px;
-}
+} 
 
 .sps {
   padding: 1em 0.5em;
