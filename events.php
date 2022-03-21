@@ -166,7 +166,7 @@
                 console.log("dataNumber", dataNumber);
                 numberOfEvents = dataNumber[1];
                 console.log("numberrrr", numberOfEvents);
-                yearWiseEvent.innerHTML += " <li>\
+                yearWiseEvent.innerHTML += " <li style='height:150px;'>\
                                                 <div class='time'>\
                                                     <h2>" + event.year + " <br><span></span></h2>\
                                                 </div>\

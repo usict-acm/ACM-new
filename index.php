@@ -301,7 +301,7 @@
 		</div>
 		<div class="py-3 mt-2 d-flex justify-content-sm-center">
 			<div class="col-lg-2 col-md-4 col mb-2 mt-4 mt-lg-0">
-				<a href="./team.php" class="about-button team-mobile-btn">Meet the Team</a>
+				<a id="meet-the-team-btn" href="./team.php" class="about-button team-mobile-btn">Meet the Team</a>
 			</div>
 		</div>
 		</div>
