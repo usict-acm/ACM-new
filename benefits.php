@@ -286,7 +286,7 @@
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12">
             <div class="registration-inner-div d-flex justify-content-center">
-              <form class="widget-contact-form" id="form-id" action=""role="form" method="post" target="_self" novalidate="novalidate">
+              <form class="widget-contact-form" id="form-id" action="" role="form" method="post" target="_self" novalidate="novalidate">
                 <div class="row test-dev2">
                   <div class="form-group col-md-6">
                     <input id="NameinForm" required type="text" aria-required="true" name="entry.73813921" class="form-input-boxes-manual form-control required fname test-dev3" placeholder="First Name" >
