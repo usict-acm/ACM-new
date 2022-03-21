@@ -42,11 +42,9 @@ section {
  .navbar-toggler {
   border: 1px solid #fff;
   color: #000;
-<<<<<<< HEAD
   /*position: absolute;*/
-=======
+
   /* position: absolute; */
->>>>>>> b0f3fd3f2de2b4df03fc9444f5f909085d94be5c
   right: 21px;
 } 
 
@@ -312,9 +310,10 @@ section .leftBox .live-event {
   }
 }
 
+/* 
 #demo {
-  /* margin-top: -10%; */
-}
+  margin-top: -10%; */
+
 
 .carousel-item {
   margin-top: 5%;

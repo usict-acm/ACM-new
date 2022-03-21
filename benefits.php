@@ -416,6 +416,7 @@
         var c = document.getElementById("YearofAdmissioninForm").value;
         var d = document.getElementById("ACMMembershipNoinForm").value;
         var e = document.getElementById("EnrollmentinForm").value;
+        
         const form_action = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse"; 
         if (x == "" || !x || y == "" || !y || z == "" || !z || a == "" || !a || b == "" || !b || c == "" || !c || d == "" || !d || e == "" || !e) {
           alert("Please fill all the fields");
@@ -432,6 +433,7 @@
           button.click();
         }
       }
+
       window.addEventListener('load', function(){
         new Glider(document.querySelector('.glider1'), {
           slidesToShow: 1,
