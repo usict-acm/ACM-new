@@ -233,7 +233,7 @@
           <div class="lvlimg">
             <div class="lead">
               <div class="img">
-                <img src="./assets/images/clubs/pratham.png" />
+                <img src="./assets/images/clubs/pratham.jpeg" />
               </div>
               <h4>Pratham Mittal</h4>
               <h6>Lead</h6>
