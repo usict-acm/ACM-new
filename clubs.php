@@ -231,19 +231,19 @@
             </p>
           </div>
           <div class="lvlimg">
-            <div class="lead">
+            <div class="lead invisible">
+              <div class="img">
+                <img src="" />
+              </div>
+              <h4></h4>
+              <h6></h6>
+            </div>
+            <div class="vicelead">
               <div class="img">
                 <img src="./assets/images/clubs/pratham.png" />
               </div>
               <h4>Pratham Mittal</h4>
               <h6>Lead</h6>
-            </div>
-            <div class="vicelead">
-              <div class="img">
-                <img src="./assets/images/clubs/deepak.jpeg" />
-              </div>
-              <h4>Deepak Chaurasiya</h4>
-              <h6>Vice Lead</h6>
             </div>
           </div>
         </div>
