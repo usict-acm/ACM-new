@@ -286,7 +286,7 @@
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12">
             <div class="registration-inner-div d-flex justify-content-center">
-              <form class="widget-contact-form" action="https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse" role="form" method="post" target="_self" novalidate="novalidate">
+              <form class="widget-contact-form" id="form-id" action="" role="form" method="post" target="_self" novalidate="novalidate">
                 <div class="row test-dev2">
                   <div class="form-group col-md-6">
                     <input id="NameinForm" required type="text" aria-required="true" name="entry.73813921" class="form-input-boxes-manual form-control required fname test-dev3" placeholder="First Name" >
@@ -416,15 +416,24 @@
         var c = document.getElementById("YearofAdmissioninForm").value;
         var d = document.getElementById("ACMMembershipNoinForm").value;
         var e = document.getElementById("EnrollmentinForm").value;
+        
+        const form_action = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse"; 
         if (x == "" || !x || y == "" || !y || z == "" || !z || a == "" || !a || b == "" || !b || c == "" || !c || d == "" || !d || e == "" || !e) {
           alert("Please fill all the fields");
+          document.getElementById("form-id").action = "";
+          
+          document.location.reload()
+
           return false;
         }
+        
         else{
           var button = document.getElementById("submitSingupForm");
+          document.getElementById("form-id").action = form_action;
           button.click();
         }
       }
+
       window.addEventListener('load', function(){
         new Glider(document.querySelector('.glider1'), {
           slidesToShow: 1,
