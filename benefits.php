@@ -320,6 +320,10 @@
                     <option value="B.Tech CSE">
                     <option value="B.Tech IT">
                     <option value="B.Tech ECE">
+                    <option value="B.Tech A&R">
+                    <option value="B.Tech AI/ML">
+                    <option value="B.Tech AI/DS">
+                    <option value="B.Tech IIOT">
                     <option value="M.Tech CSE">
                     <option value="M.Tech IT">
                     <option value="M.Tech ECE">
@@ -376,7 +380,7 @@
                   <div class="form-group col-md-2 button-center">
                     <div class="form-group">
                       <!-- <button id="submitSingupForm" type="submit" style="display:none;"></button> -->
-                      <button type="button" class="btn signin" onclick="validateForm()">&nbsp;Submit</button>
+                      <button type="submit" class="btn signin" onclick="validateForm()">Submit</button>
                     </div>
                   </div>
                 </div>

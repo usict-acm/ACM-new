@@ -169,19 +169,19 @@
             </p>
           </div>
           <div class="lvlimg">
-            <div class="lead white invisible">
-              <div class="img">
-                <img src="" />
-              </div>
-              <h4></h4>
-              <h6></h6>
-            </div>
-            <div class="vicelead white">
+            <div class="lead white">
               <div class="img">
                 <img src="./assets/images/clubs/tushar.png" />
               </div>
               <h4>Tushar Anand</h4>
               <h6>Lead</h6>
+            </div>
+            <div class="vicelead white">
+              <div class="img">
+                <img src="./assets/images/clubs/jaskirat.jpeg" />
+              </div>
+              <h4>Jaskirat Singh</h4>
+              <h6>Vice Lead</h6>
             </div>
           </div>
         </div>
@@ -240,9 +240,9 @@
             </div>
             <div class="vicelead">
               <div class="img">
-                <img src="./assets/images/clubs/deepak.jpeg" />
+                <img src="./assets/images/clubs/ankit.jpeg" />
               </div>
-              <h4>Deepak Chaurasiya</h4>
+              <h4>Ankit Pandey</h4>
               <h6>Vice Lead</h6>
             </div>
           </div>

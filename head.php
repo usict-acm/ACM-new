@@ -34,6 +34,7 @@ content=">GGSIP University USS ACM Student Chapter is an official student body i
 <!-- CSS Files -->
 <link href="./assets/CSS/header.css" rel="stylesheet" />
 <link href="./assets/CSS/footer.css" rel="stylesheet" />
+<link rel="stylesheet" href="./activeNavbar.css">
 
 <!-- Google fonts  -->
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet">
@@ -43,3 +44,11 @@ content=">GGSIP University USS ACM Student Chapter is an official student body i
 
 <!-- AJAX CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+<style>
+    .active-navbar{
+	color: #0397FE;
+}
+</style>
