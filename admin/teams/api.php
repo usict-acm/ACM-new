@@ -110,7 +110,7 @@ function delMember()
     $database = new Database();
     $db = $database->connect();
 
-    $sql = "UPDATE `team` SET active = 0 WHERE id= " . $_POST["id"];
+    $sql = "DELETE FROM `team` WHERE id= " . $_POST["id"];
 
     if ($db->query($sql) == true) {
         echo json_encode("Member deleted successfully!");
