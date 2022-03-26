@@ -32,8 +32,8 @@
         <canvas></canvas>
         <div class="home-text">
         <h1>TRELLATHON</h1>
-        <h2 style="font-size:30px; font-weight:bold;">4-HOUR HACKATHON</h2>
-        <h2 style="font-size:25px;">9TH MARCH 2021</h2>
+        <h2>4-HOUR HACKATHON</h2>
+        <h2>9TH MARCH 2021</h2>
         </div>
  
 
@@ -670,12 +670,9 @@
                     of ACM USICT chapter.
                 </p>
             </div>
-            <div id="scroll">  
-                <a href="#home" id="scroll" class="scroll-up-btn">
+            <a href="#home" class="scroll-up-btn">
             <i class="fa fa-hand-pointer-o"></i>
         </a>
-    </div>
-          
         </div>
     </section>
     <!--************************************************* End of FOOTER **************************************************-->
