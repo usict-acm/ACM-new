@@ -670,9 +670,12 @@
                     of ACM USICT chapter.
                 </p>
             </div>
-            <a href="#home" class="scroll-up-btn">
+            <div id="scroll">  
+                <a href="#home" id="scroll" class="scroll-up-btn">
             <i class="fa fa-hand-pointer-o"></i>
         </a>
+    </div>
+          
         </div>
     </section>
     <!--************************************************* End of FOOTER **************************************************-->
