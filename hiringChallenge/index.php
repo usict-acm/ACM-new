@@ -31,7 +31,7 @@
         <canvas></canvas>
         <canvas></canvas>
         <div class="home-text">
-            <h1>TRELLATHON</h1>
+            <h1 class="vibrate-1" >TRELLATHON</h1>
             <h2>4-HOUR HACKATHON</h2>
             <h2>9TH MARCH 2021</h2>
         </div>
@@ -82,26 +82,39 @@
             </div>
         </div>
 
-        <div id="about-res" class="neon-box" >
+        <div id="about-res">
 
-            <div id="about-res-text">
+            <div id="about_heading">
+                <a class="about-a" id="about_heading_a" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    for('Everyone'){<br>
+                    Char Event = "Trellathon";}
+                </a>
+            </div>
 
-                <h1 id="about-head-res" class="neon-text">Trellathon</h1>
-                <p id="about-res-p" >Trellathon is the largest, one of its kind, hackathon for GGSIPU students. While most of
-                    the
-                    hackathons focus on code, we at Trellathon consider the uniqueness and potential of the
-                    idea
-                    as well. Trellathon provides a platform for all the innovators out there to come out and
-                    test their creation on the market parameters. We aim to separate “a good idea” from a
-                    “market product” and fill the gap in that journey.
-                </p>
+            <div id="about-res-text" class="neon-box">
+                <div>
 
+                    <h1 id="about-head-res" class="neon-text">Trellathon</h1>
+                    <p id="about-res-p">Trellathon is the largest, one of its kind, hackathon for GGSIPU students. While most of
+                        the
+                        hackathons focus on code, we at Trellathon consider the uniqueness and potential of the
+                        idea
+                        as well. Trellathon provides a platform for all the innovators out there to come out and
+                        test their creation on the market parameters. We aim to separate “a good idea” from a
+                        “market product” and fill the gap in that journey.
+                    </p>
+                </div>
+            </div>
+
+            <div img id="about-img-div" class="about_info_image">
+                <img id="about-img" src="https://usict.acm.org/assets/images/trellposter.jpeg" alt="error">
             </div>
 
 
-            <div class="about_info_image">
-                <img src="https://usict.acm.org/assets/images/trellposter.jpeg" height="300vh" width="170vw" alt="error">
-            </div>
 
         </div>
 
