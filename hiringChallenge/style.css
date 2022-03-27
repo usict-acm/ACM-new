@@ -24,7 +24,7 @@ a {
 /******************************************************* Start of Home Section *********************************************/
 
 .home-text {
-  color: yellow;
+  color: rgb(255, 255, 255);
   display: flex;
   top: 190px;
   flex-direction: column;
@@ -78,7 +78,7 @@ h1:first-child {
   font-family: Montserrat, helvetica, arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
-  color: rgb(133, 133, 133);
+  color: rgb(255, 255, 255);
 }
 
 
@@ -159,7 +159,7 @@ canvas {
 }
 
 .header .logo-navbar {
-  color: #ffd300;
+  color: #ffffff;
   display: block;
   float: left;
   font-size: 2.9em;
@@ -606,6 +606,105 @@ canvas {
   display: flex;
   flex-direction: row;
 }
+/*****************************************************start of responsive about ************************************************************/
+
+.neon-text {
+  text-shadow: -2px -2px 10px #FFF, 
+                2px 2px 10px #fff,
+                0 0 20px #ff00de,
+                0 0 40px #ff00de,
+                0 0 60px #ff00de,
+                0 0 80px #ff00de,
+                0 0 100px #ff00de;
+  animation: flashing-text 4s ease 0s reverse infinite;
+}
+
+.neon-box {
+  box-shadow: 0 0 5px 0 #fff,
+      inset 0 0 5px 0 #fff,
+      0 0 20px 0 #ff00de,
+      inset 0 0 5px 0 #ff00de,
+      0 0 20px 2px #ff00de,
+      inset 0 0 20px 2px #ff00de;
+    animation: flashing 4s ease 0s infinite;
+}
+
+@keyframes flashing {
+  0%, 60% {
+  box-shadow: 0 0 5px 0 #fff,
+      inset 0 0 5px 0 #fff,
+      0 0 20px 0 #ff00de,
+      inset 0 0 5px 0 #ff00de,
+      0 0 20px 2px #ff00de,
+      inset 0 0 20px 2px #ff00de;
+  }
+  
+  20%, 80% {
+  box-shadow: 0 0 5px 0 #ff00de,
+      inset 0 0 5px 0 #ff00de,
+      0 0 20px 0 #ff00de,
+      inset 0 0 5px 0 #FFF,
+      0 0 20px 2px #FFF,
+      inset 0 0 20px 2px #FFF;
+  }
+  
+}
+
+@keyframes flashing-text {
+  0%, 60% {
+  text-shadow: -2px -2px 10px #FFF, 
+                2px 2px 10px #fff,
+                0 0 20px #ff00de,
+                0 0 40px #ff00de,
+                0 0 60px #ff00de,
+                0 0 80px #ff00de,
+                0 0 100px #ff00de;
+  }
+  
+  20%, 80% {
+  text-shadow: -2px -2px 10px #ff00de, 
+                2px 2px 10px #ff00de,
+                0 0 20px #ff00de,
+                0 0 40px #ff00de,
+                0 0 60px #FFF,
+                0 0 80px #FFF,
+                0 0 100px #FFF;
+  }
+  
+}
+
+#about-res{
+  display: none;
+  padding: 5vw;
+  margin: 7vw;
+  margin-top: 10vh;
+}
+
+@media only screen and (max-width: 850px){
+  #about{
+    display: none;
+  }
+  #about-res{
+    display: flex;
+    flex-direction: column;
+  }
+} 
+
+#about-head-res{
+  color: white;
+
+}
+
+#about-res-p{
+  color: white;
+}
+
+
+
+
+
+
+
 /*****************************************************End of ABOUT ************************************************************/
 
 /***************************************************** TIMELINE ************************************************************/

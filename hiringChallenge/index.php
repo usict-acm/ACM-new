@@ -27,15 +27,15 @@
                 <li><a href="#contact" class="link link-theme link-arrow">Contact us</a></li>
             </ul>
         </div>
-        
+
         <canvas></canvas>
         <canvas></canvas>
         <div class="home-text">
-        <h1>TRELLATHON</h1>
-        <h2>4-HOUR HACKATHON</h2>
-        <h2>9TH MARCH 2021</h2>
+            <h1>TRELLATHON</h1>
+            <h2>4-HOUR HACKATHON</h2>
+            <h2>9TH MARCH 2021</h2>
         </div>
- 
+
 
     </section>
     <!-- <p>sadfcbv</p> -->
@@ -81,7 +81,35 @@
                 </div>
             </div>
         </div>
+
+        <div id="about-res" class="neon-box" >
+
+            <div id="about-res-text">
+
+                <h1 id="about-head-res" class="neon-text">Trellathon</h1>
+                <p id="about-res-p" >Trellathon is the largest, one of its kind, hackathon for GGSIPU students. While most of
+                    the
+                    hackathons focus on code, we at Trellathon consider the uniqueness and potential of the
+                    idea
+                    as well. Trellathon provides a platform for all the innovators out there to come out and
+                    test their creation on the market parameters. We aim to separate “a good idea” from a
+                    “market product” and fill the gap in that journey.
+                </p>
+
+            </div>
+
+
+            <div class="about_info_image">
+                <img src="https://usict.acm.org/assets/images/trellposter.jpeg" height="300vh" width="170vw" alt="error">
+            </div>
+
+        </div>
+
+
     </section>
+
+
+
     <!--**************************************************** END OF ABOUT *****************************************************-->
 
     <!--****************************************************** TIMELINE *******************************************************-->
@@ -180,57 +208,57 @@
 	</div>
 </div> -->
 
-<div class="timeline" id="timeline">
+    <div class="timeline" id="timeline">
         <h1>Timeline</h1>
         <h1 class="timeline-trellathon">TRELLATHON</h1>
         <div>
-          <ul>
-            <li>
-              <div class="timeline-li">
-                <time>9th - 20th March 2021
-                    REGISTRATION</time>
-                <p> <a href="#">Register Now</a> 
-      </p>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-li">
-                <time>16th March 2021
-                    PROBLEM STATEMENT RELEASE</time>
-                <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+            <ul>
+                <li>
+                    <div class="timeline-li">
+                        <time>9th - 20th March 2021
+                            REGISTRATION</time>
+                        <p> <a href="#">Register Now</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-li">
+                        <time>16th March 2021
+                            PROBLEM STATEMENT RELEASE</time>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
       </p> -->
-              </div>
-            </li>
-            <li>
-              <div class="timeline-li">
-                <time>16th - 20th March 2021
-                    IDEATION ROUND</time>
-                <p>Draft your solution for the problem statement of Trell.</p>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-li">
-                <time>22nd March 2021
-                    RESULTS OF IDEATION ROUND</time>
-                <p>Shortlisted teams will move forward to the next round.</p>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-li">
-                <time>23rd March 2021
-                    PROTOTYPING ROUND</time>
-                <p>Develop a prototype for the solution of the ideation round.</p>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-li">
-                <time>24th March 2021
-                    PITCH DAY</time>
-                <p>Pitch your prototype to Trell and Judges.</p>
-              </div>
-            </li>
-          </ul>
-          
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-li">
+                        <time>16th - 20th March 2021
+                            IDEATION ROUND</time>
+                        <p>Draft your solution for the problem statement of Trell.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-li">
+                        <time>22nd March 2021
+                            RESULTS OF IDEATION ROUND</time>
+                        <p>Shortlisted teams will move forward to the next round.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-li">
+                        <time>23rd March 2021
+                            PROTOTYPING ROUND</time>
+                        <p>Develop a prototype for the solution of the ideation round.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-li">
+                        <time>24th March 2021
+                            PITCH DAY</time>
+                        <p>Pitch your prototype to Trell and Judges.</p>
+                    </div>
+                </li>
+            </ul>
+
         </div>
     </div>
 
@@ -593,45 +621,45 @@
                         <h1 class="footerh1">USICT ACM Student Chapter</h1>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi non
                             pariatur numquam animi nam at impedit odit nisi.</p>
-                            <div class="social-buttons">
-            <!-- facebook  Button -->
-            <a href="http://www.facebook.com" target="blank" class="social-margin">
-                <div class="social-icon facebook">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                </div>
-            </a>
-            <!-- pinterest Button -->
-            <a href="https://pinterest.com/" target="blank" class="social-margin">
-                <div class="social-icon instagram">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                </div>
-            </a>
-            <!-- LinkedIn Button -->
-            <a href="http://linkedin.com/" class="social-margin" target="blank">
-                <div class="social-icon linkedin">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </div>
-            </a>
-            <!-- Github Button -->
-            <a href="https://github.com/" target="blank" class="social-margin">
-                <div class="social-icon github">
-                    <i class="fa fa-github-alt" aria-hidden="true"></i>
-                </div>
-            </a>
-            <!-- Youtube Button -->
-            <a href="http://youtube.com/" target="blank" class="social-margin">
-                <div class="social-icon youtube">
-                    <i class="fa fa-youtube" aria-hidden="true"></i>
-                </div>
-            </a>
+                        <div class="social-buttons">
+                            <!-- facebook  Button -->
+                            <a href="http://www.facebook.com" target="blank" class="social-margin">
+                                <div class="social-icon facebook">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                            <!-- pinterest Button -->
+                            <a href="https://pinterest.com/" target="blank" class="social-margin">
+                                <div class="social-icon instagram">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                            <!-- LinkedIn Button -->
+                            <a href="http://linkedin.com/" class="social-margin" target="blank">
+                                <div class="social-icon linkedin">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                            <!-- Github Button -->
+                            <a href="https://github.com/" target="blank" class="social-margin">
+                                <div class="social-icon github">
+                                    <i class="fa fa-github-alt" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                            <!-- Youtube Button -->
+                            <a href="http://youtube.com/" target="blank" class="social-margin">
+                                <div class="social-icon youtube">
+                                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                                </div>
+                            </a>
 
-            <!-- TwitterButton -->
-            <a href="http://twitter.com/" target="blank" class="social-margin">
-                <div class="social-icon twitter">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                </div>
-            </a>
-        </div>
+                            <!-- TwitterButton -->
+                            <a href="http://twitter.com/" target="blank" class="social-margin">
+                                <div class="social-icon twitter">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="empty-box col-md-2 col-sm-2 col-xs-2"></div>
@@ -671,8 +699,8 @@
                 </p>
             </div>
             <a href="#home" class="scroll-up-btn">
-            <i class="fa fa-hand-pointer-o"></i>
-        </a>
+                <i class="fa fa-hand-pointer-o"></i>
+            </a>
         </div>
     </section>
     <!--************************************************* End of FOOTER **************************************************-->
