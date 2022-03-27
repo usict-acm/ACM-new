@@ -30,13 +30,10 @@
 
         <canvas></canvas>
         <canvas></canvas>
-<<<<<<< HEAD
         <div class="home-text">
             <h1 class="vibrate-1" id="mainhead">TRELLATHON</h1>
-=======
         <div class="home-text vibrate-1">
             <h1>TRELLATHON</h1>
->>>>>>> 92e906876ab4ca0b764b03aa2bd583b6eedaa60d
             <h2>4-HOUR HACKATHON</h2>
             <h2>9TH MARCH 2021</h2>
         </div>
