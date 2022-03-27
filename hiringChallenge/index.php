@@ -31,7 +31,7 @@
         <canvas></canvas>
         <canvas></canvas>
         <div class="home-text">
-            <h1>TRELLATHON</h1>
+            <h1 class="vibrate-1" >TRELLATHON</h1>
             <h2>4-HOUR HACKATHON</h2>
             <h2>9TH MARCH 2021</h2>
         </div>
