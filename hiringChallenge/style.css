@@ -45,6 +45,7 @@ h1:first-child {
   align-items:center;
   justify-content: center;
   text-align:center;
+
   /* -----------------------------------ANIMATION--------------------------- */
   text-transform: uppercase;
     background-image: linear-gradient(
@@ -73,6 +74,7 @@ h1:first-child {
     }
 /* ----------------------------------------------ANIMATION-------------------------- */
 
+  
 }
 
 .link-arrow:after {
