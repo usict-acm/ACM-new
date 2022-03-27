@@ -1328,7 +1328,7 @@ img {
   left: 0;
 }
 .our-team .pic:after {
-  border-color: #3ab5fc #e6e5e5 #e6e5e5 #41c1fc;
+  border-color: yellow #e6e5e5 #e6e5e5 yellow;
   z-index: 1;
   transform: rotate(-10deg);
   transition: all 0.5s ease 0s;
