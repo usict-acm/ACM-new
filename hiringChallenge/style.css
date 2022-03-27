@@ -34,7 +34,7 @@ a {
   justify-content: center;
 }
 
-h1:first-child {
+#mainhead{
   margin: 0%;
   padding: 0%;
   display: flex;
@@ -43,7 +43,6 @@ h1:first-child {
   margin-bottom: 20px;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
   text-align:center;
 
   /* -----------------------------------ANIMATION--------------------------- */
@@ -75,9 +74,6 @@ h1:first-child {
 /* ----------------------------------------------ANIMATION-------------------------- */
 
   
-=======
-  text-align: center;
->>>>>>> 1e8a8d07cf8288ef8b2161e0330273b01e808e5b
 }
 
 .link-arrow:after {
