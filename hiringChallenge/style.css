@@ -138,12 +138,13 @@ a {
 /* header   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1); */
 
 .header {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 94.5);
   position: fixed;
   width: 100%;
-  z-index: 3;
-  padding: 20px 0;
+  z-index: 15;
+  padding: 15px 0;
 }
+
 
 #home {
   width: 100%;
@@ -186,7 +187,7 @@ canvas {
 }
 
 .header .logo-navbar {
-  color: #ffffff;
+  color: #ffd300;
   display: block;
   float: left;
   font-size: 2.9em;
@@ -195,15 +196,21 @@ canvas {
   font-family: Montserrat;
   text-decoration: none;
   font-weight: bold;
+  position: absolute;
+  left: 109px;
+  top: 17px;
+  /* right: 10px; */
+  /* bottom: 9px; */
 }
-
 .logo-acm {
   height: 72px;
   width: 68px;
   position: absolute;
-  left: 7px;
+  left: 43px;
   top: 6px;
 }
+
+
 
 /* menu */
 
