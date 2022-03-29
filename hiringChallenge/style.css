@@ -503,8 +503,6 @@ canvas {
 
 .container-about .box {
   position: relative;
-  width: 320px;
-  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
