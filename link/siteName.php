@@ -1,5 +1,5 @@
 <?php
-    $siteLink = "https://usict.acm.org/test_acm/link/";
+    $siteLink = "https://usict.acm.org/link/";
     $siteName = "https://usict.acm.org/";
    
 ?>

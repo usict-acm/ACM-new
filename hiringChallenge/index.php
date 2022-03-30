@@ -18,7 +18,7 @@
         <div class="header">
             <a class="logo-navbar" href="">Hackathon</a>
             <img src="../assets/images/acm1.png" alt="" class="logo-acm">
-            <ul class="menu">
+            <ul id="nav-items-nonres" class="menu">
                 <li><a href="#about" class="link link-theme link-arrow">About</a></li>
                 <li><a href="#timeline" class="link link-theme link-arrow">Timeline</a></li>
                 <li><a href="#partner" class="link link-theme link-arrow">Partner</a></li>
@@ -27,19 +27,70 @@
                 <li><a href="#contact" class="link link-theme link-arrow">Contact us</a></li>
             </ul>
         </div>
-        
+
         <canvas></canvas>
         <canvas></canvas>
         <div class="home-text">
-        <h1>TRELLATHON</h1>
-        <h2 style="font-size:30px; font-weight:bold;">4-HOUR HACKATHON</h2>
-        <h2 style="font-size:25px;">9TH MARCH 2021</h2>
-        </div>
- 
+            <h1 class="vibrate-1" id="mainhead">TRELLATHON</h1>
+            <div class="home-text vibrate-1">
+                <h1>TRELLATHON</h1>
+                <h2>4-HOUR HACKATHON</h2>
+                <h2>9TH MARCH 2021</h2>
+            </div>
+
 
     </section>
-    <!-- <p>sadfcbv</p> -->
+
     <!-- End of Header -->
+    <!-- Start of Responsive Nav -->
+
+    <nav id="nav-items-res" class="navbar navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Offcanvas navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <!-- End of Responsive Nav -->
 
     <!--****************************************************** ABOUT *******************************************************-->
     <section class="about-section">
@@ -81,7 +132,48 @@
                 </div>
             </div>
         </div>
+
+        <div id="about-res">
+
+            <div id="about_heading">
+                <a class="about-a" id="about_heading_a" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    for('Everyone'){<br>
+                    Char Event = "Trellathon";}
+                </a>
+            </div>
+
+            <div id="about-res-text" class="neon-box">
+                <div>
+
+                    <h1 id="about-head-res" class="neon-text">Trellathon</h1>
+                    <p id="about-res-p">Trellathon is the largest, one of its kind, hackathon for GGSIPU students. While most of
+                        the
+                        hackathons focus on code, we at Trellathon consider the uniqueness and potential of the
+                        idea
+                        as well. Trellathon provides a platform for all the innovators out there to come out and
+                        test their creation on the market parameters. We aim to separate “a good idea” from a
+                        “market product” and fill the gap in that journey.
+                    </p>
+                </div>
+            </div>
+
+            <div img id="about-img-div" class="about_info_image">
+                <img id="about-img" src="https://usict.acm.org/assets/images/trellposter.jpeg" alt="error">
+            </div>
+
+
+
+        </div>
+
+
     </section>
+
+
+
     <!--**************************************************** END OF ABOUT *****************************************************-->
 
     <!--****************************************************** TIMELINE *******************************************************-->
@@ -180,57 +272,57 @@
 	</div>
 </div> -->
 
-<div class="timeline" id="timeline">
-        <h1>Timeline</h1>
-        <h1 class="timeline-trellathon">TRELLATHON</h1>
+    <div class="timeline" id="timeline">
+        <h1 class="neon-text">Timeline</h1>
+        <h1 class="timeline-trellathon neon-text">TRELLATHON</h1>
         <div>
-          <ul>
-            <li>
-              <div class="timeline-li">
-                <time>9th - 20th March 2021
-                    REGISTRATION</time>
-                <p> <a href="#">Register Now</a> 
-      </p>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-li">
-                <time>16th March 2021
-                    PROBLEM STATEMENT RELEASE</time>
-                <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+            <ul>
+                <li>
+                    <div class="timeline-li">
+                        <time>9th - 20th March 2021
+                            REGISTRATION</time>
+                        <p> <a href="#">Register Now</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-li">
+                        <time>16th March 2021
+                            PROBLEM STATEMENT RELEASE</time>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
       </p> -->
-              </div>
-            </li>
-            <li>
-              <div class="timeline-li">
-                <time>16th - 20th March 2021
-                    IDEATION ROUND</time>
-                <p>Draft your solution for the problem statement of Trell.</p>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-li">
-                <time>22nd March 2021
-                    RESULTS OF IDEATION ROUND</time>
-                <p>Shortlisted teams will move forward to the next round.</p>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-li">
-                <time>23rd March 2021
-                    PROTOTYPING ROUND</time>
-                <p>Develop a prototype for the solution of the ideation round.</p>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-li">
-                <time>24th March 2021
-                    PITCH DAY</time>
-                <p>Pitch your prototype to Trell and Judges.</p>
-              </div>
-            </li>
-          </ul>
-          
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-li">
+                        <time>16th - 20th March 2021
+                            IDEATION ROUND</time>
+                        <p>Draft your solution for the problem statement of Trell.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-li">
+                        <time>22nd March 2021
+                            RESULTS OF IDEATION ROUND</time>
+                        <p>Shortlisted teams will move forward to the next round.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-li">
+                        <time>23rd March 2021
+                            PROTOTYPING ROUND</time>
+                        <p>Develop a prototype for the solution of the ideation round.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-li">
+                        <time>24th March 2021
+                            PITCH DAY</time>
+                        <p>Pitch your prototype to Trell and Judges.</p>
+                    </div>
+                </li>
+            </ul>
+
         </div>
     </div>
 
@@ -283,12 +375,12 @@
                             <h2 class="pat-heading text-center">TRELL</h2>
                         </div>
                     </div>
-                    <div class=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-3">
-                        <div class="square-holder">
-                            <img alt="" src="ensvee-logo.png" />
-                            <h2 class="pat-heading text-center">ENSVEE</h2>
+                            <div class=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-3">
+                                <div class="square-holder">
+                                    <img alt="" src="ensvee-logo.png" />
+                                    <h2 class="pat-heading text-center">ENSVEE</h2>
+                                </div>
                         </div>
-                    </div>
                 </div>
             </strong>
         </div>
@@ -602,45 +694,45 @@
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi non
                             pariatur numquam animi nam at impedit odit nisi.</p>
                             <div class="social-buttons">
-            <!-- facebook  Button -->
-            <a href="http://www.facebook.com" target="blank" class="social-margin">
-                <div class="social-icon facebook">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                </div>
-            </a>
-            <!-- pinterest Button -->
-            <a href="https://pinterest.com/" target="blank" class="social-margin">
-                <div class="social-icon instagram">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                </div>
-            </a>
-            <!-- LinkedIn Button -->
-            <a href="http://linkedin.com/" class="social-margin" target="blank">
-                <div class="social-icon linkedin">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </div>
-            </a>
-            <!-- Github Button -->
-            <a href="https://github.com/" target="blank" class="social-margin">
-                <div class="social-icon github">
-                    <i class="fa fa-github-alt" aria-hidden="true"></i>
-                </div>
-            </a>
-            <!-- Youtube Button -->
-            <a href="http://youtube.com/" target="blank" class="social-margin">
-                <div class="social-icon youtube">
-                    <i class="fa fa-youtube" aria-hidden="true"></i>
-                </div>
-            </a>
+                            <!-- facebook  Button -->
+                            <a href="http://www.facebook.com" target="blank" class="social-margin">
+                                <div class="social-icon facebook">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                            <!-- pinterest Button -->
+                            <a href="https://pinterest.com/" target="blank" class="social-margin">
+                                <div class="social-icon instagram">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                            <!-- LinkedIn Button -->
+                            <a href="http://linkedin.com/" class="social-margin" target="blank">
+                                <div class="social-icon linkedin">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                            <!-- Github Button -->
+                            <a href="https://github.com/" target="blank" class="social-margin">
+                                <div class="social-icon github">
+                                    <i class="fa fa-github-alt" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                            <!-- Youtube Button -->
+                            <a href="http://youtube.com/" target="blank" class="social-margin">
+                                <div class="social-icon youtube">
+                                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                                </div>
+                            </a>
 
-            <!-- TwitterButton -->
-            <a href="http://twitter.com/" target="blank" class="social-margin">
-                <div class="social-icon twitter">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                </div>
-            </a>
-        </div>
-                    </div>
+                            <!-- TwitterButton -->
+                            <a href="http://twitter.com/" target="blank" class="social-margin">
+                                <div class="social-icon twitter">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                        </div>
+                        </div>
                 </div>
                 <div class="empty-box col-md-2 col-sm-2 col-xs-2"></div>
                 <div class="col-md-2 col-sm-2 col-xs-2">
@@ -652,24 +744,7 @@
                         <li class='footli'>FAQ</li>
                     </ul>
                 </div>
-                <div class="col-md-2 col-sm-2 col-xs-2">
-                    <h5 class="heading_footer">Industries</h5>
-                    <ul class="card-text">
-                        <li class='footli'>Finance</li>
-                        <li class='footli'>Public Sector</li>
-                        <li class='footli'>Smart Office</li>
-                        <li class='footli'>Retail</li>
-                    </ul>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-2">
-                    <h5 class="heading_footer">Company</h5>
-                    <ul class="card-text">
-                        <li class='footli'>About Us</li>
-                        <li class='footli'>Blog</li>
-                        <li class='footli'>Contact</li>
-                        <li class='footli'>Join Us</li>
-                    </ul>
-                </div>
+                     
             </div>
             <div class="divider-f mb-4"> </div>
 
@@ -678,12 +753,9 @@
                     of ACM USICT chapter.
                 </p>
             </div>
-            <div id="scroll">  
-                <a href="#home" id="scroll" class="scroll-up-btn">
-            <i class="fa fa-hand-pointer-o"></i>
-        </a>
-    </div>
-          
+            <a href="#home" class="scroll-up-btn">
+                <i class="fa fa-hand-pointer-o"></i>
+            </a>
         </div>
     </section>
     <!--************************************************* End of FOOTER **************************************************-->

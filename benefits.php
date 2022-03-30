@@ -4,7 +4,7 @@
     <?php
       include('head.php');
     ?>
-    <title>GGSIP University USS ACM Student Chapter</title>
+    <title>USICT ACM</title>
     <link href='./assets/CSS/benefits.css' rel="stylesheet" />
     <link href="./assets/CSS/glider.css" rel="stylesheet" />
     <link href="./assets/CSS/header.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
         <div class="pt-card row">
           <div class="heading col-xl-9 col-lg-9 col-md-9 col-sm-6">
             <h3><span class="uheading">Why Join</span><br>
-              <span class="lheading">GGSIP University USS ACM Student Chapter?</span></h3>
+              <span class="lheading">ACM USICT Chapter?</span></h3>
           </div>
         </div>
       </section>
@@ -65,8 +65,8 @@
               <p>Sponsored by Microsoft, an internationally recognized venue enabling students to experience the research world, share and exchange ideas, rub shoulders with academic and industry luminaries.</p>
             </div>
             <div class="perk-card"> <img src="./assets/images/perks/clubs.png" height="80" width="80">
-              <h3>Clubs Under GGSIP University USS ACM Student Chapter</h3>
-              <p>GGSIP University USS ACM Student Chapter has a total of 8 daughter clubs under its aegis. Namely Appetite, Webify, Research & Development Cell, Entreprenurs' Arena, Cyber Security Cell, Innovate AI and RobIOTics.</p>
+              <h3>Clubs Under ACM USICT</h3>
+              <p>ACM USICT has a total of 8 daughter clubs under its aegis. Namely Appetite, Webify, Research & Development Cell, Entreprenurs' Arena, Cyber Security Cell, Innovate AI and RobIOTics.</p>
             </div>
             <div class="perk-card"> <img src="./assets/images/perks/career.png" height="80" width="80">
               <h3>ACM Career & Job Center</h3>
@@ -286,7 +286,7 @@
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12">
             <div class="registration-inner-div d-flex justify-content-center">
-              <form class="widget-contact-form" action="https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse" role="form" method="post" target="_self" novalidate="novalidate">
+              <form class="widget-contact-form" id="form-id" action="" role="form" method="post" target="_self" novalidate="novalidate">
                 <div class="row test-dev2">
                   <div class="form-group col-md-6">
                     <input id="NameinForm" required type="text" aria-required="true" name="entry.73813921" class="form-input-boxes-manual form-control required fname test-dev3" placeholder="First Name" >
@@ -320,6 +320,10 @@
                     <option value="B.Tech CSE">
                     <option value="B.Tech IT">
                     <option value="B.Tech ECE">
+                    <option value="B.Tech A&R">
+                    <option value="B.Tech AI/ML">
+                    <option value="B.Tech AI/DS">
+                    <option value="B.Tech IIOT">
                     <option value="M.Tech CSE">
                     <option value="M.Tech IT">
                     <option value="M.Tech ECE">
@@ -334,27 +338,27 @@
                     <br>
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice1" name="entry.332679571" value="USICT ACM DevSource - The Development and Open Source Group">
-                      <label class="label-course" for="contactChoice1">DevSource</label>
+                      <label class="label-course" for="contactChoice1">USICT ACM DevSource</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice2" name="entry.332679571" value="USICT ACM enGame - The Gaming Group">
-                      <label class="label-course" for="contactChoice2">enGame</label>
+                      <label class="label-course" for="contactChoice2">USICT ACM enGame</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM ICPC Club - The Competitive Programming Group">
-                      <label class="label-course" for="contactChoice3">ICPC Club</label>
+                      <label class="label-course" for="contactChoice3">USICT ACM ICPC Club</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Innovate AI - The Machine Learning, Data Science and AI Group">
-                      <label class="label-course" for="contactChoice4">Innovate AI</label><br>
+                      <label class="label-course" for="contactChoice4">USICT ACM Innovate AI</label><br>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Cyber Cell - The Cybersecurity Group">
-                      <label class="label-course" for="contactChoice5">Cyber Chain</label>
+                      <label class="label-course" for="contactChoice5">USICT ACM Cyber Cell</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM RobIOTics - The Robotics and IoT Group">
-                      <label class="label-course" for="contactChoice6">RobIOTics</label>
+                      <label class="label-course" for="contactChoice6">USICT ACM RobIOTics</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Entrepreneurs' Arena - The Entrepreneurship Group">
@@ -362,11 +366,11 @@
                     </div>
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Research Cell - The Research and Development Group">
-                      <label class="label-course" for="contactChoice8">Research Cell</label>
+                      <label class="label-course" for="contactChoice8">USICT ACM Research Cell</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM XD - The Experience and Design group">
-                      <label class="label-course" for="contactChoice8">XD</label>
+                      <label class="label-course" for="contactChoice8">USICT ACM XD</label>
                     </div>
                   </div>
                 </div>
@@ -376,7 +380,7 @@
                   <div class="form-group col-md-2 button-center">
                     <div class="form-group">
                       <!-- <button id="submitSingupForm" type="submit" style="display:none;"></button> -->
-                      <button type="button" class="btn signin" onclick="validateForm()">&nbsp;Submit</button>
+                      <button type="submit" class="btn signin" onclick="validateForm()">Submit</button>
                     </div>
                   </div>
                 </div>
@@ -387,54 +391,10 @@
       </div>
     </div>
     </section>
-     <!-- ****************************************************contact us ***************************** -->
-	<div class="dsph" id="contact">
-		<div class="d-flex justify-content-center mt-md-5">
-
-			<img src="./assets/images/contact_us_img.webp" class="svg-media" alt="" />
-
-			<div class="contactUs">
-				<div class="closebtn">
-					<button class="btn btn-primary s-form-group contact-btn" onclick="closecontact()"><i class="fas fa-times"></i></button>
-				</div>
-				<form class="s-form" name="contact" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse" onsubmit="return validateform();" >
-					<h2 class="my-4 display-4 fw-bolder text-center">Contact<span class="text-blue"> Us</span></h2>
-					<div class="row form-row">
-						<div class="form-group s-form-group col-md-5">
-							<input type="text" name="name" class="form-control" placeholder="Name *" />
-						</div>
-						<div class="form-group s-form-group col-md-5">
-							<input type="text" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Email *" />
-						</div>
-					</div>
-					<div class="row form-row">
-					<div class="form-group s-form-group col-md-5">
-							<input type="number" name="phone" class="form-control" placeholder="Phone No." />
-						</div>
-						<div class="form-group s-form-group col-md-5">
-							<input type="text" name="college" class="form-control" placeholder="College/ Organization" />
-						</div>
-					</div>
-					<div class="contact-msg">
-					<textarea type="text" name="message" rows="5" placeholder="Message *" class="form-control col-md-11 contact-message"></textarea>
-					</div>
-					<div class="row contact-msg">
-						<button type="submit" class="btn btn-primary s-form-group contact-btn col-md-3 col-sm-2">Submit</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-  <!-- back to top -->
-	<div class="scrolltop">
-		<div class="scroll icon"><i class="fa fa-rocket" aria-hidden="true"></i></div>
-	</div>
-	<!-- contact us -->
-	<div class="contact-bottom-btn">
-		<a href="javascript:showcontact()">
-			<div class="contact-icon"><i class="fas fa-comments" aria-hidden="true"></i></div>
-		</a>
-	</div>
+  <!-- back to top and contact us-->
+	<?php
+	include("contact.php")
+	?>
 
     <!-- ************************************************Footer******************************************************************************-->
 
@@ -456,15 +416,42 @@
         var c = document.getElementById("YearofAdmissioninForm").value;
         var d = document.getElementById("ACMMembershipNoinForm").value;
         var e = document.getElementById("EnrollmentinForm").value;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+        
+        const form_action = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse"; 
+=======
+
+
+>>>>>>> 8a6beb930363ef40c6c76050208ba5af66494e9f
+>>>>>>> Stashed changes
+=======
+        
+        const form_action = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse"; 
+>>>>>>> ba7e8c03499a64c48e45f84f2c2aabe9d07f83d0
+=======
+        
+        const form_action = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse"; 
+>>>>>>> 83119e5330a6cd074762befb51bf882f57cada42
         if (x == "" || !x || y == "" || !y || z == "" || !z || a == "" || !a || b == "" || !b || c == "" || !c || d == "" || !d || e == "" || !e) {
           alert("Please fill all the fields");
+          document.getElementById("form-id").action = "";
+          
+          document.location.reload()
+
           return false;
         }
+        
         else{
           var button = document.getElementById("submitSingupForm");
+          document.getElementById("form-id").action = form_action;
           button.click();
         }
       }
+
       window.addEventListener('load', function(){
         new Glider(document.querySelector('.glider1'), {
           slidesToShow: 1,
