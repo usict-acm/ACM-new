@@ -397,15 +397,15 @@
         </div> -->
 
             <div class="row">
-                <div class="col-md-2 col-sm-6 box-1">
+                <div class="col-md-2 col-sm-6">
                     <div class="our-team">
-                        <div class="pic"><img class="image" src="image4-modified.png" alt=""></div>
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
                         <h3 class="title">Williamson</h3>
                         <span class="post">Web Developer</span>
                         <ul class="icon">
                             <li><a href="#" class="fab fa-twitter"></a></li>
                             <li><a href="#" class="fab fa-linkedin"></a></li>
-                            <li><a href="#" class="fab fa-instagram"></a></li>
+                            <li><a href="#" class="fa-brands fa-instagram"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -478,9 +478,9 @@
             </div>
 
             <div class="row">
-                <div class="col-md-2 col-sm-6 box-1">
+                <div class="col-md-2 col-sm-6 ">
                     <div class="our-team">
-                        <div class="pic"><img class="image" src="image4-modified.png" alt=""></div>
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
                         <h3 class="title">Williamson</h3>
                         <span class="post">Web Developer</span>
                         <ul class="icon">
@@ -557,7 +557,87 @@
                 </div>
 
             </div>
+            
 
+
+            <div class="row">
+                <div class="col-md-2 col-sm-6 ">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Williamson</h3>
+                        <span class="post">Web Developer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
 
         </div>
     </section>
