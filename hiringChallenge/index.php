@@ -18,7 +18,7 @@
         <div class="header">
             <a class="logo-navbar" href="">Hackathon</a>
             <img src="../assets/images/acm1.png" alt="" class="logo-acm">
-            <ul class="menu">
+            <ul id="nav-items-nonres" class="menu">
                 <li><a href="#about" class="link link-theme link-arrow">About</a></li>
                 <li><a href="#timeline" class="link link-theme link-arrow">Timeline</a></li>
                 <li><a href="#partner" class="link link-theme link-arrow">Partner</a></li>
@@ -32,16 +32,65 @@
         <canvas></canvas>
         <div class="home-text">
             <h1 class="vibrate-1" id="mainhead">TRELLATHON</h1>
-        <div class="home-text vibrate-1">
-            <h1>TRELLATHON</h1>
-            <h2>4-HOUR HACKATHON</h2>
-            <h2>9TH MARCH 2021</h2>
-        </div>
+            <div class="home-text vibrate-1">
+                <h1>TRELLATHON</h1>
+                <h2>4-HOUR HACKATHON</h2>
+                <h2>9TH MARCH 2021</h2>
+            </div>
 
 
     </section>
-    <!-- <p>sadfcbv</p> -->
+
     <!-- End of Header -->
+    <!-- Start of Responsive Nav -->
+
+    <nav id="nav-items-res" class="navbar navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Offcanvas navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <!-- End of Responsive Nav -->
 
     <!--****************************************************** ABOUT *******************************************************-->
     <section class="about-section">
@@ -224,7 +273,7 @@
 </div> -->
 
     <div class="timeline" id="timeline">
-        <h1 class="neon-text" >Timeline</h1>
+        <h1 class="neon-text">Timeline</h1>
         <h1 class="timeline-trellathon neon-text">TRELLATHON</h1>
         <div>
             <ul>

@@ -417,6 +417,7 @@
         var d = document.getElementById("ACMMembershipNoinForm").value;
         var e = document.getElementById("EnrollmentinForm").value;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
@@ -431,6 +432,10 @@
         
         const form_action = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse"; 
 >>>>>>> ba7e8c03499a64c48e45f84f2c2aabe9d07f83d0
+=======
+        
+        const form_action = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse"; 
+>>>>>>> 83119e5330a6cd074762befb51bf882f57cada42
         if (x == "" || !x || y == "" || !y || z == "" || !z || a == "" || !a || b == "" || !b || c == "" || !c || d == "" || !d || e == "" || !e) {
           alert("Please fill all the fields");
           document.getElementById("form-id").action = "";
