@@ -271,51 +271,51 @@
 
 	</div>
 </div> -->
-
+    <div class="timeline-section">
     <div class="timeline" id="timeline">
         <h1 class="neon-text">Timeline</h1>
         <h1 class="timeline-trellathon neon-text">TRELLATHON</h1>
         <div>
             <ul>
-                <li>
-                    <div class="timeline-li">
+                <li class="timeline-li">
+                    <div>
                         <time>9th - 20th March 2021
                             REGISTRATION</time>
                         <p> <a href="#">Register Now</a>
                         </p>
                     </div>
                 </li>
-                <li>
-                    <div class="timeline-li">
+                <li  class="timeline-li">
+                    <div>
                         <time>16th March 2021
                             PROBLEM STATEMENT RELEASE</time>
                         <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
       </p> -->
                     </div>
                 </li>
-                <li>
-                    <div class="timeline-li">
+                <li  class="timeline-li">
+                    <div>
                         <time>16th - 20th March 2021
                             IDEATION ROUND</time>
                         <p>Draft your solution for the problem statement of Trell.</p>
                     </div>
                 </li>
-                <li>
-                    <div class="timeline-li">
+                <li  class="timeline-li">
+                    <div>
                         <time>22nd March 2021
                             RESULTS OF IDEATION ROUND</time>
                         <p>Shortlisted teams will move forward to the next round.</p>
                     </div>
                 </li>
-                <li>
-                    <div class="timeline-li">
+                <li class="timeline-li">
+                    <div>
                         <time>23rd March 2021
                             PROTOTYPING ROUND</time>
                         <p>Develop a prototype for the solution of the ideation round.</p>
                     </div>
                 </li>
-                <li>
-                    <div class="timeline-li">
+                <li class="timeline-li">
+                    <div>
                         <time>24th March 2021
                             PITCH DAY</time>
                         <p>Pitch your prototype to Trell and Judges.</p>
@@ -324,6 +324,7 @@
             </ul>
 
         </div>
+    </div>
     </div>
 
 
@@ -762,6 +763,7 @@
 
     <script src="https://kit.fontawesome.com/833875f75e.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="home.js"></script>
 </body>
 

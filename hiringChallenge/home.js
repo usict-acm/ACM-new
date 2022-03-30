@@ -238,31 +238,31 @@ addEventListener('resize', init, false);
 addEventListener('mousemove', function (e) {
 	source = { 'x': e.clientX, 'y': e.clientY };
 }, false);
-
+console.log("241");
 let mode = "css"
-const editor = CodeMirror.fromTextArea(code, {
-	lineNumbers: true,
-	styleActiveLine: true,
-	matchBrackets: true,
-	scrollbarStyle: "overlay",
-	Tab: "indentMore",
-	defaultTab: function (cm) {
-		if (cm.somethingSelected()) cm.indentSelection("add");
-		else cm.replaceSelection("  ", "end");
-	},
-	mode
-})
-editor.setOption("theme", "highcontrast-dark")
-const x = document.querySelector(".code")
-const ro = new ResizeObserver(entries => {
-	editor.setSize(x.offsetWidth, x.offsetHeight)
-})
-ro.observe(document.querySelector(".code-container"))
+// const editor = CodeMirror.fromTextArea(code, {
+// 	lineNumbers: true,
+// 	styleActiveLine: true,
+// 	matchBrackets: true,
+// 	scrollbarStyle: "overlay",
+// 	Tab: "indentMore",
+// 	defaultTab: function (cm) {
+// 		if (cm.somethingSelected()) cm.indentSelection("add");
+// 		else cm.replaceSelection("  ", "end");
+// 	},
+// 	mode
+// })
+// editor.setOption("theme", "highcontrast-dark")
+// const x = document.querySelector(".code")
+// const ro = new ResizeObserver(entries => {
+// 	editor.setSize(x.offsetWidth, x.offsetHeight)
+// })
+// ro.observe(document.querySelector(".code-container"))
 
-const changeMode = () => {
-	mode = mode === "css" ? "javascript" : "css"
-	editor.setOption("mode", mode)
-}
+// const changeMode = () => {
+// 	mode = mode === "css" ? "javascript" : "css"
+// 	editor.setOption("mode", mode)
+// }
 
 $('a').click(function (e) {
 	e.preventDefault();
@@ -297,9 +297,11 @@ for (i = 0; i < coll.length; i++) {
 
 
 
-var items = document.getElementsByClassName("timeline-li");
-
-function isItemInView(item) {
+// var items = document.getElementsByClassName("timeline-li");
+var items = document.querySelectorAll(".timeline-li");
+console.log("301");
+function isItemInViewShubham(item) {
+	console.log("303");
 	var rect = item.getBoundingClientRect();
 	return (
 		rect.top >= 0 &&
@@ -309,18 +311,20 @@ function isItemInView(item) {
 	);
 }
 
-function callbackFunc() {
+function callbackFuncShubham() {
+	console.log("241");
 	for (var i = 0; i < items.length; i++) {
-		if (isItemInView(items[i])) {
+		if (isItemInViewShubham(items[i])) {
 			items[i].classList.add("show");
 		}
 	}
+	console.log("320");
 }
 
 // listen for events
-window.addEventListener("load", callbackFunc);
-window.addEventListener("resize", callbackFunc);
-window.addEventListener("scroll", callbackFunc);
+window.addEventListener("load", callbackFuncShubham);
+window.addEventListener("resize", callbackFuncShubham);
+window.addEventListener("scroll", callbackFuncShubham);
 
 
 
