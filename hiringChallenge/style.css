@@ -34,7 +34,7 @@ a {
   justify-content: center;
 }
 
-#mainhead{
+#mainhead {
   margin: 0%;
   padding: 0%;
   display: flex;
@@ -43,37 +43,35 @@ a {
   margin-bottom: 20px;
   align-items: center;
   justify-content: center;
-  text-align:center;
+  text-align: center;
 
   /* -----------------------------------ANIMATION--------------------------- */
   text-transform: uppercase;
-    background-image: linear-gradient(
-      -225deg,
-      #231557 0%,
-      #44107a 29%,
-      #ff1361 67%,
-      #fff800 100%
-    );
-    /* background-size: auto auto; */
-    background-clip: border-box;
-    background-size: 200% auto;
-    color: #fff;
-    background-clip: text;
-    text-fill-color:transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textclip 2s linear infinite;
-    /* display: inline-block; */
-        /* //font-size: 190px; */
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  /* background-size: auto auto; */
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  /* display: inline-block; */
+  /* //font-size: 190px; */
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
   }
-
-  @keyframes textclip {
-    to {
-      background-position: 200% center;
-    }
-/* ----------------------------------------------ANIMATION-------------------------- */
-
-  
+  /* ----------------------------------------------ANIMATION-------------------------- */
 }
 
 .link-arrow:after {
@@ -145,7 +143,6 @@ a {
   padding: 15px 0;
 }
 
-
 #home {
   width: 100%;
   height: 100vh;
@@ -210,8 +207,6 @@ canvas {
   top: 6px;
 }
 
-
-
 /* menu */
 
 .header .menu {
@@ -227,7 +222,7 @@ canvas {
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
-  float:right;
+  float: right;
   padding: 28px 20px;
   position: relative;
   user-select: none;
@@ -316,67 +311,70 @@ canvas {
   }
 }
 
-
 .vibrate-1 {
-	-webkit-animation: vibrate-1 0.3s linear infinite both;
-	        animation: vibrate-1 0.3s linear infinite both;
+  -webkit-animation: vibrate-1 0.3s linear infinite both;
+  animation: vibrate-1 0.3s linear infinite both;
 }
 
 @-webkit-keyframes vibrate-1 {
   0% {
     -webkit-transform: translate(0);
-            transform: translate(0);
+    transform: translate(0);
   }
   20% {
     -webkit-transform: translate(-2px, 2px);
-            transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
   }
   40% {
     -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
   }
   60% {
     -webkit-transform: translate(2px, 2px);
-            transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
   }
   80% {
     -webkit-transform: translate(2px, -2px);
-            transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
   }
   100% {
     -webkit-transform: translate(0);
-            transform: translate(0);
+    transform: translate(0);
   }
 }
 @keyframes vibrate-1 {
   0% {
     -webkit-transform: translate(0);
-            transform: translate(0);
+    transform: translate(0);
   }
   20% {
     -webkit-transform: translate(-2px, 2px);
-            transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
   }
   40% {
     -webkit-transform: translate(-2px, -2px);
-            transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
   }
   60% {
     -webkit-transform: translate(2px, 2px);
-            transform: translate(2px, 2px);
+    transform: translate(2px, 2px);
   }
   80% {
     -webkit-transform: translate(2px, -2px);
-            transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
   }
   100% {
     -webkit-transform: translate(0);
-            transform: translate(0);
+    transform: translate(0);
   }
 }
 
+/*************************************************** Start of Reasponsive nav ******************************************************/
+#nav-items-res {
+  display: none;
+}
 
-
+/*************************************************** Start of Reasponsive nav ******************************************************/
 
 /*************************************************** End of Home Section ******************************************************/
 
@@ -753,17 +751,23 @@ canvas {
   margin-top: 10vh;
 }
 
-#about-res-p{
+#about-res-p {
   font-size: 4vw;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 875px) {
   #about {
     display: none;
   }
   #about-res {
     display: flex;
     flex-direction: column;
+  }
+  #nav-items-res {
+    display: flex;
+  }
+  #nav-items-nonres {
+    display: none;
   }
 }
 
@@ -775,20 +779,19 @@ canvas {
   color: white;
 }
 
-#about-img-div{
+#about-img-div {
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
 }
 
-
-#about-img{
-  height:60vh;
+#about-img {
+  height: 60vh;
   width: 70vw;
 }
 
-#about_heading{
+#about_heading {
   height: 50vh;
 }
 /* 
