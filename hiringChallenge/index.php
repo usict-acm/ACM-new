@@ -32,7 +32,7 @@
         <canvas></canvas>
         <div class="home-text">
             <h1 class="vibrate-1" id="mainhead">TRELLATHON</h1>
-            <div class="home-text vibrate-1">
+            <div class="home-text">
                 <h1>TRELLATHON</h1>
                 <h2>4-HOUR HACKATHON</h2>
                 <h2>9TH MARCH 2021</h2>
@@ -44,42 +44,44 @@
     <!-- End of Header -->
     <!-- Start of Responsive Nav -->
 
-    <nav id="nav-items-res" class="navbar navbar-light bg-light fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Offcanvas navbar</a>
+    <nav id="nav-items-res" class="navbar navbar-light  fixed-top">
+        <div class="container-fluid" >
+        <img src="../assets/images/acm1.png" alt="" class="logo-acm">
+
+        <a class="logo-navbar" id="res-hack"href="">Hackathon</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Take a Look</h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
+                <li class="nav-item"><a href="#about" target="_parent" class="link link-theme link-arrow">About</a></li>
+                <li class="nav-item"><a href="#timeline" class="link link-theme link-arrow">Timeline</a></li>
+                <li class="nav-item"><a href="#partner" class="link link-theme link-arrow">Partner</a></li>
+                <li class="nav-item"><a href="#team-section" class="link link-theme link-arrow">Team</a></li>
+                <li class="nav-item"><a href="#faq" class="link link-theme link-arrow">FAQ</a></li>
+                <li class="nav-item"><a href="#contact" class="link link-theme link-arrow">Contact us</a></li>
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Dropdown
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
+                            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown"> -->
+                                <!-- <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li> -->
+                                <!-- <li>
                                     <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
+                                </li> -->
+                                <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                            <!-- </ul>
+                        </li> -->
                     </ul>
-                    <form class="d-flex">
+                    <!-- <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button class="btn btn-outline-success" type="submit">Search</button> -->
                     </form>
                 </div>
             </div>

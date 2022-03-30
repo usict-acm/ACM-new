@@ -141,6 +141,7 @@ a {
   width: 100%;
   z-index: 15;
   padding: 15px 0;
+  height: 73px;
 }
 
 #home {
@@ -187,26 +188,25 @@ canvas {
   color: #ffd300;
   display: block;
   float: left;
-  font-size: 2.9em;
+  font-size: 3.3em;
   /* padding: 2px 0px; */
   margin-left: 85px;
   font-family: Montserrat;
   text-decoration: none;
   font-weight: bold;
   position: absolute;
-  left: 109px;
-  top: 17px;
+  left: 80px;
+  top: 8px;
   /* right: 10px; */
   /* bottom: 9px; */
 }
 .logo-acm {
-  height: 72px;
+  height: 63px;
   width: 68px;
   position: absolute;
-  left: 43px;
-  top: 6px;
+  left: 28px;
+  top: 4px;
 }
-
 /* menu */
 
 .header .menu {
@@ -288,11 +288,14 @@ canvas {
 @media (min-width: 875px) {
   .header li {
     float: left;
-  }
-  .header li a {
-    padding: 20px 0px 0px 0px;
-    margin-left: 30px;
-  }
+    /* position: relative; */
+    margin: -10px;
+}
+.header li a {
+  padding: 0px 10px 0px 0px;
+  margin-left: 28px;
+  margin-top: 13px;
+}
   .header .menu {
     clear: none;
     float: right;
@@ -368,6 +371,114 @@ canvas {
     transform: translate(0);
   }
 }
+#nav-items-res{
+  display: none;
+  background-color: rgba(0, 0, 0, 94.5);
+    position: fixed;
+    width: 100%;
+    z-index: 15;
+    padding: 15px 0;
+
+}
+/* .list-style{
+  color: yellow;
+} */
+.nav-item {
+  /* border: 2px solid red; */
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+  /* color:blue; */
+}
+.container-fluid{
+  /* background-color: black; */
+}
+.navbar-toggler {
+  padding: .25rem .75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: yellow;
+  border: 5px solid transparent;
+  border-radius: .25rem;
+  transition: box-shadow .15s ease-in-out;
+}
+.navbar-toggler {
+ 
+  background-color: yellow;
+  
+}
+
+.navbar-light .navbar-toggler {
+  color: red;
+  border: 7px solid red;
+  padding: 5px;
+  margin: 10px;
+}
+.one-more{
+  background-color: green;
+}
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: black;
+}
+.navbar-toggler-icon{
+  background: chartreuse;
+}
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 40px;
+  height: 31px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+#offcanvasNavbar{
+  background-color: black;
+}
+#Hackathon-res{
+  font-weight: 40px;
+}
+#offcanvasNavbarLabel{
+  color: white;
+  font-size: 28px
+}
+#res-hack {
+  text-decoration: none;
+  size: 44px;
+  display: inline-block;
+  float: right;
+  font-weight: bold;
+  font-size: xx-large;
+  color: azure;
+  /* left: 16px; */
+  position: relative;
+  left: 150px;
+}
+.offcanvas-header .btn-close {
+  padding: .5rem .5rem;
+  margin-top: -.5rem;
+  margin-right: -.5rem;
+  margin-bottom: -.5rem;
+  background-color: white;
+  height: 22px;
+  width: 34px;
+}
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 2.5em;
+  height: 2.5em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+
+
 
 /*************************************************** End of Home Section ******************************************************/
 
