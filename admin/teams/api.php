@@ -110,7 +110,7 @@ function delMember()
     $database = new Database();
     $db = $database->connect();
 
-    $sql = "UPDATE `team` SET active = 0 WHERE id= " . $_POST["id"];
+    $sql = "DELETE FROM `team` WHERE id= " . $_POST["id"];
 
     if ($db->query($sql) == true) {
         echo json_encode("Member deleted successfully!");
@@ -124,7 +124,7 @@ function readYear()
     $database = new Database();
     $db = $database->connect();
 
-    $sql = 'SELECT DISTINCT t.year FROM `team` t WHERE active = 1 ORDER BY year desc';
+    $sql = 'SELECT DISTINCT t.year FROM `team` t ORDER BY year desc';
     $result = $db->query($sql);
 
     if ($result) {
