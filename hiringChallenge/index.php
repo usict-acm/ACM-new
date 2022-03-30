@@ -372,13 +372,13 @@
                     <div class=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-3">
                         <div class="square-holder">
                             <img alt="" src="trell_logo.png" />
-                            <h2 class="pat-heading text-center">TRELL</h2>
+                            <h1 class="pat-heading text-center">TRELL</h1>
                         </div>
                     </div>
                             <div class=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-3">
                                 <div class="square-holder">
                                     <img alt="" src="ensvee-logo.png" />
-                                    <h2 class="pat-heading text-center">ENSVEE</h2>
+                                    <h1 class="pat-heading text-center">ENSVEE</h1>
                                 </div>
                         </div>
                 </div>
@@ -736,7 +736,6 @@
                         <li class='footli'>FAQ</li>
                     </ul>
                 </div>
-                     
             </div>
             <div class="divider-f mb-4"> </div>
 

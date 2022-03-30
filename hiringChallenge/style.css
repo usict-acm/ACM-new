@@ -1285,7 +1285,7 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 .prize_item {
-  height: 280px;
+  height: 240px;
   background-color: #00d0ff;
   display: flex;
   flex-direction: column;
@@ -1924,6 +1924,7 @@ a:active {
   padding-top: 11px;
   transition: all 0.5s;
 }
+
 .social-icon:hover {
   transform: rotate(360deg) scale(1.3);
 }
@@ -1965,6 +1966,7 @@ a:active {
   background-color: #ffffff;
   color: #dd4b39;
 }
+
 /* Linkedin Button Styling */
 .linkedin {
   font-size: 24px;
