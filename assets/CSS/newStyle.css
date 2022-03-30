@@ -1410,6 +1410,10 @@ a:hover {
 	background-blend-mode: lighten;
 }
 
+.announcement-carousel {
+	overflow: hidden;
+}
+
 .detai {
 	background-color: #cbe9ff;
 	border-radius: 1rem;
@@ -1525,6 +1529,9 @@ a:hover {
 	}
 	.announcement-button-group {
 		flex-direction: column;
+	}
+	.mobile-head {
+		font-size: 3rem;
 	}
 }
 .mySwiper .swiper-wrapper {
@@ -1887,9 +1894,6 @@ a:hover {
 	.contact-btn {
 		width: 50%;
 		margin: auto;
-	}
-	.main-logo {
-		margin-left: 10px;
 	}
 	.b-card img {
 		width: 275px;

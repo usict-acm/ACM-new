@@ -5,7 +5,7 @@
   <?php
   include('./head.php');
   ?>
-  <title>USICT ACM</title>
+  <title>GGSIP University USS ACM Student Chapter</title>
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
   <link href="./assets/CSS/events.css" rel="stylesheet" />
   <link href="assets/CSS/header.css" rel="stylesheet" />
@@ -166,7 +166,7 @@
                 console.log("dataNumber", dataNumber);
                 numberOfEvents = dataNumber[1];
                 console.log("numberrrr", numberOfEvents);
-                yearWiseEvent.innerHTML += " <li>\
+                yearWiseEvent.innerHTML += " <li style='height:150px;'>\
                                                 <div class='time'>\
                                                     <h2>" + event.year + " <br><span></span></h2>\
                                                 </div>\
@@ -210,10 +210,6 @@
 					</div>
 					<div class="row form-row">
 					<div class="form-group s-form-group col-md-5">
-<<<<<<< HEAD
-							<input type="text" name="phone" class="form-control" placeholder="Phone No." />
-						</div>
-=======
 							<input type="number" name="phone" class="form-control" placeholder="Phone No." />
 						</div>
             <style>
@@ -227,7 +223,6 @@
                          -moz-appearance: textfield;
                          }
                   </style>
->>>>>>> e80fb4c5d90316a9a580217fa0c024d7d247d23d
 						<div class="form-group s-form-group col-md-5">
 							<input type="text" name="college" class="form-control" placeholder="College/ Organization" />
 						</div>

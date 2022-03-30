@@ -50,7 +50,7 @@ const AdminNavbar = (props) => {
 			<ResetPassword closeModal={() => setShowModal(false)} show={showModal} />
 			<Navbar className="navbar-light p-0 p-md-2 border-bottom" expand="md" id="navbar-main">
 				<Container fluid>
-					<div className="h4 mb-0 text-uppercase d-none d-lg-inline-block">
+					<div className="h4 mb-0 text-uppercase d-none d-md-inline-block">
 						{props.brandText}
 					</div>
 					<Nav className="align-items-center d-none d-md-flex" navbar>
@@ -63,7 +63,7 @@ const AdminNavbar = (props) => {
 											alt="..."
 											src={
 												user?.profilePhoto ||
-												require("../../assets/img/theme/team-1-800x800.jpg")
+												require("../../assets/img/user.png")
 													.default
 											}
 										/>
@@ -84,18 +84,6 @@ const AdminNavbar = (props) => {
 								<DropdownItem to="/profile" tag={Link}>
 									<i className="ni ni-single-02" />
 									<span>My profile</span>
-								</DropdownItem>
-								<DropdownItem to="/profile" tag={Link}>
-									<i className="ni ni-settings-gear-65" />
-									<span>Settings</span>
-								</DropdownItem>
-								<DropdownItem to="/profile" tag={Link}>
-									<i className="ni ni-calendar-grid-58" />
-									<span>Activity</span>
-								</DropdownItem>
-								<DropdownItem to="/profile" tag={Link}>
-									<i className="ni ni-support-16" />
-									<span>Support</span>
 								</DropdownItem>
 								<DropdownItem onClick={handleOpen}>
 									<i className="ni ni-lock-circle-open" />
