@@ -297,7 +297,7 @@
                 </div>
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <input id="EmailinForm" required type="email" name="entry.2086820351" class="form-input-boxes-manual form-control test-dev3" placeholder="Email" >
+                    <input id="EmailinForm" required  type="email"  name="entry.2086820351" class="form-input-boxes-manual form-control test-dev3" placeholder="Email" >
                   </div>
                  <div class="form-group col-md-6">
                     <input id="PhoneinForm" required type="number" name="entry.2128372508" class="form-input-boxes-manual form-control test-dev3" placeholder="Phone Number">
