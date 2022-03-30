@@ -326,12 +326,12 @@
                             <h2 class="pat-heading text-center">TRELL</h2>
                         </div>
                     </div>
-                    <div class=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-3">
-                        <div class="square-holder">
-                            <img alt="" src="ensvee-logo.png" />
-                            <h2 class="pat-heading text-center">ENSVEE</h2>
+                            <div class=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-3">
+                                <div class="square-holder">
+                                    <img alt="" src="ensvee-logo.png" />
+                                    <h2 class="pat-heading text-center">ENSVEE</h2>
+                                </div>
                         </div>
-                    </div>
                 </div>
             </strong>
         </div>
@@ -636,7 +636,7 @@
                         <h1 class="footerh1">USICT ACM Student Chapter</h1>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi non
                             pariatur numquam animi nam at impedit odit nisi.</p>
-                        <div class="social-buttons">
+                            <div class="social-buttons">
                             <!-- facebook  Button -->
                             <a href="http://www.facebook.com" target="blank" class="social-margin">
                                 <div class="social-icon facebook">
@@ -675,7 +675,7 @@
                                 </div>
                             </a>
                         </div>
-                    </div>
+                        </div>
                 </div>
                 <div class="empty-box col-md-2 col-sm-2 col-xs-2"></div>
                 <div class="col-md-2 col-sm-2 col-xs-2">
@@ -687,24 +687,7 @@
                         <li class='footli'>FAQ</li>
                     </ul>
                 </div>
-                <div class="col-md-2 col-sm-2 col-xs-2">
-                    <h5 class="heading_footer">Industries</h5>
-                    <ul class="card-text">
-                        <li class='footli'>Finance</li>
-                        <li class='footli'>Public Sector</li>
-                        <li class='footli'>Smart Office</li>
-                        <li class='footli'>Retail</li>
-                    </ul>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-2">
-                    <h5 class="heading_footer">Company</h5>
-                    <ul class="card-text">
-                        <li class='footli'>About Us</li>
-                        <li class='footli'>Blog</li>
-                        <li class='footli'>Contact</li>
-                        <li class='footli'>Join Us</li>
-                    </ul>
-                </div>
+                     
             </div>
             <div class="divider-f mb-4"> </div>
 

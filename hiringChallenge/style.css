@@ -1289,7 +1289,7 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 .prize_item {
-  height: 200px;
+  height: 280px;
   background-color: #00d0ff;
   display: flex;
   flex-direction: column;
@@ -1315,8 +1315,8 @@ img {
   overflow-y: hidden;
   border: 3px solid #faee45;
   align-items: center;
-  height: 220px;
-  width: 200px;
+  height: 300px;
+  width: 340px;
   border-radius: 10px;
   /* display:flex; */
   /* align-items: center; */
@@ -1355,7 +1355,7 @@ img {
 }
 
 .pat-heading {
-  padding-top: 15px;
+  padding-top: 20px;
   font-weight: bold;
   color: grey;
 }
