@@ -1148,30 +1148,31 @@ img {
 
 } */
 
-.timeline::before,
-.timeline::after {
+.timeline-section::before,
+.timeline-section::after {
   position: absolute;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.timeline {
+.timeline-section {
   position: relative;
   background-color: #000000;
   font-family: "Source Sans Pro";
   color: #08b439;
 }
 
-.timeline p {
+.timeline-section p {
   color: #6c757d;
+  
 }
 
-.timeline p a {
+.timeline-section p a {
   color: rgb(41, 41, 252);
 }
 
-.timeline p a:hover {
+.timeline-section p a:hover {
   color: #ffff00;
 }
 
@@ -1179,25 +1180,34 @@ img {
   color: #ffff00;
 }
 
-.timeline h1 {
+.timeline-section h1 {
   text-align: center;
   font-size: 40px;
 }
 
-.timeline ul {
+.timeline-section ul {
   padding: 50px 0;
 }
 
-.timeline ul li {
+.timeline-section ul li {
   position: relative;
   list-style-type: none;
-  width: 6px;
-  background-color: #ffff00;
+  width: 60%;
+  /* background-color: #ffff00; */
   margin: 0 auto;
   padding-top: 50px;
 }
 
-.timeline ul li::after {
+.timeline-section ul li div {
+  position: relative;
+  width: 400px;
+  padding: 15px;
+  border-radius: 5px;
+  bottom: 0;
+  background: rgba(42, 50, 113, 0.28);
+}
+
+.timeline-section ul li::after {
   background: #ffff00;
   content: "";
   width: 25px;
@@ -1209,58 +1219,53 @@ img {
   bottom: 0;
 }
 
-.timeline ul li div {
-  position: relative;
-  width: 400px;
-  padding: 15px;
-  border-radius: 5px;
-  bottom: 0;
-  background: rgba(42, 50, 113, 0.28);
+.timeline-section ul li:nth-child(odd) div {
+  left: 500px;
 }
 
-.timeline ul li:nth-child(odd) div {
+/* .timeline-section ul li:nth-child(even) div {
   left: 45px;
-}
+} */
 
-.timeline ul li:nth-child(even) div {
-  left: -445px;
-}
-
-.timeline time {
+.timeline-section time {
   font-weight: bold;
   font-size: 25px;
   display: block;
   margin-bottom: 10px;
-  /* color: #6C757D; */
+  color: #08b439;
 }
 
-.timeline ul li div {
+.timeline-section time:hover{
+  color: ;
+}
+
+.timeline-section ul li div {
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s ease-in-out;
+  background-color: #ffff00;
 }
 
-.timeline ul li:nth-child(odd) div {
+.timeline-section ul li:nth-child(odd) div {
   transform: translate3d(200px, 0, 0);
 }
 
-.timeline ul li:nth-child(even) div {
+.timeline-section ul li:nth-child(even) div {
   transform: translate3d(-200px, 0, 0);
 }
 
-.timeline ul li.show div {
+.timeline-section .timeline-li.show div {
   transform: none;
   visibility: visible;
   opacity: 1;
 }
 
 @media screen and (max-width: 900px) {
-  .timeline ul li div {
+  .timeline-section .timeline ul li div {
     width: 250px;
   }
-  .timeline ul li:nth-child(even) div {
+  .timeline-section .timeline ul li:nth-child(even) div {
     left: -289px;
-    /*250+45-6*/
   }
 }
 
