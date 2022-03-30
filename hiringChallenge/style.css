@@ -1508,6 +1508,15 @@ img {
   width: 80%;
   margin: 2rem 10%;
 }
+
+/* Set the size of the div element that contains the map */
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
 #faqs {
 }
 .line-heading {
@@ -1626,6 +1635,10 @@ img {
   font-weight: bold;
   color: rgb(189, 196, 203);
 } */
+
+.map {
+  width: 100em;
+}
 
 #container-footer {
   background-color: #000000;
