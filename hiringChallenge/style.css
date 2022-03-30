@@ -28,6 +28,8 @@ a {
   display: flex;
   top: 190px;
   flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   margin-top: 20vh;
   text-align: center;
   align-items: center;
@@ -611,6 +613,7 @@ canvas {
   margin: 40px 30px;
   transition: 0.5s;
   overflow-y: hidden;
+  border-radius: 10px;
 }
 
 .container-about .box::before {
@@ -638,7 +641,7 @@ canvas {
   border-radius: 8px;
   transform: skewX(15deg);
   transition: 0.5s;
-  filter: blur(30px);
+  filter: blur(15px);
 }
 
 .container-about .box:hover:before,
@@ -1410,8 +1413,8 @@ img {
   text-align: justify;
   border-radius: 10px;
   box-shadow: rgba(246, 250, 32, 0.4) -5px 5px,
-    rgba(247, 250, 96, 0.3) -10px 10px, rgba(252, 234, 78, 0.2) -15px 15px,
-    rgba(240, 227, 46, 0.1) -20px 20px, rgba(240, 237, 46, 0.05) -25px 25px;
+    rgba(247, 250, 96, 0.3) -7px 7px, rgba(252, 234, 78, 0.2) -8px 8px,
+    rgba(240, 227, 46, 0.1) -8px 8px, rgba(240, 237, 46, 0.05) -8px 8px;
 }
 
 .prize_item:hover {
@@ -1437,8 +1440,8 @@ img {
   background-color: #000000;
   /* min-height:200px */
   box-shadow: rgba(246, 250, 32, 0.4) -5px 5px,
-    rgba(247, 250, 96, 0.3) -10px 10px, rgba(252, 234, 78, 0.2) -15px 15px,
-    rgba(240, 227, 46, 0.1) -20px 20px, rgba(240, 237, 46, 0.05) -25px 25px;
+    rgba(247, 250, 96, 0.3) -5px 5px, rgba(252, 234, 78, 0.2) -5px 5px,
+    rgba(240, 227, 46, 0.1) -5px 5px, rgba(240, 237, 46, 0.05) -5px 5px;
 }
 
 .square-holder img {
@@ -1813,7 +1816,7 @@ img {
   margin: 80px 0 60px 7%;
   white-space: nowrap;
   font-size: 34px;
-  text-shadow: 4px 4px 4px rgb(251, 253, 121);
+  text-shadow: 1.5px 1.5px 1.5px rgb(251, 253, 121);
 }
 .line-heading:after {
   content: "";
@@ -2177,3 +2180,25 @@ a:active {
 }
 
 /******************************************************* End of FOOTER *******************************************************/
+
+/********************** heading fonts *******************/
+/*
+.fonts {
+  font-family: 'Cinzel', serif;
+  color: #F2AA4CFF;
+  font-size: 3vw;
+  font-weight: 500;
+  letter-spacing: 0.002vw;
+}
+*/
+.fonts{
+  color: #fff;
+  text-shadow: 0 0 12px #ff005b;
+  z-index: -2;
+  opacity: 2;
+  font-family: 'Rokkitt', serif;
+  font-size: 3.4vw;
+  font-weight: 400;
+}
+
+

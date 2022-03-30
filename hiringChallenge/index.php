@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="icon" href="../assets/images/acm1.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,600,700,900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Hackathon</title>
@@ -345,7 +349,7 @@
     <!--****************************************************** PRIZE SECTION *******************************************************-->
 
     <section id="prize" class="fluid-container pt-5 pb-5">
-        <h1 class="mb-sm text-center prize_heading"><code>#include"prizes"</code></h1>
+        <h1 class="mb-sm text-center prize_heading fonts"> #require_once "Prizes" </h1>
         <div class="prize_parent">
             <div class="prize_item">
                 <img src="https://www.wbwn.com/wp-content/uploads/sites/380/2015/03/ACM-1427305270_stretch.png" alt="">
@@ -369,7 +373,7 @@
     <section id="partner">
 
         <div class="container-partner">
-            <h2 class="mb-sm text-center heading-partner">Our <strong>Partners</strong></h2>
+            <h2 class="mb-sm text-center heading-partner fonts "> #include < Our Partners ></h2>
             <strong>
                 <div class="row d-flex justify-content-center">
                     <div class=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-3">
@@ -394,7 +398,7 @@
     <!--***************************************************** TEAM **********************************************************-->
     <section id="team-section">
         <div class="container-team">
-            <h1 class="heading-team">Web Team</h1>
+            <h1 class="heading-team fonts"> #include < Web Team ></h1>
             <!-- <div class="hr">
             <hr>
         </div> -->
@@ -831,7 +835,7 @@
             <div class="divider-f mb-4"> </div>
 
             <div class="copyright-footer">
-                <p id="copyright" class="">© Conceptualized,Designed and Developed by Office Bearers
+                <p id="copyright" class="">© Conceptualized, Designed and Developed by Office Bearers
                     of ACM USICT chapter.
                 </p>
             </div>
