@@ -184,7 +184,7 @@
 	</script>
 	<!-- ******************************blog section end***************************************** -->
 	<!-- *******************************************our team************* -->
-	<section class="tag team">
+	<section class="tag teams">
 		<div class="teamhead">
 			<h2 class="my-4 display-4 fw-bolder text-center">Office<span class="text-blue"> Bearers</span></h2>
 		</div>
@@ -491,7 +491,7 @@
 				<a id="meet-the-team-btn" href="./team.php" class="about-button team-mobile-btn">Meet the Team</a>
 			</div>
 		</div>
-		</div>
+		<!-- </div> -->
 	</section>
 	<!-- *****************************our team end************************************************** -->
 	<!-- socail bar******************************* -->
