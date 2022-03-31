@@ -191,7 +191,7 @@
 		<!-- <div class="our-team-area my-5">
 			<div class="container">
 				<div class="row margin-media">
-					<div class="col-md-4">
+					<div class="col-md-2">
 						<div class="our-team-sir row">
 							<div class="our-team col-lg-4">
 								<div class="our-team-left">
@@ -205,10 +205,32 @@
 							<div class="our-team col-lg-4">
 								<div class="our-team-left">
 									<div class="name">
+										<h5 class="text-center">Dr. Ruchi Sehrawat</h5>
+										<p class="text-center">Branch Mentor, ACM USS</p>
+									</div>
+									<img src="./assets/images/team/ruchi-sehrawat.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="our-team-sir row">
+							<div class="our-team col-lg-4">
+								<div class="our-team-left">
+									<div class="name">
 										<h5 class="text-center">Dr. Rahul Johari</h5>
-										<p class="text-center">Branch Head, ACM USICT</p>
+										<p class="text-center">Branch Mentor, ACM USS</p>
 									</div>
 									<img src="./assets/images/team/rahulsir.jpg" alt="">
+								</div>
+							</div>
+							<div class="our-team col-lg-4">
+								<div class="our-team-left">
+									<div class="name">
+										<h5 class="text-center">Dr. Jaspreeti Singh</h5>
+										<p class="text-center">Branch Mentor, ACM USS</p>
+									</div>
+									<img src="./assets/images/team/jaspreeti-singh.jpg" alt="">
 								</div>
 							</div>
 						</div>
@@ -466,7 +488,7 @@
     </div>
 		<div class="py-3 mt-2 d-flex justify-content-sm-center">
 			<div class="col-lg-2 col-md-4 col mb-2 mt-4 mt-lg-0">
-				<a href="./team.php" class="about-button team-mobile-btn">Meet the Team</a>
+				<a id="meet-the-team-btn" href="./team.php" class="about-button team-mobile-btn">Meet the Team</a>
 			</div>
 		</div>
 		</div>

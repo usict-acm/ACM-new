@@ -11,20 +11,20 @@
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto mr-5">
-            <li class="nav-item active">
-                <a class="nav-link" href="./">Home</a>
+            <li class="nav-item">
+                <a class="nav_link active-navbar" id="home" href="./">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./blogs.php">Blogs</a>
+                <a class="nav-link" id="blogs" href="./blogs.php">Blogs</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./events.php">Events</a>
+                <a class="nav-link" id="events" href="./events.php">Events</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./benefits.php">Why Join Us?</a>
+                <a class="nav-link" id="why_join_us" href="./benefits.php">Why Join Us?</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./clubs.php">Clubs</a>
+                <a class="nav-link" id="clubs" href="./clubs.php">Clubs</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="./collab.php">Sponsors</a>
