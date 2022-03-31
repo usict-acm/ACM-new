@@ -24,7 +24,7 @@
   }
   .profile-card:hover {
     border-radius: 10px;
-    height: 220px;
+    height: 240px;
   }
   .profile-card .img {
     margin: 0;
@@ -49,7 +49,7 @@
   }
   .caption {
     text-align: center;
-    transform: translateY(-80px);
+    transform: translateY(-100px);
     opacity: 0;
     transition: 0.6s;
   }
@@ -57,23 +57,24 @@
     opacity: 1;
   }
   .caption h3 {
-    font-size: 18px;
+    font-size: 17px;
+    font-weight: bold;
     font-family: sans-serif;
   }
   .caption p {
     font-size: 13px;
-    color: #0c52a1;
+    color: #ffffff;
     font-family: sans-serif;
     margin: 2px 0 9px 0;
   }
   .caption .social-links a {
-    color: #333;
+    color: rgb(7, 7, 7);
     margin-right: 15px;
     font-size: 18px;
     transition: 0.6s;
   }
   .social-links a:hover {
-    color: #0c52a1;
+    color: #fbfbff;
   }
   
   .gap {

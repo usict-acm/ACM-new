@@ -333,7 +333,7 @@
           <h3>Prof. Pravin Chandra</h3>
           <p>Dean, USICT</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
           </div>
@@ -349,13 +349,13 @@
           <h3>Dr. Ruchi Sehrawat</h3>
           <p>Branch Mentor, ACM USS</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
           </div>
         </div>
       </div>
-      <div class="gap"></div>
+      <!-- <div class="gap"></div> -->
       <div class="profile-card">
         <div class="img">
           <img
@@ -366,7 +366,7 @@
           <h3>Dr. Rahul Johari</h3>
           <p>Branch Mentor, ACM USS</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
           </div>
@@ -382,7 +382,7 @@
           <h3>Dr. Jaspreeti Singh</h3>
           <p>Branch Mentor, ACM USS</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
           </div>
@@ -398,7 +398,7 @@
           <h3>Harsh Goyal</h3>
           <p>Chair</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
           </div>
@@ -414,7 +414,7 @@
           <h3>Anuj Talwar</h3>
           <p>Vice Chair</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
           </div>
@@ -430,13 +430,13 @@
           <h3>Tarun</h3>
           <p>Secretary</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
           </div>
         </div>
       </div>
-      <div class="gap"></div>
+      <!-- <div class="gap"></div> -->
       <div class="profile-card">
         <div class="img">
           <img
@@ -447,7 +447,7 @@
           <h3>Karan Deep Singh</h3>
           <p>Treasurer</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
           </div>
@@ -463,7 +463,7 @@
           <h3>Moulik Agrawal</h3>
           <p>Web Chair</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
           </div>
@@ -479,7 +479,7 @@
           <h3>Anurag Parashar</h3>
           <p>Membership Chair</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
           </div>
