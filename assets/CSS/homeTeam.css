@@ -1,8 +1,8 @@
   .team {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100vh;
+    /* width: 100%;
+    height: 80vh; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -15,12 +15,12 @@
     font-family: sans-serif;
     width: 180px;
     height: 180px;
-    background: #fff;
+    background: #46aff5;
     padding: 30px;
     border-radius: 50%;
-    box-shadow: 0 0 22px #3336;
+    box-shadow: 0 0 22px rgba(71, 71, 71, 0.4);
     transition: 0.6s;
-    margin: 0 25px;
+    margin: 25px 25px;
   }
   .profile-card:hover {
     border-radius: 10px;
