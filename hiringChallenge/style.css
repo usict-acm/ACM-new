@@ -473,7 +473,8 @@ canvas {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 40px;
+  margin-top: 2vh;
+  height: 12vh;
 }
 .about-section {
   display: flex;
@@ -784,9 +785,6 @@ canvas {
   width: 70vw;
 }
 
-#about_heading {
-  height: 50vh;
-}
 /* 
 #about{
   display: flex;
