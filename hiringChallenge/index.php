@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="icon" href="../assets/images/acm1.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,600,700,900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Hackathon</title>
@@ -32,7 +36,7 @@
         <canvas></canvas>
         <div class="home-text">
             <h1 class="vibrate-1" id="mainhead">TRELLATHON</h1>
-            <div class="home-text vibrate-1">
+            <div class="home-text">
                 <h1>TRELLATHON</h1>
                 <h2>4-HOUR HACKATHON</h2>
                 <h2>9TH MARCH 2021</h2>
@@ -44,42 +48,44 @@
     <!-- End of Header -->
     <!-- Start of Responsive Nav -->
 
-    <nav id="nav-items-res" class="navbar navbar-light bg-light fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Offcanvas navbar</a>
+    <nav id="nav-items-res" class="navbar navbar-light  fixed-top">
+        <div class="container-fluid" >
+        <img src="../assets/images/acm1.png" alt="" class="logo-acm">
+
+        <a class="logo-navbar" id="res-hack"href="">Hackathon</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Take a Look</h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown">
+                <li class="nav-item"><a href="#about" target="_parent" class="link link-theme link-arrow">About</a></li>
+                <li class="nav-item"><a href="#timeline" class="link link-theme link-arrow">Timeline</a></li>
+                <li class="nav-item"><a href="#partner" class="link link-theme link-arrow">Partner</a></li>
+                <li class="nav-item"><a href="#team-section" class="link link-theme link-arrow">Team</a></li>
+                <li class="nav-item"><a href="#faq" class="link link-theme link-arrow">FAQ</a></li>
+                <li class="nav-item"><a href="#contact" class="link link-theme link-arrow">Contact us</a></li>
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Dropdown
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
+                            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown"> -->
+                                <!-- <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li> -->
+                                <!-- <li>
                                     <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
+                                </li> -->
+                                <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                            <!-- </ul>
+                        </li> -->
                     </ul>
-                    <form class="d-flex">
+                    <!-- <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button class="btn btn-outline-success" type="submit">Search</button> -->
                     </form>
                 </div>
             </div>
@@ -271,51 +277,51 @@
 
 	</div>
 </div> -->
-
+    <div class="timeline-section">
     <div class="timeline" id="timeline">
         <h1 class="neon-text">Timeline</h1>
         <h1 class="timeline-trellathon neon-text">TRELLATHON</h1>
         <div>
             <ul>
-                <li>
-                    <div class="timeline-li">
+                <li class="timeline-li">
+                    <div>
                         <time>9th - 20th March 2021
                             REGISTRATION</time>
                         <p> <a href="#">Register Now</a>
                         </p>
                     </div>
                 </li>
-                <li>
-                    <div class="timeline-li">
+                <li  class="timeline-li">
+                    <div>
                         <time>16th March 2021
                             PROBLEM STATEMENT RELEASE</time>
                         <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
       </p> -->
                     </div>
                 </li>
-                <li>
-                    <div class="timeline-li">
+                <li  class="timeline-li">
+                    <div>
                         <time>16th - 20th March 2021
                             IDEATION ROUND</time>
                         <p>Draft your solution for the problem statement of Trell.</p>
                     </div>
                 </li>
-                <li>
-                    <div class="timeline-li">
+                <li  class="timeline-li">
+                    <div>
                         <time>22nd March 2021
                             RESULTS OF IDEATION ROUND</time>
                         <p>Shortlisted teams will move forward to the next round.</p>
                     </div>
                 </li>
-                <li>
-                    <div class="timeline-li">
+                <li class="timeline-li">
+                    <div>
                         <time>23rd March 2021
                             PROTOTYPING ROUND</time>
                         <p>Develop a prototype for the solution of the ideation round.</p>
                     </div>
                 </li>
-                <li>
-                    <div class="timeline-li">
+                <li class="timeline-li">
+                    <div>
                         <time>24th March 2021
                             PITCH DAY</time>
                         <p>Pitch your prototype to Trell and Judges.</p>
@@ -324,6 +330,7 @@
             </ul>
 
         </div>
+    </div>
     </div>
 
 
@@ -342,7 +349,7 @@
     <!--****************************************************** PRIZE SECTION *******************************************************-->
 
     <section id="prize" class="fluid-container pt-5 pb-5">
-        <h1 class="mb-sm text-center prize_heading"><code>#include"prizes"</code></h1>
+        <h1 class="mb-sm text-center prize_heading fonts"> #require_once "Prizes" </h1>
         <div class="prize_parent">
             <div class="prize_item">
                 <img src="https://www.wbwn.com/wp-content/uploads/sites/380/2015/03/ACM-1427305270_stretch.png" alt="">
@@ -366,7 +373,7 @@
     <section id="partner">
 
         <div class="container-partner">
-            <h2 class="mb-sm text-center heading-partner">Our <strong>Partners</strong></h2>
+            <h2 class="mb-sm text-center heading-partner fonts "> #include < Our Partners ></h2>
             <strong>
                 <div class="row d-flex justify-content-center">
                     <div class=" d-flex justify-content-center col-sm-6 col-md-4 col-lg-3">
@@ -391,21 +398,21 @@
     <!--***************************************************** TEAM **********************************************************-->
     <section id="team-section">
         <div class="container-team">
-            <h1 class="heading-team">Web Team</h1>
+            <h1 class="heading-team fonts"> #include < Web Team ></h1>
             <!-- <div class="hr">
             <hr>
         </div> -->
 
             <div class="row">
-                <div class="col-md-2 col-sm-6 box-1">
+                <div class="col-md-2 col-sm-6">
                     <div class="our-team">
-                        <div class="pic"><img class="image" src="image4-modified.png" alt=""></div>
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
                         <h3 class="title">Williamson</h3>
                         <span class="post">Web Developer</span>
                         <ul class="icon">
                             <li><a href="#" class="fab fa-twitter"></a></li>
                             <li><a href="#" class="fab fa-linkedin"></a></li>
-                            <li><a href="#" class="fab fa-instagram"></a></li>
+                            <li><a href="#" class="fa-brands fa-instagram"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -478,9 +485,9 @@
             </div>
 
             <div class="row">
-                <div class="col-md-2 col-sm-6 box-1">
+                <div class="col-md-2 col-sm-6 ">
                     <div class="our-team">
-                        <div class="pic"><img class="image" src="image4-modified.png" alt=""></div>
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
                         <h3 class="title">Williamson</h3>
                         <span class="post">Web Developer</span>
                         <ul class="icon">
@@ -557,7 +564,87 @@
                 </div>
 
             </div>
+            
 
+
+            <div class="row">
+                <div class="col-md-2 col-sm-6 ">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Williamson</h3>
+                        <span class="post">Web Developer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
+                        <h3 class="title">Kristiana</h3>
+                        <span class="post">Web Designer</span>
+                        <ul class="icon">
+                            <li><a href="#" class="fab fa-twitter"></a></li>
+                            <li><a href="#" class="fab fa-linkedin"></a></li>
+                            <li><a href="#" class="fab fa-instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
 
         </div>
     </section>
@@ -748,7 +835,7 @@
             <div class="divider-f mb-4"> </div>
 
             <div class="copyright-footer">
-                <p id="copyright" class="">© Conceptualized,Designed and Developed by Office Bearers
+                <p id="copyright" class="">© Conceptualized, Designed and Developed by Office Bearers
                     of ACM USICT chapter.
                 </p>
             </div>
@@ -762,6 +849,7 @@
 
     <script src="https://kit.fontawesome.com/833875f75e.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="home.js"></script>
 </body>
 
