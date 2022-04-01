@@ -326,7 +326,7 @@
       <div class="profile-card">
         <div class="img">
           <img
-            src="./assets/images/team/deanSir.jpeg"
+            src="./assets/images/team/deanSirSquared.jpeg"
           />
         </div>
         <div class="caption">
@@ -424,7 +424,7 @@
       <div class="profile-card">
         <div class="img">
           <img
-            src="./assets/images/team/Tarun.jpg"
+            src="./assets/images/team/TarunSquared.jpg"
           />
         </div>
         <div class="caption">
@@ -441,7 +441,7 @@
       <div class="profile-card">
         <div class="img">
           <img
-            src="./assets/images/team/Karan.jpeg"
+            src="./assets/images/team/KaranSquared.jpeg"
           />
         </div>
         <div class="caption">
@@ -457,7 +457,7 @@
       <div class="profile-card">
         <div class="img">
           <img
-            src="./assets/images/team/Moulik.jpg"
+            src="./assets/images/team/MoulikSquared.jpg"
           />
         </div>
         <div class="caption">
