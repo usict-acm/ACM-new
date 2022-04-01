@@ -356,7 +356,7 @@
         </div>
       </div>
       <!-- <div class="gap"></div> -->
-      <div class="profile-card">
+	  <div class="profile-card">
         <div class="img">
           <img
             src="./assets/images/team/rahulsir.jpg"
@@ -388,6 +388,7 @@
           </div>
         </div>
       </div>
+		<div class="secondLine">
       <div class="profile-card">
         <div class="img">
           <img
@@ -485,6 +486,7 @@
           </div>
         </div>
       </div>
+		</div>
     </div>
 		<div class="py-3 mt-2 d-flex justify-content-sm-center">
 			<div class="col-lg-2 col-md-4 col mb-2 mt-4 mt-lg-0">
