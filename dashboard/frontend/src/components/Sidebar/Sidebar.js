@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { NavLink as NavLinkRRD, Link } from "react-router-dom";
 // nodejs library to set properties for components
 import { PropTypes } from "prop-types";
+import Styles from './Sidebar.module.css'
 
 // reactstrap components
 import {
@@ -100,7 +101,7 @@ const Sidebar = (props) => {
         <NavbarBrand className="pt-0" {...navbarBrandProps}>
           <img
             alt="logo"
-            className="navbar-brand-img"
+            className={Styles.AcmLogo}
             src={require("../../assets/img/brand/acm1.png").default}
           />
         </NavbarBrand>
