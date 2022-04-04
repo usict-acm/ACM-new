@@ -332,11 +332,6 @@
         <div class="caption">
           <h3>Prof. Pravin Chandra</h3>
           <p>Dean, USICT</p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-          </div>
         </div>
       </div>
       <div class="profile-card">
@@ -348,11 +343,6 @@
         <div class="caption">
           <h3>Dr. Ruchi Sehrawat</h3>
           <p>Branch Mentor, ACM USS</p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-          </div>
         </div>
       </div>
       <!-- <div class="gap"></div> -->
@@ -365,11 +355,6 @@
         <div class="caption">
           <h3>Dr. Rahul Johari</h3>
           <p>Branch Mentor, ACM USS</p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-          </div>
         </div>
       </div>
       <div class="profile-card">
@@ -381,11 +366,6 @@
         <div class="caption">
           <h3>Dr. Jaspreeti Singh</h3>
           <p>Branch Mentor, ACM USS</p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-          </div>
         </div>
       </div>
 		<div class="secondLine">
@@ -399,9 +379,7 @@
           <h3>Harsh Goyal</h3>
           <p>Chair</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/harsh-goyal-195255b9/" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>
@@ -415,9 +393,7 @@
           <h3>Anuj Talwar</h3>
           <p>Vice Chair</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/anuj-talwar/" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>
@@ -431,9 +407,7 @@
           <h3>Tarun</h3>
           <p>Secretary</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/tarun-037091194" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>
@@ -448,9 +422,7 @@
           <h3>Karan Deep Singh</h3>
           <p>Treasurer</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/karan-deep/" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>
@@ -464,9 +436,7 @@
           <h3>Moulik Agrawal</h3>
           <p>Web Chair</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/moulik-agrawal/" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>
@@ -480,9 +450,7 @@
           <h3>Anurag Parashar</h3>
           <p>Membership Chair</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/anurag-parashar/" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>
