@@ -444,7 +444,7 @@
 
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="container carousel-inner">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active"  data-bs-interval="2000" >
                         <div class="row">
                             <div class="col-md-2 col-sm-6">
                                 <div class="our-team">
@@ -526,7 +526,7 @@
 
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item"  data-bs-interval="2000">
                         <div class="row">
                             <div class="col-md-2 col-sm-6">
                                 <div class="our-team">
@@ -608,7 +608,7 @@
 
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item"  data-bs-interval="2000">
                         <div class="row">
                             <div class="col-md-2 col-sm-6">
                                 <div class="our-team">
