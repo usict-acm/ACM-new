@@ -409,7 +409,7 @@
     <section id="partner">
 
         <div class="container-partner">
-            <h2 class="mb-sm text-center heading-partner fonts "> #include < Our Partners>
+            <h2 class="mb-sm text-center heading-partner fonts "> #include < Our Partners >
             </h2>
             <strong>
                 <div class="row d-flex justify-content-center">
@@ -435,7 +435,7 @@
     <!--***************************************************** TEAM **********************************************************-->
     <section id="team-section">
         <div class="container-team">
-            <h1 class="heading-team fonts"> #include < Web Team>
+            <h1 class="heading-team fonts"> #include < Web Team >
             </h1>
             <!-- <div class="hr">
             <hr>
