@@ -277,7 +277,13 @@
 
 	</div>
 </div> -->
+    <script>
+        let height = document.querySelector(".liTimeline").offsetHeight;
+        console.log(height);
+    </script>
+
     <div class="timeline-section">
+<<<<<<< HEAD
         <div class="timeline" id="timeline">
             <h1 class="neon-text">Timeline</h1>
             <h1 class="timeline-trellathon neon-text">TRELLATHON</h1>
@@ -296,6 +302,36 @@
                             <time>16th March 2021
                                 PROBLEM STATEMENT RELEASE</time>
                             <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+=======
+    <div class="timeline" id="timeline">
+        <h1 class="neon-text">Timeline</h1>
+        <h1 class="timeline-trellathon neon-text fontWeight">TRELLATHON</h1>
+        <div class="liTimeline">
+            <ul>
+                <!-- <hr class="hrTimeline"> -->
+                <!-- <div class="hrTimeline" style=" 
+                                                position: absolute;
+                                                width: 1%;
+                                                height: 200px;
+                                                align-items: center;
+                                                margin: auto;
+                                                margin-left: 49.5%;
+                                                background-color: #ffff00;">
+                </div> -->
+                <li class="timeline-li">
+                    <div>
+                        <time>9th - 20th March 2021
+                            REGISTRATION</time>
+                        <p> <a href="#">Register Now</a>
+                        </p>
+                    </div>
+                </li>
+                <li  class="timeline-li">
+                    <div>
+                        <time>16th March 2021
+                            PROBLEM STATEMENT RELEASE</time>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+>>>>>>> 4133204ed3d8c217d751157bfc67a4ad3eca85b5
       </p> -->
                         </div>
                     </li>
@@ -728,10 +764,7 @@
         <div class="container-contact" id="contact">
             <div class="content">
                 <div class="left-side">
-                    <div class="address details">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="topic">Address</div>
-                        <div class="text-one">Usict Delhi Sector-14</div>
+                    <div class="address details">       
                         <style>
                             #frame {
                                 border: 3px dotted;
@@ -741,6 +774,12 @@
                             }
                         </style>
                         <iframe id="frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.203073386905!2d77.01843216508175!3d28.59368408243313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1aafdb891567%3A0x10d270731c930a87!2sGuru%20Gobind%20Singh%20Indraprastha%20University!5e0!3m2!1sen!2sin!4v1648644072880!5m2!1sen!2sin" width="250" height="250" style="border:solid 3px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class = "phone-email" style="display: flex">
+                    <div class = "address details">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="topic">Address</div>
+                        <div class="text-one">Usict Delhi Sector-14</div>
                     </div>
                     <div class="phone details">
                         <i class="fas fa-phone-alt"></i>
@@ -752,6 +791,7 @@
                         <i class="fas fa-envelope"></i>
                         <div class="topic">Email</div>
                         <div class="text-two">info@usict.acm.org</div>
+                    </div>
                     </div>
                 </div>
                 <div class="right-side">
