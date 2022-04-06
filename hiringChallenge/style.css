@@ -2192,10 +2192,19 @@ a:active {
 */
 .fonts {
   color: #fff;
-  text-shadow: 0 0 12px #ff005b;
+  text-shadow: 0 0 22px #36ed29;
   z-index: -2;
   opacity: 2;
   font-family: "Rokkitt", serif;
   font-size: 3.3vw;
-  font-weight: 400;
+  font-weight: 450;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+#timeline
+{
+  text-align: center;
 }

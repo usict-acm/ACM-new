@@ -283,10 +283,8 @@
     </script>
 
     <div class="timeline-section">
-<<<<<<< HEAD
         <div class="timeline" id="timeline">
-            <h1 class="neon-text">Timeline</h1>
-            <h1 class="timeline-trellathon neon-text">TRELLATHON</h1>
+            <h2 class="fonts"> #include < Timeline > </h2>
             <div>
                 <ul>
                     <li class="timeline-li">
@@ -302,36 +300,6 @@
                             <time>16th March 2021
                                 PROBLEM STATEMENT RELEASE</time>
                             <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-=======
-    <div class="timeline" id="timeline">
-        <h1 class="neon-text">Timeline</h1>
-        <h1 class="timeline-trellathon neon-text fontWeight">TRELLATHON</h1>
-        <div class="liTimeline">
-            <ul>
-                <!-- <hr class="hrTimeline"> -->
-                <!-- <div class="hrTimeline" style=" 
-                                                position: absolute;
-                                                width: 1%;
-                                                height: 200px;
-                                                align-items: center;
-                                                margin: auto;
-                                                margin-left: 49.5%;
-                                                background-color: #ffff00;">
-                </div> -->
-                <li class="timeline-li">
-                    <div>
-                        <time>9th - 20th March 2021
-                            REGISTRATION</time>
-                        <p> <a href="#">Register Now</a>
-                        </p>
-                    </div>
-                </li>
-                <li  class="timeline-li">
-                    <div>
-                        <time>16th March 2021
-                            PROBLEM STATEMENT RELEASE</time>
-                        <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
->>>>>>> 4133204ed3d8c217d751157bfc67a4ad3eca85b5
       </p> -->
                         </div>
                     </li>
