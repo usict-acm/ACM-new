@@ -8,7 +8,7 @@
 	?>
 	<title>GGSIP University USS ACM Student Chapter</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
-	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" /> -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
 	<link rel="stylesheet" href="./assets/CSS/newStyle.css" />
 	<link rel="stylesheet" href="./assets/CSS/header.css">
 	<link rel="stylesheet" href="./assets/CSS/footer.css">
@@ -184,7 +184,7 @@
 	</script>
 	<!-- ******************************blog section end***************************************** -->
 	<!-- *******************************************our team************* -->
-	<section class="tag teams">
+	<section class="tag container-fluid">
 		<div class="">
 			<h2 class="my-4 display-4 fw-bolder text-center">Office<span class="text-blue"> Bearers</span></h2>
 		</div>
@@ -322,8 +322,9 @@
 				</div>
 			</div>
 		</div> -->
-	<div class="team">
-      <div class="profile-card">
+	 <!-- <div class="team"> -->
+	 <div class="row justify-content-center">
+      <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
             src="./assets/images/team/deanSirSquared.jpeg"
@@ -334,7 +335,7 @@
           <p>Dean, USICT</p>
         </div>
       </div>
-      <div class="profile-card">
+      <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
             src="./assets/images/team/ruchi-sehrawat.jpg"
@@ -346,7 +347,7 @@
         </div>
       </div>
       <!-- <div class="gap"></div> -->
-	  <div class="profile-card">
+	  <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
             src="./assets/images/team/rahulsir.jpg"
@@ -357,7 +358,7 @@
           <p>Branch Mentor, ACM USS</p>
         </div>
       </div>
-      <div class="profile-card">
+      <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
             src="./assets/images/team/jaspreeti-singh.jpg"
@@ -368,8 +369,12 @@
           <p>Branch Mentor, ACM USS</p>
         </div>
       </div>
-		<div class="secondLine">
-      <div class="profile-card">
+	 </div>
+
+
+
+	 <div class="row justify-content-center">
+      <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
             src="./assets/images/team/harshGoyal.png"
@@ -383,7 +388,7 @@
           </div>
         </div>
       </div>
-      <div class="profile-card">
+      <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
             src="./assets/images/team/Anuj.jpg"
@@ -397,7 +402,7 @@
           </div>
         </div>
       </div>
-      <div class="profile-card">
+      <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
             src="./assets/images/team/TarunSquared.jpg"
@@ -411,8 +416,8 @@
           </div>
         </div>
       </div>
-      <!-- <div class="gap"></div> -->
-      <div class="profile-card">
+      
+      <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
             src="./assets/images/team/KaranSquared.jpeg"
@@ -426,7 +431,7 @@
           </div>
         </div>
       </div>
-      <div class="profile-card">
+      <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
             src="./assets/images/team/MoulikSquared.jpg"
@@ -440,7 +445,7 @@
           </div>
         </div>
       </div>
-      <div class="profile-card">
+      <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
             src="./assets/images/team/anurag.jpg"
@@ -454,13 +459,16 @@
           </div>
         </div>
       </div>
-		</div>
-    </div>
+	</div>
+    
+
+
 		<div class="py-3 mt-2 d-flex justify-content-sm-center">
 			<div class="col-lg-2 col-md-4 col mb-2 mt-4 mt-lg-0">
 				<a id="meet-the-team-btn" href="./team.php" class="about-button team-mobile-btn">Meet the Team</a>
-			</div>
+				</div>
 		</div>
+		
 		<!-- </div> -->
 	</section>
 	<!-- *****************************our team end************************************************** -->
