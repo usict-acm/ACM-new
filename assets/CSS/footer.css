@@ -10,7 +10,8 @@ ul {
   padding: 0px;
 }
 
-.footer a {
+.footer a,
+.footer-section a {
   text-decoration: none;
 }
 
