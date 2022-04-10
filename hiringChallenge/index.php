@@ -13,6 +13,203 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- <link href="style.css" rel="stylesheet"> -->
+    
+
+    
+    <style>
+       
+        body {
+            font-family: 'Montserrat', sans-serif;
+            
+        }
+
+        #team {
+            padding: 30px 0;
+            overflow-y: hidden;
+        }
+        .row{
+            overflow-y: hidden;
+        }
+
+        .sec-heading h6 {
+            font-family: 'Allura', cursive;
+            font-size: 65px;
+        }
+
+        .single-box {
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #fff
+        }
+
+        .info-area {
+            padding: 0 20px 45px;
+        }
+
+        .img-area {
+            overflow: hidden;
+            padding: 15px 0 15px;
+        }
+
+        .img-area img {
+            margin: 0 auto;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            max-width: 230px
+        }
+
+        .single-box:hover img {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        .info-area i {
+            display: inline-block;
+            color: #ffb400;
+            margin: 0 4px;
+        }
+
+        .info-area h4 {
+            font-weight: 600
+        }
+
+        .info-area h5 {
+            color: #3b04db;
+            margin: 10px 0 0;
+            font-weight: 600
+        }
+
+        .info-area a {
+            display: inline-block;
+            margin: 25px 0 0;
+            background-color: darkorange;
+            color: #fff;
+            padding: 10px 35px;
+            border-radius: 4px;
+        }
+
+        .team-slider .owl-dots {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -60px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .team-slider button.owl-dot {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            margin: 0 6px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #262626;
+        }
+
+        .team-slider .owl-dot.active {
+            background-color: coral;
+        }
+
+        .move-animation {
+            position: relative;
+            -webkit-animation: move-animation 2s ease-in-out infinite;
+            animation: move-animation 2s ease-in-out infinite;
+        }
+
+        @-webkit-keyframes move-animation {
+            0% {
+                top: 3px;
+            }
+
+            50% {
+                top: -3px;
+            }
+
+            100% {
+                top: 3px;
+            }
+        }
+        #team {
+    padding: 30px 0;
+    height: 120vh;
+}
+.sec-heading h6 {
+    font-family: 'Allura', cursive;
+    font-size: 65px;
+    height: 14vh;
+}
+.info-area h4 {
+    font-weight: 600;
+    color: azure;
+}
+.sec-heading h6 {
+    font-family: 'Allura', cursive;
+    font-size: 65px;
+    height: 14vh;
+    color: azure;
+}
+#team {
+    padding: 30px 0;
+    height: 120vh;
+    background-color: black;
+}
+.img-area {
+    overflow: hidden;
+    padding: 15px 0 15px;
+    background: black;
+}
+.info-area {
+    padding: 0 20px 45px;
+    background-color: black;
+}
+.single-box {
+    /* border: 1px solid black; */
+    /* border-radius: 20px; */
+    overflow: hidden;
+    background-color: #fff;
+}
+.single-box {
+    border: 0px solid black !important;
+     border-radius: 0px !important;
+    overflow: hidden;
+    background-color: #fff;
+}
+.sec-heading h6 {
+    font-family: 'Allura', cursive;
+    font-size: 65px;
+    height: 14vh;
+    color: azure;
+    overflow-y: hidden;
+
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+
+}
+.no-js .owl-carousel, .owl-carousel.owl-loaded {
+    display: block;
+    height: -8vh;
+    overflow-y: hidden !important;
+}
+#trying-team {
+    overflow-y: hidden;
+    height: 90vh;
+}
+#team {
+    padding: 30px 0;
+    height: 90vh;
+    background-color: black;
+}
+    </style>
+   
+   
     <title>Hackathon</title>
 </head>
 
@@ -401,272 +598,249 @@
     <!-- ************************************************* END of Partner ************************************************* -->
 
     <!--***************************************************** TEAM **********************************************************-->
-    <section id="team-section">
-        <div class="container-team">
-            <h1 class="heading-team fonts"> #include < Web Team >
-            </h1>
-            <!-- <div class="hr">
-            <hr>
-        </div> -->
-
-
-            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div class="container carousel-inner">
-                    <div class="carousel-item active"  data-bs-interval="2000" >
-                        <div class="row">
-                            <div class="col-md-2 col-sm-6">
-                                <div class="our-team">
-                                    <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
-                                    <h3 class="title">Williamson</h3>
-                                    <span class="post">Web Developer</span>
-                                    <ul class="icon">
-                                        <li><a href="#" class="fab fa-twitter"></a></li>
-                                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                                        <li><a href="#" class="fa-brands fa-instagram"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-md-2 col-sm-6">
-                                <div class="our-team">
-                                    <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
-                                    <h3 class="title">Kristiana</h3>
-                                    <span class="post">Web Designer</span>
-                                    <ul class="icon">
-                                        <li><a href="#" class="fab fa-twitter"></a></li>
-                                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                                        <li><a href="#" class="fab fa-instagram"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-md-2 col-sm-6">
-                                <div class="our-team">
-                                    <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
-                                    <h3 class="title">Kristiana</h3>
-                                    <span class="post">Web Designer</span>
-                                    <ul class="icon">
-                                        <li><a href="#" class="fab fa-twitter"></a></li>
-                                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                                        <li><a href="#" class="fab fa-instagram"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-md-2 col-sm-6">
-                                <div class="our-team">
-                                    <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
-                                    <h3 class="title">Kristiana</h3>
-                                    <span class="post">Web Designer</span>
-                                    <ul class="icon">
-                                        <li><a href="#" class="fab fa-twitter"></a></li>
-                                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                                        <li><a href="#" class="fab fa-instagram"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-md-2 col-sm-6">
-                                <div class="our-team">
-                                    <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
-                                    <h3 class="title">Kristiana</h3>
-                                    <span class="post">Web Designer</span>
-                                    <ul class="icon">
-                                        <li><a href="#" class="fab fa-twitter"></a></li>
-                                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                                        <li><a href="#" class="fab fa-instagram"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-md-2 col-sm-6">
-                                <div class="our-team">
-                                    <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
-                                    <h3 class="title">Kristiana</h3>
-                                    <span class="post">Web Designer</span>
-                                    <ul class="icon">
-                                        <li><a href="#" class="fab fa-twitter"></a></li>
-                                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                                        <li><a href="#" class="fab fa-instagram"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </div>
+    <section id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                    <div class="sec-heading text-center">
+                        <h6>Team Members</h6>
                     </div>
-                    <div class="carousel-item"  data-bs-interval="2000">
-                        <div class="row">
-                            <div class="col-md-2 col-sm-6">
-                                <div class="our-team">
-                                    <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
-                                    <h3 class="title">PQR</h3>
-                                    <span class="post">Web Developer</span>
-                                    <ul class="icon">
-                                        <li><a href="#" class="fab fa-twitter"></a></li>
-                                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                                        <li><a href="#" class="fa-brands fa-instagram"></a></li>
-                                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-box" id="trying-team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="team-slider owl-carousel">
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/65VQDfjs/1.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
                                 </div>
                             </div>
-
-                            <div class="col-md-2 col-sm-6">
-                                <div class="our-team">
-                                    <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
-                                    <h3 class="title">PQR</h3>
-                                    <span class="post">Web Designer</span>
-                                    <ul class="icon">
-                                        <li><a href="#" class="fab fa-twitter"></a></li>
-                                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                                        <li><a href="#" class="fab fa-instagram"></a></li>
-                                    </ul>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/vmCM14qL/2.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
                                 </div>
                             </div>
-
-                            <div class="col-md-2 col-sm-6">
-                                <div class="our-team">
-                                    <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
-                                    <h3 class="title">PQR</h3>
-                                    <span class="post">Web Designer</span>
-                                    <ul class="icon">
-                                        <li><a href="#" class="fab fa-twitter"></a></li>
-                                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                                        <li><a href="#" class="fab fa-instagram"></a></li>
-                                    </ul>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
                                 </div>
                             </div>
-
-                            <div class="col-md-2 col-sm-6">
-                                <div class="our-team">
-                                    <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
-                                    <h3 class="title">PQR</h3>
-                                    <span class="post">Web Designer</span>
-                                    <ul class="icon">
-                                        <li><a href="#" class="fab fa-twitter"></a></li>
-                                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                                        <li><a href="#" class="fab fa-instagram"></a></li>
-                                    </ul>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/593GTHB7/4.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
                                 </div>
                             </div>
-
-                            <div class="col-md-2 col-sm-6">
-                                <div class="our-team">
-                                    <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
-                                    <h3 class="title">PQR</h3>
-                                    <span class="post">Web Designer</span>
-                                    <ul class="icon">
-                                        <li><a href="#" class="fab fa-twitter"></a></li>
-                                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                                        <li><a href="#" class="fab fa-instagram"></a></li>
-                                    </ul>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/tJCrp53r/5.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
                                 </div>
                             </div>
-
-                            <div class="col-md-2 col-sm-6">
-                                <div class="our-team">
-                                    <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
-                                    <h3 class="title">PQR</h3>
-                                    <span class="post">Web Designer</span>
-                                    <ul class="icon">
-                                        <li><a href="#" class="fab fa-twitter"></a></li>
-                                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                                        <li><a href="#" class="fab fa-instagram"></a></li>
-                                    </ul>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/65VQDfjs/1.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
                                 </div>
                             </div>
-
-                        </div>
-                    </div>
-                    <div class="carousel-item"  data-bs-interval="2000">
-                        <div class="row">
-                            <div class="col-md-2 col-sm-6">
-                                <div class="our-team">
-                                    <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
-                                    <h3 class="title">Williamson</h3>
-                                    <span class="post">Web Developer</span>
-                                    <ul class="icon">
-                                        <li><a href="#" class="fab fa-twitter"></a></li>
-                                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                                        <li><a href="#" class="fa-brands fa-instagram"></a></li>
-                                    </ul>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/vmCM14qL/2.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
                                 </div>
                             </div>
-
-                            <div class="col-md-2 col-sm-6">
-                                <div class="our-team">
-                                    <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
-                                    <h3 class="title">ABC</h3>
-                                    <span class="post">Web Designer</span>
-                                    <ul class="icon">
-                                        <li><a href="#" class="fab fa-twitter"></a></li>
-                                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                                        <li><a href="#" class="fab fa-instagram"></a></li>
-                                    </ul>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
                                 </div>
                             </div>
-
-                            <div class="col-md-2 col-sm-6">
-                                <div class="our-team">
-                                    <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
-                                    <h3 class="title">ABC</h3>
-                                    <span class="post">Web Designer</span>
-                                    <ul class="icon">
-                                        <li><a href="#" class="fab fa-twitter"></a></li>
-                                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                                        <li><a href="#" class="fab fa-instagram"></a></li>
-                                    </ul>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/593GTHB7/4.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
                                 </div>
                             </div>
-
-                            <div class="col-md-2 col-sm-6">
-                                <div class="our-team">
-                                    <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
-                                    <h3 class="title">ABC</h3>
-                                    <span class="post">Web Designer</span>
-                                    <ul class="icon">
-                                        <li><a href="#" class="fab fa-twitter"></a></li>
-                                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                                        <li><a href="#" class="fab fa-instagram"></a></li>
-                                    </ul>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/tJCrp53r/5.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
                                 </div>
                             </div>
-
-                            <div class="col-md-2 col-sm-6">
-                                <div class="our-team">
-                                    <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
-                                    <h3 class="title">ABC</h3>
-                                    <span class="post">Web Designer</span>
-                                    <ul class="icon">
-                                        <li><a href="#" class="fab fa-twitter"></a></li>
-                                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                                        <li><a href="#" class="fab fa-instagram"></a></li>
-                                    </ul>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/65VQDfjs/1.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
                                 </div>
                             </div>
-
-                            <div class="col-md-2 col-sm-6">
-                                <div class="our-team">
-                                    <div class="pic"><img class="image" src="https://image.shutterstock.com/image-vector/cute-kid-teen-boy-show-260nw-1509139481.jpg" alt=""></div>
-                                    <h3 class="title">ABC</h3>
-                                    <span class="post">Web Designer</span>
-                                    <ul class="icon">
-                                        <li><a href="#" class="fab fa-twitter"></a></li>
-                                        <li><a href="#" class="fab fa-linkedin"></a></li>
-                                        <li><a href="#" class="fab fa-instagram"></a></li>
-                                    </ul>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/vmCM14qL/2.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
                                 </div>
                             </div>
-
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/593GTHB7/4.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/tJCrp53r/5.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/65VQDfjs/1.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/vmCM14qL/2.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/593GTHB7/4.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/tJCrp53r/5.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/65VQDfjs/1.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/vmCM14qL/2.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/593GTHB7/4.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="single-box text-center">
+                                <div class="img-area"><img alt="" class="img-fluid move-animation"
+                                        src="https://i.postimg.cc/tJCrp53r/5.png"></div>
+                                <div class="info-area">
+                                    <h4>Person's Name</h4>
+                                    <a
+                                        href="#">Learn More</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
     </section>
@@ -877,6 +1051,39 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="home.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js">
+    </script>
+    <script>
+        $('.team-slider').owlCarousel({
+            loop: true,
+            nav: false,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            smartSpeed: 450,
+            margin: 20,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                991: {
+                    items: 3
+                },
+                1200: {
+                    items: 3
+                },
+                1920: {
+                    items: 3
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
