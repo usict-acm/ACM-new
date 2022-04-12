@@ -631,7 +631,7 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                     <div class="sec-heading text-center">
-                        
+        
                         <h6 id="team-head">#define < Team Members ></h6>
                 </div>
             </div>
@@ -645,175 +645,175 @@
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in "></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                             <div class="single-box text-center">
                                 <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a href="#">Learn More</a>
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                 </div>
                             </div>
                         </div>
@@ -834,7 +834,7 @@
     <!--************************************************* End of FAQ Section ****************************************************-->
     <section class="main-section" id="faq">
         <div id="faqs" class="container">
-            <h2 class="mb-sm text-center heading-partner fonts ">Frequently Asked Questions</h2>
+            <h1 class="mb-sm text-center fonts">Frequently Asked Questions</h1>
             <div id="faqSection" class="fullwidth-container">
                 <div>
                     <button class="collapsible">Do you work full time as a developer?</button>

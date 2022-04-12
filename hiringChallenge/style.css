@@ -2202,7 +2202,6 @@ a:active {
   opacity: 2;
   font-family: "Rokkitt", serif;
   font-size: 3.3vw;
-<<<<<<< Updated upstream
   font-weight: 450;
 }
 .center {
@@ -2213,7 +2212,4 @@ a:active {
 #timeline
 {
   text-align: center;
-=======
-  font-weight: 400;
->>>>>>> Stashed changes
 }
