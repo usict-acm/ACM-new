@@ -832,6 +832,55 @@
     </section>
 
     <!--************************************************* End of FAQ Section ****************************************************-->
+    <section class="main-section" id="faq">
+        <div id="faqs" class="container">
+            <h2 class="mb-sm text-center heading-partner fonts ">Frequently Asked Questions</h2>
+            <div id="faqSection" class="fullwidth-container">
+                <div>
+                    <button class="collapsible">Do you work full time as a developer?</button>
+                    <div class="faq-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisu oat rhoncus. Curabitur vulputate porttitor lectus, vitae tincidunt dolor eleifend vitae. osuere.m odio, sit amet tincidunt est tincidundisse vingilla in eu justo.</p>
+                    </div>
+                    <button class="collapsible">Do you require a deposit before working?</button>
+                    <div class="faq-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec convallis, porta consequat erat rhoncus. Curabitur vulputate porttitor lectus, vitae tincidunt dolor eleifend vitae.unt est tincidunt at.olutpat. Nulla sit amet sem non elit posuere fringilla in eu justo.</p>
+                    </div>
+                    <button class="collapsible">Will I own the website?</button>
+                    <div class="faq-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisciat r r eleifend vitae. Praespis arcu. Sed condimentum elit ac elit rhoncus, volutpionsecmet sem non elit posuere fringilla in eu justo.</p>
+                    </div>
+                    <button class="collapsible">Are there other costs involved?</button>
+                    <div class="faq-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur urna. Suspendis elit posuere fringilla in eu justo.</p>
+
+                        <p>Lorem ipsum dos, volutpaiat orci accumsan.Contact me via <a href="mailto:#" target="_blank">EMAIL</a> and I will be more than happy to answer your queries.</p>
+                    </div>
+                </div>
+                <div>
+                    <button class="collapsible">What is hosting? Will I need it?</button>
+                    <div class="faq-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscintate po condimentum elit ac elit rhoncus, volutpat feugiat orci accumsan.</p>
+                        <p>Maecenas tinciabitur viverra bibendum fringilla in eu justo.</p>
+                    </div>
+                    <button class="collapsible">Will you work for equity on a new idea I have?</button>
+                    <div class="faq-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consrat rhoncus. Curabitur vulputate porttitor lectus, vitae tincidunt dolor eleifend vitae. Praesent sollicitudin eros in finibus posuere. Quisqu elit ac elit rhoncus, volutpat feugiat orci accumsan.</p>
+                        <p>Maecenas tincidunt diaali Curabitur viverrafringilla in eu justo.</p>
+                    </div>
+                    <button class="collapsible">How much experience do you have?</button>
+                    <div class="faq-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elialibuimentum elit ac elit rhoncus, volutpat feugiat orci accumsan.</p>
+                    </div>
+                    <button class="collapsible">What if I need changes. Can I edit it myself?</button>
+                    <div class="faq-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing fit ac us, volutpat feugiat orci accumsan.</p>
+                        <p>Maecenas tincidit coravida vel diam ngilla in eu justo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
     <!--************************************************* Contact us ****************************************************-->
