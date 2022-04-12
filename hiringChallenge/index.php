@@ -40,6 +40,16 @@
             font-family: 'Allura', cursive;
             font-size: 65px;
         }
+        #team-head{
+            color: #fff;
+    text-shadow: 0 0 22px #36ed29;
+    z-index: -2;
+    opacity: 2;
+    font-family: "Rokkitt", serif;
+    font-size: 3.3vw;
+    font-weight: 450;
+}
+        }
 
         .single-box {
             border: 1px solid #ddd;
@@ -603,8 +613,8 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                     <div class="sec-heading text-center">
-                        <h6>Team Members</h6>
-                    </div>
+                        
+                        <h6 id="team-head">#define < Team Members ></h6>
                 </div>
             </div>
         </div>
@@ -851,7 +861,7 @@
 
     <section class="main-section" id="faq">
         <div id="faqs" class="container">
-            <h2 class="line-heading">Frequently Asked Questions</h2>
+            <h2 class="mb-sm text-center heading-partner fonts ">Frequently Asked Questions</h2>
             <div id="faqSection" class="fullwidth-container">
                 <div>
                     <button class="collapsible">Do you work full time as a developer?</button>
