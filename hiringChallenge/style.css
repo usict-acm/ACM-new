@@ -51,10 +51,10 @@ a {
   text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
+    #eeff00 0%,
+    #5eff00 29%,
+    #00f7ff 67%,
+    #0077ff 100%
   );
   /* background-size: auto auto; */
   background-clip: border-box;
@@ -391,10 +391,7 @@ canvas {
   display: flex;
   justify-content: center;
 }
-.navbar-light .navbar-nav .nav-link.active,
-.navbar-light .navbar-nav .show > .nav-link {
-  /* color:blue; */
-}
+
 .container-fluid {
   /* background-color: black; */
 }

@@ -18,21 +18,21 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
     <!-- <link href="style.css" rel="stylesheet"> -->
-    
 
-    
+
+
     <style>
-       
         body {
             font-family: 'Montserrat', sans-serif;
-            
+
         }
 
         #team {
             padding: 30px 0;
             overflow-y: hidden;
         }
-        .row{
+
+        .row {
             overflow-y: hidden;
         }
 
@@ -136,80 +136,97 @@
                 top: 3px;
             }
         }
+
         #team {
-    padding: 30px 0;
-    height: 120vh;
-}
-.sec-heading h6 {
-    font-family: 'Allura', cursive;
-    font-size: 65px;
-    height: 14vh;
-}
-.info-area h4 {
-    font-weight: 600;
-    color: azure;
-}
-.sec-heading h6 {
-    font-family: 'Allura', cursive;
-    font-size: 65px;
-    height: 14vh;
-    color: azure;
-}
-#team {
-    padding: 30px 0;
-    height: 120vh;
-    background-color: black;
-}
-.img-area {
-    overflow: hidden;
-    padding: 15px 0 15px;
-    background: black;
-}
-.info-area {
-    padding: 0 20px 45px;
-    background-color: black;
-}
-.single-box {
-    /* border: 1px solid black; */
-    /* border-radius: 20px; */
-    overflow: hidden;
-    background-color: #fff;
-}
-.single-box {
-    border: 0px solid black !important;
-     border-radius: 0px !important;
-    overflow: hidden;
-    background-color: #fff;
-}
-.sec-heading h6 {
-    font-family: 'Allura', cursive;
-    font-size: 65px;
-    height: 14vh;
-    color: azure;
-    overflow-y: hidden;
+            padding: 30px 0;
+            height: 120vh;
+        }
 
-}
-*, ::after, ::before {
-    box-sizing: border-box;
+        .sec-heading h6 {
+            font-family: 'Allura', cursive;
+            font-size: 65px;
+            height: 14vh;
+        }
 
-}
-.no-js .owl-carousel, .owl-carousel.owl-loaded {
-    display: block;
-    height: -8vh;
-    overflow-y: hidden !important;
-}
-#trying-team {
-    overflow-y: hidden;
-    height: 90vh;
-}
-#team {
-    padding: 30px 0;
-    height: 90vh;
-    background-color: black;
-}
+        .info-area h4 {
+            font-weight: 600;
+            color: azure;
+        }
+
+        .sec-heading h6 {
+            font-family: 'Allura', cursive;
+            font-size: 65px;
+            height: 14vh;
+            color: azure;
+        }
+
+        #team {
+            padding: 30px 0;
+            height: 120vh;
+            background-color: black;
+        }
+
+        .img-area {
+            overflow: hidden;
+            padding: 15px 0 15px;
+            background: black;
+        }
+
+        .info-area {
+            padding: 0 20px 45px;
+            background-color: black;
+        }
+
+        .single-box {
+            /* border: 1px solid black; */
+            /* border-radius: 20px; */
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .single-box {
+            border: 0px solid black !important;
+            border-radius: 0px !important;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .sec-heading h6 {
+            font-family: 'Allura', cursive;
+            font-size: 65px;
+            height: 14vh;
+            color: azure;
+            overflow-y: hidden;
+
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box;
+
+        }
+
+        .no-js .owl-carousel,
+        .owl-carousel.owl-loaded {
+            display: block;
+            height: -8vh;
+            overflow-y: hidden !important;
+        }
+
+        #trying-team {
+            overflow-y: hidden;
+            height: 90vh;
+        }
+
+        #team {
+            padding: 30px 0;
+            height: 90vh;
+            background-color: black;
+        }
     </style>
-   
-   
+
+
     <title>Hackathon</title>
 </head>
 
@@ -481,7 +498,8 @@
 
     <div class="timeline-section">
         <div class="timeline" id="timeline">
-            <h2 class="fonts"> #include < Timeline > </h2>
+            <h2 class="fonts"> #include < Timeline>
+            </h2>
             <div>
                 <ul>
                     <li class="timeline-li">
@@ -574,7 +592,7 @@
     <section id="partner">
 
         <div class="container-partner">
-            <h2 class="mb-sm text-center heading-partner fonts "> #include < Our Partners >
+            <h2 class="mb-sm text-center heading-partner fonts "> #include < Our Partners>
             </h2>
             <strong>
                 <div class="row d-flex justify-content-center">
@@ -614,228 +632,178 @@
                     <div class="col-lg-12">
                         <div class="team-slider owl-carousel">
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/65VQDfjs/1.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/vmCM14qL/2.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/593GTHB7/4.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/tJCrp53r/5.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/65VQDfjs/1.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/vmCM14qL/2.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/593GTHB7/4.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/tJCrp53r/5.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/65VQDfjs/1.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/vmCM14qL/2.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/593GTHB7/4.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/tJCrp53r/5.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/65VQDfjs/1.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/vmCM14qL/2.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/593GTHB7/4.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/tJCrp53r/5.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/65VQDfjs/1.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/vmCM14qL/2.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/593GTHB7/4.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                             <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation"
-                                        src="https://i.postimg.cc/tJCrp53r/5.png"></div>
+                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
                                 <div class="info-area">
                                     <h4>Person's Name</h4>
-                                    <a
-                                        href="#">Learn More</a>
+                                    <a href="#">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -906,34 +874,25 @@
         <div class="container-contact" id="contact">
             <div class="content">
                 <div class="left-side">
-                    <div class="address details">       
-                        <style>
-                            #frame {
-                                border: 3px dotted;
-                                width: 250px;
-                                height: 250px;
-                                border-radius: 20px;
-                            }
-                        </style>
-                        <iframe id="frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.203073386905!2d77.01843216508175!3d28.59368408243313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1aafdb891567%3A0x10d270731c930a87!2sGuru%20Gobind%20Singh%20Indraprastha%20University!5e0!3m2!1sen!2sin!4v1648644072880!5m2!1sen!2sin" width="250" height="250" style="border:solid 3px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="address details" style="width: 25vw ;height:40vh;">
+                        <iframe id="frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.203073386905!2d77.01843216508175!3d28.59368408243313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1aafdb891567%3A0x10d270731c930a87!2sGuru%20Gobind%20Singh%20Indraprastha%20University!5e0!3m2!1sen!2sin!4v1648644072880!5m2!1sen!2sin" style="width: 24vw ;height:35vh; border-radius:1rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <div class = "phone-email" style="display: flex">
-                    <div class = "address details">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="topic">Address</div>
-                        <div class="text-one">Usict Delhi Sector-14</div>
-                    </div>
-                    <div class="phone details">
-                        <i class="fas fa-phone-alt"></i>
-                        <div class="topic">Phone</div>
-                        <div class="text-one">+0098 9893 5647</div>
-                        <div class="text-two">+0096 3434 5678</div>
-                    </div>
-                    <div class="email details">
-                        <i class="fas fa-envelope"></i>
-                        <div class="topic">Email</div>
-                        <div class="text-two">info@usict.acm.org</div>
-                    </div>
+                    <div class="phone-email" style="display: flex">
+                        <div class="address details">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="topic">Address</div>
+                            <div class="text-one">Usict Delhi Sector-14</div>
+                        </div>
+                        <div class="phone details">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="topic">Phone</div>
+                            <div class="text-one">+0098 9893 5647</div>
+                        </div>
+                        <div class="email details">
+                            <i class="fas fa-envelope"></i>
+                            <div class="topic">Email</div>
+                            <div class="text-two">info@usict.acm.org</div>
+                        </div>
                     </div>
                 </div>
                 <div class="right-side">
