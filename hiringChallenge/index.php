@@ -119,8 +119,8 @@
 
         .move-animation {
             position: relative;
-            -webkit-animation: move-animation 2s ease-in-out infinite;
-            animation: move-animation 2s ease-in-out infinite;
+            -webkit-animation: move-animation 1s ease-in-out infinite;
+            animation: move-animation 1s ease-in-out infinite;
         }
 
         @-webkit-keyframes move-animation {
@@ -1062,24 +1062,24 @@
             loop: true,
             nav: false,
             autoplay: true,
-            autoplayTimeout: 5000,
+            autoplayTimeout: 2000,
             smartSpeed: 450,
             margin: 20,
             responsive: {
                 0: {
-                    items: 1
+                    items: 3
                 },
                 768: {
-                    items: 2
+                    items: 3
                 },
                 991: {
-                    items: 3
+                    items: 4
                 },
                 1200: {
-                    items: 3
+                    items: 6
                 },
                 1920: {
-                    items: 3
+                    items: 6
                 }
             }
         });
