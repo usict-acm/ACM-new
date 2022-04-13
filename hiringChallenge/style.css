@@ -1396,11 +1396,11 @@ img {
   display: grid;
   grid-gap: 5rem;
   height: auto;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 .prize_item {
-  height: 240px;
-  background-color: #00d0ff;
+  height: 225px;
+  background-color: #f1f1f1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2035,8 +2035,8 @@ hr {
   padding: 10px;
   /* width: 100rem; */
   /* margin-left: 20rem; */
-  left: 79rem;
-  top: 22rem;
+  left: 90rem;
+  top: 10rem;
 }
 a,
 a:hover,
