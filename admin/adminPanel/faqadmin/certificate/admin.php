@@ -1,4 +1,4 @@
-<?php     include(__DIR__.'/../../../link/siteName.php');
+<?php    
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,14 +55,18 @@
     }
     .edit-logo{
         position: absolute;
-        margin: 0 0 0px 10px;
+        margin: 0 0 0px 0px;
     }
     .tash-bin{
         position: relative;
-        margin:0px 0 0  15px;
+        margin: 0px 0 0  1px;
     }
     .centerAlign{
         text-align:center;
+    }
+    .marginset{
+        margin-top: 43px;
+        margin-left: 13px;
     }
     </style>
 </head>
@@ -72,8 +76,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-header clearfix">
-                        <h2 class="pull-left">Link Admin Panel</h2>
-                        <a href="?table=AddCertificate" class="btn btn-primary pull-right">Make New Link</a>
+                        <h2 class="pull-left">Certificate Admin Panel</h2>
+                        <a href="?table=AddCertificate" class="btn btn-primary pull-right marginset">Make Single Certificate</a>
+                        <a href="?table=AddCertificate" class="btn btn-primary pull-right">Make Certificate in Bulk</a>
                     </div>
                     <?php
                     // Include config file
@@ -83,44 +88,55 @@
                     $link = $database->connect();
                     $connection = $link;
 
-                    $sql = "SELECT * FROM link ORDER BY id DESC ";
+                    $sql = "SELECT * FROM certificate ORDER BY id DESC ";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo "<table class='table table-bordered table-striped'>";
                                 echo "<thead>";
                                     echo "<tr>";
-                                        echo "<th>Link For</th>";
-                                        echo "<th>Original Link</th>";
-                                        echo "<th>Shortened Link</th>";
-                                        echo "<th>Clicks</th>";
+                                        echo "<th>Unique No.</th>";
+                                        echo "<th>Participant Name</th>";
+                                        echo "<th>email</th>";
+                                        echo "<th>role</th>";
+                                        echo "<th>Start Date</th>";
+                                        echo "<th>End Date</th>";
+                                        echo "<th>Signed By</th>";
                                         echo "<th>Action</th>";
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
-                                    $count = 0;
-                                    echo "<script>
-                                    let links = [];
+                                    // $count = 0;
+                                    // echo "<script>
+                                    // let links = [];
                                     
-                                        function copy2 (count){navigator.clipboard.writeText('".$siteLink."'+links[count]);}</script>";
+                                    //     function copy2 (count){navigator.clipboard.writeText('".$siteLink."'+links[count]);}</script>";
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
-                                        $ii = $row['originalLink'];
-                                        $ii = substr($ii,0,51);
-                                        echo "<td>" . $row['linkFor'] . "</td>";
-                                        echo "<td>" . $ii . "....</td>";
-                                        echo "<td><a target='_blank' href='".$siteLink."". $row['code'] ."'>".$siteLink."". $row['code'] ."</a></td>";
-                                        $short = $row['code'];
-                                        echo "<script>links.push('".$short."'); </script>";
-                                        echo "<td class='centerAlign'>" . $row['count'] . "</td>";
+                                        // $ii = $row['originalLink'];
+                                        // $ii = substr($ii,0,51);
+                                        echo "<td>" . $row['uniqueNo'] . "</td>";
+                                        echo "<td>" . $row['nameParticipant']."</td>";
+                                        echo "<td>" . $row['email']."</td>";
+                                        echo "<td>" . $row['role']."</td>";
+                                        echo "<td>" . $row['startDate']."</td>";
+                                        echo "<td>" . $row['endDate']."</td>";
+                                        echo "<td>" . $row['signedBy']."</td>";
+                                        // echo "<td><a target='_blank' href='".$siteLink."". $row['code'] ."'>".$siteLink."". $row['code'] ."</a></td>";
+                                        // $short = $row['code'];
+                                        // echo "<script>links.push('".$short."'); </script>";
+                                        // echo "<td class='centerAlign'>" . $row['count'] . "</td>";
                                         
                                         echo "<td>";
-                                            echo "<button class = 'copybutton' onclick = copy2(".$count.")><span class = 'glyphicon glyphicon-duplicate'></span></button>";
-                                            echo "<a class='edit-logo' href='?table=editLink&&linkFor=". $row['linkFor'] ."&&originalLink=".$row['originalLink']."&&shortLink=". $row['code']."' title='Edit Record' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
-                                            echo "<a class='tash-bin' href='faqadmin/del.php?Sno=". $row['code'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                            echo "<a class='tash-bin' title='Mail Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-envelope'></span></a>";
+                                            echo "<a class='edit-logo' title='Edit Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
+                                            echo "<a class='tash-bin 'href='faqadmin/certificate_delete.php?Sno=". $row['uniqueNo'] ."' title='Delete Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                            echo "<a class='edit-logo' title='Download Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-download-alt'></span></a>";
+
+
                                         echo "</td>";
 
                                     echo "</tr>";
-                                    $count++;
+        
                                 }
                             echo "</tbody>";                            
                             echo "</table>";
