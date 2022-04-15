@@ -8,10 +8,11 @@
 	?>
 	<title>GGSIP University USS ACM Student Chapter</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
-	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" /> -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
 	<link rel="stylesheet" href="./assets/CSS/newStyle.css" />
 	<link rel="stylesheet" href="./assets/CSS/header.css">
 	<link rel="stylesheet" href="./assets/CSS/footer.css">
+	<link rel="stylesheet" href="./assets/CSS/homeTeam.css">
 </head>
 
 <body>
@@ -183,14 +184,14 @@
 	</script>
 	<!-- ******************************blog section end***************************************** -->
 	<!-- *******************************************our team************* -->
-	<section class="tag team">
-		<div class="teamhead">
+	<section class="tag container-fluid">
+		<div class="">
 			<h2 class="my-4 display-4 fw-bolder text-center">Office<span class="text-blue"> Bearers</span></h2>
 		</div>
-		<div class="our-team-area my-5">
+		<!-- <div class="our-team-area my-5">
 			<div class="container">
 				<div class="row margin-media">
-					<div class="col-md-4">
+					<div class="col-md-2">
 						<div class="our-team-sir row">
 							<div class="our-team col-lg-4">
 								<div class="our-team-left">
@@ -204,10 +205,32 @@
 							<div class="our-team col-lg-4">
 								<div class="our-team-left">
 									<div class="name">
+										<h5 class="text-center">Dr. Ruchi Sehrawat</h5>
+										<p class="text-center">Branch Mentor, ACM USS</p>
+									</div>
+									<img src="./assets/images/team/ruchi-sehrawat.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="our-team-sir row">
+							<div class="our-team col-lg-4">
+								<div class="our-team-left">
+									<div class="name">
 										<h5 class="text-center">Dr. Rahul Johari</h5>
-										<p class="text-center">Branch Head, ACM USICT</p>
+										<p class="text-center">Branch Mentor, ACM USS</p>
 									</div>
 									<img src="./assets/images/team/rahulsir.jpg" alt="">
+								</div>
+							</div>
+							<div class="our-team col-lg-4">
+								<div class="our-team-left">
+									<div class="name">
+										<h5 class="text-center">Dr. Jaspreeti Singh</h5>
+										<p class="text-center">Branch Mentor, ACM USS</p>
+									</div>
+									<img src="./assets/images/team/jaspreeti-singh.jpg" alt="">
 								</div>
 							</div>
 						</div>
@@ -244,7 +267,7 @@
 
 							<div class="our-team col-6 col-md-6 col-lg-4">
 								<div class="our-team-right">
-									<a class="social" href="https://www.linkedin.com/in/tarun-shekhawat-037091194/" target="_blank">
+									<a class="social" href="https://www.linkedin.com/in/tarun-037091194" target="_blank">
 										<i class="fab fa-linkedin" arial-hidden="true"></i>
 									</a>
 									<div class="name">
@@ -298,13 +321,155 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
+	 <!-- <div class="team"> -->
+	 <div class="row justify-content-center">
+      <div class="profile-card col-md-4 col-sm-6">
+        <div class="img">
+          <img
+            src="./assets/images/team/deanSirSquared.jpeg"
+          />
+        </div>
+        <div class="caption">
+          <h3>Prof. Pravin Chandra</h3>
+          <p>Dean, USICT</p>
+        </div>
+      </div>
+      <div class="profile-card col-md-4 col-sm-6">
+        <div class="img">
+          <img
+            src="./assets/images/team/ruchi-sehrawat.jpg"
+          />
+        </div>
+        <div class="caption">
+          <h3>Dr. Ruchi Sehrawat</h3>
+          <p>Branch Mentor, ACM USS</p>
+        </div>
+      </div>
+      <!-- <div class="gap"></div> -->
+	  <div class="profile-card col-md-4 col-sm-6">
+        <div class="img">
+          <img
+            src="./assets/images/team/rahulsir.jpg"
+          />
+        </div>
+        <div class="caption">
+          <h3>Dr. Rahul Johari</h3>
+          <p>Branch Mentor, ACM USS</p>
+        </div>
+      </div>
+      <div class="profile-card col-md-4 col-sm-6">
+        <div class="img">
+          <img
+            src="./assets/images/team/jaspreeti-singh.jpg"
+          />
+        </div>
+        <div class="caption">
+          <h3>Dr. Jaspreeti Singh</h3>
+          <p>Branch Mentor, ACM USS</p>
+        </div>
+      </div>
+	 </div>
+
+
+
+	 <div class="row justify-content-center">
+      <div class="profile-card col-md-4 col-sm-6">
+        <div class="img">
+          <img
+            src="./assets/images/team/harshGoyal.png"
+          />
+        </div>
+        <div class="caption">
+          <h3>Harsh Goyal</h3>
+          <p>Chair</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/harsh-goyal-195255b9/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="profile-card col-md-4 col-sm-6">
+        <div class="img">
+          <img
+            src="./assets/images/team/Anuj.jpg"
+          />
+        </div>
+        <div class="caption">
+          <h3>Anuj Talwar</h3>
+          <p>Vice Chair</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/anuj-talwar/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="profile-card col-md-4 col-sm-6">
+        <div class="img">
+          <img
+            src="./assets/images/team/TarunSquared.jpg"
+          />
+        </div>
+        <div class="caption">
+          <h3>Tarun</h3>
+          <p>Secretary</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/tarun-037091194" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="profile-card col-md-4 col-sm-6">
+        <div class="img">
+          <img
+            src="./assets/images/team/KaranSquared.jpeg"
+          />
+        </div>
+        <div class="caption">
+          <h3>Karan Deep Singh</h3>
+          <p>Treasurer</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/karan-deep/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="profile-card col-md-4 col-sm-6">
+        <div class="img">
+          <img
+            src="./assets/images/team/MoulikSquared.jpg"
+          />
+        </div>
+        <div class="caption">
+          <h3>Moulik Agrawal</h3>
+          <p>Web Chair</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/moulik-agrawal/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="profile-card col-md-4 col-sm-6">
+        <div class="img">
+          <img
+            src="./assets/images/team/anurag.jpg"
+          />
+        </div>
+        <div class="caption">
+          <h3>Anurag Parashar</h3>
+          <p>Membership Chair</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/anurag-parashar/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+	</div>
+    
+
+
 		<div class="py-3 mt-2 d-flex justify-content-sm-center">
 			<div class="col-lg-2 col-md-4 col mb-2 mt-4 mt-lg-0">
-				<a href="./team.php" class="about-button team-mobile-btn">Meet the Team</a>
-			</div>
+				<a id="meet-the-team-btn" href="./team.php" class="about-button team-mobile-btn">Meet the Team</a>
+				</div>
 		</div>
-		</div>
+		
+		<!-- </div> -->
 	</section>
 	<!-- *****************************our team end************************************************** -->
 	<!-- socail bar******************************* -->
@@ -339,75 +504,15 @@
 		</div>
 
 	</div>
-	<!-- ****************************************************contact us ***************************** -->
-	<div class="dsph" id="contact">
-		<div class="d-flex justify-content-center mt-md-5">
-
-			<img src="./assets/images/contact_us_img.webp" class="svg-media" alt="" />
-
-			<div class="contactUs">
-				<div class="closebtn">
-					<button class="btn btn-primary s-form-group contact-btn" onclick="closecontact()"><i class="fas fa-times"></i></button>
-				</div>
-				<form class="s-form" name="contact" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse" onsubmit="return validateform();">
-					<h2 class="my-4 display-4 fw-bolder text-center">Contact<span class="text-blue"> Us</span></h2>
-					<div class="row form-row">
-						<div class="form-group s-form-group col-md-5">
-							<input type="text" name="name" class="form-control" placeholder="Name *" />
-						</div>
-						<div class="form-group s-form-group col-md-5">
-							<input type="text" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Email *" />
-						</div>
-					</div>
-					<div class="row form-row">
-						<div class="form-group s-form-group col-md-5">
-							<input type="number" name="phone" class="form-control" placeholder="Phone No." />
-						</div>
-						<style>
-                       input::-webkit-outer-spin-button,
-                       input::-webkit-inner-spin-button {
-                        -webkit-appearance: none;
-                       margin: 0;
-                      }
-  
-                        input[type=number] {
-                         -moz-appearance: textfield;
-                         }
-                  </style>
-						<div class="form-group s-form-group col-md-5">
-							<input type="text" name="college" class="form-control" placeholder="College/ Organization" />
-						</div>
-					</div>
-					<div class="contact-msg">
-						<textarea type="text" name="message" rows="5" placeholder="Message *" class="form-control col-md-11 contact-message"></textarea>
-					</div>
-					<div class="row contact-msg">
-						<button type="submit" class="btn btn-primary s-form-group contact-btn col-md-3 col-sm-2">Submit</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-
-	<!-- ********************************contact_us end**************************************************** -->
-
+	<!-- back to top and contact us-->
+	<?php
+	include("contact.php")
+	?>
 	<!--  footer -->
 	<?php
 	include("footer.php")
 	?>
 	<!--  footer ends -->
-	<!-- back to top -->
-	<div class="scrolltop">
-		<div class="scroll icon"><i class="fa fa-rocket" aria-hidden="true"></i></div>
-	</div>
-	<!-- contact us -->
-	<div class="contact-bottom-btn">
-		<a href="javascript:showcontact()">
-			<div class="contact-icon"><i class="fas fa-comments" aria-hidden="true"></i></div>
-		</a>
-	</div>
-
-
 
 	<!-- Swiper JS -->
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
