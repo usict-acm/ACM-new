@@ -40,15 +40,16 @@
             font-family: 'Allura', cursive;
             font-size: 65px;
         }
-        #team-head{
+
+        #team-head {
             color: #fff;
-    text-shadow: 0 0 22px #36ed29;
-    z-index: -2;
-    opacity: 2;
-    font-family: "Rokkitt", serif;
-    font-size: 3.3vw;
-    font-weight: 450;
-}
+            text-shadow: 0 0 22px #36ed29;
+            z-index: -2;
+            opacity: 2;
+            font-family: "Rokkitt", serif;
+            font-size: 3.3vw;
+            font-weight: 450;
+        }
         }
 
         .single-box {
@@ -502,7 +503,8 @@
 
     <div class="timeline-section">
         <div class="timeline" id="timeline">
-            <h1 class="mb-sm text-center prize_heading fonts">#include < Timeline >  </h1>
+            <h1 class="mb-sm text-center prize_heading fonts">#include < Timeline>
+            </h1>
             <!-- <h1 class="timeline-trellathon neon-text">TRELLATHON</h1> -->
             <div>
                 <ul>
@@ -625,204 +627,205 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
                     <div class="sec-heading text-center">
-        
-                        <h6 id="team-head">#define < Team Members ></h6>
+
+                        <h6 id="team-head">#define < Team Members>
+                        </h6>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="testimonial-box" id="trying-team">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="team-slider owl-carousel">
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+            <div class="testimonial-box" id="trying-team">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="team-slider owl-carousel">
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in "></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in "></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/65VQDfjs/1.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/vmCM14qL/2.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/TYTxWM9S/3.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/593GTHB7/4.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="single-box text-center">
-                                <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
-                                <div class="info-area">
-                                    <h4>Person's Name</h4>
-                                    <i class="fa-brands fa-linkedin-in"></i>
+                                <div class="single-box text-center">
+                                    <div class="img-area"><img alt="" class="img-fluid move-animation" src="https://i.postimg.cc/tJCrp53r/5.png"></div>
+                                    <div class="info-area">
+                                        <h4>Person's Name</h4>
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <!--**************************************************** End of TEAM ****************************************************-->
 
 
 
 
-        </div>
-        </div>
+    </div>
+    </div>
     </section>
 
     <!--************************************************* End of FAQ Section ****************************************************-->
@@ -879,6 +882,7 @@
 
     <!--************************************************* Contact us ****************************************************-->
     <section id="contact-us">
+
         <div class="container-contact" id="contact">
             <div class="content">
                 <div class="left-side">
@@ -960,44 +964,44 @@
                     </ul>
                 </div>
                 <div class="social-buttons">
-                            <!-- facebook  Button -->
-                            <a href="http://www.facebook.com" target="blank" class="social-margin">
-                                <div class="social-icon facebook">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </div>
-                            </a>
-                            <!-- pinterest Button -->
-                            <a href="https://pinterest.com/" target="blank" class="social-margin">
-                                <div class="social-icon instagram">
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                </div>
-                            </a>
-                            <!-- LinkedIn Button -->
-                            <a href="http://linkedin.com/" class="social-margin" target="blank">
-                                <div class="social-icon linkedin">
-                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </div>
-                            </a>
-                            <!-- Github Button -->
-                            <a href="https://github.com/" target="blank" class="social-margin">
-                                <div class="social-icon github">
-                                    <i class="fa fa-github-alt" aria-hidden="true"></i>
-                                </div>
-                            </a>
-                            <!-- Youtube Button -->
-                            <a href="http://youtube.com/" target="blank" class="social-margin">
-                                <div class="social-icon youtube">
-                                    <i class="fa fa-youtube" aria-hidden="true"></i>
-                                </div>
-                            </a>
-
-                            <!-- TwitterButton -->
-                            <a href="http://twitter.com/" target="blank" class="social-margin">
-                                <div class="social-icon twitter">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </div>
-                            </a>
+                    <!-- facebook  Button -->
+                    <a href="http://www.facebook.com" target="blank" class="social-margin">
+                        <div class="social-icon facebook">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
                         </div>
+                    </a>
+                    <!-- pinterest Button -->
+                    <a href="https://pinterest.com/" target="blank" class="social-margin">
+                        <div class="social-icon instagram">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                    <!-- LinkedIn Button -->
+                    <a href="http://linkedin.com/" class="social-margin" target="blank">
+                        <div class="social-icon linkedin">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                    <!-- Github Button -->
+                    <a href="https://github.com/" target="blank" class="social-margin">
+                        <div class="social-icon github">
+                            <i class="fa fa-github-alt" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                    <!-- Youtube Button -->
+                    <a href="http://youtube.com/" target="blank" class="social-margin">
+                        <div class="social-icon youtube">
+                            <i class="fa fa-youtube" aria-hidden="true"></i>
+                        </div>
+                    </a>
+
+                    <!-- TwitterButton -->
+                    <a href="http://twitter.com/" target="blank" class="social-margin">
+                        <div class="social-icon twitter">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
             </div>
             <div class="divider-f mb-4"> </div>
 

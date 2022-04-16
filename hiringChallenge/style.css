@@ -1313,7 +1313,7 @@ img {
 }
 
 .timeline-section ul li::after {
-  background: #ffff00;
+  /* background: #ffff00; */
   content: "";
   width: 25px;
   height: 25px;
@@ -1607,6 +1607,7 @@ img {
   padding: 20px 60px 30px 40px;
   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
   background: linear-gradient(120deg, #026370, #000000);
+  margin-bottom: 10vh;
 }
 #contact-us {
   width: 90%;
@@ -1614,7 +1615,7 @@ img {
   align-items: center;
   justify-content: center;
   /* padding: 20px 60px 30px 40px; */
-  min-height: 100vh;
+  min-height: 65vh;
   width: 100%;
   background-color: #000000;
 }
@@ -1782,7 +1783,7 @@ img {
   width: 100%;
   display: block;
   background: #000000;
-  height: 76vh;
+  height: 65vh;
 }
 .container {
   float: center;
@@ -1944,7 +1945,7 @@ ul > li {
 }
 
 ul > li:hover {
-  color: #fffb07;
+  color: #000000;
   cursor: pointer;
 }
 
