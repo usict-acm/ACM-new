@@ -1396,11 +1396,11 @@ img {
   display: grid;
   grid-gap: 5rem;
   height: auto;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 .prize_item {
-  height: 240px;
-  background-color: #00d0ff;
+  height: 225px;
+  background-color: #f1f1f1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2029,14 +2029,38 @@ hr {
 .social-margin {
   margin-right: 15px;
 }
+@media (max-width: 575px) {
+  .social-buttons{
+    
+    left: 10rem;
+    top: 55rem;
+    padding: 5px;
+  }
+
+  .social-icon {
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-radius: 138px;
+    border: 1px solid;
+    text-align: center;
+    width: 41px;
+    height: 41px;
+    display: inline-block;
+    line-height: 1px;
+    padding-top: 11px;
+    transition: all 0.5s;
+  }
+  
+}
+
 .social-buttons {
-  position: absolute;
+
   /* margin-top: 25px; */
   padding: 10px;
   /* width: 100rem; */
   /* margin-left: 20rem; */
-  left: 79rem;
-  top: 22rem;
+  left: 75rem;
+  top: 10rem;
 }
 a,
 a:hover,

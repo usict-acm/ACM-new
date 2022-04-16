@@ -947,7 +947,19 @@
                         <h1 class="footerh1">USICT ACM Student Chapter</h1>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi non
                             pariatur numquam animi nam at impedit odit nisi.</p>
-                        <div class="social-buttons">
+                    </div>
+                </div>
+                <div class="empty-box col-md-2 col-sm-2 col-xs-2"></div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <h5 class="heading_footer">Quick Links</h5>
+                    <ul>
+                        <li class='footli'>Home</li>
+                        <li class='footli'>About</li>
+                        <li class='footli'>Team</li>
+                        <li class='footli'>FAQ</li>
+                    </ul>
+                </div>
+                <div class="social-buttons">
                             <!-- facebook  Button -->
                             <a href="http://www.facebook.com" target="blank" class="social-margin">
                                 <div class="social-icon facebook">
@@ -986,18 +998,6 @@
                                 </div>
                             </a>
                         </div>
-                    </div>
-                </div>
-                <div class="empty-box col-md-2 col-sm-2 col-xs-2"></div>
-                <div class="col-md-2 col-sm-2 col-xs-2">
-                    <h5 class="heading_footer">Quick Links</h5>
-                    <ul>
-                        <li class='footli'>Home</li>
-                        <li class='footli'>About</li>
-                        <li class='footli'>Team</li>
-                        <li class='footli'>FAQ</li>
-                    </ul>
-                </div>
             </div>
             <div class="divider-f mb-4"> </div>
 
