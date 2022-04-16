@@ -149,7 +149,7 @@
 
         #team {
             padding: 30px 0;
-            height: 120vh;
+            /* height: 120vh; */
         }
 
         .sec-heading h6 {
@@ -168,12 +168,6 @@
             font-size: 65px;
             height: 14vh;
             color: azure;
-        }
-
-        #team {
-            padding: 30px 0;
-            height: 120vh;
-            background-color: black;
         }
 
         .img-area {
@@ -231,7 +225,7 @@
 
         #team {
             padding: 30px 0;
-            height: 90vh;
+            height: 60vh;
             background-color: black;
         }
     </style>
