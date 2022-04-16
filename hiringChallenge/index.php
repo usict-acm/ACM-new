@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./footer/bootstrap-footer-17//css//style.css">
     <!-- <link href="style.css" rel="stylesheet"> -->
 
 
@@ -503,7 +504,7 @@
 
     <div class="timeline-section">
         <div class="timeline" id="timeline">
-            <h1 class="mb-sm text-center prize_heading fonts">#include < Timeline>
+            <h1 class="mb-sm text-center heading-partner fonts">#include < Timeline>
             </h1>
             <!-- <h1 class="timeline-trellathon neon-text">TRELLATHON</h1> -->
             <div>
@@ -940,7 +941,7 @@
 
 
     <!--****************************************************** FOOTER *******************************************************-->
-    <section id="container-footer" class="fluid-container bg-black">
+    <!-- <section id="container-footer" class="fluid-container bg-black">
         <div class="card bg-black mx-5">
             <div class="row mb-4">
                 <div class="col-md-4 col-sm-4 col-xs-4">
@@ -964,57 +965,60 @@
                     </ul>
                 </div>
                 <div class="social-buttons">
-                    <!-- facebook  Button -->
-                    <a href="http://www.facebook.com" target="blank" class="social-margin">
+                    facebook  Button -->
+
+                    <!-- <a href="http://www.facebook.com" target="blank" class="social-margin">
                         <div class="social-icon facebook">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                         </div>
-                    </a>
+                    </a> -->
                     <!-- pinterest Button -->
-                    <a href="https://pinterest.com/" target="blank" class="social-margin">
+                    <!-- <a href="https://pinterest.com/" target="blank" class="social-margin">
                         <div class="social-icon instagram">
                             <i class="fa fa-instagram" aria-hidden="true"></i>
                         </div>
-                    </a>
+                    </a> -->
                     <!-- LinkedIn Button -->
-                    <a href="http://linkedin.com/" class="social-margin" target="blank">
+                    <!-- <a href="http://linkedin.com/" class="social-margin" target="blank">
                         <div class="social-icon linkedin">
                             <i class="fa fa-linkedin" aria-hidden="true"></i>
                         </div>
-                    </a>
+                    </a> -->
                     <!-- Github Button -->
-                    <a href="https://github.com/" target="blank" class="social-margin">
+                    <!-- <a href="https://github.com/" target="blank" class="social-margin">
                         <div class="social-icon github">
                             <i class="fa fa-github-alt" aria-hidden="true"></i>
                         </div>
-                    </a>
+                    </a> -->
                     <!-- Youtube Button -->
-                    <a href="http://youtube.com/" target="blank" class="social-margin">
+                    <!-- <a href="http://youtube.com/" target="blank" class="social-margin">
                         <div class="social-icon youtube">
                             <i class="fa fa-youtube" aria-hidden="true"></i>
                         </div>
-                    </a>
+                    </a> -->
 
                     <!-- TwitterButton -->
-                    <a href="http://twitter.com/" target="blank" class="social-margin">
+                    <!-- <a href="http://twitter.com/" target="blank" class="social-margin">
                         <div class="social-icon twitter">
                             <i class="fa fa-twitter" aria-hidden="true"></i>
                         </div>
                     </a>
                 </div>
-            </div>
-            <div class="divider-f mb-4"> </div>
+            </div> -->
+            <!-- <div class="divider-f mb-4"> </div> -->
 
-            <div class="copyright-footer">
-                <p id="copyright" class="">© Conceptualized, Designed and Developed by Office Bearers
-                    of ACM USICT chapter.
-                </p>
-            </div>
-            <a href="#home" class="scroll-up-btn">
-                <i class="fa fa-hand-pointer-o"></i>
-            </a>
-        </div>
-    </section>
+            <!-- <div class="copyright-footer"> -->
+                <!-- <p id="copyright" class="">© Conceptualized, Designed and Developed by Office Bearers -->
+                    <!-- of ACM USICT chapter. -->
+                <!-- </p> -->
+            <!-- </div> -->
+            <!-- <a href="#home" class="scroll-up-btn"> -->
+                <!-- <i class="fa fa-hand-pointer-o"></i> -->
+            <!-- </a> -->
+        <!-- </div> -->
+    <!-- </section> -->
+
+    <?php include './footer/bootstrap-footer-17/index.html' ?>
     <!--************************************************* End of FOOTER **************************************************-->
 
 

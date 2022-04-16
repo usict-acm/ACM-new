@@ -1,0 +1,129 @@
+@import 'bootstrap/bootstrap';
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
+
+$font-primary: 'Poppins',Arial, sans-serif;
+$primary: #a3de83;
+
+body{
+	font-family: $font-primary;
+	font-size: 15px;
+	line-height: 1.8;
+	font-weight: normal;
+}
+a {
+	transition: .3s all ease;
+	&:hover, &:focus {
+		text-decoration: none !important;
+		outline: none !important;
+	}
+}
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+	line-height: 1.5;
+	font-weight: 400;
+	font-family: $font-primary;
+}
+
+
+//COVER BG
+.img,
+.blog-img,
+.user-img{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.ftco-footer-social {
+	li {
+		list-style: none;
+		margin: 0 10px 0 0;
+		display: inline-block;
+		a {
+			height: 40px;
+			width: 40px;
+			display: block;
+			background: rgba($black, .05);
+			border-radius: 50%;
+			position: relative;
+			span {
+				position: absolute;
+				font-size: 20px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+}
+
+
+//FORM CONTROL
+.form-control {
+	height: 52px;
+	background: $white;
+	color: $black;
+	font-size: 18px;
+	border-radius: 0px;
+	box-shadow: none;
+	border: 1px solid rgba(0,0,0,.1);
+	&:focus, &:active {
+		outline: none !important;
+		box-shadow: none;
+	}
+}
+textarea.form-control {
+	height: inherit!important;
+}
+
+.ftco-section{
+	padding: 12em 0;
+	h2{
+		margin-bottom: 0;
+	}
+}
+
+footer{
+	padding: 7em 0;
+}
+
+//FOOTER 07
+.footer-07{
+	background: #121212;
+	a{
+		color: $primary;
+	}
+	p{
+		color: rgba(255,255,255,.3);
+	}
+	.footer-heading{
+		font-size: 30px;
+		color: $white;
+		font-weight: 700;
+		margin-bottom: 30px;
+		.logo{
+			color: $white;
+		}
+	}
+	.menu{
+		margin-bottom: 30px;
+		a{
+			color: rgba(255,255,255,.6);
+			margin: 0 10px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+	}
+	.ftco-footer-social{
+		li{
+			a{
+				background: transparent;
+				border: 1px solid $primary;
+			}
+		}
+	}
+}

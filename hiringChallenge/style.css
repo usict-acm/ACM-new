@@ -2238,3 +2238,11 @@ a:active {
 {
   text-align: center;
 }
+@media screen and (width<1080) {
+  .fonts{
+    font-size: 10rem;
+  }
+  .prize_heading{
+    font-size: 10rem;
+  }
+}
