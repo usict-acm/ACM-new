@@ -67,6 +67,7 @@ require_once "./faqadmin/config1.php";
 
     <script>
     function submit_certificate(){
+        console.log("xyz");
     var value = $("#cno").text();
     const arr = value.split("#");
     console.log(arr[1]);
@@ -108,7 +109,7 @@ require_once "./faqadmin/config1.php";
                     </div>
                     <p id="cno">Certificate Number #</p>
 
-                    <form method="POST" enctype="multipart/form-data">
+                    <form method="POST" enctype="multipart/form-data"  onsubmit="submit_certificate()">
                         <div class="form-group">
                             <input type="text" name="txtName" id="name" class='form-control' placeholder="Enter the Name of certificate holder" required />
                         </div>
@@ -137,7 +138,7 @@ require_once "./faqadmin/config1.php";
                             <input type="text" name="txtsignedby" id="signedby" class='form-control' placeholder="Signed By" required/>
                         </div>
 
-                        <input type="submit" name="submit" class="btn btn-primary btn-md pull-right" value="Submit" onsubmit="submit_certificate()">
+                        <input type="submit" name="submit" class="btn btn-primary btn-md pull-right" value="Submit">
                     </form>
                 </div>
             </div>
