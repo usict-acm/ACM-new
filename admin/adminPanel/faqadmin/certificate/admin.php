@@ -78,7 +78,7 @@
                     <div class="page-header clearfix">
                         <h2 class="pull-left">Certificate Admin Panel</h2>
                         <a href="?table=AddCertificate" class="btn btn-primary pull-right marginset">Make Single Certificate</a>
-                        <a href="?table=AddCertificate" class="btn btn-primary pull-right">Make Certificate in Bulk</a>
+                        <a href="?table=AddBulkCertificate" class="btn btn-primary pull-right">Make Certificate in Bulk</a>
                     </div>
                     <?php
                     // Include config file

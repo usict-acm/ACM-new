@@ -66,26 +66,22 @@ require_once "./faqadmin/config1.php";
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
-    function submit_announcements(){
+    function submit_certificate(){
+    var value = $("#cno").text();
+    const arr = value.split("#");
+    console.log(arr[1]);
     var formData = new FormData();
-    formData.append('name',  $("#name").val());
-    formData.append('description', $("#description").val());
-    formData.append('startDate', $("#startDate").val());
+    formData.append('uniqueno',  arr[1]);
+    formData.append('name', $("#name").val());
+    formData.append('role', $("#role").val());
     formData.append('endDate', $("#endDate").val());
-    formData.append('button1Text',$("#button1Text").val());
-    formData.append('button1Link',$("#button1Link").val());
-    formData.append('button2Text',$("#button2Text").val());
-    formData.append('button2Link',$("#button2Link").val());
-    formData.append('viewResource', $("#viewResource").val());
-    formData.append('partners', $("#partners").val());
-    formData.append('speakers', $("#speakers").val());
-    formData.append('poster', $("#poster").prop("files")[0]);
-    formData.append('year', $("#year").val());
-    formData.append('time', $('#time').val());
-
+    formData.append('startDate',$("#startDate").val());
+    formData.append('email',$('#email').val() );
+    formData.append('signedby', $('#signedby').val());
+    
     $.ajax({
         type: "POST",
-        url: "../blogAdmin/api.php/?q=postAnnouncement",
+        url: "../blogAdmin/api.php/?q=certificateForm",
         data : formData,
         cache: false,
         processData: false,
@@ -97,10 +93,10 @@ require_once "./faqadmin/config1.php";
         error: function(xhr, status, error){
             window.location.reload();
             // alert("Fill in the details");
+            //console.log(error);
         },
     });
     }
-
     </script>
 
     <div class="wrapper">
@@ -114,27 +110,34 @@ require_once "./faqadmin/config1.php";
 
                     <form method="POST" enctype="multipart/form-data">
                         <div class="form-group">
-                            <input type="text" name="txtName" id="name" class='form-control' placeholder="Enter the Name of certificate holder" />
+                            <input type="text" name="txtName" id="name" class='form-control' placeholder="Enter the Name of certificate holder" required />
                         </div>
 
                         <div class="form-group">
-                            <input type="text" name="txtRole" id="role" class='form-control' placeholder="Enter the Role of certificate holder" />
+                            <input type="text" name="txtRole" id="role" class='form-control' placeholder="Enter the Role of certificate holder" required />
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" name="txtemail" id="email" class='form-control' placeholder="Enter the Email of certificate holder" required />
                         </div>
                        
                         <div class="form-group">
                             <label>Starting date for Program</label>
                         </div>
                         <div class="form-group">
-                            <input type="date" name="txtStartdate" id="startDate" class='form-control' />
+                            <input type="date" name="txtStartdate" id="startDate" class='form-control' required/>
                         </div>
                         <div class="form-group">
                             <label>End date for Program</label>
                         </div>
                         <div class="form-group">
-                            <input type="date" name="txtEnddate" id="endDate" class='form-control' />
+                            <input type="date" name="txtEnddate" id="endDate" class='form-control' required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="txtsignedby" id="signedby" class='form-control' placeholder="Signed By" required/>
                         </div>
 
-                        <input type="button" name="submit" class="btn btn-primary btn-md pull-right" value="Submit" onclick="submit_announcements()">
+                        <input type="submit" name="submit" class="btn btn-primary btn-md pull-right" value="Submit" onsubmit="submit_certificate()">
                     </form>
                 </div>
             </div>
