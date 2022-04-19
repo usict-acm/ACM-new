@@ -279,7 +279,7 @@
 <body>
     <!-- Header -->
     <section id="home">
-        <div class="header" id="scr-remove">
+        <div class="header" id="scr-remove" >
         
             <a class="logo-navbar" href="">Hackathon</a>
             <img src="../assets/images/acm1.png" alt="" class="logo-acm">
@@ -315,7 +315,7 @@
             
 
             <a class="logo-navbar" id="res-hack" href="">Hackathon</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" style="color: green;">
                 <!-- <span class="navbar-toggler-icon"> <i class="fa-solid fa-bars custom-icon"></i></span> -->
                  <i class="fa-solid fa-bars custom-icon" id="res-icon-ham"></i> </button>
                  
@@ -383,7 +383,7 @@
                     <div class="box" id="about_info_box">
                         <span></span>
                         <div class="content">
-                            <h2>Trellathon</h2>
+                            <center style="font-size:4rem">Trellathon</center>
                             <p>Trellathon is the largest, one of its kind, hackathon for GGSIPU students. While most of
                                 the
                                 hackathons focus on code, we at Trellathon consider the uniqueness and potential of the
@@ -475,6 +475,15 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
+                                        <div class="timeline-text">
+                                            <h6>Updated 4.0</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                          <!-- Single Timeline Content-->
@@ -483,6 +492,24 @@
                                 <p>2019</p>
                             </div>
                             <div class="row">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
+                                        <div class="timeline-text">
+                                            <h6>Updated 4.0</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
+                                        <div class="timeline-text">
+                                            <h6>Updated 4.0</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-12 col-md-6 col-lg-4">
                                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
                                         <div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
@@ -526,6 +553,15 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
+                                        <div class="timeline-text">
+                                            <h6>Updated 4.0</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                          <!-- Single Timeline Content-->
@@ -546,11 +582,20 @@
                             </div>
                         </div>
                          <!-- Single Timeline Content-->
-                         <div class="single-timeline-area">
+                        <div class="single-timeline-area">
                             <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
                                 <p>2019</p>
                             </div>
                             <div class="row">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
+                                        <div class="timeline-text">
+                                            <h6>Updated 4.0</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-12 col-md-6 col-lg-4">
                                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
                                         <div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
