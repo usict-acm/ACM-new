@@ -449,6 +449,262 @@
 
     <!--****************************************************** TIMELINE *******************************************************-->
 
+    
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <section class="timeline_area section_padding_130">
+        <div class="container">
+            <div class="row justify-content-center">
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <!-- Timeline Area-->
+                    <div class="apland-timeline-area">
+                         <!-- Single Timeline Content-->
+                         <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>2019</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
+                                        <div class="timeline-text">
+                                            <h6>Updated 4.0</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Single Timeline Content-->
+                         <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>2019</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
+                                        <div class="timeline-text">
+                                            <h6>Updated 4.0</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Single Timeline Content-->
+                         <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>2019</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
+                                        <div class="timeline-text">
+                                            <h6>Updated 4.0</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Single Timeline Content-->
+                         <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>2019</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
+                                        <div class="timeline-text">
+                                            <h6>Updated 4.0</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Single Timeline Content-->
+                         <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>2019</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
+                                        <div class="timeline-text">
+                                            <h6>Updated 4.0</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- Single Timeline Content-->
+                         <div class="single-timeline-area">
+                            <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                <p>2019</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                        <div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
+                                        <div class="timeline-text">
+                                            <h6>Updated 4.0</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <style type="text/css">
+    body {
+        margin-top: 20px;
+        background-color:black;
+        
+    }
+
+    .timeline_area {
+        position: relative;
+        z-index: 1;
+        
+    }
+    .single-timeline-area {
+        position: relative;
+        z-index: 1;
+        padding-left: 180px;
+    }
+    @media only screen and (max-width: 575px) {
+        .single-timeline-area {
+            padding-left: 100px;
+        }
+    }
+    .single-timeline-area .timeline-date {
+        position: absolute;
+        width: 180px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        padding-right: 60px;
+    }
+    @media only screen and (max-width: 575px) {
+        .single-timeline-area .timeline-date {
+            width: 100px;
+        }
+    }
+    .single-timeline-area .timeline-date::after {
+        position: absolute;
+        width: 3px;
+        height: 100%;
+        content: "";
+        background-color: #ffd300;
+        top: 0;
+        right: 30px;
+        z-index: 1;
+    }
+    .single-timeline-area .timeline-date::before {
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background-color: white;
+        content: "";
+        top: 50%;
+        right: 26px;
+        z-index: 5;
+        margin-top: -5.5px;
+    }
+    .single-timeline-area .timeline-date p {
+        margin-bottom: 0;
+        color: white;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .single-timeline-area .single-timeline-content {
+        position: relative;
+        z-index: 1;
+        padding: 30px 30px 25px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+        box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+        border: 3px solid #ffd300;
+    }
+    @media only screen and (max-width: 575px) {
+        .single-timeline-area .single-timeline-content {
+            padding: 20px;
+        }
+    }
+    .single-timeline-area .single-timeline-content .timeline-icon {
+        -webkit-transition-duration: 500ms;
+        transition-duration: 500ms;
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 30px;
+        flex: 0 0 30px;
+        text-align: center;
+        max-width: 30px;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+    .single-timeline-area .single-timeline-content .timeline-icon i {
+        color: #ffd300;
+        line-height: 30px;
+    }
+    .single-timeline-area .single-timeline-content .timeline-text h6 {
+        -webkit-transition-duration: 500ms;
+        transition-duration: 500ms;
+    }
+    .single-timeline-area .single-timeline-content .timeline-text p {
+        font-size: 18px;
+        margin-bottom: 0;
+        color:white;
+    }
+    .single-timeline-area .single-timeline-content:hover .timeline-icon,
+    .single-timeline-area .single-timeline-content:focus .timeline-icon {
+        background-color: white;
+    }
+    .single-timeline-area .single-timeline-content:hover .timeline-text h6,
+    .single-timeline-area .single-timeline-content:focus .timeline-text h6 {
+        color: white;
+    }
+    
+    </style>
+    
+    <script type="text/javascript">
+    
+    </script>
+ 
+
+
     <!-- <div class="container-timeline">
     <h1 class = "timeline-heading mb-sm text-center heading-partner">Timeline</h1>
     <div class="timeline">
@@ -542,7 +798,7 @@
 
 	</div>
 </div> -->
-    <script>
+    <!-- <script>
         let height = document.querySelector(".liTimeline").offsetHeight;
         console.log(height);
     </script>
@@ -551,7 +807,7 @@
         <div class="timeline" id="timeline">
             <h1 class="mb-sm text-center heading-partner fonts">#include < Timeline>
             </h1>
-            <!-- <h1 class="timeline-trellathon neon-text">TRELLATHON</h1> -->
+    
             <div>
                 <ul>
                     <li class="timeline-li">
@@ -566,8 +822,7 @@
                         <div>
                             <time>16th March 2021
                                 PROBLEM STATEMENT RELEASE</time>
-                            <!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-      </p> -->
+                            
                         </div>
                     </li>
                     <li class="timeline-li">
@@ -602,7 +857,7 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 
