@@ -23,6 +23,16 @@
 
 
     <style>
+        .fa-solid, .fas {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: aliceblue;
+        }   
+        #res-icon-ham{
+            height:"2px";
+        }
+        
+
         body {
             font-family: 'Montserrat', sans-serif;
 
@@ -230,6 +240,36 @@
             height: 60vh;
             background-color: black;
         }
+        .header{
+            overflow:hidden;
+        }
+        #scr-remove{
+            overflow:hidden;
+        }
+        .header .logo-navbar {
+    color: #ffd300;
+    display: block;
+    float: left;
+    font-size: 2.3em;
+    /* padding: 2px 0px; */
+    margin-left: 85px;
+    font-family: Montserrat;
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    left: 80px;
+    top: 8px;
+    /* right: 10px; */
+    /* bottom: 9px; */
+}
+.navbar-light .navbar-toggler {
+    position: relative;
+    color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.1);
+    right: -3vh;
+    top: .3vh;
+}
+
     </style>
 
 
@@ -239,7 +279,8 @@
 <body>
     <!-- Header -->
     <section id="home">
-        <div class="header">
+        <div class="header" id="scr-remove">
+        
             <a class="logo-navbar" href="">Hackathon</a>
             <img src="../assets/images/acm1.png" alt="" class="logo-acm">
             <ul id="nav-items-nonres" class="menu">
@@ -271,10 +312,14 @@
     <nav id="nav-items-res" class="navbar navbar-light  fixed-top">
         <div class="container-fluid">
             <img src="../assets/images/acm1.png" alt="" class="logo-acm">
+            
 
             <a class="logo-navbar" id="res-hack" href="">Hackathon</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
+                <!-- <span class="navbar-toggler-icon"> <i class="fa-solid fa-bars custom-icon"></i></span> -->
+                 <i class="fa-solid fa-bars custom-icon" id="res-icon-ham"></i> </button>
+                 
+                
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">

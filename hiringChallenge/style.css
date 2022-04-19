@@ -73,6 +73,20 @@ a {
   to {
     background-position: 200% center;
   }
+
+/* Navbar responsive nature  */
+/* .navbar-light .navbar-toggler-icon {
+  
+  background-color: chocolate;
+  height: 3vh;
+  width: 3vh;
+} */
+.navbar-light .navbar-toggler {
+  color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(237 210 17) !important;
+}
+
+
   /* ----------------------------------------------ANIMATION-------------------------- */
 }
 
@@ -191,7 +205,7 @@ canvas {
   color: #ffd300;
   display: block;
   float: left;
-  font-size: 3.3em;
+  font-size: 2.3em;
   /* padding: 2px 0px; */
   margin-left: 85px;
   font-family: Montserrat;
@@ -2245,4 +2259,21 @@ a:active {
   .prize_heading{
     font-size: 10rem;
   }
+}
+
+
+/* .fa-bars:before, .fa-navicon:before {
+  content: "\f0c9";
+  color: antiquewhite;
+  height: 5vh;
+  width: 4vh;
+} */
+/* .fa-solid .fa-bars{
+  content: "\f0c9";
+  
+  height: 5vh;
+  width: 4vh;
+} */
+.custom-icon{
+  color: antiquewhite !important;
 }
