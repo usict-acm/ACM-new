@@ -298,9 +298,8 @@
         <div class="home-text">
             <h1 class="vibrate-1" id="mainhead">TRELLATHON</h1>
             <div class="home-text">
-                <h1>TRELLATHON</h1>
-                <h2>4-HOUR HACKATHON</h2>
-                <h2>9TH MARCH 2021</h2>
+                <h2 class="hero-text">4-HOUR HACKATHON</h2>
+                <h2 class="hero-text">9TH MARCH 2021</h2>
             </div>
 
 
@@ -1232,8 +1231,8 @@
         <div class="container-contact" id="contact">
             <div class="content">
                 <div class="left-side">
-                    <div class="address details" style="width: 25vw ;height:40vh;">
-                        <iframe id="frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.203073386905!2d77.01843216508175!3d28.59368408243313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1aafdb891567%3A0x10d270731c930a87!2sGuru%20Gobind%20Singh%20Indraprastha%20University!5e0!3m2!1sen!2sin!4v1648644072880!5m2!1sen!2sin" style="width: 24vw ;height:35vh; border-radius:1rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="address details" style="width: 100vw ;height:40vh;">
+                        <iframe id="frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.203073386905!2d77.01843216508175!3d28.59368408243313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1aafdb891567%3A0x10d270731c930a87!2sGuru%20Gobind%20Singh%20Indraprastha%20University!5e0!3m2!1sen!2sin!4v1648644072880!5m2!1sen!2sin" style="width: 50vw ;height:35vh; border-radius:1rem; object-fit:contain;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="phone-email" style="display: flex">
                         <div class="address details">

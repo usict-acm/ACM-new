@@ -2277,3 +2277,7 @@ a:active {
 .custom-icon{
   color: antiquewhite !important;
 }
+.hero-text{
+  font-size: 3.33rem;
+  font-weight: bold;
+}
