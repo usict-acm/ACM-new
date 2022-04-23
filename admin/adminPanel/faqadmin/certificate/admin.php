@@ -128,7 +128,7 @@
                                         
                                         echo "<td>";
                                             echo "<a class='tash-bin' title='Mail Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-envelope'></span></a>";
-                                            echo "<a class='edit-logo' title='Edit Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
+                                            echo "<a class='edit-logo' href='faqadmin/certificate_edit.php?Sno=". $row['uniqueNo'] ."' title='Edit Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
                                             echo "<a class='tash-bin 'href='faqadmin/certificate_delete.php?Sno=". $row['uniqueNo'] ."' title='Delete Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                             echo "<a class='edit-logo' title='Download Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-download-alt'></span></a>";
 
