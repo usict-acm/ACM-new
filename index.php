@@ -188,141 +188,6 @@
 		<div class="">
 			<h2 class="my-4 display-4 fw-bolder text-center">Office<span class="text-blue"> Bearers</span></h2>
 		</div>
-		<!-- <div class="our-team-area my-5">
-			<div class="container">
-				<div class="row margin-media">
-					<div class="col-md-2">
-						<div class="our-team-sir row">
-							<div class="our-team col-lg-4">
-								<div class="our-team-left">
-									<div class="name">
-										<h5 class="text-center">Prof. Pravin Chandra</h5>
-										<p class="text-center">Dean, USICT</p>
-									</div>
-									<img src="./assets/images/team/deanSir.jpeg" alt="">
-								</div>
-							</div>
-							<div class="our-team col-lg-4">
-								<div class="our-team-left">
-									<div class="name">
-										<h5 class="text-center">Dr. Ruchi Sehrawat</h5>
-										<p class="text-center">Branch Mentor, ACM USS</p>
-									</div>
-									<img src="./assets/images/team/ruchi-sehrawat.jpg" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-2">
-						<div class="our-team-sir row">
-							<div class="our-team col-lg-4">
-								<div class="our-team-left">
-									<div class="name">
-										<h5 class="text-center">Dr. Rahul Johari</h5>
-										<p class="text-center">Branch Mentor, ACM USS</p>
-									</div>
-									<img src="./assets/images/team/rahulsir.jpg" alt="">
-								</div>
-							</div>
-							<div class="our-team col-lg-4">
-								<div class="our-team-left">
-									<div class="name">
-										<h5 class="text-center">Dr. Jaspreeti Singh</h5>
-										<p class="text-center">Branch Mentor, ACM USS</p>
-									</div>
-									<img src="./assets/images/team/jaspreeti-singh.jpg" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-					<div class="col-md-8 webTeam">
-						<div class="our-team-row row">
-							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">
-									<a class="social" class="social" href="https://www.linkedin.com/in/harsh-goyal-195255b9/" target="_blank">
-										<i class="fab fa-linkedin" arial-hidden="true"></i>
-									</a>
-									<div class="name">
-										<h5 class="text-center">Harsh Goyal</h5>
-										<p class="text-center">Chair</p>
-									</div>
-									<img src="./assets/images/team/harshGoyal.png" alt="">
-								</div>
-							</div>
-
-							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">
-									<a class="social" href="https://www.linkedin.com/in/anuj-talwar/" target="_blank">
-										<i class="fab fa-linkedin" arial-hidden="true"></i>
-									</a>
-									<div class="name">
-										<h5 class="text-center">Anuj Talwar</h5>
-										<p class="text-center">Vice Chair</p>
-									</div>
-									<img src="./assets/images/team/Anuj.jpg" alt="">
-								</div>
-							</div>
-
-							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">
-									<a class="social" href="https://www.linkedin.com/in/tarun-037091194" target="_blank">
-										<i class="fab fa-linkedin" arial-hidden="true"></i>
-									</a>
-									<div class="name">
-										<h5 class="text-center">Tarun</h5>
-										<p class="text-center">Secretary</p>
-									</div>
-									<img src="./assets/images/team/Tarun.jpg" alt="">
-								</div>
-							</div>
-
-							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">
-									<a class="social" href="https://www.linkedin.com/in/karan-deep/" target="_blank">
-										<i class="fab fa-linkedin" arial-hidden="true"></i>
-									</a>
-									<div class="name">
-										<h5 class="text-center">Karan Deep Singh</h5>
-										<p class="text-center">Treasurer</p>
-									</div>
-									<img src="./assets/images/team/Karan.jpeg" alt="">
-								</div>
-							</div>
-
-							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">
-									<a class="social" href="https://www.linkedin.com/in/moulik-agrawal/" target="_blank">
-										<i class="fab fa-linkedin" arial-hidden="true"></i>
-									</a>
-									<div class="name">
-										<h5 class="text-center">Moulik Agrawal</h5>
-										<p class="text-center">Web Chair</p>
-									</div>
-									<img src="./assets/images/team/Moulik.jpg" alt="">
-								</div>
-							</div>
-
-							<div class="our-team col-6 col-md-6 col-lg-4">
-								<div class="our-team-right">
-									<a class="social" href="https://www.linkedin.com/in/anurag-parashar/" target="_blank">
-										<i class="fab fa-linkedin" arial-hidden="true"></i>
-									</a>
-									<div class="name">
-										<h5 class="text-center">Anurag Parashar</h5>
-										<p class="text-center">Membership Chair</p>
-									</div>
-									<img src="./assets/images/team/anurag.jpg" alt="">
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-	 <!-- <div class="team"> -->
 	 <div class="row justify-content-center">
       <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
@@ -335,17 +200,6 @@
           <p>Dean, USICT</p>
         </div>
       </div>
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/ruchi-sehrawat.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Dr. Ruchi Sehrawat</h3>
-          <p>Branch Mentor, ACM USS</p>
-        </div>
-      </div>
       <!-- <div class="gap"></div> -->
 	  <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
@@ -355,6 +209,17 @@
         </div>
         <div class="caption">
           <h3>Dr. Rahul Johari</h3>
+          <p>Branch Mentor, ACM USS</p>
+        </div>
+      </div>
+	  <div class="profile-card col-md-4 col-sm-6">
+        <div class="img">
+          <img
+            src="./assets/images/team/ruchi-sehrawat.jpg"
+          />
+        </div>
+        <div class="caption">
+          <h3>Dr. Ruchi Sehrawat</h3>
           <p>Branch Mentor, ACM USS</p>
         </div>
       </div>
