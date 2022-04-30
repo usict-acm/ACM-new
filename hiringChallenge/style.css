@@ -25,16 +25,27 @@ a {
 
 .home-text {
   color: yellow;
-  margin-top: 89px;
-  position: absolute;
+  display: flex;
   top: 190px;
-  left: 150px;
+  flex-direction: column;
+  margin-top: 20vh;
+  text-align: center;
+  align-items:center;
+  justify-content: center;
+ 
 }
 
 h1:first-child {
+  margin: 0%;
+  padding: 0%;
+  display: flex;
   font-weight: bold;
-  font-size: 75px;
+  font-size: 9vw;
   margin-bottom: 20px;
+  align-items:center;
+  justify-content: center;
+  text-align:center;
+
 }
 
 .link-arrow:after {
@@ -69,6 +80,7 @@ h1:first-child {
   font-size: 16px;
   color: rgb(133, 133, 133);
 }
+
 
 .link:active,
 .link:focus,
