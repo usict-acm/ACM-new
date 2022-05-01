@@ -96,8 +96,8 @@
                                     echo "<tr>";
                                         echo "<th>Unique No.</th>";
                                         echo "<th>Participant Name</th>";
-                                        echo "<th>email</th>";
-                                        echo "<th>role</th>";
+                                        echo "<th>Email</th>";
+                                        echo "<th>Role of the Participant</th>";
                                         echo "<th>Start Date</th>";
                                         echo "<th>End Date</th>";
                                         echo "<th>Signed By</th>";

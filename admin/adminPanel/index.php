@@ -179,6 +179,9 @@
                          case 'AddBulkCertificate':
                             include('./faqadmin/certificate/adminbulkadd.php');
                             break;
+                        case 'certificateCreation':
+                            include('./faqadmin/certificate/certificate-created.php');
+                            break;
                         default:
                             include('./faqadmin/index.php');
                             break;

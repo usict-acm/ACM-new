@@ -67,36 +67,55 @@ require_once "./faqadmin/config1.php";
 
     <script>
     function submit_certificate(){
-        console.log("xyz");
-    var value = $("#cno").text();
-    const arr = value.split("#");
-    console.log(arr[1]);
-    var formData = new FormData();
-    formData.append('uniqueno',  arr[1]);
-    formData.append('name', $("#name").val());
-    formData.append('role', $("#role").val());
-    formData.append('endDate', $("#endDate").val());
-    formData.append('startDate',$("#startDate").val());
-    formData.append('email',$('#email').val() );
-    formData.append('signedby', $('#signedby').val());
-    
-    $.ajax({
-        type: "POST",
-        url: "../blogAdmin/api.php/?q=certificateForm",
-        data : formData,
-        cache: false,
-        processData: false,
-        contentType: false,
-        success: function(data){
-            alert(data.message);
-            window.location.reload();
-        },
-        error: function(xhr, status, error){
-            window.location.reload();
-            // alert("Fill in the details");
-            //console.log(error);
-        },
-    });
+        let val = document.querySelector("#cno").value;
+        let email_value = document.querySelector("#email").value;
+        let name_value = document.querySelector("#name").value;
+        let role_value = document.querySelector("#role").value;
+        let startDate_value = document.querySelector("#startDate").value;
+        let endDate_value = document.querySelector("#endDate").value;
+        let signedby_value = document.querySelector("#signedby").value;
+
+        // console.log(email_value);
+        // var val = $("#cno").value;
+            const arr = val.split("#");
+            console.log(arr);
+        if(!email_value || !name_value || !role_value || !startDate_value || !endDate_value || !signedby_value){
+            alert("Please fill all the details");
+        }
+        else{
+                console.log("xyz");
+
+            var formData = new FormData();
+            formData.append('uniqueno',  arr[0]);
+            formData.append('name', $("#name").val());
+            formData.append('role', $("#role").val());
+            formData.append('endDate', $("#endDate").val());
+            formData.append('startDate',$("#startDate").val());
+            formData.append('email',$('#email').val());
+            formData.append('signedby', $('#signedby').val());
+
+            $.ajax({
+                type: "POST",
+                url: "../blogAdmin/api.php/?q=certificateForm",
+                data : formData,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function(data){
+                    alert(data.message);
+                    // window.location.reload();
+                // window.location.replace('./index.php?table=certificateCreation');
+                window.location.replace('../../index.php?table=certificateCreation');
+
+                },
+                error: function(xhr, status, error){
+                    window.location.reload();
+                    // alert("Fill in the details");
+                    //console.log(error);
+                },
+            });
+
+        }
     }
     </script>
 
@@ -107,38 +126,44 @@ require_once "./faqadmin/config1.php";
                     <div class="page-header">
                         <h2>Create Certificate</h2>
                     </div>
-                    <p id="cno">Certificate Number #</p>
+                    <!-- <p id="cno">Certificate Number #</p> -->
 
-                    <form method="POST" enctype="multipart/form-data"  onsubmit="submit_certificate()">
+                    <form method="POST" enctype="multipart/form-data">
+
                         <div class="form-group">
-                            <input type="text" name="txtName" id="name" class='form-control' placeholder="Enter the Name of certificate holder" required />
+                            <input type="text" name="uniqueno" id="cno" class='form-control' readonly/>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" name="txtRole" id="role" class='form-control' placeholder="Enter the Role of certificate holder" required />
+                            <input type="text" name="name" id="name" class='form-control' placeholder="Enter the Name of certificate holder" required/>
                         </div>
 
                         <div class="form-group">
-                            <input type="email" name="txtemail" id="email" class='form-control' placeholder="Enter the Email of certificate holder" required />
+                            <input type="text" name="role" id="role" class='form-control' placeholder="Enter the Role of certificate holder" required/>
                         </div>
                        
                         <div class="form-group">
                             <label>Starting date for Program</label>
                         </div>
                         <div class="form-group">
-                            <input type="date" name="txtStartdate" id="startDate" class='form-control' required/>
+                            <input type="date" name="startDate" id="startDate" class='form-control' required/>
                         </div>
                         <div class="form-group">
                             <label>End date for Program</label>
                         </div>
                         <div class="form-group">
-                            <input type="date" name="txtEnddate" id="endDate" class='form-control' required/>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="txtsignedby" id="signedby" class='form-control' placeholder="Signed By" required/>
+                            <input type="date" name="endDate" id="endDate" class='form-control' required/>
                         </div>
 
-                        <input type="submit" name="submit" class="btn btn-primary btn-md pull-right" value="Submit">
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" class='form-control' placeholder="Enter the Email of certificate holder" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="signedby" id="signedby" class='form-control' placeholder="Signed By" required/>
+                        </div>
+
+                        <input type="submit" name="submit" class="btn btn-primary btn-md pull-right" onclick="submit_certificate()" value="Submit">
                     </form>
                 </div>
             </div>
@@ -150,7 +175,7 @@ require_once "./faqadmin/config1.php";
     <script src="assets/js/script.js"></script>
     <script>
         function generate() {
-        console.log("called");
+        // console.log("called");
         var length = 10;
         var cno = document.getElementById("cno");
         const characters = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,'a','b','c','d','e','f'];
@@ -158,7 +183,8 @@ require_once "./faqadmin/config1.php";
         const randomIndex = Math.floor(Math.random() * characters.length);
 		    return characters[randomIndex];
 	    });
-        cno.textContent += generated.join('');
+        cno.value += generated.join('');
+        // console.log(generated.join(''));
     }
     </script>
 
