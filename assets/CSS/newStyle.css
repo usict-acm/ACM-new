@@ -2172,20 +2172,28 @@ a:hover {
 	color: #3b5998;
 }
 
-.social-btns .btn.twitter:before {
-	background-color: #3cf;
+.social-btns .btn.linkedin:before {
+	background-color:  #0072b1;
 }
 
-.social-btns .btn.twitter .fa {
-	color: #3cf;
+.social-btns .btn.linkedin .fa {
+	color:  #0072b1;
 }
 
-.social-btns .btn.dribbble:before {
+.social-btns .btn.instagram:before {
 	background-color: #f26798;
 }
 
-.social-btns .btn.dribbble .fa {
+.social-btns .btn.instagram .fa {
 	color: #f26798;
+}
+
+.social-btns .btn.discord .fa {
+	color: 5865F2;
+}
+
+.social-btns .btn.discord:before {
+	background-color: #5865F2;
 }
 
 .social-btns .btn.skype:before {

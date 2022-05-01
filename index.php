@@ -347,23 +347,30 @@
 			</div>
 		</div>
 		<div class="try1">
-			<a class="btn twitter" href="https://linkedin.com/company/acmusict" target="_blank"><i class="fab fa fa-linkedin"></i></a>
+			<a class="btn linkedin" href="https://linkedin.com/company/acmusict" target="_blank"><i class="fab fa fa-linkedin"></i></a>
 			<div class="write" id="wrete">
-				<h1 class="sob-heading">1000</h1>
+				<h1 class="sob-heading">6000+</h1>
 				<p class="gratext">LinkedIn Reach</p>
 			</div>
 		</div>
 		<div class="try1">
-			<a class="btn dribbble" href="https://instagram.com/acmusict/" target="_blank"><i class=" fa fa fa-instagram"></i></a>
+			<a class="btn instagram" href="https://instagram.com/acmusict/" target="_blank"><i class=" fa fa fa-instagram"></i></a>
 			<div class="write" id="wrete">
-				<h1 class="sob-heading">300+</h1>
+				<h1 class="sob-heading">450+</h1>
 				<p class="gratext">Instagram Followers</p>
+			</div>
+		</div>
+		<div class="try1">
+			<a class="btn discord" href="https://discord.com/invite/fbAJs85rzT" target="_blank"><i class=" fa fa fa-discord"></i></a>
+			<div class="write" id="wrete">
+				<h1 class="sob-heading">600+</h1>
+				<p class="gratext">Discord Members</p>
 			</div>
 		</div>
 		<div class="try1">
 			<a class="btn skype"><i class="fa fa fa-child"></i></a>
 			<div class="write" id="wrete">
-				<h1 class="sob-heading">1000+</h1>
+				<h1 class="sob-heading">1500+</h1>
 				<p class="gratext">Connected Students</p>
 			</div>
 		</div>

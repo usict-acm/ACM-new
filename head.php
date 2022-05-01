@@ -28,13 +28,12 @@ content=">GGSIP University USS ACM Student Chapter is an official student body i
 
 <!-- Bootstrap CDN -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 <link href="https://fonts.gstatic.com" rel="preconnect">
 
 <!-- CSS Files -->
 <link href="./assets/CSS/header.css" rel="stylesheet" />
 <link href="./assets/CSS/footer.css" rel="stylesheet" />
-<link rel="stylesheet" href="./activeNavbar.css">
 
 <!-- Google fonts  -->
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet">
