@@ -2188,7 +2188,7 @@ a:hover {
 	color: #f26798;
 }
 
-.social-btns .btn.discord .fa {
+.social-btns .btn.discord .fab {
 	color: #5865F2;
 }
 
@@ -2215,7 +2215,9 @@ a:hover {
 }
 
 .social-btns .btn:focus .fa,
-.social-btns .btn:hover .fa {
+.social-btns .btn:hover .fa,
+.social-btns .btn:focus .fab,
+.social-btns .btn:hover .fab {
 	color: #fff;
 	transform: scale(1);
 }
@@ -2251,7 +2253,7 @@ a:hover {
 	transform: rotate(45deg);
 }
 
-.social-btns .btn .fa {
+.social-btns .btn .fa,.social-btns .btn .fab {
 	font-size: 70px;
 	vertical-align: middle;
 }
