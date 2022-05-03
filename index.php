@@ -342,7 +342,7 @@
 		<div class="try1">
 			<a class="btn facebook" href="https://facebook.com/acmusict" target="_blank"><i class="fa fa-facebook"></i></a>
 			<div class="write" id="wrete">
-				<h1 class="sob-heading">700</h1>
+				<h1 class="sob-heading">700+</h1>
 				<p class="gratext">Facebook Followers</p>
 			</div>
 		</div>
@@ -361,7 +361,7 @@
 			</div>
 		</div>
 		<div class="try1">
-			<a class="btn discord" href="https://discord.com/invite/fbAJs85rzT" target="_blank"><i class=" fa fa fa-discord"></i></a>
+			<a class="btn discord" href="https://discord.com/invite/fbAJs85rzT" target="_blank"><i class=" fab fa-discord"></i></a>
 			<div class="write" id="wrete">
 				<h1 class="sob-heading">600+</h1>
 				<p class="gratext">Discord Members</p>
