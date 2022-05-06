@@ -349,7 +349,8 @@ function yearWiseEvent1()
 
         // Turn to JSON & output
         $sendResponse = json_encode($posts_arr);
-        var_dump($sendResponse);
+        echo json_last_error();
+        // var_dump($sendResponse);
         var_dump($posts_arr);
         echo $sendResponse;
         //    echo "5";
