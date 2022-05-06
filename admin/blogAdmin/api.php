@@ -349,7 +349,9 @@ function yearWiseEvent1()
 
         // Turn to JSON & output
         $sendResponse = json_encode($posts_arr);
-        echo json_last_error();
+        echo $sendResponse;
+        echo json_last_error() + " Something went wrong here \n";
+        echo json_last_error_msg() + " or maybe here";
         // var_dump($sendResponse);
         var_dump($posts_arr);
         echo $sendResponse;
