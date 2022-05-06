@@ -326,7 +326,7 @@ function yearWiseEvent1()
     // Blog post query
     $result = $post->eventFolder();
        echo "check4";
-    // var_dump($result);
+    var_dump($result);
 
     // Check if any posts
     if ($result) {
@@ -335,7 +335,7 @@ function yearWiseEvent1()
         $posts_arr = array();
 
         while ($row = $result->fetch_assoc()) {
-            //    echo $row;
+               echo $row;
             $post_item = array(
                 'sno' => $row["sno"],
                 'year' => $row["year"],
@@ -349,7 +349,7 @@ function yearWiseEvent1()
 
         // Turn to JSON & output
         echo json_encode($posts_arr);
-        //    echo "5";
+           echo "5";
 
     } else {
         // No Posts
