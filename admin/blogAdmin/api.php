@@ -348,7 +348,10 @@ function yearWiseEvent1()
         }
 
         // Turn to JSON & output
-        echo json_encode($posts_arr);
+        $sendResponse = json_encode($posts_arr);
+        var_dump($sendResponse);
+        var_dump($posts_arr);
+        echo $sendResponse;
         //    echo "5";
 
     } else {

@@ -149,6 +149,7 @@
       $.ajax({
         url: urlEventIndex,
         method: 'GET',
+        dataType: 'JSON',
         success: function(data) {
           console.log("check data ", data);
           data.forEach(allEventmore);
