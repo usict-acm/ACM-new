@@ -311,22 +311,22 @@ function postblog()
 function yearWiseEvent1()
 {
     // include_once '../../events/eventPost.php';
-      echo "checing";
+    //   echo "checing";
     // Instantiate DB & connect
     $database = new Database();
-    echo "check1";
+    // echo "check1";
     $db = $database->connect();
-    echo "check2";
+    // echo "check2";
     // echo $db;
     // echo "checking";
     // Instantiate blog post object
     $post = new PostEvent($db);
-       echo "check3";
+    //    echo "check3";
 
     // Blog post query
     $result = $post->eventFolder();
-       echo "check4";
-    var_dump($result);
+    //    echo "check4";
+    // var_dump($result);
 
     // Check if any posts
     if ($result) {
@@ -335,7 +335,7 @@ function yearWiseEvent1()
         $posts_arr = array();
 
         while ($row = $result->fetch_assoc()) {
-               echo $row;
+            //    echo $row;
             $post_item = array(
                 'sno' => $row["sno"],
                 'year' => $row["year"],
@@ -349,7 +349,7 @@ function yearWiseEvent1()
 
         // Turn to JSON & output
         echo json_encode($posts_arr);
-           echo "5";
+        //    echo "5";
 
     } else {
         // No Posts
@@ -501,7 +501,7 @@ function carouselFunctionAPI()
     // var_dump($count);
     // echo sizeof($count);
 
-    if (sizeof($count == 1)) {
+    if (sizeof($count)==1) {
         // echo "dfgh";
         $result = $post->carouselquerryOne();
     } else {
