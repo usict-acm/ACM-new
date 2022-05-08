@@ -348,7 +348,13 @@ function yearWiseEvent1()
         }
 
         // Turn to JSON & output
-        echo json_encode($posts_arr);
+        $sendResponse = json_encode($posts_arr);
+        // echo $sendResponse;
+        // echo json_last_error()." Something went wrong here \n";
+        // echo json_last_error_msg()." or maybe here";
+        // var_dump($sendResponse);
+        // var_dump($posts_arr);
+        echo $sendResponse;
         //    echo "5";
 
     } else {
@@ -407,6 +413,17 @@ function rejectRequest()
             array('message' => 'Internal Server Error. Try Again')
         );
     }
+}
+
+function utf8ize( $mixed ) {
+    if (is_array($mixed)) {
+        foreach ($mixed as $key => $value) {
+            $mixed[$key] = utf8ize($value);
+        }
+    } elseif (is_string($mixed)) {
+        return mb_convert_encoding($mixed, "UTF-8", "UTF-8");
+    }
+    return $mixed;
 }
 
 function readEvents()
@@ -469,7 +486,7 @@ function readEvents()
         array_push($multi_array, $count);
         array_push($multi_array, $pages);
         // Turn to JSON & output
-        echo json_encode($multi_array);
+        echo json_encode(utf8ize($multi_array));
     } else {
         // No Posts
         echo json_encode(
@@ -501,7 +518,7 @@ function carouselFunctionAPI()
     // var_dump($count);
     // echo sizeof($count);
 
-    if (sizeof($count == 1)) {
+    if (sizeof($count)==1) {
         // echo "dfgh";
         $result = $post->carouselquerryOne();
     } else {
