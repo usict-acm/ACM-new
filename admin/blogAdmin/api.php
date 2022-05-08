@@ -56,7 +56,7 @@ function read()
         array_push($multi_array_posts, $pages);
 
         // Turn to JSON & output
-        echo json_encode($multi_array_posts);
+        echo json_encode(utf8ize($multi_array_posts));
         // echo json_encode($pages);
 
     } else {
@@ -92,7 +92,7 @@ function readCategory()
         }
 
         // Turn to JSON & output
-        echo json_encode($posts_arr);
+        echo json_encode(utf8ize($posts_arr));
     } else {
         // No Posts
         echo json_encode(
@@ -135,7 +135,7 @@ function showCategory()
         }
 
         // Turn to JSON & output
-        echo json_encode($posts_arr);
+        echo json_encode(utf8ize($posts_arr));
     } else {
         // No Posts
         echo json_encode(
@@ -177,7 +177,7 @@ function read_home()
         }
 
         // Turn to JSON & output
-        echo json_encode($posts_arr);
+        echo json_encode(utf8ize($posts_arr));
     } else {
         // No Posts
         echo json_encode(
@@ -222,7 +222,7 @@ function read_one()
         }
 
         // Turn to JSON & output
-        echo json_encode($posts_arr);
+        echo json_encode(utf8ize($posts_arr));
     } else {
         // No Posts
         echo json_encode(
@@ -256,7 +256,7 @@ function getImage()
         }
 
         // Turn to JSON & output
-        echo json_encode($posts_arr);
+        echo json_encode(utf8ize($posts_arr));
     } else {
         // No Posts
         echo json_encode(
