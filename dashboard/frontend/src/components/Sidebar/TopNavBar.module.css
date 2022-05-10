@@ -1,0 +1,61 @@
+ul {
+  list-style-type: none;   
+}
+li {
+    padding: 5px;
+    font-family: sans-serif;
+}
+
+.NavBarItems {
+    display: none;
+}
+
+a {
+    color: black;
+}
+
+
+
+.NavMenu {
+    display: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin-right: 2rem;
+
+}
+
+
+@media screen and (max-width: 768px){
+    .NavBarItems {
+        display: flex;
+        position: relative;
+    }
+
+    .BarsIcon {
+        transform: scale(1.5);
+    }
+
+    
+    .NavMenuActive {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 40px;
+        left: -100%;
+        z-index: 500;
+        transition: all 0.5s ease;
+        background-color: white;
+        border-radius: 0.4375rem;
+        width: 150px;
+        color: black;
+        text-align: left;
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        text-decoration: none;
+
+    }
+}

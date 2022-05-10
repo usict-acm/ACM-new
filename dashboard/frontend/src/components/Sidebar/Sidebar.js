@@ -26,6 +26,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "redux/slices/userSlice";
 import ResetPassword from "components/ResetPassword";
 import { logout } from "api/user";
+import TopNavBar from './TopNavBar';
 
 const Sidebar = (props) => {
   const [showModal, setShowModal] = useState(false);
@@ -83,20 +84,26 @@ const Sidebar = (props) => {
   }
 
   return (
+    
     <Navbar
       className="navbar-vertical fixed-left navbar-light bg-white"
       expand="md"
       id="sidenav-main"
+      
+      
     >
       <Container fluid>
+
+        
+
         {/* Toggler */}
-        <button
+        {/* <button
           className="navbar-toggler"
           type="button"
           onClick={toggleCollapse}
         >
           <span className="navbar-toggler-icon" />
-        </button>
+        </button> */}
         {/* Brand */}
         <NavbarBrand className="pt-0" {...navbarBrandProps}>
           <img
@@ -105,6 +112,7 @@ const Sidebar = (props) => {
             src={require("../../assets/img/brand/acm1.png").default}
           />
         </NavbarBrand>
+        <TopNavBar />
         {/* User */}
         <Nav className="align-items-center d-md-none">
           <UncontrolledDropdown nav>

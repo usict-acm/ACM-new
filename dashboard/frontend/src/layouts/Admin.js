@@ -8,6 +8,7 @@ import CreateBlog from 'pages/Admin/CreateBlog'
 import DisplayBlog from 'pages/Admin/DisplayBlog'
 import EventDetails from 'pages/Admin/Events/EventDetails'
 import Error404 from 'pages/Error404'
+import Styles from './Admin.module.css'
 
 const Admin = (props) => {
   const mainContent = React.useRef(null)
@@ -39,6 +40,7 @@ const Admin = (props) => {
                 imgSrc: require('../assets/img/brand/argon-react.png').default,
                 imgAlt: '...',
               }}
+              
             />
             <div className='main-content' ref={mainContent}>
               <AdminNavbar

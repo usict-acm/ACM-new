@@ -3,8 +3,6 @@ import Dashboard from "pages/Admin/Dashboard";
 import Profile from "pages/Admin/Profile.js";
 import AllBlogs from "pages/Admin/AllBlogs.js";
 // import Icons from "views/examples/Icons.js";
-import Register from "pages/Auth/Register";
-import Login from "pages/Auth/Login";
 import AllEvents from "pages/Admin/Events/AllEvents";
 // import MyEvents from "pages/Admin/Events/MyEvents";
 
@@ -43,29 +41,6 @@ var routes = [
     icon: "ni ni-album-2 text-blue",
     component: AllEvents,
     layout: "/admin",
-  },
-  // {
-  //   path: "/my-events",
-  //   name: "My Events",
-  //   icon: "ni ni-album-2 text-blue",
-  //   component: MyEvents,
-  //   layout: "/admin",
-  // },  
-  {
-    path: "/login",
-    name: "Login",
-    icon: "ni ni-key-25 text-info",
-    component: Login,
-    layout: "/auth",
-    cName: 'nav-links-mobile',
-  },
-  {
-    path: "/register",
-    name: "Register",
-    icon: "ni ni-circle-08 text-pink",
-    component: Register,
-    layout: "/auth",
-    cName: 'nav-links-mobile',
   },
 ];
 export default routes;
