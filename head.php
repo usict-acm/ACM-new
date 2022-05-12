@@ -12,6 +12,7 @@ content="GGSIP University USS ACM Student Chapter is an official student body in
 <meta itemprop="image" content="./assets/images/acm1.png">
 
 <!-- Facebook Meta Tags -->
+<meta property="og:site_name" content="GGSIP University USS ACM Student Chapter" />
 <meta property="og:url" content="https://usict.acm.org/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="GGSIP University USS ACM Student Chapter">
