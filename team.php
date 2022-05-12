@@ -75,6 +75,16 @@
       </div>
     </div>
 
+    <!--***************************************** Executive Members **********************************************-->
+  <div class="container" id="operations">
+      <h1 class="collab-main-heading" >
+        Operations<span class="highlight"> Team</span>:
+      </h1>
+      <div class="row d-flex justify-content-center" id="Operations-Team">
+
+      </div>
+    </div>
+
     <!--***************************************** Web Team **********************************************-->
     <div class="container" id="web">
       <h1 class="collab-main-heading">
@@ -111,10 +121,11 @@
         $("#fac").hide();
         $("#office").hide();
         $("#executive").hide();
+        $("#operations").hide();
         $("#web").hide();
         $(".nav-year").removeClass("active");
         $('#' + navYear).addClass("active");
-        var category = ['Faculty', 'Office-Bearers', 'Executive-Members', 'Web-Team'];
+        var category = ['Faculty', 'Office-Bearers', 'Executive-Members', 'Operations-Team', 'Web-Team'];
         category.forEach(e => document.getElementById(e).innerHTML = "");
         let url = './admin/teams/api.php/?q=readMember&year=' + navYear;
         $(document).ready(function() {
@@ -146,6 +157,8 @@
                     else if (row.category == category[2])
                       $("#executive").show();
                     else if (row.category == category[3])
+                      $("#operations").show();
+                    else if (row.category == category[4])
                       $("#web").show();
                     member.innerHTML += '<div class="flip-card">\
                                       <div class="flip-card-inner">\
