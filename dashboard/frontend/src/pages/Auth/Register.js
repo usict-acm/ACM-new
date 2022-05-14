@@ -355,6 +355,7 @@ const Register = () => {
                                     <Input
                                         placeholder="Roll No*"
                                         type="text"
+                                        pattern="[0-9]*"
                                         value={rollNo}
                                         onChange={(e) => setRollNo(e.target.value)}
                                         required
@@ -371,6 +372,7 @@ const Register = () => {
                                     <Input
                                         placeholder="ACM Member ID"
                                         type="text"
+                                        pattern="[0-9]*"
                                         value={memId}
                                         onChange={(e) => setMemId(e.target.value)}
                                     />

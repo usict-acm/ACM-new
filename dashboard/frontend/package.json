@@ -67,12 +67,19 @@
 		"react-moment-proptypes": "^1.8.1",
 		"react-redux": "^7.2.4",
 		"react-router-dom": "5.2.0",
+<<<<<<< Updated upstream
 		"react-scripts": "^4.0.1",
 		"reactstrap": "8.9.0"
+=======
+		"react-scripts": "4.0.1",
+		"reactstrap": "8.9.0",
+		"webpack-dev-server": "^3.11.0"
+>>>>>>> Stashed changes
 	},
 	"devDependencies": {
 		"gulp": "^4.0.2",
-		"gulp-append-prepend": "1.0.8"
+		"gulp-append-prepend": "1.0.8",
+		"webpack": "^4.44.2"
 	},
 	"optionalDependencies": {
 		"eslint-plugin-flowtype": "5.2.0",

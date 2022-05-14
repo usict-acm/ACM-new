@@ -3,7 +3,7 @@
 class User
 {
     private $conn;
-    private $table = "dashboardUsers";
+    private $table = "dashboardusers";
 
     public function __construct($db)
     {
