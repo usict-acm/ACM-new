@@ -536,18 +536,19 @@
           <div class="news-slider__item swiper-slide">
             <a href="#" class="news__item">
               <div class="news-date">
-                <span class="news-date__title">2019</span>
+                <span class="news-date__title">2021</span>
               </div>
               <div class="news__title">
-                Lorem Ipsum Dolor Sit Amed
+              27 events
               </div>
 
               <p class="news__txt">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
-              </p>
+              "We grow stronger and the journey is still ongoing."
+                    <br>
+                    (Trellathon, STTP Cyber Security and more)</p>
 
               <div class="news__img">
-                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-2.webp" alt="news">
+                <img src="https://usict.acm.org/upload/announcements/iplauction.jpg" alt="news">
               </div>
             </a>
           </div>
@@ -558,15 +559,16 @@
                 <span class="news-date__title">2020</span>
               </div>
               <div class="news__title">
-                Lorem Ipsum Dolor Sit Amed
+              8 events
               </div>
 
               <p class="news__txt">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
-              </p>
+              "Pandemic cannot stop us!"
+                    <br>
+                    (Talk by Prof Raj K Bhatnagar, ACM Foundation Day and many more)              </p>
 
               <div class="news__img">
-                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-3.webp" alt="news">
+                <img src="https://usict.acm.org/upload/announcements/exploration.png" alt="news">
               </div>
             </a>
           </div>
@@ -585,7 +587,7 @@
               </p>
 
               <div class="news__img">
-                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-4.webp" alt="news">
+                <img src="" alt="news">
               </div>
             </a>
           </div>
@@ -632,19 +634,20 @@
           <div class="news-slider__item swiper-slide">
             <a href="#" class="news__item">
               <div class="news-date">
-                <span class="news-date__title">29</span>
+                <span class="news-date__title">2022</span>
                 <span class="news-date__txt">May</span>
               </div>
               <div class="news__title">
-                Lorem Ipsum Dolor Sit Amed
+                13 EVENTS
               </div>
 
               <p class="news__txt">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
-              </p>
+              "Mile by mile we hit a milestone!"
+                <br>
+(DecoDisaster, Aagaz and much more)              </p>
 
               <div class="news__img">
-                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-4.webp" alt="news">
+                <img src="https://usict.acm.org/upload/announcements/Rogue-reveal.png" alt="news">
               </div>
             </a>
           </div>
