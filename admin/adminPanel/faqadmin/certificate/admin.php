@@ -1,8 +1,8 @@
 <?php 
 if(isset($_POST['down-btn'])){
-    header('Content-type: image/jpeg');
+    //header('Content-type: image/jpeg');
     $font=realpath('arial.ttf');
-    $image=imagecreatefromjpeg("format.jpeg");
+    $image=imagecreatefromjpeg('format.jpeg');
     $color=imagecolorallocate($image, 51, 51, 102);
     $date=date('d F, Y');
     imagettftext($image, 18, 0, 880, 188, $color,$font, $date);
@@ -143,10 +143,10 @@ if(isset($_POST['down-btn'])){
                                             echo "<a class='tash-bin' title='Mail Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-envelope'></span></a>";
                                             echo "<a class='edit-logo' href='faqadmin/certificate_edit.php?Sno=". $row['uniqueNo'] ."' title='Edit Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
                                             echo "<a class='tash-bin 'href='faqadmin/certificate_delete.php?Sno=". $row['uniqueNo'] ."' title='Delete Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
-                                            echo "<a class='edit-logo' title='Download Certificate' name='down-btn' id='down-btn' data-toggle='tooltip'><span class='glyphicon glyphicon-download-alt'></span></a>";
-                                        echo "<form method='POST' > 
-                                            <button type='submit' class='btn btn-primary' id='submitBtn' name='down-btn' data-toggle='tooltip'>Download</button>
-                                        </form>";
+                                            echo "<a class='edit-logo' href='faqadmin/certi_download.php?Sno=". $row['uniqueNo'] ."' title='Download Certificate' name='down-btn' id='down-btn' data-toggle='tooltip'><span class='glyphicon glyphicon-download-alt'></span></a>";
+                                        // echo "<form method='POST' action = 'faqadmin/certificate/index.php?Sno=". $row['uniqueNo'] ."'> 
+                                        //     <button type='submit' class='btn btn-primary' id='submitBtn' name='down-btn' data-toggle='tooltip'>Download</button>
+                                        // </form>";
 
                                         echo "</td>";
 
