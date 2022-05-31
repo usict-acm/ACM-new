@@ -11,10 +11,12 @@
   <link href="assets/CSS/header.css" rel="stylesheet" />
   <link href="assets/CSS/footer.css" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/CSS/newStyle.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <script src="https://kit.fontawesome.com/d459eda8d9.js" crossorigin="anonymous"></script>
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" /> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet" /> -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
+  <!-- <script src="https://kit.fontawesome.com/d459eda8d9.js" crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
   <style>
     @import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext");
 
@@ -343,9 +345,58 @@
       height: 100%;
       width: 100%;
     }
+
+    .background {
+      width: 100vw !important;
+    }
+
+    .foot {
+      /* position: relative; */
+      /* z-index: 1000; */
+      height: 40vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      /* margin-left: -284px !important; */
+      /* width: 100vw; */
+      /* background-color: #fff !important;
+      background-image: none !important; */
+    }
+
+    .options {
+      position: relative;
+      z-index: 1;
+      height: 40vh;
+    }
+
+    .optionhandle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .myH1 {
+      height: 6rem !important;
+      margin-bottom: 4vh !important;
+      position: relative;
+      z-index: 1;
+    }
+    .subh{
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
   </style>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
   <link rel="stylesheet" href="./style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css'>
+  <link rel='stylesheet' href='https://static.fontawesome.com/css/fontawesome-app.css'>
+  <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.2.0/css/all.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700'>
 
 </head>
 
@@ -464,22 +515,14 @@
       })
     })
   </script>
-
-  <div class="quotes">
-    <img class="quote-img" src="./assets/images/About us/image1.jpg" alt="" />
-    <img class="quote-img" src="./assets/images/About us/image2.jpg" alt="" />
-    <img class="quote-img" src="./assets/images/About us/image31.jpg" alt="" />
-    <img class="quote-img" src="./assets/images/About us/image4.jpg" alt="" />
-    <img class="quote-img" src="./assets/images/trell-4.jpeg" alt="" />
-  </div>
-
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+  
   <script>
     let urlEventIndex = './admin/blogAdmin/api.php/?q=getYearEvent';
     let yearWiseEvent = document.getElementById("eventIndex");
     let numberOfEvents = 0;
-
+    
     $(document).ready(function() {
       $.ajax({
         url: urlEventIndex,
@@ -488,7 +531,7 @@
         success: function(data) {
           console.log("check data ", data);
           data.forEach(allEventmore);
-
+          
           function allEventmore(event) {
             let urlYear = './admin/blogAdmin/api.php/?q=readAllEvent&year=' + event.year;
             $.ajax({
@@ -502,30 +545,105 @@
                 numberOfEvents = dataNumber[1];
                 console.log("numberrrr", numberOfEvents);
                 yearWiseEvent.innerHTML += " <li style='height:150px;'>\
-                                                <div class='time'>\
-                                                    <h2>" + event.year + " <br><span></span></h2>\
-                                                </div>\
-                                                <div class='details'>\
-                                                    <h3 style='color: black;font-weight: bolder;'>" + numberOfEvents + " " + event.numberOfEvents + " </h3>\
+                  <div class='time'>\
+                    <h2>" + event.year + " <br><span></span></h2>\
+                  </div>\
+                  <div class='details'>\
+                    <h3 style='color: black;font-weight: bolder;'>" + numberOfEvents + " " + event.numberOfEvents + " </h3>\
                                                     <p style='font-size:large; color: #e91e63;font-weight: bolder;'>" + event.heading + "</p>\
                                                     <p style='text-align: end; margin-right: 2px; font-size: smaller; color:#0297ff;'>" + event.more + "</p>\
                                                     <a  href='./eventYear.php?year=" + event.year + "'>View details</a>\
-                                                </div>\
-                                                <div style='clear: both;'></div>\
-                                            </li>";
-              }
-            })
-          }
-        },
-        error: function(error) {
-          console.log(error);
-        },
-      });
-    });
-  </script>
-  back to top and contact us -->
+                                                  </div>\
+                                                  <div style='clear: both;'></div>\
+                                                </li>";
+                                              }
+                                            })
+                                          }
+                                        },
+                                        error: function(error) {
+                                          console.log(error);
+                                        },
+                                      });
+                                    });
+                                  </script>
+                                  back to top and contact us -->
   <section>
+
+
     <div class="wrapper">
+      <h1 class="display-1 my-3 text-center myH1">Events</h1>
+
+      <div class="subh"><h4 class="myH1 h4 text-center myh4">“Words can do only much without actions”
+                                    <br>
+        We organize various events and workshops every year to make sure that you learn with the competition. Let’s go through the highlights of this enthralling journey that promises to get better with time.</h4></div>
+      
+
+      <div class="optionhandle my-3">
+
+
+        <div class="options">
+          <div class="option active" style="--optionBackground:url(https://66.media.tumblr.com/6fb397d822f4f9f4596dff2085b18f2e/tumblr_nzsvb4p6xS1qho82wo1_1280.jpg);">
+            <div class="shadow"></div>
+            <div class="label">
+              <div class="icon">
+                <i class="fas fa-walking"></i>
+              </div>
+              <div class="info">
+                <div class="main">Blonkisoaz</div>
+                <div class="sub">Omuke trughte a otufta</div>
+              </div>
+            </div>
+          </div>
+          <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg);">
+            <div class="shadow"></div>
+            <div class="label">
+              <div class="icon">
+                <i class="fas fa-snowflake"></i>
+              </div>
+              <div class="info">
+                <div class="main">Oretemauw</div>
+                <div class="sub">Omuke trughte a otufta</div>
+              </div>
+            </div>
+          </div>
+          <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/5af3f8303456e376ceda1517553ba786/tumblr_o4986gakjh1qho82wo1_1280.jpg);">
+            <div class="shadow"></div>
+            <div class="label">
+              <div class="icon">
+                <i class="fas fa-tree"></i>
+              </div>
+              <div class="info">
+                <div class="main">Iteresuselle</div>
+                <div class="sub">Omuke trughte a otufta</div>
+              </div>
+            </div>
+          </div>
+          <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/5516a22e0cdacaa85311ec3f8fd1e9ef/tumblr_o45jwvdsL11qho82wo1_1280.jpg);">
+            <div class="shadow"></div>
+            <div class="label">
+              <div class="icon">
+                <i class="fas fa-tint"></i>
+              </div>
+              <div class="info">
+                <div class="main">Idiefe</div>
+                <div class="sub">Omuke trughte a otufta</div>
+              </div>
+            </div>
+          </div>
+          <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);">
+            <div class="shadow"></div>
+            <div class="label">
+              <div class="icon">
+                <i class="fas fa-sun"></i>
+              </div>
+              <div class="info">
+                <div class="main">Inatethi</div>
+                <div class="sub">Omuke trughte a otufta</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="background">
         <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132206/news-slider/background.webp" alt="">
       </div>
@@ -544,6 +662,7 @@
 
               <p class="news__txt">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                <button class="btn btn-primary my-3">See All Events</button>
               </p>
 
               <div class="news__img">
@@ -563,6 +682,7 @@
 
               <p class="news__txt">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                <button class="btn btn-primary my-3">See All Events</button>
               </p>
 
               <div class="news__img">
@@ -582,6 +702,7 @@
 
               <p class="news__txt">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                <button class="btn btn-primary my-3">See All Events</button>
               </p>
 
               <div class="news__img">
@@ -601,6 +722,7 @@
 
               <p class="news__txt">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                <button class="btn btn-primary my-3">See All Events</button>
               </p>
 
               <div class="news__img">
@@ -609,7 +731,7 @@
             </a>
           </div>
 
-          <div class="news-slider__item swiper-slide">
+          <!-- <div class="news-slider__item swiper-slide">
             <a href="#" class="news__item">
               <div class="news-date">
                 <span class="news-date__title">28</span>
@@ -618,18 +740,18 @@
               <div class="news__title">
                 Lorem Ipsum Dolor Sit Amed
               </div>
-
+              
               <p class="news__txt">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
               </p>
-
+              
               <div class="news__img">
                 <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-5.webp" alt="news">
               </div>
             </a>
-          </div>
+          </div> -->
 
-          <div class="news-slider__item swiper-slide">
+          <!-- <div class="news-slider__item swiper-slide">
             <a href="#" class="news__item">
               <div class="news-date">
                 <span class="news-date__title">29</span>
@@ -638,16 +760,16 @@
               <div class="news__title">
                 Lorem Ipsum Dolor Sit Amed
               </div>
-
+              
               <p class="news__txt">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
               </p>
-
+              
               <div class="news__img">
                 <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-4.webp" alt="news">
               </div>
             </a>
-          </div>
+          </div> -->
         </div>
 
         <div class="news-slider__ctr">
@@ -673,6 +795,16 @@
 
         </div>
 
+        <div class="foot">
+          <div class="quotes">
+            <img class="quote-img" src="./assets/images/About us/image1.jpg" alt="" />
+            <img class="quote-img" src="./assets/images/About us/image2.jpg" alt="" />
+            <img class="quote-img" src="./assets/images/About us/image31.jpg" alt="" />
+            <img class="quote-img" src="./assets/images/About us/image4.jpg" alt="" />
+            <img class="quote-img" src="./assets/images/trell-4.jpeg" alt="" />
+          </div>
+
+        </div>
       </div>
 
     </div>
@@ -689,6 +821,7 @@
         </symbol>
       </defs>
     </svg>
+
   </section>
 
 
@@ -716,7 +849,7 @@
   <?php
   include('footer.php');
   ?>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
   <script src="assets\JS\home_new.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
@@ -845,7 +978,15 @@
       bg.style.height = height + 'px';
       bg.style.transform = 'translateX(' + x + 'px ) translateY(' + y + 'px)';
     });
+
+    $(".option").click(function() {
+      $(".option").removeClass("active");
+      $(this).addClass("active");
+
+    });
   </script>
 </body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<!-- <script src='https://codepen.io/z-/pen/jvReOb/a8e37caf2a04602ea5815e5acedab458.js'></script> -->
 
 </html>
