@@ -382,13 +382,16 @@
       margin-bottom: 4vh !important;
       position: relative;
       z-index: 1;
+      text-align: center;
     }
     .subh{
+
       width: 60%;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
+      margin-left: 270px;
     }
   </style>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
@@ -573,9 +576,9 @@
     <div class="wrapper">
       <h1 class="display-1 my-3 text-center myH1">Events</h1>
 
-      <div class="subh"><h4 class="myH1 h4 text-center myh4">“Words can do only much without actions”
+      <div class="subh"><h5 class="myH1 h4 text-center myh4">“Words can do only much without actions”
                                     <br>
-        We organize various events and workshops every year to make sure that you learn with the competition. Let’s go through the highlights of this enthralling journey that promises to get better with time.</h4></div>
+        We organize various events and workshops every year to make sure that you learn with the competition. Let’s go through the highlights of this enthralling journey that promises to get better with time.</h5></div>
       
 
       <div class="optionhandle my-3">
@@ -657,11 +660,14 @@
                 <span class="news-date__title">2019</span>
               </div>
               <div class="news__title">
-                Lorem Ipsum Dolor Sit Amed
+              8 events
               </div>
 
               <p class="news__txt">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+              "The year in which it all started."
+              <br>
+              (International Talk by Prof Jozsef Dombi and Turing Workshop)
+              <br>
                 <button class="btn btn-primary my-3">See All Events</button>
               </p>
 
@@ -677,11 +683,14 @@
                 <span class="news-date__title">2020</span>
               </div>
               <div class="news__title">
-                Lorem Ipsum Dolor Sit Amed
+              8 events
               </div>
 
               <p class="news__txt">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+              "Pandemic cannot stop us!"
+              <br>
+              (Talk by Prof Raj K Bhatnagar, ACM Foundation Day and many more)
+              <br>
                 <button class="btn btn-primary my-3">See All Events</button>
               </p>
 
@@ -697,11 +706,14 @@
                 <span class="news-date__title">2021</span>
               </div>
               <div class="news__title">
-                Lorem Ipsum Dolor Sit Amed
+              27 events
               </div>
 
               <p class="news__txt">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+              "We grow stronger and the journey is still ongoing.
+              <br>
+              (Trellathon, STTP Cyber Security and more)
+              <br>
                 <button class="btn btn-primary my-3">See All Events</button>
               </p>
 
@@ -717,11 +729,14 @@
                 <span class="news-date__title">2022</span>
               </div>
               <div class="news__title">
-                Lorem Ipsum Dolor Sit Amed
+              12 events
               </div>
 
               <p class="news__txt">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+              "Mile by mile we hit a milestone!" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <br>
+              DecoDisaster, Aagaz and much more)
+              <br>
                 <button class="btn btn-primary my-3">See All Events</button>
               </p>
 
