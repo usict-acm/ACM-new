@@ -6,10 +6,6 @@
   include('./head.php');
   ?>
   <title>GGSIP University USS ACM Student Chapter</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css'>
-  <link rel='stylesheet' href='https://static.fontawesome.com/css/fontawesome-app.css'>
-  <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.2.0/css/all.css'>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700'><link rel="stylesheet" href="./style.css">
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
   <link href="./assets/CSS/events.css" rel="stylesheet" />
   <link href="assets/CSS/header.css" rel="stylesheet" />
@@ -22,400 +18,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
   <style>
-/* current event css */
-@import url(https://pro.fontawesome.com/releases/v5.11.2/css/all.css);
-:root {
-  --user-button-circle: rgba(0,0,0,0.025);
-  --user-button-cardborder: rgba(255,255,255,0.25);
-  --user-button-text:#323133;
-  --user-button-shadow:rgba(0,0,0,0.1);
-}
-
-.current_events #user-button {
-  z-index: 1000;
-  bottom: 1rem !important;
-  right: 1rem !important;
-  color: var(--user-button-text);
-  transition: 1s 0s ease-out;
-  -webkit-animation: slide 3s ease-out forwards;
-          animation: slide 3s ease-out forwards;
-}
-@-webkit-keyframes slide {
-  0%, 50% {
-    opacity: 0;
-    display: block !important;
-  }
-  100% {
-    opacity: 1;
-    display: block !important;
-  }
-}
-@keyframes slide {
-  0%, 50% {
-    opacity: 0;
-    display: block !important;
-  }
-  100% {
-    opacity: 1;
-    display: block !important;
-  }
-}
-.current_events #user-button .u-card {
-  border-radius: 100%;
-  box-shadow: 0 0 1rem -0.25rem var(--user-button-shadow), inset 0 0 1rem -0.75rem var(--user-button-shadow);
-}
-.current_events #user-button .u-main {
-  cursor: pointer;
-  --user-button-background:var(--user-button-main, #EC87C0);
-}
-.current_events #user-button .u-main img {
-  height: 100%;
-  width: 100%;
-}
-.current_events #user-button .u-main iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4rem;
-  height: 4rem;
-  opacity: 1;
-  transition: 0s 4s;
-}
-.current_events #user-button .u-icons {
-  position: relative;
-  z-index: 950;
-  transform: translate(-50%, -50%);
-  background: var(--user-button-circle);
-  box-shadow: 0 0 0 0.125rem var(--user-button-cardborder);
-  border-radius: 100%;
-  transition: 0.25s;
-  opacity: 1 !important;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  /*&:before {
-     z-index:-1;
-     position:absolute;
-     top:0; right:0; bottom:0; left:0;
-     content:'';
-
-     backdrop-filter: blur(10px);
-  }*/
-}
-.current_events #user-button .u-icons a {
-  color: inherit;
-  display: grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
-  text-decoration: none;
-}
-.current_events #user-button .u-icons a div {
-  padding: 0.5rem;
-  transition: 0s;
-}
-.current_events #user-button .u-icons a[href="https://twitter.com/Osorpenke"] {
-  position: relative;
-}
-.current_events #user-button .u-icons a[href="https://twitter.com/Osorpenke"]:before {
-  content: "Middle Click";
-  position: absolute;
-  top: -1.5rem;
-  left: 50%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  white-space: pre;
-  transform: translateX(-50%);
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.25s ease-in;
-  background: #fffc;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-}
-.current_events #user-button .u-icons a[href="https://twitter.com/Osorpenke"].show:before {
-  opacity: 1;
-  transition: 0.25s ease-out;
-}
-.current_events #user-button .u-icons a[href="https://twitter.com/Osorpenke"] div {
-  color: #1da1f2;
-}
-.current_events #user-button .u-icons a[href="https://codepen.io/z-"] div {
-  background: black;
-  color: white;
-}
-.current_events #user-button .u-icons a.u-random div {
-  position: relative;
-  top: -1px;
-  -webkit-animation: diespin 2s linear infinite;
-          animation: diespin 2s linear infinite;
-}
-@-webkit-keyframes diespin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes diespin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.current_events #user-button .u-icons a.u-random:not(:hover) div {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
-.current_events #user-button .u-icons > * {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background: var(--singlecolour);
-  border-radius: 100%;
-  cursor: pointer;
-  transform: translate(-50%, -50%);
-  transition: 0.25s -0.05s;
-}
-.current_events #user-button .u-icons > *:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.current_events #user-button .u-icons > *:hover, .current_events #user-button .u-icons > *:focus-within {
-  background: var(--hcolour);
-}
-.current_events #user-button .u-icons > *:first-child:nth-last-child(1):nth-child(1), .current_events #user-button .u-icons > *:first-child:nth-last-child(1) ~ *:nth-child(1) {
-  left: 25%;
-  top: 25%;
-}
-.current_events #user-button .u-icons > *:first-child:nth-last-child(2):nth-child(1), .current_events #user-button .u-icons > *:first-child:nth-last-child(2) ~ *:nth-child(1) {
-  left: 37.5%;
-  top: 18.75%;
-}
-.current_events #user-button .u-icons > *:first-child:nth-last-child(2):nth-child(2), .current_events #user-button .u-icons > *:first-child:nth-last-child(2) ~ *:nth-child(2) {
-  left: 18.75%;
-  top: 37.5%;
-}
-.current_events #user-button .u-icons > *:first-child:nth-last-child(3):nth-child(1), .current_events #user-button .u-icons > *:first-child:nth-last-child(3) ~ *:nth-child(1) {
-  left: 50%;
-  top: 15.625%;
-}
-.current_events #user-button .u-icons > *:first-child:nth-last-child(3):nth-child(2), .current_events #user-button .u-icons > *:first-child:nth-last-child(3) ~ *:nth-child(2) {
-  left: 25%;
-  top: 25%;
-}
-.current_events #user-button .u-icons > *:first-child:nth-last-child(3):nth-child(3), .current_events #user-button .u-icons > *:first-child:nth-last-child(3) ~ *:nth-child(3) {
-  left: 15.625%;
-  top: 50%;
-}
-.current_events #user-button .u-icons > *:first-child:nth-last-child(4):nth-child(1), .current_events #user-button .u-icons > *:first-child:nth-last-child(4) ~ *:nth-child(1) {
-  left: 62.5%;
-  top: 18.75%;
-}
-.current_events #user-button .u-icons > *:first-child:nth-last-child(4):nth-child(2), .current_events #user-button .u-icons > *:first-child:nth-last-child(4) ~ *:nth-child(2) {
-  left: 37.5%;
-  top: 18.75%;
-}
-.current_events #user-button .u-icons > *:first-child:nth-last-child(4):nth-child(3), .current_events #user-button .u-icons > *:first-child:nth-last-child(4) ~ *:nth-child(3) {
-  left: 18.75%;
-  top: 37.5%;
-}
-.current_events #user-button .u-icons > *:first-child:nth-last-child(4):nth-child(4), .current_events #user-button .u-icons > *:first-child:nth-last-child(4) ~ *:nth-child(4) {
-  left: 18.75%;
-  top: 62.5%;
-}
-.current_events #user-button:hover .u-icons, .current_events #user-button:focus-within .u-icons {
-  width: 300% !important;
-  height: 300% !important;
-}
-
-.current_events {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  height: 100vh;
-  font-family: "Roboto", sans-serif;
-  transition: 0.25s;
-}
-.current_events.dark {
-  background: #232223;
-  color: white;
-}
-@media (prefers-color-scheme: dark) {
-  .current_events:not(.light) {
-    background: #232223;
-    color: white;
-  }
-}
-.current_events .credit {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: inherit;
-}
-.current_events .options {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  overflow: hidden;
-  min-width: 600px;
-  max-width: 900px;
-  width: calc(100% - 100px);
-  height: 400px;
-}
-@media screen and (max-width: 718px) {
-  .current_events .options {
-    min-width: 520px;
-  }
-  .current_events .options .option:nth-child(5) {
-    display: none;
-  }
-}
-@media screen and (max-width: 638px) {
-  .current_events .options {
-    min-width: 440px;
-  }
-  .current_events .options .option:nth-child(4) {
-    display: none;
-  }
-}
-@media screen and (max-width: 558px) {
-  .current_events .options {
-    min-width: 360px;
-  }
-  .current_events .options .option:nth-child(3) {
-    display: none;
-  }
-}
-@media screen and (max-width: 478px) {
-  .current_events .options {
-    min-width: 280px;
-  }
-  .current_events .options .option:nth-child(2) {
-    display: none;
-  }
-}
-.current_events .options .option {
-  position: relative;
-  overflow: hidden;
-  min-width: 60px;
-  margin: 10px;
-  background: var(--optionBackground, var(--defaultBackground, #E6E9ED));
-  background-size: auto 120%;
-  background-position: center;
-  cursor: pointer;
-  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
-}
-.current_events .options .option:nth-child(1) {
-  --defaultBackground:#ED5565;
-}
-.current_events .options .option:nth-child(2) {
-  --defaultBackground:#FC6E51;
-}
-.current_events .options .option:nth-child(3) {
-  --defaultBackground:#FFCE54;
-}
-.current_events .options .option:nth-child(4) {
-  --defaultBackground:#2ECC71;
-}
-.current_events .options .option:nth-child(5) {
-  --defaultBackground:#5D9CEC;
-}
-.current_events .options .option:nth-child(6) {
-  --defaultBackground:#AC92EC;
-}
-.current_events .options .option.active {
-  flex-grow: 10000;
-  transform: scale(1);
-  max-width: 600px;
-  margin: 0px;
-  border-radius: 40px;
-  background-size: auto 100%;
-  /*&:active {
-     transform:scale(0.9);
-  }*/
-}
-.current_events .options .option.active .shadow {
-  box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
-}
-.current_events .options .option.active .label {
-  bottom: 20px;
-  left: 20px;
-}
-.current_events .options .option.active .label .info > div {
-  left: 0px;
-  opacity: 1;
-}
-.current_events .options .option:not(.active) {
-  flex-grow: 1;
-  border-radius: 30px;
-}
-.current_events .options .option:not(.active) .shadow {
-  bottom: -40px;
-  box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
-}
-.current_events .options .option:not(.active) .label {
-  bottom: 10px;
-  left: 10px;
-}
-.current_events .options .option:not(.active) .label .info > div {
-  left: 20px;
-  opacity: 0;
-}
-.current_events .options .option .shadow {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  height: 120px;
-  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
-}
-.current_events .options .option .label {
-  display: flex;
-  position: absolute;
-  right: 0px;
-  height: 40px;
-  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
-}
-.current_events .options .option .label .icon {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  min-width: 40px;
-  max-width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  background-color: white;
-  color: var(--defaultBackground);
-}
-.current_events .options .option .label .info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 10px;
-  color: white;
-  white-space: pre;
-}
-.current_events .options .option .label .info > div {
-  position: relative;
-  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
-}
-.current_events .options .option .label .info .main {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-.current_events .options .option .label .info .sub {
-  transition-delay: 0.1s;
-}
-
-/* current event css */
-
     @import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700&subset=latin-ext");
 
     html {
@@ -743,10 +345,6 @@
       height: 100%;
       width: 100%;
     }
-<<<<<<< HEAD
-    section {
-      height:auto;
-=======
 
     .background {
       width: 100vw !important;
@@ -784,14 +382,16 @@
       margin-bottom: 4vh !important;
       position: relative;
       z-index: 1;
+      text-align: center;
     }
     .subh{
+
       width: 60%;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
->>>>>>> a8a5d658483dee03664344f59cb316b899e7b2fd
+      margin-left: 270px;
     }
   </style>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
@@ -956,22 +556,6 @@
                                                     <p style='font-size:large; color: #e91e63;font-weight: bolder;'>" + event.heading + "</p>\
                                                     <p style='text-align: end; margin-right: 2px; font-size: smaller; color:#0297ff;'>" + event.more + "</p>\
                                                     <a  href='./eventYear.php?year=" + event.year + "'>View details</a>\
-<<<<<<< HEAD
-                                                </div>\
-                                                <div style='clear: both;'></div>\
-                                            </li>";
-              }
-            })
-          }
-        },
-        error: function(error) {
-          console.log(error, "error in Ajax");
-        },
-      });
-    });
-  </script>
-  back to top and contact us -->
-=======
                                                   </div>\
                                                   <div style='clear: both;'></div>\
                                                 </li>";
@@ -986,16 +570,15 @@
                                     });
                                   </script>
                                   back to top and contact us -->
->>>>>>> a8a5d658483dee03664344f59cb316b899e7b2fd
   <section>
 
 
     <div class="wrapper">
       <h1 class="display-1 my-3 text-center myH1">Events</h1>
 
-      <div class="subh"><h4 class="myH1 h4 text-center myh4">“Words can do only much without actions”
+      <div class="subh"><h5 class="myH1 h4 text-center myh4">“Words can do only much without actions”
                                     <br>
-        We organize various events and workshops every year to make sure that you learn with the competition. Let’s go through the highlights of this enthralling journey that promises to get better with time.</h4></div>
+        We organize various events and workshops every year to make sure that you learn with the competition. Let’s go through the highlights of this enthralling journey that promises to get better with time.</h5></div>
       
 
       <div class="optionhandle my-3">
@@ -1067,73 +650,6 @@
       <div class="background">
         <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132206/news-slider/background.webp" alt="">
       </div>
-      <div class="current_events">
-    <div class="options">
-   <div class="option active" style="--optionBackground:url(https://66.media.tumblr.com/6fb397d822f4f9f4596dff2085b18f2e/tumblr_nzsvb4p6xS1qho82wo1_1280.jpg);">
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <i class="fas fa-walking"></i>
-         </div>
-         <div class="info">
-            <div class="main">Blonkisoaz</div>
-            <div class="sub">Omuke trughte a otufta</div>
-         </div>
-      </div>
-   </div>
-   <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg);">
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <i class="fas fa-snowflake"></i>
-         </div>
-         <div class="info">
-            <div class="main">Oretemauw</div>
-            <div class="sub">Omuke trughte a otufta</div>
-         </div>
-      </div>
-   </div>
-   <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/5af3f8303456e376ceda1517553ba786/tumblr_o4986gakjh1qho82wo1_1280.jpg);">
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <i class="fas fa-tree"></i>
-         </div>
-         <div class="info">
-            <div class="main">Iteresuselle</div>
-            <div class="sub">Omuke trughte a otufta</div>
-         </div>
-      </div>
-   </div>
-   <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/5516a22e0cdacaa85311ec3f8fd1e9ef/tumblr_o45jwvdsL11qho82wo1_1280.jpg);">
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <i class="fas fa-tint"></i>
-         </div>
-         <div class="info">
-            <div class="main">Idiefe</div>
-            <div class="sub">Omuke trughte a otufta</div>
-         </div>
-      </div>
-   </div>
-   <div class="option" style="--optionBackground:url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);">
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <i class="fas fa-sun"></i>
-         </div>
-         <div class="info">
-            <div class="main">Inatethi</div>
-            <div class="sub">Omuke trughte a otufta</div>
-         </div>
-      </div>
-   </div>
-</div>
-<a href="http://victorofvalencia-blog.tumblr.com" target="_blank" class="credit">Photos from Victor of Valencia on tumblr</a>
-
-
-    </div>
       <div class="item-bg"></div>
 
       <div class="news-slider">
@@ -1141,25 +657,22 @@
           <div class="news-slider__item swiper-slide">
             <a href="#" class="news__item">
               <div class="news-date">
-                <span class="news-date__title">2021</span>
+                <span class="news-date__title">2019</span>
               </div>
               <div class="news__title">
-              27 events
+              8 events
               </div>
 
               <p class="news__txt">
-<<<<<<< HEAD
-              "We grow stronger and the journey is still ongoing."
-                    <br>
-                    (Trellathon, STTP Cyber Security and more)</p>
-=======
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+              "The year in which it all started."
+              <br>
+              (International Talk by Prof Jozsef Dombi and Turing Workshop)
+              <br>
                 <button class="btn btn-primary my-3">See All Events</button>
               </p>
->>>>>>> a8a5d658483dee03664344f59cb316b899e7b2fd
 
               <div class="news__img">
-                <img src="https://usict.acm.org/upload/announcements/iplauction.jpg" alt="news">
+                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-2.webp" alt="news">
               </div>
             </a>
           </div>
@@ -1174,18 +687,15 @@
               </div>
 
               <p class="news__txt">
-<<<<<<< HEAD
               "Pandemic cannot stop us!"
-                    <br>
-                    (Talk by Prof Raj K Bhatnagar, ACM Foundation Day and many more)              </p>
-=======
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+              <br>
+              (Talk by Prof Raj K Bhatnagar, ACM Foundation Day and many more)
+              <br>
                 <button class="btn btn-primary my-3">See All Events</button>
               </p>
->>>>>>> a8a5d658483dee03664344f59cb316b899e7b2fd
 
               <div class="news__img">
-                <img src="https://usict.acm.org/upload/announcements/exploration.png" alt="news">
+                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-3.webp" alt="news">
               </div>
             </a>
           </div>
@@ -1196,16 +706,19 @@
                 <span class="news-date__title">2021</span>
               </div>
               <div class="news__title">
-                Lorem Ipsum Dolor Sit Amed
+              27 events
               </div>
 
               <p class="news__txt">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+              "We grow stronger and the journey is still ongoing.
+              <br>
+              (Trellathon, STTP Cyber Security and more)
+              <br>
                 <button class="btn btn-primary my-3">See All Events</button>
               </p>
 
               <div class="news__img">
-                <img src="" alt="news">
+                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-4.webp" alt="news">
               </div>
             </a>
           </div>
@@ -1216,11 +729,14 @@
                 <span class="news-date__title">2022</span>
               </div>
               <div class="news__title">
-                Lorem Ipsum Dolor Sit Amed
+              12 events
               </div>
 
               <p class="news__txt">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+              "Mile by mile we hit a milestone!" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <br>
+              DecoDisaster, Aagaz and much more)
+              <br>
                 <button class="btn btn-primary my-3">See All Events</button>
               </p>
 
@@ -1253,26 +769,19 @@
           <!-- <div class="news-slider__item swiper-slide">
             <a href="#" class="news__item">
               <div class="news-date">
-                <span class="news-date__title">2022</span>
+                <span class="news-date__title">29</span>
                 <span class="news-date__txt">May</span>
               </div>
               <div class="news__title">
-                13 EVENTS
+                Lorem Ipsum Dolor Sit Amed
               </div>
               
               <p class="news__txt">
-<<<<<<< HEAD
-              "Mile by mile we hit a milestone!"
-                <br>
-(DecoDisaster, Aagaz and much more)              </p>
-
-=======
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
               </p>
               
->>>>>>> a8a5d658483dee03664344f59cb316b899e7b2fd
               <div class="news__img">
-                <img src="https://usict.acm.org/upload/announcements/Rogue-reveal.png" alt="news">
+                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-4.webp" alt="news">
               </div>
             </a>
           </div> -->
@@ -1355,21 +864,7 @@
   <?php
   include('footer.php');
   ?>
-<<<<<<< HEAD
-  
-  </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-<script src='https://codepen.io/z-/pen/jvReOb/a8e37caf2a04602ea5815e5acedab458.js'></script><script  src="./script.js"></script>
-<script>
-  $(".option").click(function(){
-   $(".option").removeClass("active");
-   $(this).addClass("active");
-   
-});
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-=======
   <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
->>>>>>> a8a5d658483dee03664344f59cb316b899e7b2fd
   <script src="assets\JS\home_new.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
@@ -1498,9 +993,6 @@
       bg.style.height = height + 'px';
       bg.style.transform = 'translateX(' + x + 'px ) translateY(' + y + 'px)';
     });
-<<<<<<< HEAD
-</script>
-=======
 
     $(".option").click(function() {
       $(".option").removeClass("active");
@@ -1508,7 +1000,6 @@
 
     });
   </script>
->>>>>>> a8a5d658483dee03664344f59cb316b899e7b2fd
 </body>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <!-- <script src='https://codepen.io/z-/pen/jvReOb/a8e37caf2a04602ea5815e5acedab458.js'></script> -->
