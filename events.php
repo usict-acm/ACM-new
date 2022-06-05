@@ -58,8 +58,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: linear-gradient(45deg, rgba(209, 0, 42, 0.6) 0%, #0E5DC4 100%);
-      opacity: 0.9;
+      background-color: #ffffff;
+      opacity: 1;
     }
 
     .background img {
@@ -652,7 +652,7 @@
         </div>
       </div>
       <div class="background">
-        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132206/news-slider/background.webp" alt="">
+    
       </div>
       <div class="item-bg"></div>
 
