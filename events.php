@@ -213,7 +213,7 @@
 
     .news__item {
       padding: 40px;
-      color: #fff;
+      color: #000;
       border-radius: 10px;
       display: block;
       transition: all 0.3s;
@@ -383,7 +383,7 @@
       position: relative;
       z-index: 1;
       text-align: center;
-      color: white !important;
+      color: black !important;
     }
     .subh{
 
