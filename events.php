@@ -183,7 +183,7 @@
           }
         },
         error: function(error) {
-          console.log(error);
+          console.log(error, "error in Ajax");
         },
       });
     });
