@@ -37,7 +37,7 @@
             <h6 class="alert-header md-text-custom">Registration</h6>
             <p class="mb-0">Join Us today and be a part of International Society of Computer Professionals and Scientists!</p>
           </div class="col-md-1 col-sm-1 col-1">
-          <button class="sm-text-custom btn btn-outline-info"><a  href="./benefits.php#registration">Join Us</a></button>
+          <button class="sm-text-custom btn btn-outline-info"><a  href="#registration">Join Us</a></button>
           <div>
           </div>
         </div>
@@ -47,7 +47,7 @@
     <section class="service-sec" id="benefits">
       <div class="container">
         <div class="row">
-          <div class="row d-flex justify-content-center">
+          <div class="row d-flex justify-content-center benefit-card-container">
             <div class="perk-card"> <img src="./assets/images/perks/flagship.png" height="80" width="80">
               <h3>ACM’s flagship publication </h3>
               <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe.</p>
@@ -312,25 +312,11 @@
                   </div>
                   <div class="form-group col-md-6">
                     <input id="ACMMembershipNoinForm" required type="number" name="entry.114256127" class="form-input-boxes-manual form-control test-dev3" placeholder="ACM Membership No." >
+                    If you don't have membership number, <a href="https://bit.do/joinacm" target="_blank"><b>Click Here</b></a> to get one.
                   </div>
                 </div>
                 <div class="form-group">
-                  <input id="CourseinForm" required list="course" name="entry.1307853061" class="form-control form-input-boxes-manual required test-dev3" placeholder="Select Course"  aria-required="true">
-                  <datalist id="course">
-                    <option value="B.Tech CSE">
-                    <option value="B.Tech IT">
-                    <option value="B.Tech ECE">
-                    <option value="B.Tech A&R">
-                    <option value="B.Tech AI/ML">
-                    <option value="B.Tech AI/DS">
-                    <option value="B.Tech IIOT">
-                    <option value="M.Tech CSE">
-                    <option value="M.Tech IT">
-                    <option value="M.Tech ECE">
-                    <option value="M.Tech RA">
-                    <option value="MCA">
-                    <option value="PhD">
-                  </datalist>
+                  <input id="CourseinForm" required list="course" name="entry.1307853061" class="form-control form-input-boxes-manual required test-dev3" placeholder="Course">
                 </div>
                 <div class="form-group">
                   <p class = "test-dev4" >Select Your Clubs:</p>
@@ -409,7 +395,6 @@
         // var x = document.forms["contact"]["name"].value;
         var x = document.getElementById("NameinForm").value;
         var y = document.getElementById("LastNameinForm").value;
-        console.log(document.getElementById("EmailinForm"), "Email");
         var z = document.getElementById("EmailinForm").value;
         var a = document.getElementById("CourseinForm").value;
         var b = document.getElementById("PhoneinForm").value;
