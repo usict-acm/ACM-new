@@ -994,6 +994,10 @@ ul {
   .pt-card {
     margin-top: 10px;
   }
+  .benefit-card-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 @media (min-width: 200px) and (max-width: 780px) {
