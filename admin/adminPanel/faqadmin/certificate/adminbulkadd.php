@@ -3,7 +3,12 @@
 use Shuchkin\SimpleXLSX;
 
 ?>
-
+<?php
+if(isset($_POST['down-all'])){
+    // print_r ("dfghjsdfgbhnmngfdsdfghjgfdsadfbnmnbvcxzxcvb mnbvcxzdfgbnhjhgfdsasdfghjhgfdsadfghnmnbvcxzxcvbnmbvfdsadfghjgfdsdfghgfdsdfgk");
+       echo "asdfghjkl";
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -107,11 +112,13 @@ if(isset($_FILES['excel']['name'])){
         if(mysqli_query($connection,$query))
 			{
 				echo "true";
+                // echo $i;
 			}
         }
         $i++;
     }
     }
+    include('adminBulkDown.php');
 
 }
 ?>
