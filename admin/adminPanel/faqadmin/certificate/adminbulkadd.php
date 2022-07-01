@@ -98,11 +98,11 @@ if(isset($_FILES['excel']['name'])){
             }
         }
         
-           
+        
         if($i>0){
-            $query="INSERT INTO certificate (uniqueNO, nameParticipant,email, role, startDate, endDate, signedBy) values (".$unique.rtrim($q,",").");";
+            $query="INSERT INTO certificate (uniqueNO, nameParticipant,email, role, startDate, endDate, signedBy,course,enrollment_no,event,rank) values (".$unique.rtrim($q,",").");";
         }
-        echo $query;
+        
         if($i>0){
         if(mysqli_query($connection,$query))
 			{
