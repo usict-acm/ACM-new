@@ -1,4 +1,5 @@
 <?php 
+//include 'faqadmin/qrlib.php';
 if(isset($_GET["Sno"]) ){
     include_once '../../blogAdmin/database.php';
     $database = new Database();
@@ -20,12 +21,18 @@ $course = $row['course'];
 $enroll = $row['enrollment_no'];
 $rank = $row['rank'];
 $event = $row['event'];
+// $path = 'images/';
+// $file = $path.uniqid().".png";
+// $ecc = 'L';
+// $pixel_Size = 10;
+// $frame_Size = 10;
+// QRcode::png($uni, $file, $ecc, $pixel_Size, $frame_Size);
 imagettftext($image, 22, 0, 620, 500, $color,$font, $name);
 imagettftext($image, 22, 0, 420, 610, $color,$font, $course);
 imagettftext($image, 22, 0, 1010, 610, $color,$font, $enroll);
 imagettftext($image, 22, 0, 650, 660, $color,$font, $rank);
 imagettftext($image, 22, 0, 850, 660, $color,$font, $event);
-
+imagettftext($image, 20, 0, 1250, 50, $color,$font, $uni);
 imagejpeg($image,"certificate/$uni.jpg");
 imagejpeg($image);
 imagedestroy($image);

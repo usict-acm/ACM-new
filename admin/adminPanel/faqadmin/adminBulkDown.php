@@ -1,5 +1,6 @@
 <?php
     include_once '../../blogAdmin/database.php';
+    require('fpdf.php');
     $database = new Database();
     $conn = $database->connect();
 
@@ -9,17 +10,17 @@
         // echo $noOfRows;
 
   
-        // $sql = "SELECT * FROM certificate WHERE uniqueNo ='".$Sno."'";
+         //$sql = "SELECT * FROM certificate ";
         $sql = "SELECT * FROM certificate ORDER BY ID DESC LIMIT ".$noOfRows."";
         // echo $sql;
-        
-        if($result = mysqli_query($conn, $sql)){
-            if(mysqli_num_rows($result) > 0){
+        //print_r( mysqli_num_rows($result) );
+        $result = mysqli_query($conn, $sql);
+             if(mysqli_num_rows($result) > 0){
                 while($row = mysqli_fetch_array($result)){
 
-                    // echo mysqli_num_rows($result);
-                    $row = mysqli_fetch_array($result);
-                    // print_r($row);
+                  //  echo mysqli_num_rows($result);
+                    //$row = mysqli_fetch_array($result);
+                    //print_r($row);
                     header('Content-type: image/jpeg');
                     $font=realpath('arial.ttf');
                     $image=imagecreatefromjpeg("certi.jpeg");
@@ -38,18 +39,20 @@
                     imagettftext($image, 22, 0, 650, 660, $color,$font, $rank);
                     imagettftext($image, 22, 0, 850, 660, $color,$font, $event);
                     
-                    imagejpeg($image,"certificate/$uni.jpg");
+                    imagejpeg($image,"certificate/download/$uni.jpg");
+                    $pdf=new FPDF();
+                    $pdf->AddPage();
+                    $pdf->Image("certificate/download/$uni.jpg",0,0,210,150);
+                    $pdf->Output("certificate/download/$uni.pdf","F");
                     imagejpeg($image);
-                    imagedestroy($image);
+                    //imagedestroy($image);
                     
-                    require('fpdf.php');
-                        $pdf=new FPDF();
-                        $pdf->AddPage();
-                        $pdf->Image("certificate/$uni.jpg",0,0,210,150);
-                        $pdf->Output("certificate/$uni.pdf","F");
+                    
+                        
                 }
-            }
-        }
+                }
+            
+        
         
     }
 ?>

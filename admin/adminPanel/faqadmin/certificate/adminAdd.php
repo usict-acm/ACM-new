@@ -5,6 +5,14 @@
 <?php
 // Include config file
 require_once "./faqadmin/config1.php";
+// include './faqadmin/phpqrcode/qrlib.php';
+// $uni = "ayushi";
+// $path = './faqadmin/images/';
+// $file = $path.uniqid().".png";
+// $ecc = 'L';
+// $pixel_Size = 10;
+// $frame_Size = 10;
+// QRcode::png($uni, $file, $ecc, $pixel_Size, $frame_Size);
 ?>
 
 <!DOCTYPE html>
@@ -131,7 +139,7 @@ require_once "./faqadmin/config1.php";
                     <form method="POST" enctype="multipart/form-data">
 
                         <div class="form-group">
-                            <input type="text" name="uniqueno" id="cno" class='form-control' readonly/>
+                            <input type="text" name="uniqueno" id="cno" class='form-control' value = 'USS_ACM/' readonly/>
                         </div>
 
                         <div class="form-group">
@@ -183,7 +191,7 @@ require_once "./faqadmin/config1.php";
         const randomIndex = Math.floor(Math.random() * characters.length);
 		    return characters[randomIndex];
 	    });
-        cno.value += generated.join('');
+        cno.value += new Date().getFullYear()+'/'+generated.join('');
         // console.log(generated.join(''));
     }
     </script>
