@@ -86,6 +86,7 @@ if(isset($_FILES['excel']['name'])){
     $link = $database->connect();
     $connection = $link;
     include "xlsx.php";
+    $noOfRows = 0;
     if($connection){
         $excel = SimpleXLSX::parse($_FILES['excel']['tmp_name']);
        // print_r($excel->rows());
@@ -111,14 +112,34 @@ if(isset($_FILES['excel']['name'])){
         if($i>0){
         if(mysqli_query($connection,$query))
 			{
-				echo "true";
+				// echo "true";
                 // echo $i;
+                $noOfRows = $i;
+                // echo $noOfRows;
+                // echo $noOfRows;
+                // echo $noOfRows;
+                // echo $noOfRows;
+                // echo $noOfRows;
+                // echo $noOfRows;
 			}
         }
         $i++;
     }
     }
-    include('adminBulkDown.php');
+    // echo $noOfRows;
+    // echo $noOfRows;
+    // include('adminBulkDown.php');
+
+    echo "<div class='wrapper'>";
+        echo "<div class='container-fluid'>";
+            echo "<div class='row'>";
+                echo "<div class='col-md-12'>";
+                        echo "<a class='edit-logo' href='../../../../../ACM-new/admin/adminPanel/faqadmin/adminBulkDown.php?noOfRows=". $noOfRows ."' title='Download Certificate' name='down-all' id='' data-toggle='tooltip'>Download</span></a>";
+                echo "</div>";
+            echo "</div>";
+        echo "</div>";
+    echo "</div>";
+
 
 }
 ?>
