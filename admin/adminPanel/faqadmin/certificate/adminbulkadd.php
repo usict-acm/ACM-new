@@ -3,12 +3,6 @@
 use Shuchkin\SimpleXLSX;
 
 ?>
-<?php
-if(isset($_POST['down-all'])){
-    // print_r ("dfghjsdfgbhnmngfdsdfghjgfdsadfbnmnbvcxzxcvb mnbvcxzdfgbnhjhgfdsasdfghjhgfdsadfghnmnbvcxzxcvbnmbvfdsadfghjgfdsdfghgfdsdfgk");
-       echo "asdfghjkl";
-}
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -115,31 +109,18 @@ if(isset($_FILES['excel']['name'])){
 				// echo "true";
                 // echo $i;
                 $noOfRows = $i;
-                // echo $noOfRows;
-                // echo $noOfRows;
-                // echo $noOfRows;
-                // echo $noOfRows;
-                // echo $noOfRows;
-                // echo $noOfRows;
 			}
         }
         $i++;
     }
     }
-    // echo $noOfRows;
-    // echo $noOfRows;
-    // include('adminBulkDown.php');
 
-    echo "<div class='wrapper'>";
-        echo "<div class='container-fluid'>";
+    echo "<div class='container-fluid'>";
             echo "<div class='row'>";
-                echo "<div class='col-md-12'>";
-                        echo "<a class='edit-logo' href='../../../../../ACM-new/admin/adminPanel/faqadmin/adminBulkDown.php?noOfRows=". $noOfRows ."' title='Download Certificate' name='down-all' id='' data-toggle='tooltip'>Download</span></a>";
-                echo "</div>";
+                    echo "<a class='btn btn-success btn-md pull-right' style='margin-left: 43% ;margin-top:2%' href='./faqadmin/adminBulkDown.php?noOfRows=". $noOfRows ."'  >Download All  <span class='glyphicon glyphicon-download-alt'></span></span></a>";
             echo "</div>";
-        echo "</div>";
     echo "</div>";
-
+ 
 
 }
 ?>

@@ -15,7 +15,7 @@
         // echo $sql;
         //print_r( mysqli_num_rows($result) );
         $result = mysqli_query($conn, $sql);
-             if(mysqli_num_rows($result) > 0){
+            if(mysqli_num_rows($result) > 0){
                 while($row = mysqli_fetch_array($result)){
 
                   //  echo mysqli_num_rows($result);
@@ -45,14 +45,8 @@
                     $pdf->Image("certificate/download/$uni.jpg",0,0,210,150);
                     $pdf->Output("certificate/download/$uni.pdf","F");
                     imagejpeg($image);
-                    //imagedestroy($image);
-                    
-                    
-                        
+                    //imagedestroy($image);    
                 }
-                }
-            
-        
-        
+            }      
     }
 ?>
