@@ -39,6 +39,27 @@
 
 <section class="minheight">
 
+    <!--------------------------------------------------------------------- Start of Section -1 ---------------------------------------------------------------->
+    <section id="section-1">
+        <div class="hero">
+
+            <h1>Events</h1>
+            <p>“Words can do only much without actions”
+            </p>
+            <br>
+            <p>We organize various events and workshops every year to make sure that you learn with the competition.
+                <br>
+                Let’s go through the highlights of this enthralling journey that promises to get better with time.
+            </p>
+            <span class="curve"></span>
+
+        </div>
+       
+
+
+    </section>
+    <!--------------------------------------------------------------------- End of Section -1 ---------------------------------------------------------------->
+
 </section>
 
 

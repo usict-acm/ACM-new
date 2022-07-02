@@ -1,0 +1,52 @@
+/* ********************************************************** Start of Section-1 ************************************************************************ */
+#section-1 {
+    height: 400px;
+}
+
+.hero {
+    background: #34b7fe;
+    margin-bottom: 4em;
+    position: relative;
+    color: antiquewhite;
+    padding-top: 4em;
+}
+
+.hero .curve {
+    position: relative;
+    display: block;
+    height: 140px;
+    bottom: -140px;
+    margin-top: -100px;
+    overflow: hidden;
+}
+
+.hero .curve::after {
+    border-radius: 50%;
+    box-shadow: inset 0 -10px 10px rgba(0, 0, 0, 0.05);
+    height: 100px;
+    bottom: 0;
+    transform: translate(-5%, -100%);
+    -ms-transform: translate(-5%, -100%);
+    -webkit-transform: translate(-5%, -100%);
+    content: "";
+    position: absolute;
+    width: 110%;
+    z-index: -1;
+    background: #34b7fe;
+}
+
+.hero h1 {
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-weight: bolder;
+}
+
+
+.hero p {
+    text-align: center;
+    font-family: 'Baloo Bhai 2', cursive;
+
+}
+
+/* ********************************************************** End of Section-1 ********************************************************************** */
