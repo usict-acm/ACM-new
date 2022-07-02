@@ -15,6 +15,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <script src="https://kit.fontawesome.com/d459eda8d9.js" crossorigin="anonymous"></script>
+  <style>
+    .minheight{
+      min-height:100vh !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -24,47 +29,9 @@
   include('./header.php');
   ?>
 
-  <section>
-    <div class="leftBox">
-      <div class="content">
-        <h1>Events</h1>
-        <p>“Words can do only much without actions”</p>
-        <p>We organize various events and workshops every year to make sure that you learn with the competition. Let’s go through the highlights of this enthralling journey that promises to get better with time.</p>
-      </div>
-
-      <div class="content live-event">
-        <!-- <span class="badge">
-                          <span class="badge-wrap">
-                            <span class="badge-icon"><svg height="14" viewBox="0 0 14 14" width="14" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  d="M7 2.333c2.577 0 4.667 2.09 4.667 4.667S9.577 11.667 7 11.667 2.333 9.577 2.333 7 4.423 2.333 7 2.333zm0 1.05c-1.997 0-3.617 1.62-3.617 3.617 0 1.997 1.62 3.617 3.617 3.617 1.997 0 3.617-1.62 3.617-3.617 0-1.997-1.62-3.617-3.617-3.617z">
-                                </path>
-                              </svg><span class="badge-icon-inner"><svg aria-hidden="true" focusable="false" viewbox="0 0 14 14">
-                                  <path
-                                    d="M7 9.567c1.418 0 2.567-1.15 2.567-2.567 0-1.418-1.15-2.567-2.567-2.567-1.418 0-2.567 1.15-2.567 2.567 0 1.418 1.15 2.567 2.567 2.567z">
-                                  </path>
-                                </svg></span></span><span class="badge-text">LIVE</span>
-                          </span>
-                        </span> -->
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval=3000>
-
-          <div class="carousel-inner" id="carousel" style="height: 100%;"></div>
-
-          <!-- <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                          </a>
-                          <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                          </a> -->
-
-        </div>
-      </div>
-
-
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <section class="minheight">
+    
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       let urlcarousel = './admin/blogAdmin/api.php/?q=carousel';
       let carouselDIV = document.getElementById("carousel");
@@ -95,20 +62,20 @@
           },
         });
       });
-    </script>
+    </script> -->
 
 
-    <div class="events">
+    <!-- <div class="events">
       <ul id="eventIndex">
 
       </ul>
-    </div>
+    </div> -->
   </section>
 
-  <div class="quotes" id="galleryImage">
-  </div>
+  <!-- <div class="quotes" id="galleryImage">
+  </div> -->
 
-  <script>
+  <!-- <script>
     let url = './admin/blogAdmin/api.php/?q=getImage';
     var galleryImage = document.getElementById("galleryImage");
     galleryImage.innerHTML = "";
@@ -128,7 +95,7 @@
         }
       })
     })
-  </script>
+  </script> -->
 
   <!-- <div class="quotes">
     <img class="quote-img" src="./assets/images/About us/image1.jpg" alt="" />
