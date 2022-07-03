@@ -117,7 +117,7 @@
     <div class="section-2-heading">
       <h1 class="display-3 mbh3">Gallery</h1>
     </div>
-    <section class="Gallery container">
+    <section class="Gallery">
       <input type="radio" name="position" checked />
       <input type="radio" name="position" />
       <input type="radio" name="position" />

@@ -105,7 +105,7 @@
   height: auto;
 }
 
-@media (width<600px) {
+@media (max-width<600px) {
   .carousel-wrapper .carousel {
     width: 126% !important;
   }
@@ -374,7 +374,7 @@ input:nth-of-type(5):checked ~ main#carousel {
   border: 5px solid black;
 }
 
-@media screen and (width<1000px) {
+@media screen and (max-width : 1000px) {
   .item {
     width: 90vw;
     height: 52.625vw;
