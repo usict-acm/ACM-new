@@ -6,26 +6,25 @@
   include('./head.php');
   ?>
   <title>GGSIP University USS ACM Student Chapter</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link href="./assets/CSS/events.css" rel="stylesheet" />
+
   <link href="assets/CSS/header.css" rel="stylesheet" />
+
   <link href="assets/CSS/footer.css" rel="stylesheet" />
+
   <link rel="stylesheet" href="./assets/CSS/newStyle.css" />
+
   <link rel="preconnect" href="https://fonts.gstatic.com" />
 
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <script src="https://kit.fontawesome.com/d459eda8d9.js" crossorigin="anonymous"></script>
-  <!-- <link rel='stylesheet' href='https://unpkg.com/bootstrap@4.0.0/dist/css/bootstrap.css'>
-  <link rel='stylesheet' href='https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css'> -->
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
-  <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
-  <style>
-    .minheight {
-      min-height: 100vh !important;
-      /* margin-top: -8px !important; */
-    }
-  </style>
+
+  <link rel='stylesheet' href='https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css'>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link href="./assets/CSS/events.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -35,230 +34,88 @@
   include('./header.php');
   ?>
 
-  <section class="minheight py-5">
-
-
-    <!--------------------------------------------------------------------- Start of Section -1 ---------------------------------------------------------------->
-    <section id="section-1">
-      <div class="hero">
-
-        <h1>Events</h1>
-        <p>“Words can do only much without actions”
-        </p>
+  <section id="section-1">
+    <div class="hero">
+      <h1>Events</h1>
+      <p>“Words can do only much without actions”
+      </p>
+      <br>
+      <p>We organize various events and workshops every year to make sure that you learn with the competition.
         <br>
-        <p>We organize various events and workshops every year to make sure that you learn with the competition.
-          <br>
-          Let’s go through the highlights of this enthralling journey that promises to get better with time.
-        </p>
-        <span class="curve"></span>
-
-      </div>
-
-
-
-    </section>
-    <!--------------------------------------------------------------------- End of Section -1 ---------------------------------------------------------------->
-
-
-    <!--------------------------------------------------------------------- Start of Section -2 ---------------------------------------------------------------->
-
-    <div class="section-2-heading">
-      <h1 class="display-3">Previous Events</h1>
+        Let’s go through the highlights of this enthralling journey that promises to get better with time.
+      </p>
+      <span class="curve"></span>
     </div>
-
-
-    <Section id="section-2">
-      <div class="carousel-wrapper">
-        <div class="carousel" data-flickity>
-          <div class="carousel-cell">
-            <h3>2019</h3>
-            <h5 class="more">"The year in which it all started."</h5>
-            <h4 class="more">8 events</h4>
-            <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" />
-            <div class="line"></div>
-            <div class="button-2">
-              <span><button type="button" class="btn btn-primary">See all Events</button></span>
-            </div>
-          </div>
-          <div class="carousel-cell">
-            <h3>2020</h3>
-            <h5 class="more">"Pandemic cannot stop us!"</h5>
-            <h4 class="more">8 events</h4>
-            <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" />
-            <div class="line"></div>
-            <div class="button-2">
-              <span><button type="button" class="btn btn-primary">See all Events</button></span>
-            </div>
-          </div>
-          <div class="carousel-cell">
-            <h3>2021</h3>
-            <h5 class="more">"We grow stronger and the journey is still ongoing."</h5>
-            <h4 class="more">27 events</h4>
-            <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" />
-            <div class="line"></div>
-            <div class="button-2">
-              <span><button type="button" class="btn btn-primary">See all Events</button></span>
-            </div>
-          </div>
-          <div class="carousel-cell">
-            <h3>2022</h3>
-            <h5 class="more">"Mile by mile we hit a milestone!"</h5>
-            <h4 class="more">12 events</h4>
-            <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" />
-            <div class="line"></div>
-            <div class="button-2">
-              <span><button type="button" class="btn btn-primary">See all Events</button></span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </Section>
-    <div class="section-2-heading">
-      <h1 class="display-3 mbh3">Gallery</h1>
-    </div>
-    <section class="Gallery">
-      <input type="radio" name="position" checked />
-      <input type="radio" name="position" />
-      <input type="radio" name="position" />
-      <input type="radio" name="position" />
-      <input type="radio" name="position" />
-      <main id="carousel">
-        <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image4.jpg" alt="" srcset=""></div>
-        <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image3.jpg" alt="" srcset=""></div>
-        <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image2.jpg" alt="" srcset=""></div>
-        <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image1.jpg" alt="" srcset=""></div>
-        <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image3.jpg" alt="" srcset=""></div>
-        <main>
-    </section>
-
-
-    <!--------------------------------------------------------------------- End of Section -2 ---------------------------------------------------------------->
-
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      let urlcarousel = './admin/blogAdmin/api.php/?q=carousel';
-      let carouselDIV = document.getElementById("carousel");
-
-      $(document).ready(function() {
-        $.ajax({
-          url: urlcarousel,
-          method: 'GET',
-          dataType: 'JSON',
-          success: function(data) {
-            console.log("check data 123 ", data);
-            carouselDIV.innerHTML += " <div class='carousel-item active'>\
-                                                    <img src=" + data[0].poster + "  class='live-carousel-img'>\
-                                                  </div>";
-            console.log(data[0].poster);
-            console.log(carouselDIV);
-
-            function carouselfunction() {
-
-              for (i = 1; i < data.length; i++) {
-                carouselDIV.innerHTML += " <div class='carousel-item'>\
-                                                      <img src=" + data[i].poster + "  class='live-carousel-img'>\
-                                                    </div>";
-              }
-            }
-            carouselfunction();
-            console.log(carouselDIV);
-          },
-        });
-      });
-    </script> -->
-
-
-    <!-- <div class="events">
-      <ul id="eventIndex">
-
-      </ul>
-    </div> -->
   </section>
 
-  <!-- <div class="quotes" id="galleryImage">
-  </div> -->
+  <div class="blu d-flex flex-row p-0 w-100 justify-content-center">
+    <h1 class="fw-bold display-3 p-0 m-0 mx-2 text-primary">Previous</h1>
+    <h1 class="fw-bold display-3 mx-2">Events</h1>
+  </div>
 
-  <!-- <script>
-    let url = './admin/blogAdmin/api.php/?q=getImage';
-    var galleryImage = document.getElementById("galleryImage");
-    galleryImage.innerHTML = "";
 
-    $(document).ready(function() {
-      $.ajax({
-        url: url,
-        method: 'GET',
-        dataType: 'JSON',
-        success: function(data) {
-          console.log("gallery data", data);
-          data.forEach(myFunc);
+  <div id="carouselExampleCaptions" class="carousel container slide my-5" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://images.pexels.com/photos/919734/pexels-photo-919734.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="70vw" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="70vw" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.pexels.com/photos/919734/pexels-photo-919734.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="70vw" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+  <div class="blu d-flex flex-row p-0 w-100 justify-content-center">
+    <h1 class="fw-bold display-3 p-0 m-0 mx-2 text-primary">Gallery</h1>
+    <!-- <h1 class="fw-bold display-3 mx-2">Events</h1> -->
+  </div>
 
-          function myFunc(row, index) {
-            galleryImage.innerHTML += " <img class='quote-img' style='transition: 2s;' src=" + row.Image + " alt=' ' />";
-          }
-        }
-      })
-    })
-  </script> -->
+  <section class="Gallery my-5">
+    <input type="radio" name="position" checked />
+    <input type="radio" name="position" />
+    <input type="radio" name="position" />
+    <input type="radio" name="position" />
+    <input type="radio" name="position" />
+    <main id="carousel">
+      <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image4.jpg" alt="" srcset=""></div>
+      <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image3.jpg" alt="" srcset=""></div>
+      <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image2.jpg" alt="" srcset=""></div>
+      <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image1.jpg" alt="" srcset=""></div>
+      <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image3.jpg" alt="" srcset=""></div>
+      <main>
+  </section>
 
-  <!-- <div class="quotes">
-    <img class="quote-img" src="./assets/images/About us/image1.jpg" alt="" />
-    <img class="quote-img" src="./assets/images/About us/image2.jpg" alt="" />
-    <img class="quote-img" src="./assets/images/About us/image31.jpg" alt="" />
-    <img class="quote-img" src="./assets/images/About us/image4.jpg" alt="" />
-    <img class="quote-img" src="./assets/images/trell-4.jpeg" alt="" />
-  </div> -->
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <script>
-    let urlEventIndex = './admin/blogAdmin/api.php/?q=getYearEvent';
-    let yearWiseEvent = document.getElementById("eventIndex");
-    let numberOfEvents = 0;
 
-    $(document).ready(function() {
-      $.ajax({
-        url: urlEventIndex,
-        method: 'GET',
-        dataType: 'JSON',
-        success: function(data) {
-          console.log("check data ", data);
-          data.forEach(allEventmore);
-
-          function allEventmore(event) {
-            let urlYear = './admin/blogAdmin/api.php/?q=readAllEvent&year=' + event.year;
-            $.ajax({
-              url: urlYear,
-              method: 'GET',
-              async: false,
-              dataType: 'JSON',
-              success: function(dataNumber) {
-                console.log(urlYear);
-                console.log("dataNumber", dataNumber);
-                numberOfEvents = dataNumber[1];
-                console.log("numberrrr", numberOfEvents);
-                yearWiseEvent.innerHTML += " <li style='height:150px;'>\
-                                                <div class='time'>\
-                                                    <h2>" + event.year + " <br><span></span></h2>\
-                                                </div>\
-                                                <div class='details'>\
-                                                    <h3 style='color: black;font-weight: bolder;'>" + numberOfEvents + " " + event.numberOfEvents + " </h3>\
-                                                    <p style='font-size:large; color: #e91e63;font-weight: bolder;'>" + event.heading + "</p>\
-                                                    <p style='text-align: end; margin-right: 2px; font-size: smaller; color:#0297ff;'>" + event.more + "</p>\
-                                                    <a  href='./eventYear.php?year=" + event.year + "'>View details</a>\
-                                                </div>\
-                                                <div style='clear: both;'></div>\
-                                            </li>";
-              }
-            })
-          }
-        },
-        error: function(error) {
-          console.log(error, "error in Ajax");
-        },
-      });
-    });
-  </script>
   <!-- back to top and contact us-->
   <?php
   include("contact.php")
@@ -269,52 +126,8 @@
   ?>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="assets\JS\home_new.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-  <script>
-    (function($) {
-      "use strict";
-      // Auto-scroll
-      $('#myCarousel').carousel({
-        interval: 5000
-      });
 
-      // Control buttons
-      $('.next').click(function() {
-        $('.carousel').carousel('next');
-        return false;
-      });
-      $('.prev').click(function() {
-        $('.carousel').carousel('prev');
-        return false;
-      });
-
-      // On carousel scroll
-      $("#myCarousel").on("slide.bs.carousel", function(e) {
-        var $e = $(e.relatedTarget);
-        var idx = $e.index();
-        var itemsPerSlide = 3;
-        var totalItems = $(".carousel-item").length;
-        if (idx >= totalItems - (itemsPerSlide - 1)) {
-          var it = itemsPerSlide -
-            (totalItems - idx);
-          for (var i = 0; i < it; i++) {
-            // append slides to end 
-            if (e.direction == "left") {
-              $(
-                ".carousel-item").eq(i).appendTo(".carousel-inner");
-            } else {
-              $(".carousel-item").eq(0).appendTo(".carousel-inner");
-            }
-          }
-        }
-      });
-    })
-    (jQuery);
-  </script>
-  <script src='https://unpkg.com/jquery@3.3.1/dist/jquery.js'></script>
-  <script src='https://unpkg.com/popper.js@1.12.9/dist/umd/popper.js'></script>
-  <script src='https://unpkg.com/bootstrap@4.0.0/dist/js/bootstrap.js'>
-  </script>
-  < </body>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </html>
