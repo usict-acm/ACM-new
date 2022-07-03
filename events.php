@@ -6,21 +6,24 @@
   include('./head.php');
   ?>
   <title>GGSIP University USS ACM Student Chapter</title>
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="./assets/CSS/events.css" rel="stylesheet" />
   <link href="assets/CSS/header.css" rel="stylesheet" />
   <link href="assets/CSS/footer.css" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/CSS/newStyle.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
+
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <script src="https://kit.fontawesome.com/d459eda8d9.js" crossorigin="anonymous"></script>
-
+  <!-- <link rel='stylesheet' href='https://unpkg.com/bootstrap@4.0.0/dist/css/bootstrap.css'>
+  <link rel='stylesheet' href='https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css'> -->
   <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
-    <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+  <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
   <style>
-    .minheight{
-      min-height:100vh !important;
+    .minheight {
+      min-height: 100vh !important;
+      /* margin-top: -8px !important; */
     }
   </style>
 </head>
@@ -32,90 +35,106 @@
   include('./header.php');
   ?>
 
-  <section class="minheight">
+  <section class="minheight py-5">
 
-  
+
     <!--------------------------------------------------------------------- Start of Section -1 ---------------------------------------------------------------->
     <section id="section-1">
-        <div class="hero">
+      <div class="hero">
 
-            <h1>Events</h1>
-            <p>“Words can do only much without actions”
-            </p>
-            <br>
-            <p>We organize various events and workshops every year to make sure that you learn with the competition.
-                <br>
-                Let’s go through the highlights of this enthralling journey that promises to get better with time.
-            </p>
-            <span class="curve"></span>
+        <h1>Events</h1>
+        <p>“Words can do only much without actions”
+        </p>
+        <br>
+        <p>We organize various events and workshops every year to make sure that you learn with the competition.
+          <br>
+          Let’s go through the highlights of this enthralling journey that promises to get better with time.
+        </p>
+        <span class="curve"></span>
 
-        </div>
+      </div>
 
 
 
     </section>
     <!--------------------------------------------------------------------- End of Section -1 ---------------------------------------------------------------->
 
-    
+
     <!--------------------------------------------------------------------- Start of Section -2 ---------------------------------------------------------------->
 
+    <div class="section-2-heading">
+      <h1 class="display-3">Previous Events</h1>
+    </div>
+
+
     <Section id="section-2">
-        <div class="section-2-heading">
-            <h1>Previous Events</h1>
-        </div>
-        <div class="carousel-wrapper">
-            <div class="carousel" data-flickity>
-                <div class="carousel-cell">
-                    <h3>2019</h3>
-                    <h5 class="more">"The year in which it all started."</h5>
-                    <h4 class="more">8 events</h4>
-                    <img
-                        src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" />
-                    <div class="line"></div>
-                    <div class="button-2">
-                        <span><button type="button" class="btn btn-primary">See all Events</button></span>
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <h3>2020</h3>
-                    <h5 class="more">"Pandemic cannot stop us!"</h5>
-                    <h4 class="more">8 events</h4>
-                    <img
-                        src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" />
-                    <div class="line"></div>
-                    <div class="button-2">
-                        <span><button type="button" class="btn btn-primary">See all Events</button></span>
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <h3>2021</h3>
-                    <h5 class="more">"We grow stronger and the journey is still ongoing."</h5>
-                    <h4 class="more">27 events</h4>
-                    <img
-                        src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" />
-                    <div class="line"></div>
-                    <div class="button-2">
-                        <span><button type="button" class="btn btn-primary">See all Events</button></span>
-                    </div>
-                </div>
-                <div class="carousel-cell">
-                    <h3>2022</h3>
-                    <h5 class="more">"Mile by mile we hit a milestone!"</h5>
-                    <h4 class="more">12 events</h4>
-                    <img
-                        src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" />
-                    <div class="line"></div>
-                    <div class="button-2">
-                        <span><button type="button" class="btn btn-primary">See all Events</button></span>
-                    </div>
-                </div>
+      <div class="carousel-wrapper">
+        <div class="carousel" data-flickity>
+          <div class="carousel-cell">
+            <h3>2019</h3>
+            <h5 class="more">"The year in which it all started."</h5>
+            <h4 class="more">8 events</h4>
+            <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" />
+            <div class="line"></div>
+            <div class="button-2">
+              <span><button type="button" class="btn btn-primary">See all Events</button></span>
             </div>
+          </div>
+          <div class="carousel-cell">
+            <h3>2020</h3>
+            <h5 class="more">"Pandemic cannot stop us!"</h5>
+            <h4 class="more">8 events</h4>
+            <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" />
+            <div class="line"></div>
+            <div class="button-2">
+              <span><button type="button" class="btn btn-primary">See all Events</button></span>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <h3>2021</h3>
+            <h5 class="more">"We grow stronger and the journey is still ongoing."</h5>
+            <h4 class="more">27 events</h4>
+            <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" />
+            <div class="line"></div>
+            <div class="button-2">
+              <span><button type="button" class="btn btn-primary">See all Events</button></span>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <h3>2022</h3>
+            <h5 class="more">"Mile by mile we hit a milestone!"</h5>
+            <h4 class="more">12 events</h4>
+            <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=" />
+            <div class="line"></div>
+            <div class="button-2">
+              <span><button type="button" class="btn btn-primary">See all Events</button></span>
+            </div>
+          </div>
         </div>
+      </div>
 
     </Section>
+    <div class="section-2-heading">
+      <h1 class="display-3 mbh3">Gallery</h1>
+    </div>
+    <section class="Gallery container">
+      <input type="radio" name="position" checked />
+      <input type="radio" name="position" />
+      <input type="radio" name="position" />
+      <input type="radio" name="position" />
+      <input type="radio" name="position" />
+      <main id="carousel">
+        <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image4.jpg" alt="" srcset=""></div>
+        <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image3.jpg" alt="" srcset=""></div>
+        <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image2.jpg" alt="" srcset=""></div>
+        <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image1.jpg" alt="" srcset=""></div>
+        <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image3.jpg" alt="" srcset=""></div>
+        <main>
+    </section>
+
 
     <!--------------------------------------------------------------------- End of Section -2 ---------------------------------------------------------------->
-    
+
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       let urlcarousel = './admin/blogAdmin/api.php/?q=carousel';
@@ -241,15 +260,61 @@
     });
   </script>
   <!-- back to top and contact us-->
-	<?php
-	include("contact.php")
-	?>
+  <?php
+  include("contact.php")
+  ?>
   <!-- ***********************************************Footer************************************************************************ -->
   <?php
   include('footer.php');
   ?>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="assets\JS\home_new.js"></script>
-</body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script>
+    (function($) {
+      "use strict";
+      // Auto-scroll
+      $('#myCarousel').carousel({
+        interval: 5000
+      });
+
+      // Control buttons
+      $('.next').click(function() {
+        $('.carousel').carousel('next');
+        return false;
+      });
+      $('.prev').click(function() {
+        $('.carousel').carousel('prev');
+        return false;
+      });
+
+      // On carousel scroll
+      $("#myCarousel").on("slide.bs.carousel", function(e) {
+        var $e = $(e.relatedTarget);
+        var idx = $e.index();
+        var itemsPerSlide = 3;
+        var totalItems = $(".carousel-item").length;
+        if (idx >= totalItems - (itemsPerSlide - 1)) {
+          var it = itemsPerSlide -
+            (totalItems - idx);
+          for (var i = 0; i < it; i++) {
+            // append slides to end 
+            if (e.direction == "left") {
+              $(
+                ".carousel-item").eq(i).appendTo(".carousel-inner");
+            } else {
+              $(".carousel-item").eq(0).appendTo(".carousel-inner");
+            }
+          }
+        }
+      });
+    })
+    (jQuery);
+  </script>
+  <script src='https://unpkg.com/jquery@3.3.1/dist/jquery.js'></script>
+  <script src='https://unpkg.com/popper.js@1.12.9/dist/umd/popper.js'></script>
+  <script src='https://unpkg.com/bootstrap@4.0.0/dist/js/bootstrap.js'>
+  </script>
+  < </body>
 
 </html>

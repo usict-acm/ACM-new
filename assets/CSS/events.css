@@ -1,261 +1,394 @@
 /* ********************************************************** Start of Section-1 ************************************************************************ */
 #section-1 {
-    height: 400px;
+  height: 400px;
 }
 
 .hero {
-    background: #34b7fe;
-    margin-bottom: 4em;
-    position: relative;
-    color: antiquewhite;
-    padding-top: 4em;
+  background: #34b7fe;
+  margin-bottom: 4em;
+  position: relative;
+  color: antiquewhite;
+  padding-top: 4em;
 }
 
 .hero .curve {
-    position: relative;
-    display: block;
-    height: 140px;
-    bottom: -140px;
-    margin-top: -100px;
-    overflow: hidden;
+  position: relative;
+  display: block;
+  height: 140px;
+  bottom: -140px;
+  margin-top: -100px;
+  overflow: hidden;
 }
 
 .hero .curve::after {
-    border-radius: 50%;
-    box-shadow: inset 0 -10px 10px rgba(0, 0, 0, 0.05);
-    height: 100px;
-    bottom: 0;
-    transform: translate(-5%, -100%);
-    -ms-transform: translate(-5%, -100%);
-    -webkit-transform: translate(-5%, -100%);
-    content: "";
-    position: absolute;
-    width: 110%;
-    z-index: -1;
-    background: #34b7fe;
+  border-radius: 50%;
+  box-shadow: inset 0 -10px 10px rgba(0, 0, 0, 0.05);
+  height: 100px;
+  bottom: 0;
+  transform: translate(-5%, -100%);
+  -ms-transform: translate(-5%, -100%);
+  -webkit-transform: translate(-5%, -100%);
+  content: "";
+  position: absolute;
+  width: 110%;
+  z-index: -1;
+  background: #34b7fe;
 }
 
 .hero h1 {
-    font-size: 70px;
-    text-align: center;
-    font-family: 'Baloo Bhai 2', cursive;
-    font-weight: bolder;
+  font-size: 70px;
+  text-align: center;
+  font-family: "Baloo Bhai 2", cursive;
+  font-weight: bolder;
 }
 
-
 .hero p {
-    text-align: center;
-    font-family: 'Baloo Bhai 2', cursive;
-
+  text-align: center;
+  font-family: "Baloo Bhai 2", cursive;
 }
 
 /* ********************************************************** End of Section-1 ********************************************************************** */
 
 #section-2 {
-    min-height: 1200px;
+  min-height: 700px;
 }
 
 .section-2-heading {
-    position: relative;
-    display: block;
-    width: 100%;
-    margin: auto;
-    font-family: 'Baloo Bhai 2', cursive;
-    text-align: center;
-    margin-top: 10px;
-
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: auto;
+  font-family: "Baloo Bhai 2", cursive;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .section-2-heading h1 {
-    text-transform: uppercase;
-    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 58px;
-    font-weight: bold;
+  text-transform: capitalize;
+  color: #34b7fe;
+  font-weight: bold;
+  font-family: "Baloo Bhai 2", cursive;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.068);
 }
 
-
 .carousel-cell img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .carousel-cell h3 {
-    text-align: center;
-    font-weight: 600;
-    margin-bottom: 0;
-    font-family: 'Baloo Bhai 2', cursive;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 0;
+  font-family: "Baloo Bhai 2", cursive;
 }
 
 .carousel-wrapper {
-    position: absolute;
-    width: 84%;
-    height: 78%;
-    top: 110%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #FFFFFF;
+  position: absolute;
+  width: 84%;
+  height: 87%;
+  top: 83%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background-color: #FFFFFF;
     background-image: linear-gradient(#FFFFFF 50%, #FFFFFF 50%, #b8e7fb 50%);
-    box-shadow: 0px 12px 39px -19px rgba(0, 0, 0, 0.75);
-    overflow: hidden;
+    box-shadow: 0px 12px 39px -19px rgba(0, 0, 0, 0.75); */
+  overflow: hidden;
 }
 
 .carousel-wrapper .carousel {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    height: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: auto;
 }
 
 @media (width<600px) {
+  .carousel-wrapper .carousel {
+    width: 126% !important;
+  }
 
-    .carousel-wrapper .carousel {
-        width: 126% !important;
-    }
+  .carousel-wrapper {
+    width: 95% !important;
+    /* height: 90% !important; */
+    height: 70% !important;
+    top: 95%;
+  }
 
-    .carousel-wrapper {
-        width: 95% !important;
-        height: 90% !important;
-    }
+  .section-2-heading {
+    margin-top: 65px;
+  }
 
-    .flickity-slider {
-        width: 126% !important;
-    }
+  .flickity-slider {
+    width: 126% !important;
+  }
 
-    .carousel-wrapper .carousel .carousel-cell {
-        width: 44% !important;
-        /* margin: 0 -45px !important; */
-    }
+  .carousel-wrapper .carousel .carousel-cell {
+    width: 44% !important;
+    /* margin: 0 -45px !important; */
+  }
 
-    .carousel-wrapper .carousel .carousel-cell.is-selected {
-        margin-left: -40px !important;
-    }
+  .carousel-wrapper .carousel .carousel-cell.is-selected {
+    margin-left: -40px !important;
+  }
 
-    #section-2 {
-        min-height: 800px;
-    }
-
+  #section-2 {
+    min-height: 390px;
+  }
 }
 
 .carousel-wrapper .carousel .carousel-cell {
-    padding: 10px;
-    background-color: #FFFFFF;
-    width: 20%;
-    height: auto;
-    min-width: 120px;
-    margin: 0 20px;
-    transition: transform 500ms ease;
+  padding: 10px;
+  background-color: #ffffff;
+  width: 20%;
+  height: auto;
+  min-width: 120px;
+  margin: 0 20px;
+  transition: transform 500ms ease;
 }
 
 .carousel-wrapper .carousel .carousel-cell .more {
-    display: block;
-    opacity: 0;
-    margin: 5px 0 15px 0;
-    text-align: center;
-    font-size: 10px;
-    color: #CFCFCF;
-    text-decoration: none;
-    transition: opacity 300ms ease;
+  display: block;
+  opacity: 0;
+  margin: 5px 0 15px 0;
+  text-align: center;
+  font-size: 10px;
+  color: #cfcfcf;
+  text-decoration: none;
+  transition: opacity 300ms ease;
 }
 
 .carousel-wrapper .carousel .carousel-cell .more:hover,
 .carousel-wrapper .carousel .carousel-cell .more:active,
 .carousel-wrapper .carousel .carousel-cell .more:visited,
 .carousel-wrapper .carousel .carousel-cell .more:focus {
-    color: #CFCFCF;
-    text-decoration: none;
+  color: #cfcfcf;
+  text-decoration: none;
 }
 
 .carousel-wrapper .carousel .carousel-cell .line {
-    position: absolute;
-    width: 2px;
-    height: 0;
-    background-color: black;
-    left: 50%;
-    margin: 5px 0 0 -1px;
-    transition: height 300ms ease;
-    display: block;
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background-color: black;
+  left: 50%;
+  margin: 5px 0 0 -1px;
+  transition: height 300ms ease;
+  display: block;
 }
 
 .carousel-wrapper .carousel .carousel-cell .button-2 {
-    position: absolute;
-    font-weight: 700;
-    margin: 45px auto 0 auto;
-    left: 50%;
-    transform: translate(-50%);
-    opacity: 0;
-    transition: opacity 300ms ease 300ms;
+  position: absolute;
+  font-weight: 700;
+  margin: 45px auto 0 auto;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: opacity 300ms ease 300ms;
 }
 
 .carousel-wrapper .carousel .carousel-cell .button-2 sup {
-    top: 2px;
-    position: absolute;
+  top: 2px;
+  position: absolute;
 }
 
 .carousel-wrapper .carousel .carousel-cell.is-selected {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .carousel-wrapper .carousel .carousel-cell.is-selected .line {
-    height: 35px;
+  height: 35px;
 }
 
 .carousel-wrapper .carousel .carousel-cell.is-selected .button-2,
 .carousel-wrapper .carousel .carousel-cell.is-selected .more {
-    opacity: 1;
+  opacity: 1;
 }
 
 .carousel-wrapper .flickity-page-dots {
-    display: none;
+  display: none;
 }
 
 .carousel-wrapper .flickity-viewport,
 .carousel-wrapper .flickity-slider {
-    overflow: visible;
+  overflow: visible;
 }
 
-@media only screen and (min-device-width : 900px) and (max-device-width : 1444px) {
-    .button-2 button {
-        font-size: 13px;
-        width: 102px;
-        height: 32px;
-        padding: 3px;
-
-    }
+@media only screen and (min-device-width: 900px) and (max-device-width: 1444px) {
+  .button-2 button {
+    font-size: 13px;
+    width: 102px;
+    height: 32px;
+    padding: 3px;
+  }
 }
 
-@media only screen and (min-device-width : 700px) and (max-device-width : 900px) {
-    .button-2 button {
-        font-size: 11px;
-        width: 92px;
-        height: 28px;
-        padding: 2px;
-
-    }
+@media only screen and (min-device-width: 700px) and (max-device-width: 900px) {
+  .button-2 button {
+    font-size: 11px;
+    width: 92px;
+    height: 28px;
+    padding: 2px;
+  }
 }
 
-@media only screen and (max-device-width : 700px) {
-    .button-2 button {
-        font-size: 10px;
-        width: 85px;
-        height: 24px;
-        padding: 1px;
-
-    }
+@media only screen and (max-device-width: 700px) {
+  .button-2 button {
+    font-size: 10px;
+    width: 85px;
+    height: 24px;
+    padding: 1px;
+  }
 }
 
-
-@media only screen and (max-device-height : 740px) {
-    .section-2-heading h1 {
-        font-size: 48px;
-
-    }
+@media only screen and (max-device-height: 740px) {
+  .section-2-heading h1 {
+    font-size: 48px;
+  }
 }
-
-
-
 
 /* ************************************************************ End of Section-2 ************************************************************************ */
+
+.section-2-heading {
+  min-height: 100px !important;
+}
+
+/* ************************************************************ End of Section-3 ************************************************************************ */
+
+#section-3 {
+  min-height: 100vh !important;
+}
+.mbh3 {
+  border-bottom: 0px !important;
+  padding-top: 10px;
+  border-top: 2px solid rgba(0, 0, 0, 0.068);
+}
+/*********************************************************** Gallery********************************************************** */
+
+main#carousel {
+  grid-row: 1 / 2;
+  grid-column: 1 / 8;
+  width: 100vw;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  --items: 5;
+  --middle: 3;
+  --position: 1;
+  pointer-events: none;
+}
+
+div.item {
+  position: absolute;
+  /* width: 300px;
+    height: 400px; */
+  background-color: coral;
+  --r: calc(var(--position) - var(--offset));
+  --abs: max(calc(var(--r) * -1), var(--r));
+  transition: all 0.25s linear;
+  transform: rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-300px * var(--r)));
+  z-index: calc((var(--position) - var(--abs)));
+}
+
+div.item:nth-of-type(1) {
+  --offset: 1;
+  background-color: #90f1ef;
+}
+div.item:nth-of-type(2) {
+  --offset: 2;
+  background-color: #ff70a6;
+}
+div.item:nth-of-type(3) {
+  --offset: 3;
+  background-color: #ff9770;
+}
+div.item:nth-of-type(4) {
+  --offset: 4;
+  background-color: #ffd670;
+}
+div.item:nth-of-type(5) {
+  --offset: 5;
+  background-color: #e9ff70;
+}
+
+input:nth-of-type(1) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(1):checked ~ main#carousel {
+  --position: 1;
+}
+
+input:nth-of-type(2) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(2):checked ~ main#carousel {
+  --position: 2;
+}
+
+input:nth-of-type(3) {
+  grid-column: 4 /5;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(3):checked ~ main#carousel {
+  --position: 3;
+}
+
+input:nth-of-type(4) {
+  grid-column: 5 / 6;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(4):checked ~ main#carousel {
+  --position: 4;
+}
+
+input:nth-of-type(5) {
+  grid-column: 6 / 7;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(5):checked ~ main#carousel {
+  --position: 5;
+}
+
+.Gallery {
+  display: grid;
+  grid-template-rows: 500px 100px;
+  grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.item {
+  width: 40vw;
+  height: 23.5vw;
+  padding: 0px !important;
+  overflow: hidden;
+  border: 5px solid black;
+}
+
+@media screen and (width<1000px) {
+  .item {
+    width: 90vw;
+    height: 52.625vw;
+  }
+  #carousel {
+    height: 53.625vw !important;
+  }
+
+  .Gallery {
+    grid-template-rows: 244px 100px;
+  }
+}
+
+.item img {
+  width: inherit !important;
+  height: inherit !important;
+}
