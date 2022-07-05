@@ -97,6 +97,8 @@
     <h1 class="fw-bold display-3 mx-2">Events</h1>
   </div>
 
+  <section class="previous-event">
+
 
   <div id="carouselExampleCaptions" class="carousel container slide my-5" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -136,6 +138,8 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+
+  </section>
   
   <div class="blu d-flex flex-row p-0 w-100 justify-content-center">
     <h1 class="fw-bold display-3 p-0 m-0 mx-2 text-primary">Gallery</h1>

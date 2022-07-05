@@ -96,6 +96,13 @@
 
 /* END OF CURRENT EVENT */
 
+.previous-event {
+  max-width: 880px;
+  max-height: 760px;
+  display: block;
+  margin: auto;
+}
+
 /******************** Gallery******************* */
 
 main#carousel {
