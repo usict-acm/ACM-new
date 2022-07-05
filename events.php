@@ -48,6 +48,50 @@
     </div>
   </section>
 
+  <!-------------------------------------------------- START OF CURRENT EVENTS ------------------------------------------------- -->
+  <div class="blu d-flex flex-row p-0 w-100 justify-content-center">
+    <h1 class="fw-bold display-3 p-0 m-0 mx-2 text-primary">Current</h1>
+    <h1 class="fw-bold display-3 mx-2">Events</h1>
+  </div>
+<div class="current-event">
+  <div class="row">
+  <div class="col-6">
+    <div class="news">
+      <div class="news-card">
+        <div class="news-image">
+          <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg " class="card-img-top" alt="news">
+        </div>
+        <div class="news-title">
+          <h3>The News of News German Style</h3>
+          <span>Lorem ipsum sit dolor amit</span>
+        </div>
+        <div class="news-meta">
+          Online News
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="news">
+      <div class="news-card">
+        <div class="news-image">
+          <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg " class="card-img-top" alt="news">
+        </div>
+        <div class="news-title">
+          <h3>The News of News German Style</h3>#
+          <span>Lorem ipsum sit dolor amit</span>
+        </div>
+        <div class="news-meta">
+          Online News
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  <!-------------------------------------------------- END OF CURRENT EVENTS ------------------------------------------------- -->
+
   <div class="blu d-flex flex-row p-0 w-100 justify-content-center">
     <h1 class="fw-bold display-3 p-0 m-0 mx-2 text-primary">Previous</h1>
     <h1 class="fw-bold display-3 mx-2">Events</h1>
@@ -124,10 +168,18 @@
   <?php
   include('footer.php');
   ?>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+  
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
   <script src="assets\JS\home_new.js"></script>
+
+
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 
 </html>
