@@ -66,7 +66,7 @@
           <span>Lorem ipsum sit dolor amit</span>
         </div>
         <div class="news-meta">
-          Online News
+           New Event
         </div>
       </div>
     </div>
@@ -82,7 +82,7 @@
           <span>Lorem ipsum sit dolor amit</span>
         </div>
         <div class="news-meta">
-          Online News
+          New Event
         </div>
       </div>
     </div>
