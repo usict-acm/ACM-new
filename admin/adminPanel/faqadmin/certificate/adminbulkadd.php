@@ -79,6 +79,19 @@ if(isset($_FILES['excel']['name'])){
     $database = new Database();
     $link = $database->connect();
     $connection = $link;
+    $sql = "SELECT * FROM certificate ORDER BY id DESC LIMIT 1";
+$result = mysqli_query($link, $sql);
+if(mysqli_num_rows($result) > 0){
+    $row = mysqli_fetch_array($result);
+    $u = $row['uniqueNo'];
+    $id = substr($u, -1);
+    echo $id;
+    ord($id);
+    
+}
+else{
+    $id = 1;
+}
     include "xlsx.php";
     $noOfRows = 0;
     if($connection){
@@ -86,21 +99,32 @@ if(isset($_FILES['excel']['name'])){
        // print_r($excel->rows());
        $i=0;
        $query="";
-       $str_result = '0123456789abcdef';
+       $unique = "ACM/DC/000";
+       //$str_result = '0123456789abcdef';
        foreach ($excel->rows() as $key => $row) {
         //print_r($row);
         $q="";
+        if($i>0){
+        $id = $id+1;
+        $unique=  "'".$unique.$id. "',";
+        //echo $unique;
+        }
         foreach ($row as $key => $cell) {
-            $unique = strtolower(substr(str_shuffle($str_result),0, 10));
-            $unique=  "'".$unique. "',";
+            //$unique = strtolower(substr(str_shuffle($str_result),0, 10));$sql = "SELECT * FROM certificate ORDER BY id DESC LIMIT 1";
+            
+
+            
+            // echo $unique;
             if($i>0){
                 $q.="'".$cell. "',";
             }
         }
         
-        
+    
         if($i>0){
-            $query="INSERT INTO certificate (uniqueNO, nameParticipant,email, role, startDate, endDate, signedBy,course,enrollment_no,event,rank) values (".$unique.rtrim($q,",").");";
+            $query="INSERT INTO certificate (uniqueNO, nameParticipant,email, startDate, endDate,course,enrollment_no,event,rank, college) values (".$unique.rtrim($q,",").");";
+            $unique = "ACM/DC/000";
+            echo $query;
         }
         
         if($i>0){
