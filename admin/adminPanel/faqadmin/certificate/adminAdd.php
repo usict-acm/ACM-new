@@ -13,6 +13,21 @@ require_once "./faqadmin/config1.php";
 // $pixel_Size = 10;
 // $frame_Size = 10;
 // QRcode::png($uni, $file, $ecc, $pixel_Size, $frame_Size);
+include_once '../blogAdmin/database.php';
+$database = new Database();
+$link = $database->connect();
+$connection = $link;
+
+$sql = "SELECT * FROM certificate ORDER BY id DESC LIMIT 1";
+$result = mysqli_query($link, $sql);
+if(mysqli_num_rows($result) > 0){
+    $row = mysqli_fetch_array($result);
+    $id = $row['ID'];
+    $id = $id+1;
+}
+else{
+    $id = 1;
+}
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +84,7 @@ require_once "./faqadmin/config1.php";
     </style>
 </head>
 
-<body onload="generate()">
+<body >
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -78,16 +93,19 @@ require_once "./faqadmin/config1.php";
         let val = document.querySelector("#cno").value;
         let email_value = document.querySelector("#email").value;
         let name_value = document.querySelector("#name").value;
-        let role_value = document.querySelector("#role").value;
+        let college_value = document.querySelector("#college").value;
         let startDate_value = document.querySelector("#startDate").value;
         let endDate_value = document.querySelector("#endDate").value;
-        let signedby_value = document.querySelector("#signedby").value;
+        let rank_value = document.querySelector("#rank").value;
+        let course_value = document.querySelector("#course").value;
+        let enroll_value = document.querySelector("#enroll").value;
+        let event_value = document.querySelector("#event").value;
 
         // console.log(email_value);
         // var val = $("#cno").value;
             const arr = val.split("#");
             console.log(arr);
-        if(!email_value || !name_value || !role_value || !startDate_value || !endDate_value || !signedby_value){
+        if(!email_value || !name_value || !college_value || !startDate_value || !endDate_value ||  !event_value || !enroll_value || !course_value){
             alert("Please fill all the details");
         }
         else{
@@ -96,11 +114,14 @@ require_once "./faqadmin/config1.php";
             var formData = new FormData();
             formData.append('uniqueno',  arr[0]);
             formData.append('name', $("#name").val());
-            formData.append('role', $("#role").val());
+            formData.append('college', $("#college").val());
             formData.append('endDate', $("#endDate").val());
             formData.append('startDate',$("#startDate").val());
             formData.append('email',$('#email').val());
-            formData.append('signedby', $('#signedby').val());
+            formData.append('event', $('#event').val());
+            formData.append('rank', $('#rank').val());
+            formData.append('enroll', $('#enroll').val());
+            formData.append('course', $('#course').val());
 
             $.ajax({
                 type: "POST",
@@ -113,13 +134,13 @@ require_once "./faqadmin/config1.php";
                     alert(data.message);
                     // window.location.reload();
                 // window.location.replace('./index.php?table=certificateCreation');
-                window.location.replace('../../index.php?table=certificateCreation');
+                //window.location.replace('../../index.php?table=certificateCreation');
 
                 },
                 error: function(xhr, status, error){
-                    window.location.reload();
+                    //window.location.reload();
                     // alert("Fill in the details");
-                    //console.log(error);
+                    console.log(error);
                 },
             });
 
@@ -139,7 +160,7 @@ require_once "./faqadmin/config1.php";
                     <form method="POST" enctype="multipart/form-data">
 
                         <div class="form-group">
-                            <input type="text" name="uniqueno" id="cno" class='form-control' value = 'USS_ACM/' readonly/>
+                            <input type="text" name="uniqueno" id="cno" class='form-control' value = 'ACM/DC/000<?php echo $id ?>' readonly/>
                         </div>
 
                         <div class="form-group">
@@ -147,7 +168,7 @@ require_once "./faqadmin/config1.php";
                         </div>
 
                         <div class="form-group">
-                            <input type="text" name="role" id="role" class='form-control' placeholder="Enter the Role of certificate holder" required/>
+                            <input type="text" name="college" id="college" class='form-control' placeholder="Enter the college" required/>
                         </div>
                        
                         <div class="form-group">
@@ -162,13 +183,21 @@ require_once "./faqadmin/config1.php";
                         <div class="form-group">
                             <input type="date" name="endDate" id="endDate" class='form-control' required/>
                         </div>
-
+                        <div class="form-group">
+                            <input type="text" name="event" id="event" class='form-control' placeholder="Event" required/>
+                        </div>
                         <div class="form-group">
                             <input type="email" name="email" id="email" class='form-control' placeholder="Enter the Email of certificate holder" required/>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" name="signedby" id="signedby" class='form-control' placeholder="Signed By" required/>
+                            <input type="text" name="rank" id="rank" class='form-control' placeholder="Rank" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="enroll" id="enroll" class='form-control' placeholder="Enrollment Number" required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="course" id="course" class='form-control' placeholder="course" required/>
                         </div>
 
                         <input type="submit" name="submit" class="btn btn-primary btn-md pull-right" onclick="submit_certificate()" value="Submit">

@@ -639,14 +639,18 @@ function certificateForm(){
     $database = new Database();
     $db = $database->connect();
     $name = $_POST["name"];
-    $role= $_POST["role"];
+    $college= $_POST["college"];
     $uniq = $_POST["uniqueno"];
     $startdate = $_POST["startDate"];
     $enddate = $_POST["endDate"];
     $email = $_POST["email"];
-    $signedBy = $_POST["signedby"];
+    $event = $_POST["event"];
+    $rank = $_POST["rank"];
+    $enroll = $_POST["enroll"];
+    $course = $_POST["course"];
     
-    $sql = "INSERT INTO `certificate` (`uniqueNO`, `nameParticipant`,`email`, `role`, `startDate`, `endDate`, `signedBy`) VALUES ('$uniq', '$name', '$email', '$role', '$startdate', '$enddate', '$signedBy');";
+    $sql = "INSERT INTO `certificate` (`uniqueNO`, `nameParticipant`,`email`, `startDate`, `endDate`, `course`, `enrollment_no`, `event`, `rank`, `college`) VALUES ('$uniq', '$name', '$email', '$startdate', '$enddate',  '$course', '$enroll','$event', '$rank', '$college');";
+    echo($sql);
     if ($db->query($sql) == true) {
         echo json_encode(
             array('message' => 'Form has been submitted')

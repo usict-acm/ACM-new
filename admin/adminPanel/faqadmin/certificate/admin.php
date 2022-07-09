@@ -110,10 +110,10 @@ if(isset($_POST['down-btn'])){
                                         echo "<th>Unique No.</th>";
                                         echo "<th>Participant Name</th>";
                                         echo "<th>Email</th>";
-                                        echo "<th>Role of the Participant</th>";
+                                        //echo "<th>Role of the Participant</th>";
                                         echo "<th>Start Date</th>";
                                         echo "<th>End Date</th>";
-                                        echo "<th>Signed By</th>";
+                                        //echo "<th>Signed By</th>";
                                         echo "<th>Action</th>";
                                     echo "</tr>";
                                 echo "</thead>";
@@ -130,10 +130,10 @@ if(isset($_POST['down-btn'])){
                                         echo "<td>" . $row['uniqueNo'] . "</td>";
                                         echo "<td>" . $row['nameParticipant']."</td>";
                                         echo "<td>" . $row['email']."</td>";
-                                        echo "<td>" . $row['role']."</td>";
+                                        //echo "<td>" . $row['role']."</td>";
                                         echo "<td>" . $row['startDate']."</td>";
                                         echo "<td>" . $row['endDate']."</td>";
-                                        echo "<td>" . $row['signedBy']."</td>";
+                                        //echo "<td>" . $row['signedBy']."</td>";
                                         // echo "<td><a target='_blank' href='".$siteLink."". $row['code'] ."'>".$siteLink."". $row['code'] ."</a></td>";
                                         // $short = $row['code'];
                                         // echo "<script>links.push('".$short."'); </script>";
