@@ -22,7 +22,10 @@ $sql = "SELECT * FROM certificate ORDER BY id DESC LIMIT 1";
 $result = mysqli_query($link, $sql);
 if(mysqli_num_rows($result) > 0){
     $row = mysqli_fetch_array($result);
-    $id = $row['ID'];
+    $u = $row['uniqueNo'];
+    $id = substr($u, -1);
+    echo $id;
+    ord($id);
     $id = $id+1;
 }
 else{
