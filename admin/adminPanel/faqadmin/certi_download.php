@@ -60,7 +60,7 @@
                     imagecopy($image, $qr, imagesx($image) - $sx - $marge_right, imagesy($image) - $sy - $marge_bottom, 0, 0, imagesx($qr), imagesy($qr));
                     unlink($file);
                     imagepng($image);
-                    imagepng($image,"certificate/$id.png");
+                    imagepng($image,"certificate/download/$id.png");
                     imagedestroy($image);
                     //echo "<img width='500' height='350' align='top' alt='' src='certificate/$id.png' />";
 
@@ -104,7 +104,7 @@
                     unlink($file);
 
 
-                    imagepng($image,"certificate/$id.png");
+                    imagepng($image,"certificate/download/$id.png");
                     imagepng($image);
                     //echo"alert('certificate genrated scuusessfully')";
                     imagedestroy($image);
