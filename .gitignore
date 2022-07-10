@@ -22,6 +22,6 @@ mail-testing
 admin/adminPanel/faqadmin/certificate/download
 admin/adminPanel/faqadmin/images
 
-admin/adminPanel/faqadmin/phpqrcode/cache
+admin/adminPanel/faqadmin/phpqrcode
 # composer
 vendor
