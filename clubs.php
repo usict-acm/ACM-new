@@ -171,16 +171,16 @@
           <div class="lvlimg">
             <div class="lead white">
               <div class="img">
-                <img src="./assets/images/clubs/tushar.png" />
+                <img src="./assets/images/clubs/jaskirat.jpeg" />
               </div>
-              <h4>Tushar Anand</h4>
+              <h4>Jaskirat Singh</h4>
               <h6>Lead</h6>
             </div>
             <div class="vicelead white">
               <div class="img">
-                <img src="./assets/images/clubs/jaskirat.jpeg" />
+                <img src="./assets/images/clubs/kartik.jpeg" />
               </div>
-              <h4>Jaskirat Singh</h4>
+              <h4>Kartik Singh</h4>
               <h6>Vice Lead</h6>
             </div>
           </div>

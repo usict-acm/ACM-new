@@ -105,7 +105,7 @@
                       id=blog" + index + "_image\
                       class=card-img-top\
                       alt=Card image cap\
-                      style='height: 13rem; object-fit: contain;'\
+                      style='height: 13rem; object-fit: cover;'\
                     />\
                     <div class=card-body>\
                       <div class=post-meta>\

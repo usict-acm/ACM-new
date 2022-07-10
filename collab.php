@@ -22,7 +22,7 @@
       <section id='header'>
         <div class="pt-card row">
           <div class="heading col-xl-9 col-lg-9 col-md-9">
-            <h3><span class="uheading">Let's Collaborate</span></h3>
+            <h3><span class="uheading" style="text-align: left;">Let's Collaborate</span></h3>
           </div>
 </div>
       </section>

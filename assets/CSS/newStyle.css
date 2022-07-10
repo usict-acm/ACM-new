@@ -586,32 +586,6 @@ a:hover {
 	}
 }
 
-@media (max-width: 425px) {
-	.b-container {
-		display: block;
-		margin-top: 6px;
-		margin-left: 15%;
-	}
-
-	.b-card {
-		margin-top: 10px;
-		width: 240px;
-	}
-}
-
-@media (max-width: 320px) {
-	.b-container {
-		display: block;
-		margin-top: 6px;
-		margin-left: 11.5%;
-	}
-
-	.b-card {
-		margin-top: 10px;
-		width: 240px;
-	}
-}
-
 /* *************************blog style end***************************************** */
 /* *****************************our team style******************************************** */
 
@@ -1607,7 +1581,6 @@ a:hover {
 }
 
 .heading {
-	margin-top: -1rem;
 	text-align: center;
 }
 
@@ -1712,8 +1685,8 @@ a:hover {
 
 .contact-bottom-btn {
 	position: fixed;
-	bottom: 45px;
-	right: 40px;
+	bottom: 20px;
+	right: 20px;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
@@ -1740,8 +1713,8 @@ a:hover {
 
 .scrolltop {
 	position: fixed;
-	bottom: 100px;
-	right: 40px;
+	bottom: 80px;
+	right: 20px;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;

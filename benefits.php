@@ -22,8 +22,7 @@
       <section id='header'>
         <div class="pt-card row">
           <div class="heading col-xl-9 col-lg-9 col-md-9 col-sm-6">
-            <h3><span class="uheading">Why Join</span><br>
-              <span class="lheading">GGSIP University USS ACM Student Chapter?</span></h3>
+            <h3><span class="uheading">Why Join Us ?</span><br> 
           </div>
         </div>
       </section>
@@ -47,7 +46,7 @@
     <section class="service-sec" id="benefits">
       <div class="container">
         <div class="row">
-          <div class="row d-flex justify-content-center benefit-card-container">
+          <div class="row d-flex justify-content-center benefit-card-container mobile-view">
             <div class="perk-card"> <img src="./assets/images/perks/flagship.png" height="80" width="80">
               <h3>ACM’s flagship publication </h3>
               <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe.</p>
@@ -361,8 +360,6 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="form-group col-md-6"></div>
-                  <div class="form-group col-md-2"></div>
                   <div class="form-group col-md-2 button-center">
                     <div class="form-group">
                       <!-- <button id="submitSingupForm" type="submit" style="display:none;"></button> -->

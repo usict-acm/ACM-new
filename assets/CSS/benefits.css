@@ -289,6 +289,7 @@ input[type=number] {
 }
 
 .test-dev1 {
+  margin: 0;
   align-items: center;
 }
 
@@ -1022,6 +1023,9 @@ ul {
 
   .md-text-custom {
     font-size: 14px;
+  }
+  .mobile-view {
+    width: 100%;
   }
 }
 
@@ -1992,10 +1996,6 @@ body.search-open #search .search-suggestion:nth-child(3) {
   .leaders {
     margin-left: -5% !important;
   }
-}
-
-.signin {
-  margin-left: 15% !important;
 }
 
 #widget-contact-form {
