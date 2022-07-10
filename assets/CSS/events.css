@@ -87,12 +87,12 @@
   border-radius: 0.5rem;
   box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgb(0 0 0 / 45%);
   padding-bottom: 1rem;
-  background-image: linear-gradient(var(--card-gradient),
-      white max(9.5rem, 27vh));
+  background-image: linear-gradient(
+    var(--card-gradient),
+    white max(9.5rem, 27vh)
+  );
   overflow: hidden;
 }
-
-
 
 /* END OF CURRENT EVENT */
 
@@ -100,7 +100,7 @@
   max-width: 880px;
   max-height: 760px;
   display: block;
-  margin: auto;
+  /* margin: auto; */
 }
 
 /******************** Gallery******************* */
@@ -131,7 +131,8 @@ div.item {
   --r: calc(var(--position) - var(--offset));
   --abs: max(calc(var(--r) * -1), var(--r));
   transition: all 0.25s linear;
-  transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
+  transform: rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-300px * var(--r)));
   z-index: calc((var(--position) - var(--abs)));
 }
 
@@ -160,7 +161,7 @@ input:nth-of-type(1) {
   grid-row: 2 / 3;
 }
 
-input:nth-of-type(1):checked~main#carousel {
+input:nth-of-type(1):checked ~ main#carousel {
   --position: 1;
 }
 
@@ -169,7 +170,7 @@ input:nth-of-type(2) {
   grid-row: 2 / 3;
 }
 
-input:nth-of-type(2):checked~main#carousel {
+input:nth-of-type(2):checked ~ main#carousel {
   --position: 2;
 }
 
@@ -178,7 +179,7 @@ input:nth-of-type(3) {
   grid-row: 2 / 3;
 }
 
-input:nth-of-type(3):checked~main#carousel {
+input:nth-of-type(3):checked ~ main#carousel {
   --position: 3;
 }
 
@@ -187,7 +188,7 @@ input:nth-of-type(4) {
   grid-row: 2 / 3;
 }
 
-input:nth-of-type(4):checked~main#carousel {
+input:nth-of-type(4):checked ~ main#carousel {
   --position: 4;
 }
 
@@ -196,7 +197,7 @@ input:nth-of-type(5) {
   grid-row: 2 / 3;
 }
 
-input:nth-of-type(5):checked~main#carousel {
+input:nth-of-type(5):checked ~ main#carousel {
   --position: 5;
 }
 
@@ -236,10 +237,7 @@ input:nth-of-type(5):checked~main#carousel {
   height: inherit !important;
 }
 
-
-
 /* **************-----------------------------------------------*****************Heading/sec1**************-----------------------------------------------***************** */
-
 
 #section-1 {
   height: 400px;
@@ -280,13 +278,66 @@ input:nth-of-type(5):checked~main#carousel {
 .hero h1 {
   font-size: 70px;
   text-align: center;
-  font-family: 'Baloo Bhai 2', cursive;
+  font-family: "Baloo Bhai 2", cursive;
   font-weight: bolder;
 }
 
-
 .hero p {
   text-align: center;
-  font-family: 'Baloo Bhai 2', cursive;
+  font-family: "Baloo Bhai 2", cursive;
+}
 
+@media screen and (max-width: 700px) {
+  .myRow {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .news {
+    width: 90vw !important;
+  }
+  .blu {
+    margin-top: 45px !important;
+  }
+  .top{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column !important;
+  }
+}
+
+/* *************************************** */
+
+.top{
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  min-height: 1000px !important;
+}
+
+.myRow {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center;
+}
+.myCard{
+  min-width: 350px !important;
+}
+.current-event{
+  width: 30vw;
+  min-width: 380px;
+}
+
+.blu{
+  background-color: white;
+}
+
+.top1{
+  max-height: 760px !important;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
