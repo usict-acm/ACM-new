@@ -124,7 +124,7 @@ else{
         if($i>0){
             $query="INSERT INTO certificate (uniqueNO, nameParticipant,email, startDate, endDate,course,enrollment_no,event,rank, college) values (".$unique.rtrim($q,",").");";
             $unique = "ACM/DC/000";
-            echo $query;
+            // echo $query;
         }
         
         if($i>0){
@@ -141,7 +141,7 @@ else{
 
     echo "<div class='container-fluid'>";
             echo "<div class='row'>";
-                    echo "<a class='btn btn-success btn-md pull-right' style='margin-left: 43% ;margin-top:2%' href='./faqadmin/adminBulkDown.php?noOfRows=". $noOfRows ."'  >Download All  <span class='glyphicon glyphicon-download-alt'></span></span></a>";
+                    echo "<a class='btn btn-success btn-md pull-right' style='margin-left: 43% ;margin-top:2%' target='_blank' href='./faqadmin/adminBulkDown.php?noOfRows=". $noOfRows ."'  >Download All  <span class='glyphicon glyphicon-download-alt'></span></span></a>";
             echo "</div>";
     echo "</div>";
  

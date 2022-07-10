@@ -1,5 +1,6 @@
 <?php 
     //phpinfo();
+    header("Content-type:application/pdf");
     include 'phpqrcode/qrlib.php';
     require('fpdf.php');
 
@@ -50,24 +51,25 @@
                     $marge_bottom = 130;
                     $sx = imagesx($qr);
                     $sy = imagesy($qr);
-                    imagettftext($image, 30, 0, 900, 680, $color,$font, $name);
-                    imagettftext($image, 30, 0, 460, 830, $color,$font, $course);
-                    imagettftext($image, 30, 0, 1370, 830, $color,$font, $enroll);
-                    imagettftext($image, 30, 0, 450, 960, $color,$font, $event);
+                    imagettftext($image, 30, 0, 600, 680, $color,$font, $name);
+                    imagettftext($image, 30, 0, 370, 830, $color,$font, $course);
+                    imagettftext($image, 30, 0, 1350, 830, $color,$font, $enroll);
+                    imagettftext($image, 30, 0, 310, 960, $color,$font, $event);
                     imagettftext($image, 25, 0, 1650, 350, $color,$font, $uni);
-                    imagettftext($image, 30, 0, 900, 900, $color,$font, $college);
+                    imagettftext($image, 30, 0, 700, 900, $color,$font, $college);
                     imagettftext($image, 30, 0, 1480, 900, $color,$font, $rank);
                     imagecopy($image, $qr, imagesx($image) - $sx - $marge_right, imagesy($image) - $sy - $marge_bottom, 0, 0, imagesx($qr), imagesy($qr));
                     unlink($file);
-                    imagepng($image);
+                    // imagepng($image);
                     imagepng($image,"certificate/download/$id.png");
                     imagedestroy($image);
                     //echo "<img width='500' height='350' align='top' alt='' src='certificate/$id.png' />";
 
-                        // $pdf=new FPDF();
-                        // $pdf->AddPage();
-                        // $pdf->Image("certificate/$id.png",0,0,210,150);
-                        // $pdf->Output("certificate/$id.pdf","F");
+                    $pdf=new FPDF();
+                    $pdf->AddPage("L");
+                    $pdf->Image("certificate/download/$id.png",0,0,297,210);
+                    $pdf->Output("certificate/download/$id.pdf","F");
+                    $pdf->Output("$name.pdf","D");
                 }else{
 
                     $image=imagecreatefrompng("participation.png");
@@ -93,26 +95,29 @@
                     $marge_bottom = 130;
                     $sx = imagesx($qr);
                     $sy = imagesy($qr);
-                    imagettftext($image, 30, 0, 900, 680, $color,$font, $name);
-                    imagettftext($image, 30, 0, 460, 830, $color,$font, $course);
-                    imagettftext($image, 30, 0, 1370, 830, $color,$font, $enroll);
-                    imagettftext($image, 30, 0, 450, 960, $color,$font, $event);
+                    imagettftext($image, 30, 0, 600, 680, $color,$font, $name);
+                    imagettftext($image, 30, 0, 370, 830, $color,$font, $course);
+                    imagettftext($image, 30, 0, 1350, 830, $color,$font, $enroll);
+                    imagettftext($image, 30, 0, 310, 960, $color,$font, $event);
                     imagettftext($image, 25, 0, 1650, 350, $color,$font, $uni);
-                    imagettftext($image, 30, 0, 900, 900, $color,$font, $college);
+                    imagettftext($image, 30, 0, 700, 900, $color,$font, $college);
                     //imagettftext($image, 30, 0, 1480, 900, $color,$font, $rank);
                     imagecopy($image, $qr, imagesx($image) - $sx - $marge_right, imagesy($image) - $sy - $marge_bottom, 0, 0, imagesx($qr), imagesy($qr));
                     unlink($file);
 
 
                     imagepng($image,"certificate/download/$id.png");
-                    imagepng($image);
-                    //echo"alert('certificate genrated scuusessfully')";
+                    // imagepng($image);
+                    //echo"alert('  certificate genrated scuusessfully')";
                     imagedestroy($image);
-
-                    // $pdf=new FPDF();
-                    // $pdf->AddPage();
-                    // $pdf->Image("certificate/$id.png",0,0,210,150);
-                    // $pdf->Output("certificate/$id.pdf","F");
+                    
+               
+                    $pdf=new FPDF();
+                    $pdf->AddPage("L");
+                    $pdf->Image("certificate/download/$id.png",0,0,297,210);
+                    $pdf->Output("certificate/download/$id.pdf","F");
+                    $pdf->Output("$name.pdf","D");
+                    
 
                 }
             }
