@@ -110,7 +110,7 @@
                     <div class=card-body>\
                       <div class=post-meta>\
                       " +
-                    spanTag + "<span id=blog" + index + "_date class=mx-2 card-span>" + row.Date + "</span>\
+                    spanTag + "<span id=blog" + index + "_date class=mx-2 card-span>" + row.Title + "</span>\
                         <span class=mx-2 card-span card-span-dot\
                           ><i class=fas fa-circle></i>\
                         </span>\
