@@ -46,7 +46,7 @@
                     $file = $path.uniqid().".png";
                     // $ecc = 'L';
                     $frame_Size = 1;
-                    $qrtext = "http://localhost/ACM-new/verify?id=".$id_num;
+                    $qrtext = "https://usict.acm.org/test_acm/verify?id=".$id_num;
                     QRcode::png($qrtext, $file,'L', 3, $frame_Size);
                     $qr = imagecreatefrompng($file);
                     $marge_right = 130;
@@ -90,7 +90,7 @@
                     $file = $path.uniqid().".png";
                     // $ecc = 'L';
                     $frame_Size = 1;
-                    $qrtext = "http://localhost/ACM-new/verify?id=".$id_num;
+                    $qrtext = "https://usict.acm.org/test_acm/verify?id=".$id_num;
                     QRcode::png($qrtext, $file,'L', 3, $frame_Size);
                     $qr = imagecreatefrompng($file);
                     $marge_right = 130;
