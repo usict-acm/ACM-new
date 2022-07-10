@@ -4,7 +4,6 @@
     include 'phpqrcode/qrlib.php';
     $database = new Database();
     $conn = $database->connect();
-
     
     if(isset($_GET["noOfRows"]) ){
         $noOfRows = mysqli_real_escape_string($conn,$_GET['noOfRows']);
@@ -47,11 +46,12 @@
                     $event = $row['event'];
                     $id = $row['ID'];
                     $path = 'images/';
+                    $id_num = substr($uni, -4);
                     //echo $uni;
                     $file = $path.uniqid().".png";
                     // $ecc = 'L';
                     $frame_Size = 1;
-                    $qrtext = "http://localhost/ACM-new/admin/adminPanel/faqadmin/certi_download.php?Sno=".$uni;
+                    $qrtext = "http://localhost/ACM-new/verify?id=".$id_num;
                     QRcode::png($qrtext, $file,'L', 3, $frame_Size);
                     $qr = imagecreatefrompng($file);
                     $marge_right = 130;
@@ -68,15 +68,15 @@
                     imagecopy($image, $qr, imagesx($image) - $sx - $marge_right, imagesy($image) - $sy - $marge_bottom, 0, 0, imagesx($qr), imagesy($qr));
                     unlink($file);
                     // imagepng($image);
-                    imagepng($image,"certificate/download/$id.png");
+                    imagepng($image,"../../../verify/$id_num.png");
                     imagedestroy($image);
                     //echo "<img width='500' height='350' align='top' alt='' src='certificate/$id.png' />";
 
                     $pdf=new FPDF();
                     $pdf->AddPage("L");
-                    $pdf->Image("certificate/download/$id.png",0,0,297,210);
-                    $pdf->Output("certificate/download/$id.pdf","F");
-                    $pdf->Output("$name.pdf","D");
+                    $pdf->Image("../../../verify/$id_num.png",0,0,297,210);
+                    $pdf->Output("../../../verify/$id_num.pdf","F");
+                    $pdf->Output("$uni.pdf","D");
                 }else{
 
                     $image=imagecreatefrompng("participation.png");
@@ -95,7 +95,7 @@
                     $file = $path.uniqid().".png";
                     // $ecc = 'L';
                     $frame_Size = 1;
-                    $qrtext = "http://localhost/ACM-new/admin/adminPanel/faqadmin/certi_download.php?Sno=".$uni;
+                    $qrtext = "http://localhost/ACM-new/verify?id=".$id_num;
                     QRcode::png($qrtext, $file,'L', 3, $frame_Size);
                     $qr = imagecreatefrompng($file);
                     $marge_right = 130;
@@ -113,16 +113,16 @@
                     unlink($file);
 
 
-                    imagepng($image,"certificate/download/$id.png");
+                    imagepng($image,"../../../verify/$id_num.png");
                     // imagepng($image);
                     //echo"alert('certificate genrated scuusessfully')";
                     imagedestroy($image);
 
                     $pdf=new FPDF();
                     $pdf->AddPage("L");
-                    $pdf->Image("certificate/download/$id.png",0,0,297,210);
-                    $pdf->Output("certificate/download/$id.pdf","F");
-                    $pdf->Output("$name.pdf","D");
+                    $pdf->Image("../../../verify/$id_num.png",0,0,297,210);
+                    $pdf->Output("../../../verify/$id_num.pdf","F");
+                    $pdf->Output("$uni.pdf","D");
                 } 
                 }
             }      
