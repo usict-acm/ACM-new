@@ -1,4 +1,5 @@
 <?php
+    header("Content-type: application/zip");
     include_once '../../blogAdmin/database.php';
     require('fpdf.php');
     include 'phpqrcode/qrlib.php';
@@ -7,15 +8,15 @@
     
     if(isset($_GET["noOfRows"]) ){
         $noOfRows = mysqli_real_escape_string($conn,$_GET['noOfRows']);
-        // echo $noOfRows;
-
-  
+        // echo $noOfRows;  
          //$sql = "SELECT * FROM certificate ";
         $sql = "SELECT * FROM certificate ORDER BY ID DESC LIMIT ".$noOfRows."";
         // echo $sql;
         //print_r( mysqli_num_rows($result) );
         $result = mysqli_query($conn, $sql);
             if(mysqli_num_rows($result) > 0){
+                $zip = new ZipArchive;                
+                $zip->open('../../../verify/BulkDownload.zip', ZipArchive::CREATE);
                 while($row = mysqli_fetch_array($result)){
                   //  echo mysqli_num_rows($result);
                     //$row = mysqli_fetch_array($result);
@@ -76,7 +77,9 @@
                     $pdf->AddPage("L");
                     $pdf->Image("../../../verify/$id_num.png",0,0,297,210);
                     $pdf->Output("../../../verify/$id_num.pdf","F");
-                    $pdf->Output("$uni.pdf","D");
+                    // $pdf->Output("$uni.pdf","D");
+                    $zip->addFile("../../../verify/".$id_num.'.pdf', str_replace('/', '_', $uni).'.pdf');
+
                 }else{
 
                     $image=imagecreatefrompng("participation.png");
@@ -91,6 +94,7 @@
                     $event = $row['event'];
                     $id = $row['ID'];
                     $path = 'images/';
+                    $id_num = substr($uni, -4);
                     //echo $uni;
                     $file = $path.uniqid().".png";
                     // $ecc = 'L';
@@ -122,9 +126,17 @@
                     $pdf->AddPage("L");
                     $pdf->Image("../../../verify/$id_num.png",0,0,297,210);
                     $pdf->Output("../../../verify/$id_num.pdf","F");
-                    $pdf->Output("$uni.pdf","D");
+                    // $pdf->Output("$uni.pdf","D");
+                    $zip->addFile("../../../verify/".$id_num.'.pdf', str_replace('/', '_', $uni).'.pdf');
                 } 
+                
                 }
+                // var_dump($zip);
+                $zip->close();
+                $endCert = $id_num + $noOfRows -1;
+                header("Content-Disposition: attachment; filename=$uni-$endCert.zip"); 
+                readfile("../../../verify/BulkDownload.zip");
+                unlink('../../../verify/BulkDownload.zip');
             }      
     }
 ?>

@@ -141,7 +141,7 @@ else{
 
     echo "<div class='container-fluid'>";
             echo "<div class='row'>";
-                    echo "<a class='btn btn-success btn-md pull-right' style='margin-left: 43% ;margin-top:2%' target='_blank' href='./faqadmin/adminBulkDown.php?noOfRows=". $noOfRows ."'  >Download All  <span class='glyphicon glyphicon-download-alt'></span></span></a>";
+                    echo "<a class='btn btn-success btn-md pull-right' style='margin-left: 43% ;margin-top:2%' href='./faqadmin/adminBulkDown.php?noOfRows=". $noOfRows ."'  >Download All  <span class='glyphicon glyphicon-download-alt'></span></span></a>";
             echo "</div>";
     echo "</div>";
  
