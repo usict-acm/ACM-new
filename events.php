@@ -153,19 +153,48 @@
   </div>
 
   <section class="Gallery my-5">
-    <input type="radio" name="position" checked />
-    <input type="radio" name="position" />
-    <input type="radio" name="position" />
-    <input type="radio" name="position" />
-    <input type="radio" name="position" />
+    <!-- <div id="radioGallary"> -->
+        <input type="radio" name="position" checked />
+        <input type="radio" name="position" />
+        <input type="radio" name="position" />
+        <input type="radio" name="position" />
+        <input type="radio" name="position" />
+    <!-- </div> -->
+
     <main id="carousel">
-      <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image4.jpg" alt="" srcset=""></div>
-      <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image3.jpg" alt="" srcset=""></div>
-      <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image2.jpg" alt="" srcset=""></div>
-      <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image1.jpg" alt="" srcset=""></div>
-      <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image3.jpg" alt="" srcset=""></div>
+      <!-- <div id="qwe"> -->
+        <!-- <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image4.jpg" alt="" srcset=""></div>
+        <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image3.jpg" alt="" srcset=""></div>
+        <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image2.jpg" alt="" srcset=""></div>
+        <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image1.jpg" alt="" srcset=""></div>
+        <div class="item"> <img class="myimg" src="https://usict.acm.org/upload/eventGallery/image3.jpg" alt="" srcset=""></div> -->
+      <!-- </div> -->
       <main>
   </section>
+
+  <script>
+    let url = './admin/blogAdmin/api.php/?q=getImage';
+    var galleryImage = document.getElementById("carousel");
+    galleryImage.innerHTML = ` `;
+
+    $(document).ready(function() {
+      $.ajax({
+        url: url,
+        method: 'GET',
+        dataType: 'JSON',
+        success: function(data) {
+          console.log("gallery data", data);
+          data.forEach(myFunc);
+
+          function myFunc(row) {
+            // galleryImage.innerHTML += " <img class='quote-img' style='transition: 2s;' src=" + row.Image + " alt=' ' />";
+            galleryImage.innerHTML += "<div class='item'> <img class='myimg' src=" + row.Image + " alt='' srcset=''></div>";
+          }
+        }
+      })
+    })  
+
+  </script>
 
 
 
