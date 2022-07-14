@@ -92,9 +92,67 @@
       <div class="container alumn">
         <div class="line"></div>
         <h1>MEET OUR <b>ALUMNI</b></h1>
-        <div class="glider-contain">
+        <section class="alumini-content">
+          <div class="container">
+            <div class="row">
+              <!-- Start Single Person -->
+              <div class="col-sm-6 col-lg-4 col-xl-3">
+                <div class="single-person">
+                  <div class="person-image">
+                    <img src="./assets/images/Alumni/RajatMaheshwari.jpg" alt="" />
+                  </div>
+                  <div class="person-info">
+                    <h3 class="full-name">Rajat Maheshwari</h3>
+                    <span class="speciality">SDE 1, Amazon</span>
+                  </div>
+                </div>
+              </div>
+              <!-- / End Single Person -->
+              <!-- Start Single Person -->
+              <div class="col-sm-6 col-lg-4 col-xl-3">
+                <div class="single-person">
+                  <div class="person-image">
+                    <img src="assets\images\Alumni\sapnaChaudhary.jpg" alt="" />
+                  </div>
+                  <div class="person-info">
+                    <h3 class="full-name">Sapna Chaudhary</h3>
+                    <span class="speciality">Pursuing Phd, IIITD</span>
+                  </div>
+                </div>
+              </div>
+              <!-- / End Single Person -->
+              <!-- Start Single Person -->
+              <div class="col-sm-6 col-lg-4 col-xl-3">
+                <div class="single-person">
+                  <div class="person-image">
+                    <img src="./assets/images/Alumni/tamanna.jpg" alt="" />
+                  </div>
+                  <div class="person-info">
+                    <h3 class="full-name">Tamanna Arora</h3>
+                    <span class="speciality">SDE, Media Agility</span>
+                  </div>
+                </div>
+              </div>
+              <!-- / End Single Person -->
+              <!-- Start Single Person -->
+              <div class="col-sm-6 col-lg-4 col-xl-3">
+                <div class="single-person">
+                  <div class="person-image">
+                    <img src="./assets/images/Alumni/Abhishek1Squared.jpg" alt="" />
+                  </div>
+                  <div class="person-info">
+                    <h3 class="full-name">Abhishek Khandelwal</h3>
+                    <span class="speciality">Founder CEO, ENSVEE & Part. of CSL Symposium, New York</span>
+                  </div>
+                </div>
+              </div>
+              <!-- / End Single Person -->
+            </div>
+          </div>
+        </section>
+
+        <!-- <div class="glider-contain">
           <div class="glider">
-            <!-- ************Card 1***************** -->
             <div class="boxx">
               <div class="images">
                 <div class="rot">
@@ -104,7 +162,6 @@
                 <h5>SDE 1, Amazon</h5>
               </div>
             </div>
-            <!-- ************Card 2***************** -->
             <div class="boxx">
               <div class="images">
                 <img src="./assets/images/Alumni/sapnaChaudharyRotate.jpg" alt="">
@@ -112,7 +169,6 @@
                 <h5>Pursuing Phd, IIITD</h5>
               </div>
             </div>
-            <!-- ************Card 3***************** -->
             <div class="boxx">
               <div class="images">
                 <img src="./assets/images/Alumni/tamannaRotate.jpg" alt="">
@@ -120,7 +176,6 @@
                 <h5>SDE, Media Agility</h5>
               </div>
             </div>
-            <!-- ************Card 4***************** -->
             <div class="boxx">
               <div class="images">
                 <img src="./assets/images/Alumni/AbhishekRotate.jpg" alt="">
@@ -131,8 +186,8 @@
           </div>
           <div aria-label="Previous" class="glider-prev alumni-prev"><i class="fas fa-angle-left"></i></div>
           <div aria-label="Next" class="glider-next alumni-next"><i class="fas fa-angle-right"></i></div>
-          <div role="tablist" class="dots"></div>
-        </div>
+          <div role="tablist" class="dots"></div> 
+        </div>-->
       </div>
     </section>
     <!-- *********************************************Winners section******************************************************** -->
