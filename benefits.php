@@ -202,11 +202,28 @@
         <div class="container">
           <div class="line"></div>
           <h1><b>WINNERS</b></h1>
-
+          <div class="winnerButtons">
+            <button class="winnerButton">
+              year
+            </button>
+            <button class="winnerButton">
+              2022
+            </button>
+            <button class="winnerButton">
+              2021
+            </button>
+            <button class="winnerButton">
+              2020
+            </button>
+            <button class="winnerButton">
+              2019
+            </button>
+          </div>
+          <div class="winnerNav"></div>
           <div class="glider-contain">
             <div class="glider1">
             <div class="winBox">
-                <div class="winnerInnerDiv">
+                <div class="winnerInnerDiv" data-year="2022">
                   <img src="./assets/images/TrophyOneWinner.jpg" alt="">
                   <div id="overlay">
                     <i class="fas fa-4x fa-crown"></i>
@@ -221,7 +238,7 @@
                 </div>
               </div>
               <div class="winBox">
-                <div class="winnerInnerDiv">
+                <div class="winnerInnerDiv" data-year="2022">
                   <img src="./assets/images/TrophyOneWinner.jpg" alt="">
                   <div id="overlay">
                     <i class="fas fa-4x fa-crown"></i>
@@ -235,7 +252,7 @@
                 </div>
               </div>
               <div class="winBox">
-                <div class="winnerInnerDiv">
+                <div class="winnerInnerDiv" data-year="2021">
                   <img src="./assets/images/TrophyOneWinner.jpg" alt="">
                   <div id="overlay">
                     <i class="fas fa-4x fa-crown"></i>
@@ -250,7 +267,7 @@
                 </div>
               </div>
               <div class="winBox">
-                <div class="winnerInnerDiv">
+                <div class="winnerInnerDiv" data-year="2021">
                   <img src="./assets/images/TrophyOneWinner.jpg" alt="">
                   <div id="overlay">
                     <i class="fas fa-4x fa-crown"></i>
@@ -264,7 +281,7 @@
                 </div>
               </div>
               <div class="winBox">
-                <div class="winnerInnerDiv">
+                <div class="winnerInnerDiv" data-year="2020">
                   <img src="./assets/images/TrophyOneWinner.jpg" alt="">
                   <div id="overlay">
                     <i class="fas fa-4x fa-crown"></i>
@@ -278,7 +295,7 @@
                 </div>
               </div>
               <div class="winBox">
-                <div class="winnerInnerDiv">
+                <div class="winnerInnerDiv" data-year="2020">
                   <img src="./assets/images/TrophyOneWinner.jpg" alt="">
                   <div id="overlay">
                     <i class="fas fa-4x fa-crown"></i>
@@ -292,7 +309,7 @@
                 </div>
               </div>
               <div class="winBox">
-                <div class="winnerInnerDiv">
+                <div class="winnerInnerDiv" data-year="2019">
                   <img src="./assets/images/TrophyOneWinner.jpg" alt="">
                   <div id="overlay">
                     <i class="fas fa-4x fa-crown"></i>
@@ -306,7 +323,7 @@
                 </div>
               </div>
               <div class="winBox">
-                <div class="winnerInnerDiv">
+                <div class="winnerInnerDiv" data-year="2019">
                   <img src="./assets/images/TrophyOneWinner.jpg" alt="">
                   <div id="overlay">
                     <i class="fas fa-4x fa-crown"></i>
