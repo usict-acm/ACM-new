@@ -21,7 +21,7 @@
       <section id='header-blog'>
         <div class="pt-card-blog row">
           <div class="heading col-xl-9 col-lg-9 col-md-9 col-sm-6">
-            <h2><span class="uheading-blog">BLOGS</span></h2>
+            <h2><span class="uheading-blog"><b>BLOGS<b></span></h2>
           </div>
         </div>
       </section>
@@ -34,7 +34,7 @@
       </div>
     </section>
     <section class="container mt-5">
-      <h1 class="category-heading">Let The Words Speak</h1>
+      <h2 class="dynamic-text-shadow" ><b>Let The Words Speak</b></h2>
       <div class="lower">
         <!-- ====================================================Show All Blogs========================================= -->
         <div class="left-side">

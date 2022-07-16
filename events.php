@@ -58,8 +58,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: linear-gradient(45deg, rgba(209, 0, 42, 0.6) 0%, #0E5DC4 100%);
-      opacity: 0.9;
+      background-color: #ffffff;
+      opacity: 1;
     }
 
     .background img {
@@ -213,7 +213,7 @@
 
     .news__item {
       padding: 40px;
-      color: #fff;
+      color: #000;
       border-radius: 10px;
       display: block;
       transition: all 0.3s;
@@ -379,19 +379,23 @@
 
     .myH1 {
       height: 6rem !important;
-      margin-bottom: 4vh !important;
+      margin-bottom: 3vh !important;
       position: relative;
       z-index: 1;
       text-align: center;
+      color: black !important;
     }
     .subh{
 
-      width: 60%;
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin-left: 270px;
+      padding-left: 20vw;
+      padding-right: 20vw;
+      color: white !important;
+
     }
   </style>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'>
@@ -648,7 +652,7 @@
         </div>
       </div>
       <div class="background">
-        <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132206/news-slider/background.webp" alt="">
+    
       </div>
       <div class="item-bg"></div>
 
@@ -672,7 +676,7 @@
               </p>
 
               <div class="news__img">
-                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-2.webp" alt="news">
+                <img src="https://usict.acm.org/upload/announcements/exploration_31stoct.png" alt="news">
               </div>
             </a>
           </div>
@@ -695,7 +699,7 @@
               </p>
 
               <div class="news__img">
-                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-3.webp" alt="news">
+                <img src="https://usict.acm.org/upload/announcements/exploration.png" alt="news">
               </div>
             </a>
           </div>
@@ -718,7 +722,7 @@
               </p>
 
               <div class="news__img">
-                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-4.webp" alt="news">
+                <img src="https://usict.acm.org/upload/announcements/iplauction.jpg" alt="news">
               </div>
             </a>
           </div>
@@ -741,7 +745,7 @@
               </p>
 
               <div class="news__img">
-                <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1537132205/news-slider/item-2.webp" alt="news">
+                <img src="https://usict.acm.org/upload/announcements/5.png" alt="news">
               </div>
             </a>
           </div>
