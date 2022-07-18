@@ -22,7 +22,7 @@
       <section id='header'>
         <div class="pt-card row">
           <div class="heading col-xl-9 col-lg-9 col-md-9">
-            <h3><span class="uheading" style="text-align: left;">Let's Collaborate</span></h3>
+            <h3><span class="uheading">Let's Collaborate</span></h3>
           </div>
 </div>
       </section>
@@ -30,7 +30,7 @@
   <!-- ****************************************************Collaborators******************************************************************** -->
     <section id="collab">
       <div class="container">
-        <h1 class="collab-main-heading">Collaborations and<span class="highlight"> Sponsors</span>:</h1>
+        <h1 class="collab-main-heading mobile-view">Collaborations and<span class="highlight"> Sponsors</span>:</h1>
         <div class="row d-flex justify-content-center">
           <div class="collab-card">
             <hr class="blue-hr">
