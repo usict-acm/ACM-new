@@ -13,8 +13,8 @@
     "@ckeditor/ckeditor5-basic-styles": "^34.2.0",
     "@ckeditor/ckeditor5-block-quote": "^34.2.0",
     "@ckeditor/ckeditor5-code-block": "^34.2.0",
-    "@ckeditor/ckeditor5-dev-utils": "^30.3.3",
-    "@ckeditor/ckeditor5-dev-webpack-plugin": "^30.3.3",
+    "@ckeditor/ckeditor5-dev-utils": "^30.3.4",
+    "@ckeditor/ckeditor5-dev-webpack-plugin": "^30.3.4",
     "@ckeditor/ckeditor5-editor-classic": "^34.2.0",
     "@ckeditor/ckeditor5-essentials": "^34.2.0",
     "@ckeditor/ckeditor5-find-and-replace": "^34.2.0",
@@ -31,6 +31,7 @@
     "@ckeditor/ckeditor5-list": "^34.2.0",
     "@ckeditor/ckeditor5-media-embed": "^34.2.0",
     "@ckeditor/ckeditor5-paragraph": "^34.2.0",
+    "@ckeditor/ckeditor5-react": "^5.0.2",
     "@ckeditor/ckeditor5-restricted-editing": "^34.2.0",
     "@ckeditor/ckeditor5-special-characters": "^34.2.0",
     "@ckeditor/ckeditor5-table": "^34.2.0",
@@ -38,6 +39,7 @@
     "@ckeditor/ckeditor5-typing": "^34.2.0",
     "@ckeditor/ckeditor5-upload": "^34.2.0",
     "@ckeditor/ckeditor5-word-count": "^34.2.0",
+    "ckeditor5-custom-build": "^0.0.6",
     "css-loader": "^6.7.1",
     "postcss": "^8.4.14",
     "postcss-loader": "^7.0.1",
@@ -49,5 +51,8 @@
   },
   "scripts": {
     "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-decoupled-document": "^34.2.0"
   }
 }
