@@ -17,7 +17,6 @@ admin/.DS_Store
 assets/.DS_Store
 .vscode/
 debug.log
-/package.json
 mail-testing
 
 # composer
