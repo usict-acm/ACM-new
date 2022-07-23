@@ -93,6 +93,39 @@
         </div>
       </div>
     </section>
+<!-- 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      let urlcarousel = './admin/blogAdmin/api.php/?q=carousel';
+      let carouselDIV = document.getElementById("carousel");
+
+      $(document).ready(function() {
+        $.ajax({
+          url: urlcarousel,
+          method: 'GET',
+          dataType: 'JSON',
+          success: function(data) {
+            console.log("check data 123 ", data);
+            carouselDIV.innerHTML += " <div class='carousel-item active'>\
+                                                    <img src=" + data[0].poster + "  class='live-carousel-img'>\
+                                                  </div>";
+            console.log(data[0].poster);
+            console.log(carouselDIV);
+
+            function carouselfunction() {
+
+              for (i = 1; i < data.length; i++) {
+                carouselDIV.innerHTML += " <div class='carousel-item'>\
+                                                      <img src=" + data[i].poster + "  class='live-carousel-img'>\
+                                                    </div>";
+              }
+            }
+            carouselfunction();
+            console.log(carouselDIV);
+          },
+        });
+      });
+    </script> -->
     <!-------------------------------------------------- END OF CURRENT EVENTS ------------------------------------------------- -->
 
 
