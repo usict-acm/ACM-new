@@ -327,11 +327,6 @@ section .leftBox .live-event {
     width: 50%;
   }
 
-.live-carousel-img {
-  width: 50%;
-  height: 50vh;
-}
-
 section .events {
   position: relative;
   width: 50%;
@@ -358,7 +353,7 @@ section .events ul li {
   list-style: none;
   background: #fff;
   box-sizing: border-box;
-  height: 10em;
+  height: 11em;
   /* margin: 15px 0;  */
 }
 section .events ul li .time {
@@ -525,9 +520,9 @@ section .events ul li .details a:hover {
     padding-bottom: 10px;
   }
   .live-carousel-img {
-    width: 100%;
+    width: 70%;
     /* height: 2em; */
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
   }
   section .events {
     position: relative;
@@ -550,7 +545,7 @@ section .events ul li .details a:hover {
     list-style: none;
     background: #fff;
     box-sizing: border-box;
-    height: 280px;
+    height: 14em;
     /* margin: 15px 0; */
   }
   section .events ul li .time h2 {
