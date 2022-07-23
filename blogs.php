@@ -34,7 +34,7 @@
       </div>
     </section>
     <section class="container mt-5">
-      <h1 class="category-heading">Let The Words Speak</h1>
+      <h1 class="category-heading">Let The <span class = "text-head"> Words Speak</h1>
       <div class="lower">
         <!-- ====================================================Show All Blogs========================================= -->
         <div class="left-side">
@@ -47,7 +47,7 @@
         <!-- ==============================================Show rightside three blogs================================== -->
         <div class="row categoryCards mt-0">
           <div class="col">
-            <h4>Recent Blogs</h4>
+            <h4>Recent <span class="text-head">Blogs</h4>
           </div>
         </div>
         <div id="row4"></div>
@@ -105,12 +105,12 @@
                       id=blog" + index + "_image\
                       class=card-img-top\
                       alt=Card image cap\
-                      style='height: 13rem; object-fit: contain;'\
+                      style='height: 13rem; object-fit: cover;'\
                     />\
                     <div class=card-body>\
                       <div class=post-meta>\
                       " +
-                    spanTag + "<span id=blog" + index + "_date class=mx-2 card-span>" + row.Date + "</span>\
+                    spanTag + "<span id=blog" + index + "_date class=mx-2 card-span>" + row.Title + "</span>\
                         <span class=mx-2 card-span card-span-dot\
                           ><i class=fas fa-circle></i>\
                         </span>\

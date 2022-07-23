@@ -194,3 +194,9 @@
 		box-shadow: none !important;
 	}
 }
+
+@media (min-width: 400px) and (max-width: 580px) {
+	.text-and-logo {
+		margin-left: 50px;
+	}
+}

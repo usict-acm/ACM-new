@@ -37,7 +37,7 @@
 					<div class="footer-widget">
 						<div class="footer-logo text-center">
 							<a href="./">
-								<img src="./assets/images/acm1.png" class="img-primary" alt="logo" />
+								<img src="./assets/images/acm-logo.svg" class="img-primary" alt="logo" />
 								<img src="./assets/images/outstanding-website.png" class="img-secondary" alt="" />
 							</a>
 						</div>
