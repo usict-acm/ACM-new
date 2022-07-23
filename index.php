@@ -174,7 +174,7 @@
 				</div>\
 				<img src="' +
 							row.Image +
-							'" class="blog-img" style="object-fit:contain;"/>\
+							'" class="blog-img" style="object-fit:cover;"/>\
 			</div>\
 			<div>';
 					}
