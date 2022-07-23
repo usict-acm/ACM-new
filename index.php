@@ -71,7 +71,7 @@
 		<div class="col-sm-6 col-9 mx-auto mt-3 pe-sm-5 align-self-center">
 			<div class="text">
 				<h2 class="mb-4 display-4 fw-bolder text-center text-md-start">
-					About <span class="text-blue">Our Chapter</span>
+					About <span class="text-head">Our Chapter</span>
 				</h2>
 				<p class="text-secondary about-text">
 					GGSIP University USS ACM Student Chapter is an official student body incepted in 2019 under the University
@@ -122,7 +122,7 @@
 		</div>
 		<div class="tag">
 			<div class="bloghead">
-				<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-blue"> Blogs</span></h2>
+				<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-head"> Blogs</span></h2>
 			</div>
 			<div class="b-container" id="threeBlogsRow"></div>
 			<div class="py-3 mt-2 d-sm-flex justify-content-sm-center">
@@ -186,7 +186,7 @@
 	<!-- *******************************************our team************* -->
 	<section class="tag container-fluid">
 		<div class="">
-			<h2 class="my-4 display-4 fw-bolder text-center">Office<span class="text-blue"> Bearers</span></h2>
+			<h2 class="my-4 display-4 fw-bolder text-center">Office<span class="text-head"> Bearers</span></h2>
 		</div>
 	 <div class="row justify-content-center">
       <div class="profile-card col-md-4 col-sm-6">

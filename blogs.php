@@ -34,7 +34,7 @@
       </div>
     </section>
     <section class="container mt-5">
-      <h1 class="category-heading">Let The Words Speak</h1>
+      <h1 class="category-heading">Let The <span class = "text-head"> Words Speak</h1>
       <div class="lower">
         <!-- ====================================================Show All Blogs========================================= -->
         <div class="left-side">
@@ -47,7 +47,7 @@
         <!-- ==============================================Show rightside three blogs================================== -->
         <div class="row categoryCards mt-0">
           <div class="col">
-            <h4>Recent Blogs</h4>
+            <h4>Recent <span class="text-head">Blogs</h4>
           </div>
         </div>
         <div id="row4"></div>

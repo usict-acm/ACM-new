@@ -33,7 +33,7 @@
         <div class="row test-dev1" >
           <i class="fa fa-info-circle" aria-hidden="true"></i>
           <div class="col-lg-10 col-md-9 col-sm-8 col-7">
-            <h6 class="alert-header md-text-custom">Registration</h6>
+            <h6 class="alert-header md-text-custom"><span class='text-head'>Registration</h6>
             <p class="mb-0">Join Us today and be a part of International Society of Computer Professionals and Scientists!</p>
           </div class="col-md-1 col-sm-1 col-1">
           <button class="sm-text-custom btn btn-outline-info"><a  href="#registration">Join Us</a></button>
@@ -90,7 +90,7 @@
     <section class="alumnus">
       <div class="container alumn">
         <div class="line"></div>
-        <h1>MEET OUR <b>ALUMNI</b></h1>
+        <h1>MEET OUR <b><span class='text-head'>ALUMNI</b></h1>
         <div class="glider-contain">
           <div class="glider">
             <!-- ************Card 1***************** -->
@@ -145,7 +145,7 @@
 
         <div class="container">
           <div class="line"></div>
-          <h1><b>WINNERS</b></h1>
+          <h1><b><span class="text-head">WINNERS</b></h1>
 
           <div class="glider-contain">
             <div class="glider1">
@@ -276,7 +276,7 @@
 
     <section id="registration">
       <div class="container">
-      <p class="registration-heading">JOIN NOW</p>
+      <p class="registration-heading">JOIN <span class="text-head">NOW</p>
       <div class="registration-form-div">
         <hr class="blue-hr">
         <div class="row no-gutters">

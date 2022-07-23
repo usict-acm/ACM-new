@@ -38,7 +38,7 @@
       <div class="row club-row">
         <div class="container club">
           <div class="aboutclub">
-            <h2>DevSource</h2>
+            <h2><span class="text-head">DevSource</h2>
             <p>
               DevSource - The Development Group is a community of students highly enthusiastic about OpenSource, app, and Web Development. The club provides an opportunity for students with a common interest in the development and open source, to gather and develop together. DevSource organizes various events and workshops for the students to learn new technologies and build hands-on projects.
             </p>
@@ -73,8 +73,8 @@
               <div class="img">
                 <img src="./assets/images/clubs/vishesh.jpeg" />
               </div>
-              <h4>Vishesh Gupta</h4>
-              <h6>Lead</h6>
+              <h4><span class="text-head">Vishesh Gupta</h4>
+              <h6><span class="text-head">Lead</h6>
             </div>
             <div class="vicelead white invisible">
               <div class="img">
@@ -100,7 +100,7 @@
         <div class="container club">
           <img src="./assets/images/clubs/Background_shapes/Bg_shape_4.svg" class="bg-shape" id="bg-shape-4" />
           <div class="aboutclub">
-            <h2>enGame</h2>
+            <h2><span class="text-head">enGame</h2>
             <p>
             enGame - The Gaming Group the Gaming group of USICT is a student-run group that aims to promote competitive gaming culture in the campus and beyond. Gaming Culture is growing exponentially in India and Games can also be a stress buster for the students. Gaming Group brings an opportunity for students to showcase competitive prowess in various gaming events conducted by it.
             </p>
@@ -117,8 +117,8 @@
               <div class="img">
                 <img src="./assets/images/clubs/rishab.png" />
               </div>
-              <h4>Rishab Pant</h4>
-              <h6>Lead</h6>
+              <h4><span class="text-head">Rishab Pant</h4>
+              <h6><span class="text-head">Lead</h6>
             </div>
           </div>
         </div>
@@ -146,7 +146,7 @@
             </div>
           </div>
           <div class="aboutclub aboutclub-right">
-            <h2>Innovate AI</h2>
+            <h2><span class="text-head">Innovate AI</h2>
             <p>
             The objective of Innovate AI - The Machine Learning, Data Science and AI Group is to create awareness and equip the students with the ability as well as skills to analyze and understand the technology in the field of Artificial Intelligence. The club serves as a place for the community to discuss, learn about, and work on topics related to machine learning, Data Science, and artificial intelligence. Various Events related to the latest Technologies and Algorithms are also organized by Innovate AI, along with competitions and Guest Lectures.
             </p>
@@ -197,19 +197,19 @@
               <div class="img">
                 <img src="./assets/images/clubs/aman.png" />
               </div>
-              <h4>Aman Tayal</h4>
-              <h6>Lead</h6>
+              <h4><span class="text-head">Aman Tayal</h4>
+              <h6><span class="text-head">Lead</h6>
             </div>
             <div class="vicelead">
               <div class="img">
                 <img src="./assets/images/clubs/rajnikant.png" />
               </div>
-              <h4>Rajnikant Roy</h4>
-              <h6>Vice Lead</h6>
+              <h4><span class="text-head">Rajnikant Roy</h4>
+              <h6><span class="text-head">Vice Lead</h6>
             </div>
           </div>
           <div class="aboutclub aboutclub-right">
-            <h2 id="black_research">ICPC</h2>
+            <h2 id="black_research"><span class="text-head">ICPC</h2>
             <p>
             ICPC - The Competitive Programming Group focuses on promoting and nurturing the sport of Competitive Programming. ICPC Club opens opportunities for students to learn critical thinking skills and solve problems within unfairly short time limits. The Club hosts various coding competitions to prepare for various competitions like ACM-ICPC, Google Code Jam, and likewise. It also provides a forum for the discussion of theory and applications of algorithms.
             </p>
@@ -225,7 +225,7 @@
         <div class="container club">
           <img src="./assets/images/clubs/Background_shapes/Bg_shape_8.svg" class="bg-shape" id="bg-shape-8" />
           <div class="aboutclub">
-            <h2>Entrepreneurs’ Arena</h2>
+            <h2><span class="text-head">Entrepreneurs’ Arena</h2>
             <p>
             The Entrepreneurs’ Arena is a club that cultivates and equips businessmen and Women for the future. Its goal is to benefit and develop aspiring entrepreneurs as it will act as a platform for applying and exercising academically learned skills. It organizes networking events, peer-to-peer development, learning opportunities and provides an informal platform to discuss your innovative ideas.
             </p>
@@ -235,15 +235,15 @@
               <div class="img">
                 <img src="./assets/images/clubs/pratham.jpeg" />
               </div>
-              <h4>Pratham Mittal</h4>
-              <h6>Lead</h6>
+              <h4><span class="text-head">Pratham Mittal</h4>
+              <h6><span class="text-head">Lead</h6>
             </div>
             <div class="vicelead">
               <div class="img">
                 <img src="./assets/images/clubs/ankit.jpeg" />
               </div>
-              <h4>Ankit Pandey</h4>
-              <h6>Vice Lead</h6>
+              <h4><span class="text-head">Ankit Pandey</h4>
+              <h6><span class="text-head">Vice Lead</h6>
             </div>
           </div>
         </div>
@@ -266,12 +266,12 @@
               <div class="img">
                 <img src="./assets/images/clubs/manik.jpg" />
               </div>
-              <h4>Manik Singal</h4>
-              <h6>Lead</h6>
+              <h4><span class="text-head">Manik Singal</h4>
+              <h6><span class="text-head">Lead</h6>
             </div>
           </div>
           <div class="aboutclub aboutclub-right">
-            <h2>RobIOTics</h2>
+            <h2><span class="text-head">RobIOTics</h2>
             <p>  
             RobIOTics - The Robotics, IoT Group is the Electronic Club of USICT ACM. It covers 3 major technical fields which are Robotics, the Internet of Things, and Robotic Process Automation. The goal of this club is to share knowledge, resources, and opportunities related to the specified fields with each other and build the electronic community of our college extensively. RobIOTics Club organizes many technical events such as competitions and tech Talks on various technologies and Guest Lectures etc.
             </p>
@@ -287,7 +287,7 @@
         <div class="container club">
           <img src="./assets/images/clubs/Background_shapes/Bg_shape_4.svg" class="bg-shape" id="bg-shape-4" style="z-index: 0;" />
           <div class="aboutclub">
-            <h2>Research Cell</h2>
+            <h2><span class="text-head">Research Cell</h2>
             <p>
             Research Cell is not just a domain for highly qualified professionals but is a platform for anyone who has the curiosity to know and the ability to think out of the box. ACM USICT Research Cell aims towards flourishing the research culture of GGSIPU.
 Its goal is to guide the students of USICT towards excellence in their domain of interest and to encourage them to conduct research and look for new possibilities in that domain, eventually improving India's contribution towards the advancement of humanity.
@@ -298,15 +298,15 @@ Its goal is to guide the students of USICT towards excellence in their domain of
               <div class="img">
                 <img src="./assets/images/clubs/prateek.png" />
               </div>
-              <h4>Prateek Thakur</h4>
-              <h6>Lead</h6>
+              <h4><span class="text-head">Prateek Thakur</h4>
+              <h6><span class="text-head">Lead</h6>
             </div>
             <div class="vicelead">
               <div class="img">
                 <img src="./assets/images/clubs/tushar-khanduri.png" />
               </div>
-              <h4>Tushar Khanduri</h4>
-              <h6>Vice Lead</h6>
+              <h4><span class="text-head">Tushar Khanduri</h4>
+              <h6><span class="text-head">Vice Lead</h6>
             </div>
           </div>
         </div>

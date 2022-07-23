@@ -502,7 +502,7 @@ a:hover {
 }
 
 .b-infos .b-button {
-	background: #0397fe;
+	background: #005daa;
 	color: #fff;
 	border-radius: 6px;
 	border: none;
@@ -519,7 +519,7 @@ a:hover {
 
 .b-infos::after {
 	content: '';
-	background: #0397fe;
+	background: #005daa;
 	border-radius: 10px;
 	height: 100%;
 	width: 100%;
@@ -1305,8 +1305,8 @@ a:hover {
 	display: block;
 	box-sizing: border-box;
 	appearance: none;
-	background-color: var(--blue);
-	border: 2px solid var(--blue);
+	background-color: #005daa;
+	border: 2px solid #005daa;
 	border-radius: 0.6em;
 	cursor: pointer;
 	font-size: 1rem;
@@ -1392,7 +1392,7 @@ a:hover {
 
 .drop-down {
 	color: #fff;
-	background-color: #3498db;
+	background-color: #005daa;
 	font-size: 1rem;
 	font-weight: 700;
 	width: 100%;
@@ -1474,7 +1474,7 @@ a:hover {
 
 .text-blue,
 .footer-cta i::before {
-	color: #0397fe;
+	color: #005daa;
 }
 
 /* events section */
@@ -1510,7 +1510,7 @@ a:hover {
 	justify-content: center;
 	align-items: center;
 	margin-top: 0;
-	padding: 50px 0;
+	padding: 30px 0;
 }
 
 .timeout {
@@ -1702,7 +1702,7 @@ a:hover {
 	cursor: pointer;
 	font-size: 30px;
 	text-align: center;
-	color: var(--blue);
+	color: #005daa;
 }
 
 /* scroll to top  */
@@ -1726,7 +1726,7 @@ a:hover {
 	text-align: center;
 	transform: rotate(-45deg);
 	margin-top: 5px;
-	color: var(--blue);
+	color: #005daa;
 }
 
 @media screen and (max-width: 375px) {
@@ -2282,4 +2282,17 @@ a:hover {
 
 .fw-bolder {
 	font-weight: 700;
+}
+
+.text-head {
+	color: #0092cf;
+}
+
+.btn-theme {
+	background-color: #005daa;
+	border-color: #005daa;
+}
+
+.text-sp {
+	color: #005daa;
 }
