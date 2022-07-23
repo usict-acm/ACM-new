@@ -1,8 +1,10 @@
 # GGSIP University USS ACM Student Chapter
 
-<img align="center" alt="Coding" width="400" src="https://usict.acm.org/assets/images/acm1.png">
+<p align="center">
+<img alt="Coding" width="400" src="https://usict.acm.org/assets/images/acm1.png">
 
 GGSIP University USS ACM Student Chapter is an official student body incepted in 2019 under the University School USICT, GGSIPU. The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc.which give the students an exposure to the competitive computing world as well as allow them to understand the advancements going on in the computing sphere worldwide.
+</p>
 
 # Table of contents
 
@@ -27,7 +29,9 @@ GGSIP University USS ACM Student Chapter is an official student body incepted in
 
 # ACM Clubs
 
-<img align="center" alt="Coding" width="300" src="https://cdn.dribbble.com/users/1201592/screenshots/9078494/media/422a760a51cef7de2fa3db9daf697853.gif">
+<p align="center">
+<img alt="Coding"  width="300" src="https://cdn.dribbble.com/users/1201592/screenshots/9078494/media/422a760a51cef7de2fa3db9daf697853.gif">
+</p>
 
 ## DevSource
 DevSource - The Development Group is a community of students highly enthusiastic about OpenSource, app, and Web Development. The club provides an opportunity for students with a common interest in the development and open source, to gather and develop together. DevSource organizes various events and workshops for the students to learn new technologies and build hands-on projects
