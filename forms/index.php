@@ -171,39 +171,39 @@
 
 
 
-          //File ans type *******************************************************************************
+          //Checkbox ans type *******************************************************************************
           else if (data[i].fieldType == "checkbox") {
             var nameArr = (data[i].ifCheckbox).split(',');
             divTag.innerHTML += `<div class="fieldCheckCheckbox" id="fieldRequiredCheck${i}" style=display:none;>
                                     <p style="color:red;">This field is required</p>
                                     </div>`;
             if (data[i].required == 1) {
-              divTag.innerHTML += `          <div class="wrap-input100" id="field${i}">
-                                                  ${data[i].fieldName} * : &nbsp;&nbsp;&nbsp;`;
-                                                  
+              // divTag.innerHTML += `<div class = "form-group checkboxDiv" id="field${i}"  style="margin-bottom:0px;"><p class="checkboxLabel" style="margin-bottom:0px;">${data[i].fieldName} *</p>`;
+              divTag.innerHTML += `<div class="wrap-input100 checkboxDiv" id="field${i}"> ${data[i].fieldName} * : &nbsp;&nbsp;&nbsp;`;
             } else {
-              divTag.innerHTML += `          <div class="wrap-input100" id="field${i}">
-                                                  ${data[i].fieldName}  : &nbsp;&nbsp;&nbsp;`;
+              divTag.innerHTML += `<div class="wrap-input100 checkboxDiv" id="field${i}"> ${data[i].fieldName}  : &nbsp;&nbsp;&nbsp;`;
+
             }
+            // console.log(nameArr[0]);
+            console.log(nameArr);
             for (let j = 0; j < nameArr.length; j++) {
               // divTag.innerHTML += `<input type="checkbox" id="field${i}${j}"  name="Checkbox1" value="${nameArr[j]}" class="checkbox checkboxDesign">
-              //                       <label for="vehicle1" class="checkboxName">${nameArr[j]} </label><br> `;
-              divTag.innerHTML += `  ${nameArr[j]}  <input type="checkbox" id="field${i}${j}" value="${nameArr[j]}" name="Checkbox1" /> &nbsp; &nbsp;`;
+              //     <label for="vehicle1" class="checkboxName">${nameArr[j]} </label><br> `;
+              divTag.innerHTML += `           ${nameArr[j]} <input type="checkbox" id="field${i}${j}" value="${nameArr[j]}"  name="Checkbox1"  class="checkbox checkboxDesign" /> &nbsp; &nbsp; `;
 
                   if(j==nameArr.length - 1){
-                      divTag.innerHTML += `</div>`;
+                      // divTag.innerHTML += `</div><br><br>`;
                   }
             }
+            divTag.innerHTML += `</div><br><br>`;
 
-            // divTag.innerHTML += ``;
           } 
           
           
           
           
           
-          
-          
+          //Radio ans type *******************************************************************************
           
           // else if (data[i].fieldType == "radioAns") {
           //   var nameArr = (data[i].ifRadio).split(',');
@@ -234,10 +234,29 @@
           //   i1++;
           //   divTag.innerHTML += `</div>`;
           // }
+
+
+
+
+
+
+          //Dropdown ans type *******************************************************************************
+          // else if (data[i].fieldType == "radioAns") {
+              //   <div class="wrap-input100 input100-select">
+              //   <span class="label-input100">Needed Services</span>
+              //   <div>
+              //     <select class="selection-2" name="service">
+              //       <option class="hidden" selected disabled>Select</option>
+              //       <option>Online Store</option>
+              //       <option>eCommerce Bussiness</option>
+              //       <option>UI/UX Design</option>
+              //       <option>Online Services</option>
+              //     </select>
+              //   </div>
+              //   <span class="focus-input100"></span>
+              // </div>
+          // }
         }
-        // divTag.innerHTML += `<div class="form-group">
-        //         <input type="button" class="btn btn-block create-account" id="buttonSubmit" name="submit" value="Submit"/>
-        //     </div>`;
         divTag.innerHTML += `             <div class="container-contact100-form-btn">
                                             <div class="wrap-contact100-form-btn">
                                               <div class="contact100-form-bgbtn"></div>
