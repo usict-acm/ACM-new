@@ -83,6 +83,9 @@ else{
         font-weight: bold;
         font-size: 25px;
         }
+        {
+            text-align: center; 
+        }
 
     </style>
 </head>
