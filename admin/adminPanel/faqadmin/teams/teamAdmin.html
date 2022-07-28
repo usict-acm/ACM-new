@@ -235,14 +235,14 @@
 
         $.ajax({
           type: "POST",
-          url: "./api.php/?q=postMember",
+          url: "./faqadmin/teams/api.php/?q=postMember",
           data: formData,
           cache: false,
           processData: false,
           contentType: false,
           success: function (data) {
             alert(data);
-            // window.location.reload();
+           // window.location.reload();
           },
         });
       }
@@ -254,7 +254,7 @@
           var member = document.getElementById("members");
           member.innerHTML = "";
           $.ajax({
-            url: "./api.php/?q=readMember&year=" + year,
+            url: "./faqadmin/teams/api.php/?q=readMember&year=" + year,
             method: "GET",
             async: false,
             dataType: "JSON",
@@ -293,7 +293,7 @@
       function del_member(member_id) {
         $.ajax({
           type: "POST",
-          url: "./api.php/?q=delMember",
+          url: "./faqadmin/teams/api.php/?q=delMember",
           data: { id: member_id },
           success: function (data) {
             alert(data);
@@ -306,7 +306,7 @@
           var year = document.getElementById("findYear");
           year.innerHTML = "";
           $.ajax({
-            url: "./api.php/?q=getYear",
+            url: "./faqadmin/teams/api.php/?q=getYear",
             method: "GET",
             dataType: "JSON",
             success: function (data) {

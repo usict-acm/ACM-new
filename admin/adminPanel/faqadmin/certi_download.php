@@ -6,6 +6,7 @@
 
     if(isset($_GET["Sno"]) ){
         
+        
         include_once '../../blogAdmin/database.php';
         $database = new Database();
         $conn = $database->connect();
