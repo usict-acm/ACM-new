@@ -68,6 +68,10 @@
         margin-top: 43px;
         margin-left: 13px;
     }
+    .top-fix{
+        padding: 0%;
+        margin: 0%;
+    }
     </style>
 </head>
 <body>
@@ -75,8 +79,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="page-header clearfix">
-                        <h2 class="pull-left">Teams Admin Panel</h2>
+                    <div class="page-header clearfix top-fix">
+                        <h2 class="pull-left" style="margin-top: 7%; margin-left: -43%;">Teams Admin Panel</h2>
                         <a href="?table=AddMember" class="btn btn-primary pull-right marginset">Add a member</a>
                         
                     </div>
@@ -91,7 +95,7 @@
                     $sql = "SELECT * FROM team ORDER BY id DESC ";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
-                            echo "<table class='table table-bordered table-striped'>";
+                            echo "<table class='table table-bordered table-striped' style='margin-left: -43%; max-width: 50%;'>";
                                 echo "<thead>";
                                     echo "<tr>";
                                         echo "<th>Name</th>";
@@ -129,7 +133,7 @@
 
                                         echo "<td>";
                                             
-                                            echo "<a class='tash-bin 'href='faqadmin/certificate_delete.php?Sno=". $row['uniqueNo'] ."' title='Delete Member' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                            echo "<a class='tash-bin 'href='faqadmin/certificate_delete.php?Sno=". $row['id'] ."' title='Delete Member' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                            
                                         // echo "<form method='POST' action = 'faqadmin/certificate/index.php?Sno=". $row['uniqueNo'] ."'> 
                                         //     <button type='submit' class='btn btn-primary' id='submitBtn' name='down-btn' data-toggle='tooltip'>Download</button>

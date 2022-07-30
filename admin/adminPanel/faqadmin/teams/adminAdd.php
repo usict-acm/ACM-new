@@ -15,10 +15,10 @@
       * {
         box-sizing: border-box;
       }
-
+/* 
       body {
         background-color: rgba(0, 255, 255, 0.144);
-      }
+      } */
 
       h1 {
         text-align: center;
@@ -90,7 +90,7 @@
   </head>
 
   <body>
-    <h1>Add New Member</h1>
+    <h3 style="margin-left: 10%;">Add New Member</h3>
     <div class="container">
       <form method="POST" enctype="multipart/form-data" action="javascript:submit_member()">
         <div class="row">
