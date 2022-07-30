@@ -133,7 +133,7 @@
 
                                         echo "<td>";
                                             
-                                            echo "<a class='tash-bin 'href='faqadmin/certificate_delete.php?Sno=". $row['id'] ."' title='Delete Member' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                            echo "<a class='tash-bin 'href='./faqadmin/teams/delete_member.php?Sno=". $row['id'] ."' title='Delete Member' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                            
                                         // echo "<form method='POST' action = 'faqadmin/certificate/index.php?Sno=". $row['uniqueNo'] ."'> 
                                         //     <button type='submit' class='btn btn-primary' id='submitBtn' name='down-btn' data-toggle='tooltip'>Download</button>

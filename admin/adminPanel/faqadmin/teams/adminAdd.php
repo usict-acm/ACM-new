@@ -242,7 +242,7 @@
           contentType: false,
           success: function (data) {
             alert(data);
-           // window.location.reload();
+           window.location.reload();
           },
           error: function(xhr, status, error){
                     //window.location.reload();
