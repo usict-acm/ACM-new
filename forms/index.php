@@ -176,26 +176,35 @@
             var nameArr = (data[i].ifCheckbox).split(',');
             divTag.innerHTML += `<div class="fieldCheckCheckbox" id="fieldRequiredCheck${i}" style=display:none;>
                                     <p style="color:red;">This field is required</p>
-                                    </div>`;
+                                    </div>`;  
+            let newDiv = document.createElement("div") ;
+            let newDiv2 = document.createElement("div") ;
+            newDiv2.classList.add("wrap-input100");
+            newDiv2.classList.add("checkboxDiv");
+            newDiv2.id= `field${i}`
             if (data[i].required == 1) {
               // divTag.innerHTML += `<div class = "form-group checkboxDiv" id="field${i}"  style="margin-bottom:0px;"><p class="checkboxLabel" style="margin-bottom:0px;">${data[i].fieldName} *</p>`;
-              divTag.innerHTML += `<div class="wrap-input100 checkboxDiv" id="field${i}"> ${data[i].fieldName} * : &nbsp;&nbsp;&nbsp;`;
+              newDiv2.innerHTML += ` ${data[i].fieldName} * : &nbsp;&nbsp;&nbsp;`;
             } else {
-              divTag.innerHTML += `<div class="wrap-input100 checkboxDiv" id="field${i}"> ${data[i].fieldName}  : &nbsp;&nbsp;&nbsp;`;
+              newDiv2.innerHTML += ` ${data[i].fieldName}  : &nbsp;&nbsp;&nbsp;`;
 
             }
             // console.log(nameArr[0]);
-            console.log(nameArr);
+            console.log(nameArr); 
             for (let j = 0; j < nameArr.length; j++) {
               // divTag.innerHTML += `<input type="checkbox" id="field${i}${j}"  name="Checkbox1" value="${nameArr[j]}" class="checkbox checkboxDesign">
               //     <label for="vehicle1" class="checkboxName">${nameArr[j]} </label><br> `;
-              divTag.innerHTML += `           ${nameArr[j]} <input type="checkbox" id="field${i}${j}" value="${nameArr[j]}"  name="Checkbox1"  class="checkbox checkboxDesign" /> &nbsp; &nbsp; `;
+              newDiv2.innerHTML += `           ${nameArr[j]} <input type="checkbox" id="field${i}${j}" value="${nameArr[j]}"  name="Checkbox1"  class="checkbox checkboxDesign" /> &nbsp; &nbsp; `;
 
                   if(j==nameArr.length - 1){
-                      // divTag.innerHTML += `</div><br><br>`;
+                      newDiv2.innerHTML += `</div><br><br>`;
+                    
                   }
             }
-            divTag.innerHTML += `</div><br><br>`;
+            // divTag.innerHTML += newDiv;
+            newDiv.appendChild(newDiv2);
+            divTag.appendChild(newDiv);
+            // divTag.innerHTML += `</div><br><br>`;
 
           } 
           
