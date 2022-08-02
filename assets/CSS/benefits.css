@@ -1112,27 +1112,7 @@ ul {
   border-radius: 100%;
   }
 
-.winnerButton {
-  background-color: #1cb9c4;
-  border-radius: 50%;
-  transition-duration: 0.4s;
-  padding: 13px 16px;
-  margin-left: 0.625rem;
-  margin-right: 0.625rem;
-  border: solid transparent;
-  font-size: 1.25rem;
-  box-sizing: border-box;
-  text-align: center;
-  color:#fff;
-  }
 
-
-.winnerButton:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  background-color: white;
-  border-color:#0e8e96 ;
-  color:#0e8e96;
-}
 
 .winners {
   position: relative;

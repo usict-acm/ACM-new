@@ -202,23 +202,7 @@
         <div class="container">
           <div class="line"></div>
           <h1><b>WINNERS</b></h1>
-          <div class="winnerButtons">
-            <button class="winnerButton">
-              year
-            </button>
-            <button class="winnerButton">
-              2022
-            </button>
-            <button class="winnerButton">
-              2021
-            </button>
-            <button class="winnerButton">
-              2020
-            </button>
-            <button class="winnerButton">
-              2019
-            </button>
-          </div>
+          
           <div class="winnerNav"></div>
           <!--
           <div class="glider-contain">
