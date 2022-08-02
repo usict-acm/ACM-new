@@ -220,6 +220,7 @@
             </button>
           </div>
           <div class="winnerNav"></div>
+          <!--
           <div class="glider-contain">
             <div class="glider1">
             <div class="winBox">
@@ -341,6 +342,114 @@
                 <div aria-label="Next" class="glider-next alumni-next1"><i class="fas fa-angle-right"></i></div>
                 <div role="tablist" class="dots1"></div>
           </div>
+              -->
+
+    <div class="winnerContainer">
+      <div class="winnerOne">
+        <div class="circleCard">
+        </div>
+          <div class="eventName">
+            <img src="./assets/images/TrophyOneWinner.jpg" alt="">
+          </div>
+          <div class="innerContent">
+            <h2>ACM Write it loud</h2>
+            <h3>Winners</h3>
+            <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Manasi Prabhakaran</h4>
+            <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4>
+          </div>
+      </div>
+      <div class="winnerOne">
+        <div class="circleCard">
+        </div>
+          <div class="eventName">
+          <img src="./assets/images/TrophyOneWinner.jpg" alt="">
+          </div>
+          <div class="innerContent">
+            <h2>ACM Valorant Tournament</h2>
+            <h3>Winners</h3>
+            <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Samir Mahapatra</h4>
+            <!-- <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4> -->
+          </div>
+      </div>
+      <div class="winnerOne">
+        <div class="circleCard">
+        </div>
+          <div class="eventName">
+          <img src="./assets/images/TrophyOneWinner.jpg" alt="">
+          </div>
+          <div class="innerContent">
+            <h2>ACM CODM Tournament</h2>
+            <h3>Winners</h3>
+            <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Rajesh Devanda</h4>
+            <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Raj Kishor Panigrahi</h4>
+          </div>
+      </div>
+      <div class="winnerOne">
+        <div class="circleCard">
+        </div>
+          <div class="eventName">
+          <img src="./assets/images/TrophyOneWinner.jpg" alt="">
+          </div>
+          <div class="innerContent">
+            <h2>ACM Chess Tournament</h2>
+            <h3>Winners</h3>
+            <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Vinayak Parashar</h4>
+            <!-- <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4> -->
+          </div>
+      </div>
+      <div class="winnerOne">
+        <div class="circleCard">
+        </div>
+          <div class="eventName">
+          <img src="./assets/images/TrophyOneWinner.jpg" alt="">
+          </div>
+          <div class="innerContent">
+            <h2>Decodisaster</h2>
+            <h3>Winners</h3>
+            <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Shubham Goyal</h4>
+            <!-- <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4> -->
+          </div>
+      </div>
+      <div class="winnerOne">
+        <div class="circleCard">
+        </div>
+          <div class="eventName">
+          <img src="./assets/images/TrophyOneWinner.jpg" alt="">
+          </div>
+          <div class="innerContent">
+            <h2>Bat Code</h2>
+            <h3>Winners</h3>
+            <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Shubham Garg</h4>
+            <!-- <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4> -->
+          </div>
+      </div>
+      <div class="winnerOne">
+        <div class="circleCard">
+        </div>
+          <div class="eventName">
+          <img src="./assets/images/TrophyOneWinner.jpg" alt="">
+          </div>
+          <div class="innerContent">
+            <h2>Quiz</h2>
+            <h3>Winners</h3>
+            <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Kashish Jain</h4>
+            <!-- <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4> -->
+          </div>
+      </div>
+      <div class="winnerOne">
+        <div class="circleCard">
+        </div>
+          <div class="eventName">
+          <img src="./assets/images/TrophyOneWinner.jpg" alt="">
+          </div>
+          <div class="innerContent">
+            <h2>Drawing Competition</h2>
+            <h3>Winners</h3>
+            <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Hanshita Prabhakar</h4>
+            <!-- <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4> -->
+          </div>
+      </div>
+    </div>
         </div>
 
       </div>
