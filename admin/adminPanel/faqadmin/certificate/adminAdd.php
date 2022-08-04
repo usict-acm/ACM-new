@@ -24,8 +24,8 @@ if(mysqli_num_rows($result) > 0){
     $row = mysqli_fetch_array($result);
     $u = $row['uniqueNo'];
     $id = substr($u, -4);
-    echo $id;
     ord($id);
+    echo $id;
     $id = $id+1;
 }
 else{
@@ -92,6 +92,7 @@ else{
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
+
     function submit_certificate(){
         let val = document.querySelector("#cno").value;
         let email_value = document.querySelector("#email").value;
@@ -107,12 +108,12 @@ else{
         // console.log(email_value);
         // var val = $("#cno").value;
             const arr = val.split("#");
-            console.log(arr);
+            // console.log(arr);
         if(!email_value || !name_value || !college_value || !startDate_value || !endDate_value ||  !event_value || !enroll_value || !course_value){
             alert("Please fill all the details");
         }
         else{
-                console.log("xyz");
+                // console.log("xyz");
 
             var formData = new FormData();
             formData.append('uniqueno',  arr[0]);
@@ -125,7 +126,7 @@ else{
             formData.append('rank', $('#rank').val());
             formData.append('enroll', $('#enroll').val());
             formData.append('course', $('#course').val());
-
+        
             $.ajax({
                 type: "POST",
                 url: "../blogAdmin/api.php/?q=certificateForm",
@@ -133,8 +134,15 @@ else{
                 cache: false,
                 processData: false,
                 contentType: false,
+                dataType: "JSON",
+                encode: true,
                 success: function(data){
-                    alert(data.message);
+                    if (confirm("Do you want to mail this certificate to the student?") == true) {
+                        var url = '../adminPanel/faqadmin/certificate_mail.php?Sno=' + arr[0] + '&email=' + $("#email").val();
+                        window.location.replace(url);
+                    } else {
+                        alet("Thank you!");
+                    }
                     // window.location.reload();
                 // window.location.replace('./index.php?table=certificateCreation');
                 //window.location.replace('../../index.php?table=certificateCreation');
