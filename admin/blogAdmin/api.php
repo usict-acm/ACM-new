@@ -648,9 +648,9 @@ function certificateForm(){
     $rank = $_POST["rank"];
     $enroll = $_POST["enroll"];
     $course = $_POST["course"];
-    
+   
     $sql = "INSERT INTO `certificate` (`uniqueNO`, `nameParticipant`,`email`, `startDate`, `endDate`, `course`, `enrollment_no`, `event`, `rank`, `college`) VALUES ('$uniq', '$name', '$email', '$startdate', '$enddate',  '$course', '$enroll','$event', '$rank', '$college');";
-    echo($sql);
+    
     if ($db->query($sql) == true) {
         echo json_encode(
             array('message' => 'Form has been submitted')
@@ -1015,6 +1015,7 @@ switch ($q) {
         break;
     case 'certificateForm':
         certificateForm();
+        break;
     default:
         echo "Invalid Query";
 }
