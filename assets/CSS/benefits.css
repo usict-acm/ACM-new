@@ -1158,22 +1158,37 @@ ul {
 .winnerOne:not(:last-child){
   margin-right: 50px;
 }
-
-.winnerContainer .winnerOne {
-  box-shadow: 10px 10px 40px #0e8e96;
+.winnerOne {
+  height: 400px !important;
+  box-shadow: 5px 5px 20px #0e8e96;
   background-color: #0e8e96;
   position: relative;
   border-radius: 25px;
-  width: 350px !important;
-  height: 500px;
-  /* overflow: hidden; */
+  width: 280px !important;
   z-index: 1;
   flex-shrink: 0;
 }
+/* .winnerContainer  {
+  /* box-shadow: 10px 10px 40px #0e8e96; */
+  /* background-color: #0e8e96; */
+  position: relative;
+  border-radius: 25px;
+  width: 350px !important;
+  height: 500px !important;
+  /* overflow: hidden; */
+  z-index: 1;
+  flex-shrink: 0;
+} */
 .circleCard {
   border-radius: 25px;
 }
-.winnerContainer .winnerOne .eventName {
+
+.eventName{
+  height: 40px !important;
+  width: 285px !important;
+}
+
+.winnerOne .eventName {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -1181,7 +1196,7 @@ ul {
   justify-content: center;
   transition: 300ms ease-in-out;
 }
-.winnerContainer .winnerOne .eventName img {
+.winnerOne .eventName img {
   position: relative;
   /* height: 10vh;
   width: 10vh; */
@@ -1192,12 +1207,12 @@ ul {
 
   border-radius: 100%;
 }
-.winnerContainer .winnerOne:hover .eventName img {
+.winnerOne:hover .eventName img {
   width: 100px;
   height: 100px;
   transform: rotate(-360deg);
 }
-.winnerContainer .winnerOne .circleCard {
+.winnerOne .circleCard {
   content: "";
   position: absolute;
   width: 100%;
@@ -1206,13 +1221,13 @@ ul {
   clip-path: circle(300px at 50% -2%);
   transition: 300ms ease-in-out;
 }
-.winnerContainer .winnerOne:hover .circleCard {
+.winnerOne:hover .circleCard {
   clip-path: circle(170px at 50% -20%);
 }
-.winnerContainer .winnerOne:hover .eventName {
+.winnerOne:hover .eventName {
   top: 10%;
 }
-.winnerContainer .winnerOne .innerContent {
+.winnerOne .innerContent {
   position: absolute;
   bottom: 10%;
   transform: translatey(50%);
@@ -1221,14 +1236,14 @@ ul {
   transition: 300ms;
   opacity: 0;
 }
-.winnerContainer .winnerOne:hover .innerContent {
+.winnerOne:hover .innerContent {
   bottom: 45%;
   opacity: 1;
 }
-.winnerContainer .winnerOne .innerContent div {
+.winnerOne .innerContent div {
   margin: 10px 0 20px 0;
 }
-.winnerContainer .winnerOne .innerContent span {
+.winnerOne .innerContent span {
   background-color: #fff;
   padding: 5px;
   border-radius: 5px;
@@ -1236,35 +1251,35 @@ ul {
   color: #111;
   transition: 90ms ease-in-out;
 }
-.winnerContainer .winnerOne .innerContent .spanGreen:hover {
+.winnerOne .innerContent .spanGreen:hover {
   background-color: #7cad22;
   color: #eee;
   cursor: pointer;
 }
-.winnerContainer .winnerOne .innerContent .spanBlue:hover {
+.winnerOne .innerContent .spanBlue:hover {
   background-color: #1e4789;
   color: #eee;
   cursor: pointer;
 }
-.winnerContainer .winnerOne .innerContent .spanRed:hover {
+.winnerOne .innerContent .spanRed:hover {
   background-color: #b70c0c;
   color: #eee;
   cursor: pointer;
 }
-.winnerContainer .winnerOne .innerContent .spanGreen {
+.winnerOne .innerContent .spanGreen {
   border: solid 1px #7cad22;
 }
-.winnerContainer .winnerOne .innerContent .spanBlue {
+.winnerOne .innerContent .spanBlue {
   border: solid 1px #2256aa;
 }
-.winnerContainer .winnerOne .innerContent .spanRed {
+.winnerOne .innerContent .spanRed {
   border: solid 1px #e02121;
 }
-.winnerContainer .winnerOne .innerContent .separator {
+.winnerOne .innerContent .separator {
   border-bottom: solid 1px #777;
   margin: 30px;
 }
-.winnerContainer .winnerOne .innerContent a {
+.winnerOne .innerContent a {
   padding: 10px;
   font-size: 18px;
   text-decoration: none;
@@ -1272,25 +1287,25 @@ ul {
   border-radius: 5px;
   text-transform: uppercase;
 }
-.winnerContainer .winnerOne .innerContent .btnGreen {
+.winnerOne .innerContent .btnGreen {
   background-color: #7cad22;
 }
-.winnerContainer .winnerOne .innerContent .btnBlue {
+.winnerOne .innerContent .btnBlue {
   background-color: #2256aa;
 }
-.winnerContainer .winnerOne .innerContent .btnRed {
+.winnerOne .innerContent .btnRed {
   background-color: #e02121;
 }
-.winnerContainer .winnerOne .innerContent .btnGreen:hover {
+.winnerOne .innerContent .btnGreen:hover {
   background-color: #7cad22bb;
 }
-.winnerContainer .winnerOne .innerContent .btnBlue:hover {
+.winnerOne .innerContent .btnBlue:hover {
   background-color: #2256aabb;
 }
-.winnerContainer .winnerOne .innerContent .btnRed:hover {
+.winnerOne .innerContent .btnRed:hover {
   background-color: #e02121bb;
 }
-.winnerContainer .winnerOne:hover .innerContent h1 {
+.winnerOne:hover .innerContent h1 {
   opacity: 1;
 }
 
@@ -1375,7 +1390,7 @@ ul {
 }
 
 .glider {
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 .winnerOut {

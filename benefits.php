@@ -207,11 +207,11 @@
         <h1><b>WINNERS</b></h1>
 
         <div class="winnerNav"></div>
-        <!-- <!-- -->
+        <!--  -->
         <div class="glider-contain">
-          <div class="glider1">
-            <div class="winnerContainer">
-              <div class="winnerOne">
+          <div class="winnerContainer glider1">
+            <!-- <div class=""> -->
+              <!-- <div class="winnerOne">
                 <div class="circleCard">
                 </div>
                 <div class="eventName">
@@ -234,7 +234,6 @@
                   <h2>ACM Valorant Tournament</h2>
                   <h3>Winners</h3>
                   <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Samir Mahapatra</h4>
-                  <!-- <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4> -->
                 </div>
               </div>
               <div class="winnerOne">
@@ -275,8 +274,8 @@
                   <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Rajesh Devanda</h4>
                   <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Raj Kishor Panigrahi</h4>
                 </div>
-              </div>
-              <div class="winnerOne">
+              </div> -->
+              <!-- <div class="winnerOne">
                 <div class="circleCard">
                 </div>
                 <div class="eventName">
@@ -299,9 +298,8 @@
                   <h2>ACM Valorant Tournament</h2>
                   <h3>Winners</h3>
                   <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Samir Mahapatra</h4>
-                  <!-- <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4> -->
                 </div>
-              </div>
+              </div> -->
               <div class="winnerOne">
                 <div class="circleCard">
                 </div>
@@ -406,15 +404,14 @@
                   <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Hanshita Prabhakar</h4>
                   <!-- <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4> -->
                 </div>
-              </div>
+              <!-- </div> -->
             </div>
           </div>
-
+          <div aria-label="Previous" class="glider-prev alumni-prev1"><i class="fas fa-angle-left"></i></div>
+          <div aria-label="Next" class="glider-next alumni-next1"><i class="fas fa-angle-right"></i></div>
+          <div role="tablist" class="dots1"></div>
         </div>
       </div>
-      <div aria-label="Previous" class="glider-prev alumni-prev1"><i class="fas fa-angle-left"></i></div>
-      <div aria-label="Next" class="glider-next alumni-next1"><i class="fas fa-angle-right"></i></div>
-      <div role="tablist" class="dots1"></div>
     </div>
 
 
