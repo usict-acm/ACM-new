@@ -327,11 +327,15 @@
                 </div>
               </div>
               <div class="winnerOne">
+              <div class="outerContent">
+                <h2>ACM CODM Tournament</h2> 
+                </div>
                 <div class="circleCard">
                 </div>
                 <div class="eventName">
                   <img src="./assets/images/TrophyOneWinner.jpg" alt="">
                 </div>
+                
                 <div class="innerContent">
                   <h2>ACM CODM Tournament</h2>
                   <h3>Winners</h3>

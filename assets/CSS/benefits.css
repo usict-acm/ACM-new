@@ -1145,6 +1145,13 @@ ul {
   font-size: 28px;
   margin: 10px 0;
 }
+.outerContent h2{
+  color: #fff;
+  z-index: 2;
+  position: absolute;
+  bottom: 10px;
+}
+
 .winnerContainer {
   position: relative;
   height: 550px;
@@ -1250,6 +1257,9 @@ ul {
   font-size: 12px;
   color: #111;
   transition: 90ms ease-in-out;
+}
+.winnerOne:hover >h2{
+  display: none;
 }
 .winnerOne .innerContent .spanGreen:hover {
   background-color: #7cad22;
