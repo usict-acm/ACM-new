@@ -424,9 +424,6 @@
                   <img src="./assets/images/TrophyOneWinner.jpg" alt="">
                 </div>
                 <div class="innerContent">
-                  <h3 class="outerContent">
-                    hiiiiiiii
-                  </h3>
                   <h2>Drawing Competition</h2>
                   <h3>Winners</h3>
                   <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Hanshita Prabhakar</h4>
