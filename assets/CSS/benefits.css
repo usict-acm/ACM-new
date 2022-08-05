@@ -1145,11 +1145,14 @@ ul {
   font-size: 28px;
   margin: 10px 0;
 }
-.outerContent h2{
+
+.outerContent h3{
   color: #fff;
-  z-index: 2;
   position: absolute;
   bottom: 10px;
+  width: 100%;
+  align-items: center;
+  height: 18%;
 }
 
 .winnerContainer {
@@ -1258,7 +1261,7 @@ ul {
   color: #111;
   transition: 90ms ease-in-out;
 }
-.winnerOne:hover >h2{
+.winnerOne:hover> .outerContent > h3{
   display: none;
 }
 .winnerOne .innerContent .spanGreen:hover {

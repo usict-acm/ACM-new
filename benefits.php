@@ -301,6 +301,9 @@
                 </div>
               </div> -->
               <div class="winnerOne">
+              <div class="outerContent">
+              <h3>ACM Write it loud</h3>
+                </div>
                 <div class="circleCard">
                 </div>
                 <div class="eventName">
@@ -314,6 +317,9 @@
                 </div>
               </div>
               <div class="winnerOne">
+              <div class="outerContent">
+                <h3>ACM Valorant Tournament</h3> 
+                </div>
                 <div class="circleCard">
                 </div>
                 <div class="eventName">
@@ -328,7 +334,7 @@
               </div>
               <div class="winnerOne">
               <div class="outerContent">
-                <h2>ACM CODM Tournament</h2> 
+                <h3>ACM CODM Tournament</h3> 
                 </div>
                 <div class="circleCard">
                 </div>
@@ -345,6 +351,9 @@
                 </div>
               </div>
               <div class="winnerOne">
+              <div class="outerContent">
+                <h3>ACM Chess Tournament</h3> 
+                </div>
                 <div class="circleCard">
                 </div>
                 <div class="eventName">
@@ -358,6 +367,9 @@
                 </div>
               </div>
               <div class="winnerOne">
+              <div class="outerContent">
+              <h3>Decodisaster</h3> 
+                </div>
                 <div class="circleCard">
                 </div>
                 <div class="eventName">
@@ -371,6 +383,9 @@
                 </div>
               </div>
               <div class="winnerOne">
+              <div class="outerContent">
+              <h3>Bat Code</h3> 
+                </div>
                 <div class="circleCard">
                 </div>
                 <div class="eventName">
@@ -384,6 +399,9 @@
                 </div>
               </div>
               <div class="winnerOne">
+              <div class="outerContent">
+              <h3>Quiz</h3> 
+                </div>
                 <div class="circleCard">
                 </div>
                 <div class="eventName">
@@ -397,12 +415,18 @@
                 </div>
               </div>
               <div class="winnerOne">
+              <div class="outerContent">
+                <h3>Drawing Competition</h3> 
+                </div>
                 <div class="circleCard">
                 </div>
                 <div class="eventName">
                   <img src="./assets/images/TrophyOneWinner.jpg" alt="">
                 </div>
                 <div class="innerContent">
+                  <h3 class="outerContent">
+                    hiiiiiiii
+                  </h3>
                   <h2>Drawing Competition</h2>
                   <h3>Winners</h3>
                   <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Hanshita Prabhakar</h4>
