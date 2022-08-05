@@ -1169,13 +1169,13 @@ ul {
   flex-shrink: 0;
 }
 /* .winnerContainer  {
-  /* box-shadow: 10px 10px 40px #0e8e96; */
-  /* background-color: #0e8e96; */
+  box-shadow: 10px 10px 40px #0e8e96;
+  background-color: #0e8e96;
   position: relative;
   border-radius: 25px;
   width: 350px !important;
   height: 500px !important;
-  /* overflow: hidden; */
+  overflow: hidden;
   z-index: 1;
   flex-shrink: 0;
 } */
@@ -1190,7 +1190,7 @@ ul {
 
 .winnerOne .eventName {
   position: relative;
-  top: 50%;
+  top: 20%;
   transform: translateY(-50%);
   display: flex;
   justify-content: center;
@@ -1357,6 +1357,7 @@ ul {
   opacity: 0;
   transition: all 0.5s ease;
 }
+
 
 /* .winnerInnerDiv:hover #overlay {
   opacity: 1;
