@@ -125,5 +125,13 @@
                 }
             }
         }
+        echo json_encode(
+            array('message' => 'Downloaded successfully')
+        );
+    }
+    else {
+        echo json_encode(
+            array('message' => 'Error in downloading')
+        );
     }
 ?>
