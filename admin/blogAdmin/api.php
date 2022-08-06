@@ -635,6 +635,33 @@ function postAnnouncement()
     }
 };
 
+function certificateForm(){
+    $database = new Database();
+    $db = $database->connect();
+    $name = $_POST["name"];
+    $college= $_POST["college"];
+    $uniq = $_POST["uniqueno"];
+    $startdate = $_POST["startDate"];
+    $enddate = $_POST["endDate"];
+    $email = $_POST["email"];
+    $event = $_POST["event"];
+    $rank = $_POST["rank"];
+    $enroll = $_POST["enroll"];
+    $course = $_POST["course"];
+   
+    $sql = "INSERT INTO `certificate` (`uniqueNO`, `nameParticipant`,`email`, `startDate`, `endDate`, `course`, `enrollment_no`, `event`, `rank`, `college`) VALUES ('$uniq', '$name', '$email', '$startdate', '$enddate',  '$course', '$enroll','$event', '$rank', '$college');";
+    
+    if ($db->query($sql) == true) {
+        echo json_encode(
+            array('message' => 'Form has been submitted')
+        );
+    } else {
+        echo json_encode(
+            array('message' => 'Internal Server Error. Try Again')
+        );
+    }
+}
+
 function postImage()
 {
     $database = new Database();
@@ -917,6 +944,7 @@ function fileupload(){
         move_uploaded_file($filetemppath,$uploadLocation);
 }
 
+
 $q = $_GET['q'];
 switch ($q) {
     case 'readAll':
@@ -984,6 +1012,9 @@ switch ($q) {
         break;
     case 'HardFetchResponses':
         testResponses();
+        break;
+    case 'certificateForm':
+        certificateForm();
         break;
     default:
         echo "Invalid Query";

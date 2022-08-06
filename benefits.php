@@ -22,8 +22,7 @@
       <section id='header'>
         <div class="pt-card row">
           <div class="heading col-xl-9 col-lg-9 col-md-9 col-sm-6">
-            <h3><span class="uheading">Why Join</span><br>
-              <span class="lheading">GGSIP University USS ACM Student Chapter?</span></h3>
+            <h3><span class="uheading">Why Join Us ?</span><br> 
           </div>
         </div>
       </section>
@@ -34,7 +33,7 @@
         <div class="row test-dev1" >
           <i class="fa fa-info-circle" aria-hidden="true"></i>
           <div class="col-lg-10 col-md-9 col-sm-8 col-7">
-            <h6 class="alert-header md-text-custom">Registration</h6>
+            <h6 class="alert-header md-text-custom"><span class='text-head'>Registration</h6>
             <p class="mb-0">Join Us today and be a part of International Society of Computer Professionals and Scientists!</p>
           </div class="col-md-1 col-sm-1 col-1">
           <button class="sm-text-custom btn btn-outline-info"><a  href="#registration">Join Us</a></button>
@@ -47,7 +46,7 @@
     <section class="service-sec" id="benefits">
       <div class="container">
         <div class="row">
-          <div class="row d-flex justify-content-center benefit-card-container">
+          <div class="row d-flex justify-content-center benefit-card-container mobile-view">
             <div class="perk-card"> <img src="./assets/images/perks/flagship.png" height="80" width="80">
               <h3>ACM’s flagship publication </h3>
               <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe.</p>
@@ -91,7 +90,7 @@
     <section class="alumnus">
       <div class="container alumn">
         <div class="line"></div>
-        <h1>MEET OUR <b>ALUMNI</b></h1>
+        <h1>MEET OUR <b><span class='text-head'>ALUMNI</b></h1>
         <div class="glider-contain">
           <div class="glider">
             <!-- ************Card 1***************** -->
@@ -146,7 +145,7 @@
 
         <div class="container">
           <div class="line"></div>
-          <h1><b>WINNERS</b></h1>
+          <h1><b><span class="text-head">WINNERS</b></h1>
 
           <div class="glider-contain">
             <div class="glider1">
@@ -277,7 +276,7 @@
 
     <section id="registration">
       <div class="container">
-      <p class="registration-heading">JOIN NOW</p>
+      <p class="registration-heading">JOIN <span class="text-head">NOW</p>
       <div class="registration-form-div">
         <hr class="blue-hr">
         <div class="row no-gutters">
@@ -361,8 +360,6 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="form-group col-md-6"></div>
-                  <div class="form-group col-md-2"></div>
                   <div class="form-group col-md-2 button-center">
                     <div class="form-group">
                       <!-- <button id="submitSingupForm" type="submit" style="display:none;"></button> -->
