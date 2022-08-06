@@ -201,8 +201,10 @@ else{
                 encode: true,
                 success: function(data){
                     if (confirm("Do you want to mail this certificate to the student?") == true) {
-                        var url = '../adminPanel/faqadmin/certificate_mail.php?Sno=' + arr[0] + '&email=' + $("#email").val();
-                        window.location.replace(url);
+                        var download = '../adminPanel/faqadmin/certi_download.php?Sno=' + arr[0];
+                        var mail = '../adminPanel/faqadmin/certificate_mail.php?Sno=' + arr[0] + '&email=' + $("#email").val();
+                        window.location.replace(mail);
+                        window.location.replace(download);
                     } else {
                         alert("Thank you!");
                     }
