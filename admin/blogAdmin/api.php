@@ -944,6 +944,34 @@ function fileupload(){
         move_uploaded_file($filetemppath,$uploadLocation);
 }
 
+function contactus()
+{
+    // echo "<script></script>ertyt";
+    $database = new Database();
+    // print_r($database);
+    $db = $database->connect();
+    // print_r($db);
+    $name = $_POST["name"];
+    $email =  $_POST["email"];
+    $mobile = $_POST["mobile"];
+    $college = $_POST["college"];
+    $message = $_POST["message"];
+
+    $sql = "INSERT INTO `contactus` (`name`, `email`, `mobile`, `college`, `message`) VALUES ('$name', '$email', '$mobile', '$college','$message');";
+    // print_r($sql);
+    // echo "<script>console.log(".$sql.")</script>";
+        if ($db->query($sql) == true) {
+            echo json_encode(
+                array('message' => 'Form has been submitted')
+            );
+        } else {
+            echo json_encode(
+                array('message' => 'Internal Server Error. Try Again')
+            );
+        }
+
+};
+
 
 $q = $_GET['q'];
 switch ($q) {
@@ -1015,6 +1043,9 @@ switch ($q) {
         break;
     case 'certificateForm':
         certificateForm();
+        break;
+    case 'contactus':
+        contactus();
         break;
     default:
         echo "Invalid Query";
