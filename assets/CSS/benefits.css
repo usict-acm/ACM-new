@@ -289,6 +289,7 @@ input[type=number] {
 }
 
 .test-dev1 {
+  margin: 0;
   align-items: center;
 }
 
@@ -1023,6 +1024,9 @@ ul {
   .md-text-custom {
     font-size: 14px;
   }
+  .mobile-view {
+    width: 100%;
+  }
 }
 
 .perk-card {
@@ -1315,7 +1319,7 @@ ul {
   text-align: left;
   margin: 20px auto 40px auto;
 
-  color: #0297ff;
+  /* color: #0297ff; */
 }
 
 .blue-hr {
@@ -1992,10 +1996,6 @@ body.search-open #search .search-suggestion:nth-child(3) {
   .leaders {
     margin-left: -5% !important;
   }
-}
-
-.signin {
-  margin-left: 15% !important;
 }
 
 #widget-contact-form {
