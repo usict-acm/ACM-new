@@ -133,6 +133,14 @@
                     <span>Certificate</span></a>
             </li>
 
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" href="?table=Contactus">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Contact Us</span></a>
+            </li>
+
             <!-- Nav Item - Tables -->
             <!-- <li class="nav-item">
                 <a class="nav-link" href="tables.html">
