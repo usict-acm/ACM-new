@@ -1139,6 +1139,9 @@ ul {
   opacity: 0;
   transition: 300ms ease-in-out;
 }
+/* .innerContent h3 {
+  color: rgb(138, 138, 138) !important;
+} */
 .innerContent h2 {
   font-weight: normal;
   color: #ddd;

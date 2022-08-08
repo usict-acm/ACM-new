@@ -106,7 +106,7 @@
                 </div>
                 <div class="person-info">
                   <h3 class="full-name">Rajat Maheshwari</h3>
-                  <span class="speciality">SDE 1, Amazon</span>
+                  <span class="speciality" style="font-weight: bold">SDE 1, Amazon</span>
                 </div>
               </div>
             </div>
@@ -119,7 +119,7 @@
                 </div>
                 <div class="person-info">
                   <h3 class="full-name">Sapna Chaudhary</h3>
-                  <span class="speciality">Pursuing Phd, IIITD</span>
+                  <span class="speciality" style="font-weight: bold">Pursuing Phd, IIITD</span>
                 </div>
               </div>
             </div>
@@ -132,7 +132,7 @@
                 </div>
                 <div class="person-info">
                   <h3 class="full-name">Tamanna Arora</h3>
-                  <span class="speciality">SDE, Media Agility</span>
+                  <span class="speciality" style="font-weight: bold">SDE, Media Agility</span>
                 </div>
               </div>
             </div>
@@ -145,7 +145,7 @@
                 </div>
                 <div class="person-info">
                   <h3 class="full-name">Abhishek Khandelwal</h3>
-                  <span class="speciality">Founder CEO, ENSVEE & Part. of CSL Symposium, New York</span>
+                  <span class="speciality" style="font-weight: bold">Founder CEO, ENSVEE & Part. of CSL Symposium, New York</span>
                 </div>
               </div>
             </div>
@@ -311,7 +311,7 @@
                 </div>
                 <div class="innerContent">
                   <h2>ACM Write it loud</h2>
-                  <h3>Winners</h3>
+                  <h3 style="color: rgb(0, 0, 0)">Winners</h3>
                   <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Manasi Prabhakaran</h4>
                   <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4>
                 </div>
@@ -327,7 +327,7 @@
                 </div>
                 <div class="innerContent">
                   <h2>ACM Valorant Tournament</h2>
-                  <h3>Winners</h3>
+                  <h3 style="color: rgb(0, 0, 0)">Winners</h3>
                   <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Samir Mahapatra</h4>
                   <!-- <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4> -->
                 </div>
@@ -344,7 +344,7 @@
                 
                 <div class="innerContent">
                   <h2>ACM CODM Tournament</h2>
-                  <h3>Winners</h3>
+                  <h3 style="color: rgb(0, 0, 0)">Winners</h3>
                   <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Rajesh Devanda</h4>
                   <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Raj Kishor Panigrahi</h4>
                   <!-- <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4> -->
@@ -361,7 +361,7 @@
                 </div>
                 <div class="innerContent">
                   <h2>ACM Chess Tournament</h2>
-                  <h3>Winners</h3>
+                  <h3 style="color: rgb(0, 0, 0)">Winners</h3>
                   <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Vinayak Parashar</h4>
                   <!-- <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4> -->
                 </div>
@@ -377,7 +377,7 @@
                 </div>
                 <div class="innerContent">
                   <h2>Decodisaster</h2>
-                  <h3>Winners</h3>
+                  <h3 style="color: rgb(0, 0, 0)">Winners</h3>
                   <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Shubham Goyal</h4>
                   <!-- <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4> -->
                 </div>
@@ -393,7 +393,7 @@
                 </div>
                 <div class="innerContent">
                   <h2>Bat Code</h2>
-                  <h3>Winners</h3>
+                  <h3 style="color: rgb(0, 0, 0)">Winners</h3>
                   <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Shubham Garg</h4>
                   <!-- <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4> -->
                 </div>
@@ -409,7 +409,7 @@
                 </div>
                 <div class="innerContent">
                   <h2>Quiz</h2>
-                  <h3>Winners</h3>
+                  <h3 style="color: rgb(0, 0, 0)">Winners</h3>
                   <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Kashish Jain</h4>
                   <!-- <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4> -->
                 </div>
@@ -428,7 +428,7 @@
                     hiiiiiiii
                   </h3>
                   <h2>Drawing Competition</h2>
-                  <h3>Winners</h3>
+                  <h3 style="color: rgb(0, 0, 0)">Winners</h3>
                   <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Hanshita Prabhakar</h4>
                   <!-- <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4> -->
                 </div>
