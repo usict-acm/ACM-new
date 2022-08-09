@@ -16,7 +16,8 @@
                 $nameParticipant = $row['nameParticipant'];
                 $email = $row['email'];
                 $event = $row['event'];
-                certificateMail($Sno, $nameParticipant, $email, $event);
+                $date = $row['startDate'];
+                certificateMail($Sno, $nameParticipant, $email, $event, $date);
                 echo json_encode(
                     array('message' => 'Mailed successfully')
                 );
