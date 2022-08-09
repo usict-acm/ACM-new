@@ -1420,6 +1420,7 @@ ul {
 .alumni-prev1 {
   color: #0297ff !important;
   font-weight: 700 !important;
+  margin-top: 85px;
 }
 
 /* .winnerNav{
@@ -1428,6 +1429,7 @@ ul {
 .alumni-next1 {
   color: #0297ff !important;
   font-weight: 700 !important;
+  margin-top: 85px;
 }
 
 @media only screen and (max-width: 600px) {
