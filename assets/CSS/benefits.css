@@ -1213,12 +1213,15 @@ ul {
   position: relative;
   /* height: 10vh;
   width: 10vh; */
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 100%;
   object-fit: cover;
   transition: 300ms ease-in-out;
 
   border-radius: 100%;
+}
+.eventName img {
+  padding: 5px !important;
 }
 .winnerOne:hover .eventName img {
   width: 100px;
@@ -1231,7 +1234,7 @@ ul {
   width: 100%;
   height: 100%;
   background-color: #fff;
-  clip-path: circle(300px at 50% -2%);
+  clip-path: circle(250px at 50% -2%);
   transition: 300ms ease-in-out;
 }
 .winnerOne:hover .circleCard {
