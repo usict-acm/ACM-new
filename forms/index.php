@@ -43,8 +43,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <?php $Id = $_GET["Id"]; ?>
 
-
-
   <script>
     let i1 = 0;
     // $(document).ready(function () {
@@ -181,7 +179,7 @@
             let newDiv2 = document.createElement("div") ;
             newDiv2.classList.add("wrap-input100");
             newDiv2.classList.add("checkboxDiv");
-            newDiv2.id= `field${i}`
+            newDiv2.id= `field${i}`;
             if (data[i].required == 1) {
               // divTag.innerHTML += `<div class = "form-group checkboxDiv" id="field${i}"  style="margin-bottom:0px;"><p class="checkboxLabel" style="margin-bottom:0px;">${data[i].fieldName} *</p>`;
               newDiv2.innerHTML += ` ${data[i].fieldName} * : &nbsp;&nbsp;&nbsp;`;
@@ -194,12 +192,12 @@
             for (let j = 0; j < nameArr.length; j++) {
               // divTag.innerHTML += `<input type="checkbox" id="field${i}${j}"  name="Checkbox1" value="${nameArr[j]}" class="checkbox checkboxDesign">
               //     <label for="vehicle1" class="checkboxName">${nameArr[j]} </label><br> `;
-              newDiv2.innerHTML += `           ${nameArr[j]} <input type="checkbox" id="field${i}${j}" value="${nameArr[j]}"  name="Checkbox1"  class="checkbox checkboxDesign" /> &nbsp; &nbsp; `;
+              newDiv2.innerHTML += `<div style="margin-left: 20px"> <input type="checkbox" id="field${i}${j}" value="${nameArr[j]}"  name="Checkbox1"  class="checkbox checkboxDesign" /> ${nameArr[j]} </div> `;
 
-                  if(j==nameArr.length - 1){
-                      newDiv2.innerHTML += `</div><br><br>`;
+                  // if(j==nameArr.length - 1){
+                  //     newDiv2.innerHTML += `<br><br>`;
                     
-                  }
+                  // }
             }
             // divTag.innerHTML += newDiv;
             newDiv.appendChild(newDiv2);
@@ -214,35 +212,45 @@
           
           //Radio ans type *******************************************************************************
           
-          // else if (data[i].fieldType == "radioAns") {
-          //   var nameArr = (data[i].ifRadio).split(',');
+          else if (data[i].fieldType == "radioAns") {
+            var nameArr = (data[i].ifRadio).split(',');
+            let newDiv = document.createElement("div") ;
+            newDiv.classList.add("wrap-input100");
+            newDiv.classList.add("checkboxDiv");
+            newDiv.id= `field${i}`;
+            newDiv.innerHTML =  `<div class="fieldCheckRadio" id="fieldRequiredRadio${i}" style=display:none;>
+                                    <p style="color:red;">This field is required</p>
+                                    </div>`;
+            // console.log(nameArr);
+            if (data[i].required == 1) {
+              newDiv.innerHTML += ` ${data[i].fieldName} * : &nbsp;&nbsp;&nbsp;`;
+              //divTag.innerHTML += `<div id="field${i}" class= "form-group  checkboxDiv" style="margin-bottom:0px;"><p style="margin-bottom:0px;" class="checkboxLabel">${data[i].fieldName} *</p> `
+            } else {
+              //divTag.innerHTML += `<div id="field${i}" class= "form-group  checkboxDiv" style="margin-bottom:0px;"><p style="margin-bottom:0px;" class="checkboxLabel">${data[i].fieldName} </p> `;
+              newDiv.innerHTML += ` ${data[i].fieldName} : &nbsp;&nbsp;&nbsp;`;
+            }
 
-          //   // console.log(nameArr);
-          //   divTag.innerHTML += `<div class="fieldCheckRadio" id="fieldRequiredRadio${i}" style=display:none;>
-          //                           <p style="color:red;">This field is required</p>
-          //                           </div>`;
-          //   if (data[i].required == 1) {
-          //     divTag.innerHTML += `<div id="field${i}" class= "form-group  checkboxDiv" style="margin-bottom:0px;"><p style="margin-bottom:0px;" class="checkboxLabel">${data[i].fieldName} *</p> `;
+            for (let j = 0; j < nameArr.length; j++) {
 
-          //   } else {
-          //     divTag.innerHTML += `<div id="field${i}" class= "form-group  checkboxDiv" style="margin-bottom:0px;"><p style="margin-bottom:0px;" class="checkboxLabel">${data[i].fieldName} </p> `;
-
-          //   }
-
-          //   for (let j = 0; j < nameArr.length; j++) {
-
-          //     if (j === 0) {
-          //       divTag.innerHTML += `<form>`;
-          //     }
-          //     divTag.innerHTML += `<input type="radio" id="field${i}${j}" name="radioButton${i1}" value="${nameArr[j]}" class="checkbox checkboxDesign">
-          //                            <label class="radioName" for="field${i}${j}">${nameArr[j]} </label><br>`;
-          //     if (j === nameArr.length - 1) {
-          //       divTag.innerHTML += `<br></form>`;
-          //     }
-          //   }
-          //   i1++;
-          //   divTag.innerHTML += `</div>`;
-          // }
+              // if (j === 0) {
+              // divTag.innerHTML += `<form>`;
+              // }
+              newDiv.innerHTML += `<div style="margin-left: 20px">
+                                   <input type="radio" id="field${i}${j}" name="radioButton${i1}" value="${nameArr[j]}" class="checkbox checkboxDesign">
+                                   <label class="radioName" for="field${i}${j}">${nameArr[j]} </label>
+                                   </div>`;
+              // if (j === nameArr.length - 1) {
+              //   divTag.innerHTML += `<br></form>`;
+              // }
+              // if(j==nameArr.length - 1){
+              //         newDiv.innerHTML += `<br/><br/>`;
+                    
+              //     }
+            }
+            i1++;
+            divTag.appendChild(newDiv);
+            //divTag.innerHTML += `</div>`;
+          }
 
 
 
