@@ -96,7 +96,7 @@
               />\
               <div class='singleContent'>\
                 <div style='display: flex; justify-content: flex-end'>\
-                  <h5 id='blog_date'>" + data[0].Date + "</h5>\
+                  <h5 id='blog_date'>" + data[0].Date.split(' ')[0] + "</h5>\
                 </div>\
                 <p id='blog_content' class='singleBlog-content'>" + data[0].Content + "</p>\
               </div>\

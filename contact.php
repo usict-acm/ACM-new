@@ -4,7 +4,7 @@
 		<img src="./assets/images/contact_us_img.webp" class="svg-media" alt="" />
 		<div class="contactUs">
 			<div class="closebtn">
-				<button class="btn btn-primary s-form-group contact-btn" onclick="closecontact()"><i class="fas fa-times"></i></button>
+				<button class="btn btn-primary btn-theme s-form-group contact-btn" onclick="closecontact()"><i class="fas fa-times"></i></button>
 			</div>
 			<form class="s-form" name="contact" method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeW8dszRK5ynb6HS51X7fGrfW7su1_8JFL0Tm3hWfbfdpZiCQ/formResponse" onsubmit="return validateform();">
 				<h2 class="my-4 display-4 fw-bolder text-center">Contact<span class="text-blue"> Us</span></h2>
@@ -37,7 +37,7 @@
 					<textarea type="text" name="message" rows="5" placeholder="Message *" class="form-control col-md-11 contact-message"></textarea>
 				</div>
 				<div class="row contact-msg">
-					<button type="submit" class="btn btn-primary s-form-group contact-btn col-md-3 col-sm-2">Submit</button>
+					<button type="submit" class="btn btn-primary btn-theme s-form-group contact-btn col-md-3 col-sm-2">Submit</button>
 				</div>
 			</form>
 		</div>

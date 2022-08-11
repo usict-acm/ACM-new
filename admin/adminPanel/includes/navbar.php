@@ -125,6 +125,20 @@
                     <span>Link</span></a>
             </li>
 
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" href="?table=Certificate">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Certificate</span></a>
+            </li>
+            <hr class="sidebar-divider">
+            <li class="nav-item">
+                <a class="nav-link" href="?table=Teams">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Teams</span></a>
+            </li>
+
             <!-- Nav Item - Tables -->
             <!-- <li class="nav-item">
                 <a class="nav-link" href="tables.html">

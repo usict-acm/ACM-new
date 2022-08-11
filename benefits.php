@@ -653,8 +653,6 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="form-group col-md-6"></div>
-                  <div class="form-group col-md-2"></div>
                   <div class="form-group col-md-2 button-center">
                     <div class="form-group">
                       <!-- <button id="submitSingupForm" type="submit" style="display:none;"></button> -->
