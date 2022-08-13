@@ -185,7 +185,9 @@
                         case 'certificateCreation':
                             include('./faqadmin/certificate/certificate-created.php');
                             break;
-                        
+                        case 'Contactus':
+                            include('./faqadmin/contactusAdmin.php');
+                            break;
                         default:
                             include('./faqadmin/index.php');
                             break;
