@@ -555,7 +555,7 @@
 
   <section id="registration">
     <div class="container">
-      <p class="registration-heading">JOIN NOW</p>
+      <p class="registration-heading">JOIN <span class="text-head">NOW</span></p>
       <div class="registration-form-div">
         <hr class="blue-hr">
         <div class="row no-gutters">
@@ -567,36 +567,34 @@
               <form class="widget-contact-form" id="form-id" action="" role="form" method="post"  novalidate="novalidate">
                 <div class="row test-dev2">
                   <div class="form-group col-md-6">
-                    <input id="NameinForm" required type="text" aria-required="true" name="entry.73813921" class="form-input-boxes-manual form-control required fname test-dev3" placeholder="First Name">
+                    <input id="firstname" required type="text" aria-required="true" name="firstname" class="form-input-boxes-manual form-control required fname test-dev3" placeholder="First Name">
                   </div>
                   <div class="form-group col-md-6">
-                    <input id="LastNameinForm" required type="text" aria-required="true" name="entry.1318071106" class="form-input-boxes-manual form-control required lname test-dev3" placeholder="Last Name">
+                    <input id="lastname" required type="text" aria-required="true" name="lastname" class="form-input-boxes-manual form-control required lname test-dev3" placeholder="Last Name">
                   </div>
-                </div>
-                <div class="form-group">
-                  <input id="enroll" required type="text" name="enroll" class="form-control form-input-boxes-manual required test-dev3" placeholder="Enrollment Number"  aria-required="true">
                 </div>
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <input id="EmailinForm" required type="email" name="entry.2086820351" class="form-input-boxes-manual form-control test-dev3" placeholder="Email">
+                    <input id="email" required type="email" name="email" class="form-input-boxes-manual form-control test-dev3" placeholder="Email">
                   </div>
                   <div class="form-group col-md-6">
-                    <input id="PhoneinForm" required type="number" name="entry.2128372508" class="form-input-boxes-manual form-control test-dev3" placeholder="Phone Number">
+                    <input id="phone" required type="number" name="phone" class="form-input-boxes-manual form-control test-dev3" placeholder="Phone Number">
                   </div>
                 </div>
                 <div class="form-group">
-                  <input id="EnrollmentinForm" required type="number" name="entry.1857583496" class="form-control form-input-boxes-manual required test-dev3" placeholder="Enrollment Number" aria-required="true">
+                  <input id="enroll" required type="number" name="enroll" class="form-control form-input-boxes-manual required test-dev3" placeholder="Enrollment Number" aria-required="true">
                 </div>
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <input id="YearofAdmissioninForm" required type="number" name="entry.715926692" class="form-input-boxes-manual form-control test-dev3" placeholder="Year Of Admission">
+                    <input id="year" required type="number" name="year" class="form-input-boxes-manual form-control test-dev3" placeholder="Year Of Admission">
                   </div>
                   <div class="form-group col-md-6">
-                    <input id="ACMMembershipNoinForm" required type="number" name="entry.114256127" class="form-input-boxes-manual form-control test-dev3" placeholder="ACM Membership No.">
+                    <input id="acm_no" required type="number" name="acm_no" class="form-input-boxes-manual form-control test-dev3" placeholder="ACM Membership No.">
+                    If you don't have membership number, <a href="https://bit.do/joinacm" target="_blank"><b>Click Here</b></a> to get one.
                   </div>
                 </div>
                 <div class="form-group">
-                  <input id="CourseinForm" required list="course" name="entry.1307853061" class="form-control form-input-boxes-manual required test-dev3" placeholder="Select Course" aria-required="true">
+                  <input id="course" required list="course" name="course" class="form-control form-input-boxes-manual required test-dev3" placeholder="Select Course" aria-required="true">
                   <datalist id="course">
                     <option value="B.Tech CSE">
                     <option value="B.Tech IT">
@@ -705,7 +703,7 @@
           if (x == "" || !x || y == "" || !y || z == "" || !z || a == "" || !a || b == "" || !b || c == "" || !c || d == "" || !d || e == "" || !e || isNaN(c) || isNaN(d) || isNaN(e) || isNaN(b)) {
             
         flag = false;
-        alert("please ennter valid information");
+        alert("Please enter valid information!  ");
         //document.getElementById("form-id").action = "";
           
           //document.location.reload()
