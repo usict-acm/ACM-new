@@ -24,8 +24,8 @@
     <section id='header'>
       <div class="pt-card row">
         <div class="heading col-xl-9 col-lg-9 col-md-9 col-sm-6">
-          <h3><span class="uheading">Why Join</span><br>
-            <span class="lheading">GGSIP University USS ACM Student Chapter?</span>
+          <h3><span class="uheading">Why Join Us?</span><br>
+            <!-- <span class="lheading">Us?</span> -->
           </h3>
         </div>
       </div>
@@ -50,7 +50,7 @@
   <section class="service-sec" id="benefits">
     <div class="container">
       <div class="row">
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center" style="width: 100%;">
           <div class="perk-card"> <img src="./assets/images/perks/flagship.png" height="80" width="80">
             <h3>ACM’s flagship publication </h3>
             <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe.</p>
