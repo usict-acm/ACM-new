@@ -80,7 +80,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="page-header clearfix top-fix">
-                        <h2 class="pull-left" style="margin-top: 7%; margin-left: -43%;">Teams Admin Panel</h2>
+                        <h2 class="pull-left" style="margin-top: 7%">Teams Admin Panel</h2>
                         <a href="?table=AddMember" class="btn btn-primary pull-right marginset">Add a member</a>
                         
                     </div>
@@ -95,7 +95,7 @@
                     $sql = "SELECT * FROM team ORDER BY id DESC ";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
-                            echo "<table class='table table-bordered table-striped' style='margin-left: -43%; max-width: 50%;'>";
+                            echo "<table class='table table-bordered table-striped' style='table-layout: fixed; width: 100%; word-wrap: break-word;'>";
                                 echo "<thead>";
                                     echo "<tr>";
                                         echo "<th>Name</th>";
