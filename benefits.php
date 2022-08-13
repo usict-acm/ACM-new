@@ -145,7 +145,7 @@
                 </div>
                 <div class="person-info">
                   <h3 class="full-name">Abhishek Khandelwal</h3>
-                  <span class="speciality" style="font-weight: bold">Founder CEO , ENSVEE & Part. of CSL Symposium , New York</span>
+                  <span class="speciality" style="font-weight: bold">Founder & CEO , ENSVEE</span>
                 </div>
               </div>
             </div>
