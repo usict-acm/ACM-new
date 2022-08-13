@@ -1,17 +1,4 @@
 <?php 
-if(isset($_POST['down-btn'])){
-    //header('Content-type: image/jpeg');
-    $font=realpath('arial.ttf');
-    $image=imagecreatefromjpeg('format.jpeg');
-    $color=imagecolorallocate($image, 51, 51, 102);
-    $date=date('d F, Y');
-    imagettftext($image, 18, 0, 880, 188, $color,$font, $date);
-    $name="YOUTUBE";
-    imagettftext($image, 48, 0, 120, 520, $color,$font, $name);
-    imagejpeg($image,"download_certificate/$name.jpeg");
-    imagejpeg($image);
-    imagedestroy($image);
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +18,7 @@ if(isset($_POST['down-btn'])){
             margin-top: 0;
         }
         table tr td:last-child a{
-            margin-right: 15px;
+            margin-right: 0px;
         }
         .hh_button {
     display: inline-block;
@@ -81,17 +68,21 @@ if(isset($_POST['down-btn'])){
         margin-top: 43px;
         margin-left: 13px;
     }
+    .top-fix{
+        padding: 0%;
+        margin: 0%;
+    }
     </style>
 </head>
 <body>
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="page-header clearfix">
-                        <h2 class="pull-left">Certificate Admin Panel</h2>
-                        <a href="?table=AddCertificate" class="btn btn-primary pull-right marginset">Make Single Certificate</a>
-                        <a href="?table=AddBulkCertificate" class="btn btn-primary pull-right">Make Certificate in Bulk</a>
+                <div class="col-lg-12">
+                    <div class="page-header clearfix top-fix">
+                        <h2 class="pull-left" style="margin-top: 7%; margin-left: -43%;">Teams Admin Panel</h2>
+                        <a href="?table=AddMember" class="btn btn-primary pull-right marginset">Add a member</a>
+                        
                     </div>
                     <?php
                     // Include config file
@@ -101,18 +92,19 @@ if(isset($_POST['down-btn'])){
                     $link = $database->connect();
                     $connection = $link;
 
-                    $sql = "SELECT * FROM certificate ORDER BY id DESC ";
+                    $sql = "SELECT * FROM team ORDER BY id DESC ";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
-                            echo "<table class='table table-bordered table-striped'>";
+                            echo "<table class='table table-bordered table-striped' style='margin-left: -43%; max-width: 50%;'>";
                                 echo "<thead>";
                                     echo "<tr>";
-                                        echo "<th>Unique No.</th>";
-                                        echo "<th>Participant Name</th>";
-                                        echo "<th>Email</th>";
+                                        echo "<th>Name</th>";
+                                        echo "<th>Designation</th>";
+                                        echo "<th>LinkedIn</th>";
                                         //echo "<th>Role of the Participant</th>";
-                                        echo "<th>Start Date</th>";
-                                        echo "<th>End Date</th>";
+                                        echo "<th>GitHub</th>";
+                                        echo "<th>Instagram</th>";
+                                        echo "<th>Year</th>";
                                         //echo "<th>Signed By</th>";
                                         echo "<th>Action</th>";
                                     echo "</tr>";
@@ -127,23 +119,22 @@ if(isset($_POST['down-btn'])){
                                     echo "<tr>";
                                         // $ii = $row['originalLink'];
                                         // $ii = substr($ii,0,51);
-                                        echo "<td>" . $row['uniqueNo'] . "</td>";
-                                        echo "<td>" . $row['nameParticipant']."</td>";
-                                        echo "<td>" . $row['email']."</td>";
+                                        echo "<td>" . $row['name'] . "</td>";
+                                        echo "<td>" . $row['designation']."</td>";
+                                        echo "<td>" . $row['linkedin']."</td>";
                                         //echo "<td>" . $row['role']."</td>";
-                                        echo "<td>" . $row['startDate']."</td>";
-                                        echo "<td>" . $row['endDate']."</td>";
-                                        //echo "<td>" . $row['signedBy']."</td>";
+                                        echo "<td>" . $row['github']."</td>";
+                                        echo "<td>" . $row['instagram']."</td>";
+                                        echo "<td>" . $row['year']."</td>";
                                         // echo "<td><a target='_blank' href='".$siteLink."". $row['code'] ."'>".$siteLink."". $row['code'] ."</a></td>";
                                         // $short = $row['code'];
                                         // echo "<script>links.push('".$short."'); </script>";
                                         // echo "<td class='centerAlign'>" . $row['count'] . "</td>";
 
                                         echo "<td>";
-                                            echo "<a class='tash-bin' href='faqadmin/certificate_mail.php?Sno=". $row['uniqueNo'] ."&email=". $row['email'] ."' title='Mail Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-envelope'></span></a>";
-                                            echo "<a class='edit-logo' href='faqadmin/certificate_edit.php?Sno=". $row['uniqueNo'] ."' title='Edit Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
-                                            echo "<a class='tash-bin 'href='faqadmin/certificate_delete.php?Sno=". $row['uniqueNo'] ."' title='Delete Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
-                                            echo "<a class='edit-logo' href='faqadmin/certi_download.php?Sno=". $row['uniqueNo'] ."' title='Download Certificate' target='_blank' name='down-btn' id='down-btn' data-toggle='tooltip'><span class='glyphicon glyphicon-download-alt'></span></a>";
+                                            
+                                            echo "<a class='tash-bin 'href='./faqadmin/teams/delete_member.php?Sno=". $row['id'] ."' title='Delete Member' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                           
                                         // echo "<form method='POST' action = 'faqadmin/certificate/index.php?Sno=". $row['uniqueNo'] ."'> 
                                         //     <button type='submit' class='btn btn-primary' id='submitBtn' name='down-btn' data-toggle='tooltip'>Download</button>
                                         // </form>";

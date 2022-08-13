@@ -24,8 +24,8 @@ if(mysqli_num_rows($result) > 0){
     $row = mysqli_fetch_array($result);
     $u = $row['uniqueNo'];
     $id = substr($u, -4);
-    echo $id;
     ord($id);
+    echo $id;
     $id = $id+1;
 }
 else{
@@ -83,6 +83,13 @@ else{
         font-weight: bold;
         font-size: 25px;
         }
+        /* {
+            text-align: center; 
+        } */
+
+        /* {
+            text-align: center; 
+        } */
 
     </style>
 </head>
@@ -90,67 +97,7 @@ else{
 <body >
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script>
-    function submit_certificate(){
-        let val = document.querySelector("#cno").value;
-        let email_value = document.querySelector("#email").value;
-        let name_value = document.querySelector("#name").value;
-        let college_value = document.querySelector("#college").value;
-        let startDate_value = document.querySelector("#startDate").value;
-        let endDate_value = document.querySelector("#endDate").value;
-        let rank_value = document.querySelector("#rank").value;
-        let course_value = document.querySelector("#course").value;
-        let enroll_value = document.querySelector("#enroll").value;
-        let event_value = document.querySelector("#event").value;
-
-        // console.log(email_value);
-        // var val = $("#cno").value;
-            const arr = val.split("#");
-            console.log(arr);
-        if(!email_value || !name_value || !college_value || !startDate_value || !endDate_value ||  !event_value || !enroll_value || !course_value){
-            alert("Please fill all the details");
-        }
-        else{
-                console.log("xyz");
-
-            var formData = new FormData();
-            formData.append('uniqueno',  arr[0]);
-            formData.append('name', $("#name").val());
-            formData.append('college', $("#college").val());
-            formData.append('endDate', $("#endDate").val());
-            formData.append('startDate',$("#startDate").val());
-            formData.append('email',$('#email').val());
-            formData.append('event', $('#event').val());
-            formData.append('rank', $('#rank').val());
-            formData.append('enroll', $('#enroll').val());
-            formData.append('course', $('#course').val());
-
-            $.ajax({
-                type: "POST",
-                url: "../blogAdmin/api.php/?q=certificateForm",
-                data : formData,
-                cache: false,
-                processData: false,
-                contentType: false,
-                success: function(data){
-                    alert(data.message);
-                    // window.location.reload();
-                // window.location.replace('./index.php?table=certificateCreation');
-                //window.location.replace('../../index.php?table=certificateCreation');
-
-                },
-                error: function(xhr, status, error){
-                    //window.location.reload();
-                    // alert("Fill in the details");
-                    console.log(error);
-                },
-            });
-
-        }
-    }
-    </script>
-
+    
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
@@ -213,6 +160,76 @@ else{
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script src="assets/js/script.js"></script>
+    
+    <script>
+
+    function submit_certificate(){
+        let val = document.querySelector("#cno").value;
+        let email_value = document.querySelector("#email").value;
+        let name_value = document.querySelector("#name").value;
+        let college_value = document.querySelector("#college").value;
+        let startDate_value = document.querySelector("#startDate").value;
+        let endDate_value = document.querySelector("#endDate").value;
+        let rank_value = document.querySelector("#rank").value;
+        let course_value = document.querySelector("#course").value;
+        let enroll_value = document.querySelector("#enroll").value;
+        let event_value = document.querySelector("#event").value;
+
+        // console.log(email_value);
+        // var val = $("#cno").value;
+            const arr = val.split("#");
+            // console.log(arr);
+        if(!email_value || !name_value || !college_value || !startDate_value || !endDate_value ||  !event_value || !enroll_value || !course_value){
+            alert("Please fill all the details");
+        }
+        else{
+                // console.log("xyz");
+
+            var formData = new FormData();
+            formData.append('uniqueno',  arr[0]);
+            formData.append('name', $("#name").val());
+            formData.append('college', $("#college").val());
+            formData.append('endDate', $("#endDate").val());
+            formData.append('startDate',$("#startDate").val());
+            formData.append('email',$('#email').val());
+            formData.append('event', $('#event').val());
+            formData.append('rank', $('#rank').val());
+            formData.append('enroll', $('#enroll').val());
+            formData.append('course', $('#course').val());
+        
+            $.ajax({
+                type: "POST",
+                url: "../blogAdmin/api.php/?q=certificateForm",
+                data : formData,
+                cache: false,
+                processData: false,
+                contentType: false,
+                dataType: "JSON",
+                encode: true,
+                success: function(data){
+                    if (confirm("Do you want to mail this certificate to the student?") == true) {
+                        var download = '../adminPanel/faqadmin/certi_download.php?Sno=' + arr[0];
+                        var mail = '../adminPanel/faqadmin/certificate_mail.php?Sno=' + arr[0] + '&email=' + $("#email").val();
+                        window.location.replace(mail);
+                        window.location.replace(download);
+                    } else {
+                        alert("Thank you!");
+                    }
+                    // window.location.reload();
+                // window.location.replace('./index.php?table=certificateCreation');
+                //window.location.replace('../../index.php?table=certificateCreation');
+
+                },
+                error: function(xhr, status, error){
+                    //window.location.reload();
+                    // alert("Fill in the details");
+                    console.log(error);
+                },
+            });
+
+        }
+    }
+    </script>    
     <script>
         function generate() {
         // console.log("called");

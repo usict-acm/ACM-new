@@ -73,7 +73,11 @@ use Shuchkin\SimpleXLSX;
             </div>
         </div>
     </div>
+
+    
+
 <?php
+
 if(isset($_FILES['excel']['name'])){
     require('../blogAdmin/database.php');
     $database = new Database();
@@ -85,7 +89,7 @@ if(mysqli_num_rows($result) > 0){
     $row = mysqli_fetch_array($result);
     $u = $row['uniqueNo'];
     $id = substr($u, -4);
-    echo $id;
+    // echo $id;
     ord($id);
     
 }
@@ -101,6 +105,12 @@ else{
        $query="";
        $unique = "ACM/DC/000";
        //$str_result = '0123456789abcdef';
+       echo "<script>
+        window.value = false;
+        if (confirm('Do you want to mail this certificate to the student?') == true) { 
+            window.value = true;    
+        }
+        </script>";
        foreach ($excel->rows() as $key => $row) {
         //print_r($row);
         $q="";
@@ -108,7 +118,11 @@ else{
         $id = $id+1;
         $unique=  "'".$unique.$id. "',";
         //echo $unique;
-        }
+        }   
+        // $confirmation = false;
+
+        // echo ($confirmation);
+
         foreach ($row as $key => $cell) {
             //$unique = strtolower(substr(str_shuffle($str_result),0, 10));$sql = "SELECT * FROM certificate ORDER BY id DESC LIMIT 1";
             
@@ -123,6 +137,32 @@ else{
     
         if($i>0){
             $query="INSERT INTO certificate (uniqueNO, nameParticipant,email, startDate, endDate,course,enrollment_no,event,rank, college) values (".$unique.rtrim($q,",").");";
+            $array = explode(',', $q);
+            $email = $array [1];
+
+            echo "<script>
+                if(window.value == true)
+                    certi_mail($unique $email);
+
+                    function certi_mail(unique, email) {
+                        console.log(unique, email);
+                        let certi_data = JSON.stringify({'Sno': unique, 'email': email});
+                        $.ajax({
+                            type: 'POST',
+                            url: '../adminPanel/faqadmin/certificate_mail.php',
+                            data : certi_data,
+                            cache: false,
+                            processData: false,
+                            contentType: false,
+                            success: function(data){
+                                // console.log('Success');
+                            },
+                            error: function(xhr, status, error){
+                                console.log(error);
+                            },
+                        });
+                    }
+                    </script>";
             $unique = "ACM/DC/000";
             // echo $query;
         }
@@ -138,14 +178,11 @@ else{
         $i++;
     }
     }
-
-    echo "<div class='container-fluid'>";
-            echo "<div class='row'>";
-                    echo "<a class='btn btn-success btn-md pull-right' style='margin-left: 43% ;margin-top:2%' href='./faqadmin/adminBulkDown.php?noOfRows=". $noOfRows ."'  >Download All  <span class='glyphicon glyphicon-download-alt'></span></span></a>";
-            echo "</div>";
-    echo "</div>";
- 
-
+    echo "<script>
+            window.location.replace('./faqadmin/adminBulkDown.php?noOfRows=". $noOfRows ."')    
+            if (window.value == true)
+                alert('Certificates mailed succesfully')
+            </script>";
 }
 ?>
     </body>
