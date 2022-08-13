@@ -944,7 +944,36 @@ function fileupload(){
         move_uploaded_file($filetemppath,$uploadLocation);
 }
 
+function joinus(){
+    $database = new Database();
+    $db = $database->connect();
 
+    $fistname = $_POST["firstname"];
+    $lastname = $_POST["lastname"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $course = $_POST["course"];
+    $clubs = $_POST["clubs"];
+    $year = $_POST["year"];
+    $acm_no = $_POST["acm_no"];
+    $enroll = $_POST["enroll"];
+    
+
+    $sql = "INSERT INTO `join_us` (`firstname`, `lastname`,`email`, `phone_number`, `year`, `acm_no`, `course`, `club`, `enrollment_no`) VALUES ('$fistname', '$lastname', '$email', '$phone',  '$year', '$acm_no', '$course', '$clubs', '$enroll');";
+
+    
+
+    if ($db->query($sql) == true) {
+        echo json_encode(
+            array('message' => 'Form has been submitted')
+        );
+    } else {
+        echo json_encode(
+            array('message' => 'Internal Server Error. Try Again')
+        );
+    }
+
+}
 $q = $_GET['q'];
 switch ($q) {
     case 'readAll':
@@ -1015,6 +1044,9 @@ switch ($q) {
         break;
     case 'certificateForm':
         certificateForm();
+        break;
+    case 'joinus';
+        joinus();
         break;
     default:
         echo "Invalid Query";

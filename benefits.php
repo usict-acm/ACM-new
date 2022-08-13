@@ -285,76 +285,76 @@
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12">
             <div class="registration-inner-div d-flex justify-content-center">
-              <form class="widget-contact-form" id="form-id" action="" role="form" method="post" target="_self" novalidate="novalidate">
+              <form class="widget-contact-form" id="form-id" action="" role="form" method="post"  novalidate="novalidate">
                 <div class="row test-dev2">
                   <div class="form-group col-md-6">
-                    <input id="NameinForm" required type="text" aria-required="true" name="entry.73813921" class="form-input-boxes-manual form-control required fname test-dev3" placeholder="First Name" >
+                    <input id="firstname" required type="text" aria-required="true" name="firstname" class="form-input-boxes-manual form-control required fname test-dev3" placeholder="First Name" >
                   </div>
                   <div class="form-group col-md-6">
-                    <input id="LastNameinForm" required type="text" aria-required="true" name="entry.1318071106" class="form-input-boxes-manual form-control required lname test-dev3" placeholder="Last Name" >
+                    <input id="lastname" required type="text" aria-required="true" name="lastname" class="form-input-boxes-manual form-control required lname test-dev3" placeholder="Last Name" >
                   </div>
                 </div>
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <input id="EmailinForm" required type="email" name="entry.2086820351" class="form-input-boxes-manual form-control test-dev3" placeholder="Email" >
+                    <input id="email" required type="email" name="email" class="form-input-boxes-manual form-control test-dev3" placeholder="Email" >
                   </div>
                  <div class="form-group col-md-6">
-                    <input id="PhoneinForm" required type="number" name="entry.2128372508" class="form-input-boxes-manual form-control test-dev3" placeholder="Phone Number">
+                    <input id="phone" required type="text" name="phone" class="form-input-boxes-manual form-control test-dev3" placeholder="Phone Number">
                   </div>
                 </div>
                 <div class="form-group">
-                  <input id="EnrollmentinForm" required type="number" name="entry.1857583496" class="form-control form-input-boxes-manual required test-dev3" placeholder="Enrollment Number"  aria-required="true">
+                  <input id="enroll" required type="text" name="enroll" class="form-control form-input-boxes-manual required test-dev3" placeholder="Enrollment Number"  aria-required="true">
                 </div>
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <input id="YearofAdmissioninForm" required type="number" name="entry.715926692" class="form-input-boxes-manual form-control test-dev3" placeholder="Year Of Admission" >
+                    <input id="year" required type="text" name="year" class="form-input-boxes-manual form-control test-dev3" placeholder="Year Of Admission" >
                   </div>
                   <div class="form-group col-md-6">
-                    <input id="ACMMembershipNoinForm" required type="number" name="entry.114256127" class="form-input-boxes-manual form-control test-dev3" placeholder="ACM Membership No." >
+                    <input id="acm_no" required type="text" name="acm_no" class="form-input-boxes-manual form-control test-dev3" placeholder="ACM Membership No." >
                     If you don't have membership number, <a href="https://bit.do/joinacm" target="_blank"><b>Click Here</b></a> to get one.
                   </div>
                 </div>
                 <div class="form-group">
-                  <input id="CourseinForm" required list="course" name="entry.1307853061" class="form-control form-input-boxes-manual required test-dev3" placeholder="Course">
+                  <input id="course" required list="course" name="course" class="form-control form-input-boxes-manual required test-dev3" placeholder="Course">
                 </div>
                 <div class="form-group">
                   <p class = "test-dev4" >Select Your Clubs:</p>
                   <div class="row no-gutters">
                     <br>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice1" name="entry.332679571" value="USICT ACM DevSource - The Development and Open Source Group">
+                      <input type="checkbox" id="courseChoice1" name="clubs" value="USICT ACM DevSource - The Development and Open Source Group">
                       <label class="label-course" for="contactChoice1">DevSource</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice2" name="entry.332679571" value="USICT ACM enGame - The Gaming Group">
+                      <input type="checkbox" id="courseChoice2" name="clubs" value="USICT ACM enGame - The Gaming Group">
                       <label class="label-course" for="contactChoice2">enGame</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM ICPC Club - The Competitive Programming Group">
+                      <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM ICPC Club - The Competitive Programming Group">
                       <label class="label-course" for="contactChoice3">ICPC Club</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Innovate AI - The Machine Learning, Data Science and AI Group">
+                      <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM Innovate AI - The Machine Learning, Data Science and AI Group">
                       <label class="label-course" for="contactChoice4">Innovate AI</label><br>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Cyber Cell - The Cybersecurity Group">
+                      <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM Cyber Cell - The Cybersecurity Group">
                       <label class="label-course" for="contactChoice5">Cyber Chain</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM RobIOTics - The Robotics and IoT Group">
+                      <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM RobIOTics - The Robotics and IoT Group">
                       <label class="label-course" for="contactChoice6">RobIOTics</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Entrepreneurs' Arena - The Entrepreneurship Group">
+                      <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM Entrepreneurs' Arena - The Entrepreneurship Group">
                       <label class="label-course" for="contactChoice7">Entrepreneurs' Arena</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Research Cell - The Research and Development Group">
+                      <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM Research Cell - The Research and Development Group">
                       <label class="label-course" for="contactChoice8">Research Cell</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM XD - The Experience and Design group">
+                      <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM XD - The Experience and Design group">
                       <label class="label-course" for="contactChoice8">XD</label>
                     </div>
                   </div>
@@ -363,7 +363,7 @@
                   <div class="form-group col-md-2 button-center">
                     <div class="form-group">
                       <!-- <button id="submitSingupForm" type="submit" style="display:none;"></button> -->
-                      <button type="submit" class="btn signin" onclick="validateForm()">Submit</button>
+                      <input type="button" name="submit" class="btn signin" onclick="validateForm()" value="Submit">
                     </div>
                   </div>
                 </div>
@@ -389,31 +389,79 @@
     <script>
       // For winners sections
       function validateForm(){
-        // var x = document.forms["contact"]["name"].value;
-        var x = document.getElementById("NameinForm").value;
-        var y = document.getElementById("LastNameinForm").value;
-        var z = document.getElementById("EmailinForm").value;
-        var a = document.getElementById("CourseinForm").value;
-        var b = document.getElementById("PhoneinForm").value;
-        var c = document.getElementById("YearofAdmissioninForm").value;
-        var d = document.getElementById("ACMMembershipNoinForm").value;
-        var e = document.getElementById("EnrollmentinForm").value;
-        
-        const form_action = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse"; 
-        if (x == "" || !x || y == "" || !y || z == "" || !z || a == "" || !a || b == "" || !b || c == "" || !c || d == "" || !d || e == "" || !e) {
-          alert("Please fill all the fields");
-          document.getElementById("form-id").action = "";
+        // var x = document.forms["contact"]["name"].value
+        //e.prevetDefault();
+        var x = document.querySelector("#firstname").value;
+        var y = document.querySelector("#lastname").value;
+        var z = document.querySelector("#email").value;
+        var a = document.querySelector("#course").value;
+        var b = document.querySelector("#phone").value;
+        var c = document.querySelector("#year").value;
+        var d = document.querySelector("#acm_no").value;
+        var e = document.querySelector("#enroll").value;
+        let checkboxes = document.querySelectorAll('input[name="clubs"]:checked');
+        let values = "";
+        checkboxes.forEach((checkbox) => {
+                values = values+checkbox.value+" ";
+            });
+            console.log();
+        let flag = true;
+          if (x == "" || !x || y == "" || !y || z == "" || !z || a == "" || !a || b == "" || !b || c == "" || !c || d == "" || !d || e == "" || !e || isNaN(c) || isNaN(d) || isNaN(e) || isNaN(b)) {
+            
+        flag = false;
+        alert("please ennter valid information");
+        //document.getElementById("form-id").action = "";
           
-          document.location.reload()
+          //document.location.reload()
 
-          return false;
+          //return false;
         }
         
-        else{
-          var button = document.getElementById("submitSingupForm");
-          document.getElementById("form-id").action = form_action;
-          button.click();
-        }
+        var formData = new FormData();
+        
+            
+            formData.append('firstname', x);
+            formData.append('lastname', y);
+            formData.append('email', z);
+            formData.append('course',a);
+            formData.append('phone',b);
+            formData.append('year', c);
+            formData.append('acm_no', d);
+            formData.append('enroll', e);
+            formData.append('clubs', values);
+
+        //const form_action = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse"; 
+          
+       
+        
+          // var button = document.getElementById("submitSingupForm");
+          // document.getElementById("form-id").action = form_action;
+          // button.click();
+          if(flag){
+          $.ajax({
+                type: "POST",
+                url: "./admin/blogAdmin/api.php/?q=joinus",
+                data : formData,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function(data){
+                   console.log("success!!");
+                    // window.location.reload();
+                // window.location.replace('./index.php?table=certificateCreation');
+                //window.location.replace('../../index.php?table=certificateCreation');
+
+                },
+                error: function(xhr, status, error){
+                    //window.location.reload();
+                    // alert("Fill in the details");
+                    console.log(error);
+                },
+            });
+          }
+          // else{
+          //   alert("fill details!!!");
+          // } 
       }
 
       window.addEventListener('load', function(){

@@ -173,6 +173,9 @@
                         case 'Certificate':
                             include('./faqadmin/certificate/admin.php');
                             break;
+                        case 'joinus':
+                            include('./faqadmin/joinus.php');
+                            break;
                         case 'AddCertificate':
                             include('./faqadmin/certificate/adminAdd.php');
                             break;
@@ -182,6 +185,7 @@
                         case 'certificateCreation':
                             include('./faqadmin/certificate/certificate-created.php');
                             break;
+                        
                         default:
                             include('./faqadmin/index.php');
                             break;
