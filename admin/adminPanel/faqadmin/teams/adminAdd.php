@@ -15,10 +15,10 @@
       * {
         box-sizing: border-box;
       }
-
+/* 
       body {
         background-color: rgba(0, 255, 255, 0.144);
-      }
+      } */
 
       h1 {
         text-align: center;
@@ -90,7 +90,7 @@
   </head>
 
   <body>
-    <h1>Add New Member</h1>
+    <h3 style="margin-left: 10%;">Add New Member</h3>
     <div class="container">
       <form method="POST" enctype="multipart/form-data" action="javascript:submit_member()">
         <div class="row">
@@ -181,12 +181,12 @@
       </form>
     </div>
 
-    <h1 style="margin-top: 5%">Delete a Member</h1>
+    <!--<h1 style="margin-top: 5%">Delete a Member</h1>
     <div class="container">
-      <!-- <form
+       <form
         id="delForm"
         enctype="multipart/form-data"
-      > -->
+      
       <div class="row" style="padding-bottom: 5%">
         <div class="col-25">
           <label for="year"> <b>Year:</b></label>
@@ -205,7 +205,7 @@
           onclick="view_member()"
         />
       </div>
-      <!-- </form> -->
+       </form> 
     </div>
     <div>
       <table class="table">
@@ -220,7 +220,7 @@
         </thead>
         <tbody id="members"></tbody>
       </table>
-    </div>
+    </div>-->
     <script type="text/javascript">
       function submit_member() {
         var formData = new FormData();
@@ -235,26 +235,31 @@
 
         $.ajax({
           type: "POST",
-          url: "./api.php/?q=postMember",
+          url: "./faqadmin/teams/api.php/?q=postMember",
           data: formData,
           cache: false,
           processData: false,
           contentType: false,
           success: function (data) {
             alert(data);
-            // window.location.reload();
+           window.location.reload();
           },
+          error: function(xhr, status, error){
+                    //window.location.reload();
+                    // alert("Fill in the details");
+                    console.log(error);
+                },
         });
       }
     </script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       // $(document).ready(function () {
         function view_member() {
           var year = document.getElementById("findYear").value;
           var member = document.getElementById("members");
           member.innerHTML = "";
           $.ajax({
-            url: "./api.php/?q=readMember&year=" + year,
+            url: "./faqadmin/teams/api.php/?q=readMember&year=" + year,
             method: "GET",
             async: false,
             dataType: "JSON",
@@ -290,34 +295,34 @@
         }
       // });
       //  });
-      function del_member(member_id) {
-        $.ajax({
-          type: "POST",
-          url: "./api.php/?q=delMember",
-          data: { id: member_id },
-          success: function (data) {
-            alert(data);
-            $("#del_submit").click();
-            // window.location.reload();
-          },
-        });
-      }
-      $(document).ready(function () {
-          var year = document.getElementById("findYear");
-          year.innerHTML = "";
-          $.ajax({
-            url: "./api.php/?q=getYear",
-            method: "GET",
-            dataType: "JSON",
-            success: function (data) {
-              // console.log("year data", data);
-              data.forEach(displayFunc);
-              function displayFunc(row) {
-                year.innerHTML += '<option value="' + row.year + '" name="'+ row.year + '">' + row.year + '</option>';
-          }
-        }
-      });
-    });
-    </script>
+    //   function del_member(member_id) {
+    //     $.ajax({
+    //       type: "POST",
+    //       url: "./faqadmin/teams/api.php/?q=delMember",
+    //       data: { id: member_id },
+    //       success: function (data) {
+    //         alert(data);
+    //         $("#del_submit").click();
+    //         // window.location.reload();
+    //       },
+    //     });
+    //   }
+    //   $(document).ready(function () {
+    //       var year = document.getElementById("findYear");
+    //       year.innerHTML = "";
+    //       $.ajax({
+    //         url: "./faqadmin/teams/api.php/?q=getYear",
+    //         method: "GET",
+    //         dataType: "JSON",
+    //         success: function (data) {
+    //           // console.log("year data", data);
+    //           data.forEach(displayFunc);
+    //           function displayFunc(row) {
+    //             year.innerHTML += '<option value="' + row.year + '" name="'+ row.year + '">' + row.year + '</option>';
+    //       }
+    //     }
+    //   });
+    // });
+    </script> -->
   </body>
 </html>

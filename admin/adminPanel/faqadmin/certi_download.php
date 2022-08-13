@@ -6,6 +6,7 @@
 
     if(isset($_GET["Sno"]) ){
         
+        
         include_once '../../blogAdmin/database.php';
         $database = new Database();
         $conn = $database->connect();
@@ -124,5 +125,13 @@
                 }
             }
         }
+        echo json_encode(
+            array('message' => 'Downloaded successfully')
+        );
+    }
+    else {
+        echo json_encode(
+            array('message' => 'Error in downloading')
+        );
     }
 ?>

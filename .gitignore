@@ -5,6 +5,8 @@ enviornment.php
 .DS_Store
 forms/responsesfile/*
 .htaccess
+.github
+workspace.code-workspace
 
 # react
 /build

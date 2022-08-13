@@ -173,11 +173,17 @@
                         case 'Certificate':
                             include('./faqadmin/certificate/admin.php');
                             break;
+                        case 'Teams':
+                            include('./faqadmin/teams/admin.php');
+                            break;
                         case 'joinus':
                             include('./faqadmin/joinus.php');
                             break;
                         case 'AddCertificate':
                             include('./faqadmin/certificate/adminAdd.php');
+                            break;
+                        case 'AddMember':
+                            include('./faqadmin/teams/adminAdd.php');
                             break;
                          case 'AddBulkCertificate':
                             include('./faqadmin/certificate/adminbulkadd.php');

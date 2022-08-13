@@ -1,5 +1,5 @@
-<?php     include(__DIR__.'/../../../link/siteName.php');
- ?>
+<?php 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,14 +11,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
         <style type="text/css">
         .wrapper{
-            width: 800px;
+            width: 650px;
             margin: 0 auto;
         }
         .page-header h2{
             margin-top: 0;
         }
         table tr td:last-child a{
-            margin-right: 15px;
+            margin-right: 0px;
         }
         .hh_button {
     display: inline-block;
@@ -55,14 +55,22 @@
     }
     .edit-logo{
         position: absolute;
-        margin: 0 0 0px 10px;
+        margin: 0 0 0px 0px;
     }
     .tash-bin{
         position: relative;
-        margin:0px 0 0  15px;
+        margin: 0px 0 0  1px;
     }
     .centerAlign{
         text-align:center;
+    }
+    .marginset{
+        margin-top: 43px;
+        margin-left: 13px;
+    }
+    .top-fix{
+        padding: 0%;
+        margin: 0%;
     }
     </style>
 </head>
@@ -70,10 +78,11 @@
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="page-header clearfix">
-                        <h2 class="pull-left">Link Admin Panel</h2>
-                        <a href="?table=AddLink" class="btn btn-primary pull-right">Make New Link</a>
+                <div class="col-lg-12">
+                    <div class="page-header clearfix top-fix">
+                        <h2 class="pull-left" style="margin-top: 7%; margin-left: -43%;">Teams Admin Panel</h2>
+                        <a href="?table=AddMember" class="btn btn-primary pull-right marginset">Add a member</a>
+                        
                     </div>
                     <?php
                     // Include config file
@@ -83,44 +92,57 @@
                     $link = $database->connect();
                     $connection = $link;
 
-                    $sql = "SELECT * FROM link ORDER BY id DESC ";
+                    $sql = "SELECT * FROM team ORDER BY id DESC ";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
-                            echo "<table class='table table-bordered table-striped'>";
+                            echo "<table class='table table-bordered table-striped' style='margin-left: -43%; max-width: 50%;'>";
                                 echo "<thead>";
                                     echo "<tr>";
-                                        echo "<th>Link For</th>";
-                                        echo "<th>Original Link</th>";
-                                        echo "<th>Shortened Link</th>";
-                                        echo "<th>Clicks</th>";
+                                        echo "<th>Name</th>";
+                                        echo "<th>Designation</th>";
+                                        echo "<th>LinkedIn</th>";
+                                        //echo "<th>Role of the Participant</th>";
+                                        echo "<th>GitHub</th>";
+                                        echo "<th>Instagram</th>";
+                                        echo "<th>Year</th>";
+                                        //echo "<th>Signed By</th>";
                                         echo "<th>Action</th>";
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
-                                    $count = 0;
-                                    echo "<script>
-                                    let links = [];
+                                    // $count = 0;
+                                    // echo "<script>
+                                    // let links = [];
                                     
-                                        function copy2 (count){navigator.clipboard.writeText('".$siteLink."'+links[count]);}</script>";
+                                    //     function copy2 (count){navigator.clipboard.writeText('".$siteLink."'+links[count]);}</script>";
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
-                                        $ii = $row['originalLink'];
-                                        $ii = substr($ii,0,51);
-                                        echo "<td>" . $row['linkFor'] . "</td>";
-                                        echo "<td>" . $ii . "....</td>";
-                                        echo "<td><a target='_blank' href='".$siteLink."". $row['code'] ."'>".$siteLink."". $row['code'] ."</a></td>";
-                                        $short = $row['code'];
-                                        echo "<script>links.push('".$short."'); </script>";
-                                        echo "<td class='centerAlign'>" . $row['count'] . "</td>";
-                                        
+                                        // $ii = $row['originalLink'];
+                                        // $ii = substr($ii,0,51);
+                                        echo "<td>" . $row['name'] . "</td>";
+                                        echo "<td>" . $row['designation']."</td>";
+                                        echo "<td>" . $row['linkedin']."</td>";
+                                        //echo "<td>" . $row['role']."</td>";
+                                        echo "<td>" . $row['github']."</td>";
+                                        echo "<td>" . $row['instagram']."</td>";
+                                        echo "<td>" . $row['year']."</td>";
+                                        // echo "<td><a target='_blank' href='".$siteLink."". $row['code'] ."'>".$siteLink."". $row['code'] ."</a></td>";
+                                        // $short = $row['code'];
+                                        // echo "<script>links.push('".$short."'); </script>";
+                                        // echo "<td class='centerAlign'>" . $row['count'] . "</td>";
+
                                         echo "<td>";
-                                            echo "<button class = 'copybutton' onclick = copy2(".$count.")><span class = 'glyphicon glyphicon-duplicate'></span></button>";
-                                            echo "<a class='edit-logo' href='?table=editLink&&linkFor=". $row['linkFor'] ."&&originalLink=".$row['originalLink']."&&shortLink=". $row['code']."' title='Edit Record' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
-                                            echo "<a class='tash-bin' href='faqadmin/del.php?Sno=". $row['code'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                            
+                                            echo "<a class='tash-bin 'href='./faqadmin/teams/delete_member.php?Sno=". $row['id'] ."' title='Delete Member' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                           
+                                        // echo "<form method='POST' action = 'faqadmin/certificate/index.php?Sno=". $row['uniqueNo'] ."'> 
+                                        //     <button type='submit' class='btn btn-primary' id='submitBtn' name='down-btn' data-toggle='tooltip'>Download</button>
+                                        // </form>";
+
                                         echo "</td>";
 
                                     echo "</tr>";
-                                    $count++;
+        
                                 }
                             echo "</tbody>";                            
                             echo "</table>";
