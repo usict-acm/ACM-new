@@ -66,12 +66,10 @@
       method: "GET",
       dataType: "JSON",
       success: function(data) {
-        console.log("check data ", data);
         // divTag.innerHTML += `    `;
 
         divTag.innerHTML += ` <span> <h5 id="formTitle" class = "contact100-form-title">${data[0].formName}<h5></span>`;
         for (let i = 0; i < data.length; i++) {
-          // console.log(data[i].fieldType);
           if (data[i].fieldType == "shortAns") {
             divTag.innerHTML += `<div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
                                       <p style="color:red;">This field is required</p>
@@ -190,7 +188,6 @@
           } else if (data[i].fieldType == "radioAns") {
             var nameArr = (data[i].ifRadio).split(',');
 
-            // console.log(nameArr);
             divTag.innerHTML += `<div class="fieldCheckRadio" id="fieldRequiredRadio${i}" style=display:none;>
                                     <p style="color:red;">This field is required</p>
                                     </div>`;
@@ -234,7 +231,6 @@
               tableData.push(data[i].fieldName);
               var temp1 = [];
               var arr = (data[i].ifCheckbox).split(',');
-              console.log(arr.length)
               for (j = 0; j < arr.length; j++) {
                 var field = "field" + i + j;
                 if ($(`#${field}`).is(':checked')) {
@@ -261,8 +257,6 @@
               tableData.push(data[i].fieldName);
               var temp1 = [];
               var arr = (data[i].ifRadio).split(',');
-              console.log(arr.length)
-              // console.log(arr)
               for (j = 0; j < arr.length; j++) {
                 var field = "field" + i + j;
                 if ($(`#${field}`).is(':checked')) {
@@ -292,8 +286,6 @@
               var field = "field" + i;
               var fieldRequired = "fieldRequired" + i;
               var filerequired = $(`#${fieldRequired}`).get(0).files;
-              // var file = $(`#${field}`).get(0).files;
-              // console.log(file[0]);
               var input = document.getElementById("field"+i);
               file = input.files[0];
 
@@ -307,17 +299,14 @@
                 }, 4000);
                 temp = 0;
               }
-              console.log($(`#${field}`).val() );
               if($(`#${field}`).val()!= ""){
               tableData.push((`/forms/responsesfile/${data[i].formID}_${file.name}`));
 
               var extensions = ["jpg", "jpeg", "png" , "pdf"];  
 
-              console.log("fileeeeee",file.name);
 
               // let extension = (file.name).split('.').pop();
               var extension = file.name.replace(/.*\./, '').toLowerCase();
-              console.log("ext",extension);
 
               if (extensions.indexOf(extension) < 0) {  // Wasn't found
                   done =0;
@@ -350,11 +339,7 @@
             res.push(tableData);
           }
 
-          console.log(res);
-          console.log("temp", temp);
           if (temp == 1) {
-            console.log(res);
-            console.log("temp", temp);
             $.ajax({
               type: "POST",
               url: "../admin/blogAdmin/api.php/?q=dataForm",

@@ -137,7 +137,6 @@
             url: url,
             method: 'PATCH',
             success: function(data) {
-                console.log(data);
             }
 
         })
@@ -149,7 +148,6 @@
             url: url,
             method: 'PATCH',
             success: function(data) {
-                console.log(data);
             }
 
         })

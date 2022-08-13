@@ -10,7 +10,6 @@
       method: 'GET',
       dataType: 'JSON',
       success: function(data) {
-        console.log(data);
         data.forEach(myThreeBlogs);
 
         function myThreeBlogs(row, index) {
@@ -75,14 +74,12 @@
   let categoryUrl = './admin/blogAdmin/api.php/?q=showCategory';
   var categories = document.getElementById("row3");
   // categories.innerHTML = " ";
-  console.log(categories, "categories");
   $(document).ready(function() {
     $.ajax({
       url: categoryUrl,
       method: 'GET',
       dataType: 'JSON',
       success: function(data) {
-        console.log(data, "category");
 
         data.forEach(categoryCountShow);
 

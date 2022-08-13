@@ -135,7 +135,6 @@
 
 	<script>
 		function readMoreRedirection(id) {
-			console.log(id);
 			window.document.location = './singleBlog.php?Id=' + id; //Connecting Second page
 		}
 		var rwBlogs = document.getElementById('threeBlogsRow');

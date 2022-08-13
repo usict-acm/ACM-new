@@ -107,7 +107,6 @@
             method: "GET",
             dataType: "JSON",
             success: function (data) {
-              // console.log("year data", data);s
               data.forEach(displayFunc);
               openTab(data[0].year); //Default call
               function displayFunc(row) {
@@ -135,7 +134,6 @@
             async: false,
             dataType: 'JSON',
             success: function(data) {
-              // console.log("member data", data);
               data.forEach(displayFunc);
               function displayFunc(row) {
                 var member = document.getElementById(row.category);

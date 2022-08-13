@@ -302,7 +302,6 @@ if (isset($_POST['reg'])) {
 
             document.querySelector('#randomBtn').addEventListener("click",function(){
                 <?php $randNum= bin2hex(random_bytes(3));?>
-                console.log('<?php echo $randNum; ?>');
                 document.querySelector('#in3').value='<?php echo $randNum; ?>';
             });
     </script>

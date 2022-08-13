@@ -259,7 +259,6 @@
             async: false,
             dataType: "JSON",
             success: function (data) {
-              // console.log("member data", data);
               data.forEach(displayFunc);
               $(".table").show();
               function displayFunc(row) {
@@ -310,7 +309,6 @@
             method: "GET",
             dataType: "JSON",
             success: function (data) {
-              // console.log("year data", data);
               data.forEach(displayFunc);
               function displayFunc(row) {
                 year.innerHTML += '<option value="' + row.year + '" name="'+ row.year + '">' + row.year + '</option>';

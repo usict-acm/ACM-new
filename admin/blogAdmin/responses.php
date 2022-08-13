@@ -82,7 +82,6 @@
                 type: 'GET',
                 url: urlll,
                 success: function(data) {
-                    console.log("data responses",data);
                     let responses = document.getElementById("responsestable");
                     var tr = "<tr>";
                     var td = "";

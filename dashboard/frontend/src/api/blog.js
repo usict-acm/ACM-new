@@ -11,7 +11,6 @@ export const fetchUserBlogs = async (body) => {
       if (res.message === "success") {
         return res.blogs;
       } else {
-        console.log(res.error || "process failed");
       }
     })
     .catch((err) => console.log(err.message));
@@ -30,7 +29,6 @@ export const fetchSingleBlog = async (body) => {
       if (res.message === "success") {
         return res.blog;
       } else {
-        console.log(res.error || "process failed");
       }
     })
     .catch((err) => console.log(err.message));
@@ -51,12 +49,10 @@ export const addBlog = async (body) => {
         // dispatch(setBlogs(res.blogs));
         return { status: "success" };
       } else {
-        console.log(res.error || "process failed");
         return { status: "failed" };
       }
     })
     .catch((err) => {
-      console.log(err.message);
       return { status: "failed" };
     });
 };
@@ -72,17 +68,14 @@ export const updateBlog = async (body) => {
   )
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
       if (res.message === "success") {
         // dispatch(setBlogs(res.blogs));
         return { status: "success" };
       } else {
-        console.log(res.error || "process failed");
         return { status: "failed" };
       }
     })
     .catch((err) => {
-      console.log(err.message);
       return { status: "failed" };
     });
 };
@@ -102,12 +95,10 @@ export const deleteBlog = async (body) => {
         // dispatch(setBlogs(res.blogs));
         return { status: "success" };
       } else {
-        console.log(res.error || "process failed");
         return { status: "failed" };
       }
     })
     .catch((err) => {
-      console.log(err.message);
       return { status: "failed" };
     });
 };

@@ -142,10 +142,6 @@
                     var new_text = value.split(' ').join('_');
                     var shortlink = '".$siteLink."'+new_text;
                     $('#modal').html(shortlink);
-
-                    // console.log(value);
-                    console.log(new_text);
-
                 }
                 </script>
                 
@@ -175,7 +171,6 @@
                 
                 <script>
                     document.querySelector('#randomBtn').addEventListener('click',function(){
-                            // console.log('".$randNum."');
                             document.querySelector('#in3').value='". $randNum."';
                         });
                         

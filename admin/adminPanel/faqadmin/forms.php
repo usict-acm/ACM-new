@@ -108,7 +108,6 @@
 
 
     function check() {
-        console.log($('#required1').is(':checked'))
 
     }
 </script>
@@ -176,7 +175,6 @@
 
         function changeDD(count) {
             ok = 1;
-            // console.log(count);
             let prevCheckbox = `  <div class="col-xs-7">
                         <input type="text" id="checkboxInput` + count + `" name="checkboxInput` + count + `[]" class="form-control topCheck topCheck1 " name="" placeholder="Fill only if checkbox is selected" required/>
                         </div>
@@ -197,7 +195,6 @@
             
 
             var strUser = eva.value;
-            // console.log(strUser);
             if (strUser === "radioAns") {
                 jQuery('#field' + count).html('');
                 $("#field" + count).append(prevRadioInput);
@@ -255,10 +252,8 @@
         }
 
         function checkRequiredFields() {
-            // console.log(once);   
             let warnHTML = `Please fill ->  &nbsp &nbsp;   Field Name , drop Down , Form Name <br> `;
             if (once === 1) {
-                // console.log("sdfghh");
                 $("#f0").append(warnHTML);
                 once++;
             }
@@ -314,9 +309,6 @@
 
                 let checkFormNameFilled = document.querySelector('#formNameMain').value.length;
                 let temp = document.querySelector(".reqField" + count).value.length;
-                // console.log(checkFormNameFilled);
-
-                // console.log(temp);
 
                 if (ok == 1 && temp != 0 && checkFormNameFilled != 0) {
                     once = 1;
@@ -344,12 +336,10 @@
                                             <div id="field` + count + `" class="form-group">
                                         </div>
                                         </div>`;
-                    // console.log(count);
                     $("#container").append(html);
                     ok = 0;
                     jQuery('#f0').html('');
                 } else {
-                    // console.log("erty");
                     checkRequiredFields();
                 }
 
