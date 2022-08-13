@@ -57,7 +57,6 @@
                     method: 'GET',
                     dataType: 'JSON',
                     success: function(data) {
-                        console.log("check data ywar", data);
                         if (<?php echo $page ?> > Math.ceil(data[1] / 7)) {
                             allEvents.innerHTML += `<h1 class='noEvents'>No Events on this page</h1>`;
 
@@ -144,7 +143,6 @@
                                                   </ul>\
                                                </nav></div>"
                             if (<?php echo $page ?> === i) {
-                                console.log(<?php echo $page ?>);
                                 document.getElementById("link_pagination" + i).className += "active_pagination";
                             }
                         }

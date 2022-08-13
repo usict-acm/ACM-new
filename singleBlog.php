@@ -72,7 +72,6 @@
     document.addEventListener('DOMContentLoaded', function() {
       // var blogId = localStorage.getItem('blogId');
       var blogId = <?php echo $_GET['Id'] ?>;
-      console.log("blogIDDD", blogId);
       let url = './admin/blogAdmin/api.php/?q=readOne&id=' + blogId;
 
       $(document).ready(function() {
@@ -81,7 +80,6 @@
           method: 'GET',
           dataType: 'JSON',
           success: function(data) {
-            console.log("data herrrr", data);
             if (data.length == 0 || data.message == "No Posts Found") {
               window.document.location = "./blogs.php";
             } else {

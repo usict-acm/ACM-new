@@ -88,7 +88,6 @@
               method: 'GET',
               dataType: 'JSON',
               success: function(data) {
-                console.log("data blogs", data);
                 data[0].forEach(myfunc);
 
                 function myfunc(row, index) {
@@ -147,7 +146,6 @@
             </ul>\
           </nav></div>"
                   if (<?php echo $page ?> === i) {
-                    console.log(<?php echo $page ?>);
                     document.getElementById("link_pagination" + i).className += "active_pagination";
                   }
                 }

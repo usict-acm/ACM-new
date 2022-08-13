@@ -95,7 +95,6 @@
   });
 
   function setCategory(cat) {
-    console.log(cat);
     let showCategoryURL = "./admin/blogAdmin/api.php/?q=getPostByCategory&id='" + cat.innerHTML + "'";
     posts.innerHTML = "";
     $(document).ready(function() {
@@ -104,7 +103,6 @@
         method: 'GET',
         dataType: 'JSON',
         success: function(data) {
-          console.log(data);
           data.forEach(getpostcategory);
 
 

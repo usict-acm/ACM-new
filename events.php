@@ -75,12 +75,9 @@
           method: 'GET',
           dataType: 'JSON',
           success: function(data) {
-            console.log("check data 123 ", data);
             carouselDIV.innerHTML += " <div class='carousel-item active'>\
                                                     <img src=" + data[0].poster + "  class='live-carousel-img'>\
                                                   </div>";
-            console.log(data[0].poster);
-            console.log(carouselDIV);
 
             function carouselfunction() {
 
@@ -91,7 +88,6 @@
               }
             }
             carouselfunction();
-            console.log(carouselDIV);
           },
         });
       });
@@ -119,7 +115,6 @@
         method: 'GET',
         dataType: 'JSON',
         success: function(data) {
-          console.log("gallery data", data);
           data.forEach(myFunc);
 
           function myFunc(row, index) {
@@ -151,7 +146,6 @@
         method: 'GET',
         dataType: 'JSON',
         success: function(data) {
-          console.log("check data ", data);
           data.forEach(allEventmore);
 
           function allEventmore(event) {
@@ -162,10 +156,7 @@
               async: false,
               dataType: 'JSON',
               success: function(dataNumber) {
-                console.log(urlYear);
-                console.log("dataNumber", dataNumber);
                 numberOfEvents = dataNumber[1];
-                console.log("numberrrr", numberOfEvents);
                 yearWiseEvent.innerHTML += " <li style='height:150px;'>\
                                                 <div class='time'>\
                                                     <h2>" + event.year + " <br><span></span></h2>\
@@ -183,7 +174,6 @@
           }
         },
         error: function(error) {
-          console.log(error, "error in Ajax");
         },
       });
     });
