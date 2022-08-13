@@ -567,26 +567,10 @@
               <form class="widget-contact-form" id="form-id" action="" role="form" method="post"  novalidate="novalidate">
                 <div class="row test-dev2">
                   <div class="form-group col-md-6">
-<<<<<<< HEAD
-                    <input id="firstname" required type="text" aria-required="true" name="firstname" class="form-input-boxes-manual form-control required fname test-dev3" placeholder="First Name" >
-                  </div>
-                  <div class="form-group col-md-6">
-                    <input id="lastname" required type="text" aria-required="true" name="lastname" class="form-input-boxes-manual form-control required lname test-dev3" placeholder="Last Name" >
-=======
                     <input id="NameinForm" required type="text" aria-required="true" name="entry.73813921" class="form-input-boxes-manual form-control required fname test-dev3" placeholder="First Name">
                   </div>
                   <div class="form-group col-md-6">
                     <input id="LastNameinForm" required type="text" aria-required="true" name="entry.1318071106" class="form-input-boxes-manual form-control required lname test-dev3" placeholder="Last Name">
->>>>>>> 51390dcc442e2dd055da36636a45d23f6349d68e
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="form-group col-md-6">
-<<<<<<< HEAD
-                    <input id="email" required type="email" name="email" class="form-input-boxes-manual form-control test-dev3" placeholder="Email" >
-                  </div>
-                 <div class="form-group col-md-6">
-                    <input id="phone" required type="text" name="phone" class="form-input-boxes-manual form-control test-dev3" placeholder="Phone Number">
                   </div>
                 </div>
                 <div class="form-group">
@@ -594,16 +578,6 @@
                 </div>
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <input id="year" required type="text" name="year" class="form-input-boxes-manual form-control test-dev3" placeholder="Year Of Admission" >
-                  </div>
-                  <div class="form-group col-md-6">
-                    <input id="acm_no" required type="text" name="acm_no" class="form-input-boxes-manual form-control test-dev3" placeholder="ACM Membership No." >
-                    If you don't have membership number, <a href="https://bit.do/joinacm" target="_blank"><b>Click Here</b></a> to get one.
-                  </div>
-                </div>
-                <div class="form-group">
-                  <input id="course" required list="course" name="course" class="form-control form-input-boxes-manual required test-dev3" placeholder="Course">
-=======
                     <input id="EmailinForm" required type="email" name="entry.2086820351" class="form-input-boxes-manual form-control test-dev3" placeholder="Email">
                   </div>
                   <div class="form-group col-md-6">
@@ -638,7 +612,6 @@
                     <option value="MCA">
                     <option value="PhD">
                   </datalist>
->>>>>>> 51390dcc442e2dd055da36636a45d23f6349d68e
                 </div>
                 <div class="form-group">
                   <p class="test-dev4">Select Your Clubs:</p>
@@ -708,7 +681,6 @@
   include('footer.php');
   ?>
 
-<<<<<<< HEAD
     <script src="./assets/JS/glider.js"></script>
     <script>
       // For winners sections
@@ -786,37 +758,7 @@
           // else{
           //   alert("fill details!!!");
           // } 
-=======
-  <script src="./assets/JS/glider.js"></script>
-  <script>
-    // For winners sections
-    function validateForm() {
-      // var x = document.forms["contact"]["name"].value;
-      var x = document.getElementById("NameinForm").value;
-      var y = document.getElementById("LastNameinForm").value;
-      console.log(document.getElementById("EmailinForm"), "Email");
-      var z = document.getElementById("EmailinForm").value;
-      var a = document.getElementById("CourseinForm").value;
-      var b = document.getElementById("PhoneinForm").value;
-      var c = document.getElementById("YearofAdmissioninForm").value;
-      var d = document.getElementById("ACMMembershipNoinForm").value;
-      var e = document.getElementById("EnrollmentinForm").value;
-
-      const form_action = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse";
-      if (x == "" || !x || y == "" || !y || z == "" || !z || a == "" || !a || b == "" || !b || c == "" || !c || d == "" || !d || e == "" || !e) {
-        alert("Please fill all the fields");
-        document.getElementById("form-id").action = "";
-
-        document.location.reload()
-
-        return false;
-      } else {
-        var button = document.getElementById("submitSingupForm");
-        document.getElementById("form-id").action = form_action;
-        button.click();
->>>>>>> 51390dcc442e2dd055da36636a45d23f6349d68e
       }
-    }
 
     window.addEventListener('load', function() {
       new Glider(document.querySelector('.glider1'), {
