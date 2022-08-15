@@ -83,16 +83,17 @@
             <html>
                 <head><title>Your certificate for the event- $event</title></head>
                 <body>
-                    <p>Dear $nameParticipant</p>
-                    <p>Greetings from the GGSIP University USS ACM Student Chapter!</p>
+                    <p>Dear $nameParticipant <br> Greetings from the GGSIP University USS ACM Student Chapter!</p>
+                    <p>Thank you for participating in <b>$event</b> organized by GGSIP University USS ACM Student Chapter on $date. We are elated by your participation and hope that you had a great time. Here's your certificate as a token of appreciation from our side.
                     <br />
-                    <p>Thank you for participating in $event organized by GGSIPU USS ACM Student Chapter on $date. We are elated by your participation and hope that you had a great time. Here's your certificate as a token of appreciation from our side.</p>
-                    <p>You can download it using <a href='https://usict.acm.org/test_acm/verify?id=$id_num'>this link</a>.</p>
+                    You can download it using <a href='https://usict.acm.org/test_acm/verify?id=$id_num'>this link</a>.</p>
+                    <p>We hope to see you at more events and have more fun.
                     <br />
-                    <p>We hope to see you at more events and have more fun. Happy learning and Happy computing!</p>
+                    Happy learning and Happy computing!</p>
                     <br />
                     <p>Regards</p>
                     <p>GGSIP University USS ACM Student Chapter</p>
+                    <p><a href='https://usict.acm.org/linkedin' target='_blank'>Linkedin</a> | <a href='https://usict.acm.org/facebook' target='_blank'>Facebook</a> | <a href='https://usict.acm.org/instagram' target='_blank'>Instagram</a> | <a href='https://usict.acm.org/discord' target='_blank'>Discord<a></p>
                 </body>
             </html>
         ";

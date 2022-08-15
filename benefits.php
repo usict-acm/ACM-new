@@ -202,7 +202,7 @@
 
     <div class="winners">
 
-      <div class="container">
+      <div class="container"  style="width: 95%;">
         <div class="line"></div>
         <h1><b>WINNERS</b></h1>
 
