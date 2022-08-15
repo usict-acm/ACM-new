@@ -84,7 +84,23 @@
 					<div class="col mb-2">
 						<a href="./about.php" class="about-button">Know More</a>
 					</div>
-					
+					<div class="col">
+						<div class="drop-down about-button">
+							<p>ACM Newsletter</p>
+							<i class="fas fa-chevron-down arrow"></i>
+						</div>
+						<div class="dropdown">
+							<a href="./assets/newsletter3.pdf" target="_blank" id="adobeXd">2022
+								<span></span>
+							</a>
+							<a href="./assets/newsletter2.pdf" target="_blank" id="adobeXd">2021
+								<span></span>
+							</a>
+							<a href="./assets/newsletter.pdf" target="_blank" id="sketch">2020
+								<span></span>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
