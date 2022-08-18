@@ -189,19 +189,20 @@ ul {
   list-style: none;
 }
 
-.social-menu ul li .fab,
-.social-menu ul li .fas {
+.social-menu ul li .fa,
+.social-menu ul li .fa {
   font-size: 25px;
   line-height: 50px;
-  color: #5b5a5b;
+  color: #fff;
 }
 
 .social-menu ul li a {
+  transform: scale(1);
   display: block;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.425);
+  background: linear-gradient(45deg, #95ddf7, #0030a0);
   text-align: center;
   transition: 0.5s;
   box-shadow: 1px 4px 5px rgb(0 0 0 / 9%);
@@ -218,30 +219,57 @@ ul {
 }
 
 .social-menu ul li a.facebook-footer:hover {
-  background-color: #4867aa;
+  transform: scale(2.2);
+        color: #00B5F5;
+        background: linear-gradient(45deg, #00b5f5, #002a8f);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.2s ease-in;
 }
 
 .social-menu ul li a.youtube-footer:hover {
-  background-color: #ff0000;
+  transform: scale(2.2);
+        color: #00B5F5;
+        background: linear-gradient(45deg, #00b5f5, #002a8f);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.2s ease-in;
 }
 
 .social-menu ul li a.instagram-footer:hover {
-  background: rgb(177, 42, 176);
-  background: linear-gradient(200deg,
-      rgba(177, 42, 176, 1) 0%,
-      rgba(249, 125, 31, 1) 100%);
+  transform: scale(2.2);
+  color: #00B5F5;
+  background: linear-gradient(45deg, #00b5f5, #002a8f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.2s ease-in;
 }
 
 .social-menu ul li a.github-footer:hover {
-  background-color: #1b1f23;
+  transform: scale(2.2);
+        color: #00B5F5;
+        background: linear-gradient(45deg, #00b5f5, #002a8f);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.2s ease-in;
 }
 
 .social-menu ul li a.discord-footer:hover {
-  background-color: #4d60e9;
+  transform: scale(2.2);
+  color: #00B5F5;
+  background: linear-gradient(45deg, #00b5f5, #002a8f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.2s ease-in;
 }
 
 .social-menu ul li a.mail-footer:hover {
-  background-color: #c74941;
+  transform: scale(2.2);
+        color: #00B5F5;
+        background: linear-gradient(45deg, #00b5f5, #002a8f);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.2s ease-in;
 }
 
 #meet-the-team-btn {
