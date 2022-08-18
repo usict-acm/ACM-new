@@ -289,6 +289,7 @@ input[type=number] {
 }
 
 .test-dev1 {
+  margin: 0;
   align-items: center;
 }
 
@@ -994,6 +995,10 @@ ul {
   .pt-card {
     margin-top: 10px;
   }
+  .benefit-card-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 @media (min-width: 200px) and (max-width: 780px) {
@@ -1018,6 +1023,9 @@ ul {
 
   .md-text-custom {
     font-size: 14px;
+  }
+  .mobile-view {
+    width: 100%;
   }
 }
 
@@ -1420,6 +1428,7 @@ ul {
 .alumni-prev1 {
   color: #0297ff !important;
   font-weight: 700 !important;
+  margin-top: 85px;
 }
 
 /* .winnerNav{
@@ -1428,6 +1437,7 @@ ul {
 .alumni-next1 {
   color: #0297ff !important;
   font-weight: 700 !important;
+  margin-top: 85px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -1511,7 +1521,7 @@ ul {
   text-align: left;
   margin: 20px auto 40px auto;
 
-  color: #0297ff;
+  /* color: #0297ff; */
 }
 
 .blue-hr {
@@ -2188,10 +2198,6 @@ body.search-open #search .search-suggestion:nth-child(3) {
   .leaders {
     margin-left: -5% !important;
   }
-}
-
-.signin {
-  margin-left: 15% !important;
 }
 
 #widget-contact-form {

@@ -121,7 +121,7 @@
                </div>
                <!--icons-->
 
-               <div class="row d-flex justify-content-center">
+               <div class="row d-flex justify-content-center mobile-view">
                     <!-- <div class="collab-card">
                    <hr class="blue-hr">
                    <div class="card-1"></div>

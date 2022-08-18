@@ -106,7 +106,7 @@
                 </div>
                 <div class="person-info">
                   <h3 class="full-name">Rajat Maheshwari</h3>
-                  <span class="speciality" style="font-weight: bold">SDE 1, Amazon</span>
+                  <span class="speciality" style="font-weight: bold">SDE 1 , Amazon</span>
                 </div>
               </div>
             </div>
@@ -119,7 +119,7 @@
                 </div>
                 <div class="person-info">
                   <h3 class="full-name">Sapna Chaudhary</h3>
-                  <span class="speciality" style="font-weight: bold">Pursuing Phd, IIITD</span>
+                  <span class="speciality" style="font-weight: bold">Pursuing Phd , IIITD</span>
                 </div>
               </div>
             </div>
@@ -132,7 +132,7 @@
                 </div>
                 <div class="person-info">
                   <h3 class="full-name">Tamanna Arora</h3>
-                  <span class="speciality" style="font-weight: bold">SDE, Media Agility</span>
+                  <span class="speciality" style="font-weight: bold">SDE , Media Agility</span>
                 </div>
               </div>
             </div>
@@ -145,7 +145,7 @@
                 </div>
                 <div class="person-info">
                   <h3 class="full-name">Abhishek Khandelwal</h3>
-                  <span class="speciality" style="font-weight: bold">Founder CEO, ENSVEE & Part. of CSL Symposium, New York</span>
+                  <span class="speciality" style="font-weight: bold">Founder CEO , ENSVEE & Part. of CSL Symposium , New York</span>
                 </div>
               </div>
             </div>
@@ -653,8 +653,6 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="form-group col-md-6"></div>
-                  <div class="form-group col-md-2"></div>
                   <div class="form-group col-md-2 button-center">
                     <div class="form-group">
                       <!-- <button id="submitSingupForm" type="submit" style="display:none;"></button> -->

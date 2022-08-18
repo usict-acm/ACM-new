@@ -71,4 +71,31 @@
             </html>
         ";        
     };
+    function certificateMail ($Sno, $nameParticipant, $email, $event, $date) {
+        $id_num = substr($Sno, -4);
+        $subject = "Certificate for the event $event";
+
+        $headers  = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+        $headers .= "From:usict.acm.org";
+
+        $body = "
+            <html>
+                <head><title>Your certificate for the event- $event</title></head>
+                <body>
+                    <p>Dear $nameParticipant</p>
+                    <p>Greetings from the GGSIP University USS ACM Student Chapter!</p>
+                    <br />
+                    <p>Thank you for participating in $event organized by GGSIPU USS ACM Student Chapter on $date. We are elated by your participation and hope that you had a great time. Here's your certificate as a token of appreciation from our side.</p>
+                    <p>You can download it using <a href='https://usict.acm.org/test_acm/verify?id=$id_num'>this link</a>.</p>
+                    <br />
+                    <p>We hope to see you at more events and have more fun. Happy learning and Happy computing!</p>
+                    <br />
+                    <p>Regards</p>
+                    <p>GGSIP University USS ACM Student Chapter</p>
+                </body>
+            </html>
+        ";
+        return mail($email, $subject, $body, $headers);
+    };
 ?>
