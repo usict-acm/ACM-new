@@ -91,9 +91,9 @@
                     <br />
                     Happy learning and Happy computing!</p>
                     <br />
-                    <p>Regards</p>
-                    <p>GGSIP University USS ACM Student Chapter</p>
-                    <p><a href='https://usict.acm.org/linkedin' target='_blank'>Linkedin</a> | <a href='https://usict.acm.org/facebook' target='_blank'>Facebook</a> | <a href='https://usict.acm.org/instagram' target='_blank'>Instagram</a> | <a href='https://usict.acm.org/discord' target='_blank'>Discord<a></p>
+                    <p style='margin-bottom:2px;'>Regards</p>
+                    <p style='margin-bottom:2px;'><b>GGSIP University USS ACM Student Chapter</b></p>
+                    <p><b><a href='https://usict.acm.org/linkedin' target='_blank'>Linkedin</a> | <a href='https://usict.acm.org/facebook' target='_blank'>Facebook</a> | <a href='https://usict.acm.org/instagram' target='_blank'>Instagram</a> | <a href='https://usict.acm.org/discord' target='_blank'>Discord</a></b></p>
                 </body>
             </html>
         ";

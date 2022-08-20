@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-custom navbar-mainbg">
     <div class="d-flex main-logo">
-        <a href="./"><img class="acm-logo-navbar" src="./assets/images/acm-logo.svg" height="60px" alt="acm-logo" /></a>
+        <a href="./"><img class="acm-logo-navbar" src="./assets/images/acm1.png" height="60px" alt="acm-logo" /></a>
         <div class="text-and-logo">
             <a style="font-size: 18px; color: #000; padding: 0; margin-bottom: -11px; font-weight:700" class="navbar-brand mx-auto text-center" href="./">USS<span class="text-sp"> ACM</span></a>
             <a href="./"><img class="outstanding-logo" src="./assets/images/outstanding-website.png" alt="" /></a>

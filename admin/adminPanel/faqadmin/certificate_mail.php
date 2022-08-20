@@ -21,7 +21,8 @@
                 echo json_encode(
                     array('message' => 'Mailed successfully')
                 );
-                echo '<script>alert("Mailed successfully");
+                echo '<script>
+                        alert("Mailed successfully");
                         window.location.replace("../index.php?table=Certificate")
                     </script>';
             }
