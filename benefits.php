@@ -10,6 +10,7 @@
     <link href="./assets/CSS/header.css" rel="stylesheet" />
     <link href="./assets/CSS/footer.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/CSS/newStyle.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
   <body>
     <!--**********************************************Navbar******************************************************************************-->
@@ -404,12 +405,37 @@
         
         const form_action = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse"; 
         if (x == "" || !x || y == "" || !y || z == "" || !z || a == "" || !a || b == "" || !b || c == "" || !c || d == "" || !d || e == "" || !e) {
-          alert("Please fill all the fields");
+          $(document).ready(function(){
+            // include ('./modal.php');
+              // swal("Please Fill all the details !!", "I will close in 4 seconds.", 8000, false).then(function() {
+              //     // window.location = '';
+              // });
+              // window.location.replace('./modal.php');
+              swal({
+                title: "Red Alert!",
+                text: "I will close in 4 seconds.",
+                timer: 10000,
+                showConfirmButton: false
+              });
+
+        // swal({
+        //       title: "Deleted!",
+        //       text: "Your row has been deleted.",
+        //       type: "success",
+        //       timer: 3000
+        //       });
+        //       function () {
+        //           location.reload(true);
+        //           tr.hide();
+        //       };
+        });
+
           document.getElementById("form-id").action = "";
           
-          document.location.reload()
+          // document.location.reload()
 
           return false;
+
         }
         
         else{

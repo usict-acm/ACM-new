@@ -89,7 +89,6 @@ require_once "./faqadmin/config1.php";
         },
         error: function(xhr, status, error){
             window.location.reload();
-            // alert("Fill in the details");
         },
     });
     }

@@ -391,10 +391,8 @@ $(function () {
 //      check_leaderEmail();
 
 //      if (error_teamName === false && error_member === false && error_leaderName === false && error_leaderNumber === false && error_leaderEmail === false) {
-//         alert("Registration Successfull");
 //         return true;
 //      } else {
-//         alert("Please Fill the form Correctly");
 //         return false;
 //      }
 
