@@ -73,6 +73,7 @@
                     $pdf->Image("../../../verify/$id_num.png",0,0,297,210);
                     $pdf->Output("../../../verify/$id_num.pdf","F");
                     $pdf->Output("$Sno.pdf","D");
+
                 }else{
 
                     $image=imagecreatefrompng("participation.png");
@@ -120,8 +121,6 @@
                     $pdf->Image("../../../verify/$id_num.png",0,0,297,210);
                     $pdf->Output("../../../verify/$id_num.pdf","F");
                     $pdf->Output("$Sno.pdf","D");
-                    
-
                 }
             }
         }
