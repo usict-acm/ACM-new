@@ -191,21 +191,21 @@ ul {
 
 .social-menu ul li .fa,
 .social-menu ul li .fa {
-  font-size: 25px;
-  line-height: 50px;
+  font-size: 20px;
+  line-height: 40px;
   color: #fff;
 }
 
 .social-menu ul li a {
   transform: scale(1);
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: linear-gradient(45deg, #95ddf7, #0030a0);
   text-align: center;
   transition: 0.5s;
-  box-shadow: 1px 4px 5px rgb(0 0 0 / 9%);
+  /* box-shadow: 1px 4px 5px rgb(0 0 0 / 9%); */
 }
 
 .social-menu ul li a:hover {
@@ -217,9 +217,12 @@ ul {
 .social-menu ul li a:hover i {
   color: #fff;
 }
+.social-menu ul li a.youtube-footer{
+  background: linear-gradient(45deg, #f55a00, #ff0000);
+}
 
 .social-menu ul li a.facebook-footer:hover {
-  transform: scale(2.2);
+  transform: scale(1.35);
         color: #00B5F5;
         background: linear-gradient(45deg, #00b5f5, #002a8f);
         -webkit-background-clip: text;
@@ -228,45 +231,53 @@ ul {
 }
 
 .social-menu ul li a.youtube-footer:hover {
-  transform: scale(2.2);
+  transform: scale(1.35);
         color: #00B5F5;
-        background: linear-gradient(45deg, #00b5f5, #002a8f);
+        background: linear-gradient(45deg, #f55a00, #ff0000);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         transition: all 0.2s ease-in;
 }
-
+.social-menu ul li a.instagram-footer {
+  background: linear-gradient(120deg, #4a00f5, #f75e7f, #ffd900, #f55a00);
+}
 .social-menu ul li a.instagram-footer:hover {
-  transform: scale(2.2);
+  transform: scale(1.35);
   color: #00B5F5;
-  background: linear-gradient(45deg, #00b5f5, #002a8f);
+  background: linear-gradient(120deg, #4a00f5, #f75e7f, #ffd900, #f55a00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.2s ease-in;
 }
-
+.social-menu ul li a.github-footer{
+  background: linear-gradient(45deg, #303030, #000000);
+}
 .social-menu ul li a.github-footer:hover {
-  transform: scale(2.2);
+  transform: scale(1.35);
         color: #00B5F5;
-        background: linear-gradient(45deg, #00b5f5, #002a8f);
+        background: linear-gradient(45deg, #303030, #000000);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         transition: all 0.2s ease-in;
 }
-
+.social-menu ul li a.discord-footer{
+  background: linear-gradient(45deg,  #2f6cf8, #2f6cf8);
+}
 .social-menu ul li a.discord-footer:hover {
-  transform: scale(2.2);
+  transform: scale(1.35);
   color: #00B5F5;
-  background: linear-gradient(45deg, #00b5f5, #002a8f);
+  background: linear-gradient(45deg,  #2f6cf8, #2f6cf8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.2s ease-in;
 }
-
+.social-menu ul li a.mail-footer{
+  background: linear-gradient(45deg, #c20000, #c90000);
+}
 .social-menu ul li a.mail-footer:hover {
-  transform: scale(2.2);
+  transform: scale(1.35);
         color: #00B5F5;
-        background: linear-gradient(45deg, #00b5f5, #002a8f);
+        background: linear-gradient(45deg, #c20000, #c90000);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         transition: all 0.2s ease-in;
