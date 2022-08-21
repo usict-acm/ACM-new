@@ -241,7 +241,7 @@ ul {
         transition: all 0.2s ease-in;
 }
 .social-menu ul li a.instagram-footer {
-  background: linear-gradient(120deg, #4a00f5, #f75e7f, #ffd900, #f55a00);
+  background: linear-gradient(120deg, #4a00f5 , #4a00f5, #f75e7f, #ff00d4, #fffb00 45px);
 }
 .social-menu ul li a.instagram-footer:hover {
   transform: scale(1.35);
