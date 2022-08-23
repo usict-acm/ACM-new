@@ -241,12 +241,13 @@ ul {
         transition: all 0.2s ease-in;
 }
 .social-menu ul li a.instagram-footer {
-  background: linear-gradient(120deg, #4a00f5 , #4a00f5, #f75e7f, #ff00d4, #fffb00 45px);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+
 }
 .social-menu ul li a.instagram-footer:hover {
   transform: scale(1.35);
   color: #00B5F5;
-  background: linear-gradient(120deg, #4a00f5, #f75e7f, #ffd900, #f55a00);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.2s ease-in;
