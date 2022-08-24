@@ -6,6 +6,7 @@ enviornment.php
 forms/responsesfile/*
 .htaccess
 .github
+workspace.code-workspace
 
 # react
 /build

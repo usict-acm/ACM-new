@@ -18,7 +18,7 @@
             margin-top: 0;
         }
         table tr td:last-child a{
-            margin-right: 0px;
+            margin-right: 15px;
         }
         .hh_button {
     display: inline-block;
@@ -68,45 +68,38 @@
         margin-top: 43px;
         margin-left: 13px;
     }
-    .top-fix{
-        padding: 0%;
-        margin: 0%;
-    }
     </style>
 </head>
 <body>
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="page-header clearfix top-fix">
-                        <h2 class="pull-left" style="margin-top: 7%">Teams Admin Panel</h2>
-                        <a href="?table=AddMember" class="btn btn-primary pull-right marginset">Add a member</a>
-                        
+                <div class="col-md-12">
+                    <div class="page-header clearfix">
+                        <h2 class="pull-left">Certificate Admin Panel</h2>
+                        <a href="faqadmin/download_joinus.php" class="btn btn-primary pull-right">Download Response</a>
                     </div>
                     <?php
-                    // Include config file
-                    // require_once "config.php";
                     require('../blogAdmin/database.php');
                     $database = new Database();
                     $link = $database->connect();
                     $connection = $link;
 
-                    $sql = "SELECT * FROM team ORDER BY id DESC ";
+                    $sql = "SELECT * FROM join_us ORDER BY  id  DESC ";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
-                            echo "<table class='table table-bordered table-striped' style='table-layout: fixed; width: 100%; word-wrap: break-word;'>";
+                            echo "<table class='table table-bordered table-striped'>";
                                 echo "<thead>";
                                     echo "<tr>";
-                                        echo "<th>Name</th>";
-                                        echo "<th>Designation</th>";
-                                        echo "<th>LinkedIn</th>";
-                                        //echo "<th>Role of the Participant</th>";
-                                        echo "<th>GitHub</th>";
-                                        echo "<th>Instagram</th>";
-                                        echo "<th>Year</th>";
-                                        //echo "<th>Signed By</th>";
-                                        echo "<th>Action</th>";
+                                        echo "<th>First Name</th>";
+                                        echo "<th>Last Name</th>";
+                                        echo "<th>Email</th>";
+                                        echo "<th>Phone Number</th>";
+                                        echo "<th>ACM Membership No.</th>";
+                                        echo "<th>Course</th>";
+                                        //echo "<th>Action</th>";
+                                        echo "<th>Enrollment Number</th>";
+                                        echo "<th>Clubs</th>";
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
@@ -119,27 +112,30 @@
                                     echo "<tr>";
                                         // $ii = $row['originalLink'];
                                         // $ii = substr($ii,0,51);
-                                        echo "<td>" . $row['name'] . "</td>";
-                                        echo "<td>" . $row['designation']."</td>";
-                                        echo "<td>" . $row['linkedin']."</td>";
-                                        //echo "<td>" . $row['role']."</td>";
-                                        echo "<td>" . $row['github']."</td>";
-                                        echo "<td>" . $row['instagram']."</td>";
-                                        echo "<td>" . $row['year']."</td>";
+                                        echo "<td>" . $row['firstname'] . "</td>";
+                                        echo "<td>" . $row['lastname']."</td>";
+                                        echo "<td>" . $row['email']."</td>";
+                                        echo "<td>" . $row['phone_number']."</td>";
+                                        echo "<td>" . $row['acm_no']."</td>";
+                                        echo "<td>" . $row['course']."</td>";
+                                        echo "<td>" . $row['enrollment_no']."</td>";
+                                        echo "<td>" . $row['club']."</td>";
+                                        //echo "<td>" . $row['signedBy']."</td>";
                                         // echo "<td><a target='_blank' href='".$siteLink."". $row['code'] ."'>".$siteLink."". $row['code'] ."</a></td>";
                                         // $short = $row['code'];
                                         // echo "<script>links.push('".$short."'); </script>";
                                         // echo "<td class='centerAlign'>" . $row['count'] . "</td>";
 
-                                        echo "<td>";
-                                            
-                                            echo "<a class='tash-bin 'href='./faqadmin/teams/delete_member.php?Sno=". $row['id'] ."' title='Delete Member' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
-                                           
-                                        // echo "<form method='POST' action = 'faqadmin/certificate/index.php?Sno=". $row['uniqueNo'] ."'> 
-                                        //     <button type='submit' class='btn btn-primary' id='submitBtn' name='down-btn' data-toggle='tooltip'>Download</button>
-                                        // </form>";
+                                        // echo "<td>";
+                                        //     echo "<a class='tash-bin' href='faqadmin/certificate_mail.php?Sno=". $row['uniqueNo'] ."&email=". $row['email'] ."' title='Mail Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-envelope'></span></a>";
+                                        //     echo "<a class='edit-logo' href='faqadmin/certificate_edit.php?Sno=". $row['uniqueNo'] ."' title='Edit Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
+                                        //     echo "<a class='tash-bin 'href='faqadmin/certificate_delete.php?Sno=". $row['uniqueNo'] ."' title='Delete Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                        //     echo "<a class='edit-logo' href='faqadmin/certi_download.php?Sno=". $row['uniqueNo'] ."' title='Download Certificate' target='_blank' name='down-btn' id='down-btn' data-toggle='tooltip'><span class='glyphicon glyphicon-download-alt'></span></a>";
+                                        // // echo "<form method='POST' action = 'faqadmin/certificate/index.php?Sno=". $row['uniqueNo'] ."'> 
+                                        // //     <button type='submit' class='btn btn-primary' id='submitBtn' name='down-btn' data-toggle='tooltip'>Download</button>
+                                        // // </form>";
 
-                                        echo "</td>";
+                                        // echo "</td>";
 
                                     echo "</tr>";
         

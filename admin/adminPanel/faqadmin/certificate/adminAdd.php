@@ -196,7 +196,7 @@ else{
             formData.append('rank', $('#rank').val());
             formData.append('enroll', $('#enroll').val());
             formData.append('course', $('#course').val());
-        
+            
             $.ajax({
                 type: "POST",
                 url: "../blogAdmin/api.php/?q=certificateForm",
@@ -207,22 +207,17 @@ else{
                 dataType: "JSON",
                 encode: true,
                 success: function(data){
+                    var download = '../adminPanel/faqadmin/certi_download.php?Sno=' + arr[0];
+                    window.location.replace(download);
                     if (confirm("Do you want to mail this certificate to the student?") == true) {
-                        var download = '../adminPanel/faqadmin/certi_download.php?Sno=' + arr[0];
                         var mail = '../adminPanel/faqadmin/certificate_mail.php?Sno=' + arr[0] + '&email=' + $("#email").val();
                         window.location.replace(mail);
-                        window.location.replace(download);
                     } else {
                         alert("Thank you!");
-                    }
-                    // window.location.reload();
-                // window.location.replace('./index.php?table=certificateCreation');
-                //window.location.replace('../../index.php?table=certificateCreation');
-
+                    }                    
                 },
                 error: function(xhr, status, error){
-                    //window.location.reload();
-                    // alert("Fill in the details");
+                    alert("Fill in the details");
                     console.log(error);
                 },
             });

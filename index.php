@@ -341,28 +341,28 @@
 	<!-- socail bar******************************* -->
 	<div class="social-btns tag">
 		<div class="try1">
-			<a class="btn facebook" href="https://facebook.com/acmusict" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a class="btn facebook" href="https://usict.acm.org/facebook" target="_blank"><i class="fa fa-facebook"></i></a>
 			<div class="write" id="wrete">
 				<h1 class="sob-heading">700+</h1>
 				<p class="gratext">Facebook Followers</p>
 			</div>
 		</div>
 		<div class="try1">
-			<a class="btn linkedin" href="https://linkedin.com/company/acmusict" target="_blank"><i class="fab fa fa-linkedin"></i></a>
+			<a class="btn linkedin" href="https://usict.acm.org/linkedin" target="_blank"><i class="fab fa fa-linkedin"></i></a>
 			<div class="write" id="wrete">
 				<h1 class="sob-heading">6000+</h1>
 				<p class="gratext">LinkedIn Reach</p>
 			</div>
 		</div>
 		<div class="try1">
-			<a class="btn instagram" href="https://instagram.com/acmusict/" target="_blank"><i class=" fa fa fa-instagram"></i></a>
+			<a class="btn instagram" href="https://usict.acm.org/instagram" target="_blank"><i class=" fa fa fa-instagram"></i></a>
 			<div class="write" id="wrete">
 				<h1 class="sob-heading">450+</h1>
 				<p class="gratext">Instagram Followers</p>
 			</div>
 		</div>
 		<div class="try1">
-			<a class="btn discord" href="https://discord.com/invite/fbAJs85rzT" target="_blank"><i class=" fab fa-discord"></i></a>
+			<a class="btn discord" href="https://usict.acm.org/discord" target="_blank"><i class=" fab fa-discord"></i></a>
 			<div class="write" id="wrete">
 				<h1 class="sob-heading">600+</h1>
 				<p class="gratext">Discord Members</p>
