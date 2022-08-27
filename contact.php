@@ -1,5 +1,5 @@
 <!-- ****************************************************contact us ***************************** -->
-
+<script></script>
 <script>
     function contact_us(){
       // console.log(type);
