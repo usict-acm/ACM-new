@@ -698,7 +698,7 @@
         checkboxes.forEach((checkbox) => {
                 values = values+checkbox.value+" ";
             });
-            console.log();
+            console.log(x, y, z, a, b, c, d, e);
         let flag = true;
           if (x == "" || !x || y == "" || !y || z == "" || !z || a == "" || !a || b == "" || !b || c == "" || !c || d == "" || !d || e == "" || !e || isNaN(c) || isNaN(d) || isNaN(e) || isNaN(b)) {
             
@@ -711,7 +711,7 @@
           //return false;
         }
         
-        var formData = new FormData();
+      let formData = new FormData();
         
             
             formData.append('firstname', x);
@@ -725,7 +725,7 @@
             formData.append('clubs', values);
 
         //const form_action = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse"; 
-          
+            console.log(formData);
        
         
           // var button = document.getElementById("submitSingupForm");
@@ -749,7 +749,7 @@
                 error: function(xhr, status, error){
                     //window.location.reload();
                     // alert("Fill in the details");
-                    console.log(error);
+                    console.log("sdfghjkjhgffghjkjgfhkjhgfkjhghjkjhkjhgfdfghjkl;lkjhgfasdfghjklkjhgfd");
                 },
             });
           }

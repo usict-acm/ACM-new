@@ -948,15 +948,17 @@ function joinus(){
     $database = new Database();
     $db = $database->connect();
 
-    $fistname = $_POST["firstname"];
-    $lastname = $_POST["lastname"];
-    $email = $_POST["email"];
-    $phone = $_POST["phone"];
-    $course = $_POST["course"];
-    $clubs = $_POST["clubs"];
-    $year = $_POST["year"];
-    $acm_no = $_POST["acm_no"];
-    $enroll = $_POST["enroll"];
+// var_dump($_REQUEST);
+
+    $fistname = $_REQUEST["firstname"];
+    $lastname = $_REQUEST["lastname"];
+    $email = $_REQUEST["email"];
+    $phone = $_REQUEST["phone"];
+    $course = $_REQUEST["course"];
+    $clubs = $_REQUEST["clubs"];
+    $year = $_REQUEST["year"];
+    $acm_no = $_REQUEST["acm_no"];
+    $enroll = $_REQUEST["enroll"];
     
 
     $sql = "INSERT INTO `join_us` (`firstname`, `lastname`,`email`, `phone_number`, `year`, `acm_no`, `course`, `club`, `enrollment_no`) VALUES ('$fistname', '$lastname', '$email', '$phone',  '$year', '$acm_no', '$course', '$clubs', '$enroll');";
