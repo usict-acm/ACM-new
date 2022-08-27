@@ -502,7 +502,7 @@ a:hover {
 }
 
 .b-infos .b-button {
-	background: #0397fe;
+	background: #005daa;
 	color: #fff;
 	border-radius: 6px;
 	border: none;
@@ -519,7 +519,7 @@ a:hover {
 
 .b-infos::after {
 	content: '';
-	background: #0397fe;
+	background: #005daa;
 	border-radius: 10px;
 	height: 100%;
 	width: 100%;
@@ -583,32 +583,6 @@ a:hover {
 
 	.b-infos {
 		top: 130px;
-	}
-}
-
-@media (max-width: 425px) {
-	.b-container {
-		display: block;
-		margin-top: 6px;
-		margin-left: 15%;
-	}
-
-	.b-card {
-		margin-top: 10px;
-		width: 240px;
-	}
-}
-
-@media (max-width: 320px) {
-	.b-container {
-		display: block;
-		margin-top: 6px;
-		margin-left: 11.5%;
-	}
-
-	.b-card {
-		margin-top: 10px;
-		width: 240px;
 	}
 }
 
@@ -1331,8 +1305,8 @@ a:hover {
 	display: block;
 	box-sizing: border-box;
 	appearance: none;
-	background-color: var(--blue);
-	border: 2px solid var(--blue);
+	background-color: #005daa;
+	border: 2px solid #005daa;
 	border-radius: 0.6em;
 	cursor: pointer;
 	font-size: 1rem;
@@ -1418,7 +1392,7 @@ a:hover {
 
 .drop-down {
 	color: #fff;
-	background-color: #3498db;
+	background-color: #005daa;
 	font-size: 1rem;
 	font-weight: 700;
 	width: 100%;
@@ -1500,7 +1474,7 @@ a:hover {
 
 .text-blue,
 .footer-cta i::before {
-	color: #0397fe;
+	color: #005daa;
 }
 
 /* events section */
@@ -1536,7 +1510,7 @@ a:hover {
 	justify-content: center;
 	align-items: center;
 	margin-top: 0;
-	padding: 50px 0;
+	padding: 30px 0;
 }
 
 .timeout {
@@ -1603,11 +1577,6 @@ a:hover {
 	margin-bottom: 0;
 	font-weight: 600;
 	color: rgb(43, 42, 42);
-	text-align: center;
-}
-
-.heading {
-	margin-top: -1rem;
 	text-align: center;
 }
 
@@ -1712,8 +1681,8 @@ a:hover {
 
 .contact-bottom-btn {
 	position: fixed;
-	bottom: 45px;
-	right: 40px;
+	bottom: 20px;
+	right: 20px;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
@@ -1733,15 +1702,15 @@ a:hover {
 	cursor: pointer;
 	font-size: 30px;
 	text-align: center;
-	color: var(--blue);
+	color: #005daa;
 }
 
 /* scroll to top  */
 
 .scrolltop {
 	position: fixed;
-	bottom: 100px;
-	right: 40px;
+	bottom: 80px;
+	right: 20px;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
@@ -1757,7 +1726,7 @@ a:hover {
 	text-align: center;
 	transform: rotate(-45deg);
 	margin-top: 5px;
-	color: var(--blue);
+	color: #005daa;
 }
 
 @media screen and (max-width: 375px) {
@@ -2313,4 +2282,100 @@ a:hover {
 
 .fw-bolder {
 	font-weight: 700;
+}
+
+
+.alumini-content {
+	font-family: "Poppins", sans-serif;
+	padding: 0px 0;
+}
+
+.alumini-content .header-section {
+	margin-bottom: 50px;
+}
+
+.alumini-content p,a,h1,h2,h3,h4 {
+	margin: 0;
+	padding: 0;
+}
+
+.alumini-content .single-person {
+	margin-top: 30px;
+	padding: 30px;
+	background-color: #f6f9ff;
+	border-radius: 5px;
+}
+
+.alumini-content .single-person:hover {
+	background: linear-gradient(to right, #016cec, #00b5f7);
+}
+
+.alumini-content .single-person .person-image {
+    position: relative;
+    margin-bottom: 50px;
+    border-radius: 50%;
+    border: 4px dashed transparent;
+    transition: padding .3s;
+}
+
+.alumini-content .single-person:hover .person-image {
+	padding: 12px;
+    border: 4px dashed #fff;
+}
+
+.alumini-content .single-person .person-image img {
+	width: 100%;
+    border-radius: 50%;
+}
+
+.alumini-content .single-person .person-image .icon {
+	position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,50%);
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: linear-gradient(to right, #016cec, #00b5f7);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+.alumini-content .single-person:hover .person-image .icon {
+	background: none;
+	background-color: #fff;
+	color: #016cec;
+}
+
+.alumini-content .single-person .person-info .full-name {
+	margin-bottom: 10px;
+	font-size: 28px;
+    font-weight: 700;
+}
+
+.alumini-content .single-person .person-info .speciality {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #016cec;
+}
+
+.alumini-content .single-person:hover .full-name,
+.alumini-content .single-person:hover .speciality {
+	color: #fff;
+}
+
+.text-head {
+	color: #0092cf;
+}
+
+.btn-theme {
+	background-color: #005daa;
+	border-color: #005daa;
+}
+
+.text-sp {
+	color: #005daa;
 }

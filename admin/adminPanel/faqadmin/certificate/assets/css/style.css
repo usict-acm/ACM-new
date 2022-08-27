@@ -1,0 +1,37 @@
+
+
+.wrapper {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.hh_button {
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(to right, #ff8a00, #da1b60);
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    margin-top: 30px;
+    margin: 0px;
+    position: absolute;
+    right: 20px;
+    top: 1.5%;
+}
+
+header {
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+header a,
+header a:hover {
+    text-decoration: none;
+    color: white;
+}

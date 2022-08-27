@@ -166,14 +166,14 @@
                 console.log("dataNumber", dataNumber);
                 numberOfEvents = dataNumber[1];
                 console.log("numberrrr", numberOfEvents);
-                yearWiseEvent.innerHTML += " <li style='height:150px;'>\
+                yearWiseEvent.innerHTML += " <li>\
                                                 <div class='time'>\
                                                     <h2>" + event.year + " <br><span></span></h2>\
                                                 </div>\
                                                 <div class='details'>\
                                                     <h3 style='color: black;font-weight: bolder;'>" + numberOfEvents + " " + event.numberOfEvents + " </h3>\
                                                     <p style='font-size:large; color: #e91e63;font-weight: bolder;'>" + event.heading + "</p>\
-                                                    <p style='text-align: end; margin-right: 2px; font-size: smaller; color:#0297ff;'>" + event.more + "</p>\
+                                                    <p style='text-align: end; margin-right: 2px; font-size: smaller; color:#0092cf;'>" + event.more + "</p>\
                                                     <a  href='./eventYear.php?year=" + event.year + "'>View details</a>\
                                                 </div>\
                                                 <div style='clear: both;'></div>\

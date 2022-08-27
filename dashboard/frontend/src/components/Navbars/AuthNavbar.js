@@ -54,7 +54,7 @@ const AuthNavbar = () => {
               className="navbarLogo"
               alt="..."
               src={
-                require("../../assets/img/brand/outstanding-website.png")
+                require("../../assets/img/brand/outstanding-website-text.png")
                   .default
               }
             />

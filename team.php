@@ -103,7 +103,7 @@
           yearNav.innerHTML = "";
           yearNavMobile.innerHTML = "";
           $.ajax({
-            url: "./admin/teams/api.php/?q=getYear",
+            url: "./admin/adminPanel/faqadmin/teams/api.php/?q=getYear",
             method: "GET",
             dataType: "JSON",
             success: function (data) {
@@ -127,7 +127,7 @@
         $('#' + navYear).addClass("active");
         var category = ['Faculty', 'Office-Bearers', 'Executive-Members', 'Operations-Team', 'Web-Team'];
         category.forEach(e => document.getElementById(e).innerHTML = "");
-        let url = './admin/teams/api.php/?q=readMember&year=' + navYear;
+        let url = './admin/adminPanel/faqadmin/teams/api.php?q=readMember&year=' + navYear;
         $(document).ready(function() {
           $.ajax({
             url: url,

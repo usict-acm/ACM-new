@@ -30,7 +30,7 @@
   <!-- ****************************************************Collaborators******************************************************************** -->
     <section id="collab">
       <div class="container">
-        <h1 class="collab-main-heading">Collaborations and<span class="highlight"> Sponsors</span>:</h1>
+        <h1 class="collab-main-heading mobile-view">Collaborations and<span class="text-head"> Sponsors</span>:</h1>
         <div class="row d-flex justify-content-center">
           <div class="collab-card">
             <hr class="blue-hr">
@@ -61,7 +61,7 @@
         </div>
       </div>
       <div class="container">
-        <h1 class="collab-main-heading">Renowned <span class="highlight"> Researchers/ Professionals</span> from:</h1>
+        <h1 class="collab-main-heading">Renowned <span class="text-head">Researchers/ Professionals</span> from:</h1>
         <div class="row d-flex justify-content-center">
           <div class="collab-card">
             <hr class="blue-hr">
@@ -97,7 +97,7 @@
         </div>
       </div>
       <div class="container">
-        <h1 class="collab-main-heading">Industry  <span class="highlight"> Professionals</span> from:</h1>
+        <h1 class="collab-main-heading">Industry <span class="text-head">Professionals</span> from:</h1>
         <div class="row d-flex justify-content-center">
           <div class="collab-card">
             <hr class="blue-hr">
