@@ -18,6 +18,10 @@
             formData.append('college', college);
             formData.append('message', message);
 
+            // for (var pair of formData.entries()) {
+            //     console.log(pair[0]+ ', ' + pair[1]); 
+            // }
+
             let checkVal = true;
             // for (const value of formData.values()) {
             //   console.log(value);
@@ -50,6 +54,7 @@
                 error: function(xhr, status, error){
                     // window.location.reload();
 					// alert("Form Submitted!!");
+                    console.log(error);
                     alert("Fill in the details");
                 },
       	});

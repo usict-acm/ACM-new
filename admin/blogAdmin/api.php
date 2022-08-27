@@ -984,11 +984,13 @@ function contactus()
     // print_r($database);
     $db = $database->connect();
     // print_r($db);
-    $name = $_POST["name"];
-    $email =  $_POST["email"];
-    $mobile = $_POST["mobile"];
-    $college = $_POST["college"];
-    $message = $_POST["message"];
+    $name = $_REQUEST["name"];
+    $email =  $_REQUEST["email"];
+    $mobile = $_REQUEST["mobile"];
+    $college = $_REQUEST["college"];
+    $message = $_REQUEST["message"];
+
+    // var_dump($_REQUEST);
 
     $sql = "INSERT INTO `contactus` (`name`, `email`, `mobile`, `college`, `message`) VALUES ('$name', '$email', '$mobile', '$college','$message');";
     // print_r($sql);
