@@ -70,6 +70,9 @@ input[type=number] {
 }
 
 @media (min-width: 300px) and (max-width: 580px) {
+  .heading {
+    text-align: left;
+  }
   .uheading {
     font-size: 20px;
   }
@@ -79,6 +82,7 @@ input[type=number] {
   .pt-card {
     margin-top: 10px;
   }
+  
 }
 @media (min-width: 580px) and (max-width: 780px) {
   .uheading {
@@ -530,8 +534,11 @@ input[type=number] {
 }
 
 @media (min-width: 200px) and (max-width: 580px) {
+  .mobile-view {
+    font-size: 28px;
+  }
   .uheading {
-    font-size: 16px;
+    font-size: 24px;
   }
   .lheading {
     font-size: 16px;

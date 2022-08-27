@@ -52,8 +52,8 @@ a {
 }
 
 .uheading-blog {
-  font-size: 37px;
-  font: weight 520px;;
+  font-size: 36px;
+  font-weight: 500;
 }
 
 @media (min-width: 200px) and (max-width: 580px) {

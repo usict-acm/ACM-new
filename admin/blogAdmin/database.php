@@ -11,6 +11,12 @@ class Database
   public function connect()
   {
     include(__DIR__.'/../../enviornment.php');
+    // $env_server = "localhost:3306";
+    // $env_username = "root";
+    // $env_password = "";
+    // $env_database = "acmbackend";
+    // $env_port = "3306";
+    
     $this->server = $env_server;
     $this->username = $env_username;
     $this->password = $env_password;

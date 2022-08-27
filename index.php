@@ -71,7 +71,7 @@
 		<div class="col-sm-6 col-9 mx-auto mt-3 pe-sm-5 align-self-center">
 			<div class="text">
 				<h2 class="mb-4 display-4 fw-bolder text-center text-md-start">
-					About <span class="text-blue">Our Chapter</span>
+					About <span class="text-head">Our Chapter</span>
 				</h2>
 				<p class="text-secondary about-text">
 					GGSIP University USS ACM Student Chapter is an official student body incepted in 2019 under the University
@@ -122,7 +122,7 @@
 		</div>
 		<div class="tag">
 			<div class="bloghead">
-				<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-blue"> Blogs</span></h2>
+				<h2 class="my-4 display-4 fw-bolder text-center">Recent<span class="text-head"> Blogs</span></h2>
 			</div>
 			<div class="b-container" id="threeBlogsRow"></div>
 			<div class="py-3 mt-2 d-sm-flex justify-content-sm-center">
@@ -173,7 +173,7 @@
 				</div>\
 				<img src="' +
 							row.Image +
-							'" class="blog-img" style="object-fit:contain;"/>\
+							'" class="blog-img" style="object-fit:cover;"/>\
 			</div>\
 			<div>';
 					}
@@ -185,7 +185,7 @@
 	<!-- *******************************************our team************* -->
 	<section class="tag container-fluid">
 		<div class="">
-			<h2 class="my-4 display-4 fw-bolder text-center">Office<span class="text-blue"> Bearers</span></h2>
+			<h2 class="my-4 display-4 fw-bolder text-center">Office<span class="text-head"> Bearers</span></h2>
 		</div>
 	 <div class="row justify-content-center">
       <div class="profile-card col-md-4 col-sm-6">
@@ -339,28 +339,28 @@
 	<!-- socail bar******************************* -->
 	<div class="social-btns tag">
 		<div class="try1">
-			<a class="btn facebook" href="https://facebook.com/acmusict" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a class="btn facebook" href="https://usict.acm.org/facebook" target="_blank"><i class="fa fa-facebook"></i></a>
 			<div class="write" id="wrete">
 				<h1 class="sob-heading">700+</h1>
 				<p class="gratext">Facebook Followers</p>
 			</div>
 		</div>
 		<div class="try1">
-			<a class="btn linkedin" href="https://linkedin.com/company/acmusict" target="_blank"><i class="fab fa fa-linkedin"></i></a>
+			<a class="btn linkedin" href="https://usict.acm.org/linkedin" target="_blank"><i class="fab fa fa-linkedin"></i></a>
 			<div class="write" id="wrete">
 				<h1 class="sob-heading">6000+</h1>
 				<p class="gratext">LinkedIn Reach</p>
 			</div>
 		</div>
 		<div class="try1">
-			<a class="btn instagram" href="https://instagram.com/acmusict/" target="_blank"><i class=" fa fa fa-instagram"></i></a>
+			<a class="btn instagram" href="https://usict.acm.org/instagram" target="_blank"><i class=" fa fa fa-instagram"></i></a>
 			<div class="write" id="wrete">
 				<h1 class="sob-heading">450+</h1>
 				<p class="gratext">Instagram Followers</p>
 			</div>
 		</div>
 		<div class="try1">
-			<a class="btn discord" href="https://discord.com/invite/fbAJs85rzT" target="_blank"><i class=" fab fa-discord"></i></a>
+			<a class="btn discord" href="https://usict.acm.org/discord" target="_blank"><i class=" fab fa-discord"></i></a>
 			<div class="write" id="wrete">
 				<h1 class="sob-heading">600+</h1>
 				<p class="gratext">Discord Members</p>

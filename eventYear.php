@@ -5,7 +5,7 @@
     <?php
     include('./head.php');
     ?>
-    <title>USICT ACM</title>
+    <title>GGSIP University USS ACM Student Chapter</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./assets/CSS/eventsyearpage.css" rel="stylesheet" />
 

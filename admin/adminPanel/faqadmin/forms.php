@@ -111,6 +111,7 @@
 
     }
 </script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <body>
 
@@ -288,7 +289,8 @@
             flagcheck = flagcheck-1;
             }
             else{
-                alert("no value to remove");
+                //alert("no value to remove");
+                swal("No value to remove");
             }
         }
 
@@ -300,7 +302,7 @@
             flagradio = flagradio-1;
             }
             else{
-                alert("no value to remove");
+                swal("No value to remove");
             }
         }
 
