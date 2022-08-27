@@ -19,6 +19,8 @@ assets/.DS_Store
 debug.log
 /package.json
 mail-testing
-
+admin/adminPanel/faqadmin/certificate/download
+admin/adminPanel/faqadmin/teams/upload
+admin/adminPanel/faqadmin/images
 # composer
 vendor
