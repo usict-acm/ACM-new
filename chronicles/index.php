@@ -7,14 +7,13 @@ include_once './database.php';
 // Instantiate DB & connect
 $database = new Database();
 $db = $database->connect();
-//echo $db;
+
 $year = $_GET['year'];
-echo $year;
 
 $sql = "SELECT * FROM magazine WHERE year = $year";
-echo $db;
+
 $stmt = $db->query($sql);
-echo $stmt;
+
 // $stmt->bind_param('s', $year);
 // echo $year;
 // $stmt->execute();

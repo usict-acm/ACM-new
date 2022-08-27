@@ -16,7 +16,7 @@ class Database
     // $env_password = "";
     // $env_database = "acmbackend";
     // $env_port = "3306";
-    echo(__DIR__.'/../../enviornment.php');
+    // echo(__DIR__.'/../../enviornment.php');
     $this->server = $env_server;
     $this->username = $env_username;
     $this->password = $env_password;
