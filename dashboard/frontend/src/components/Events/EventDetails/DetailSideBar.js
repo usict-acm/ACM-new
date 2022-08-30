@@ -34,6 +34,7 @@ export default function DetailSidebar({ event }) {
     console.log(registeredStatus + "test1");
     if (registeredStatus === true) {
       setRegisterText("Registered");
+      setButtonStatus("checked");
     } else {
       setRegisterText("Register Now");
     }
@@ -94,7 +95,10 @@ export default function DetailSidebar({ event }) {
           {event?.regLink && (
             // <a href={event?.regLink} target="_blank" rel="noopener noreferrer">
             <Button
-              className={"eventBtn" + event?.viewResource ? "mr-3" : ""}
+              className={
+                ("eventBtn" + event?.viewResource ? "mr-3" : "") +
+                (buttonStatus === "unchecked" ? "" : " button-disabled")
+              }
               color="info"
               onClick={handleClick}
             >
