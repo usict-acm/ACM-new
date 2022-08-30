@@ -5,7 +5,7 @@
     <?php
     include('./head.php');
     ?>
-    <title>USICT ACM</title>
+    <title>GGSIP University USS ACM Student Chapter</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./assets/CSS/eventsyearpage.css" rel="stylesheet" />
 
@@ -57,7 +57,7 @@
                     method: 'GET',
                     dataType: 'JSON',
                     success: function(data) {
-                        console.log("check data ywar", data);
+                        console.log("check data year", data);
                         if (<?php echo $page ?> > Math.ceil(data[1] / 7)) {
                             allEvents.innerHTML += `<h1 class='noEvents'>No Events on this page</h1>`;
 
