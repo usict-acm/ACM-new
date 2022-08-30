@@ -32,7 +32,8 @@
                             "partners" => $row["partners"],
                             "speakers" => $row["speakers"],
                             "poster" => $row["poster"],
-                            "time" => $row["time"]
+                            "time" => $row["time"],
+                            "registeredStudents" => $row["registeredStudents"]
                         );
                         array_push($allEventsArr, $eventRow);
                     }
@@ -70,7 +71,8 @@
                         "partners" => $singleEvent["partners"],
                         "speakers" => $singleEvent["speakers"],
                         "poster" => $singleEvent["poster"],
-                        "time" => $singleEvent["time"]
+                        "time" => $singleEvent["time"],
+                        "registeredStudents" => $singleEvent["registeredStudents"]
                     )
                 ));
             } else {
@@ -81,4 +83,57 @@
             echo json_encode(array('error' => 'One or more fields are missing.'));
             return;
         }
-    }   
+    } 
+    
+    function postDetailDashboard(){
+        // Instantiate DB & connect
+    
+
+        
+            $database = new Database();
+            $db = $database->connect();
+    
+            $userId = $_GET['userId'];
+            $eventId = $_GET['eventId'];
+            
+            $sql = "INSERT INTO dashboard_event_participant (eventId, userId) VALUES ('$eventId', '$userId')";
+            // var_dump($sql);
+            // echo $pages;
+            if ($db->query($sql) == true) {
+                echo json_encode(
+                    array('message' => 'success')
+                );
+            } else {
+                echo json_encode(
+                    array('message' => 'Internal Server Error. Try Again')
+                );
+            }
+        
+    };
+
+    function checkRegisteredStudents(){
+        // var_dump(1);
+    
+        // Instantiate DB & connect
+        $database = new Database();
+        $db = $database->connect();
+    
+        $userId = $_GET['userId'];
+        $eventId = $_GET['eventId'];
+    
+        $sql = "SELECT * from dashboard_event_participant WHERE eventId='$eventId' AND userID='$userId'";
+        $result = mysqli_query($db,$sql);
+        // Check if any posts
+        
+        // var_dump($sql);
+        if(mysqli_num_rows($result) > 0){
+            echo json_encode(
+                array('message' => 'success')
+            );
+        }else {
+            // No Posts
+            echo json_encode(
+                array('message' => 'false')
+            );
+        }
+    };

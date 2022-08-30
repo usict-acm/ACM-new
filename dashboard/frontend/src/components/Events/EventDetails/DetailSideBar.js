@@ -3,30 +3,49 @@ import { Button } from "reactstrap";
 import "../../../assets/css/events/eventDetails.css";
 import { formatDate } from "utils/commonFunctions";
 import EventCountdown from "./EventCountdown";
-import { registeredStudentDetails } from "api/event";
+import { registeredStudentDetails, fetchRegisteredStatus } from "api/event";
 
 export default function DetailSidebar({ event }) {
   const [registerText, setRegisterText] = useState("Register Now");
-  console.log(event?.sno);
+
+  var UserFetch = JSON.parse(localStorage.getItem("user"));
+  var UserIdFetch = UserFetch.userId;
+
+  var event_Id = event?.eventId;
+  const userData = {
+    id: UserIdFetch,
+    eventId: event_Id,
+  };
+
+  const checkRegisteredStatus = async (userData) => {
+    let registeredStatus = await fetchRegisteredStatus(userData);
+
+    console.log(registeredStatus + "test1");
+    if (registeredStatus === true) {
+      setRegisterText("Registered");
+    } else {
+      setRegisterText("Register Now");
+    }
+  };
+  useEffect(() => {
+    //   let registeredStatus = await fetchRegisteredStatus(userData);
+
+    //   console.log(registeredStatus + "test1");
+    //   if (registeredStatus === true) {
+    //     setRegisterText("Registered");
+    //   } else {
+    //     setRegisterText("Register Now");
+
+    //   }
+
+    checkRegisteredStatus();
+  }, []);
 
   const handleClick = async () => {
-    setRegisterText("Registered");
-    var UserFetch = JSON.parse(localStorage.getItem("user")); /// fetching the whole user from localStorage
-    var UserIdFetch = UserFetch.userId; /// fetching userId from the user object
-    console.log(UserIdFetch);
-
-    var event_Id = event?.eventId;
-
-    console.log(event_Id);
-
-    const userData = {
-      id: UserIdFetch,
-      eventId: event_Id,
-    };
-
     const storeData = await registeredStudentDetails(userData);
-    storeData();
+    // storeData();
   };
+
   return (
     <div className="detailSideBar">
       <div>

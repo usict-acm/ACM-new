@@ -41,18 +41,52 @@ export const fetchSingleEvent = async (eventId) => {
 };
 
 export const registeredStudentDetails = async (body) => {
+  console.log(body.eventId);
   return await fetch(
-    process.env.REACT_APP_BASE_URL + "/api.php?q=registerStudents",
+    process.env.REACT_APP_BASE_URL +
+      "/api.php?q=postDetailDashboard&eventId=" +
+      [body.eventId] +
+      "&userId=" +
+      [body.id],
     {
-      method: "PUT",
+      method: "POST",
       body: JSON.stringify(body),
-      headers: { "content-type": "application/json" },
     }
   )
     .then((res) => res.json())
     .then((res) => {
+      console.log(res.message);
       if (res.message === "success") {
-        return res.event;
+        return true;
+      } else {
+        console.log(res.error || "process failed");
+        return false;
+      }
+    })
+    .catch((err) => {
+      console.log(err.message || "process failed");
+      return false;
+    });
+};
+
+export const fetchRegisteredStatus = async (body) => {
+  return await fetch(
+    process.env.REACT_APP_BASE_URL +
+      "/api.php?q=checkRegisteredStudents" +
+      [body.eventId] +
+      "&userId=" +
+      [body.id],
+    {
+      method: "GET",
+      body: JSON.stringify(body),
+    }
+  )
+    .then((res) => res.json())
+    .then((res) => {
+      console.log(res.message);
+
+      if (res.message === "success") {
+        return true;
       } else {
         console.log(res.error || "process failed");
         return false;
