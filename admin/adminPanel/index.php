@@ -170,6 +170,30 @@
                         case 'formCreation':
                             include('./faqadmin/form-created.php');
                             break;
+                        case 'Certificate':
+                            include('./faqadmin/certificate/admin.php');
+                            break;
+                        case 'Teams':
+                            include('./faqadmin/teams/admin.php');
+                            break;
+                        case 'joinus':
+                            include('./faqadmin/joinus.php');
+                            break;
+                        case 'AddCertificate':
+                            include('./faqadmin/certificate/adminAdd.php');
+                            break;
+                        case 'AddMember':
+                            include('./faqadmin/teams/adminAdd.php');
+                            break;
+                         case 'AddBulkCertificate':
+                            include('./faqadmin/certificate/adminbulkadd.php');
+                            break;
+                        case 'certificateCreation':
+                            include('./faqadmin/certificate/certificate-created.php');
+                            break;
+                        case 'Contactus':
+                            include('./faqadmin/contactusAdmin.php');
+                            break;
                         default:
                             include('./faqadmin/index.php');
                             break;

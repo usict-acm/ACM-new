@@ -9,6 +9,17 @@
         return $event;
     }    
 
+    function utf8ize( $mixed ) {
+        if (is_array($mixed)) {
+            foreach ($mixed as $key => $value) {
+                $mixed[$key] = utf8ize($value);
+            }
+        } elseif (is_string($mixed)) {
+            return mb_convert_encoding($mixed, "UTF-8", "UTF-8");
+        }
+        return $mixed;
+    }
+
     function fetchAllEvents()
     {
         if ($_SERVER['REQUEST_METHOD'] != "GET") {
@@ -17,8 +28,8 @@
         }
         $event = eventInit();        
             $allEvents = $event->fetchAllEvents();
+            $allEventsArr = array();
             if ($allEvents) {       
-                $allEventsArr = array();
                 if ($allEvents->num_rows > 0) {
                     while ($row = $allEvents->fetch_assoc()) {
                         $eventRow = array(
@@ -37,9 +48,9 @@
                         );
                         array_push($allEventsArr, $eventRow);
                     }
-                    echo json_encode(array("message" => "success", "events" => $allEventsArr));
+                    echo json_encode(array('message' => "success", 'events' => utf8ize($allEventsArr)));
                 } else {
-                    echo json_encode(array("error" => "no events found"));
+                    echo json_encode(array('error' => "no events found"));
                 };                                  
             } else {
                 echo json_encode(array('error' => 'Invalid Details'));
@@ -79,7 +90,7 @@
                 echo json_encode(array('error' => 'Invalid Details'));
                 return;
             }
-        }else {
+        } else {
             echo json_encode(array('error' => 'One or more fields are missing.'));
             return;
         }

@@ -23,7 +23,7 @@
                                       <img src='" + row.Image + "' />\
                                         <div class='figcaption'>\
                                           <h2><span>" + row.Title + "</span></h2>" + spanTag + "\
-                                          <p>" + row.Date + "</p>\
+                                          <p>" + row.Date.split(' ')[0] + "</p>\
                                         </div>\
                                       </div>\
                                     </div>";
@@ -59,7 +59,7 @@
             </div>\
             <div class='col-7 rightText'>\
               <h5 id= rightBlog" + index + "_title>" + row.Title + "</h5>\
-              <span id=rightBlog" + index + "_date class='card-span cardDown'>" + row.Date + "</span>\
+              <span id=rightBlog" + index + "_date class='card-span cardDown'>" + row.Date.split(' ')[0] + "</span>\
               <span class='card-span card-span-dot'><i class='fas fa-circle'></i>\
               </span>\
               <span class='card-span cardDown'><i class='fas fa-comments'></i></span>\
@@ -125,7 +125,7 @@
                       <div class=card-body>\
                         <div class=post-meta>\
                           <span id=blog" + index + "_category class=category>" + row.Category + "</span>\
-                          <span id=blog" + index + "_date class=mx-2 card-span>" + row.Date + "</span>\
+                          <span id=blog" + index + "_date class=mx-2 card-span>" + row.Date.split(' ')[0] + "</span>\
                           <span class=mx-2 card-span card-span-dot\
                             ><i class=fas fa-circle></i>\
                           </span>\

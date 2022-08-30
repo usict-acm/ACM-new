@@ -57,7 +57,7 @@ a {
 }
 .common-PageTitle{
      font-weight:300;
-     font-size:45px;
+     font-size:30px;
      line-height:56px;
      color:#32325d;
      letter-spacing:-.01em
@@ -810,7 +810,7 @@ background: url(../images/graph.jpeg);
           background:0 0;
      }
      #address.lazy-bg-loaded .wrapper h2:after{
-          background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='570' height='444.733' viewBox='0 0 570 444.733'%3E%3Cdefs%3E%3Cstyle%3E.a,.d,.f,.g%7Bfill:%23fff;%7D.a%7Bstroke:%23707070;opacity:0;%7D.b,.e,.i%7Bfill:none;%7D.b,.e%7Bstroke:%23fff;stroke-miterlimit:10;%7D.b%7Bstroke-width:8px;%7D.c%7Bfill:%2396c7ff;font-size:18px;letter-spacing:0.097em;%7D.c,.d%7Bfont-family:NunitoSans-SemiBold, Nunito Sans;font-weight:600;%7D.d%7Bfont-size:21px;%7D.d,.e%7Bopacity:0.65;%7D.f,.g%7Bmix-blend-mode:overlay;isolation:isolate;%7D.g%7Bopacity:0.48;%7D.h%7Bstroke:none;%7D%3C/style%3E%3C/defs%3E%3Cg transform='translate(2 -1190.398)'%3E%3Cg class='a' transform='translate(-2 1191.131)'%3E%3Crect class='h' width='570' height='444'/%3E%3Crect class='i' x='0.5' y='0.5' width='569' height='443'/%3E%3C/g%3E%3Cg transform='translate(76.897 1192.126)'%3E%3Cpath class='b' d='M0,278.3a478.716,478.716,0,0,0,54.38-5.618c9.85-1.59,128.465-21.758,202.949-79.978C353.521,117.518,409.536,0,409.536,0' transform='translate(14.565 0) rotate(3)'/%3E%3Cpath class='b' d='M0,18.365,58.563,0,76.927,58.563' transform='translate(365.972 17.477) rotate(1)'/%3E%3C/g%3E%3Ctext class='c' transform='translate(77 1300.131)'%3E%3Ctspan x='0' y='18'%3EONLINE PRESENCE%3C/tspan%3E%3C/text%3E%3Ctext class='d' transform='translate(85.136 1625.077)'%3E%3Ctspan x='0' y='0'%3E2019%3C/tspan%3E%3C/text%3E%3Ctext class='d' transform='translate(398.543 1625.077)'%3E%3Ctspan x='0' y='0'%3E2021%3C/tspan%3E%3C/text%3E%3Cline class='e' x2='429.696' transform='translate(76.897 1598.549)'/%3E%3Crect class='f' width='41.778' height='234.495' transform='translate(437.537 1347.082)'/%3E%3Crect class='g' width='41.778' height='60.055' transform='translate(99.079 1521.521)'/%3E%3C/g%3E%3C/svg%3E") center center/contain no-repeat
+          background:url("../images/About\ us/graph.png") center center/contain no-repeat
      }
      #address .wrapper>div{width:100%}
      #address .wrapper>div h2:after{display:block;content:'';position:relative;width:315px;height:245px;margin:40px auto 30px}
@@ -826,6 +826,10 @@ background: url(../images/graph.jpeg);
           width:768px;
           min-width:100%;
           overflow-x:hidden;
+     }
+     .mobile-view {
+          width: 100%;
+          margin: 0;
      }
 }
 @media only screen and (min-width:769px) and (max-width:1019px){

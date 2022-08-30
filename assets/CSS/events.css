@@ -207,7 +207,7 @@ section {
 
 section {
   width: 100%;
-  height: 100vh;
+  height: 40em;
   background-image: url("../images/FINAL.png");
   background-size: cover;
 }
@@ -219,7 +219,7 @@ section .leftBox {
   box-sizing: border-box;
 }
 section .leftBox .content {
-  height: 30%;
+  height: 10em;
   color: #fff;
   background: rgba(0,0,0,.5);
   padding: 7px 30px;
@@ -240,7 +240,7 @@ section .leftBox .content p{
 }
 
 section .leftBox .live-event {
-  height: 68%;
+  height: 20em;
   margin-top: 2%;
   padding: 0px;
   width: 100%;
@@ -316,7 +316,7 @@ section .leftBox .live-event {
 
 
 .carousel-item {
-  margin-top: 5%;
+  margin-top: 1em;
 }
 
   .carousel-inner {
@@ -324,20 +324,13 @@ section .leftBox .live-event {
   }
   
   .live-carousel-img {
-    padding-top: 2%;
     width: 50%;
-    height: 48vh;
   }
-
-.live-carousel-img {
-  width: 50%;
-  height: 50vh;
-}
 
 section .events {
   position: relative;
   width: 50%;
-  height: 100%;
+  height: 31em;
   background: rgba(0, 0, 0, 0.5);
   float: right;
   box-sizing: border-box;
@@ -360,7 +353,7 @@ section .events ul li {
   list-style: none;
   background: #fff;
   box-sizing: border-box;
-  height: 24vh;
+  height: 11em;
   /* margin: 15px 0;  */
 }
 section .events ul li .time {
@@ -512,11 +505,11 @@ section .events ul li .details a:hover {
 @media (max-width: 449px) {
   section {
     width: 100%;
-    height: 130vh;
+    height: 40em;
   }
 
   section .leftBox {
-    width: 109%;
+    width: 105%;
     height: auto;
     padding: 0px 0px 10px 0px;
     box-sizing: border-box;
@@ -527,23 +520,23 @@ section .events ul li .details a:hover {
     padding-bottom: 10px;
   }
   .live-carousel-img {
-    width: 100%;
-    height: 22rem;
-    padding-top: 1rem;
+    width: 70%;
+    /* height: 2em; */
+    /* padding-top: 1rem; */
   }
   section .events {
     position: relative;
-    width: 110%;
-    height: 140vh;
+    width: 108%;
+    /* height: 140vh; */
     margin: 20px -30px 0px 0px;
     background-image: url("../images/eventsbackground.jpg");
     box-sizing: border-box;
   }
   section .events ul {
-    position: absolute;
+    /* position: absolute; */
     width: 90%;
-    top: 70%;
-    transform: translateY(-70%);
+    /* top: 70%; */
+    /* transform: translateY(-70%); */
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -552,7 +545,7 @@ section .events ul li .details a:hover {
     list-style: none;
     background: #fff;
     box-sizing: border-box;
-    height: 280px;
+    height: 14em;
     /* margin: 15px 0; */
   }
   section .events ul li .time h2 {
@@ -582,6 +575,12 @@ section .events ul li .details a:hover {
   }
   .pt-card {
     margin-top: 10px;
+  }
+  section .leftBox .content p {
+    font-size: 14px;
+  }
+  section .leftBox .content h1 {
+    font-size: 20px;
   }
 }
 

@@ -289,6 +289,7 @@ input[type=number] {
 }
 
 .test-dev1 {
+  margin: 0;
   align-items: center;
 }
 
@@ -1023,6 +1024,9 @@ ul {
   .md-text-custom {
     font-size: 14px;
   }
+  .mobile-view {
+    width: 100%;
+  }
 }
 
 .perk-card {
@@ -1112,12 +1116,11 @@ ul {
 
 /* ********************************************************************WINNERS******************************************************* */
 .winnerInnerDiv img {
-  width: 100%;
-  border-radius: 1rem;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  height: 14rem;
-}
+  
+  border-radius: 100%;
+  }
+
+
 
 .winners {
   position: relative;
@@ -1136,8 +1139,205 @@ ul {
   color: #0297ff;
   font-weight: 500;
 }
+.innerContent h1 {
+  font-weight: normal;
+  color: #eee;
+  font-size: 34px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transition: 300ms ease-in-out;
+}
+/* .innerContent h3 {
+  color: rgb(138, 138, 138) !important;
+} */
+.innerContent h2 {
+  font-weight: normal;
+  color: #ddd;
+  font-size: 28px;
+  margin: 10px 0;
+}
 
-.winnerInnerDiv {
+.outerContent h3{
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  align-items: center;
+  height: 18%;
+}
+
+.winnerContainer {
+  position: relative;
+  height: 550px;
+  padding-top: 70px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* overflow: hidden; */
+  max-width: 100%;
+}
+.winnerOne:not(:last-child){
+  margin-right: 50px;
+}
+.winnerOne {
+  height: 400px !important;
+  box-shadow: 5px 5px 20px #0e8e96;
+  background-color: #0e8e96;
+  position: relative;
+  border-radius: 25px;
+  width: 280px !important;
+  z-index: 1;
+  flex-shrink: 0;
+}
+/* .winnerContainer  {
+  box-shadow: 10px 10px 40px #0e8e96;
+  background-color: #0e8e96;
+  position: relative;
+  border-radius: 25px;
+  width: 350px !important;
+  height: 500px !important;
+  overflow: hidden;
+  z-index: 1;
+  flex-shrink: 0;
+} */
+.circleCard {
+  border-radius: 25px;
+}
+
+.eventName{
+  height: 40px !important;
+  width: 285px !important;
+}
+
+.winnerOne .eventName {
+  position: relative;
+  top: 20%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  transition: 300ms ease-in-out;
+}
+.winnerOne .eventName img {
+  position: relative;
+  /* height: 10vh;
+  width: 10vh; */
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  transition: 300ms ease-in-out;
+
+  border-radius: 100%;
+}
+.eventName img {
+  padding: 5px !important;
+}
+.winnerOne:hover .eventName img {
+  width: 100px;
+  height: 100px;
+  transform: rotate(-360deg);
+}
+.winnerOne .circleCard {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  clip-path: circle(250px at 50% -2%);
+  transition: 300ms ease-in-out;
+}
+.winnerOne:hover .circleCard {
+  clip-path: circle(170px at 50% -20%);
+}
+.winnerOne:hover .eventName {
+  top: 10%;
+}
+.winnerOne .innerContent {
+  position: absolute;
+  bottom: 10%;
+  transform: translatey(50%);
+  width: 100%;
+  text-align: center;
+  transition: 300ms;
+  opacity: 0;
+}
+.winnerOne:hover .innerContent {
+  bottom: 45%;
+  opacity: 1;
+}
+.winnerOne .innerContent div {
+  margin: 10px 0 20px 0;
+}
+.winnerOne .innerContent span {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #111;
+  transition: 90ms ease-in-out;
+}
+.winnerOne:hover> .outerContent > h3{
+  display: none;
+}
+.winnerOne .innerContent .spanGreen:hover {
+  background-color: #7cad22;
+  color: #eee;
+  cursor: pointer;
+}
+.winnerOne .innerContent .spanBlue:hover {
+  background-color: #1e4789;
+  color: #eee;
+  cursor: pointer;
+}
+.winnerOne .innerContent .spanRed:hover {
+  background-color: #b70c0c;
+  color: #eee;
+  cursor: pointer;
+}
+.winnerOne .innerContent .spanGreen {
+  border: solid 1px #7cad22;
+}
+.winnerOne .innerContent .spanBlue {
+  border: solid 1px #2256aa;
+}
+.winnerOne .innerContent .spanRed {
+  border: solid 1px #e02121;
+}
+.winnerOne .innerContent .separator {
+  border-bottom: solid 1px #777;
+  margin: 30px;
+}
+.winnerOne .innerContent a {
+  padding: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #eee;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.winnerOne .innerContent .btnGreen {
+  background-color: #7cad22;
+}
+.winnerOne .innerContent .btnBlue {
+  background-color: #2256aa;
+}
+.winnerOne .innerContent .btnRed {
+  background-color: #e02121;
+}
+.winnerOne .innerContent .btnGreen:hover {
+  background-color: #7cad22bb;
+}
+.winnerOne .innerContent .btnBlue:hover {
+  background-color: #2256aabb;
+}
+.winnerOne .innerContent .btnRed:hover {
+  background-color: #e02121bb;
+}
+.winnerOne:hover .innerContent h1 {
+  opacity: 1;
+}
+
+
+/* .winnerInnerDiv {
   position: relative;
   box-shadow: 0 0 0.3rem 0 BLACK;
   border-radius: 1rem;
@@ -1158,21 +1358,21 @@ ul {
   font-size: 1.3rem;
   font-weight: 600;
   color: white;
-}
+} */
 
 .winners h4 {
   font-size: 1rem;
   color: white;
 }
 
-.winnerDetails>.col {
+/* .winnerDetails>.col {
   display: flex;
   align-items: center;
   height: 100px;
   justify-content: center;
   flex-direction: column;
   padding-top: 0;
-}
+} */
 
 .winners #overlay {
   position: absolute;
@@ -1185,14 +1385,15 @@ ul {
   transition: all 0.5s ease;
 }
 
-.winnerInnerDiv:hover #overlay {
-  opacity: 1;
-}
 
-.fa-crown {
+/* .winnerInnerDiv:hover #overlay {
+  opacity: 1;
+} */
+
+/* .fa-crown {
   color: #f9b605;
   transform: rotate(-45deg);
-}
+} */
 
 .line {
   width: 15%;
@@ -1217,7 +1418,7 @@ ul {
 }
 
 .glider {
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 .winnerOut {
@@ -1227,11 +1428,16 @@ ul {
 .alumni-prev1 {
   color: #0297ff !important;
   font-weight: 700 !important;
+  margin-top: 85px;
 }
 
+/* .winnerNav{
+  max-width: 100%;
+} */
 .alumni-next1 {
   color: #0297ff !important;
   font-weight: 700 !important;
+  margin-top: 85px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -1315,7 +1521,7 @@ ul {
   text-align: left;
   margin: 20px auto 40px auto;
 
-  color: #0297ff;
+  /* color: #0297ff; */
 }
 
 .blue-hr {
@@ -1992,10 +2198,6 @@ body.search-open #search .search-suggestion:nth-child(3) {
   .leaders {
     margin-left: -5% !important;
   }
-}
-
-.signin {
-  margin-left: 15% !important;
 }
 
 #widget-contact-form {
