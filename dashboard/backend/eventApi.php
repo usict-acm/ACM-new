@@ -132,7 +132,7 @@
         $userId = $_GET['userId'];
         $eventId = $_GET['eventId'];
     
-        $sql = "SELECT * from dashboard_event_participant WHERE eventId='$eventId' AND userID='$userId'";
+        $sql = "SELECT * from dashboard_event_participant WHERE eventId='$eventId' AND userId='$userId'";
         $result = mysqli_query($db,$sql);
         // Check if any posts
         

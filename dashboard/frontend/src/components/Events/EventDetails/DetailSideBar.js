@@ -7,6 +7,7 @@ import { registeredStudentDetails, fetchRegisteredStatus } from "api/event";
 
 export default function DetailSidebar({ event }) {
   const [registerText, setRegisterText] = useState("Register Now");
+  const [buttonStatus, setButtonStatus] = useState("unchecked");
 
   var UserFetch = JSON.parse(localStorage.getItem("user"));
   var UserIdFetch = UserFetch.userId;
@@ -17,8 +18,18 @@ export default function DetailSidebar({ event }) {
     eventId: event_Id,
   };
 
-  const checkRegisteredStatus = async (userData) => {
-    let registeredStatus = await fetchRegisteredStatus(userData);
+  let stateChange = "yes";
+
+  const checkRegisteredStatus = async () => {
+    var UserFetch1 = JSON.parse(localStorage.getItem("user"));
+    var UserIdFetch1 = UserFetch1.userId;
+
+    var event_Id1 = event?.eventId;
+    const userCheck = {
+      id: UserIdFetch1,
+      eventId: event_Id1,
+    };
+    const registeredStatus = await fetchRegisteredStatus(userCheck);
 
     console.log(registeredStatus + "test1");
     if (registeredStatus === true) {
@@ -27,24 +38,27 @@ export default function DetailSidebar({ event }) {
       setRegisterText("Register Now");
     }
   };
-  useEffect(() => {
-    //   let registeredStatus = await fetchRegisteredStatus(userData);
-
-    //   console.log(registeredStatus + "test1");
-    //   if (registeredStatus === true) {
-    //     setRegisterText("Registered");
-    //   } else {
-    //     setRegisterText("Register Now");
-
-    //   }
-
-    checkRegisteredStatus();
-  }, []);
 
   const handleClick = async () => {
     const storeData = await registeredStudentDetails(userData);
+    setButtonStatus("checked");
+
     // storeData();
   };
+
+  useEffect(() => {
+    //   //   let registeredStatus = await fetchRegisteredStatus(userData);
+
+    //   //   console.log(registeredStatus + "test1");
+    //   //   if (registeredStatus === true) {
+    //   //     setRegisterText("Registered");
+    //   //   } else {
+    //   //     setRegisterText("Register Now");
+
+    //   //   }
+    console.log("check");
+    checkRegisteredStatus();
+  }, [buttonStatus]);
 
   return (
     <div className="detailSideBar">

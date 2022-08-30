@@ -72,12 +72,12 @@ export const registeredStudentDetails = async (body) => {
 export const fetchRegisteredStatus = async (body) => {
   return await fetch(
     process.env.REACT_APP_BASE_URL +
-      "/api.php?q=checkRegisteredStudents" +
+      "/api.php?q=checkRegisteredStudents&eventId=" +
       [body.eventId] +
       "&userId=" +
       [body.id],
     {
-      method: "GET",
+      method: "POST",
       body: JSON.stringify(body),
     }
   )
