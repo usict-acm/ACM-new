@@ -36,7 +36,7 @@
                             "eventId" => $row["sno"],
                             "eventName" => $row["name"],
                             "eventDescription" => $row["description"],
-                            "regLink" => $row["regLink"],
+                            // "regLink" => $row["regLink"],
                             "startDate" => $row["startDate"],
                             "endDate" => $row["endDate"],
                             "viewResource" => $row["viewResource"],
@@ -44,7 +44,7 @@
                             "speakers" => $row["speakers"],
                             "poster" => $row["poster"],
                             "time" => $row["time"],
-                            "registeredStudents" => $row["registeredStudents"]
+                            // "registeredStudents" => $row["registeredStudents"]
                         );
                         array_push($allEventsArr, $eventRow);
                     }
@@ -75,7 +75,7 @@
                         "eventId" => $singleEvent["sno"],
                         "eventName" => $singleEvent["name"],
                         "eventDescription" => $singleEvent["description"],
-                        "regLink" => $singleEvent["regLink"],
+                        // "regLink" => $singleEvent["regLink"],
                         "startDate" => $singleEvent["startDate"],
                         "endDate" => $singleEvent["endDate"],
                         "viewResource" => $singleEvent["viewResource"],
@@ -83,7 +83,7 @@
                         "speakers" => $singleEvent["speakers"],
                         "poster" => $singleEvent["poster"],
                         "time" => $singleEvent["time"],
-                        "registeredStudents" => $singleEvent["registeredStudents"]
+                        // "registeredStudents" => $singleEvent["registeredStudents"]
                     )
                 ));
             } else {
