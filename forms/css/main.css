@@ -182,10 +182,7 @@ iframe {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background: -webkit-linear-gradient(45deg, #00dbde, #0397fe);
-    background: -o-linear-gradient(45deg, #00dbde, #0397fe);
-    background: -moz-linear-gradient(45deg, #00dbde, #0397fe);
-    background: linear-gradient(45deg, #00dbde, #0397fe)
+    background-color: rgb(213 255 253);
 }
 
 .wrap-contact100 {

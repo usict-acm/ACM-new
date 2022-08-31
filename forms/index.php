@@ -14,13 +14,26 @@
     />
   <link rel="icon" type="image/png" href="images/icons/favicon.png" />
 
-
+    <style>
+      .checkboxDiv{
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        font: inherit;
+        color: #212529;
+      }
+      .fileButton{
+        font-size: 1rem;
+        font-family: inherit;
+      }
+    </style>
     <meta name="robots" content="noindex, follow" />
   </head>
 
   <body>
     <div class="container-contact100">
-      <div class="wrap-contact100">
+      <div style="background-color: rgb(213 255 253);" class="wrap-contact100">
         <form class="contact100-form validate-form" id="formPage">
 
 
@@ -58,7 +71,14 @@
         // divTag.innerHTML += `    `;
 
         // divTag.innerHTML += ` <span> <h5 id="formTitle" class = "contact100-form-title">${data[0].formName}<h5></span>`;
-        divTag.innerHTML += `<span id="formTitle" class="contact100-form-title"> ${data[0].formName} </span>`;
+        divTag.innerHTML += `<span id="formTitle" 
+        style="   
+          background: rgb(3 151 254);
+          padding: 30px;
+          border-radius: 8px;
+          margin-bottom: 30px;
+          color: white;"
+          class="contact100-form-title"> ${data[0].formName} </span>`;
         for (let i = 0; i < data.length; i++) {
           // console.log(data[i].fieldType);
           if (data[i].fieldType == "shortAns") {
@@ -68,26 +88,29 @@
 
           //  Short ans type *******************************************************************************          
             if (data[i].required == 1) {
-              divTag.innerHTML += ` <div class='wrap-input100 validate-input'>
-                                      <span class='label-input100'>Your Name</span>
+              divTag.innerHTML += ` <div class='wrap-input100 validate-input' style="background-color: #ffffff;padding: 30px;border-radius: 8px;margin-bottom: 30px;">
+                                      <span class='label-input100' style="color: #212529;font: inherit;">Your Name</span>
                                       <input
                                         id="field${i}"
                                         class='input100'
                                         type='text'
                                         name='name'
+                                        style = "border-bottom: 1px solid grey;"
                                         placeholder="${data[i].fieldName} *"
                                         required
                                       />
                                       <span class='focus-input100'></span>
                                     </div>`;
             } else {
-              divTag.innerHTML += ` <div class='wrap-input100 validate-input'>
+              divTag.innerHTML += ` <div class='wrap-input100 validate-input' style="background-color: #ffffff;padding: 30px;border-radius: 8px;margin-bottom: 30px;">
                                       <span class='label-input100'>Your Name</span>
                                       <input
                                         id="field${i}"
+                                        style="color: #212529;font: inherit;"
                                         class='input100'
                                         type='text'
                                         name='name'
+                                        style = "border-bottom: 1px solid grey;"
                                         placeholder="${data[i].fieldName} "
                                       />
                                       <span class='focus-input100'></span>
@@ -102,11 +125,12 @@
                                     <p style="color:red;">This field is required</pThis>
                                     </div>`;
             if (data[i].required == 1) {
-              divTag.innerHTML += `          <div class="wrap-input100 validate-input" >
-                                              <span class="label-input100">Message</span>
+              divTag.innerHTML += `          <div class="wrap-input100 validate-input" style="background-color: #ffffff;padding: 30px;border-radius: 8px;margin-bottom: 30px;">
+                                              <span style="font: inherit;color: #000000;" class="label-input100">Message</span>
                                               <textarea
                                                 class="input100"
                                                 name="message"
+                                                style = "border-bottom: 1px solid grey;"
                                                 placeholder="${data[i].fieldName} *"
                                                 id="field${i}"
                                                 rows="3"
@@ -117,10 +141,11 @@
 
 
             } else {
-            divTag.innerHTML += `          <div class="wrap-input100 validate-input" >
-                                              <span class="label-input100">Message</span>
+            divTag.innerHTML += `          <div class="wrap-input100 validate-input" style="background-color: #ffffff;padding: 30px;border-radius: 8px;margin-bottom: 30px;">
+                                              <span style="font: inherit;color: #000000;" class="label-input100">Message</span>
                                               <textarea
                                                 class="input100"
+                                                style = "border-bottom: 1px solid grey;"
                                                 name="message"
                                                 placeholder="${data[i].fieldName} "
                                                 id="field${i}"
@@ -139,11 +164,12 @@
                                       <p style="color:red;">This field is required</p>
                                       </div>`;
             if (data[i].required == 1) {
-              divTag.innerHTML += `           <div class="wrap-input100 validate-input">
-                                                <span class="label-input100" for="myfile">Select a file: *</span>
+              divTag.innerHTML += `           <div class="wrap-input100 validate-input" style="background-color:#ffffff;padding: 30px;border-radius: 8px;margin-bottom: 30px;">
+                                                <label style="font: inherit;color: #212529;" class="label-input100" for="myfile">Select a file * :</label>
                                                 <input
-                                                  class="input100"
+                                                  class="input100 fileButton"
                                                   type="file"
+                                                  style="margin-top: 10px;"
                                                   id="field${i}"
                                                   name="myfile"
                                                   required
@@ -151,11 +177,12 @@
                                                 <span class="focus-input100"></span>
                                               </div>`;
             } else {
-              divTag.innerHTML += `           <div class="wrap-input100 validate-input">
-                                                <span class="label-input100" for="myfile">Select a file: </span>
+              divTag.innerHTML += `           <div class="wrap-input100 validate-input" style="background-color:#ffffff;padding: 30px;border-radius: 8px;margin-bottom: 30px;">
+                                                <span style="font: inherit;color: #212529;" class="label-input100" for="myfile">Select a file: </span>
                                                 <input
-                                                  class="input100"
-                                                  type="file"
+                                                  class="input100 fileButton"
+                                                  type="file"]
+                                                  style="margin-top: 10px;"
                                                   id="field${i}"
                                                   name="myfile"
                                                 />
@@ -163,11 +190,6 @@
                                               </div>`;
             }
           }
-
-
-
-
-
 
           //Checkbox ans type *******************************************************************************
           else if (data[i].fieldType == "checkbox") {
@@ -181,7 +203,6 @@
             newDiv2.classList.add("checkboxDiv");
             newDiv2.id= `field${i}`;
             if (data[i].required == 1) {
-              // divTag.innerHTML += `<div class = "form-group checkboxDiv" id="field${i}"  style="margin-bottom:0px;"><p class="checkboxLabel" style="margin-bottom:0px;">${data[i].fieldName} *</p>`;
               newDiv2.innerHTML += ` ${data[i].fieldName} * : &nbsp;&nbsp;&nbsp;`;
             } else {
               newDiv2.innerHTML += ` ${data[i].fieldName}  : &nbsp;&nbsp;&nbsp;`;
@@ -190,25 +211,14 @@
             // console.log(nameArr[0]);
             console.log(nameArr); 
             for (let j = 0; j < nameArr.length; j++) {
-              // divTag.innerHTML += `<input type="checkbox" id="field${i}${j}"  name="Checkbox1" value="${nameArr[j]}" class="checkbox checkboxDesign">
-              //     <label for="vehicle1" class="checkboxName">${nameArr[j]} </label><br> `;
-              newDiv2.innerHTML += `<div style="margin-left: 20px"> <input type="checkbox" id="field${i}${j}" value="${nameArr[j]}"  name="Checkbox1"  class="checkbox checkboxDesign" /> ${nameArr[j]} </div> `;
-
-                  // if(j==nameArr.length - 1){
-                  //     newDiv2.innerHTML += `<br><br>`;
-                    
-                  // }
+              if(j==0)
+                newDiv2.innerHTML += `<div style="margin-left: 20px;margin-top: 20px;"> <input type="checkbox" id="field${i}${j}" value="${nameArr[j]}"  name="Checkbox1"  class="checkbox checkboxDesign" /> ${nameArr[j]} </div> `;
+              else
+                newDiv2.innerHTML += `<div style="margin-left: 20px"> <input type="checkbox" id="field${i}${j}" value="${nameArr[j]}"  name="Checkbox1"  class="checkbox checkboxDesign" /> ${nameArr[j]} </div> `;
             }
-            // divTag.innerHTML += newDiv;
             newDiv.appendChild(newDiv2);
             divTag.appendChild(newDiv);
-            // divTag.innerHTML += `</div><br><br>`;
-
           } 
-          
-          
-          
-          
           
           //Radio ans type *******************************************************************************
           
@@ -221,41 +231,31 @@
             newDiv.innerHTML =  `<div class="fieldCheckRadio" id="fieldRequiredRadio${i}" style=display:none;>
                                     <p style="color:red;">This field is required</p>
                                     </div>`;
-            // console.log(nameArr);
             if (data[i].required == 1) {
               newDiv.innerHTML += ` ${data[i].fieldName} * : &nbsp;&nbsp;&nbsp;`;
-              //divTag.innerHTML += `<div id="field${i}" class= "form-group  checkboxDiv" style="margin-bottom:0px;"><p style="margin-bottom:0px;" class="checkboxLabel">${data[i].fieldName} *</p> `
-            } else {
-              //divTag.innerHTML += `<div id="field${i}" class= "form-group  checkboxDiv" style="margin-bottom:0px;"><p style="margin-bottom:0px;" class="checkboxLabel">${data[i].fieldName} </p> `;
-              newDiv.innerHTML += ` ${data[i].fieldName} : &nbsp;&nbsp;&nbsp;`;
             }
+            else
+              newDiv.innerHTML += ` ${data[i].fieldName} : &nbsp;&nbsp;&nbsp;`;
+            
 
             for (let j = 0; j < nameArr.length; j++) {
-
-              // if (j === 0) {
-              // divTag.innerHTML += `<form>`;
-              // }
-              newDiv.innerHTML += `<div style="margin-left: 20px">
+              if(j==0)
+                {
+                  newDiv.innerHTML += `<div style="margin-left: 20px;margin-top: 20px;">
                                    <input type="radio" id="field${i}${j}" name="radioButton${i1}" value="${nameArr[j]}" class="checkbox checkboxDesign">
                                    <label class="radioName" for="field${i}${j}">${nameArr[j]} </label>
                                    </div>`;
-              // if (j === nameArr.length - 1) {
-              //   divTag.innerHTML += `<br></form>`;
-              // }
-              // if(j==nameArr.length - 1){
-              //         newDiv.innerHTML += `<br/><br/>`;
-                    
-              //     }
+                }
+                else{
+                  newDiv.innerHTML += `<div style="margin-left: 20px">
+                                   <input type="radio" id="field${i}${j}" name="radioButton${i1}" value="${nameArr[j]}" class="checkbox checkboxDesign">
+                                   <label class="radioName" for="field${i}${j}">${nameArr[j]} </label>
+                                   </div>`;
+                }
             }
             i1++;
             divTag.appendChild(newDiv);
-            //divTag.innerHTML += `</div>`;
           }
-
-
-
-
-
 
           //Dropdown ans type *******************************************************************************
           // else if (data[i].fieldType == "radioAns") {
