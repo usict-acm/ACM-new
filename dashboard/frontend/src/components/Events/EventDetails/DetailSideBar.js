@@ -92,20 +92,20 @@ export default function DetailSidebar({ event }) {
         </div>
 
         <div className="buttons ">
-          {event?.regLink && (
-            // <a href={event?.regLink} target="_blank" rel="noopener noreferrer">
-            <Button
-              className={
-                ("eventBtn" + event?.viewResource ? "mr-3" : "") +
-                (buttonStatus === "unchecked" ? "" : " button-disabled")
-              }
-              color="info"
-              onClick={handleClick}
-            >
-              {registerText}
-            </Button>
-            // </a>
-          )}
+          {/* {event?.regLink && ( */}
+          {/* // <a href={event?.regLink} target="_blank" rel="noopener noreferrer"> */}
+          <Button
+            className={
+              ("eventBtn" + event?.viewResource ? "mr-3" : "") +
+              (buttonStatus === "unchecked" ? "" : " button-disabled")
+            }
+            color="info"
+            onClick={handleClick}
+          >
+            {registerText}
+          </Button>
+          {/* // </a> */}
+          {/* )} */}
           {event?.viewResource && (
             <a
               href={event?.viewResource}
