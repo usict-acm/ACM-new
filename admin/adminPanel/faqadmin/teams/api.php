@@ -2,7 +2,8 @@
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
-include_once '../blogAdmin/database.php';
+//require('../blogAdmin/database.php');
+include_once './database.php';
 include_once './member.php';
 
 $method = $_SERVER['REQUEST_METHOD'];
@@ -76,8 +77,9 @@ function postMember()
         $fileextstored = array('png', 'jpg', 'jpeg');
 
         if (in_array($filecheck, $fileextstored)) {
-            $destinationfile = 'upload/teams/' . $filename;
-            $uploadLocation = '../../upload/teams/' . $filename;
+            $destinationfile = 'teams/upload' . $filename;
+           // C:\xampp\htdocs\ACM-new\admin\adminPanel\faqadmin\teams\upload
+            $uploadLocation = './upload/' . $filename;
             move_uploaded_file($filetemppath, $uploadLocation);
 
             $sql = "INSERT INTO `team` (`image`, `name`, `designation`, `linkedin`, `github`, `instagram`, `year`, `category`, `added_on`) VALUES ('$destinationfile', '$name', '$designation', '$linkedin', '$github', '$instagram', '$year', '$category' , current_timestamp());";
@@ -91,7 +93,7 @@ function postMember()
             echo json_encode("Image extension not valid!");
         }
     } else {
-        $destinationfile = 'upload/teams/default.png';
+        $destinationfile = 'faqadmin/teams/upload/default.png';
         
         $sql = "INSERT INTO `team` (`image`, `name`, `designation`, `linkedin`, `github`, `instagram`, `year`, `category`, `added_on`) VALUES ('$destinationfile', '$name', '$designation', '$linkedin', '$github', '$instagram', '$year', '$category' , current_timestamp());";
 
