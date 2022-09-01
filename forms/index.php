@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Forms</title>
+    <title>GGSIP University USS ACM Student Chapter</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="./css/select2.min.css" />
@@ -27,6 +27,26 @@
         font-size: 1rem;
         font-family: inherit;
       }
+      ::-webkit-file-upload-button {
+        /* margin-top: 5px; */
+    /* margin-bottom: 5px; */
+    /* display: block; */
+    /* box-sizing: border-box; */
+    appearance: none;
+    background-color: rgb(3 151 254);
+    border: 2px solid rgb(3 151 254);
+    border-radius: 0.6em;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    transition: all 150ms ease-in-out;
+}
     </style>
     <meta name="robots" content="noindex, follow" />
   </head>
@@ -82,28 +102,27 @@
         for (let i = 0; i < data.length; i++) {
           // console.log(data[i].fieldType);
           if (data[i].fieldType == "shortAns") {
-            divTag.innerHTML += `<div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
-                                      <p style="color:red;">This field is required</p>
-                                      </div>`;
-
           //  Short ans type *******************************************************************************          
             if (data[i].required == 1) {
               divTag.innerHTML += ` <div class='wrap-input100 validate-input' style="background-color: #ffffff;padding: 30px;border-radius: 8px;margin-bottom: 30px;">
-                                      <span class='label-input100' style="color: #212529;font: inherit;">Your Name</span>
+              <div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
+                                      <p style="color:red;">This field is required</p>
+                                      </div>                        
+              <span class='label-input100' style="color: #212529;font: inherit;">${data[i].fieldName} * :</span>
                                       <input
                                         id="field${i}"
                                         class='input100'
                                         type='text'
                                         name='name'
                                         style = "border-bottom: 1px solid grey;"
-                                        placeholder="${data[i].fieldName} *"
+                                        placeholder="Type your answer here"
                                         required
                                       />
                                       <span class='focus-input100'></span>
                                     </div>`;
             } else {
               divTag.innerHTML += ` <div class='wrap-input100 validate-input' style="background-color: #ffffff;padding: 30px;border-radius: 8px;margin-bottom: 30px;">
-                                      <span class='label-input100'>Your Name</span>
+                                      <span class='label-input100' style="color: #212529;font: inherit;">${data[i].fieldName}:</span>
                                       <input
                                         id="field${i}"
                                         style="color: #212529;font: inherit;"
@@ -111,7 +130,7 @@
                                         type='text'
                                         name='name'
                                         style = "border-bottom: 1px solid grey;"
-                                        placeholder="${data[i].fieldName} "
+                                        placeholder="Type your answer here"
                                       />
                                       <span class='focus-input100'></span>
                                     </div>`;
@@ -121,17 +140,17 @@
 
           //  Long ans type *******************************************************************************
           else if (data[i].fieldType == "paraAns") {
-            divTag.innerHTML += `<div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
-                                    <p style="color:red;">This field is required</pThis>
-                                    </div>`;
             if (data[i].required == 1) {
-              divTag.innerHTML += `          <div class="wrap-input100 validate-input" style="background-color: #ffffff;padding: 30px;border-radius: 8px;margin-bottom: 30px;">
-                                              <span style="font: inherit;color: #000000;" class="label-input100">Message</span>
+              divTag.innerHTML += `   <div class="wrap-input100 validate-input" style="background-color: #ffffff;padding: 30px;border-radius: 8px;margin-bottom: 30px;">
+              <div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
+                                    <p style="color:red;">This field is required</pThis>
+                                    </div>
+                                              <span style="font: inherit;color: #000000;" class="label-input100">${data[i].fieldName} * :</span>
                                               <textarea
                                                 class="input100"
                                                 name="message"
                                                 style = "border-bottom: 1px solid grey;"
-                                                placeholder="${data[i].fieldName} *"
+                                                placeholder="Type your answer here"
                                                 id="field${i}"
                                                 rows="3"
                                                 required
@@ -142,12 +161,12 @@
 
             } else {
             divTag.innerHTML += `          <div class="wrap-input100 validate-input" style="background-color: #ffffff;padding: 30px;border-radius: 8px;margin-bottom: 30px;">
-                                              <span style="font: inherit;color: #000000;" class="label-input100">Message</span>
+                                              <span style="font: inherit;color: #000000;" class="label-input100">${data[i].fieldName}:</span>
                                               <textarea
                                                 class="input100"
                                                 style = "border-bottom: 1px solid grey;"
                                                 name="message"
-                                                placeholder="${data[i].fieldName} "
+                                                placeholder="Type your answer here"
                                                 id="field${i}"
                                                 rows="3"
                                               ></textarea>
@@ -160,12 +179,12 @@
           
           //  File ans type *******************************************************************************
           else if (data[i].fieldType == "fileAns") {
-            divTag.innerHTML += `<div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
-                                      <p style="color:red;">This field is required</p>
-                                      </div>`;
             if (data[i].required == 1) {
-              divTag.innerHTML += `           <div class="wrap-input100 validate-input" style="background-color:#ffffff;padding: 30px;border-radius: 8px;margin-bottom: 30px;">
-                                                <label style="font: inherit;color: #212529;" class="label-input100" for="myfile">Select a file * :</label>
+              divTag.innerHTML += `<div class="wrap-input100 validate-input" style="background-color:#ffffff;padding: 30px;border-radius: 8px;margin-bottom: 30px;">
+              <div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
+                                    <p style="color:red;">This field is required</pThis>
+                                    </div>
+              <label style="font: inherit;color: #212529;" class="label-input100" for="myfile">Select a file * :</label>
                                                 <input
                                                   class="input100 fileButton"
                                                   type="file"
@@ -181,29 +200,28 @@
                                                 <span style="font: inherit;color: #212529;" class="label-input100" for="myfile">Select a file: </span>
                                                 <input
                                                   class="input100 fileButton"
-                                                  type="file"]
+                                                  type="file"
                                                   style="margin-top: 10px;"
                                                   id="field${i}"
                                                   name="myfile"
                                                 />
-                                                <span class="focus-input100"></span>
+                                                <span class="focus-input100" style></span>
                                               </div>`;
             }
           }
 
           //Checkbox ans type *******************************************************************************
           else if (data[i].fieldType == "checkbox") {
-            var nameArr = (data[i].ifCheckbox).split(',');
-            divTag.innerHTML += `<div class="fieldCheckCheckbox" id="fieldRequiredCheck${i}" style=display:none;>
-                                    <p style="color:red;">This field is required</p>
-                                    </div>`;  
+            var nameArr = (data[i].ifCheckbox).split(',');  
             let newDiv = document.createElement("div") ;
             let newDiv2 = document.createElement("div") ;
             newDiv2.classList.add("wrap-input100");
             newDiv2.classList.add("checkboxDiv");
             newDiv2.id= `field${i}`;
             if (data[i].required == 1) {
-              newDiv2.innerHTML += ` ${data[i].fieldName} * : &nbsp;&nbsp;&nbsp;`;
+              newDiv2.innerHTML += ` <div class="fieldCheckCheckbox" id="fieldRequiredCheck${i}" style=display:none;>
+                                    <p style="color:red;">This field is required</p>
+                                    </div>${data[i].fieldName} * : &nbsp;&nbsp;&nbsp;`;
             } else {
               newDiv2.innerHTML += ` ${data[i].fieldName}  : &nbsp;&nbsp;&nbsp;`;
 
@@ -356,7 +374,8 @@
               var filerequired = $(`#${fieldRequired}`).get(0).files;
               // var file = $(`#${field}`).get(0).files;
               // console.log(file[0]);
-              var input = document.getElementById("field"+i);
+              var input = document.getElementById(field);
+              console.log(field, input);
               file = input.files[0];
 
 
