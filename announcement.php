@@ -62,7 +62,7 @@
         $query = 'SELECT * FROM event ORDER BY endDate DESC LIMIT 0,1';
         $result = mysqli_query($db, $query);
 
-        echo "<section class='announcement tag'>";
+        echo "<section class='announcement'>";
             echo "<h2 class='mb-4 display-4 fw-bolder text-center'>Announcements</h2>";
             echo "<div class='container-fluid text overflow-hidden'>";
             echo "<div class='swiper mySwiper'>";
