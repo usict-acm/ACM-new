@@ -20,7 +20,7 @@
 
     $value = explode(" ", $formName);
     $formName = join("_", $value);
-    $formName = "responses_".$formName;
+    $formName = "Responses_".$formName;
 
     $sql2 = "SELECT COLUMN_NAME
     FROM INFORMATION_SCHEMA.COLUMNS
