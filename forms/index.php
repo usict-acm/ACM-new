@@ -109,7 +109,7 @@
   
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <?php $Id = $_GET["Id"]; ?>
+  <?php $Id = $_GET["id"]; ?>
 
   <script>
     let i1 = 0;
