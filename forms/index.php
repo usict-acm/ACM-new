@@ -27,6 +27,34 @@
         font: inherit;
         color: #212529;
       }
+      input[type="checkbox"] {
+        width: 12px;
+  height: 12px;
+  background: rgb(67, 136, 240, 0.1);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #4388F0;
+  }
+
+  input[type="checkbox"]:checked {
+    background: #4388F0;
+  }
+
+    input[type="radio"] {
+          width: 12px;
+    height: 12px;
+    background: rgb(67, 136, 240, 0.1);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #4388F0;
+    border-radius: 1em;
+    }  
+    input[type="radio"]:checked {
+      background: #4388F0;
+    }
+
       .fileButton{
         font-size: 1rem;
         font-family: inherit;
