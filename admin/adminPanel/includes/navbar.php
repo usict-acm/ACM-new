@@ -151,7 +151,13 @@
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Contact Us</span></a>
                     </li>
-           
+                    
+            <hr class="sidebar-divider">
+            <li class="nav-item">
+                <a class="nav-link" href="?table=eventParticipant">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Event Participant</span></a>
+            </li>
 
             <!-- Nav Item - Tables -->
             <!-- <li class="nav-item">

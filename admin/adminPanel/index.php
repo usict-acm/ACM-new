@@ -194,6 +194,9 @@
                         case 'Contactus':
                             include('./faqadmin/contactusAdmin.php');
                             break;
+                        case 'eventParticipant':
+                            include('./faqadmin/eventDashboard/eventParticipant.php');
+                            break;
                         default:
                             include('./faqadmin/index.php');
                             break;

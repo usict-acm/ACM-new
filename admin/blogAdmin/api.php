@@ -549,6 +549,108 @@ function carouselFunctionAPI()
         );
     }
 };
+function getEventParticipant()
+{
+    // Instantiate DB & connect
+    $database = new Database();
+    $db = $database->connect();
+
+    $eventId  = $_GET['eventId'];
+
+    $sql = "SELECT * FROM dashboard_event_participant WHERE eventId='$eventId'";
+    $result = mysqli_query($db,$sql);
+    // Check if any posts
+    if ($result) {
+
+        // Post array
+        $posts_arr = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $post_item = array(
+                'userId' => $row["userId"],
+            );
+            // Push to "data"
+            array_push($posts_arr, $post_item);
+        }
+
+        // Turn to JSON & output
+        echo json_encode($posts_arr);
+    } else {
+        // No Posts
+        echo json_encode(
+            array('message' => 'No Posts Found')
+        );
+    }
+};
+function getEvents()
+{
+    // Instantiate DB & connect
+    $database = new Database();
+    $db = $database->connect();
+
+
+
+    $sql = "SELECT * FROM event";
+    $result = mysqli_query($db,$sql);
+    // Check if any posts
+    if ($result) {
+
+        // Post array
+        $posts_arr = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $post_item = array(
+                'eventId' => $row["sno"],
+                'eventName' => $row["name"],
+            );
+            // Push to "data"
+            array_push($posts_arr, $post_item);
+        }
+
+        // Turn to JSON & output
+        echo json_encode($posts_arr);
+    } else {
+        // No Posts
+        echo json_encode(
+            array('message' => 'No Posts Found')
+        );
+    }
+};
+function getParticipantName()
+{
+    // Instantiate DB & connect
+    $database = new Database();
+    $db = $database->connect();
+
+
+    $userId = $_GET['userId'];
+
+    $sql = "SELECT * FROM dashboardUsers WHERE userId='$userId'";
+    $result = mysqli_query($db,$sql);
+    // var_dump($sql);
+    // Check if any posts
+    if ($result) {
+
+        // Post array
+        $posts_arr = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $post_item = array(
+                'name' => $row["name"],
+            );
+            // Push to "data"
+            array_push($posts_arr, $post_item);
+        }
+
+        // Turn to JSON & output
+        echo json_encode($posts_arr);
+    } else {
+        // No Posts
+        echo json_encode(
+            array('message' => 'No Posts Found')
+        );
+    }
+};
 
 function readAllAnnouncements()
 {
@@ -1079,6 +1181,15 @@ switch ($q) {
         break;
     case 'contactus';
         contactus();
+        break;
+    case 'getEventParticipant';
+        getEventParticipant();
+        break;
+    case 'getEvents';
+        getEvents();
+        break;
+    case 'getParticipantName';
+        getParticipantName();
         break;
     default:
         echo "Invalid Query";
