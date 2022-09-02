@@ -15,6 +15,10 @@
   <link rel="icon" type="image/png" href="images/icons/favicon.png" />
 
     <style>
+      ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #4388F0;
+        opacity: 1; /* Firefox */
+      }
       .checkboxDiv{
         background-color: #ffffff;
         padding: 30px;
@@ -23,6 +27,34 @@
         font: inherit;
         color: #212529;
       }
+      input[type="checkbox"] {
+        width: 12px;
+  height: 12px;
+  background: rgb(67, 136, 240, 0.1);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #4388F0;
+  }
+
+  input[type="checkbox"]:checked {
+    background: #4388F0;
+  }
+
+    input[type="radio"] {
+          width: 12px;
+    height: 12px;
+    background: rgb(67, 136, 240, 0.1);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #4388F0;
+    border-radius: 1em;
+    }  
+    input[type="radio"]:checked {
+      background: #4388F0;
+    }
+
       .fileButton{
         font-size: 1rem;
         font-family: inherit;
@@ -93,7 +125,8 @@
         // divTag.innerHTML += ` <span> <h5 id="formTitle" class = "contact100-form-title">${data[0].formName}<h5></span>`;
         divTag.innerHTML += `<span id="formTitle" 
         style="   
-          background: rgb(3 151 254);
+          background-image: url('../assets/images/form-bg.png');
+          background-size: cover;
           padding: 30px;
           border-radius: 8px;
           margin-bottom: 30px;
@@ -108,13 +141,13 @@
               <div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
                                       <p style="color:red;">This field is required</p>
                                       </div>                        
-              <span class='label-input100' style="color: #212529;font: inherit;">${data[i].fieldName} * :</span>
+              <span class='label-input100' style="color: #212529;font: inherit; font-weight: 500;">${data[i].fieldName} * :</span>
                                       <input
                                         id="field${i}"
                                         class='input100'
                                         type='text'
                                         name='name'
-                                        style = "border-bottom: 1px solid grey;"
+                                        style = "border-bottom: 1px solid #4388F0; margin-top:10px;"
                                         placeholder="Type your answer here"
                                         required
                                       />
@@ -122,14 +155,14 @@
                                     </div>`;
             } else {
               divTag.innerHTML += ` <div class='wrap-input100 validate-input' style="background-color: #ffffff;padding: 30px;border-radius: 8px;margin-bottom: 30px;">
-                                      <span class='label-input100' style="color: #212529;font: inherit;">${data[i].fieldName}:</span>
+                                      <span class='label-input100' style="color: #212529;font: inherit; font-weight: 500;">${data[i].fieldName}:</span>
                                       <input
                                         id="field${i}"
                                         style="color: #212529;font: inherit;"
                                         class='input100'
                                         type='text'
                                         name='name'
-                                        style = "border-bottom: 1px solid grey;"
+                                        style = "border-bottom: 1px solid #4388F0; margin-top:10px;"
                                         placeholder="Type your answer here"
                                       />
                                       <span class='focus-input100'></span>
@@ -145,11 +178,11 @@
               <div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
                                     <p style="color:red;">This field is required</pThis>
                                     </div>
-                                              <span style="font: inherit;color: #000000;" class="label-input100">${data[i].fieldName} * :</span>
+                                              <span style="font: inherit;color: #000000; font-weight: 500;" class="label-input100">${data[i].fieldName} * :</span>
                                               <textarea
                                                 class="input100"
                                                 name="message"
-                                                style = "border-bottom: 1px solid grey;"
+                                                style = "border-bottom: 1px solid #4388F0; margin-top:10px;"
                                                 placeholder="Type your answer here"
                                                 id="field${i}"
                                                 rows="3"
@@ -161,10 +194,10 @@
 
             } else {
             divTag.innerHTML += `          <div class="wrap-input100 validate-input" style="background-color: #ffffff;padding: 30px;border-radius: 8px;margin-bottom: 30px;">
-                                              <span style="font: inherit;color: #000000;" class="label-input100">${data[i].fieldName}:</span>
+                                              <span style="font: inherit;color: #000000; font-weight: 500;" class="label-input100">${data[i].fieldName}:</span>
                                               <textarea
                                                 class="input100"
-                                                style = "border-bottom: 1px solid grey;"
+                                                style = "border-bottom: 1px solid #4388F0; margin-top:10px;"
                                                 name="message"
                                                 placeholder="Type your answer here"
                                                 id="field${i}"
@@ -184,7 +217,7 @@
               <div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
                                     <p style="color:red;">This field is required</pThis>
                                     </div>
-              <label style="font: inherit;color: #212529;" class="label-input100" for="myfile">Select a file * :</label>
+              <label style="font: inherit;color: #212529; font-weight:500;" class="label-input100" for="myfile">Select a file * :</label>
                                                 <input
                                                   class="input100 fileButton"
                                                   type="file"
@@ -197,7 +230,7 @@
                                               </div>`;
             } else {
               divTag.innerHTML += `           <div class="wrap-input100 validate-input" style="background-color:#ffffff;padding: 30px;border-radius: 8px;margin-bottom: 30px;">
-                                                <span style="font: inherit;color: #212529;" class="label-input100" for="myfile">Select a file: </span>
+                                                <span style="font: inherit;color: #212529; font-weight:500;" class="label-input100" for="myfile">Select a file: </span>
                                                 <input
                                                   class="input100 fileButton"
                                                   type="file"
@@ -221,16 +254,16 @@
             if (data[i].required == 1) {
               newDiv2.innerHTML += ` <div class="fieldCheckCheckbox" id="fieldRequiredCheck${i}" style=display:none;>
                                     <p style="color:red;">This field is required</p>
-                                    </div>${data[i].fieldName} * : &nbsp;&nbsp;&nbsp;`;
+                                    </div><span style="font-weight:500;">${data[i].fieldName} * : </span>&nbsp;&nbsp;&nbsp;`;
             } else {
-              newDiv2.innerHTML += ` ${data[i].fieldName}  : &nbsp;&nbsp;&nbsp;`;
+              newDiv2.innerHTML += `<span style="font-weight:500;"> ${data[i].fieldName}  : </span>&nbsp;&nbsp;&nbsp;`;
 
             }
             // console.log(nameArr[0]);
             console.log(nameArr); 
             for (let j = 0; j < nameArr.length; j++) {
               if(j==0)
-                newDiv2.innerHTML += `<div style="margin-left: 20px;margin-top: 20px;"> <input type="checkbox" id="field${i}${j}" value="${nameArr[j]}"  name="Checkbox1"  class="checkbox checkboxDesign" /> ${nameArr[j]} </div> `;
+                newDiv2.innerHTML += `<div style="margin-left: 20px;margin-top: 20px;"> <input type="checkbox" id="field${i}${j}" value="${nameArr[j]}"  name="Checkbox1"  class="checkbox checkboxDesign" /> ${nameArr[j]}</div> `;
               else
                 newDiv2.innerHTML += `<div style="margin-left: 20px"> <input type="checkbox" id="field${i}${j}" value="${nameArr[j]}"  name="Checkbox1"  class="checkbox checkboxDesign" /> ${nameArr[j]} </div> `;
             }
@@ -250,10 +283,10 @@
                                     <p style="color:red;">This field is required</p>
                                     </div>`;
             if (data[i].required == 1) {
-              newDiv.innerHTML += ` ${data[i].fieldName} * : &nbsp;&nbsp;&nbsp;`;
+              newDiv.innerHTML += `<span style="font-weight:500;"> ${data[i].fieldName} * : </span>&nbsp;&nbsp;&nbsp;`;
             }
             else
-              newDiv.innerHTML += ` ${data[i].fieldName} : &nbsp;&nbsp;&nbsp;`;
+              newDiv.innerHTML += `<span style="font-weight:500;"> ${data[i].fieldName} : </span>&nbsp;&nbsp;&nbsp;`;
             
 
             for (let j = 0; j < nameArr.length; j++) {
