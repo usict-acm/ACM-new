@@ -59,6 +59,9 @@
         font-size: 1rem;
         font-family: inherit;
       }
+      .input100 {
+        font-size: 1em;
+      }
       ::-webkit-file-upload-button {
         /* margin-top: 5px; */
     /* margin-bottom: 5px; */
@@ -141,7 +144,7 @@
               <div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
                                       <p style="color:red;">This field is required</p>
                                       </div>                        
-              <span class='label-input100' style="color: #212529;font: inherit; font-weight: 500;">${data[i].fieldName} * :</span>
+              <span class='label-input100' style="color: #212529;font: inherit; font-weight: 500;">${data[i].fieldName} <span style="color: red";>*</span> :</span>
                                       <input
                                         id="field${i}"
                                         class='input100'
@@ -178,7 +181,7 @@
               <div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
                                     <p style="color:red;">This field is required</pThis>
                                     </div>
-                                              <span style="font: inherit;color: #000000; font-weight: 500;" class="label-input100">${data[i].fieldName} * :</span>
+                                              <span style="font: inherit;color: #000000; font-weight: 500;" class="label-input100">${data[i].fieldName} <span style="color: red";>*</span> :</span>
                                               <textarea
                                                 class="input100"
                                                 name="message"
@@ -217,7 +220,7 @@
               <div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
                                     <p style="color:red;">This field is required</pThis>
                                     </div>
-              <label style="font: inherit;color: #212529; font-weight:500;" class="label-input100" for="myfile">Select a file * :</label>
+              <label style="font: inherit;color: #212529; font-weight:500;" class="label-input100" for="myfile">${data[i].fieldName} <span style="color: red";>*</span> :</label>
                                                 <input
                                                   class="input100 fileButton"
                                                   type="file"
@@ -230,7 +233,7 @@
                                               </div>`;
             } else {
               divTag.innerHTML += `           <div class="wrap-input100 validate-input" style="background-color:#ffffff;padding: 30px;border-radius: 8px;margin-bottom: 30px;">
-                                                <span style="font: inherit;color: #212529; font-weight:500;" class="label-input100" for="myfile">Select a file: </span>
+                                                <span style="font: inherit;color: #212529; font-weight:500;" class="label-input100" for="myfile">${data[i].fieldName} : </span>
                                                 <input
                                                   class="input100 fileButton"
                                                   type="file"
@@ -254,7 +257,7 @@
             if (data[i].required == 1) {
               newDiv2.innerHTML += ` <div class="fieldCheckCheckbox" id="fieldRequiredCheck${i}" style=display:none;>
                                     <p style="color:red;">This field is required</p>
-                                    </div><span style="font-weight:500;">${data[i].fieldName} * : </span>&nbsp;&nbsp;&nbsp;`;
+                                    </div><span style="font-weight:500;">${data[i].fieldName} <span style="color: red";>*</span> : </span>&nbsp;&nbsp;&nbsp;`;
             } else {
               newDiv2.innerHTML += `<span style="font-weight:500;"> ${data[i].fieldName}  : </span>&nbsp;&nbsp;&nbsp;`;
 
@@ -283,7 +286,7 @@
                                     <p style="color:red;">This field is required</p>
                                     </div>`;
             if (data[i].required == 1) {
-              newDiv.innerHTML += `<span style="font-weight:500;"> ${data[i].fieldName} * : </span>&nbsp;&nbsp;&nbsp;`;
+              newDiv.innerHTML += `<span style="font-weight:500;"> ${data[i].fieldName} <span style="color: red";>*</span> : </span>&nbsp;&nbsp;&nbsp;`;
             }
             else
               newDiv.innerHTML += `<span style="font-weight:500;"> ${data[i].fieldName} : </span>&nbsp;&nbsp;&nbsp;`;
