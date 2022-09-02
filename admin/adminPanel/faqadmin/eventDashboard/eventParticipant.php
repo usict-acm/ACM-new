@@ -12,6 +12,8 @@ $link = $database->connect();
     <meta name="viewport" answer="width=device-width, initial-scale=1.0">
     <title>Create Record</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
     <style>
         .wrapper {
             width: 700px;
@@ -48,6 +50,23 @@ $link = $database->connect();
             text-decoration: none;
             color: white;
         }
+        .copybutton {
+        /* position: absolute; */
+        border-width: 0;
+        color: #337ab7;
+        background-color: #f9f9f9;
+    }
+    .edit-logo{
+        position: absolute;
+        margin: 0 0 0px 10px;
+    }
+    .tash-bin{
+        position: relative;
+        margin:0px 0 0  15px;
+    }
+    .centerAlign{
+        text-align:center;
+    }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -103,37 +122,38 @@ $link = $database->connect();
                             // console.log(url);
                             let getEventParticipant = document.getElementById("getEventParticipant");
 
+                            getEventParticipant.innerHTML = `<table class='table table-bordered table-striped'>
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th>Participant Name</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>`;
                             $(document).ready(function() {
                                 $.ajax({
                                 url: url,
                                 method: 'GET',
                                 dataType: 'JSON',
                                 success: function(data) {
-                                    console.log("check123", data);
+
                                     for (i = 0; i < data.length; i++) {
-                                        // getEventParticipant.innerHTML += `${data[i].userId}`;
-                                
                                         url = '../blogAdmin/api.php?q=getParticipantName&userId='+data[i].userId;
-                                        console.log(url);
-                                        // $(document).ready(function() {
-                                            $.ajax({
-                                                url: url,
-                                                method: 'GET',
-                                                dataType: 'JSON',
-                                                success: function(data) {
-                                                    console.log("check ", data);
-                                                    getEventParticipant.innerHTML += `${data[0].name}`;
-                                                },
-                                            });
-                                        // });
+                                        $.ajax({
+                                            url: url,
+                                            method: 'GET',
+                                            dataType: 'JSON',
+                                            success: function(data) {
+                                                console.log("check ", data);
+                                                getEventParticipant.innerHTML += `<tr><td>${data[0].name}</td></tr>`;
+                                            },
+                                        });
                                     }
-
-
-
 
                                 },
                                 });
                             });
+                            getEventParticipant.innerHTML += `</tbody>                         
+                                                                    </table>`;
                         }
                     </script>
 

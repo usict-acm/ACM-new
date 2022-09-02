@@ -86,44 +86,26 @@
                     $sql = "SELECT * FROM link ORDER BY id DESC ";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
-                            echo "<table class='table table-bordered table-striped'>";
-                                echo "<thead>";
-                                    echo "<tr>";
-                                        echo "<th>Link For</th>";
-                                        echo "<th>Original Link</th>";
-                                        echo "<th>Shortened Link</th>";
-                                        echo "<th>Clicks</th>";
-                                        echo "<th>Action</th>";
-                                    echo "</tr>";
-                                echo "</thead>";
-                                echo "<tbody>";
-                                    $count = 0;
-                                    echo "<script>
-                                    let links = [];
-                                    
-                                        function copy2 (count){navigator.clipboard.writeText('".$siteLink."'+links[count]);}</script>";
+                            echo "<table class='table table-bordered table-striped'>
+                                <thead>
+                                    <tr>
+                                        <th>Link For</th>
+                                        <th>Original Link</th>
+                                        <th>Shortened Link</th>
+                              
+                                    </tr>
+                                </thead>
+                                <tbody>";
+                           
+                            
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
-                                        $ii = $row['originalLink'];
-                                        $ii = substr($ii,0,51);
                                         echo "<td>" . $row['linkFor'] . "</td>";
-                                        echo "<td>" . $ii . "....</td>";
-                                        echo "<td><a target='_blank' href='".$siteLink."". $row['code'] ."'>".$siteLink."". $row['code'] ."</a></td>";
-                                        $short = $row['code'];
-                                        echo "<script>links.push('".$short."'); </script>";
-                                        echo "<td class='centerAlign'>" . $row['count'] . "</td>";
-                                        
-                                        echo "<td>";
-                                            echo "<button class = 'copybutton' onclick = copy2(".$count.")><span class = 'glyphicon glyphicon-duplicate'></span></button>";
-                                            echo "<a class='edit-logo' href='?table=editLink&&linkFor=". $row['linkFor'] ."&&originalLink=".$row['originalLink']."&&shortLink=". $row['code']."' title='Edit Record' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
-                                            echo "<a class='tash-bin' href='faqadmin/del.php?Sno=". $row['code'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
-                                        echo "</td>";
-
                                     echo "</tr>";
                                     $count++;
                                 }
-                            echo "</tbody>";                            
-                            echo "</table>";
+                            echo "</tbody>                         
+                            </table>";
                             // Free result set
                             mysqli_free_result($result);
                         } else{
