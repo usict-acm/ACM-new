@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dashboard/user-portal/static/css/main.5359f288.css",
-    "main.js": "/dashboard/user-portal/static/js/main.92472f11.js",
+    "main.css": "/dashboard/user-portal/static/css/main.bf20cbe6.css",
+    "main.js": "/dashboard/user-portal/static/js/main.dbe06aa6.js",
     "static/media/fa-solid-900.ttf": "/dashboard/user-portal/static/media/fa-solid-900.e615bbcb258550973c16.ttf",
     "static/media/acm_banner.png": "/dashboard/user-portal/static/media/acm_banner.24c213b0d921a88c8692.png",
     "static/media/fa-brands-400.ttf": "/dashboard/user-portal/static/media/fa-brands-400.b823fc0dbb5a5f0c21bb.ttf",
@@ -24,11 +24,11 @@
     "static/media/nucleo-icons.woff2": "/dashboard/user-portal/static/media/nucleo-icons.cba267483aa6a7cb6e33.woff2",
     "static/media/fa-v4compatibility.woff2": "/dashboard/user-portal/static/media/fa-v4compatibility.afac89562a5301459069.woff2",
     "index.html": "/dashboard/user-portal/index.html",
-    "main.5359f288.css.map": "/dashboard/user-portal/static/css/main.5359f288.css.map",
-    "main.92472f11.js.map": "/dashboard/user-portal/static/js/main.92472f11.js.map"
+    "main.bf20cbe6.css.map": "/dashboard/user-portal/static/css/main.bf20cbe6.css.map",
+    "main.dbe06aa6.js.map": "/dashboard/user-portal/static/js/main.dbe06aa6.js.map"
   },
   "entrypoints": [
-    "static/css/main.5359f288.css",
-    "static/js/main.92472f11.js"
+    "static/css/main.bf20cbe6.css",
+    "static/js/main.dbe06aa6.js"
   ]
 }
