@@ -101,7 +101,7 @@ const Sidebar = (props) => {
           <img
             alt="logo"
             className="navbar-brand-img"
-            src={require("../../assets/img/brand/acm1.png").default}
+            src={require("../../assets/img/brand/acm1.png")}
           />
         </NavbarBrand>
         {/* User */}
@@ -113,9 +113,7 @@ const Sidebar = (props) => {
                   <img
                     alt="..."
                     src={
-                      user?.profilePhoto ||
-                      require("../../assets/img/user.png")
-                        .default
+                      user?.profilePhoto || require("../../assets/img/user.png")
                     }
                   />
                 </span>
@@ -154,7 +152,7 @@ const Sidebar = (props) => {
                 <Link to="/">
                   <img
                     alt="logo"
-                    src={require("../../assets/img/brand/acm1.png").default}
+                    src={require("../../assets/img/brand/acm1.png")}
                   />
                 </Link>
               </Col>
@@ -178,7 +176,7 @@ const Sidebar = (props) => {
   );
 };
 
-Sidebar.defaultProps = {
+SidebarProps = {
   routes: [{}],
 };
 
