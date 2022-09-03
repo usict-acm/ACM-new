@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { NavLink as NavLinkRRD, Link } from "react-router-dom";
 // nodejs library to set properties for components
 import { PropTypes } from "prop-types";
+import LogoImage from "../../assets/img/brand/acm1.png";
 
 // reactstrap components
 import {
@@ -98,11 +99,7 @@ const Sidebar = (props) => {
         </button>
         {/* Brand */}
         <NavbarBrand className="pt-0" {...navbarBrandProps}>
-          <img
-            alt="logo"
-            className="navbar-brand-img"
-            src={require("../../assets/img/brand/acm1.png")}
-          />
+          <img alt="logo" className="navbar-brand-img" src={LogoImage} />
         </NavbarBrand>
         {/* User */}
         <Nav className="align-items-center d-md-none">
@@ -150,10 +147,7 @@ const Sidebar = (props) => {
             <Row>
               <Col className="collapse-brand" xs="6">
                 <Link to="/">
-                  <img
-                    alt="logo"
-                    src={require("../../assets/img/brand/acm1.png")}
-                  />
+                  <img alt="logo" src={LogoImage} />
                 </Link>
               </Col>
               <Col className="collapse-close" xs="6">
@@ -176,9 +170,9 @@ const Sidebar = (props) => {
   );
 };
 
-SidebarProps = {
-  routes: [{}],
-};
+// SidebarProps = {
+//   routes: [{}],
+// };
 
 Sidebar.propTypes = {
   // links that will be displayed inside the component
