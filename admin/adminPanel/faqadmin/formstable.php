@@ -85,7 +85,7 @@
                                             // echo "<a href='../blogAdmin/responses.php?q=readResponses&Id=".$row['formID']."'title='View Record' data-toggle='tooltip'><button class='btn btn-primary' type='button'>Responses</button></span></a>";
                                             echo "<a href='?table=ResponsesForm&q=readResponses&Id=".$row['formID']."'title='View Record' data-toggle='tooltip'><button class='btn btn-primary' type='button'>Responses</button></span></a>";
                                             echo "<a href='./faqadmin/DownloadRes.php?formID=".$row['formID']."' title='Download Responses' data-toggle='tooltip'><span class='glyphicon glyphicon-download'></span></a>";
-                                            echo "<a href='../../forms/index.php?Id=".$row['formID'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
+                                            echo "<a href='../../forms/?id=".$row['formID'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
                                             echo "<a href='faqadmin/delete.php?Sno=". $row['formID'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                             // echo "<a href='faqadmin/update.php?Sno=". $row['Sno'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
                                             // echo "<a href='faqadmin/delete.php?Sno=". $row['id'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
