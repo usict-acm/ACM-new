@@ -83,10 +83,10 @@ textarea {
     border: none
 }
 
-textarea:focus,
+/* textarea:focus,
 input:focus {
     border-color: transparent !important
-}
+} */
 
 input:focus::-webkit-input-placeholder {
     color: transparent
@@ -191,7 +191,7 @@ iframe {
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
-    padding: 42px 55px 45px
+    padding: 20px 55px 45px
 }
 
 .contact100-form {
@@ -211,7 +211,7 @@ iframe {
 .wrap-input100 {
     width: 100%;
     position: relative;
-    border-bottom: 2px solid #d9d9d9;
+    border-bottom: 3px solid #d9d9d9;
     padding-bottom: 13px;
     margin-bottom: 27px
 }
@@ -544,3 +544,19 @@ textarea.input100 {
     color: #333;
     line-height: 1.2
 }
+
+/* .shadow {
+    -moz-box-shadow:    0px 3px 3px 2px #ccc;
+    -webkit-box-shadow: 0px 5px 3px 2px #ccc;
+    box-shadow:         0px 5px 3px 2px #ccc;
+  } */
+
+  .input100 {
+    font-size: 1em;
+  }
+  
+.bottom-line:focus {
+    border-bottom: 2px solid #005daa !important;
+    width: 100%;
+    transition: .1s;
+  }
