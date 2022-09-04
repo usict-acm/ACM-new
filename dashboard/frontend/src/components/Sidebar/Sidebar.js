@@ -4,6 +4,7 @@ import { NavLink as NavLinkRRD, Link } from "react-router-dom";
 // nodejs library to set properties for components
 import { PropTypes } from "prop-types";
 import LogoImage from "../../assets/img/brand/acm1.png";
+import userIcon from "../../assets/img/user.png";
 
 // reactstrap components
 import {
@@ -110,7 +111,7 @@ const Sidebar = (props) => {
                   <img
                     alt="..."
                     src={
-                      user?.profilePhoto || require("../../assets/img/user.png")
+                      user?.profilePhoto || userIcon
                     }
                   />
                 </span>

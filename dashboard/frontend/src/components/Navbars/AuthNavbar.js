@@ -30,6 +30,8 @@ import {
   Col,
 } from "reactstrap";
 import "../../assets/css/login.css";
+import acmLogo from "../../assets/img/brand/acm1.png"
+import webAward from "../../assets/img/brand/outstanding-website-text.png"
 
 const AuthNavbar = () => {
   return (
@@ -43,19 +45,15 @@ const AuthNavbar = () => {
             <img
               className="navbarLogo"
               alt="..."
-              src={
-                require("../../assets/img/brand/acm1.png")
-                  .default
-              }
-            />
+              src= {acmLogo}
+              />
           </NavbarBrand>
           <NavbarBrand to="/" tag={Link} className="oslogo text-center">
             <img
               className="navbarLogo"
               alt="..."
               src={
-                require("../../assets/img/brand/outstanding-website-text.png")
-                  .default
+                webAward
               }
             />
           </NavbarBrand>
@@ -70,8 +68,7 @@ const AuthNavbar = () => {
                     <img
                       alt="..."
                       src={
-                        require("../../assets/img/brand/acm1.png")
-                          .default
+                        acmLogo
                       }
                     />
                   </Link>
