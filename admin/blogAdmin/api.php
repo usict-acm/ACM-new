@@ -276,6 +276,7 @@ function postblog()
         $content = $_POST['content'];
         $event = $_POST['event'];
         $file = $_FILES['file'];
+        $isDraft = 0;
         $approved = 1;
         // print_r($file);
 
@@ -293,7 +294,7 @@ function postblog()
             $uploadLocation = '../../upload/blogs/' . $filename;
             move_uploaded_file($filetemppath, $uploadLocation);
 
-            $sql = "INSERT INTO `blogs` (`blogTitle`, `userName`, `content`, `published`, `approved`) VALUES ('$title', '$author', '$content', current_timestamp(), '$approved');";
+            $sql = "INSERT INTO `blogs` (`blogTitle`, `coverImage`, `userName`, `content`, `created`, `published`, `isDraft`, `approved`) VALUES ('$title', '$uploadLocation' , '$author', '$content', current_timestamp(), current_timestamp(), '$isDraft' , '$approved');";
             if ($db->query($sql) == true) {
                 echo '<script type="text/javascript">';
                 echo ' alert("Ho Gaya submit, ja aram kar")';
