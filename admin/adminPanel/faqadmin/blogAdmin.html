@@ -14,7 +14,7 @@
   <body>
     <h1>Enter the blog details</h1>
     <form
-      action="../../blogAdmin/api.php/?q=postblog"
+      action="../blogAdmin/api.php/?q=postblog"
       method="POST"
       enctype="multipart/form-data"
     >
@@ -44,7 +44,6 @@
         rows="20"
         class="mceEditor"
         placeholder="Enter the blog"
-        required
       ></textarea>
       <input
         type="text"
@@ -59,6 +58,7 @@
   <script>
     tinymce.init({
       selector: "textarea",
+      auto_focus : "content",
       mode: "specific_textareas",
       editor_Selector: "mceEditor",
       plugins:
