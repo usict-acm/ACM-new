@@ -400,7 +400,7 @@
               var formData = new FormData();
               var field = "field" + i;
               var fieldRequired = "fieldRequired" + i;
-              var filerequired = $(`#${fieldRequired}`).get(0).files;
+              // var filerequired = $(`#${fieldRequired}`).get(0).files;
               // var file = $(`#${field}`).get(0).files;
               // console.log(file[0]);
               var input = document.getElementById(field);
