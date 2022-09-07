@@ -277,7 +277,7 @@ function postblog()
         $event = $_POST['event'];
         $file = $_FILES['file'];
         $approved = 1;
-        print_r($file);
+        // print_r($file);
 
         $filename = $file['name'];
         $fileerror = $file['error'];
