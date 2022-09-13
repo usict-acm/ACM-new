@@ -51,6 +51,9 @@ switch ($q) {
     case 'postDetailDashboard' :
         postDetailDashboard();
         break;
+    case 'formResponseCheck' :
+        formResponseCheck();
+        break;
     default:
         echo "Invalid Query";
 }

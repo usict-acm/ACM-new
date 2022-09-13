@@ -69,11 +69,11 @@ const EventCountdown = ({ event }) => {
           </div>
           <div className="countsContainer">
             <h1>{timeBetween.minutes()}</h1>
-            <h4>min</h4>
+            <h4>Min</h4>
           </div>
           <div className="countsContainer">
             <h1>{moment.duration(targetTime.diff(moment.now())).seconds()}</h1>
-            <h4>seconds</h4>
+            <h4>Sec</h4>
           </div>
         </div>
       )}
