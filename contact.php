@@ -42,7 +42,7 @@
                 success: function(data){
                     alert(data.message);
                     // console.log(data.message);
-					alert("Form Submitted!!");
+					// alert("Form Submitted!!");
                     // window.location.replace('./user/');
                     // window.location.replace('../../../../thankyou.php');
 
