@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { NavLink as NavLinkRRD, Link } from "react-router-dom";
 // nodejs library to set properties for components
 import { PropTypes } from "prop-types";
-import LogoImage from "../../assets/img/brand/acm1.png";
+import LogoImage from "../../assets/img/brand/acm-logo.svg";
 import userIcon from "../../assets/img/user.png";
 
 // reactstrap components
@@ -85,7 +85,7 @@ const Sidebar = (props) => {
 
   return (
     <Navbar
-      className="navbar-vertical fixed-left navbar-light bg-white"
+      className="navbar-vertical fixed-left navbar-light bg-white nav-shadow"
       expand="md"
       id="sidenav-main"
     >
