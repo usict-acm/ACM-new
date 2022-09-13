@@ -740,7 +740,8 @@
                 processData: false,
                 contentType: false,
                 success: function(data){
-                   console.log("success!!");
+                  alert("Form has been submitted !");
+                  //  console.log("success!!");
                     // window.location.reload();
                 // window.location.replace('./index.php?table=certificateCreation');
                 //window.location.replace('../../index.php?table=certificateCreation');

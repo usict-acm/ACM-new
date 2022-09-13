@@ -5,20 +5,26 @@ import { formatDate } from "utils/commonFunctions";
 import EventCountdown from "./EventCountdown";
 import { registeredStudentDetails, fetchRegisteredStatus } from "api/event";
 
+// import FormResponseCheck from "./FormResponse";
+
 export default function DetailSidebar({ event }) {
   const [registerText, setRegisterText] = useState("Register Now");
   const [buttonStatus, setButtonStatus] = useState("unchecked");
+  const [eventTimer, setEventTimer] = useState("notEnded");
 
   var UserFetch = JSON.parse(localStorage.getItem("user"));
   var UserIdFetch = UserFetch.userId;
+
+  const dateToday = new Date();
+  const eventStartDate = new Date(event?.startDate);
+  console.log(dateToday);
+  console.log(eventStartDate);
 
   var event_Id = event?.eventId;
   const userData = {
     id: UserIdFetch,
     eventId: event_Id,
   };
-
-  let stateChange = "yes";
 
   const checkRegisteredStatus = async () => {
     var UserFetch1 = JSON.parse(localStorage.getItem("user"));
@@ -48,6 +54,15 @@ export default function DetailSidebar({ event }) {
   };
 
   useEffect(() => {
+    if (dateToday >= eventStartDate) {
+      setEventTimer("Ended");
+    } else {
+      setEventTimer("notEnded");
+    }
+    console.log(eventTimer);
+  }, []);
+
+  useEffect(() => {
     //   //   let registeredStatus = await fetchRegisteredStatus(userData);
 
     //   //   console.log(registeredStatus + "test1");
@@ -57,6 +72,7 @@ export default function DetailSidebar({ event }) {
     //   //     setRegisterText("Register Now");
 
     //   //   }
+
     console.log("check");
     checkRegisteredStatus();
   }, [buttonStatus]);
@@ -97,7 +113,8 @@ export default function DetailSidebar({ event }) {
           <Button
             className={
               ("eventBtn" + event?.viewResource ? "mr-3" : "") +
-              (buttonStatus === "unchecked" ? "" : " button-disabled")
+              (buttonStatus === "unchecked" ? "" : " button-disabled") +
+              (eventTimer === "notEnded" ? "" : " button-hidden")
             }
             color="info"
             onClick={handleClick}

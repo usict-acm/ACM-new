@@ -90,6 +90,10 @@
     pointer-events: none;
 }
 
+.button-hidden{
+    visibility: hidden;
+}
+
 .speakersAndPartners{
     display: flex;
     align-items: center;

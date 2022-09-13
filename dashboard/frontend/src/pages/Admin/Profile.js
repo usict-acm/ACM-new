@@ -111,7 +111,7 @@ const Profile = () => {
 				msg={alertMsg}
 				type={alertType}
 			/>
-      <UserHeader />
+      {/* <UserHeader /> */}
       {/* Page content */}
       <Container className="profileContainer" fluid>
         <Row>
