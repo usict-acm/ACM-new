@@ -1,13 +1,17 @@
 .navbarLogo {
   height: 60px !important;
 }
+
+.nav-shadow {
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 3px 10px 0 rgb(0 0 0 / 19%);
+}
 .topSection {
   position: absolute;
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
   display: block;
   box-sizing: border-box;
-  height: 500px;
+  /* height: 500px; */
   background-color: #11cdef;
   clip-path: ellipse(115% 70% at 100% -5%);
 }

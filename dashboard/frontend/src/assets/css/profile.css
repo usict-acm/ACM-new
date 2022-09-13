@@ -1,8 +1,8 @@
-@media screen and (min-width: 520px) {
+/* @media screen and (min-width: 520px) {
   .profileContainer {
     margin-top: calc(30vw - 85vh);
   }
-}
+} */
 .profileImage {
   width: 15vw;
   position: relative;
