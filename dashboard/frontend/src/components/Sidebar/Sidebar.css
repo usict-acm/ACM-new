@@ -1,0 +1,11 @@
+.navbar-z{
+    z-index: 100;
+}
+@media (max-width: 767px) {
+.colortext{
+    color: white;
+    
+}
+
+}
+

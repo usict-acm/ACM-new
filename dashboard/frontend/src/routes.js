@@ -12,7 +12,7 @@ var routes = [
   {
     path: "/home",
     name: "Dashboard",
-    icon: "ni ni-tv-2 text-primary",
+    icon: "ni ni-tv-2 text-green",
     component: Dashboard,
     layout: "/admin",
   },
@@ -40,7 +40,7 @@ var routes = [
   {
     path: "/events",
     name: "Events",
-    icon: "ni ni-album-2 text-blue",
+    icon: "ni ni-album-2 text-yellow",
     component: AllEvents,
     layout: "/admin",
   },
