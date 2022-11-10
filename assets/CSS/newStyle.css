@@ -2304,6 +2304,8 @@ a:hover {
 	padding: 30px;
 	background-color: #f6f9ff;
 	border-radius: 5px;
+	height: 430px;
+	margin-right: 30px;
 }
 
 .alumini-content .single-person:hover {
@@ -2374,8 +2376,4 @@ a:hover {
 .btn-theme {
 	background-color: #005daa;
 	border-color: #005daa;
-}
-
-.text-sp {
-	color: #005daa;
 }
