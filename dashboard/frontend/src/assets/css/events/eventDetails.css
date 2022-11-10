@@ -86,6 +86,14 @@
     max-height: fit-content;
 }
 
+.button-disabled {
+    pointer-events: none;
+}
+
+.button-hidden{
+    visibility: hidden;
+}
+
 .speakersAndPartners{
     display: flex;
     align-items: center;

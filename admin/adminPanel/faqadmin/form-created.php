@@ -64,7 +64,7 @@ require_once "config1.php";
 
     <script>
         function copy(){
-            var copyText = "usict.acm.org/test_acm/forms/index.php?Id=" + '<?php echo $formID ?>';
+            var copyText = "usict.acm.org/forms/?id=" + '<?php echo $formID ?>';
             navigator.clipboard.writeText(copyText);
         }
     </script>

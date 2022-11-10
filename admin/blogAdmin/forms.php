@@ -99,7 +99,7 @@
                // Create query
                $value = explode(" ",$formItem);
                $val = join("_",$value);
-               $tableName = "responses_" . $val;
+               $tableName = "Responses_" . $val;
                $query = 'SELECT * FROM ' . $tableName .'';                                 
                // echo $query;
                $stmt = $this->conn->query($query);   
@@ -146,7 +146,7 @@
           }
 
           public function saveDataResponsesInTable($name,$txtTitle) {
-               $tableName = "responses_" . $name;
+               $tableName = "Responses_" . $name;
                $one = "INSERT INTO " . $tableName . "(";
                $two = "";
                $three = "";

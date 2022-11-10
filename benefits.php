@@ -24,8 +24,8 @@
     <section id='header'>
       <div class="pt-card row">
         <div class="heading col-xl-9 col-lg-9 col-md-9 col-sm-6">
-          <h3><span class="uheading">Why Join</span><br>
-            <span class="lheading">GGSIP University USS ACM Student Chapter?</span>
+          <h3><span class="uheading">Why Join Us?</span><br>
+            <!-- <span class="lheading">Us?</span> -->
           </h3>
         </div>
       </div>
@@ -50,7 +50,7 @@
   <section class="service-sec" id="benefits">
     <div class="container">
       <div class="row">
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center" style="width: 100%;">
           <div class="perk-card"> <img src="./assets/images/perks/flagship.png" height="80" width="80">
             <h3>ACM’s flagship publication </h3>
             <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe.</p>
@@ -95,102 +95,187 @@
     <div class="container alumn">
       <div class="line"></div>
       <h1>MEET OUR <b>ALUMNI</b></h1>
-      <section class="alumini-content">
+      <section>
         <div class="container">
-          <div class="row">
+        <div class="glider-contain">
+          <div class="glider">
+            
             <!-- Start Single Person -->
-            <div class="col-sm-6 col-lg-4 col-xl-3">
+            <div class="alumini-content">
+              <div class="single-person">
+                <div class="person-image">
+                  <img src="./assets/images/Alumni/anmol.jpeg" alt="" />
+                </div>
+                <div class="person-info">
+                  <h3 class="full-name">Anmol Goel</h3>
+                  <span class="speciality" style="font-weight: bold">SDE , KalaGato</span>
+                </div>
+              </div>
+            </div>
+            <!-- / End Single Person -->
+            <!-- Start Single Person -->
+            <div class="alumini-content">
+              <div class="single-person">
+                <div class="person-image">
+                  <img src="./assets/images/Alumni/Gaurav.png" alt="" />
+                </div>
+                <div class="person-info">
+                  <h3 class="full-name">Gaurav Jain</h3>
+                  <span class="speciality" style="font-weight: bold">SDE , Tata 1mg</span>
+                </div>
+              </div>
+            </div>
+            <!-- / End Single Person -->
+             <!-- Start Single Person -->
+             <div class="alumini-content">
+              <div class="single-person">
+                <div class="person-image">
+                  <img src="./assets/images/Alumni/aakash.png" alt="" />
+                </div>
+                <div class="person-info">
+                  <h3 class="full-name">Aakash Sangwan</h3>
+                  <span class="speciality" style="font-weight: bold">SDE , ShareChat</span>
+                </div>
+              </div>
+            </div>
+            <!-- / End Single Person -->
+             <!-- Start Single Person -->
+             <div class="alumini-content">
+              <div class="single-person">
+                <div class="person-image">
+                  <img src="./assets/images/Alumni/prateek.png" alt="" />
+                </div>
+                <div class="person-info">
+                  <h3 class="full-name">Prateek Thakur</h3>
+                  <span class="speciality" style="font-weight: bold">Cloud Engineer , Oracle</span>
+                </div>
+              </div>
+            </div>
+            <!-- / End Single Person -->
+            <!-- Start Single Person -->
+            <div class="alumini-content">
+              <div class="single-person">
+                <div class="person-image">
+                  <img src="./assets/images/Alumni/vardaan.jpg" alt="" />
+                </div>
+                <div class="person-info">
+                  <h3 class="full-name">Vardaan Grover</h3>
+                  <span class="speciality" style="font-weight: bold">Co-founder , Ensvee</span>
+                </div>
+              </div>
+            </div>
+            <!-- / End Single Person -->
+            <!-- Start Single Person -->
+            <div class="alumini-content">
+              <div class="single-person">
+                <div class="person-image">
+                  <img src="./assets/images/Alumni/Divyansh.jpg" alt="" />
+                </div>
+                <div class="person-info">
+                  <h3 class="full-name">Divyansh Rastogi</h3>
+                  <span class="speciality" style="font-weight: bold">SDE 1 , Park+</span>
+                </div>
+              </div>
+            </div>
+            <!-- / End Single Person -->
+            <!-- Start Single Person -->
+            <div class="alumini-content">
+              <div class="single-person">
+                <div class="person-image">
+                  <img src="./assets/images/Alumni/Akshad.jpg" alt="" />
+                </div>
+                <div class="person-info">
+                  <h3 class="full-name">Akshad Bhandula</h3>
+                  <span class="speciality" style="font-weight: bold">SDE , Publicis Sapient</span>
+                </div>
+              </div>
+            </div>
+            <!-- / End Single Person -->
+            <!-- Start Single Person -->
+            <!-- <div class="col-sm-6 col-lg-4 col-xl-3">
+              <div class="single-person">
+                <div class="person-image">
+                  <img src="./assets/images/Alumni/RajatMaheshwari.jpg" alt="" />
+                </div>
+                <div class="person-info">
+                  <h3 class="full-name">Pankaj Kumar Gautam</h3>
+                  <span class="speciality" style="font-weight: bold">SDE 2 , Honeywell</span>
+                </div>
+              </div>
+            </div> -->
+            <!-- / End Single Person -->
+             <!-- Start Single Person -->
+             <div class="alumini-content">
+              <div class="single-person">
+                <div class="person-image">
+                  <img src="./assets/images/Alumni/Abhishek.jpg" alt="" />
+                </div>
+                <div class="person-info">
+                  <h3 class="full-name">Abhishek Yadav</h3>
+                  <span class="speciality" style="font-weight: bold">Software Engineer , IndiaMart</span>
+                </div>
+              </div>
+            </div>
+            <!-- / End Single Person -->
+            <!-- Start Single Person -->
+            <div class="alumini-content">
               <div class="single-person">
                 <div class="person-image">
                   <img src="./assets/images/Alumni/RajatMaheshwari.jpg" alt="" />
                 </div>
                 <div class="person-info">
                   <h3 class="full-name">Rajat Maheshwari</h3>
-                  <span class="speciality" style="font-weight: bold">SDE 1 , Amazon</span>
+                  <span class="speciality" style="font-weight: bold">SDE 2 , Oracle</span>
                 </div>
               </div>
             </div>
             <!-- / End Single Person -->
             <!-- Start Single Person -->
-            <div class="col-sm-6 col-lg-4 col-xl-3">
+            <div class="alumini-content">
               <div class="single-person">
                 <div class="person-image">
                   <img src="assets\images\Alumni\sapnaChaudhary.jpg" alt="" />
                 </div>
                 <div class="person-info">
                   <h3 class="full-name">Sapna Chaudhary</h3>
-                  <span class="speciality" style="font-weight: bold">Pursuing Phd , IIITD</span>
+                  <span class="speciality" style="font-weight: bold">Doctoral Researcher , IIIT Delhi</span>
                 </div>
               </div>
             </div>
             <!-- / End Single Person -->
             <!-- Start Single Person -->
-            <div class="col-sm-6 col-lg-4 col-xl-3">
+            <div class="alumini-content">
               <div class="single-person">
                 <div class="person-image">
                   <img src="./assets/images/Alumni/tamanna.jpg" alt="" />
                 </div>
                 <div class="person-info">
                   <h3 class="full-name">Tamanna Arora</h3>
-                  <span class="speciality" style="font-weight: bold">SDE , Media Agility</span>
+                  <span class="speciality" style="font-weight: bold">SDE , rStar Technologies</span>
                 </div>
               </div>
             </div>
             <!-- / End Single Person -->
             <!-- Start Single Person -->
-            <div class="col-sm-6 col-lg-4 col-xl-3">
+            <div class="alumini-content">
               <div class="single-person">
                 <div class="person-image">
                   <img src="./assets/images/Alumni/Abhishek1Squared.jpg" alt="" />
                 </div>
                 <div class="person-info">
                   <h3 class="full-name">Abhishek Khandelwal</h3>
-                  <span class="speciality" style="font-weight: bold">Founder CEO , ENSVEE & Part. of CSL Symposium , New York</span>
+                  <span class="speciality" style="font-weight: bold">Co-Founder , Ensvee ; Senior Product manager at Daalchini</span>
                 </div>
               </div>
             </div>
-            <!-- / End Single Person -->
-          </div>
-        </div>
-      </section>
-
-      <!-- <div class="glider-contain">
-          <div class="glider">
-            <div class="boxx">
-              <div class="images">
-                <div class="rot">
-                  <img src="./assets/images/Alumni/RajatMaheshwariRotate.jpg" alt="">
-                </div>
-                <h4>Rajat Maheshwari</h4>
-                <h5>SDE 1, Amazon</h5>
-              </div>
-            </div>
-            <div class="boxx">
-              <div class="images">
-                <img src="./assets/images/Alumni/sapnaChaudharyRotate.jpg" alt="">
-                <h4>Sapna Chaudhary</h4>
-                <h5>Pursuing Phd, IIITD</h5>
-              </div>
-            </div>
-            <div class="boxx">
-              <div class="images">
-                <img src="./assets/images/Alumni/tamannaRotate.jpg" alt="">
-                <h4>Tamanna Arora</h4>
-                <h5>SDE, Media Agility</h5>
-              </div>
-            </div>
-            <div class="boxx">
-              <div class="images">
-                <img src="./assets/images/Alumni/AbhishekRotate.jpg" alt="">
-                <h4>Abhishek Khandelwal</h4>
-                <h5>Founder CEO, ENSVEE & Part. of CSL Symposium, New York</h5>
-              </div>
-            </div>
+            <!-- / End Single Person -->  
           </div>
           <div aria-label="Previous" class="glider-prev alumni-prev"><i class="fas fa-angle-left"></i></div>
           <div aria-label="Next" class="glider-next alumni-next"><i class="fas fa-angle-right"></i></div>
           <div role="tablist" class="dots"></div> 
-        </div>-->
+        </div>
+        </div>
+      </section>
     </div>
   </section>
   <!-- *********************************************Winners section******************************************************** -->
@@ -202,7 +287,7 @@
 
     <div class="winners">
 
-      <div class="container">
+      <div class="container"  style="width: 95%;">
         <div class="line"></div>
         <h1><b>WINNERS</b></h1>
 
@@ -210,96 +295,6 @@
         <!--  -->
         <div class="glider-contain">
           <div class="winnerContainer glider1">
-            <!-- <div class=""> -->
-              <!-- <div class="winnerOne">
-                <div class="circleCard">
-                </div>
-                <div class="eventName">
-                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
-                </div>
-                <div class="innerContent">
-                  <h2>ACM Write it loud</h2>
-                  <h3>Winners</h3>
-                  <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Manasi Prabhakaran</h4>
-                  <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4>
-                </div>
-              </div>
-              <div class="winnerOne">
-                <div class="circleCard">
-                </div>
-                <div class="eventName">
-                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
-                </div>
-                <div class="innerContent">
-                  <h2>ACM Valorant Tournament</h2>
-                  <h3>Winners</h3>
-                  <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Samir Mahapatra</h4>
-                </div>
-              </div>
-              <div class="winnerOne">
-                <div class="circleCard">
-                </div>
-                <div class="eventName">
-                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
-                </div>
-                <div class="innerContent">
-                  <h2>ACM CODM Tournament</h2>
-                  <h3>Winners</h3>
-                  <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Rajesh Devanda</h4>
-                  <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Raj Kishor Panigrahi</h4>
-                </div>
-              </div>
-              <div class="winnerOne">
-                <div class="circleCard">
-                </div>
-                <div class="eventName">
-                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
-                </div>
-                <div class="innerContent">
-                  <h2>ACM CODM Tournament</h2>
-                  <h3>Winners</h3>
-                  <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Rajesh Devanda</h4>
-                  <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Raj Kishor Panigrahi</h4>
-                </div>
-              </div>
-              <div class="winnerOne">
-                <div class="circleCard">
-                </div>
-                <div class="eventName">
-                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
-                </div>
-                <div class="innerContent">
-                  <h2>ACM CODM Tournament</h2>
-                  <h3>Winners</h3>
-                  <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Rajesh Devanda</h4>
-                  <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Raj Kishor Panigrahi</h4>
-                </div>
-              </div> -->
-              <!-- <div class="winnerOne">
-                <div class="circleCard">
-                </div>
-                <div class="eventName">
-                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
-                </div>
-                <div class="innerContent">
-                  <h2>ACM Write it loud</h2>
-                  <h3>Winners</h3>
-                  <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Manasi Prabhakaran</h4>
-                  <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4>
-                </div>
-              </div>
-              <div class="winnerOne">
-                <div class="circleCard">
-                </div>
-                <div class="eventName">
-                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
-                </div>
-                <div class="innerContent">
-                  <h2>ACM Valorant Tournament</h2>
-                  <h3>Winners</h3>
-                  <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Samir Mahapatra</h4>
-                </div>
-              </div> -->
               <div class="winnerOne">
               <div class="outerContent">
               <h3>ACM Write it loud</h3>
@@ -555,7 +550,7 @@
 
   <section id="registration">
     <div class="container">
-      <p class="registration-heading">JOIN NOW</p>
+      <p class="registration-heading">JOIN <span class="text-head">NOW</span></p>
       <div class="registration-form-div">
         <hr class="blue-hr">
         <div class="row no-gutters">
@@ -564,36 +559,37 @@
           </div>
           <div class="col-lg-6 col-md-12 col-sm-12">
             <div class="registration-inner-div d-flex justify-content-center">
-              <form class="widget-contact-form" id="form-id" action="" role="form" method="post" target="_self" novalidate="novalidate">
+              <form class="widget-contact-form" id="form-id" action="" role="form" method="post"  novalidate="novalidate">
                 <div class="row test-dev2">
                   <div class="form-group col-md-6">
-                    <input id="NameinForm" required type="text" aria-required="true" name="entry.73813921" class="form-input-boxes-manual form-control required fname test-dev3" placeholder="First Name">
+                    <input id="firstname" required type="text" aria-required="true" name="firstname" class="form-input-boxes-manual form-control required fname test-dev3" placeholder="First Name">
                   </div>
                   <div class="form-group col-md-6">
-                    <input id="LastNameinForm" required type="text" aria-required="true" name="entry.1318071106" class="form-input-boxes-manual form-control required lname test-dev3" placeholder="Last Name">
+                    <input id="lastname" required type="text" aria-required="true" name="lastname" class="form-input-boxes-manual form-control required lname test-dev3" placeholder="Last Name">
                   </div>
                 </div>
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <input id="EmailinForm" required type="email" name="entry.2086820351" class="form-input-boxes-manual form-control test-dev3" placeholder="Email">
+                    <input id="email" required type="email" name="email" class="form-input-boxes-manual form-control test-dev3" placeholder="Email">
                   </div>
                   <div class="form-group col-md-6">
-                    <input id="PhoneinForm" required type="number" name="entry.2128372508" class="form-input-boxes-manual form-control test-dev3" placeholder="Phone Number">
+                    <input id="phone" required type="number" name="phone" class="form-input-boxes-manual form-control test-dev3" placeholder="Phone Number">
                   </div>
                 </div>
                 <div class="form-group">
-                  <input id="EnrollmentinForm" required type="number" name="entry.1857583496" class="form-control form-input-boxes-manual required test-dev3" placeholder="Enrollment Number" aria-required="true">
+                  <input id="enroll" required type="number" name="enroll" class="form-control form-input-boxes-manual required test-dev3" placeholder="Enrollment Number" aria-required="true">
                 </div>
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <input id="YearofAdmissioninForm" required type="number" name="entry.715926692" class="form-input-boxes-manual form-control test-dev3" placeholder="Year Of Admission">
+                    <input id="year" required type="number" name="year" class="form-input-boxes-manual form-control test-dev3" placeholder="Year Of Admission">
                   </div>
                   <div class="form-group col-md-6">
-                    <input id="ACMMembershipNoinForm" required type="number" name="entry.114256127" class="form-input-boxes-manual form-control test-dev3" placeholder="ACM Membership No.">
+                    <input id="acm_no" required type="number" name="acm_no" class="form-input-boxes-manual form-control test-dev3" placeholder="ACM Membership No.">
+                    If you don't have membership number, <a href="https://bit.do/joinacm" target="_blank"><b>Click Here</b></a> to get one.
                   </div>
                 </div>
                 <div class="form-group">
-                  <input id="CourseinForm" required list="course" name="entry.1307853061" class="form-control form-input-boxes-manual required test-dev3" placeholder="Select Course" aria-required="true">
+                  <input id="course" required list="course" name="course" class="form-control form-input-boxes-manual required test-dev3" placeholder="Select Course" aria-required="true">
                   <datalist id="course">
                     <option value="B.Tech CSE">
                     <option value="B.Tech IT">
@@ -615,39 +611,39 @@
                   <div class="row no-gutters">
                     <br>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice1" name="entry.332679571" value="USICT ACM DevSource - The Development and Open Source Group">
+                      <input type="checkbox" id="courseChoice1" name="clubs" value="USICT ACM DevSource - The Development and Open Source Group">
                       <label class="label-course" for="contactChoice1">DevSource</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice2" name="entry.332679571" value="USICT ACM enGame - The Gaming Group">
+                      <input type="checkbox" id="courseChoice2" name="clubs" value="USICT ACM enGame - The Gaming Group">
                       <label class="label-course" for="contactChoice2">enGame</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM ICPC Club - The Competitive Programming Group">
+                      <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM ICPC Club - The Competitive Programming Group">
                       <label class="label-course" for="contactChoice3">ICPC Club</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Innovate AI - The Machine Learning, Data Science and AI Group">
+                      <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM Innovate AI - The Machine Learning, Data Science and AI Group">
                       <label class="label-course" for="contactChoice4">Innovate AI</label><br>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Cyber Cell - The Cybersecurity Group">
+                      <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM Cyber Cell - The Cybersecurity Group">
                       <label class="label-course" for="contactChoice5">Cyber Chain</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM RobIOTics - The Robotics and IoT Group">
+                      <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM RobIOTics - The Robotics and IoT Group">
                       <label class="label-course" for="contactChoice6">RobIOTics</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Entrepreneurs' Arena - The Entrepreneurship Group">
+                      <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM Entrepreneurs' Arena - The Entrepreneurship Group">
                       <label class="label-course" for="contactChoice7">Entrepreneurs' Arena</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM Research Cell - The Research and Development Group">
+                      <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM Research Cell - The Research and Development Group">
                       <label class="label-course" for="contactChoice8">Research Cell</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="entry.332679571" value="USICT ACM XD - The Experience and Design group">
+                      <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM XD - The Experience and Design group">
                       <label class="label-course" for="contactChoice8">XD</label>
                     </div>
                   </div>
@@ -656,7 +652,7 @@
                   <div class="form-group col-md-2 button-center">
                     <div class="form-group">
                       <!-- <button id="submitSingupForm" type="submit" style="display:none;"></button> -->
-                      <button type="submit" class="btn signin" onclick="validateForm()">Submit</button>
+                      <input type="button" name="submit" class="btn signin" onclick="validateForm()" value="Submit">
                     </div>
                   </div>
                 </div>
@@ -678,35 +674,85 @@
   include('footer.php');
   ?>
 
-  <script src="./assets/JS/glider.js"></script>
-  <script>
-    // For winners sections
-    function validateForm() {
-      // var x = document.forms["contact"]["name"].value;
-      var x = document.getElementById("NameinForm").value;
-      var y = document.getElementById("LastNameinForm").value;
-      console.log(document.getElementById("EmailinForm"), "Email");
-      var z = document.getElementById("EmailinForm").value;
-      var a = document.getElementById("CourseinForm").value;
-      var b = document.getElementById("PhoneinForm").value;
-      var c = document.getElementById("YearofAdmissioninForm").value;
-      var d = document.getElementById("ACMMembershipNoinForm").value;
-      var e = document.getElementById("EnrollmentinForm").value;
+    <script src="./assets/JS/glider.js"></script>
+    <script>
+      // For winners sections
+      function validateForm(){
+        // var x = document.forms["contact"]["name"].value
+        //e.prevetDefault();
+        var x = document.querySelector("#firstname").value;
+        var y = document.querySelector("#lastname").value;
+        var z = document.querySelector("#email").value;
+        var a = document.querySelector("#course").value;
+        var b = document.querySelector("#phone").value;
+        var c = document.querySelector("#year").value;
+        var d = document.querySelector("#acm_no").value;
+        var e = document.querySelector("#enroll").value;
+        let checkboxes = document.querySelectorAll('input[name="clubs"]:checked');
+        let values = "";
+        checkboxes.forEach((checkbox) => {
+                values = values+checkbox.value+" ";
+            });
+            console.log();
+        let flag = true;
+          if (x == "" || !x || y == "" || !y || z == "" || !z || a == "" || !a || b == "" || !b || c == "" || !c || d == "" || !d || e == "" || !e || isNaN(c) || isNaN(d) || isNaN(e) || isNaN(b)) {
+            
+        flag = false;
+        alert("Please enter valid information!  ");
+        //document.getElementById("form-id").action = "";
+          
+          //document.location.reload()
 
-      const form_action = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse";
-      if (x == "" || !x || y == "" || !y || z == "" || !z || a == "" || !a || b == "" || !b || c == "" || !c || d == "" || !d || e == "" || !e) {
-        alert("Please fill all the fields");
-        document.getElementById("form-id").action = "";
+          //return false;
+        }
+        
+        var formData = new FormData();
+        
+            
+            formData.append('firstname', x);
+            formData.append('lastname', y);
+            formData.append('email', z);
+            formData.append('course',a);
+            formData.append('phone',b);
+            formData.append('year', c);
+            formData.append('acm_no', d);
+            formData.append('enroll', e);
+            formData.append('clubs', values);
 
-        document.location.reload()
+        //const form_action = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse"; 
+          
+       
+        
+          // var button = document.getElementById("submitSingupForm");
+          // document.getElementById("form-id").action = form_action;
+          // button.click();
+          if(flag){
+          $.ajax({
+                type: "POST",
+                url: "./admin/blogAdmin/api.php/?q=joinus",
+                data : formData,
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function(data){
+                  alert("Form has been submitted !");
+                  //  console.log("success!!");
+                    // window.location.reload();
+                // window.location.replace('./index.php?table=certificateCreation');
+                //window.location.replace('../../index.php?table=certificateCreation');
 
-        return false;
-      } else {
-        var button = document.getElementById("submitSingupForm");
-        document.getElementById("form-id").action = form_action;
-        button.click();
+                },
+                error: function(xhr, status, error){
+                    //window.location.reload();
+                    // alert("Fill in the details");
+                    console.log(error);
+                },
+            });
+          }
+          // else{
+          //   alert("fill details!!!");
+          // } 
       }
-    }
 
     window.addEventListener('load', function() {
       new Glider(document.querySelector('.glider1'), {

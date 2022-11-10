@@ -20,6 +20,7 @@ import { COLLEGES } from "utils/Constants";
 import { updateProfile } from "api/user";
 import SweetAlert from "components/SweetAlert";
 import { setUser } from "redux/slices/userSlice";
+import userIcon from "../../assets/img/user.png";
 
 const Profile = () => {
   const dispatch = useDispatch(),
@@ -110,7 +111,7 @@ const Profile = () => {
 				msg={alertMsg}
 				type={alertType}
 			/>
-      <UserHeader />
+      {/* <UserHeader /> */}
       {/* Page content */}
       <Container className="profileContainer" fluid>
         <Row>
@@ -155,8 +156,7 @@ const Profile = () => {
                     src={
                       localURL ||
                       user?.profilePhoto ||
-                      require("../../assets/img/user.png")
-                        .default
+                      userIcon
                     }
                     alt="Card image cap"
                     className="rounded-circle d-block md-8 "

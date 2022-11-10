@@ -30,35 +30,33 @@ import {
   Col,
 } from "reactstrap";
 import "../../assets/css/login.css";
+import acmLogo from "../../assets/img/brand/acm-logo.svg"
+import webAward from "../../assets/img/brand/outstanding-website-text.png"
 
 const AuthNavbar = () => {
   return (
     <>
       <Navbar
-        className="sticky-top navbar-top navbar-horizontal navbar-light bg-white"
+        className="sticky-top navbar-top navbar-horizontal navbar-light bg-white nav-shadow"
         expand="md"
       >
         <Container>
-          <NavbarBrand to="/" tag={Link}>
+          <a href="https://usict.acm.org/">
+            <img
+              className="navbarLogo"
+              alt="..."
+              src= {acmLogo}
+              />
+          </a>
+          <a href="https://usict.acm.org/" className="oslogo text-center">
             <img
               className="navbarLogo"
               alt="..."
               src={
-                require("../../assets/img/brand/acm1.png")
-                  .default
+                webAward
               }
             />
-          </NavbarBrand>
-          <NavbarBrand to="/" tag={Link} className="oslogo text-center">
-            <img
-              className="navbarLogo"
-              alt="..."
-              src={
-                require("../../assets/img/brand/outstanding-website-text.png")
-                  .default
-              }
-            />
-          </NavbarBrand>
+          </a>
           <button className="navbar-toggler" id="navbar-collapse-main">
             <span className="navbar-toggler-icon" />
           </button>
@@ -66,15 +64,14 @@ const AuthNavbar = () => {
             <div className="navbar-collapse-header d-md-none">
               <Row>
                 <Col className="collapse-brand" xs="6">
-                  <Link to="/">
+                <a href="https://usict.acm.org/">
                     <img
                       alt="..."
                       src={
-                        require("../../assets/img/brand/acm1.png")
-                          .default
+                        acmLogo
                       }
                     />
-                  </Link>
+                  </a>
                 </Col>
                 <Col className="collapse-close" xs="6">
                   <button className="navbar-toggler" id="navbar-collapse-main">

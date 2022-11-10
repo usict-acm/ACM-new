@@ -1,59 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-
-  <title>Form</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!--===============================================================================================-->
+  <head>
+    <title>GGSIP University USS ACM Student Chapter</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./css/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
   <link rel="icon" type="image/png" href="images/icons/favicon.png" />
-  <!--===============================================================================================-->
 
-  <!--===============================================================================================-->
+    <style>
+      ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #4388F0;
+        opacity: 1; /* Firefox */
+      }
+      .checkboxDiv{
+        background-color: #ffffff;
+        padding: 20px 20px 30px 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        font: inherit;
+        color: #212529;
+      }
+      input[type="checkbox"] {
+        width: 12px;
+  height: 12px;
+  background: rgb(67, 136, 240, 0.1);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #4388F0;
+  }
 
-  <link rel="stylesheet" type="text/css" href="css/main.css" />
-  <!--===============================================================================================-->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <style>
-    textarea::placeholder {
-      font-size: 18px;
-      padding-top: 20px;
-      padding-left: 5px;
+  input[type="checkbox"]:checked {
+    background: #4388F0;
+    border: 1px solid #005daa;
+  }
+
+    input[type="radio"] {
+          width: 12px;
+    height: 12px;
+    background: rgb(67, 136, 240, 0.1);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #4388F0;
+    border-radius: 1em;
+    }  
+    input[type="radio"]:checked {
+      background: #4388F0;
+      border: 1px solid #005daa;
     }
-    .radioName{
-      position: relative;
-      left:0px;
-      font-family: "Ubuntu", sans-serif;
-      font-weight: 500;
-      font-size: 17px;
-    }
-    .registration-form form {
-      max-width: 60%;
-    }
-    .checkboxName {
-      font-family: "Ubuntu", sans-serif;
-      font-weight: 500;
-      font-size: 17px;
-    }
-  </style>
-</head>
 
-<body>
+      .fileButton{
+        font-size: 1rem;
+        font-family: inherit;
+      }
+    ::-webkit-file-upload-button {
+        /* margin-top: 5px; */
+    /* margin-bottom: 5px; */
+    /* display: block; */
+    /* box-sizing: border-box; */
+    appearance: none;
+    background-color: rgb(3 151 254);
+    border: 2px solid rgb(3 151 254);
+    border-radius: 0.6em;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    transition: all 150ms ease-in-out;
+}
+    </style>
+    <meta name="robots" content="noindex, follow" />
+  </head>
 
-  <div class="registration-form">
+  <body>
+    <div class="container-contact100">
+      <div style="background-color: rgb(213 255 253);" class="wrap-contact100">
+        <form class="contact100-form validate-form" id="formPage">
 
-    <form id="formPage"></form>
 
-  </div>
 
+        </form>
+      </div>
+    </div>
+    <div id="dropDownSelect1"></div>
+
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/select2.min.js"></script>
+    <script>
+      $(".selection-2").select2({
+        minimumResultsForSearch: 20,
+        dropdownParent: $("#dropDownSelect1"),
+      });
+    </script>
+  
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <?php $Id = $_GET["Id"]; ?>
-
-
+  <?php $Id = $_GET["id"]; ?>
 
   <script>
     let i1 = 0;
@@ -69,157 +124,211 @@
         console.log("check data ", data);
         // divTag.innerHTML += `    `;
 
-        divTag.innerHTML += ` <span> <h5 id="formTitle" class = "contact100-form-title">${data[0].formName}<h5></span>`;
+        // divTag.innerHTML += ` <span> <h5 id="formTitle" class = "contact100-form-title">${data[0].formName}<h5></span>`;
+        divTag.innerHTML += `<span id="formTitle" 
+        style="   
+          background-image: url('../assets/images/form-bg.png');
+          background-size: cover;
+          padding: 30px;
+          border-radius: 8px;
+          margin-bottom: 20px;
+          color: white;"
+          class="contact100-form-title"> ${data[0].formName} </span>`;
         for (let i = 0; i < data.length; i++) {
           // console.log(data[i].fieldType);
           if (data[i].fieldType == "shortAns") {
-            divTag.innerHTML += `<div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
-                                      <p style="color:red;">This field is required</p>
-                                      </div>`;
+          //  Short ans type *******************************************************************************          
             if (data[i].required == 1) {
-              divTag.innerHTML += `<div class="form-group">
-                <input type="text" class="form-control item" id="field${i}" placeholder="${data[i].fieldName} *" required>
-            </div>`;
-            } else {
-              divTag.innerHTML += `<div class="form-group">
-                <input type="text" class="form-control item" id="field${i}" placeholder="${data[i].fieldName}" >
-            </div>`;
-            }
-          } else if (data[i].fieldType == "paraAns") {
-            divTag.innerHTML += `<div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
-                                    <p style="color:red;">This field is required</pThis>
+              divTag.innerHTML += ` <div class='wrap-input100 validate-input' style="background-color: #ffffff;padding: 20px 20px 30px 20px;border-radius: 8px;margin-bottom: 20px;">
+              <div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
+                                      <p style="color:red;">This field is required</p>
+                                      </div>                        
+              <span class='label-input100' style="color: #212529;font: inherit; font-weight: 500;">${data[i].fieldName} <span style="color: red";>*</span> :</span>
+                                      <input
+                                        id="field${i}"
+                                        class='input100 bottom-line'
+                                        type='text'
+                                        name='name'
+                                        style = "border-bottom: 1px solid #4388F0; margin-top:10px;"
+                                        placeholder="Type your answer here"
+                                        required
+                                      />
                                     </div>`;
-            if (data[i].required == 1) {
-              divTag.innerHTML += `<div class="form-group">
-                <textarea type="text" class="form-control item" id="field${i}"  placeholder="${data[i].fieldName} *" rows="3" required></textarea>
-            </div>`;
             } else {
-              divTag.innerHTML += `<div class="form-group">
-                <textarea type="text" class="form-control item" id="field${i}"  placeholder="${data[i].fieldName} " rows="3"></textarea>
-            </div>`;
-            }
-          } else if (data[i].fieldType == "fileAns") {
-            divTag.innerHTML += `<div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
-                                      <p style="color:red;">This field is required</p>
-                                      </div>`;
-            if (data[i].required == 1) {
-              divTag.innerHTML += `<div class = "form-group">
-                                      <label for="myfile">Select a file: *</label><br/>
-                                      <input type="file" id="field${i}" name="myfile" class="button" required><br>
-                                    </div><br>`;
-            } else {
-              divTag.innerHTML += `<div class = "form-group">
-                                      <label for="myfile">Select a file:</label><br/>
-                                      <input type="file" id="field${i}" name="myfile" class="button"><br>
-                                    </div><br>`;
+              divTag.innerHTML += ` <div class='wrap-input100 validate-input' style="background-color: #ffffff;padding: 20px 20px 30px 20px;border-radius: 8px;margin-bottom: 20px;">
+                                      <span class='label-input100' style="color: #212529;font: inherit; font-weight: 500;">${data[i].fieldName}:</span>
+                                      <input
+                                        id="field${i}"
+                                        style="color: #212529;font: inherit;"
+                                        class='input100 bottom-line'
+                                        type='text'
+                                        name='name'
+                                        style = "border-bottom: 1px solid #4388F0; margin-top:10px;"
+                                        placeholder="Type your answer here"
+                                      />
+                                    </div>`;
             }
           }
-          //  else if (data[i].fieldType == "passAns") {
-          //   divTag.innerHTML += `<div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
-          //                             <p style="color:red;">This field is required</p>
-          //                             </div>`;
-          //   if (data[i].required == 1) {
-          //     divTag.innerHTML += `<div class="form-group">
-          //       <input type="password" class="form-control item" id="field${i}" placeholder="Password" required>
-          //   </div>`;
-          //   } else {
-          //     divTag.innerHTML += `<div class="form-group">
-          //       <input type="password" class="form-control item" id="field${i}" placeholder="Password" required>
-          //   </div>`;
-          //   }
-          // } else if (data[i].fieldType == "emailAns") {
-          //   divTag.innerHTML += `<div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
-          //                             <p style="color:red;">This field is required</p>
-          //                             </div>`;
-          //   if (data[i].required == 1) {
-          //     divTag.innerHTML += `<div class="form-group">
-          //                                 <input type="text" class="form-control item" id="field${i}"placeholder="Email">
-          //                             </div>`;
-          //   } else {
-          //     divTag.innerHTML += `<div class="form-group">
-          //                                 <input type="text" class="form-control item" id="field${i}"placeholder="Email">
-          //                             </div>`;
-          //   }
-          // } else if (data[i].fieldType == "onlyNumAns") {
-          //   divTag.innerHTML += `<div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
-          //                             <p style="color:red;">This field is required</p>
-          //                             </div>`;
-          //   if (data[i].required == 1) {
-          //     divTag.innerHTML += `<div class="form-group">
-          //                             <input type="text" class="form-control item" id="field${i}" placeholder="Phone Number">
-          //                         </div>`;
-          //   } else {
-          //     divTag.innerHTML += `<div class="form-group">
-          //                             <input type="text" class="form-control item" id="field${i}" placeholder="Phone Number">
-          //                         </div>`;
-          //   }
-          // } else if (data[i].fieldType == "DOBAns") {
-          //   divTag.innerHTML += `<div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
-          //                             <p style="color:red;">This field is required</p>
-          //                             </div>`;
-          //   if (data[i].required == 1) {
-          //     divTag.innerHTML += `<div class="form-group">
-          //                             <input type="text" class="form-control item" id="field${i}" placeholder="Birth Date">
-          //                         </div>`;
-          //   } else {
-          //     divTag.innerHTML += `<div class="form-group">
-          //                             <input type="text" class="form-control item" id="field${i}" placeholder="Birth Date">
-          //                         </div>`;
-          //   }
-          // } 
+
+
+          //  Long ans type *******************************************************************************
+          else if (data[i].fieldType == "paraAns") {
+            if (data[i].required == 1) {
+              divTag.innerHTML += `   <div class="wrap-input100 validate-input" style="background-color: #ffffff;padding: 20px 20px 30px 20px;border-radius: 8px;margin-bottom: 20px;">
+              <div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
+                                    <p style="color:red;">This field is required</pThis>
+                                    </div>
+                                              <span style="font: inherit;color: #000000; font-weight: 500;" class="label-input100">${data[i].fieldName} <span style="color: red";>*</span> :</span>
+                                              <textarea
+                                                class="input100 bottom-line"
+                                                style = "border-bottom: 1px solid #4388F0; margin-top:10px;"
+                                                name="message"
+                                                placeholder="Type your answer here"
+                                                id="field${i}"
+                                                rows="3"
+                                                required
+                                              ></textarea>
+                                            </div>`;
+
+
+            } else {
+            divTag.innerHTML += `          <div class="wrap-input100 validate-input" style="background-color: #ffffff;padding: 20px 20px 30px 20px;border-radius: 8px;margin-bottom: 20px;">
+                                              <span style="font: inherit;color: #000000; font-weight: 500;" class="label-input100">${data[i].fieldName}:</span>
+                                              <textarea
+                                                class="input100 bottom-line"
+                                                style = "border-bottom: 1px solid #4388F0; margin-top:10px;"
+                                                name="message"
+                                                placeholder="Type your answer here"
+                                                id="field${i}"
+                                                rows="3"
+                                              ></textarea>
+                                            </div>`;
+            }
+          } 
+
+
+          
+          //  File ans type *******************************************************************************
+          else if (data[i].fieldType == "fileAns") {
+            if (data[i].required == 1) {
+              divTag.innerHTML += `<div class="wrap-input100 validate-input" style="background-color:#ffffff;padding: 20px 20px 30px 20px;border-radius: 8px;margin-bottom: 20px;">
+              <div class="fieldCheck" id="fieldRequired${i}" style=display:none;>
+                                    <p style="color:red;">This field is required</pThis>
+                                    </div>
+              <label style="font: inherit;color: #212529; font-weight:500;" class="label-input100" for="myfile">${data[i].fieldName} <span style="color: red";>*</span> :</label>
+              <input
+                                                  class="input100 fileButton"
+                                                  type="file"
+                                                  style="margin-top: 10px;"
+                                                  id="field${i}"
+                                                  name="myfile"
+                                                  required
+                                                />
+                                              </div>`;
+            } else {
+              divTag.innerHTML += `           <div class="wrap-input100 validate-input" style="background-color:#ffffff;padding: 20px 20px 30px 20px;border-radius: 8px;margin-bottom: 20px;">
+                                                <span style="font: inherit;color: #212529; font-weight:500;" class="label-input100" for="myfile">${data[i].fieldName} : </span>
+                                                <input
+                                                  class="input100 fileButton"
+                                                  type="file"
+                                                  style="margin-top: 10px;"
+                                                  id="field${i}"
+                                                  name="myfile"
+                                                />
+                                              </div>`;
+            }
+          }
+
+          //Checkbox ans type *******************************************************************************
           else if (data[i].fieldType == "checkbox") {
-            var nameArr = (data[i].ifCheckbox).split(',');
-            divTag.innerHTML += `<div class="fieldCheckCheckbox" id="fieldRequiredCheck${i}" style=display:none;>
-                                    <p style="color:red;">This field is required</p>
-                                    </div>`;
+            var nameArr = (data[i].ifCheckbox).split(',');  
+            let newDiv = document.createElement("div") ;
+            let newDiv2 = document.createElement("div") ;
+            newDiv2.classList.add("wrap-input100");
+            newDiv2.classList.add("checkboxDiv");
+            newDiv2.id= `field${i}`;
             if (data[i].required == 1) {
-              divTag.innerHTML += `<div class = "form-group checkboxDiv" id="field${i}"  style="margin-bottom:0px;"><p class="checkboxLabel" style="margin-bottom:0px;">${data[i].fieldName} *</p>`;
+              newDiv2.innerHTML += ` <div class="fieldCheckCheckbox" id="fieldRequiredCheck${i}" style=display:none;>
+                                    <p style="color:red;">This field is required</p>
+                                    </div><span style="font-weight:500;">${data[i].fieldName} <span style="color: red";>*</span> : </span>&nbsp;&nbsp;&nbsp;`;
             } else {
-              divTag.innerHTML += `<div class = "form-group checkboxDiv" id="field${i}"  style="margin-bottom:0px;"><p class="checkboxLabel"  style="margin-bottom:0px;">${data[i].fieldName} </p>`;
+              newDiv2.innerHTML += `<span style="font-weight:500;"> ${data[i].fieldName}  : </span>&nbsp;&nbsp;&nbsp;`;
+
             }
+            // console.log(nameArr[0]);
+            console.log(nameArr); 
             for (let j = 0; j < nameArr.length; j++) {
-              divTag.innerHTML += `<input type="checkbox" id="field${i}${j}"  name="Checkbox1" value="${nameArr[j]}" class="checkbox checkboxDesign">
-                  <label for="vehicle1" class="checkboxName">${nameArr[j]} </label><br> `;
-
-                  if(j==nameArr.length - 1){
-                      divTag.innerHTML += `<br>`;
-                  }
+              if(j==0)
+                newDiv2.innerHTML += `<div style="margin-left: 20px;margin-top: 20px;"> <input type="checkbox" id="field${i}${j}" value="${nameArr[j]}"  name="Checkbox1"  class="checkbox checkboxDesign" /> ${nameArr[j]}</div> `;
+              else
+                newDiv2.innerHTML += `<div style="margin-left: 20px"> <input type="checkbox" id="field${i}${j}" value="${nameArr[j]}"  name="Checkbox1"  class="checkbox checkboxDesign" /> ${nameArr[j]} </div> `;
             }
-
-            divTag.innerHTML += `</div>`;
-          } else if (data[i].fieldType == "radioAns") {
+            newDiv.appendChild(newDiv2);
+            divTag.appendChild(newDiv);
+          } 
+          
+          //Radio ans type *******************************************************************************
+          
+          else if (data[i].fieldType == "radioAns") {
             var nameArr = (data[i].ifRadio).split(',');
-
-            // console.log(nameArr);
-            divTag.innerHTML += `<div class="fieldCheckRadio" id="fieldRequiredRadio${i}" style=display:none;>
+            let newDiv = document.createElement("div") ;
+            newDiv.classList.add("wrap-input100");
+            newDiv.classList.add("checkboxDiv");
+            newDiv.id= `field${i}`;
+            newDiv.innerHTML =  `<div class="fieldCheckRadio" id="fieldRequiredRadio${i}" style=display:none;>
                                     <p style="color:red;">This field is required</p>
                                     </div>`;
             if (data[i].required == 1) {
-              divTag.innerHTML += `<div id="field${i}" class= "form-group  checkboxDiv" style="margin-bottom:0px;"><p style="margin-bottom:0px;" class="checkboxLabel">${data[i].fieldName} *</p> `;
-
-            } else {
-              divTag.innerHTML += `<div id="field${i}" class= "form-group  checkboxDiv" style="margin-bottom:0px;"><p style="margin-bottom:0px;" class="checkboxLabel">${data[i].fieldName} </p> `;
-
+              newDiv.innerHTML += `<span style="font-weight:500;"> ${data[i].fieldName} <span style="color: red";>*</span> : </span>&nbsp;&nbsp;&nbsp;`;
             }
+            else
+              newDiv.innerHTML += `<span style="font-weight:500;"> ${data[i].fieldName} : </span>&nbsp;&nbsp;&nbsp;`;
+            
 
             for (let j = 0; j < nameArr.length; j++) {
-
-              if (j === 0) {
-                divTag.innerHTML += `<form>`;
-              }
-              divTag.innerHTML += `<input type="radio" id="field${i}${j}" name="radioButton${i1}" value="${nameArr[j]}" class="checkbox checkboxDesign">
-                                     <label class="radioName" for="field${i}${j}">${nameArr[j]} </label><br>`;
-              if (j === nameArr.length - 1) {
-                divTag.innerHTML += `<br></form>`;
-              }
+              if(j==0)
+                {
+                  newDiv.innerHTML += `<div style="margin-left: 20px;margin-top: 20px;">
+                                   <input type="radio" id="field${i}${j}" name="radioButton${i1}" value="${nameArr[j]}" class="checkbox checkboxDesign">
+                                   <label class="radioName" for="field${i}${j}">${nameArr[j]} </label>
+                                   </div>`;
+                }
+                else{
+                  newDiv.innerHTML += `<div style="margin-left: 20px">
+                                   <input type="radio" id="field${i}${j}" name="radioButton${i1}" value="${nameArr[j]}" class="checkbox checkboxDesign">
+                                   <label class="radioName" for="field${i}${j}">${nameArr[j]} </label>
+                                   </div>`;
+                }
             }
             i1++;
-            divTag.innerHTML += `</div>`;
+            divTag.appendChild(newDiv);
           }
+
+          //Dropdown ans type *******************************************************************************
+          // else if (data[i].fieldType == "radioAns") {
+              //   <div class="wrap-input100 input100-select">
+              //   <span class="label-input100">Needed Services</span>
+              //   <div>
+              //     <select class="selection-2" name="service">
+              //       <option class="hidden" selected disabled>Select</option>
+              //       <option>Online Store</option>
+              //       <option>eCommerce Bussiness</option>
+              //       <option>UI/UX Design</option>
+              //       <option>Online Services</option>
+              //     </select>
+              //   </div>
+              //   <span class="focus-input100"></span>
+              // </div>
+          // }
         }
-        divTag.innerHTML += `<div class="form-group">
-                <input type="button" class="btn btn-block create-account" id="buttonSubmit" name="submit" value="Submit"/>
-            </div>`;
+        divTag.innerHTML += `             <div class="container-contact100-form-btn">
+                                            <div class="wrap-contact100-form-btn">
+                                              <div class="contact100-form-bgbtn"></div>
+                                     
+                                              <input type="button" class="btn btn-block create-account contact100-form-btn" style="color:white" id="buttonSubmit" name="submit" value="Submit"/>
+                                            </div>
+                                          </div>
+                                `;
 
         document.getElementById("buttonSubmit").addEventListener("click", function() {
           var res = [];
@@ -291,10 +400,11 @@
               var formData = new FormData();
               var field = "field" + i;
               var fieldRequired = "fieldRequired" + i;
-              var filerequired = $(`#${fieldRequired}`).get(0).files;
+              // var filerequired = $(`#${fieldRequired}`).get(0).files;
               // var file = $(`#${field}`).get(0).files;
               // console.log(file[0]);
-              var input = document.getElementById("field"+i);
+              var input = document.getElementById(field);
+              console.log(field, input);
               file = input.files[0];
 
 
@@ -309,7 +419,7 @@
               }
               console.log($(`#${field}`).val() );
               if($(`#${field}`).val()!= ""){
-              tableData.push((`/forms/responsesfile/${data[i].formID}_${file.name}`));
+              tableData.push((`https://usict.acm.org/forms/responsesfile/${data[i].formID}_${file.name}`));
 
               var extensions = ["jpg", "jpeg", "png" , "pdf"];  
 

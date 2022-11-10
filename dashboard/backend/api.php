@@ -45,6 +45,15 @@ switch ($q) {
     case 'singleEvent':
         fetchSingleEvent();
         break;
+    case 'checkRegisteredStudents' :
+        checkRegisteredStudents();
+        break;
+    case 'postDetailDashboard' :
+        postDetailDashboard();
+        break;
+    case 'formResponseCheck' :
+        formResponseCheck();
+        break;
     default:
         echo "Invalid Query";
 }

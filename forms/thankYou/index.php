@@ -14,11 +14,11 @@
 
       <span class="lead" style="padding-top:20px; padding-bottom:10px; border-bottom:1px solid black;" ><strong>Please check your email regularly</strong>. We will catch you there.</span>
 
-      <p style="margin-top:35px;">
+      <!-- <p style="margin-top:35px;">
         Having trouble? <a href="">Contact us</a>
-      </p>
-      <p class="lead">
-        <a class="btn btn-primary btn-sm" href="/ACM-new" role="button">Continue to homepage</a>
+      </p> -->
+      <p class="lead" style="margin-top:35px;">
+        <a class="btn btn-primary btn-sm" href="/" role="button">Continue to homepage</a>
       </p>
     </div>
 </body>

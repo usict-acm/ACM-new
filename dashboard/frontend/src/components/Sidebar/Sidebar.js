@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { NavLink as NavLinkRRD, Link } from "react-router-dom";
 // nodejs library to set properties for components
 import { PropTypes } from "prop-types";
+import LogoImage from "../../assets/img/brand/acm-logo.svg";
+import userIcon from "../../assets/img/user.png";
 
 // reactstrap components
 import {
@@ -83,7 +85,7 @@ const Sidebar = (props) => {
 
   return (
     <Navbar
-      className="navbar-vertical fixed-left navbar-light bg-white"
+      className="navbar-vertical fixed-left navbar-light bg-white nav-shadow"
       expand="md"
       id="sidenav-main"
     >
@@ -98,11 +100,7 @@ const Sidebar = (props) => {
         </button>
         {/* Brand */}
         <NavbarBrand className="pt-0" {...navbarBrandProps}>
-          <img
-            alt="logo"
-            className="navbar-brand-img"
-            src={require("../../assets/img/brand/acm1.png").default}
-          />
+          <img alt="logo" className="navbar-brand-img" src={LogoImage} />
         </NavbarBrand>
         {/* User */}
         <Nav className="align-items-center d-md-none">
@@ -113,9 +111,7 @@ const Sidebar = (props) => {
                   <img
                     alt="..."
                     src={
-                      user?.profilePhoto ||
-                      require("../../assets/img/user.png")
-                        .default
+                      user?.profilePhoto || userIcon
                     }
                   />
                 </span>
@@ -152,10 +148,7 @@ const Sidebar = (props) => {
             <Row>
               <Col className="collapse-brand" xs="6">
                 <Link to="/">
-                  <img
-                    alt="logo"
-                    src={require("../../assets/img/brand/acm1.png").default}
-                  />
+                  <img alt="logo" src={LogoImage} />
                 </Link>
               </Col>
               <Col className="collapse-close" xs="6">
@@ -178,9 +171,9 @@ const Sidebar = (props) => {
   );
 };
 
-Sidebar.defaultProps = {
-  routes: [{}],
-};
+// SidebarProps = {
+//   routes: [{}],
+// };
 
 Sidebar.propTypes = {
   // links that will be displayed inside the component
