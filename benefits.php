@@ -95,102 +95,187 @@
     <div class="container alumn">
       <div class="line"></div>
       <h1>MEET OUR <b>ALUMNI</b></h1>
-      <section class="alumini-content">
+      <section>
         <div class="container">
-          <div class="row">
+        <div class="glider-contain">
+          <div class="glider">
+            
             <!-- Start Single Person -->
-            <div class="col-sm-6 col-lg-4 col-xl-3">
+            <div class="alumini-content">
+              <div class="single-person">
+                <div class="person-image">
+                  <img src="./assets/images/Alumni/anmol.jpeg" alt="" />
+                </div>
+                <div class="person-info">
+                  <h3 class="full-name">Anmol Goel</h3>
+                  <span class="speciality" style="font-weight: bold">SDE , KalaGato</span>
+                </div>
+              </div>
+            </div>
+            <!-- / End Single Person -->
+            <!-- Start Single Person -->
+            <div class="alumini-content">
+              <div class="single-person">
+                <div class="person-image">
+                  <img src="./assets/images/Alumni/Gaurav.png" alt="" />
+                </div>
+                <div class="person-info">
+                  <h3 class="full-name">Gaurav Jain</h3>
+                  <span class="speciality" style="font-weight: bold">SDE , Tata 1mg</span>
+                </div>
+              </div>
+            </div>
+            <!-- / End Single Person -->
+             <!-- Start Single Person -->
+             <div class="alumini-content">
+              <div class="single-person">
+                <div class="person-image">
+                  <img src="./assets/images/Alumni/aakash.png" alt="" />
+                </div>
+                <div class="person-info">
+                  <h3 class="full-name">Aakash Sangwan</h3>
+                  <span class="speciality" style="font-weight: bold">SDE , ShareChat</span>
+                </div>
+              </div>
+            </div>
+            <!-- / End Single Person -->
+             <!-- Start Single Person -->
+             <div class="alumini-content">
+              <div class="single-person">
+                <div class="person-image">
+                  <img src="./assets/images/Alumni/prateek.png" alt="" />
+                </div>
+                <div class="person-info">
+                  <h3 class="full-name">Prateek Thakur</h3>
+                  <span class="speciality" style="font-weight: bold">Cloud Engineer , Oracle</span>
+                </div>
+              </div>
+            </div>
+            <!-- / End Single Person -->
+            <!-- Start Single Person -->
+            <div class="alumini-content">
+              <div class="single-person">
+                <div class="person-image">
+                  <img src="./assets/images/Alumni/vardaan.jpg" alt="" />
+                </div>
+                <div class="person-info">
+                  <h3 class="full-name">Vardaan Grover</h3>
+                  <span class="speciality" style="font-weight: bold">Co-founder , Ensvee</span>
+                </div>
+              </div>
+            </div>
+            <!-- / End Single Person -->
+            <!-- Start Single Person -->
+            <div class="alumini-content">
+              <div class="single-person">
+                <div class="person-image">
+                  <img src="./assets/images/Alumni/Divyansh.jpg" alt="" />
+                </div>
+                <div class="person-info">
+                  <h3 class="full-name">Divyansh Rastogi</h3>
+                  <span class="speciality" style="font-weight: bold">SDE 1 , Park+</span>
+                </div>
+              </div>
+            </div>
+            <!-- / End Single Person -->
+            <!-- Start Single Person -->
+            <div class="alumini-content">
+              <div class="single-person">
+                <div class="person-image">
+                  <img src="./assets/images/Alumni/Akshad.jpg" alt="" />
+                </div>
+                <div class="person-info">
+                  <h3 class="full-name">Akshad Bhandula</h3>
+                  <span class="speciality" style="font-weight: bold">SDE , Publicis Sapient</span>
+                </div>
+              </div>
+            </div>
+            <!-- / End Single Person -->
+            <!-- Start Single Person -->
+            <!-- <div class="col-sm-6 col-lg-4 col-xl-3">
+              <div class="single-person">
+                <div class="person-image">
+                  <img src="./assets/images/Alumni/RajatMaheshwari.jpg" alt="" />
+                </div>
+                <div class="person-info">
+                  <h3 class="full-name">Pankaj Kumar Gautam</h3>
+                  <span class="speciality" style="font-weight: bold">SDE 2 , Honeywell</span>
+                </div>
+              </div>
+            </div> -->
+            <!-- / End Single Person -->
+             <!-- Start Single Person -->
+             <div class="alumini-content">
+              <div class="single-person">
+                <div class="person-image">
+                  <img src="./assets/images/Alumni/Abhishek.jpg" alt="" />
+                </div>
+                <div class="person-info">
+                  <h3 class="full-name">Abhishek Yadav</h3>
+                  <span class="speciality" style="font-weight: bold">Software Engineer , IndiaMart</span>
+                </div>
+              </div>
+            </div>
+            <!-- / End Single Person -->
+            <!-- Start Single Person -->
+            <div class="alumini-content">
               <div class="single-person">
                 <div class="person-image">
                   <img src="./assets/images/Alumni/RajatMaheshwari.jpg" alt="" />
                 </div>
                 <div class="person-info">
                   <h3 class="full-name">Rajat Maheshwari</h3>
-                  <span class="speciality" style="font-weight: bold">SDE 1 , Amazon</span>
+                  <span class="speciality" style="font-weight: bold">SDE 2 , Oracle</span>
                 </div>
               </div>
             </div>
             <!-- / End Single Person -->
             <!-- Start Single Person -->
-            <div class="col-sm-6 col-lg-4 col-xl-3">
+            <div class="alumini-content">
               <div class="single-person">
                 <div class="person-image">
                   <img src="assets\images\Alumni\sapnaChaudhary.jpg" alt="" />
                 </div>
                 <div class="person-info">
                   <h3 class="full-name">Sapna Chaudhary</h3>
-                  <span class="speciality" style="font-weight: bold">Pursuing Phd , IIITD</span>
+                  <span class="speciality" style="font-weight: bold">Doctoral Researcher , IIIT Delhi</span>
                 </div>
               </div>
             </div>
             <!-- / End Single Person -->
             <!-- Start Single Person -->
-            <div class="col-sm-6 col-lg-4 col-xl-3">
+            <div class="alumini-content">
               <div class="single-person">
                 <div class="person-image">
                   <img src="./assets/images/Alumni/tamanna.jpg" alt="" />
                 </div>
                 <div class="person-info">
                   <h3 class="full-name">Tamanna Arora</h3>
-                  <span class="speciality" style="font-weight: bold">SDE , Media Agility</span>
+                  <span class="speciality" style="font-weight: bold">SDE , rStar Technologies</span>
                 </div>
               </div>
             </div>
             <!-- / End Single Person -->
             <!-- Start Single Person -->
-            <div class="col-sm-6 col-lg-4 col-xl-3">
+            <div class="alumini-content">
               <div class="single-person">
                 <div class="person-image">
                   <img src="./assets/images/Alumni/Abhishek1Squared.jpg" alt="" />
                 </div>
                 <div class="person-info">
                   <h3 class="full-name">Abhishek Khandelwal</h3>
-                  <span class="speciality" style="font-weight: bold">Founder & CEO , ENSVEE</span>
+                  <span class="speciality" style="font-weight: bold">Co-Founder , Ensvee ; Senior Product manager at Daalchini</span>
                 </div>
               </div>
             </div>
-            <!-- / End Single Person -->
-          </div>
-        </div>
-      </section>
-
-      <!-- <div class="glider-contain">
-          <div class="glider">
-            <div class="boxx">
-              <div class="images">
-                <div class="rot">
-                  <img src="./assets/images/Alumni/RajatMaheshwariRotate.jpg" alt="">
-                </div>
-                <h4>Rajat Maheshwari</h4>
-                <h5>SDE 1, Amazon</h5>
-              </div>
-            </div>
-            <div class="boxx">
-              <div class="images">
-                <img src="./assets/images/Alumni/sapnaChaudharyRotate.jpg" alt="">
-                <h4>Sapna Chaudhary</h4>
-                <h5>Pursuing Phd, IIITD</h5>
-              </div>
-            </div>
-            <div class="boxx">
-              <div class="images">
-                <img src="./assets/images/Alumni/tamannaRotate.jpg" alt="">
-                <h4>Tamanna Arora</h4>
-                <h5>SDE, Media Agility</h5>
-              </div>
-            </div>
-            <div class="boxx">
-              <div class="images">
-                <img src="./assets/images/Alumni/AbhishekRotate.jpg" alt="">
-                <h4>Abhishek Khandelwal</h4>
-                <h5>Founder CEO, ENSVEE & Part. of CSL Symposium, New York</h5>
-              </div>
-            </div>
+            <!-- / End Single Person -->  
           </div>
           <div aria-label="Previous" class="glider-prev alumni-prev"><i class="fas fa-angle-left"></i></div>
           <div aria-label="Next" class="glider-next alumni-next"><i class="fas fa-angle-right"></i></div>
           <div role="tablist" class="dots"></div> 
-        </div>-->
+        </div>
+        </div>
+      </section>
     </div>
   </section>
   <!-- *********************************************Winners section******************************************************** -->
@@ -210,96 +295,6 @@
         <!--  -->
         <div class="glider-contain">
           <div class="winnerContainer glider1">
-            <!-- <div class=""> -->
-              <!-- <div class="winnerOne">
-                <div class="circleCard">
-                </div>
-                <div class="eventName">
-                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
-                </div>
-                <div class="innerContent">
-                  <h2>ACM Write it loud</h2>
-                  <h3>Winners</h3>
-                  <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Manasi Prabhakaran</h4>
-                  <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4>
-                </div>
-              </div>
-              <div class="winnerOne">
-                <div class="circleCard">
-                </div>
-                <div class="eventName">
-                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
-                </div>
-                <div class="innerContent">
-                  <h2>ACM Valorant Tournament</h2>
-                  <h3>Winners</h3>
-                  <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Samir Mahapatra</h4>
-                </div>
-              </div>
-              <div class="winnerOne">
-                <div class="circleCard">
-                </div>
-                <div class="eventName">
-                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
-                </div>
-                <div class="innerContent">
-                  <h2>ACM CODM Tournament</h2>
-                  <h3>Winners</h3>
-                  <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Rajesh Devanda</h4>
-                  <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Raj Kishor Panigrahi</h4>
-                </div>
-              </div>
-              <div class="winnerOne">
-                <div class="circleCard">
-                </div>
-                <div class="eventName">
-                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
-                </div>
-                <div class="innerContent">
-                  <h2>ACM CODM Tournament</h2>
-                  <h3>Winners</h3>
-                  <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Rajesh Devanda</h4>
-                  <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Raj Kishor Panigrahi</h4>
-                </div>
-              </div>
-              <div class="winnerOne">
-                <div class="circleCard">
-                </div>
-                <div class="eventName">
-                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
-                </div>
-                <div class="innerContent">
-                  <h2>ACM CODM Tournament</h2>
-                  <h3>Winners</h3>
-                  <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Rajesh Devanda</h4>
-                  <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Raj Kishor Panigrahi</h4>
-                </div>
-              </div> -->
-              <!-- <div class="winnerOne">
-                <div class="circleCard">
-                </div>
-                <div class="eventName">
-                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
-                </div>
-                <div class="innerContent">
-                  <h2>ACM Write it loud</h2>
-                  <h3>Winners</h3>
-                  <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Manasi Prabhakaran</h4>
-                  <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4>
-                </div>
-              </div>
-              <div class="winnerOne">
-                <div class="circleCard">
-                </div>
-                <div class="eventName">
-                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
-                </div>
-                <div class="innerContent">
-                  <h2>ACM Valorant Tournament</h2>
-                  <h3>Winners</h3>
-                  <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Samir Mahapatra</h4>
-                </div>
-              </div> -->
               <div class="winnerOne">
               <div class="outerContent">
               <h3>ACM Write it loud</h3>
