@@ -194,6 +194,9 @@
                         case 'Contactus':
                             include('./faqadmin/contactusAdmin.php');
                             break;
+                        case 'invite':
+                            include('./faqadmin/invite/bulkUpload.php');
+                            break;
                         default:
                             include('./faqadmin/index.php');
                             break;
