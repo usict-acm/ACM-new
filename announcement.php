@@ -71,7 +71,7 @@
             echo "<div class='swiper-slide'>";
                 echo "<div class='det'>";
                     echo "<div class='heading'>";
-                        echo "<h1> <span class='text-sp'>" . $row["name"] . "</h1>";
+                        echo "<h1> <span>" . $row["name"] . "</h1>";
                     echo "</div>";
                     
 
