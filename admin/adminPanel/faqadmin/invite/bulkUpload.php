@@ -10,7 +10,7 @@ use Shuchkin\SimpleXLSX;
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <!-- <script src="assets/js/script.js"></script> -->
     <style>
         .wrapper {
             width: 500px;
@@ -62,7 +62,7 @@ use Shuchkin\SimpleXLSX;
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-header">
-                        <h2>Create Certificate in Bulk</h2>
+                        <h2>Send Invitation in Bulk</h2>
                     </div>
         <form action = "#" method = "POST" enctype="multipart/form-data">
             <input type = "file" name = "excel">
@@ -79,53 +79,62 @@ use Shuchkin\SimpleXLSX;
 <?php
 
 if(isset($_FILES['excel']['name'])){
-    require('../blogAdmin/database.php');
-    $database = new Database();
-    $link = $database->connect();
-    $connection = $link;
-    $sql = "SELECT * FROM certificate ORDER BY id DESC LIMIT 1";
-$result = mysqli_query($link, $sql);
-if(mysqli_num_rows($result) > 0){
-    $row = mysqli_fetch_array($result);
-    $u = $row['uniqueNo'];
-    $id = substr($u, -4);
-    // echo $id;
-    ord($id);
-    
-}
-else{
-    $id = 1;
-}
+
+    // require('../../../blogAdmin/database.php');
+    // $database = new Database();
+    // $link = $database->connect();
+    // $connection = $link;
+    // $sql = "SELECT * FROM certificate ORDER BY id DESC LIMIT 1";
+    // $result = mysqli_query($link, $sql);
+    // if(mysqli_num_rows($result) > 0){
+    //     $row = mysqli_fetch_array($result);
+    //     $u = $row['uniqueNo'];
+    //     $id = substr($u, -4);
+    //     // echo $id;
+    //     ord($id);
+        
+    // }else{
+    //     $id = 1;
+    // }
     include "xlsx.php";
     $noOfRows = 0;
-    if($connection){
         $excel = SimpleXLSX::parse($_FILES['excel']['tmp_name']);
-       // print_r($excel->rows());
+        // var_dump($excel->rows());
+    //    var_dump("saerdfhgjhfearwsthfjg,hfdsteafdgjhjbhmjgfdrsaerdfhgjhfearwsthfjg,hfdsteafdgjhjbhmjgfdrsaerdfhgjhfearwsthfjg,hfdsteafdgjhjbhmjgfdrsaerdfhgjhfearwsthfjg,hfdsteafdgjhjbhmjgfdrsaerdfhgjhfearwsthfjg,hfdsteafdgjhjbhmjgfdrsaerdfhgjhfearwsthfjg,hfdsteafdgjhjbhmjgfdrsaerdfhgjhfearwsthfjg,hfdsteafdgjhjbhmjgfdrsaerdfhgjhfearwsthfjg,hfdsteafdgjhjbhmjgfdrsy");
+
        $i=0;
-       $query="";
-       $unique = "ACM/DC/000";
+    //    $query="";
+    //    $unique = "ACM/DC/000";
        //$str_result = '0123456789abcdef';
-       echo "<script>
-        window.value = false;
-        if (confirm('Do you want to mail this certificate to the student?') == true) { 
-            window.value = true;    
-        }
-        </script>";
+    //    echo "<script>
+    //     window.value = false;
+    //     if (confirm('Do you want to mail this certificate to the student?') == true) { 
+    //         window.value = true;    
+    //     }
+    //     </script>";
        foreach ($excel->rows() as $key => $row) {
-        //print_r($row);
+        // print_r($row);
         $q="";
-        if($i>0){
-        $id = $id+1;
-        $unique=  "'".$unique.$id. "',";
+        // if($i>0){
+        // $id = $id+1;
+        // $unique=  "'".$unique.$id. "',";
         //echo $unique;
-        }   
+        // }   
         // $confirmation = false;
 
         // echo ($confirmation);
 
         foreach ($row as $key => $cell) {
-            //$unique = strtolower(substr(str_shuffle($str_result),0, 10));$sql = "SELECT * FROM certificate ORDER BY id DESC LIMIT 1";
-            
+            print_r( $row);
+
+            header('Content-type: image/png');
+            $font=realpath('arial.ttf');
+            $image=imagecreatefrompng("usict_invite.png");
+            $color=imagecolorallocate($image, 51, 51, 102);
+            imagettftext($image, 30, 0, 600, 680, $color,$font, "Apoorv");
+            // var_dump("ewarsdthfgjmhghfrstdghfjgteartsdfhgj,hrteqrydfhgj,hfjytersydfgjhre");
+
+            imagepng($image,"./certi.png");
 
             
             // echo $unique;
@@ -135,48 +144,47 @@ else{
         }
         
     
-        if($i>0){
-            $query="INSERT INTO certificate (uniqueNO, nameParticipant,email, startDate, endDate,course,enrollment_no,event,rank, college) values (".$unique.rtrim($q,",").");";
-            $array = explode(',', $q);
-            $email = $array [1];
+        // if($i>0){
+        //     // $query="INSERT INTO certificate (uniqueNO, nameParticipant,email, startDate, endDate,course,enrollment_no,event,rank, college) values (".$unique.rtrim($q,",").");";
+        //     // $array = explode(',', $q);
+        //     $email = $array [1];
 
-            echo "<script>
-                if(window.value == true)
-                    certi_mail($unique $email);
+        //     echo "<script>
+        //         if(window.value == true)
+        //             certi_mail($unique $email);
 
-                    function certi_mail(unique, email) {
-                        console.log(unique, email);
-                        let certi_data = JSON.stringify({'Sno': unique, 'email': email});
-                        $.ajax({
-                            type: 'POST',
-                            url: '../adminPanel/faqadmin/certificate_mail.php',
-                            data : certi_data,
-                            cache: false,
-                            processData: false,
-                            contentType: false,
-                            success: function(data){
-                                // console.log('Success');
-                            },
-                            error: function(xhr, status, error){
-                                console.log(error);
-                            },
-                        });
-                    }
-                    </script>";
-            $unique = "ACM/DC/000";
-            // echo $query;
-        }
+        //             function certi_mail(unique, email) {
+        //                 console.log(unique, email);
+        //                 let certi_data = JSON.stringify({'Sno': unique, 'email': email});
+        //                 $.ajax({
+        //                     type: 'POST',
+        //                     url: '../adminPanel/faqadmin/certificate_mail.php',
+        //                     data : certi_data,
+        //                     cache: false,
+        //                     processData: false,
+        //                     contentType: false,
+        //                     success: function(data){
+        //                         // console.log('Success');
+        //                     },
+        //                     error: function(xhr, status, error){
+        //                         console.log(error);
+        //                     },
+        //                 });
+        //             }
+        //             </script>";
+        //     $unique = "ACM/DC/000";
+        //     // echo $query;
+        // }
         
-        if($i>0){
-        if(mysqli_query($connection,$query))
-			{
-				// echo "true";
-                // echo $i;
-                $noOfRows = $i;
-			}
-        }
+        // if($i>0){
+        // if(mysqli_query($connection,$query))
+		// 	{
+		// 		// echo "true";
+        //         // echo $i;
+        //         $noOfRows = $i;
+		// 	}
+        // }
         $i++;
-    }
     }
     echo "<script>
             window.location.replace('./faqadmin/adminBulkDown.php?noOfRows=". $noOfRows ."')    
