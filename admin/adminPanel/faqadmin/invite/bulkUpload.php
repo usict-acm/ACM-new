@@ -1,6 +1,8 @@
 <?php
 
 use Shuchkin\SimpleXLSX;
+//header('Content-type: image/png');
+
 
 ?>
 <!DOCTYPE html>
@@ -97,6 +99,7 @@ if(isset($_FILES['excel']['name'])){
     //     $id = 1;
     // }
     include "xlsx.php";
+    //include "image.png";
     $noOfRows = 0;
         $excel = SimpleXLSX::parse($_FILES['excel']['tmp_name']);
         // var_dump($excel->rows());
@@ -113,7 +116,7 @@ if(isset($_FILES['excel']['name'])){
     //     }
     //     </script>";
        foreach ($excel->rows() as $key => $row) {
-        // print_r($row);
+         //print_r($row);
         $q="";
         // if($i>0){
         // $id = $id+1;
@@ -125,21 +128,18 @@ if(isset($_FILES['excel']['name'])){
         // echo ($confirmation);
 
         foreach ($row as $key => $cell) {
-            print_r( $row);
+            //var_dump( $cell);
 
-            header('Content-type: image/png');
-            $font=realpath('arial.ttf');
-            $image=imagecreatefrompng("usict_invite.png");
-            $color=imagecolorallocate($image, 51, 51, 102);
-            imagettftext($image, 30, 0, 600, 680, $color,$font, "Apoorv");
-            // var_dump("ewarsdthfgjmhghfrstdghfjgteartsdfhgj,hrteqrydfhgj,hfjytersydfgjhre");
-
-            imagepng($image,"./certi.png");
-
+            
             
             // echo $unique;
             if($i>0){
                 $q.="'".$cell. "',";
+            echo $q;
+                $array = explode(',', $q);
+                //var_dump($array);
+               // echo $array[0];
+
             }
         }
         
@@ -186,11 +186,9 @@ if(isset($_FILES['excel']['name'])){
         // }
         $i++;
     }
-    echo "<script>
-            window.location.replace('./faqadmin/adminBulkDown.php?noOfRows=". $noOfRows ."')    
-            if (window.value == true)
-                alert('Certificates mailed succesfully')
-            </script>";
+    // echo "<script>
+    //         window.location.replace('./faqadmin/invite/sample.php')    
+    //         </script>";
 }
 ?>
     </body>
