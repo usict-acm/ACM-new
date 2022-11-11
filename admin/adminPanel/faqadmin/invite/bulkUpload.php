@@ -1,8 +1,6 @@
 <?php
 
 use Shuchkin\SimpleXLSX;
-//header('Content-type: image/png');
-
 
 ?>
 <!DOCTYPE html>
@@ -12,7 +10,7 @@ use Shuchkin\SimpleXLSX;
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-    <!-- <script src="assets/js/script.js"></script> -->
+    <script src="assets/js/script.js"></script>
     <style>
         .wrapper {
             width: 500px;
@@ -64,7 +62,7 @@ use Shuchkin\SimpleXLSX;
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-header">
-                        <h2>Send Invitation in Bulk</h2>
+                        <h2>Invite in Bulk</h2>
                     </div>
         <form action = "#" method = "POST" enctype="multipart/form-data">
             <input type = "file" name = "excel">
@@ -79,116 +77,90 @@ use Shuchkin\SimpleXLSX;
     
 
 <?php
-
+    require('../blogAdmin/database.php');
+    $database = new Database();
+    $link = $database->connect();
 if(isset($_FILES['excel']['name'])){
+    // require('../blogAdmin/database.php');
 
-    // require('../../../blogAdmin/database.php');
-    // $database = new Database();
-    // $link = $database->connect();
-    // $connection = $link;
-    // $sql = "SELECT * FROM certificate ORDER BY id DESC LIMIT 1";
-    // $result = mysqli_query($link, $sql);
-    // if(mysqli_num_rows($result) > 0){
-    //     $row = mysqli_fetch_array($result);
-    //     $u = $row['uniqueNo'];
-    //     $id = substr($u, -4);
-    //     // echo $id;
-    //     ord($id);
-        
-    // }else{
-    //     $id = 1;
-    // }
+    // var_dump($link);
+
+
+
     include "xlsx.php";
-    //include "image.png";
     $noOfRows = 0;
+    if($link){
         $excel = SimpleXLSX::parse($_FILES['excel']['tmp_name']);
-        // var_dump($excel->rows());
-    //    var_dump("saerdfhgjhfearwsthfjg,hfdsteafdgjhjbhmjgfdrsaerdfhgjhfearwsthfjg,hfdsteafdgjhjbhmjgfdrsaerdfhgjhfearwsthfjg,hfdsteafdgjhjbhmjgfdrsaerdfhgjhfearwsthfjg,hfdsteafdgjhjbhmjgfdrsaerdfhgjhfearwsthfjg,hfdsteafdgjhjbhmjgfdrsaerdfhgjhfearwsthfjg,hfdsteafdgjhjbhmjgfdrsaerdfhgjhfearwsthfjg,hfdsteafdgjhjbhmjgfdrsaerdfhgjhfearwsthfjg,hfdsteafdgjhjbhmjgfdrsy");
-
+       // print_r($excel->rows());
        $i=0;
-    //    $query="";
-    //    $unique = "ACM/DC/000";
-       //$str_result = '0123456789abcdef';
+       $query="";
     //    echo "<script>
     //     window.value = false;
     //     if (confirm('Do you want to mail this certificate to the student?') == true) { 
     //         window.value = true;    
     //     }
     //     </script>";
-       foreach ($excel->rows() as $key => $row) {
-         //print_r($row);
+    foreach ($excel->rows() as $key => $row) {
+        //print_r($row);
         $q="";
-        // if($i>0){
-        // $id = $id+1;
-        // $unique=  "'".$unique.$id. "',";
-        //echo $unique;
-        // }   
-        // $confirmation = false;
 
-        // echo ($confirmation);
 
         foreach ($row as $key => $cell) {
-            //var_dump( $cell);
-
-            
-            
-            // echo $unique;
             if($i>0){
                 $q.="'".$cell. "',";
-            echo $q;
-                $array = explode(',', $q);
-                //var_dump($array);
-               // echo $array[0];
-
             }
         }
         
     
-        // if($i>0){
-        //     // $query="INSERT INTO certificate (uniqueNO, nameParticipant,email, startDate, endDate,course,enrollment_no,event,rank, college) values (".$unique.rtrim($q,",").");";
-        //     // $array = explode(',', $q);
-        //     $email = $array [1];
+        if($i>0){
+            $query="INSERT INTO invite (name, email) values (".rtrim($q,",").");";
+            $array = explode(',', $q);
+            $email = $array [1];
 
-        //     echo "<script>
-        //         if(window.value == true)
-        //             certi_mail($unique $email);
+            // echo "<script>
+            //     if(window.value == true)
+            //         certi_mail($unique $email);
 
-        //             function certi_mail(unique, email) {
-        //                 console.log(unique, email);
-        //                 let certi_data = JSON.stringify({'Sno': unique, 'email': email});
-        //                 $.ajax({
-        //                     type: 'POST',
-        //                     url: '../adminPanel/faqadmin/certificate_mail.php',
-        //                     data : certi_data,
-        //                     cache: false,
-        //                     processData: false,
-        //                     contentType: false,
-        //                     success: function(data){
-        //                         // console.log('Success');
-        //                     },
-        //                     error: function(xhr, status, error){
-        //                         console.log(error);
-        //                     },
-        //                 });
-        //             }
-        //             </script>";
-        //     $unique = "ACM/DC/000";
-        //     // echo $query;
-        // }
+            //         function certi_mail(unique, email) {
+            //             console.log(unique, email);
+            //             let certi_data = JSON.stringify({'Sno': unique, 'email': email});
+            //             $.ajax({
+            //                 type: 'POST',
+            //                 url: '../adminPanel/faqadmin/certificate_mail.php',
+            //                 data : certi_data,
+            //                 cache: false,
+            //                 processData: false,
+            //                 contentType: false,
+            //                 success: function(data){
+            //                     // console.log('Success');
+            //                 },
+            //                 error: function(xhr, status, error){
+            //                     console.log(error);
+            //                 },
+            //             });
+            //         }
+            //         </script>";
+            // $unique = "ACM/DC/000";
+            // echo $query;
+        }
         
-        // if($i>0){
-        // if(mysqli_query($connection,$query))
-		// 	{
-		// 		// echo "true";
-        //         // echo $i;
-        //         $noOfRows = $i;
-		// 	}
-        // }
+        if($i>0){
+        if(mysqli_query($link,$query))
+			{
+				// echo "true";
+                // echo $i;
+                $noOfRows = $i;
+			}
+        }
         $i++;
     }
-    // echo "<script>
-    //         window.location.replace('./faqadmin/invite/sample.php')    
-    //         </script>";
+    }
+    mysqli_close($link);
+    echo "<script>
+            location.replace('./faqadmin/sample.php');  
+           
+            </script>";
+
 }
 ?>
     </body>
