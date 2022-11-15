@@ -107,7 +107,7 @@
         $subject = 'PHP Email with Attachment by CodexWorld';  
         
         // Attachment file 
-        $file = "admin/adminPanel/faqadmin/invite/invitations/$Sno.png"; 
+        $file = "https://usict.acm.org/test_acm/admin/adminPanel/faqadmin/invite/invitations/$Sno.png"; 
         
         // Email body content 
         $htmlContent = ' 
