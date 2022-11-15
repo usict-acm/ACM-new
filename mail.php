@@ -101,8 +101,7 @@
     };
     function inviteMail ($Sno, $nameParticipant, $email) {
         // var_dump($email);
-        $id_num = substr($Sno, -4);
-        $subject = "Certificate for the event $event";
+        $subject = "Invitation for the Club";
 
         $headers  = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
@@ -110,12 +109,12 @@
 
         $body = "
             <html>
-                <head><title>Your certificate for the event- $event</title></head>
+                <head><title>Your certificate for the event- </title></head>
                 <body>
                     <p>Dear $nameParticipant <br> Greetings from the GGSIP University USS ACM Student Chapter!</p>
-                    <p>Thank you for participating in <b>$event</b> organized by GGSIP University USS ACM Student Chapter on $date. We are elated by your participation and hope that you had a great time. Here's your certificate as a token of appreciation from our side.
+                    <p>Thank you for participating in <b></b> organized by GGSIP University USS ACM Student Chapter on . We are elated by your participation and hope that you had a great time. Here's your certificate as a token of appreciation from our side.
                     <br />
-                    You can download it using <a href='https://usict.acm.org/test_acm/verify?id=$id_num'>this link</a>.</p>
+                    You can download it using <a href='https://usict.acm.org/test_acm/verify?id='>this link</a>.</p>
                     <p>We hope to see you at more events and have more fun.
                     <br />
                     Happy learning and Happy computing!</p>

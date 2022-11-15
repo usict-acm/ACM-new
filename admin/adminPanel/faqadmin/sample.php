@@ -16,17 +16,17 @@ if(mysqli_num_rows($result)>0){
         // echo $row['name'];
         // header('Content-type: image/png'); 
         $font=realpath('arial.ttf');
-        if (is_readable("Certificate.png")) {
+        // if (is_readable("image.png")) {
             $image = imagecreatefrompng("./invite/image.png");
                 // var_dump("ewarsdthfgjmhghfrstdghfjgteartsdfhgj,hrteqrydfhgj,hfjytersydfgjhre");
             $color=imagecolorallocate($image, 40, 13, 253);
             imagettftext($image, 40, 0, 500, 720, $color,$font, $row['name']);
-            imagepng($image, "./invite/invitations/".$row['name'].".png");
+            imagepng($image, "./invite/invitations/".$row['id'].".png");
             imagedestroy($image);
-        }
-        else{
-            echo "Error";
-        }
+        // }
+        // else{
+        //     echo "Error";
+        // }
     }
 }
 
