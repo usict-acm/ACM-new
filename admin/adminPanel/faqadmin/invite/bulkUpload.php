@@ -80,89 +80,84 @@ use Shuchkin\SimpleXLSX;
     require('../blogAdmin/database.php');
     $database = new Database();
     $link = $database->connect();
-if(isset($_FILES['excel']['name'])){
-    // require('../blogAdmin/database.php');
+    if(isset($_FILES['excel']['name'])){
 
-    // var_dump($link);
-
-
-
-    include "xlsx.php";
-    $noOfRows = 0;
-    if($link){
-        $excel = SimpleXLSX::parse($_FILES['excel']['tmp_name']);
-       // print_r($excel->rows());
-       $i=0;
-       $query="";
-       echo "<script>
-        window.value = false;
-        if (confirm('Do you want to mail this certificate to the student?') == true) { 
-            window.value = true;    
-        }
-        </script>";
-    foreach ($excel->rows() as $key => $row) {
-        //print_r($row);
-        $q="";
+        include "xlsx.php";
+        $noOfRows = 0;
+        if($link){
+            $excel = SimpleXLSX::parse($_FILES['excel']['tmp_name']);
+        // print_r($excel->rows());
+        $i=0;
+        $query="";
+        echo "<script>
+            window.value = false;
+            if (confirm('Do you want to mail this certificate to the student?') == true) { 
+                window.value = true;    
+            }
+            </script>";
+            foreach ($excel->rows() as $key => $row) {
+                //print_r($row);
+                $q="";
 
 
-        foreach ($row as $key => $cell) {
-            if($i>0){
-                $q.="'".$cell. "',";
+                foreach ($row as $key => $cell) {
+                    if($i>0){
+                        $q.="'".$cell. "',";
+                    }
+                }
+                
+            
+                if($i>0){
+                    $query="INSERT INTO invite (name, email) values (".rtrim($q,",").");";
+                    $array = explode(',', $q);
+                    $email = $array [1];
+
+                    echo "<script>
+                        if(window.value == true)
+                            certi_mail($unique $email);
+
+                            function certi_mail(unique, email) {
+                                console.log(unique, email);
+                                let certi_data = JSON.stringify({'Sno': unique, 'email': email});
+                                $.ajax({
+                                    type: 'POST',
+                                    url: '../adminPanel/faqadmin/certificate_mail.php',
+                                    data : certi_data,
+                                    cache: false,
+                                    processData: false,
+                                    contentType: false,
+                                    success: function(data){
+                                        // console.log('Success');
+                                    },
+                                    error: function(xhr, status, error){
+                                        console.log(error);
+                                    },
+                                });
+                            }
+                            </script>";
+                    // $unique = "ACM/DC/000";
+                    // echo $query;
+                }
+                
+                if($i>0){
+                if(mysqli_query($link,$query))
+                    {
+                        // echo "true";
+                        // echo $i;
+                        $noOfRows = $i;
+                    }
+                }
+                $i++;
             }
         }
-        
-    
-        if($i>0){
-            $query="INSERT INTO invite (name, email) values (".rtrim($q,",").");";
-            $array = explode(',', $q);
-            $email = $array [1];
+        mysqli_close($link);
+        echo    "<script>
+                    location.replace('./faqadmin/sample.php');  
+                    if (window.value == true)
+                    alert('Certificates mailed succesfully')
+                </script>";
 
-            // echo "<script>
-            //     if(window.value == true)
-            //         certi_mail($unique $email);
-
-            //         function certi_mail(unique, email) {
-            //             console.log(unique, email);
-            //             let certi_data = JSON.stringify({'Sno': unique, 'email': email});
-            //             $.ajax({
-            //                 type: 'POST',
-            //                 url: '../adminPanel/faqadmin/certificate_mail.php',
-            //                 data : certi_data,
-            //                 cache: false,
-            //                 processData: false,
-            //                 contentType: false,
-            //                 success: function(data){
-            //                     // console.log('Success');
-            //                 },
-            //                 error: function(xhr, status, error){
-            //                     console.log(error);
-            //                 },
-            //             });
-            //         }
-            //         </script>";
-            // $unique = "ACM/DC/000";
-            // echo $query;
-        }
-        
-        if($i>0){
-        if(mysqli_query($link,$query))
-			{
-				// echo "true";
-                // echo $i;
-                $noOfRows = $i;
-			}
-        }
-        $i++;
     }
-    }
-    mysqli_close($link);
-    echo "<script>
-            location.replace('./faqadmin/sample.php');  
-            if (window.value == true)
-            alert('Certificates mailed succesfully')
-            </script>";
-
-}
 ?>
     </body>
 </html>
