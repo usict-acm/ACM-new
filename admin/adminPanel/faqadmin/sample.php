@@ -31,11 +31,4 @@ if(mysqli_num_rows($result)>0){
 }
 
 
-
-            //$image=imagecreatefrompng("img.png");
-            
-            
-
-             //imagepng($image, "sample.png");
-//echo "jfkjdfgjlksdfnglkjfngjnfjdnbfdjbnldjfbd";
 ?>
