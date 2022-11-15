@@ -99,42 +99,18 @@ use Shuchkin\SimpleXLSX;
                 //print_r($row);
                 $q="";
 
-
                 foreach ($row as $key => $cell) {
                     if($i>0){
                         $q.="'".$cell. "',";
                     }
                 }
                 
-            
                 if($i>0){
                     $query="INSERT INTO invite (name, email) values (".rtrim($q,",").");";
                     $array = explode(',', $q);
                     $email = $array [1];
+                    // var_dump($query);
 
-                    echo "<script>
-                        if(window.value == true)
-                            certi_mail($unique $email);
-
-                            function certi_mail(unique, email) {
-                                console.log(unique, email);
-                                let certi_data = JSON.stringify({'Sno': unique, 'email': email});
-                                $.ajax({
-                                    type: 'POST',
-                                    url: '../adminPanel/faqadmin/certificate_mail.php',
-                                    data : certi_data,
-                                    cache: false,
-                                    processData: false,
-                                    contentType: false,
-                                    success: function(data){
-                                        // console.log('Success');
-                                    },
-                                    error: function(xhr, status, error){
-                                        console.log(error);
-                                    },
-                                });
-                            }
-                            </script>";
                     // $unique = "ACM/DC/000";
                     // echo $query;
                 }
@@ -151,10 +127,39 @@ use Shuchkin\SimpleXLSX;
             }
         }
         mysqli_close($link);
+        // echo "aesrdtfyguftyrsteasrdyfgujfteatrydugh".$i;
+        
+        echo "<script>
+        console.log(window.value);
+
+        if(window.value == true)
+            certi_mail($i);
+
+            function certi_mail(i) {
+                let certi_data = JSON.stringify({'Countrows': $i});
+                console.log(certi_data);
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'faqadmin/invite/invite_mail.php?Countrows=$i',
+                    data : certi_data,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    success: function(data){
+                        console.log('Success');
+                    },
+                    error: function(xhr, status, error){
+                        console.log(error);
+                    },
+                });
+            }
+            </script>";
         echo    "<script>
-                    location.replace('./faqadmin/sample.php');  
+
                     if (window.value == true)
                     alert('Certificates mailed succesfully')
+                    location.replace('./faqadmin/sample.php');  
                 </script>";
 
     }

@@ -1,30 +1,39 @@
 <?php 
+    // var_dump("aesrdtfhgfdrseasrdtfhgjhfdrsedtfygjh");
     require('../../../../mail.php');
     //phpinfo();
-    if(isset($_GET["Sno"]) && isset($_GET["email"])){
-        
-        include_once '../../blogAdmin/database.php';
+    // var_dump($_GET);
+    if(isset($_GET["Countrows"])){
+       
+        include_once '../../../blogAdmin/database.php';
         $database = new Database();
         $conn = $database->connect();
-        $Sno = mysqli_real_escape_string($conn,$_GET['Sno']);
-        $email = $_GET['email'];
-        $sql = "SELECT * FROM certificate WHERE uniqueNo ='".$Sno."'";
+
+         $lastRows = $_GET["Countrows"]-1;
+        $sql = "SELECT * FROM invite ORDER by id DESC LIMIT ".$lastRows;
+        // echo $sql;
         if($result = mysqli_query($conn, $sql)){
             if(mysqli_num_rows($result) > 0) {
-                $row = mysqli_fetch_array($result);
-                $Sno = $row['uniqueNo'];
-                $nameParticipant = $row['nameParticipant'];
-                $email = $row['email'];
-                $event = $row['event'];
-                $date = $row['startDate'];
-                certificateMail($Sno, $nameParticipant, $email, $event, $date);
-                echo json_encode(
-                    array('message' => 'Mailed successfully')
-                );
-                echo '<script>
-                        alert("Mailed successfully");
-                        window.location.replace("../index.php?table=Certificate")
-                    </script>';
+                while($row = mysqli_fetch_array($result)){
+
+                    $Sno = $row['id'];
+                    // var_dump($Sno);
+    
+                    $nameParticipant = $row['name'];
+                    $email = $row['email'];
+    
+                    inviteMail($Sno, $nameParticipant, $email);
+    
+    
+                    // echo json_encode(
+                    //     array('message' => 'Mailed successfully')
+                    // );
+                    // echo '<script>
+                    //         alert("Mailed successfully");
+                    //         window.location.replace("../index.php?table=invite")
+                    //     </script>';
+                }
+
             }
         }
         else {
@@ -32,7 +41,7 @@
                 array('message' => 'Error in getting mailing info!')
             );
             echo '<script>alert("Error in getting mailing info!")
-                    window.location.replace("../index.php?table=Certificate")
+                    window.location.replace("../index.php?table=invite")
                 </script>';
         }
     }
