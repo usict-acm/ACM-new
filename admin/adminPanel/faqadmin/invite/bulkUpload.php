@@ -94,12 +94,12 @@ if(isset($_FILES['excel']['name'])){
        // print_r($excel->rows());
        $i=0;
        $query="";
-    //    echo "<script>
-    //     window.value = false;
-    //     if (confirm('Do you want to mail this certificate to the student?') == true) { 
-    //         window.value = true;    
-    //     }
-    //     </script>";
+       echo "<script>
+        window.value = false;
+        if (confirm('Do you want to mail this certificate to the student?') == true) { 
+            window.value = true;    
+        }
+        </script>";
     foreach ($excel->rows() as $key => $row) {
         //print_r($row);
         $q="";
@@ -158,7 +158,8 @@ if(isset($_FILES['excel']['name'])){
     mysqli_close($link);
     echo "<script>
             location.replace('./faqadmin/sample.php');  
-           
+            if (window.value == true)
+            alert('Certificates mailed succesfully')
             </script>";
 
 }
