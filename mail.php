@@ -99,4 +99,56 @@
         ";
         return mail($email, $subject, $body, $headers);
     };
+    function inviteMail ($Sno, $nameParticipant, $email) {
+        // var_dump($email);
+
+                
+        // Email subject 
+        $subject = 'PHP Email with Attachment by CodexWorld';  
+        
+        // Attachment file 
+        $file = "https://usict.acm.org/test_acm/admin/adminPanel/faqadmin/invite/invitations/$Sno.png"; 
+        
+        // Email body content 
+        $htmlContent = ' 
+            <h3>PHP Email with Attachment by CodexWorld</h3> 
+        '; 
+        
+        // Boundary  
+        $semi_rand = md5(time());  
+        $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";  
+       
+        
+        $headers  = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+        $headers .= 'Content-Type: multipart/mixed;' . "\r\n";
+        $headers .= "boundary=\"{$mime_boundary}\"" . "\r\n";
+        $headers .= "From:usict.acm.org"; 
+
+        
+        // Multipart boundary  
+        $message = "--{$mime_boundary}\n" . "Content-Type: text/html; charset=\"UTF-8\"\n" . 
+        "Content-Transfer-Encoding: 7bit\n\n" . $htmlContent . "\n\n";  
+        
+        // Preparing attachment 
+        if(!empty($file) > 0){ 
+            if(is_file($file)){ 
+                $message .= "--{$mime_boundary}\n"; 
+                $fp =    @fopen($file,"rb"); 
+                $data =  @fread($fp,filesize($file)); 
+        
+                @fclose($fp); 
+                $data = chunk_split(base64_encode($data)); 
+                $message .= "Content-Type: application/octet-stream; name=\"".basename($file)."\"\n" .  
+                "Content-Description: ".basename($file)."\n" . 
+                "Content-Disposition: attachment;\n" . " filename=\"".basename($file)."\"; size=".filesize($file).";\n" .  
+                "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n"; 
+            } 
+        } 
+        $message .= "--{$mime_boundary}--"; 
+        $returnpath = "-f" . "usict.acm.org"; 
+        
+      
+        return mail($email, $subject, $message, $headers, $returnpath);
+    };
 ?>
