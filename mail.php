@@ -105,11 +105,16 @@
         $headers  = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
         $headers .= "From:usict.acm.org";
-
+        $one = "https://usict.acm.org/admin/adminPanel/faqadmin/invite/invitations/";
+        $two = $Sno;
+        $three = ".png";
+        
+        $four = $one.$two.$three;
         $body = "
             <html>
                 <head><title>Your certificate for the event- </title></head>
                 <body>
+                    <img src='$four' alt='' width='500' height='600'>
                     <p>Dear $nameParticipant <br> Greetings from the GGSIP University USS ACM Student Chapter!</p>
                     <p>Thank you for participating in <b></b> organized by GGSIP University USS ACM Student Chapter on . We are elated by your participation and hope that you had a great time. Here's your certificate as a token of appreciation from our side.
                     <br />
@@ -124,6 +129,6 @@
                 </body>
             </html>
         ";
-        return mail($email, $subject, $message, $headers);
+        return mail($email, $subject, $body, $headers);
     };
 ?>
