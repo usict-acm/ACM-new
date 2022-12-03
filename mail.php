@@ -100,7 +100,7 @@
         return mail($email, $subject, $body, $headers);
     };
     function inviteMail ($Sno, $nameParticipant, $email) {
-        $subject = "Certificate for the event $event";
+        $subject = "Welcome, 2026 batch !!";
 
         $headers  = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
@@ -110,20 +110,22 @@
         $three = ".png";
         
         $four = $one.$two.$three;
+        $nameParticipant  = strtok($nameParticipant, " ");
         $body = "
             <html>
-                <head><title>Your certificate for the event- </title></head>
+                <head><title>Welcome, 2026 batch !!</title></head>
                 <body>
                     <img src='$four' alt='' width='500' height='600'>
-                    <p>Dear $nameParticipant <br> Greetings from the GGSIP University USS ACM Student Chapter!</p>
-                    <p>Thank you for participating in <b></b> organized by GGSIP University USS ACM Student Chapter on . We are elated by your participation and hope that you had a great time. Here's your certificate as a token of appreciation from our side.
-                    <br />
-                    You can download it using <a href='https://usict.acm.org/test_acm/verify?id='>this link</a>.</p>
-                    <p>We hope to see you at more events and have more fun.
-                    <br />
-                    Happy learning and Happy computing!</p>
-                    <br />
-                    <p style='margin-bottom:2px;'>Regards</p>
+                    <p> Dear $nameParticipant 
+                        <br><br>
+                        Greetings for the day !! 
+                        <br><br>
+                        GGSIP University USS ACM Student Chapter welcomes you to a new and fulfilling college life. We hope that you will make the best use of it.
+                        <br >
+                        Happy Learning and Happy Computing!
+                    </p>
+               
+                    <p style='margin-bottom:1px;'>Regards</p>
                     <p style='margin-bottom:2px;'><b>GGSIP University USS ACM Student Chapter</b></p>
                     <p><b><a href='https://usict.acm.org/linkedin' target='_blank'>Linkedin</a> | <a href='https://usict.acm.org/facebook' target='_blank'>Facebook</a> | <a href='https://usict.acm.org/instagram' target='_blank'>Instagram</a> | <a href='https://usict.acm.org/discord' target='_blank'>Discord</a></b></p>
                 </body>
