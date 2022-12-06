@@ -8,6 +8,7 @@ import CreateBlog from "pages/Admin/CreateBlog";
 import DisplayBlog from "pages/Admin/DisplayBlog";
 import EventDetails from "pages/Admin/Events/EventDetails";
 import Error404 from "pages/Error404";
+import Podcast from "pages/Podcast";
 import LogoImg from "../assets/img/brand/acm1.png";
 
 const Admin = (props) => {
@@ -87,6 +88,7 @@ const Admin = (props) => {
       <RenderRoute path="/createBlog/:blogId" component={CreateBlog} />
       <RenderRoute path="/createBlog" component={CreateBlog} />
       <RenderRoute path="/event/:eventId" component={EventDetails} />
+      <RenderRoute path="/podcast" component={Podcast} />
       <Redirect exact from="/" to="/home" />
       <Redirect exact from="/login" to="/home" />
       <Redirect exact from="/register" to="/home" />

@@ -108,12 +108,7 @@ const Sidebar = (props) => {
             <DropdownToggle nav>
               <Media className="align-items-center">
                 <span className="avatar avatar-sm rounded-circle bg-white">
-                  <img
-                    alt="..."
-                    src={
-                      user?.profilePhoto || userIcon
-                    }
-                  />
+                  <img alt="..." src={user?.profilePhoto || userIcon} />
                 </span>
               </Media>
             </DropdownToggle>
