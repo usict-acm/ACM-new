@@ -253,7 +253,7 @@
       <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
-            src="./assets/images/team/anuragParashar.JPG"
+            src="./assets/images/team/anuragParashar.jpg"
           />
         </div>
         <div class="caption">
@@ -310,7 +310,7 @@
       <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
-            src="./assets/images/team/apoorvAron.JPG"
+            src="./assets/images/team/apoorvAron.jpg"
           />
         </div>
         <div class="caption">
