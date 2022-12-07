@@ -209,7 +209,18 @@
         </div>
         <div class="caption">
           <h3>Dr. Rahul Johari</h3>
-          <p>Branch Mentor, ACM USS</p>
+          <p>Branch Mentor, USS ACM</p>
+        </div>
+      </div>
+	  <div class="profile-card col-md-4 col-sm-6">
+        <div class="img">
+          <img
+            src="./assets/images/team/ArvinderKaur.png"
+          />
+        </div>
+        <div class="caption">
+          <h3>Prof. Arvinder Kaur</h3>
+          <p>Dean, USAR & USDI</p>
         </div>
       </div>
 	  <div class="profile-card col-md-4 col-sm-6">
@@ -220,7 +231,7 @@
         </div>
         <div class="caption">
           <h3>Dr. Ruchi Sehrawat</h3>
-          <p>Branch Mentor, ACM USS</p>
+          <p>Branch Mentor, USS ACM</p>
         </div>
       </div>
       <div class="profile-card col-md-4 col-sm-6">
@@ -231,7 +242,7 @@
         </div>
         <div class="caption">
           <h3>Dr. Jaspreeti Singh</h3>
-          <p>Branch Mentor, ACM USS</p>
+          <p>Branch Mentor, USS ACM</p>
         </div>
       </div>
 	 </div>
@@ -242,42 +253,42 @@
       <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
-            src="./assets/images/team/harshGoyal.png"
+            src="./assets/images/team/anuragParashar.JPG"
           />
         </div>
         <div class="caption">
-          <h3>Harsh Goyal</h3>
+          <h3>Anurag Parashar</h3>
           <p>Chair</p>
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/harsh-goyal-195255b9/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/anurag-parashar/" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>
       <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
-            src="./assets/images/team/Anuj.jpg"
+            src="./assets/images/team/rajnikantRoy.jpg"
           />
         </div>
         <div class="caption">
-          <h3>Anuj Talwar</h3>
+          <h3>Rajnikant Roy</h3>
           <p>Vice Chair</p>
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/anuj-talwar/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/rajnnikantroy/" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>
       <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
-            src="./assets/images/team/TarunSquared.jpg"
+            src="./assets/images/team/nidhiRathore.png"
           />
         </div>
         <div class="caption">
-          <h3>Tarun</h3>
+          <h3>Nidhi Rathore</h3>
           <p>Secretary</p>
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/tarun-037091194" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/nidhi-rathore-431317213/" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>
@@ -285,42 +296,42 @@
       <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
-            src="./assets/images/team/KaranSquared.jpeg"
+            src="./assets/images/team/akashMohan.jpg"
           />
         </div>
         <div class="caption">
-          <h3>Karan Deep Singh</h3>
+          <h3>Akash Mohan </h3>
           <p>Treasurer</p>
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/karan-deep/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/akash-mohan-697513227" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>
       <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
-            src="./assets/images/team/MoulikSquared.jpg"
+            src="./assets/images/team/apoorvAron.JPG"
           />
         </div>
         <div class="caption">
-          <h3>Moulik Agrawal</h3>
+          <h3>Apoorv Aron</h3>
           <p>Web Chair</p>
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/moulik-agrawal/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/apoorv-aron-742882212" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>
       <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
-            src="./assets/images/team/anurag.jpg"
+            src="./assets/images/team/aryanGarg.jpg"
           />
         </div>
         <div class="caption">
-          <h3>Anurag Parashar</h3>
+          <h3>Aryan Garg</h3>
           <p>Membership Chair</p>
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/anurag-parashar/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/aryan-garg" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>
