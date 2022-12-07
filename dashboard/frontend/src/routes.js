@@ -41,7 +41,7 @@ var routes = [
   {
     path: "/events",
     name: "Events",
-    icon: "ni ni-album-2 text-yellow",
+    icon: "ni ni-album-2 text-blue",
     component: AllEvents,
     layout: "/admin",
   },
