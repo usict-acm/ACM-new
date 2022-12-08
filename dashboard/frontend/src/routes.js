@@ -6,13 +6,14 @@ import AllBlogs from "pages/Admin/AllBlogs.js";
 import Register from "pages/Auth/Register";
 import Login from "pages/Auth/Login";
 import AllEvents from "pages/Admin/Events/AllEvents";
+import Podcast from "pages/Podcast";
 // import MyEvents from "pages/Admin/Events/MyEvents";
 
 var routes = [
   {
     path: "/home",
     name: "Dashboard",
-    icon: "ni ni-tv-2 text-primary",
+    icon: "ni ni-tv-2 text-green",
     component: Dashboard,
     layout: "/admin",
   },
@@ -44,13 +45,20 @@ var routes = [
     component: AllEvents,
     layout: "/admin",
   },
+  {
+    path: "/podcast",
+    name: "Podcast",
+    icon: "ni ni-headphones text-red",
+    component: Podcast,
+    layout: "/admin",
+  },
   // {
   //   path: "/my-events",
   //   name: "My Events",
   //   icon: "ni ni-album-2 text-blue",
   //   component: MyEvents,
   //   layout: "/admin",
-  // },  
+  // },
   {
     path: "/login",
     name: "Login",
