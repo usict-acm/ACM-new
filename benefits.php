@@ -69,7 +69,7 @@
           </div>
           <div class="perk-card"> <img src="./assets/images/perks/clubs.png" height="80" width="80">
             <h3>Clubs Under GGSIP University USS ACM Student Chapter</h3>
-            <p>GGSIP University USS ACM Student Chapter has a total of 8 daughter clubs under its aegis. Namely Appetite, Webify, Research & Development Cell, Entreprenurs' Arena, Cyber Security Cell, Innovate AI and RobIOTics.</p>
+            <p>GGSIP University USS ACM Student Chapter has a total of 8 daughter clubs under its aegis. Namely Appetite, Webify, Research & Development Cell, Cyber Security Cell, Innovate AI and RobIOTics.</p>
           </div>
           <div class="perk-card"> <img src="./assets/images/perks/career.png" height="80" width="80">
             <h3>ACM Career & Job Center</h3>
@@ -634,17 +634,17 @@
                       <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM RobIOTics - The Robotics and IoT Group">
                       <label class="label-course" for="contactChoice6">RobIOTics</label>
                     </div>
-                    <div class="col-lg-6 col-md-6 club">
+                    <!-- <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM Entrepreneurs' Arena - The Entrepreneurship Group">
                       <label class="label-course" for="contactChoice7">Entrepreneurs' Arena</label>
-                    </div>
+                    </div> -->
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM Research Cell - The Research and Development Group">
                       <label class="label-course" for="contactChoice8">Research Cell</label>
                     </div>
                     <div class="col-lg-6 col-md-6 club">
-                      <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM XD - The Experience and Design group">
-                      <label class="label-course" for="contactChoice8">XD</label>
+                      <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM Lens & Canvas - The Experience and Design group">
+                      <label class="label-course" for="contactChoice8">Lens & Canvas</label>
                     </div>
                   </div>
                 </div>
@@ -721,7 +721,7 @@
 
         //const form_action = "https://docs.google.com/forms/u/4/d/e/1FAIpQLSd6QNb6FG6Q-YIO3nr9YNZ4cw_O_hJfJuMvfSEJVQOvCAE_hA/formResponse"; 
           
-       
+       console.log(formData);
         
           // var button = document.getElementById("submitSingupForm");
           // document.getElementById("form-id").action = form_action;
