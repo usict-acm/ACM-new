@@ -3,7 +3,7 @@ import PodcastLogo from "../assets/img/PODCAST.png";
 import "../assets/css/navbar.css";
 
 function Podcast() {
-  window.location.replace("https://usict.acm.org/link/ussacmpodcast");
+  window.open("https://usict.acm.org/link/ussacmpodcast");
   return (
     <>
       <img src={PodcastLogo} alt="USS ACM Aawaz" className="PodcastLogoCss" />

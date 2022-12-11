@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dashboard/user-portal/static/css/main.7bf25748.css",
-    "main.js": "/dashboard/user-portal/static/js/main.37d2d1cc.js",
+    "main.css": "/dashboard/user-portal/static/css/main.3e178b7f.css",
+    "main.js": "/dashboard/user-portal/static/js/main.7eea4a9f.js",
     "static/media/fa-solid-900.ttf": "/dashboard/user-portal/static/media/fa-solid-900.e615bbcb258550973c16.ttf",
     "static/media/acm_banner.png": "/dashboard/user-portal/static/media/acm_banner.24c213b0d921a88c8692.png",
     "static/media/PODCAST.png": "/dashboard/user-portal/static/media/PODCAST.96e342c1ef2da13a0fdb.png",
@@ -25,11 +25,11 @@
     "static/media/nucleo-icons.woff2": "/dashboard/user-portal/static/media/nucleo-icons.cba267483aa6a7cb6e33.woff2",
     "static/media/fa-v4compatibility.woff2": "/dashboard/user-portal/static/media/fa-v4compatibility.afac89562a5301459069.woff2",
     "index.html": "/dashboard/user-portal/index.html",
-    "main.7bf25748.css.map": "/dashboard/user-portal/static/css/main.7bf25748.css.map",
-    "main.37d2d1cc.js.map": "/dashboard/user-portal/static/js/main.37d2d1cc.js.map"
+    "main.3e178b7f.css.map": "/dashboard/user-portal/static/css/main.3e178b7f.css.map",
+    "main.7eea4a9f.js.map": "/dashboard/user-portal/static/js/main.7eea4a9f.js.map"
   },
   "entrypoints": [
-    "static/css/main.7bf25748.css",
-    "static/js/main.37d2d1cc.js"
+    "static/css/main.3e178b7f.css",
+    "static/js/main.7eea4a9f.js"
   ]
 }
