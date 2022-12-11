@@ -642,9 +642,10 @@
                       <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM Research Cell - The Research and Development Group">
                       <label class="label-course" for="contactChoice8">Research Cell</label>
                     </div>
+              
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM Lens & Canvas - The Experience and Design group">
-                      <label class="label-course" for="contactChoice8">Lens & Canvas</label>
+                      <label class="label-course" for="contactChoice8">Lens & Canvas (XD+Photography)</label>
                     </div>
                   </div>
                 </div>
