@@ -76,7 +76,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-header clearfix">
-                        <h2 class="pull-left">Certificate Admin Panel</h2>
+                        <h2 class="pull-left">Benefit Page Form</h2>
                         <a href="faqadmin/download_joinus.php" class="btn btn-primary pull-right">Download Response</a>
                     </div>
                     <?php
