@@ -367,7 +367,7 @@
 		<div class="try1">
 			<a class="btn instagram" href="https://usict.acm.org/instagram" target="_blank"><i class=" fa fa fa-instagram"></i></a>
 			<div class="write" id="wrete">
-				<h1 class="sob-heading">450+</h1>
+				<h1 class="sob-heading">500+</h1>
 				<p class="gratext">Instagram Followers</p>
 			</div>
 		</div>
