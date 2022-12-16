@@ -5,8 +5,8 @@ import { NavLink as NavLinkRRD, Link } from "react-router-dom";
 import { PropTypes } from "prop-types";
 import LogoImage from "../../assets/img/brand/acm-logo.svg";
 import userIcon from "../../assets/img/user.png";
-import styled from 'styled-components';
-import './Sidebar.css';
+import styled from "styled-components";
+import "./Sidebar.css";
 
 // reactstrap components
 import {
@@ -37,16 +37,16 @@ const Ul = styled.ul`
   flex-flow: row nowrap;
   li {
     padding: 18px 10px;
-    @media (min-width: 767px){
-      display:none;
-
+    @media (min-width: 767px) {
+      display: none;
     }
   }
   @media (max-width: 767px) {
     flex-flow: column nowrap;
-    background-color: #5e72e4;
+    background-color: #ffffff;
+    border-left: dashed 2px #5e72e4;
     position: fixed;
-    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
+    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;
     right: 0;
     height: 100vh;
@@ -54,7 +54,7 @@ const Ul = styled.ul`
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
     li {
-      color: #fff;
+      color: #5e72e4;
     }
   }
 `;
@@ -74,19 +74,19 @@ const StyledBurger = styled.div`
   div {
     width: 2rem;
     height: 0.25rem;
-    background-color: ${({ open }) => open ? 'black' : '#333'};
+    background-color: ${({ open }) => (open ? "black" : "#333")};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
     &:nth-child(1) {
-      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
     &:nth-child(2) {
-      transform: ${({ open }) => open ? 'translateX(100%)' : 'translateX(0)'};
-      opacity: ${({ open }) => open ? 0 : 1};
+      transform: ${({ open }) => (open ? "translateX(100%)" : "translateX(0)")};
+      opacity: ${({ open }) => (open ? 0 : 1)};
     }
     &:nth-child(3) {
-      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
 `;
@@ -94,7 +94,7 @@ const StyledBurger = styled.div`
 ////////////
 
 const Sidebar = (props) => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const handleOpen = () => setShowModal(true);
   const dispatch = useDispatch(),
@@ -126,10 +126,9 @@ const Sidebar = (props) => {
               onClick={closeCollapse}
               activeClassName="active"
             >
-           
               <i className={prop.icon} />
-        
-           <color className="colortext">  {prop.name}</color>  
+
+              <color className="colortext"> {prop.name}</color>
             </NavLink>
           </NavItem>
         )
@@ -163,9 +162,7 @@ const Sidebar = (props) => {
           className="navbar-toggler"
           type="button"
           onClick={toggleCollapse}
-        >
-         
-        </button>
+        ></button>
         {/* Brand */}
         <NavbarBrand className="pt-0" {...navbarBrandProps}>
           <img alt="logo" className="navbar-brand-img" src={LogoImage} />
@@ -230,13 +227,13 @@ const Sidebar = (props) => {
           <Nav navbar>{createLinks(routes)}</Nav>
         </Collapse>
         <StyledBurger open={open} onClick={() => setOpen(!open)}>
-        <div />
-        <div />
-        <div />
-      </StyledBurger>
-      <Ul open={open} className="z-100">
-      {createLinks(routes)}
-    </Ul>
+          <div />
+          <div />
+          <div />
+        </StyledBurger>
+        <Ul open={open} className="z-100">
+          {createLinks(routes)}
+        </Ul>
       </Container>
     </Navbar>
   );
