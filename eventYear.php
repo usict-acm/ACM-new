@@ -22,7 +22,7 @@
 <body>
     <?php
     // $currentPage = 'blogs';
-    include('./header.php');
+    include('header.php');
     ?>
 
     <!-- ==============================================Content========================================== -->
