@@ -38,10 +38,10 @@
 					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-4-mobile.png" data-background="./assets/images/carousel-img-4.png"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-5-mobile.JPG" data-background="./assets/images/carousel-img-5.png"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-5-mobile.png" data-background="./assets/images/carousel-img-5.png"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-6-mobile.JPG" data-background="./assets/images/carousel-img-6.png"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-6-mobile.png" data-background="./assets/images/carousel-img-6.png"></div>
 				</div>
 
 				<div class="swiper-button-next"></div>
@@ -174,7 +174,7 @@
 				</div>\
 				<img src="' +
 							row.Image +
-							'" class="blog-img" style="object-fit:cover;"/>\
+							'" class="blog-img" />\
 			</div>\
 			<div>';
 					}
@@ -200,6 +200,17 @@
           <p>Dean, USICT</p>
         </div>
       </div>
+	  <div class="profile-card col-md-4 col-sm-6">
+        <div class="img">
+          <img
+            src="./assets/images/team/ArvinderKaur.png"
+          />
+        </div>
+        <div class="caption">
+          <h3>Prof. Arvinder Kaur</h3>
+          <p>Dean, USAR & USDI</p>
+        </div>
+      </div>
       <!-- <div class="gap"></div> -->
 	  <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
@@ -212,17 +223,7 @@
           <p>Branch Mentor, USS ACM</p>
         </div>
       </div>
-	  <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/ArvinderKaur.png"
-          />
-        </div>
-        <div class="caption">
-          <h3>Prof. Arvinder Kaur</h3>
-          <p>Dean, USAR & USDI</p>
-        </div>
-      </div>
+
 	  <div class="profile-card col-md-4 col-sm-6">
         <div class="img">
           <img
