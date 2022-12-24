@@ -46,16 +46,16 @@
           <div class="lvlimg">
             <div class="lead white">
               <div class="img">
-                <img src="./assets/images/clubs/Kashish.jpeg" />
+                <img src="./assets/images/clubs/Aditya_Singh_2022 - Aditya Singh.jpg" />
               </div>
-              <h4>Kashish Jain</h4>
+              <h4>Aditya Singh</h4>
               <h6>Lead</h6>
             </div>
             <div class="vicelead white">
               <div class="img">
-                <img src="./assets/images/clubs/deepak.jpeg" />
+                <img src="./assets/images/clubs/Ayush_Gupta_dev.jpeg" />
               </div>
-              <h4>Deepak Chaurasiya</h4>
+              <h4>Ayush Gupta</h4>
               <h6>Vice Lead</h6>
             </div>
           </div>
@@ -71,29 +71,62 @@
           <div class="lvlimg">
             <div class="lead">
               <div class="img">
-                <img src="./assets/images/clubs/vishesh.jpeg" />
+                <img src="./assets/images/clubs/Saroj_Thapa_2022 - STM.JPG" />
               </div>
-              <h4><span class="text-head">Vishesh Gupta</h4>
-              <h6><span class="text-head">Lead</h6>
+              <h4><span class="" style="color:white">Saroj Thapa</h4>
+              <h6><span class="text-head"style="color:white">Lead</h6>
             </div>
-            <div class="vicelead white invisible">
+            <div class="vicelead white ">
               <div class="img">
-                <img src="" />
+                <img src="./assets/images/clubs/utkarsh.png" />
               </div>
-              <h4></h4>
-              <h6></h6>
+              <h4>Utkarsh Gupta</h4>
+              <h6>Vice Lead</h6>
             </div>
           </div>
           <div class="aboutclub aboutclub-right white float-right">
-            <h2>XD</h2>
+            <h2>Lens</h2>
             <p>
-            XD - The Designing Group aims to promote creativity and to increase the technical knowledge of the students in graphic designing and UI/UX. This club provides an opportunity for students to learn Graphic Designing and UI/UX using modern software. XD CLUB also organizes various events like technical sessions on graphic software, workshops, competitions, and much more.
+            Photography is much more than just having a camera and taking pictures. Students in this club have opportunities to hone their skills by understanding and learning about what makes a good photograph, from composition to artistic expression. Students are encouraged to practice their skills while photographing school related activities and sporting events. All levels of experience are welcome and encouraged to explore this exciting side of the visual arts
             </p>
           </div>
         </div>
       </div>
     </div>
     <!--************************************************************ xd ends ************************************************************-->
+        <!--************************************************************  cyber chain starts ************************************************************-->
+        <div class="club-container">
+      <div class="bg-shape" id="bg-shape-6"></div>
+      <img src="./assets/images/clubs/Background_shapes/Bg_shape_7.svg" class="bg-shape" id="bg-shape-7" />
+      <img src="./assets/images/clubs/Background_shapes/Bg_shape_5.svg" class="bg-shape" id="bg-shape-5" />
+      <div class="row club-row">
+        <div class="container club">
+          <div class="aboutclub white">
+            <h2>Canvas</h2>
+            <p>
+            The Designing club aims at bringing out the inherent talent in students on the side of creativity. It also enables students to develop the unrecognized skills in them to a level where the student believes to turn out a creation of one’s own. The club envision to be a suitable platform for various skills in designing which can ensure the growth of students in the path of creativity and entrepreneurship.
+            </p>
+          </div>
+          <div class="lvlimg">
+            <div class="lead white">
+              <div class="img">
+                <img src="./assets/images/clubs/IMG_20221204_222714 - Aayush Jha.jpg" />
+              </div>
+              <h4>Aayush Jha</h4>
+              <h6>Lead</h6>
+            </div>
+            <div class="vicelead white">
+              <div class="img">
+                <img src="./assets/images/clubs/Prerit_2023 - Prerit Masih.JPG" />
+              </div>
+              <h4>Prerit Masih</h4>
+              <h6>Vice Lead</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--************************************************************  cyber chain ends ************************************************************-->
     <!--************************************************************  engame starts ************************************************************-->
     <div class="club-container">
       <div class="row club-row">
@@ -106,19 +139,19 @@
             </p>
           </div>
           <div class="lvlimg">
-            <div class="lead invisible">
+            <div class="lead">
               <div class="img">
-                <img src="" />
+                <img src="./assets/images/clubs/mukul_2023 - Mukul Sharma.jpg" />
               </div>
-              <h4></h4>
-              <h6></h6>
+              <h4><span class="text-head">Mukul sharmar</h4>
+              <h6><span class="text-head">Lead</h6>
             </div>
             <div class="vicelead">
               <div class="img">
-                <img src="./assets/images/clubs/rishab.png" />
+                <img src="./assets/images/clubs/jayesh.png" />
               </div>
-              <h4><span class="text-head">Rishab Pant</h4>
-              <h6><span class="text-head">Lead</h6>
+              <h4>Jayesh Dua</h4>
+              <h6>Vice Lead</h6>
             </div>
           </div>
         </div>
@@ -132,23 +165,23 @@
           <div class="lvlimg">
             <div class="lead white">
               <div class="img">
-                <img src="./assets/images/clubs/adarsh.png" />
+                <img src="./assets/images/clubs/Malikarjun-Gaur.jpg" />
               </div>
-              <h4>Adarsh Dhir</h4>
+              <h4>Mallikarjun gaur</h4>
               <h6>Lead</h6>
             </div>
             <div class="vicelead white">
               <div class="img">
-                <img src="./assets/images/clubs/anirudh.png" />
+                <img src="./assets/images/clubs/shivam_innovate.png" />
               </div>
-              <h4>Anirudh Gautam</h4>
+              <h4>Shivam</h4>
               <h6>Vice Lead</h6>
             </div>
           </div>
           <div class="aboutclub aboutclub-right">
             <h2><span class="text-head">Innovate AI</h2>
             <p>
-            The objective of Innovate AI - The Machine Learning, Data Science and AI Group is to create awareness and equip the students with the ability as well as skills to analyze and understand the technology in the field of Artificial Intelligence. The club serves as a place for the community to discuss, learn about, and work on topics related to machine learning, Data Science, and artificial intelligence. Various Events related to the latest Technologies and Algorithms are also organized by Innovate AI, along with competitions and Guest Lectures.
+            Innovate AI Is The Artificial Intelligence , Machine learning and Data science club of the USS ACM Student Chapter.The club gives a place for the community to discuss, learn about, and work on topics related to machine learning, Data Science, and artificial intelligence.We Aim To Provide The Knowledge Of Existing And Emerging Technologies Of Machine Learning And Artificial Intelligence .
             </p>
           </div>
         </div>
@@ -171,14 +204,14 @@
           <div class="lvlimg">
             <div class="lead white">
               <div class="img">
-                <img src="./assets/images/clubs/jaskirat.jpeg" />
+                <img src="./assets/images/clubs/Ankit_Pandey_2024 - 012_Ankit Pandey.jpg" />
               </div>
-              <h4>Jaskirat Singh</h4>
+              <h4>Ankit Pandey</h4>
               <h6>Lead</h6>
             </div>
             <div class="vicelead white">
               <div class="img">
-                <img src="./assets/images/clubs/kartik.jpeg" />
+                <img src="./assets/images/clubs/kartik_singh_2025 - Kartik Singh.jpg" />
               </div>
               <h4>Kartik Singh</h4>
               <h6>Vice Lead</h6>
@@ -195,16 +228,16 @@
           <div class="lvlimg">
             <div class="lead">
               <div class="img">
-                <img src="./assets/images/clubs/aman.png" />
+                <img src="./assets/images/clubs/sachin_yadav_2023 - sachin yadav.jpeg" />
               </div>
-              <h4><span class="text-head">Aman Tayal</h4>
+              <h4><span class="text-head">Sachin Yadav</h4>
               <h6><span class="text-head">Lead</h6>
             </div>
             <div class="vicelead">
               <div class="img">
-                <img src="./assets/images/clubs/rajnikant.png" />
+                <img src="./assets/images/clubs/Gopal_Krushna_2023 - Gopal.jpg" />
               </div>
-              <h4><span class="text-head">Rajnikant Roy</h4>
+              <h4><span class="text-head">Gopal Krushna Panda</h4>
               <h6><span class="text-head">Vice Lead</h6>
             </div>
           </div>
@@ -219,7 +252,7 @@
     </div>
     <!--************************************************************  icpc ends ************************************************************-->
     <!--************************************************************ entrepreneur starts ************************************************************-->
-    <div class="club-container">
+    <!-- <div class="club-container">
       <img src="./assets/images/clubs/Background_shapes/Bg_shape_9.svg" class="bg-shape" id="bg-shape-9" />
       <div class="row club-row">
         <div class="container club">
@@ -248,7 +281,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--************************************************************  entrepreneur ends ************************************************************-->
     <!--************************************************************ robiotics starts ************************************************************-->
     <div class="club-container">
@@ -264,10 +297,10 @@
             </div>
             <div class="vicelead">
               <div class="img">
-                <img src="./assets/images/clubs/manik.jpg" />
+                <img src="./assets/images/clubs/kanishq.png" />
               </div>
-              <h4><span class="text-head">Manik Singal</h4>
-              <h6><span class="text-head">Lead</h6>
+              <h4><span class="text-head">Kanishq kumar</h4>
+              <h6><span class="text-head">Vice Lead</h6>
             </div>
           </div>
           <div class="aboutclub aboutclub-right">
@@ -296,12 +329,12 @@ Its goal is to guide the students of USICT towards excellence in their domain of
           <div class="lvlimg">
             <div class="lead">
               <div class="img">
-                <img src="./assets/images/clubs/prateek.png" />
+                <img src="./assets/images/clubs/IMG-20221215-WA0025 - Aditi Surya Kamal - 51.jpg" />
               </div>
-              <h4><span class="text-head">Prateek Thakur</h4>
+              <h4><span class="text-head">Aditi Surya Kamal</h4>
               <h6><span class="text-head">Lead</h6>
             </div>
-            <div class="vicelead">
+            <div class="vicelead invisible">
               <div class="img">
                 <img src="./assets/images/clubs/tushar-khanduri.png" />
               </div>
