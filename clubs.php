@@ -78,7 +78,7 @@
             </div>
             <div class="vicelead white ">
               <div class="img">
-                <img src="" />
+                <img src="./assets/images/clubs/utkarsh.png" />
               </div>
               <h4>Utkarsh Gupta</h4>
               <h6>Vice Lead</h6>
@@ -87,7 +87,7 @@
           <div class="aboutclub aboutclub-right white float-right">
             <h2>Lens</h2>
             <p>
-            XD - The Designing Group aims to promote creativity and to increase the technical knowledge of the students in graphic designing and UI/UX. This club provides an opportunity for students to learn Graphic Designing and UI/UX using modern software. XD CLUB also organizes various events like technical sessions on graphic software, workshops, competitions, and much more.
+            Photography is much more than just having a camera and taking pictures. Students in this club have opportunities to hone their skills by understanding and learning about what makes a good photograph, from composition to artistic expression. Students are encouraged to practice their skills while photographing school related activities and sporting events. All levels of experience are welcome and encouraged to explore this exciting side of the visual arts
             </p>
           </div>
         </div>
@@ -104,7 +104,7 @@
           <div class="aboutclub white">
             <h2>Canvas</h2>
             <p>
-            
+            The Designing club aims at bringing out the inherent talent in students on the side of creativity. It also enables students to develop the unrecognized skills in them to a level where the student believes to turn out a creation of one’s own. The club envision to be a suitable platform for various skills in designing which can ensure the growth of students in the path of creativity and entrepreneurship.
             </p>
           </div>
           <div class="lvlimg">
@@ -141,16 +141,16 @@
           <div class="lvlimg">
             <div class="lead">
               <div class="img">
-                <img src="" />
+                <img src="./assets/images/clubs/mukul_2023 - Mukul Sharma.jpg" />
               </div>
-              <h4><span class="text-head">Kanishq kumar</h4>
+              <h4><span class="text-head">Mukul sharmar</h4>
               <h6><span class="text-head">Lead</h6>
             </div>
             <div class="vicelead">
               <div class="img">
-                <img src="./assets/images/clubs/mukul_2023 - Mukul Sharma.jpg" />
+                <img src="./assets/images/clubs/jayesh.png" />
               </div>
-              <h4>Mukul sharma</h4>
+              <h4>Jayesh Dua</h4>
               <h6>Vice Lead</h6>
             </div>
           </div>
@@ -165,14 +165,14 @@
           <div class="lvlimg">
             <div class="lead white">
               <div class="img">
-                <img src="" />
+                <img src="./assets/images/clubs/Malikarjun-Gaur.jpg" />
               </div>
-              <h4>Tarun Gaur</h4>
+              <h4>Mallikarjun gaur</h4>
               <h6>Lead</h6>
             </div>
             <div class="vicelead white">
               <div class="img">
-                <img src="" />
+                <img src="./assets/images/clubs/shivam_innovate.png" />
               </div>
               <h4>Shivam</h4>
               <h6>Vice Lead</h6>
@@ -181,7 +181,7 @@
           <div class="aboutclub aboutclub-right">
             <h2><span class="text-head">Innovate AI</h2>
             <p>
-            The objective of Innovate AI - The Machine Learning, Data Science and AI Group is to create awareness and equip the students with the ability as well as skills to analyze and understand the technology in the field of Artificial Intelligence. The club serves as a place for the community to discuss, learn about, and work on topics related to machine learning, Data Science, and artificial intelligence. Various Events related to the latest Technologies and Algorithms are also organized by Innovate AI, along with competitions and Guest Lectures.
+            Innovate AI Is The Artificial Intelligence , Machine learning and Data science club of the USS ACM Student Chapter.The club gives a place for the community to discuss, learn about, and work on topics related to machine learning, Data Science, and artificial intelligence.We Aim To Provide The Knowledge Of Existing And Emerging Technologies Of Machine Learning And Artificial Intelligence .
             </p>
           </div>
         </div>
@@ -297,7 +297,7 @@
             </div>
             <div class="vicelead">
               <div class="img">
-                <img src="" />
+                <img src="./assets/images/clubs/kanishq.png" />
               </div>
               <h4><span class="text-head">Kanishq kumar</h4>
               <h6><span class="text-head">Vice Lead</h6>
