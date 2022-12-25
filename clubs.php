@@ -300,7 +300,7 @@
                 <img src="./assets/images/clubs/kanishq.png" />
               </div>
               <h4><span class="text-head">Kanishq kumar</h4>
-              <h6><span class="text-head">Vice Lead</h6>
+              <h6><span class="text-head">Lead</h6>
             </div>
           </div>
           <div class="aboutclub aboutclub-right">
