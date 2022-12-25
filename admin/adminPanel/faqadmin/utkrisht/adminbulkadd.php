@@ -144,7 +144,7 @@ use Shuchkin\SimpleXLSX;
 
                     
                     $unique = "000";
-                    echo $query;
+                    // echo $query;
                 }
                 
                 if($i>0){
