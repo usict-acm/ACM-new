@@ -1,4 +1,6 @@
-![GGSIP University USS ACM Student Chapter](https://usict.acm.org/assets/images/acm-logo.svg)
+<div align="center">
+<img src="https://usict.acm.org/assets/images/acm-logo.svg"><br>
+</div>
 
 <h4 align="center">
 The GGSIP University USS ACM Student Chapter is an officially recognized student organization that was founded in 2019 under the University School USICT at GGSIPU.
