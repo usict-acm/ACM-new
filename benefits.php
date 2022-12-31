@@ -295,6 +295,22 @@
         <!--  -->
         <div class="glider-contain">
           <div class="winnerContainer glider1">
+          <div class="winnerOne">
+              <div class="outerContent">
+              <h3>Aagaz 3.0 Quiz Competition</h3>
+                </div>
+                <div class="circleCard">
+                </div>
+                <div class="eventName">
+                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
+                </div>
+                <div class="innerContent">
+                  <h2>Aagaz 3.0 Quiz Competition</h2>
+                  <h3 style="color: rgb(0, 0, 0)">Winners</h3>
+                  <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Abhishek Thakur</h4>
+                  <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Prashansa Jha</h4>
+                </div>
+              </div>
               <div class="winnerOne">
               <div class="outerContent">
               <h3>ACM Write it loud</h3>
@@ -645,7 +661,7 @@
               
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM Lens & Canvas - The Experience and Design group">
-                      <label class="label-course" for="contactChoice8">Lens & Canvas (XD+Photography)</label>
+                      <label class="label-course" for="contactChoice8">Lens & Canvas</label>
                     </div>
                   </div>
                 </div>

@@ -179,7 +179,7 @@
             </div>
           </div>
           <div class="aboutclub aboutclub-right">
-            <h2><span class="text-head">Innovate AI</h2>
+            <h2><span class="text-head1">Innovate AI</h2>
             <p>
             Innovate AI Is The Artificial Intelligence , Machine learning and Data science club of the USS ACM Student Chapter.The club gives a place for the community to discuss, learn about, and work on topics related to machine learning, Data Science, and artificial intelligence.We Aim To Provide The Knowledge Of Existing And Emerging Technologies Of Machine Learning And Artificial Intelligence .
             </p>
