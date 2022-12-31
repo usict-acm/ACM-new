@@ -784,6 +784,16 @@
                                    </div>
                               </div>
                          </div>
+                         <div class="item left">
+                              <div class="marker multiline"></div>
+                              <div class="content">
+                                   <div class="time">2022</div>
+                                   <div>
+                                        <p>Organized HashTech and 20+ events</p>
+
+                                   </div>
+                              </div>
+                         </div>
                     </div>
                </div>
                <div id="address" class="section2 lazy-bg-loaded">
