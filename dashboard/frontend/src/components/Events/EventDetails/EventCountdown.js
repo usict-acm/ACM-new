@@ -18,7 +18,7 @@ const EventCountdown = ({ event }) => {
           setStatusText("<h3>ENDS IN :</h3>");
           setTargetTime(moment(event?.endDate));
         } else {
-          setStatusText("<h1>EVENT IS OVER</h1>");
+          setStatusText("<h1>REGISTRATION CLOSED</h1>");
           setTargetTime(null);
         }
       }
