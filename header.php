@@ -32,6 +32,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="./dashboard">Dashboard</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./hof.php">Hall of Fame</a>
+            </li>
         </ul>
     </div>
 </nav>
