@@ -11,6 +11,7 @@
   <link href="./assets/CSS/header.css" rel="stylesheet" />
   <link href="./assets/CSS/footer.css" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/CSS/newStyle.css" />
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -715,7 +716,13 @@
           if (x == "" || !x || y == "" || !y || z == "" || !z || a == "" || !a || b == "" || !b || c == "" || !c || d == "" || !d || e == "" || !e || isNaN(c) || isNaN(d) || isNaN(e) || isNaN(b)) {
             
         flag = false;
-        alert("Please enter valid information!  ");
+        Swal.fire({
+          title: 'Error!',
+          text: 'Please enter valid information',
+          icon: 'error',
+          confirmButtonText: 'Ok'
+        });
+        //alert("Please enter valid information!  ");
         //document.getElementById("form-id").action = "";
           
           //document.location.reload()
@@ -751,8 +758,13 @@
                 cache: false,
                 processData: false,
                 contentType: false,
-                success: function(data){
-                  alert("Form has been submitted !");
+                success: function(data){  
+                  Swal.fire({
+                    title: 'Success!',
+                    text: 'Form submitted successfully !',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                  });
                   //  console.log("success!!");
                     // window.location.reload();
                 // window.location.replace('./index.php?table=certificateCreation');
