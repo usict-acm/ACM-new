@@ -26,7 +26,7 @@
 		<div class="swiper-container" id="myCarousel">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-1-mobile.jpg" data-background="./assets/images/carousel-img-1.png"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-1-mobile.JPG" data-background="./assets/images/carousel-img-1.png"></div>
 				</div>
 				<div class="swiper-slide">
 					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-2-mobile.png" data-background="./assets/images/carousel-img-2.jpeg"></div>
@@ -38,10 +38,10 @@
 					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-4-mobile.png" data-background="./assets/images/carousel-img-4.png"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-5-mobile.JPG" data-background="./assets/images/carousel-img-5.png"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-5-mobile.png" data-background="./assets/images/carousel-img-5.png"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-6-mobile.JPG" data-background="./assets/images/carousel-img-6.png"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-6-mobile.png" data-background="./assets/images/carousel-img-6.png"></div>
 				</div>
 
 				<div class="swiper-button-next"></div>
@@ -174,7 +174,7 @@
 				</div>\
 				<img src="' +
 							row.Image +
-							'" class="blog-img" style="object-fit:cover;"/>\
+							'" class="blog-img" />\
 			</div>\
 			<div>';
 					}
@@ -187,6 +187,7 @@
     <?php 
     include_once 'officebearer.php';
     ?>
+
 	<!-- *****************************our team end************************************************** -->
 	<!-- socail bar******************************* -->
 	<div class="social-btns tag">

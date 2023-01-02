@@ -197,6 +197,12 @@
                         case 'invite':
                             include('./faqadmin/invite/bulkUpload.php');
                             break;
+                        case 'Utkrisht':
+                            include('./faqadmin/utkrisht/table.php');
+                            break;
+                        case 'uploadExcel':
+                            include('./faqadmin/utkrisht/adminbulkadd.php');
+                            break;
                         default:
                             include('./faqadmin/index.php');
                             break;
