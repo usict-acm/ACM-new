@@ -4,7 +4,7 @@
 
 <head>
 	<?php
-	include("head.php")
+	include("head.php");
 	?>
 	<title>GGSIP University USS ACM Student Chapter</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
@@ -181,6 +181,73 @@
 				},
 			});
 		});
+        function displayFaculty(facultyMembers) {
+            let div = document.getElementById("officeList");
+            let html = '';
+            for(let i = 0 ; i < facultyMembers.length; i++) {
+                html += `
+                      <div class="profile-card col-md-4 col-sm-6">
+                        <div class="img">
+                          <img
+                            src="/${facultyMembers[i].image}"
+                          />
+                        </div>
+                        <div class="caption">
+                          <h3>${facultyMembers[i].name}</h3>
+                          <p>${facultyMembers[i].designation}</p>
+                        </div>
+                      </div>`;
+            }
+            div.innerHTML = html;
+        }
+        function displayTeam(teamMembers) {
+            let div = document.getElementById("teamList");
+            let html = ''
+            for(let i = 0 ; i < teamMembers.length; i++) {
+                html +=`
+                      <div class="profile-card col-md-4 col-sm-6">
+                        <div class="img">
+                          <img
+                            src="./${teamMembers[i].image}"
+                          />
+                        </div>
+                        <div class="caption">
+                          <h3>${teamMembers[i].name}</h3>
+                          <p>${teamMembers[i].designation}</p>
+                          <div class="social-links"> `
+                if(teamMembers[i].linkendin) {
+                    html += `<a href="${teamMembers[i].linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>`;
+                } 
+                if(teamMembers[i].github) {
+                    html += `<a href="${teamMembers[i].github}" target="_blank"><i class="fab fa-github"></i></a>`;
+                } 
+                if(teamMembers[i].instagram) {
+                    html += `<a href="${teamMembers[i].instagram}" target="_blank"><i class="fab fa-instagram"></i></a>`;
+                } 
+                html += "</div> </div> </div>";
+            }
+            div.innerHTML = html;
+        }
+        async function getTeamData(year) {
+            let url = `./admin/adminPanel/faqadmin/teams/api.php/?q=readMember&year=${year}`
+            const response = await fetch(url);
+            let array = await response.json();
+            let teamMember = [];
+            let facultyMember = [];
+            for(let i = 0 ; i < array.length; i++) {
+                if(array[i].category === 'Office-Bearers') {
+                    teamMember.push(array[i]);
+                }
+                if(array[i].category === 'Faculty') {
+                    facultyMember.push(array[i]);
+                }
+            }
+            return [facultyMember, teamMember];
+        }
+        getTeamData(2023).then(([facultyMembers, teamMembers]) => { 
+            displayFaculty(facultyMembers);
+            displayTeam(teamMembers);
+        });
 	</script>
 	<!-- ******************************blog section end***************************************** -->
 	<!-- *******************************************our team************* -->
@@ -239,8 +306,8 @@
 	<!--  footer ends -->
 
 	<!-- Swiper JS -->
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-	<script src="assets\JS\home_new.js"></script>
-	</body>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets\JS\home_new.js"></script>
+    </body>
 
-</html>
+    </html>
