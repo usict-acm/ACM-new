@@ -6,7 +6,7 @@
 <?php
 $database = new Database();
 $db = $database->connect();
-$query = "SELECT t.image, t.name, t.designation from office_bearer t where category = 'Faculty'";
+$query = "SELECT t.image, t.name, t.designation from office_bearer t where category = 'faculty'";
 $rows = $db->query($query);
 while($row = $rows->fetch_assoc()) {
 ?>
@@ -27,7 +27,7 @@ while($row = $rows->fetch_assoc()) {
 
 <div class="row justify-content-center">
 <?php
-$query = "SELECT t.image, t.name, t.designation, t.linkedin, t.github, t.instagram from office_bearer t WHERE category = 'Office-Bearers'";
+$query = "SELECT t.image, t.name, t.designation, t.linkedin from office_bearer t WHERE category = 'student'";
 $rows = $db->query($query);
 while($row = $rows->fetch_assoc()) {
 ?>
@@ -42,8 +42,6 @@ while($row = $rows->fetch_assoc()) {
     <p><?php echo $row["designation"]?></p>
       <div class="social-links">
         <a href="<?php echo $row["linkedin"]?>" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="<?php echo $row["github"]?>" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="<?php echo $row["instagram"]?>" target="_blank"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </div>
