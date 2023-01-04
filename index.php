@@ -18,7 +18,7 @@
 <body>
 	<!-- nav bar -->
 	<?php
-	include("header.php")
+	include("header.php");
 	?>
 	<!-- nav-bar end -->
 	<!-- hero Section -->
@@ -184,170 +184,10 @@
 	</script>
 	<!-- ******************************blog section end***************************************** -->
 	<!-- *******************************************our team************* -->
-	<section class="tag container-fluid">
-		<div class="">
-			<h2 class="my-4 display-4 fw-bolder text-center">Office<span class="text-head"> Bearers</span></h2>
-		</div>
-	 <div class="row justify-content-center">
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/deanSirSquared.jpeg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Prof. Pravin Chandra</h3>
-          <p>Dean, USICT</p>
-        </div>
-      </div>
-	  <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/ArvinderKaur.png"
-          />
-        </div>
-        <div class="caption">
-          <h3>Prof. Arvinder Kaur</h3>
-          <p>Dean, USAR & USDI</p>
-        </div>
-      </div>
-      <!-- <div class="gap"></div> -->
-	  <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/rahulsir.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Dr. Rahul Johari</h3>
-          <p>Branch Mentor, USS ACM</p>
-        </div>
-      </div>
+    <?php 
+    include_once 'officebearer.php';
+    ?>
 
-	  <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/ruchi-sehrawat.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Dr. Ruchi Sehrawat</h3>
-          <p>Branch Mentor, USS ACM</p>
-        </div>
-      </div>
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/jaspreeti-singh.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Dr. Jaspreeti Singh</h3>
-          <p>Branch Mentor, USS ACM</p>
-        </div>
-      </div>
-	 </div>
-
-
-
-	 <div class="row justify-content-center">
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/anuragParashar.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Anurag Parashar</h3>
-          <p>Chair</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/anurag-parashar/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/rajnikantRoy.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Rajnikant Roy</h3>
-          <p>Vice Chair</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/rajnnikantroy/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/nidhiRathore.png"
-          />
-        </div>
-        <div class="caption">
-          <h3>Nidhi Rathore</h3>
-          <p>Secretary</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/nidhi-rathore-431317213/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/akashMohan.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Akash Mohan </h3>
-          <p>Treasurer</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/akash-mohan-697513227" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/apoorvAron.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Apoorv Aron</h3>
-          <p>Web Chair</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/apoorv-aron-742882212" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/aryanGarg.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Aryan Garg</h3>
-          <p>Membership Chair</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/aryan-garg" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-	</div>
-    
-
-
-		<div class="py-3 mt-2 d-flex justify-content-sm-center">
-			<div class="col-lg-2 col-md-4 col mb-2 mt-4 mt-lg-0">
-				<a id="meet-the-team-btn" href="./team.php" class="about-button team-mobile-btn">Meet the Team</a>
-				</div>
-		</div>
-		
-		<!-- </div> -->
-	</section>
 	<!-- *****************************our team end************************************************** -->
 	<!-- socail bar******************************* -->
 	<div class="social-btns tag">
