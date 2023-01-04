@@ -8,7 +8,7 @@ class Database
   private $database;
   private $port;
 
-  public function connect()
+  public function connect() : mysqli
   {
     include(__DIR__.'/../enviornment.php');
     $this->server = $env_server;

@@ -4,7 +4,7 @@
 
 <head>
 	<?php
-	include("head.php")
+	include("head.php");
 	?>
 	<title>GGSIP University USS ACM Student Chapter</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
@@ -18,7 +18,7 @@
 <body>
 	<!-- nav bar -->
 	<?php
-	include("header.php")
+	include("header.php");
 	?>
 	<!-- nav-bar end -->
 	<!-- hero Section -->
@@ -251,28 +251,10 @@
 	</script>
 	<!-- ******************************blog section end***************************************** -->
 	<!-- *******************************************our team************* -->
-	<section class="tag container-fluid">
-		<div class="">
-			<h2 class="my-4 display-4 fw-bolder text-center">Office<span class="text-head"> Bearers</span></h2>
-		</div>
-	 <div class="row justify-content-center" id = "officeList">
-	 </div>
+    <?php 
+    include_once 'officebearer.php';
+    ?>
 
-
-
-	 <div class="row justify-content-center" id = "teamList">
-	</div>
-    
-
-
-		<div class="py-3 mt-2 d-flex justify-content-sm-center">
-			<div class="col-lg-2 col-md-4 col mb-2 mt-4 mt-lg-0">
-				<a id="meet-the-team-btn" href="./team.php" class="about-button team-mobile-btn">Meet the Team</a>
-				</div>
-		</div>
-		
-		<!-- </div> -->
-	</section>
 	<!-- *****************************our team end************************************************** -->
 	<!-- socail bar******************************* -->
 	<div class="social-btns tag">
