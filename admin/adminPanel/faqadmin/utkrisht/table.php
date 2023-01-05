@@ -135,7 +135,7 @@ if(isset($_POST['down-btn'])){
                                             // echo "<a class='edit-logo' href='faqadmin/certificate_edit.php?Sno=". $row['uniqueNo'] ."' title='Edit Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
                                            
                                             echo "<a class='edit-logo' href='faqadmin/certi_download.php?Sno=". $row['uniqueNo'] ."' title='Download Certificate' target='_blank' name='down-btn' id='down-btn' data-toggle='tooltip'><span class='glyphicon glyphicon-download-alt'></span></a>";
-                                            echo "<a class='tash-bin 'href='faqadmin/certificate_delete.php?Sno=". $row['uniqueNo'] ."' title='Delete Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                            echo "<a class='tash-bin 'href='faqadmin/certificate_delete.php?Sno=". $row['uniqueNo'] ."' title='Delete Certificate' name='delete_btn' id='delete_btn' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
                                             // echo "<form method='POST' action = 'faqadmin/certificate/index.php?Sno=". $row['uniqueNo'] ."'> 
                                         //     <button type='submit' class='btn btn-primary' id='submitBtn' name='down-btn' data-toggle='tooltip'>Download</button>
                                         // </form>";
