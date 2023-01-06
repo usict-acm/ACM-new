@@ -11,7 +11,6 @@
   <link href="./assets/CSS/header.css" rel="stylesheet" />
   <link href="./assets/CSS/footer.css" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/CSS/newStyle.css" />
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -764,6 +763,8 @@
                     text: 'Form submitted successfully !',
                     icon: 'success',
                     confirmButtonText: 'Ok'
+                  }).then(function(){
+                    window.location="./";
                   });
                   //  console.log("success!!");
                     // window.location.reload();
@@ -903,6 +904,7 @@
   </script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="assets\JS\home_new.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
