@@ -29,7 +29,7 @@
 				<div class="swiper-slide">
 					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-1-mobile.jpg" data-background="./upload/hmpg-img/carousel-img-1.png"></div>
 				</div>
-				<div clmpg-img
+				<div class="swiper-slide"
 					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-2-mobile.png" data-background="./upload/hmpg-img/carousel-img-2.jpeg"></div>
 				</div>
 				<div class="swiper-slide">
