@@ -295,6 +295,22 @@
         <!--  -->
         <div class="glider-contain">
           <div class="winnerContainer glider1">
+          <div class="winnerOne">
+              <div class="outerContent">
+              <h3>Aagaz 3.0 Quiz Competition</h3>
+                </div>
+                <div class="circleCard">
+                </div>
+                <div class="eventName">
+                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
+                </div>
+                <div class="innerContent">
+                  <h2>Aagaz 3.0 Quiz Competition</h2>
+                  <h3 style="color: rgb(0, 0, 0)">Winners</h3>
+                  <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Abhishek Thakur</h4>
+                  <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Prashansa Jha</h4>
+                </div>
+              </div>
               <div class="winnerOne">
               <div class="outerContent">
               <h3>ACM Write it loud</h3>
@@ -645,7 +661,7 @@
               
                     <div class="col-lg-6 col-md-6 club">
                       <input type="checkbox" id="courseChoice3" name="clubs" value="USICT ACM Lens & Canvas - The Experience and Design group">
-                      <label class="label-course" for="contactChoice8">Lens & Canvas (XD+Photography)</label>
+                      <label class="label-course" for="contactChoice8">Lens & Canvas</label>
                     </div>
                   </div>
                 </div>
@@ -699,7 +715,13 @@
           if (x == "" || !x || y == "" || !y || z == "" || !z || a == "" || !a || b == "" || !b || c == "" || !c || d == "" || !d || e == "" || !e || isNaN(c) || isNaN(d) || isNaN(e) || isNaN(b)) {
             
         flag = false;
-        alert("Please enter valid information!  ");
+        Swal.fire({
+          title: 'Error!',
+          text: 'Please enter valid information',
+          icon: 'error',
+          confirmButtonText: 'Ok'
+        });
+        //alert("Please enter valid information!  ");
         //document.getElementById("form-id").action = "";
           
           //document.location.reload()
@@ -735,8 +757,15 @@
                 cache: false,
                 processData: false,
                 contentType: false,
-                success: function(data){
-                  alert("Form has been submitted !");
+                success: function(data){  
+                  Swal.fire({
+                    title: 'Success!',
+                    text: 'Form submitted successfully !',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                  }).then(function(){
+                    window.location="./";
+                  });
                   //  console.log("success!!");
                     // window.location.reload();
                 // window.location.replace('./index.php?table=certificateCreation');
@@ -875,6 +904,7 @@
   </script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="assets\JS\home_new.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

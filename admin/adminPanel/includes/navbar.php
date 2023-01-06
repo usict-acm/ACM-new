@@ -132,12 +132,12 @@
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Certificate</span></a>
             </li>
-            <hr class="sidebar-divider">
+            <!-- <hr class="sidebar-divider">
             <li class="nav-item">
                 <a class="nav-link" href="?table=invite">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Invite</span></a>
-            </li>
+            </li> -->
             <hr class="sidebar-divider">
             <li class="nav-item">
                 <a class="nav-link" href="?table=Utkrisht">

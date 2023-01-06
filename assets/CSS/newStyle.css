@@ -2268,11 +2268,17 @@ a:hover {
 		width: 11rem;
 		height: 11rem;
 	}
+	.text-head1{
+		color:#0092cf
+	}
 }
 
 @media (min-width: 500px) and (max-width: 767px) {
 	.imag {
 		margin: auto;
+	}
+	.text-head1{
+		color:black
 	}
 }
 
@@ -2370,7 +2376,7 @@ a:hover {
 }
 
 .text-head {
-	color: #0092cf;
+	color:#0092cf;
 }
 
 .btn-theme {

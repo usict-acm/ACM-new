@@ -143,7 +143,7 @@
               <div class="img">
                 <img src="./assets/images/clubs/mukul_2023 - Mukul Sharma.jpg" />
               </div>
-              <h4><span class="text-head">Mukul sharmar</h4>
+              <h4><span class="text-head">Mukul Sharma</h4>
               <h6><span class="text-head">Lead</h6>
             </div>
             <div class="vicelead">
@@ -167,7 +167,7 @@
               <div class="img">
                 <img src="./assets/images/clubs/Malikarjun-Gaur.jpg" />
               </div>
-              <h4>Mallikarjun gaur</h4>
+              <h4>Mallikarjun Gaur</h4>
               <h6>Lead</h6>
             </div>
             <div class="vicelead white">
@@ -179,7 +179,7 @@
             </div>
           </div>
           <div class="aboutclub aboutclub-right">
-            <h2><span class="text-head">Innovate AI</h2>
+            <h2><span class="text-head1">Innovate AI</h2>
             <p>
             Innovate AI Is The Artificial Intelligence , Machine learning and Data science club of the USS ACM Student Chapter.The club gives a place for the community to discuss, learn about, and work on topics related to machine learning, Data Science, and artificial intelligence.We Aim To Provide The Knowledge Of Existing And Emerging Technologies Of Machine Learning And Artificial Intelligence .
             </p>
@@ -299,7 +299,7 @@
               <div class="img">
                 <img src="./assets/images/clubs/kanishq.png" />
               </div>
-              <h4><span class="text-head">Kanishq kumar</h4>
+              <h4><span class="text-head">Kanishq Kumar</h4>
               <h6><span class="text-head">Lead</h6>
             </div>
           </div>

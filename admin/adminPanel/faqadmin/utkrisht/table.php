@@ -67,7 +67,7 @@ if(isset($_POST['down-btn'])){
         background-color: #f9f9f9;
     }
     .edit-logo{
-        position: absolute;
+        position:relative;
         margin: 0 0 0px 0px;
     }
     .tash-bin{
@@ -124,17 +124,19 @@ if(isset($_POST['down-btn'])){
                                     echo "<tr>";
                                         // $ii = $row['originalLink'];
                                         // $ii = substr($ii,0,51);
-                                        echo "<td>" . $sno . "</td>";
+                                        
                                         echo "<td>" . $row['uniqueNo'] . "</td>";
                                         echo "<td>" . $row['name']."</td>";
+                                        echo "<td>" . $sno . "</td>";
                                         echo "<td>" . $row['email']."</td>";
 
                                         echo "<td>";
                                             // echo "<a class='tash-bin' href='faqadmin/certificate_mail.php?Sno=". $row['uniqueNo'] ."&email=". $row['email'] ."' title='Mail Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-envelope'></span></a>";
                                             // echo "<a class='edit-logo' href='faqadmin/certificate_edit.php?Sno=". $row['uniqueNo'] ."' title='Edit Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-edit'></span></a>";
-                                            echo "<a class='tash-bin 'href='faqadmin/certificate_delete.php?Sno=". $row['uniqueNo'] ."' title='Delete Certificate' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                           
                                             echo "<a class='edit-logo' href='faqadmin/certi_download.php?Sno=". $row['uniqueNo'] ."' title='Download Certificate' target='_blank' name='down-btn' id='down-btn' data-toggle='tooltip'><span class='glyphicon glyphicon-download-alt'></span></a>";
-                                        // echo "<form method='POST' action = 'faqadmin/certificate/index.php?Sno=". $row['uniqueNo'] ."'> 
+                                            echo "<a class='tash-bin 'href='faqadmin/certificate_delete.php?Sno=". $row['uniqueNo'] ."' title='Delete Certificate' name='delete_btn' id='delete_btn' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                            // echo "<form method='POST' action = 'faqadmin/certificate/index.php?Sno=". $row['uniqueNo'] ."'> 
                                         //     <button type='submit' class='btn btn-primary' id='submitBtn' name='down-btn' data-toggle='tooltip'>Download</button>
                                         // </form>";
 
