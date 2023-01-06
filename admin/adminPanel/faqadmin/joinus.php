@@ -84,13 +84,14 @@
                     $database = new Database();
                     $link = $database->connect();
                     $connection = $link;
-
+                    $sno = 1;
                     $sql = "SELECT * FROM join_us ORDER BY  id  DESC ";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo "<table class='table table-bordered table-striped'>";
                                 echo "<thead>";
                                     echo "<tr>";
+                                        echo "<th>Sno</th>";
                                         echo "<th>First Name</th>";
                                         echo "<th>Last Name</th>";
                                         echo "<th>Email</th>";
@@ -112,6 +113,7 @@
                                     echo "<tr>";
                                         // $ii = $row['originalLink'];
                                         // $ii = substr($ii,0,51);
+                                        echo "<td>" . $sno . "</td>";
                                         echo "<td>" . $row['firstname'] . "</td>";
                                         echo "<td>" . $row['lastname']."</td>";
                                         echo "<td>" . $row['email']."</td>";
@@ -138,6 +140,7 @@
                                         // echo "</td>";
 
                                     echo "</tr>";
+                                    $sno++;
         
                                 }
                             echo "</tbody>";                            

@@ -80,7 +80,7 @@
                                                 <p class="event-post_text">${event.description}</p>
                                                 <div class="buttonDiv">`;
                             let var1 = `<div class="event-post">
-                                            <div class="event-post_img" style="margin-top:15px;">
+                                            <div class="event-post_img" style="margin-top:7rem;">
                                                 <img src=${event.poster}  alt="">
                                             </div>
                                             <div class="event-post_info">

@@ -6,6 +6,7 @@
 	<?php
 	include("head.php");
 	?>
+	
 	<title>GGSIP University USS ACM Student Chapter</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
@@ -26,22 +27,22 @@
 		<div class="swiper-container" id="myCarousel">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-1-mobile.JPG" data-background="./assets/images/carousel-img-1.png"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-1-mobile.jpg" data-background="./upload/hmpg-img/carousel-img-1.png"></div>
+				</div>
+				<div clmpg-img
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-2-mobile.png" data-background="./upload/hmpg-img/carousel-img-2.jpeg"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-2-mobile.png" data-background="./assets/images/carousel-img-2.jpeg"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-3-mobile.jpg" data-background="./upload/hmpg-img/carousel-img-3.png"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-3-mobile.JPG" data-background="./assets/images/carousel-img-3.png"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-4-mobile.png" data-background="./upload/hmpg-img/carousel-img-4.png"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-4-mobile.png" data-background="./assets/images/carousel-img-4.png"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-5-mobile.png" data-background="./upload/hmpg-img/carousel-img-5.png"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-5-mobile.png" data-background="./assets/images/carousel-img-5.png"></div>
-				</div>
-				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-6-mobile.png" data-background="./assets/images/carousel-img-6.png"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-6-mobile.png" data-background="./upload/hmpg-img/carousel-img-6.png"></div>
 				</div>
 
 				<div class="swiper-button-next"></div>
@@ -289,8 +290,9 @@
 		<div class="try1">
 			<a class="btn skype"><i class="fa fa fa-child"></i></a>
 			<div class="write" id="wrete">
-				<h1 class="sob-heading">1500+</h1>
-				<p class="gratext">Connected Students</p>
+			<?php include './visitorCounter.php'?>
+				<h1 class="sob-heading"><?php echo  $total_visitors?>+</h1>
+				<p class="gratext">Daily Visitors</p>
 			</div>
 		</div>
 
