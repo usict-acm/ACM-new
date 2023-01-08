@@ -44,7 +44,7 @@
 					</div>
 				</div>
 				<div class="col-xl-3 col-lg-3 col-md-6 mb-30">
-					<div class="footer-widget" style="font-size:1.5rem;">
+					<div class="footer-widget">
 						<div class="footer-widget-heading">
 							<h3>Quick Links</h3>
 						</div>
