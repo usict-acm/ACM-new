@@ -199,7 +199,7 @@
                         </div>
                       </div>`;
             }
-            div.innerHTML = html;
+            // div.innerHTML = html;
         }
         function displayTeam(teamMembers) {
             let div = document.getElementById("teamList");
@@ -227,7 +227,7 @@
                 } 
                 html += "</div> </div> </div>";
             }
-            div.innerHTML = html;
+            // div.innerHTML = html;
         }
         async function getTeamData(year) {
             let url = `./admin/adminPanel/faqadmin/teams/api.php/?q=readMember&year=${year}`
