@@ -21,7 +21,7 @@
                 <a class="nav-link" id="events" href="./events.php">Events</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="why_join_us" href="./benefits.php">benefits</a>
+                <a class="nav-link" id="why_join_us" href="./benefits.php">Benefits</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="clubs" href="./clubs.php">Clubs</a>
