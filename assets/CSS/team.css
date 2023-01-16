@@ -37,8 +37,8 @@ section {
 .topnav-myear {
   background-color: rgb(255, 255, 255);
   overflow: hidden;
-  margin-left: 36vw;
-  margin-right: 25vw;
+  margin-left: 35vw;
+  margin-right: 24vw;
   margin-top: 9%;
 }
 
@@ -67,7 +67,7 @@ section {
 .main-year select {
   display: none;
 }
-@media screen and (min-width:769px ) and (max-width:900px){
+@media screen and (min-width:769px ) and (max-width:960px){
   .topnav-myear {
    margin-left: 29vw;
    margin-right: 20vw;
