@@ -37,8 +37,8 @@ section {
 .topnav-myear {
   background-color: rgb(255, 255, 255);
   overflow: hidden;
-  margin-left: 40%;
-  margin-right: 30%;
+  margin-left: 37vw;
+  margin-right: 27vw;
   margin-top: 9%;
 }
 
@@ -47,10 +47,10 @@ section {
   margin-left: 5px;
   color: #0776ad;
   text-align: center;
-  padding: 12px 13px;
+  padding: 14px 16px;
   border-radius: 5px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   /* border: 1px #0297ff solid; */
 }
@@ -66,6 +66,12 @@ section {
 }
 .main-year select {
   display: none;
+}
+@media screen and (min-width:769px ) and (max-width:960px){
+  .topnav-myear {
+   margin-left: 29vw;
+   margin-right: 20vw;
+  }
 }
 
 @media screen and (min-width: 768px) {
