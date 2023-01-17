@@ -719,7 +719,8 @@
           title: 'Error!',
           text: 'Please enter valid information',
           icon: 'error',
-          confirmButtonText: 'Ok'
+          confirmButtonText: 'Ok',
+          confirmButtonColor:'#005daa'
         });
         //alert("Please enter valid information!  ");
         //document.getElementById("form-id").action = "";
@@ -762,7 +763,8 @@
                     title: 'Success!',
                     text: 'Form submitted successfully !',
                     icon: 'success',
-                    confirmButtonText: 'Ok'
+                    confirmButtonText: 'Ok',
+                    confirmButtonColor:'#005daa'
                   }).then(function(){
                     window.location="./";
                   });

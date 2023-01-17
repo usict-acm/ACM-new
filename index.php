@@ -29,7 +29,7 @@
 				<div class="swiper-slide">
 					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-1-mobile.jpg" data-background="./upload/hmpg-img/carousel-img-1.png"></div>
 				</div>
-				<div class="swiper-slide"
+				<div class="swiper-slide">
 					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-2-mobile.png" data-background="./upload/hmpg-img/carousel-img-2.jpeg"></div>
 				</div>
 				<div class="swiper-slide">
@@ -69,7 +69,7 @@
 				<img src="./assets/images/aboutUs-icon.png" alt="" class="w-100" />
 			</div>
 		</div>
-		<div class="col-sm-6 col-9 mx-auto mt-3 pe-sm-5 align-self-center">
+		<div class="col-sm-6 col-9 mx-auto px-0 mt-3 pe-sm-5 align-self-center">
 			<div class="text">
 				<h2 class="mb-4 display-4 fw-bolder text-center text-md-start">
 					About <span class="text-head">Our Chapter</span>
@@ -199,7 +199,7 @@
                         </div>
                       </div>`;
             }
-            div.innerHTML = html;
+            // div.innerHTML = html;
         }
         function displayTeam(teamMembers) {
             let div = document.getElementById("teamList");
@@ -227,7 +227,7 @@
                 } 
                 html += "</div> </div> </div>";
             }
-            div.innerHTML = html;
+            // div.innerHTML = html;
         }
         async function getTeamData(year) {
             let url = `./admin/adminPanel/faqadmin/teams/api.php/?q=readMember&year=${year}`
@@ -276,7 +276,7 @@
 		<div class="try1">
 			<a class="btn instagram" href="https://usict.acm.org/instagram" target="_blank"><i class=" fa fa fa-instagram"></i></a>
 			<div class="write" id="wrete">
-				<h1 class="sob-heading">500+</h1>
+				<h1 class="sob-heading">550+</h1>
 				<p class="gratext">Instagram Followers</p>
 			</div>
 		</div>
@@ -292,7 +292,7 @@
 			<div class="write" id="wrete">
 			<?php include './visitorCounter.php'?>
 				<h1 class="sob-heading"><?php echo  $total_visitors?>+</h1>
-				<p class="gratext">Daily Visitors</p>
+				<p class="gratext">Monthly Visitors</p>
 			</div>
 		</div>
 

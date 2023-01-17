@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 
-<link rel="icon" href="./assets/images/acm-logo.svg" type="image/x-icon">
+<link rel="icon" href="./assets/images/acm-Icon.png" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description"
 content="GGSIP University USS ACM Student Chapter is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc">
