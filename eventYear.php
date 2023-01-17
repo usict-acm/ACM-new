@@ -10,7 +10,7 @@
     <link href="./assets/CSS/eventsyearpage.css" rel="stylesheet" />
 
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -57,7 +57,7 @@
                     method: 'GET',
                     dataType: 'JSON',
                     success: function(data) {
-                        console.log("check data year", data);
+                        //console.log("check data year", data);
                         if (<?php echo $page ?> > Math.ceil(data[1] / 7)) {
                             allEvents.innerHTML += `<h1 class='noEvents'>No Events on this page</h1>`;
 
@@ -144,7 +144,7 @@
                                                   </ul>\
                                                </nav></div>"
                             if (<?php echo $page ?> === i) {
-                                console.log(<?php echo $page ?>);
+                                //console.log(<?php echo $page ?>);
                                 document.getElementById("link_pagination" + i).className += "active_pagination";
                             }
                         }
