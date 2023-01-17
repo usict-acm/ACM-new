@@ -69,7 +69,7 @@
 				<img src="./assets/images/aboutUs-icon.png" alt="" class="w-100" />
 			</div>
 		</div>
-		<div class="col-sm-6 col-9 mx-auto mt-3 pe-sm-5 align-self-center">
+		<div class="col-sm-6 col-9 mx-auto px-0 mt-3 pe-sm-5 align-self-center">
 			<div class="text">
 				<h2 class="mb-4 display-4 fw-bolder text-center text-md-start">
 					About <span class="text-head">Our Chapter</span>
