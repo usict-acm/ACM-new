@@ -15,10 +15,12 @@ if(!$result){
     die("Retriving Query error <br>".$query);
 }
 $total_visitors = mysqli_num_rows($result);
-if($total_visitors < 1){
-    $query = "INSERT INTO visitor_counter(ip_address) VALUES('$visitor_ip')";
-    $result = mysqli_query($conn, $query); 
-}
+$query = "INSERT INTO visitor_counter(ip_address) VALUES('$visitor_ip')";
+$result = mysqli_query($conn, $query); 
+// if($total_visitors < 1){
+//     $query = "INSERT INTO visitor_counter(ip_address) VALUES('$visitor_ip')";
+//     $result = mysqli_query($conn, $query); 
+// }
 //retrive existing number of visitor 
 $query = "SELECT * FROM visitor_counter";
 $result = mysqli_query($conn, $query);
