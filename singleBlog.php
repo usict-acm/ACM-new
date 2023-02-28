@@ -83,7 +83,7 @@
           success: function(data) {
             console.log("data herrrr", data);
             if (data.length == 0 || data.message == "No Posts Found") {
-              window.document.location = "./blogs.php";
+              window.document.location = "./blogs";
             } else {
               posts.innerHTML = "<div class='w-100'>\
               <h1 id='blog_title' class='singleBlog-title'>" + data[0].Title + "</h1>\
@@ -109,7 +109,7 @@
     });
 
     function redirec(id) {
-      window.document.location = "./singleBlog.php?Id=" + id; //Connecting Second page
+      window.document.location = "./singleBlog?Id=" + id; //Connecting Second page
     }
   </script>
 </body>

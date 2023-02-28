@@ -88,7 +88,7 @@
               method: 'GET',
               dataType: 'JSON',
               success: function(data) {
-                console.log("data blogs", data);
+                //console.log("data blogs", data);
                 data[0].forEach(myfunc);
 
                 function myfunc(row, index) {
@@ -140,14 +140,14 @@
                   pagination.innerHTML += "<nav class='d-inline-block' aria-label=Page navigation example>\
             <ul class=pagination>\
             <li class=page-item>\
-              <a id=" + id + " class='page-link pagination-numbers pagination-option-next-prev '" + "href=./blogs.php?q=readAll&page=" + i + ">\
+              <a id=" + id + " class='page-link pagination-numbers pagination-option-next-prev '" + "href=./blogs?q=readAll&page=" + i + ">\
               " + i + "\
               </a>\
             </li>\
             </ul>\
           </nav></div>"
                   if (<?php echo $page ?> === i) {
-                    console.log(<?php echo $page ?>);
+                   // console.log(<?php echo $page ?>);
                     document.getElementById("link_pagination" + i).className += "active_pagination";
                   }
                 }
@@ -179,7 +179,7 @@
     ?>
     <script>
       function redirec(id) {
-        window.document.location = "./singleBlog.php?Id=" + id; //Connecting Second page
+        window.document.location = "./singleBlog?Id=" + id; //Connecting Second page
       }
     </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

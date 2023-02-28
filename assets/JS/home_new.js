@@ -146,7 +146,7 @@ const KeyEffect = async (wait, content) => {
 
 function init() {
 	const effectTag = document.querySelector('.typewriter-box');
-
+	var wait = effectTag.getAttribute("data-wait");
 	var Rawcontent = effectTag.getAttribute('data-content');
 	const content = JSON.parse(Rawcontent);
 	KeyEffect(wait, content);
