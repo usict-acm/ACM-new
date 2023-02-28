@@ -83,7 +83,7 @@
           success: function(data) {
             console.log("data herrrr", data);
             if (data.length == 0 || data.message == "No Posts Found") {
-              window.document.location = "./blogs";
+              window.document.location = "./blogs.php";
             } else {
               posts.innerHTML = "<div class='w-100'>\
               <h1 id='blog_title' class='singleBlog-title'>" + data[0].Title + "</h1>\

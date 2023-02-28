@@ -140,7 +140,7 @@
                   pagination.innerHTML += "<nav class='d-inline-block' aria-label=Page navigation example>\
             <ul class=pagination>\
             <li class=page-item>\
-              <a id=" + id + " class='page-link pagination-numbers pagination-option-next-prev '" + "href=./blogs?q=readAll&page=" + i + ">\
+              <a id=" + id + " class='page-link pagination-numbers pagination-option-next-prev '" + "href=./blogs.php?q=readAll&page=" + i + ">\
               " + i + "\
               </a>\
             </li>\
