@@ -1,39 +1,32 @@
 <?php 
-//database  connecting config
 $database = new Database();
 $conn = $database->connect();
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
 
-//adding new visitors
-//$visitor_ip = $_SERVER['REMOTE_ADDR'];
+// Execute the SQL query
+$sql = "SELECT count FROM visitor_count WHERE id = 1;";
+$result = $conn->query($sql);
 
-//checking if the visitor is unique
-$query = "SELECT * FROM visitor_counter where id=1";
-$result = mysqli_query($conn, $query);
+if ($result->num_rows > 0) {
+    // Fetch the result row
+    $row = $result->fetch_assoc();
+    $visitor_count = $row["count"];
+}else {
+    // The visitor count row does not exist, create it with a count of 0
+    $visitor_count = 0;
+    $sql = "INSERT INTO visitor_count (id, count) VALUES (1, 0);";
+    $conn->query($sql);
+  }
+$visitor_count+=1;
+// Update the visitor count in the database
+$sql = "UPDATE visitor_count SET count = $visitor_count WHERE id = 1";
+$conn->query($sql);
 
+$sql = "SELECT count FROM visitor_count WHERE id = 1";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+$visitor_count = $row["count"];
 
-//checking query error 
-if(!$result){
-    die("Retriving Query error <br>".$query);
-}
-$total_visitors = mysqli_num_rows($result);
-var_dump($result);
-$total_visitors++;
-//$queries ="INSERT INTO `visitor_counter` (`id`, `count`) VALUES ('1', '".$total_visitors."')";
-$queries ="update visitor_counter set count =".$total_visitors." where id =1";
-// $query = "INSERT INTO visitor_counter(ip_address) VALUES('$visitor_ip')";
-// $result = mysqli_query($conn, $query); 
-
-// $query = "SELECT * FROM visitor_counter";
-// $result = mysqli_query($conn, $query);
-
-//checking query error 
-$result = mysqli_query($conn, $query);
-
-
-//checking query error 
-if(!$result){
-    die("Retriving Query error <br>".$query);
-}
-
-$total_visitors = mysqli_num_rows($result);
 ?>
