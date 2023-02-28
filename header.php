@@ -15,19 +15,19 @@
                 <a class="nav_link active-navbar" id="home" href="./">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="blogs" href="./blogs.php">Blogs</a>
+                <a class="nav-link" id="blogs" href="./blogs">Blogs</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="events" href="./events.php">Events</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="why_join_us" href="./benefits.php">Benefits</a>
+                <a class="nav-link" id="why_join_us" href="./benefits">Benefits</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="clubs" href="./clubs.php">Clubs</a>
+                <a class="nav-link" id="clubs" href="./clubs">Clubs</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./collab.php">Sponsors</a>
+                <a class="nav-link" href="./collab">Sponsors</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="./dashboard">Dashboard</a>

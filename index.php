@@ -128,7 +128,7 @@
 			<div class="b-container" id="threeBlogsRow"></div>
 			<div class="py-3 mt-2 d-sm-flex justify-content-sm-center">
 				<div class="col-lg-3 col-md-6 col-9 mb-2 mx-auto">
-					<a href="./blogs.php" class="about-button blog-mobile-btn">Read More Blogs</a>
+					<a href="./blogs" class="about-button blog-mobile-btn">Read More Blogs</a>
 				</div>
 			</div>
 		</div>
@@ -137,7 +137,7 @@
 	<script>
 		function readMoreRedirection(id) {
 			console.log(id);
-			window.document.location = './singleBlog.php?Id=' + id; //Connecting Second page
+			window.document.location = './singleBlog?Id=' + id; //Connecting Second page
 		}
 		var rwBlogs = document.getElementById('threeBlogsRow');
 		rwBlogs.innerHTML = '';
