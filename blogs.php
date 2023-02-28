@@ -179,7 +179,7 @@
     ?>
     <script>
       function redirec(id) {
-        window.document.location = "./singleBlog?Id=" + id; //Connecting Second page
+        window.document.location = "./singleBlog.php?Id=" + id; //Connecting Second page
       }
     </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

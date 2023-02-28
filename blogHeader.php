@@ -144,11 +144,11 @@
   }
 
   function redirectHeaderThree(id) {
-    window.document.location = "./singleBlog?Id=" + id; //Connecting Second page
+    window.document.location = "./singleBlog.php?Id=" + id; //Connecting Second page
   }
 
   function redirectRightThree(id) {
-    window.document.location = "./singleBlog?Id=" + id; //Connecting Second page
+    window.document.location = "./singleBlog.php?Id=" + id; //Connecting Second page
   }
 </script>
 
