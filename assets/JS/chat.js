@@ -35,10 +35,10 @@ function getTime() {
     return time;
 }
 
-// Gets the first message
+//Gets the first message
 function firstBotMessage() {
     let firstMessage = "Hi there! Welcome to the ACM website. How can I help you today?"
-    document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
+    document.getElementById("botStarterMessage") = '<p class="botText"><span>' + firstMessage + '</span></p>';
 
     const time=getTime();
 

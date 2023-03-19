@@ -1,6 +1,6 @@
 <!-- ****************************************************contact us ***************************** -->
 <head>
-    <link rel = "stylesheet" href="./assets/CSS/chatbot.css">
+    <link rel = "stylesheet" href="./assets/CSS/bot.css">
 
 
 </head>
@@ -66,7 +66,27 @@
         }
 
     };
-    
+    function popup(){
+        var coll = document.getElementsByClassName("collapsible");
+
+
+
+for (let i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+
+        var content = this.nextElementSibling;
+
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+
+    });
+}
+    }
+
   </script>
 
 
@@ -117,7 +137,7 @@
 </div>
     <!-- CHAT BAR BLOCK -->
     <div class="chat-bar-collapsible" id="chatbot">
-        <button id="chat-button" type="button" class="collapsible"> <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>Chat with us!
+        <button id="chat-button" type="button" class="collapsible" onclick="popup()"> <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o" ></i>Chat with us!
            
         </button>
 
@@ -129,7 +149,7 @@
                         <!-- Messages -->
                         <div id="chatbox">
                             <h5 id="chat-timestamp"></h5>
-                            <p id="botStarterMessage" class="botText"></p>
+                            <p id="botStarterMessage" class="botText"> Hi there! Welcome to the ACM website. How can I help you today?</p>
                             <span class="small-text"></span>
                         </div>
 
@@ -140,6 +160,14 @@
                                 <p></p>
                                 
                             </div>
+                            <script>
+                                firstBotMessage();
+                                $("#textInput").keypress(function(e) {
+                                if (e.which == 13) {
+                                getResponse();
+                                }
+                                });
+                                </script>
 
                             <div class="chat-bar-icons">
                                 <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send" onclick="sendButton()"></i>

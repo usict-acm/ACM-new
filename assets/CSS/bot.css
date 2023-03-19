@@ -1,8 +1,9 @@
+ 
 
 .chat-bar-collapsible {
     position: fixed;
     bottom: 0px;
-    right: 0px;
+    left: 0px;
     /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
     cursor: pointer;
     font-size: 30px;
@@ -10,6 +11,7 @@
     /* color: #005daa; */
     display: block;
     box-sizing: border-box;
+    border-radius: 2px 2px 2px 2px;
 }
 
 .collapsible {
@@ -21,7 +23,7 @@
     text-align: left;
     outline: none;
     font-size: 18px;
-    border-radius: 10px 10px 10px 0px;
+    border-radius: 10px 10px 10px 10px;
     border: 3px solid white;
     border-bottom: none;
 }
@@ -148,8 +150,10 @@
     animation: floatup .5s forwards
 }
 
+
 .botText {
-    color: #000;
+    color:black;
+    font-weight: 300;
     font-family: Helvetica;
     font-weight: normal;
     font-size: 16px;
@@ -159,8 +163,6 @@
 .botText span {
     line-height: 1.5em;
     display: inline-block;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
-    font-weight: 200;
     background: #e0e0e0;
     padding: 10px;
     border-radius: 8px;
