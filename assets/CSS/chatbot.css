@@ -2,7 +2,7 @@
 .chat-bar-collapsible {
     position: fixed;
     bottom: 0px;
-    left: 0px;
+    right: 0px;
     /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
     cursor: pointer;
     font-size: 30px;
@@ -27,6 +27,7 @@
 }
 
 .Card-content {
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
@@ -158,6 +159,8 @@
 .botText span {
     line-height: 1.5em;
     display: inline-block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
+    font-weight: 200;
     background: #e0e0e0;
     padding: 10px;
     border-radius: 8px;
