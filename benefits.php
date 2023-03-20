@@ -302,6 +302,22 @@
               </div> -->
               <div class="winnerOne">
               <div class="outerContent">
+              <h3>Decodisaster 3.0</h3> 
+                </div>
+                <div class="circleCard">
+                </div>
+                <div class="eventName">
+                  <img src="./assets/images/TrophyOneWinner.jpg" alt="">
+                </div>
+                <div class="innerContent">
+                  <h2>Decodisaster 3.0</h2>
+                  <h3 style="color: rgb(0, 0, 0)">Winners</h3>
+                  <h4 onclick="selecionarOpcao(this, 'PeriodoGreen', '#0e8e96')">Badrinath</h4>
+                  <!-- <h4 onclick="selecionarOpcao(this, 'UnidadeGreen', '#7cad22')">Anjana Jayalakshmi KR</h4> -->
+                </div>
+              </div>
+              <div class="winnerOne">
+              <div class="outerContent">
               <h3>ACM Write it loud</h3>
                 </div>
                 <div class="circleCard">
