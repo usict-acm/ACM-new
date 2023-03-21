@@ -2,34 +2,53 @@
 
 .chat-bar-collapsible {
     position: fixed;
-    bottom: 0px;
-    left: 0px;
+    bottom: 10px;
+    left: 0rem;
     /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
     cursor: pointer;
     font-size: 30px;
-    text-align: center;
+    text-align: left;
     /* color: #005daa; */
     display: block;
     box-sizing: border-box;
-    border-radius: 2px 2px 2px 2px;
+    z-index: +1 !important;
 }
+.timestamp {
+    font-size: 17px;
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: -7px;
+    opacity: 0.6;
+    justify-content: right;
+    color: #005daa;
+}
+.bottime{
+    font-size: 17px;
+    font-weight: 400;
+    display: inline-block;
+    margin-top:-3.4rem;
+    opacity: 0.8;
+    vertical-align: middle;
+    margin-left: -18rem;
+    color: rgb(128, 125, 125);
 
+}
 .collapsible {
-    background-color: #005daa;
-    color: white;
+    background-color:#fff;
     cursor: pointer;
     padding: 18px;
-    width: 200px;
-    text-align: left;
+    width: 70px;
+    text-align: center;
     outline: none;
     font-size: 18px;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 20rem !important;
     border: 3px solid white;
     border-bottom: none;
 }
 
 .Card-content {
     max-height: 0;
+    border-radius: 10px;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
@@ -88,7 +107,7 @@
     font-size: 20px;
 }
 #chat-icon:hover {
-    opacity: .7;
+    opacity: 1;
 }
 
 .timestamp {
@@ -100,13 +119,8 @@
 
 .small-text {
     font-size: small;
-    color:blue;
+    color:#005daa;
     
- }
- .get-text{
-    color:white;
-   
-
  }
 
 /* Chat bubbles */
@@ -119,7 +133,7 @@
     float: left;
     border: none;
     box-sizing: border-box;
-    width: 100%;
+    width: 107%;
     border-radius: 10px;
     padding: 10px;
     font-size: 16px;
@@ -141,7 +155,7 @@
 .userText span {
     line-height: 1.5em;
     display: inline-block;
-    background: #0d6efd;
+    background: #005daa;
     padding: 10px;
     border-radius: 8px;
     border-bottom-right-radius: 2px;
@@ -163,7 +177,7 @@
 .botText span {
     line-height: 1.5em;
     display: inline-block;
-    background: #e0e0e0;
+    background: #e6e6e6;
     padding: 10px;
     border-radius: 8px;
     border-bottom-left-radius: 2px;

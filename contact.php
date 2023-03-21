@@ -7,6 +7,7 @@
 <script src="./assets/JS/chat.js"></script>
 <script src="./assets/JS/responses.js"></script>
 <script>
+
     function contact_us(){
       // console.log(type);
       let name = document.querySelector("#name").value;
@@ -66,26 +67,53 @@
         }
 
     };
+    function getTime() {
+    let today = new Date();
+    hours = today.getHours();
+    minutes = today.getMinutes();
+
+    if (hours < 10) {
+        hours = "0" + hours;
+    }
+
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+
+    let time = hours + ":" + minutes;
+    return time;
+}
     function popup(){
         var coll = document.getElementsByClassName("collapsible");
 
+    for (let i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
 
+            var content = this.nextElementSibling;
 
-for (let i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
 
-        var content = this.nextElementSibling;
-
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-        } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-        }
-
-    });
-}
+        });
     }
+
+    }
+
+ 
+    function firstBotMessage() {
+        let firstMessage = "Hi there! Welcome to the ACM website. How can I help you today?"
+        document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
+
+        const time=getTime();
+
+         $("#chat-timestamp").append(time);
+        document.getElementById("userInput").scrollIntoView(false);
+    }
+
 
   </script>
 
@@ -136,8 +164,8 @@ for (let i = 0; i < coll.length; i++) {
 	</div>
 </div>
     <!-- CHAT BAR BLOCK -->
-    <div class="chat-bar-collapsible" id="chatbot">
-        <button id="chat-button" type="button" class="collapsible" onclick="popup()"> <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o" ></i>Chat with us!
+    <div class="chat-bar-collapsible" id="chatbot" style="z-index:+1 !important;">
+        <button id="chat-button" type="button" class="collapsible" onclick="popup()"> <i id="chat-icon" style="color: #005daa; font-size :35px;" class="fas fa-user-tie" ></i>
            
         </button>
 
@@ -149,7 +177,7 @@ for (let i = 0; i < coll.length; i++) {
                         <!-- Messages -->
                         <div id="chatbox">
                             <h5 id="chat-timestamp"></h5>
-                            <p id="botStarterMessage" class="botText"> Hi there! Welcome to the ACM website. How can I help you today?</p>
+                            <p id="botStarterMessage" class="botText">Loding...</p>
                             <span class="small-text"></span>
                         </div>
 
@@ -160,19 +188,20 @@ for (let i = 0; i < coll.length; i++) {
                                 <p></p>
                                 
                             </div>
-                            <script>
-                                firstBotMessage();
-                                $("#textInput").keypress(function(e) {
-                                if (e.which == 13) {
-                                getResponse();
-                                }
-                                });
-                                </script>
+
 
                             <div class="chat-bar-icons">
                                 <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
                             </div>
                         </div>
+                        <script>
+                            firstBotMessage();
+                            $("#textInput").keypress(function(e) {
+                            if (e.which == 13) {
+                            getResponse();
+                            }
+                         });
+                        </script>
 
                         <div id="chat-bar-bottom">
                             <p></p>
