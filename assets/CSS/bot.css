@@ -14,22 +14,22 @@
     z-index: +1 !important;
 }
 .timestamp {
-    font-size: 17px;
+    font-size: 14px;
     display: inline-block;
-    margin-left: 5px;
-    margin-top: -7px;
+    margin-top: -3.4rem;
     opacity: 0.6;
-    justify-content: right;
+    vertical-align: middle;
+    margin-right: -17.2rem;
     color: #005daa;
 }
 .bottime{
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 400;
     display: inline-block;
     margin-top:-3.4rem;
     opacity: 0.8;
     vertical-align: middle;
-    margin-left: -18rem;
+    margin-left: -17.5rem;
     color: rgb(128, 125, 125);
 
 }
@@ -37,13 +37,15 @@
     background-color:#fff;
     cursor: pointer;
     padding: 18px;
-    width: 70px;
+    width: 60px;
+    height: 60px;
     text-align: center;
     outline: none;
     font-size: 18px;
     border-radius: 20rem !important;
     border: 3px solid white;
     border-bottom: none;
+    justify-content: center;
 }
 
 .Card-content {
@@ -109,13 +111,6 @@
 #chat-icon:hover {
     opacity: 1;
 }
-
-.timestamp {
-    display:flex;
-    margin-right: 0px;
-    position: relative;
-
-  }
 
 .small-text {
     font-size: small;
