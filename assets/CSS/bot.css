@@ -36,7 +36,6 @@
 .collapsible {
     background-color:#fff;
     cursor: pointer;
-    padding: 18px;
     width: 60px;
     height: 60px;
     text-align: center;
@@ -120,7 +119,7 @@
 
 /* Chat bubbles */
 
-#userInput {
+.userInput {
     width: 75%;
 }
 
@@ -128,13 +127,14 @@
     float: left;
     border: none;
     box-sizing: border-box;
-    width: 107%;
+    width: 130%;
     border-radius: 10px;
     padding: 10px;
     font-size: 16px;
     color: #000;
     background-color: white;
     outline: none;
+    z-index: +1;
 
 }
 

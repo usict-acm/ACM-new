@@ -67,40 +67,39 @@
         }
 
     };
-    function getTime() {
-    let today = new Date();
-    hours = today.getHours();
-    minutes = today.getMinutes();
+    function clearChat() {
+    // Get the chat history container element
+    const chatContainer = document.getElementById('chatbox','chat-bar-input-block');
+  
+    // Select all chat messages after the first bot message
+    const chatMessages = Array.from(chatContainer.children).slice(2).filter((child) => {
+      return !child.classList.contains('bot-message');
+    });
+  
+    // Remove all chat messages after the first bot message
+    chatMessages.forEach((message) => {
+      message.remove();
+    });
+  }
+  
 
-    if (hours < 10) {
-        hours = "0" + hours;
-    }
-
-    if (minutes < 10) {
-        minutes = "0" + minutes;
-    }
-
-    let time = hours + ":" + minutes;
-    return time;
-}
-    function popup(){
-        var coll = document.getElementsByClassName("collapsible");
+    function popup() {
+       var coll = document.getElementsByClassName("collapsible");
 
     for (let i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-
-            var content = this.nextElementSibling;
-
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-
-        });
+       coll[i].addEventListener("click", function() {
+       
+       this.classList.toggle("active");
+       var content = this.nextElementSibling;
+       if (content.style.maxHeight) {
+         content.style.maxHeight = null;
+        } else {
+         content.style.maxHeight = content.scrollHeight + "px";
+        }
+     
+    });
     }
-
+    clearChat() 
     }
 
  
@@ -165,7 +164,7 @@
 </div>
     <!-- CHAT BAR BLOCK -->
     <div class="chat-bar-collapsible" id="chatbot" style="z-index:+1 !important;">
-        <button id="chat-button" type="button" class="collapsible" onclick="popup()"> <i id="chat-icon" style="color: #005daa; font-size :35px;" class="fas fa-user-tie" ></i>
+        <button id="chat-button" type="button" class="collapsible" onclick="popup()"> <i id="chat-icon" style="color: #005daa; width:30px;font-size:37px; margin-bottom:2px;" class="fas fa-user-tie" ></i>
            
         </button>
 
@@ -177,7 +176,7 @@
                         <!-- Messages -->
                         <div id="chatbox">
                             <h5 id="chat-timestamp"></h5>
-                            <p id="botStarterMessage" class="botText">Loding...</p>
+                            <p id="botStarterMessage"  class="botText">Loding...</p>
                             <span class="small-text"></span>
                         </div>
 
@@ -191,11 +190,11 @@
 
 
                             <div class="chat-bar-icons">
-                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+                                <i id="chat-icon" style="color: #005daa;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
                             </div>
                         </div>
                         <script>
-                            firstBotMessage();
+                            firstBotMessage()
                             $("#textInput").keypress(function(e) {
                             if (e.which == 13) {
                             getResponse();
