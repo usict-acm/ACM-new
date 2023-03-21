@@ -68,36 +68,35 @@
 
     };
     function clearChat() {
-    // Get the chat history container element
-    const chatContainer = document.getElementById('chatbox','chat-bar-input-block');
+        const chatContainer = document.getElementById('chatbox','chat-bar-input-block');
   
     // Select all chat messages after the first bot message
-    const chatMessages = Array.from(chatContainer.children).slice(2).filter((child) => {
-      return !child.classList.contains('bot-message');
-    });
+        const chatMessages = Array.from(chatContainer.children).slice(2).filter((child) => {
+           return !child.classList.contains('bot-message');
+        });
   
     // Remove all chat messages after the first bot message
-    chatMessages.forEach((message) => {
-      message.remove();
-    });
-  }
+         chatMessages.forEach((message) => {
+         message.remove();
+        });
+    }
   
 
     function popup() {
-       var coll = document.getElementsByClassName("collapsible");
+        var coll = document.getElementsByClassName("collapsible");
 
-    for (let i = 0; i < coll.length; i++) {
-       coll[i].addEventListener("click", function() {
+        for (let i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
        
-       this.classList.toggle("active");
-       var content = this.nextElementSibling;
-       if (content.style.maxHeight) {
-         content.style.maxHeight = null;
-        } else {
-         content.style.maxHeight = content.scrollHeight + "px";
-        }
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
      
-    });
+        });
     }
     clearChat() 
     }
