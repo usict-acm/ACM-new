@@ -173,7 +173,7 @@
                 <div class="outer-container">
                     <div class="chat-container">
                         <!-- Messages -->
-                        <div id="chatbox">
+                        <div id="chatbox" style="margin-top:13px">
                             <h5 id="chat-timestamp"></h5>
                             <p id="botStarterMessage"  class="botText">Loding...</p>
                             <span class="small-text"></span>
