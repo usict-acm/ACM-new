@@ -59,7 +59,7 @@
 
 .full-chat-block {
     width: 350px;
-    background: white;
+    background:rgb(239, 238, 238);
     text-align: center;
     overflow: auto;
     scrollbar-width: none;
@@ -96,7 +96,7 @@
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(221,193,193);
     border-radius: 10px 10px 0px 0px;
     padding: 10px 0px 10px 10px;
 }
@@ -174,7 +174,7 @@
 .botText span {
     line-height: 1.5em;
     display: inline-block;
-    background: #e6e6e6;
+    background:white;
     padding: 10px;
     border-radius: 8px;
     border-bottom-left-radius: 2px;
