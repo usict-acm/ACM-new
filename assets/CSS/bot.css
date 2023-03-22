@@ -2,7 +2,7 @@
 
 .chat-bar-collapsible {
     position: fixed;
-    bottom: 10px;
+    bottom: 1px;
     left: 0rem;
     /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
     cursor: pointer;
@@ -43,8 +43,10 @@
     font-size: 18px;
     border-radius: 20rem !important;
     border: 3px solid white;
+    box-shadow: 2px 2px 2px 2px rgba(1, 1, 1, 0.2);
     border-bottom: none;
     justify-content: center;
+
 }
 
 .Card-content {
@@ -57,7 +59,7 @@
 
 .full-chat-block {
     width: 350px;
-    background: white;
+    background:rgb(239, 238, 238);
     text-align: center;
     overflow: auto;
     scrollbar-width: none;
@@ -94,7 +96,7 @@
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(221,193,193);
     border-radius: 10px 10px 0px 0px;
     padding: 10px 0px 10px 10px;
 }
@@ -127,7 +129,7 @@
     float: left;
     border: none;
     box-sizing: border-box;
-    width: 130%;
+    width: 135%;
     border-radius: 10px;
     padding: 10px;
     font-size: 16px;
@@ -172,7 +174,7 @@
 .botText span {
     line-height: 1.5em;
     display: inline-block;
-    background: #e6e6e6;
+    background:white;
     padding: 10px;
     border-radius: 8px;
     border-bottom-left-radius: 2px;
