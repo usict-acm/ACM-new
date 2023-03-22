@@ -163,7 +163,7 @@
 </div>
     <!-- CHAT BAR BLOCK -->
     <div class="chat-bar-collapsible" id="chatbot" style="z-index:+1 !important;">
-        <button id="chat-button" type="button" class="collapsible" onclick="popup()"> <i id="chat-icon" style="color: #005daa; width:30px;font-size:37px; margin-bottom:2px;" class="fas fa-user-tie" ></i>
+        <button id="chat-button" type="button" class="collapsible" onclick="popup()"> <i id="chat-icon" style="color: #005daa; width:30px;font-size:37px;" class="fas fa-user-tie" ></i>
            
         </button>
 
@@ -180,26 +180,7 @@
                         </div>
 
                         <!-- User input box -->
-                        <div class="chat-bar-input-block">
-                            <div id="userInput">
-                                <input id="textInput" class="input-box" type="text" name="msg" placeholder="Tap 'Enter' to send a message">
-                                <p></p>
-                                
-                            </div>
 
-
-                            <div class="chat-bar-icons">
-                                <i id="chat-icon" style="color: #005daa;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
-                            </div>
-                        </div>
-                        <script>
-                            firstBotMessage()
-                            $("#textInput").keypress(function(e) {
-                            if (e.which == 13) {
-                            getResponse();
-                            }
-                         });
-                        </script>
 
                         <div id="chat-bar-bottom">
                             <p></p>
@@ -209,6 +190,26 @@
                 </div>
 
             </div>
+            <div class="chat-bar-input-block">
+                <div id="userInput">
+                    <input id="textInput" class="input-box" type="text" name="msg" placeholder="Tap 'Enter' to send a message" style=" top: 50px; left: 50px;">
+                    <p></p>
+                                
+                </div>
+
+
+                    <div class="chat-bar-icons">
+                        <i id="chat-icon" style="color: #005daa;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+                    </div>
+            </div>
+                <script>
+                    firstBotMessage()
+                    $("#textInput").keypress(function(e) {
+                    if (e.which == 13) {
+                        getResponse();
+                    }
+                    });
+                </script>
         </div>
 
     </div>

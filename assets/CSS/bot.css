@@ -2,7 +2,7 @@
 
 .chat-bar-collapsible {
     position: fixed;
-    bottom: 10px;
+    bottom: 1px;
     left: 0rem;
     /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
     cursor: pointer;
@@ -43,8 +43,10 @@
     font-size: 18px;
     border-radius: 20rem !important;
     border: 3px solid white;
+    box-shadow: 2px 2px 2px 2px rgba(1, 1, 1, 0.2);
     border-bottom: none;
     justify-content: center;
+
 }
 
 .Card-content {
@@ -127,7 +129,7 @@
     float: left;
     border: none;
     box-sizing: border-box;
-    width: 130%;
+    width: 135%;
     border-radius: 10px;
     padding: 10px;
     font-size: 16px;
