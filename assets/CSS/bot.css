@@ -67,6 +67,7 @@
     scrollbar-width: none;
     height: max-content;
     transition: max-height 0.2s ease-out;
+    border: .3px solid black;
 }
 
 .outer-container {
