@@ -68,6 +68,7 @@
     height: max-content;
     transition: max-height 0.2s ease-out;
     border: .3px solid black;
+    border-bottom: 0px !important;
 }
 
 .outer-container {
@@ -100,7 +101,7 @@
     width: 100%;
     align-items: center;
     background-color: rgb(194,194,194);
-    border-radius: 10px 10px 0px 0px;
+    /* border-radius: 10px 10px 0px 0px; */
     padding: 10px 0px 10px 10px;
 }
 
