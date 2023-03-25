@@ -109,6 +109,6 @@ function getBotResponse(input) {
         return "Our website has information on upcoming events, conferences, and workshops. Would you like me to find more information on a specific event for you?";
     }
     else{
-        return "I am unable to answer your query at the moment as I am currently under the learning phase. Sorry for the inconvenience caused. Please email us your query at :<a href=https://acm@ipu.ac.in'>Gmail</a>";
+        return "I am unable to answer your query at the moment as I am currently under the learning phase. Sorry for the inconvenience caused. Please email us your query at :<a href=https://acm@ipu.ac.in>Gmail</a>";
     }
 }

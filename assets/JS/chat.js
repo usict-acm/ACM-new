@@ -35,24 +35,25 @@ function getTime() {
     return time;
 }
 
-//Gets the first message
-function firstBotMessage() {
-    let firstMessage = "Hi there! Welcome to the ACM website. How can I help you today?"
-    document.getElementById("botStarterMessage") = '<p class="botText"><span>' + firstMessage + '</span></p>';
+// //Gets the first message
+// function firstBotMessage() {
+//     let firstMessage = "Hi there! Welcome to the ACM website. How can I help you today?"
+//     document.getElementById("botStarterMessage") = '<p class="botText"><span>' + firstMessage + '</span></p>';
 
-    const time=getTime();
+//     const time=getTime();
 
-    $("#chat-timestamp").append(time);
-    document.getElementById("userInput").scrollIntoView(false);
-}
+//     $("#chat-timestamp").append(time);
+//     document.getElementById("userInput").scrollIntoView(false);
+// }
 
-firstBotMessage();
+// firstBotMessage();
 
 // Retrieves the response
 function getHardResponse(userText) {
     let botResponse = getBotResponse(userText);
-    let botHtml = '<p class="botText"><span>' + botResponse + '</span><span class="timestamp small-text">' + getTime() + '</span></p>'
-    $("#chatbox").append(botHtml);
+    let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>'
+    let botstampHtml = '<span class="bottime">' + getTime() + '</span>';
+    $("#chatbox").append(botHtml + botstampHtml);
 
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
 }
@@ -66,16 +67,16 @@ function getResponse() {
         userText = "I love ACM!";
     }
    
-    let userHtml = '<p class="userText"><span>' + userText + '</span><span class="timestamp get-text">' + getTime() + '</span></p>';
+    let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
+    let timestampHtml = '<span class="timestamp">' + getTime() + '</span>';
 
     $("#textInput").val("");
-    $("#chatbox").append(userHtml);
+    $("#chatbox").append(userHtml + timestampHtml);
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
 
     setTimeout(() => {
         getHardResponse(userText);
     }, 1000)
-
 }
 
 // Handles sending text via button clicks

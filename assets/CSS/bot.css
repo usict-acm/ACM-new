@@ -2,34 +2,58 @@
 
 .chat-bar-collapsible {
     position: fixed;
-    bottom: 0px;
-    left: 0px;
+    bottom: 1px;
+    left: 0rem;
     /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
     cursor: pointer;
     font-size: 30px;
-    text-align: center;
+    text-align: left;
     /* color: #005daa; */
     display: block;
     box-sizing: border-box;
-    border-radius: 2px 2px 2px 2px;
+    z-index: +1 !important;
 }
+.timestamp {
+    font-size: 14px;
+    display: inline-block;
+    margin-top: -3.4rem;
+    opacity: 0.6;
+    vertical-align: middle;
+    margin-right: -17.2rem;
+    color: #005daa;
+}
+.bottime{
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+    margin-top:-3.4rem;
+    opacity: 0.8;
+    vertical-align: middle;
+    margin-left: -17.5rem;
+    color: rgb(128, 125, 125);
 
+}
 .collapsible {
-    background-color: #005daa;
-    color: white;
+    background-color:#fff;
     cursor: pointer;
-    padding: 18px;
-    width: 200px;
-    text-align: left;
+    width: 60px;
+    height: 60px;
+    text-align: center;
     outline: none;
     font-size: 18px;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 20rem !important;
     border: 3px solid white;
+    box-shadow: 1px 0px 4px 3px rgba(36, 32, 32, 0.2);
     border-bottom: none;
+    justify-content: center;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+
 }
 
 .Card-content {
     max-height: 0;
+    border-radius: 10px;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
@@ -37,12 +61,13 @@
 
 .full-chat-block {
     width: 350px;
-    background: white;
+    background:rgb(239, 238, 238);
     text-align: center;
     overflow: auto;
     scrollbar-width: none;
     height: max-content;
     transition: max-height 0.2s ease-out;
+    border: .3px solid black;
 }
 
 .outer-container {
@@ -74,7 +99,7 @@
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(194,194,194);
     border-radius: 10px 10px 0px 0px;
     padding: 10px 0px 10px 10px;
 }
@@ -88,30 +113,18 @@
     font-size: 20px;
 }
 #chat-icon:hover {
-    opacity: .7;
+    opacity: 1;
 }
-
-.timestamp {
-    display:flex;
-    margin-right: 0px;
-    position: relative;
-
-  }
 
 .small-text {
     font-size: small;
-    color:blue;
+    color:#005daa;
     
- }
- .get-text{
-    color:white;
-   
-
  }
 
 /* Chat bubbles */
 
-#userInput {
+.userInput {
     width: 75%;
 }
 
@@ -119,13 +132,14 @@
     float: left;
     border: none;
     box-sizing: border-box;
-    width: 100%;
+    width: 135%;
     border-radius: 10px;
     padding: 10px;
     font-size: 16px;
     color: #000;
     background-color: white;
     outline: none;
+    z-index: +1;
 
 }
 
@@ -141,7 +155,7 @@
 .userText span {
     line-height: 1.5em;
     display: inline-block;
-    background: #0d6efd;
+    background: #005daa;
     padding: 10px;
     border-radius: 8px;
     border-bottom-right-radius: 2px;
@@ -163,7 +177,7 @@
 .botText span {
     line-height: 1.5em;
     display: inline-block;
-    background: #e0e0e0;
+    background:white;
     padding: 10px;
     border-radius: 8px;
     border-bottom-left-radius: 2px;
@@ -195,7 +209,6 @@
         width: 100%;
     }
     .collapsible {
-        width: 100%;
         border: 0px;
         border-top: 3px solid white;
         border-radius: 0px;
