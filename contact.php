@@ -82,7 +82,7 @@
     }
   
 
-    function popup() {
+    function popup() {  
         var coll = document.getElementsByClassName("collapsible");
 
         for (let i = 0; i < coll.length; i++) {
@@ -96,7 +96,8 @@
             content.style.maxHeight = content.scrollHeight + "px";
           }
      
-        });
+        },{once : true});
+
     }
     clearChat() 
     }
