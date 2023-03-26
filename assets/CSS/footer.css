@@ -18,6 +18,7 @@ ul {
 .footer-section {
   background: #f1f1f1;
   position: relative;
+  z-index: -1 !important;
 }
 
 .footer-cta {
