@@ -82,7 +82,7 @@
     }
   
 
-    function popup() {
+    function popup() {  
         var coll = document.getElementsByClassName("collapsible");
 
         for (let i = 0; i < coll.length; i++) {
@@ -96,7 +96,8 @@
             content.style.maxHeight = content.scrollHeight + "px";
           }
      
-        });
+        },{once : true});
+
     }
     clearChat() 
     }
@@ -163,7 +164,7 @@
 </div>
     <!-- CHAT BAR BLOCK -->
     <div class="chat-bar-collapsible" id="chatbot" style="z-index:+1 !important;">
-        <button id="chat-button" type="button" class="collapsible" onclick="popup()"> <i id="chat-icon" style="color: #005daa; width:30px;font-size:37px; margin-bottom:2px;" class="fas fa-user-tie" ></i>
+        <button id="chat-button" type="button" class="collapsible" onclick="popup()"> <i id="chat-icon" style="color: #005daa; width:50px;font-size:37px; margin-left:-2px;margin-bottom:5px" class="fas fa-robot" ></i>
            
         </button>
 
@@ -173,33 +174,14 @@
                 <div class="outer-container">
                     <div class="chat-container">
                         <!-- Messages -->
-                        <div id="chatbox">
+                        <div id="chatbox" style="margin-top:13px">
                             <h5 id="chat-timestamp"></h5>
                             <p id="botStarterMessage"  class="botText">Loding...</p>
                             <span class="small-text"></span>
                         </div>
 
                         <!-- User input box -->
-                        <div class="chat-bar-input-block">
-                            <div id="userInput">
-                                <input id="textInput" class="input-box" type="text" name="msg" placeholder="Tap 'Enter' to send a message">
-                                <p></p>
-                                
-                            </div>
 
-
-                            <div class="chat-bar-icons">
-                                <i id="chat-icon" style="color: #005daa;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
-                            </div>
-                        </div>
-                        <script>
-                            firstBotMessage()
-                            $("#textInput").keypress(function(e) {
-                            if (e.which == 13) {
-                            getResponse();
-                            }
-                         });
-                        </script>
 
                         <div id="chat-bar-bottom">
                             <p></p>
@@ -209,6 +191,26 @@
                 </div>
 
             </div>
+            <div class="chat-bar-input-block">
+                <div id="userInput">
+                    <input id="textInput" class="input-box" type="text" name="msg" placeholder="Tap 'Enter' to send a message" style=" top: 50px; left: 50px;">
+                    <p></p>
+                                
+                </div>
+
+
+                    <div class="chat-bar-icons">
+                        <i id="chat-icon" style="color: #005daa;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+                    </div>
+            </div>
+                <script>
+                    firstBotMessage()
+                    $("#textInput").keypress(function(e) {
+                    if (e.which == 13) {
+                        getResponse();
+                    }
+                    });
+                </script>
         </div>
 
     </div>
