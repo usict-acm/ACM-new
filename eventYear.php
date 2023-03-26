@@ -10,7 +10,7 @@
     <link href="./assets/CSS/eventsyearpage.css" rel="stylesheet" />
 
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -43,7 +43,7 @@
     ?>
     <script>
         let allEvents = document.getElementById("eventPage");
-        if (<?php echo $year ?> != 2019 && <?php echo $year ?> != 2020 && <?php echo $year ?> != 2021 && <?php echo $year ?> != 2022) {
+        if (<?php echo $year ?> != 2019 && <?php echo $year ?> != 2020 && <?php echo $year ?> != 2021 && <?php echo $year ?> != 2022 && <?php echo $year ?> != 2023) {
             allEvents.innerHTML += `<h1 class='noEvents'>No Events for this year</h1>`;
         } else {
             let urlEvent = './admin/blogAdmin/api.php/?q=readAllEvent&year=' + <?php echo $year ?> + '&page=' + <?php echo $page ?>;
@@ -57,7 +57,7 @@
                     method: 'GET',
                     dataType: 'JSON',
                     success: function(data) {
-                        console.log("check data year", data);
+                        //console.log("check data year", data);
                         if (<?php echo $page ?> > Math.ceil(data[1] / 7)) {
                             allEvents.innerHTML += `<h1 class='noEvents'>No Events on this page</h1>`;
 
@@ -80,7 +80,7 @@
                                                 <p class="event-post_text">${event.description}</p>
                                                 <div class="buttonDiv">`;
                             let var1 = `<div class="event-post">
-                                            <div class="event-post_img" style="margin-top:15px;">
+                                            <div class="event-post_img" style="margin-top:7rem;">
                                                 <img src=${event.poster}  alt="">
                                             </div>
                                             <div class="event-post_info">
@@ -144,7 +144,7 @@
                                                   </ul>\
                                                </nav></div>"
                             if (<?php echo $page ?> === i) {
-                                console.log(<?php echo $page ?>);
+                                //console.log(<?php echo $page ?>);
                                 document.getElementById("link_pagination" + i).className += "active_pagination";
                             }
                         }
