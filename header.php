@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-custom navbar-mainbg">
+<nav class="navbar navbar-zindex navbar-expand-custom navbar-mainbg">
     <div class="d-flex main-logo">
         <a href="./"><img class="acm-logo-navbar" src="./assets/images/acm-logo.svg" height="60px" alt="acm-logo" /></a>
         <div class="text-and-logo">
