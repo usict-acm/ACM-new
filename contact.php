@@ -1,6 +1,13 @@
 <!-- ****************************************************contact us ***************************** -->
+<head>
+    <link rel = "stylesheet" href="./assets/CSS/bot.css">
 
+
+</head>
+<script src="./assets/JS/chat.js"></script>
+<script src="./assets/JS/responses.js"></script>
 <script>
+
     function contact_us(){
       // console.log(type);
       let name = document.querySelector("#name").value;
@@ -60,6 +67,49 @@
         }
 
     };
+    function clearChat() {
+        const chatContainer = document.getElementById('chatbox','chat-bar-input-block');
+  
+    // Select all chat messages after the first bot message
+        const chatMessages = Array.from(chatContainer.children).slice(2).filter((child) => {
+           return !child.classList.contains('bot-message');
+        });
+  
+    // Remove all chat messages after the first bot message
+         chatMessages.forEach((message) => {
+         message.remove();
+        });
+    }
+  
+    function popup() {  
+        var coll = document.getElementsByClassName("collapsible");
+        for (let i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+       
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+     
+        },{once : true});
+    }
+    clearChat() 
+    }
+
+ 
+    function firstBotMessage() {
+        let firstMessage = "Hi there! Welcome to the ACM website. How can I help you today?"
+        document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
+
+        const time=getTime();
+
+         $("#chat-timestamp").append(time);
+        document.getElementById("userInput").scrollIntoView(false);
+    }
+
 
   </script>
 
@@ -109,6 +159,58 @@
 		</div>
 	</div>
 </div>
+    <!-- CHAT BAR BLOCK -->
+    <div class="chat-bar-collapsible" id="chatbot" style="z-index:+1 !important;">
+        <button id="chat-button" type="button" class="collapsible" onclick="popup()"> <i id="chat-icon" style="color: #005daa; width:50px;font-size:37px; margin-left:-2px;margin-bottom:5px" class="fas fa-robot" ></i>
+           
+        </button>
+
+        <div class="Card-content">
+            <div class="full-chat-block">
+                <!-- Message Container -->
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <!-- Messages -->
+                        <div id="chatbox" style="margin-top:13px">
+                            <h5 id="chat-timestamp"></h5>
+                            <p id="botStarterMessage"  class="botText">Loding...</p>
+                            <span class="small-text"></span>
+                        </div>
+
+                        <!-- User input box -->
+
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="chat-bar-input-block">
+                <div id="userInput">
+                    <input id="textInput" class="input-box" type="text" name="msg" placeholder="Tap 'Enter' to send a message" style=" top: 50px; left: 50px;">
+                    <p></p>
+                                
+                </div>
+
+
+                    <div class="chat-bar-icons">
+                        <i id="chat-icon" style="color: #005daa;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+                    </div>
+            </div>
+                <script>
+                    firstBotMessage()
+                    $("#textInput").keypress(function(e) {
+                    if (e.which == 13) {
+                        getResponse();
+                    }
+                    });
+                </script>
+        </div>
+
+    </div>
 
 	<!-- ********************************contact_us end**************************************************** -->
 <!-- back to top -->
