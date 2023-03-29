@@ -64,7 +64,13 @@
     .centerAlign{
         text-align:center;
     }
+
     </style>
+        <script>
+        function checkdelete(){
+            return confirm("Are you sure? You wan't to delete ?");
+        }
+    </script>
 </head>
 <body>
     <div class="wrapper">
@@ -111,8 +117,8 @@
                                         echo "<td>" . $ii . "....</td>";
                                                                             
                                         echo "<td>";
-                                            echo "<button class = 'copybutton' onclick = copy2(".$count.")><span class = 'glyphicon glyphicon-duplicate'></span></button>";
-                                            echo "<a class='tash-bin' href='faqadmin/del.php?Sno=". $row['code'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
+                                        echo "<a class='download-logo' href='faqadmin/certi_download.php?Sno=". $row['code'] ."' title='Download Certificate' id='down-btn'  data-toggle='tooltip'><span class='glyphicon glyphicon-download-alt'></span></a>";
+                                            echo "<a class='tash-bin' href='faqadmin/del.php?Sno=". $row['code'] ."' title='Delete Record' data-toggle='tooltip' onclick='return checkdelete()'><span class='glyphicon glyphicon-trash'></span></a>";
                                         echo "</td>";
 
                                     echo "</tr>";
