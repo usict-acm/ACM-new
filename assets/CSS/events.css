@@ -74,9 +74,9 @@
 }
 
 .title-img img{
-  width: 30vw;
+  width: 77%;
   padding-bottom: 2rem;
-  padding-left: 3%;
+  padding-left: 7rem;
   cursor: pointer;
   transition: transform .4s;
 }
@@ -136,12 +136,15 @@
   background-attachment: scroll;
   background-repeat: no-repeat;
 }
+.events-head h1 b {
+    color: #0297ff;
+}
 
 
 .events-head h1 {
   margin-top: 1rem;
   /* font-family: 'Montserrat', sans-serif; */
-  font-family: 'Playfair Display', serif;
+  font-family: inherit;
   font-weight: 400;
   font-size: 3rem;
   letter-spacing: 1px;

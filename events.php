@@ -42,7 +42,10 @@
   </section>
   <section class="yearly-events">
     <div class="events-head">
-      <h1 id="hover-underline-a">Yearly Events</h1>
+      <h1 id="hover-underline-a">YEARLY
+        <b> EVENTS</b>
+
+      </h1>
     </div>
     <div class="cards">
       <div class="card">
