@@ -17,6 +17,7 @@
     href="https://fonts.googleapis.com/css2?family=Labrada:wght@500&family=Libre+Baskerville:wght@700&family=Playfair+Display:wght@500&family=Tilt+Prism&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="assets\CSS\events.css">
+  <link rel="stylesheet" href="./assets/CSS/newStyle.css">
 </head>
 
 <body>
@@ -179,9 +180,7 @@
     </div>
   </section>
 
-  <div class="quotes" id="galleryImage">
-  </div>
-
+  
   <script>
     let url = './admin/blogAdmin/api.php/?q=getImage';
     var galleryImage = document.getElementById("galleryImage");
@@ -204,13 +203,7 @@
     })
   </script>
 
-  <!-- <div class="quotes">
-    <img class="quote-img" src="./assets/images/About us/image1.jpg" alt="" />
-    <img class="quote-img" src="./assets/images/About us/image2.jpg" alt="" />
-    <img class="quote-img" src="./assets/images/About us/image31.jpg" alt="" />
-    <img class="quote-img" src="./assets/images/About us/image4.jpg" alt="" />
-    <img class="quote-img" src="./assets/images/trell-4.jpeg" alt="" />
-  </div> -->
+  
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -264,12 +257,19 @@
   </script>
   <!-- back to top and contact us-->
 	<?php
-	include("contact.php")
+	include("./contact.php")
 	?>
   <!-- ***********************************************Footer************************************************************************ -->
   <?php
   include('./footer.php');
   ?>
+  <script>
+      function redirec(id) {
+        window.document.location = "./singleBlog.php?Id=" + id; //Connecting Second page
+      }
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets\JS\home_new.js"></script>
 
 
 </body>
