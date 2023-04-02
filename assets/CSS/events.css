@@ -612,7 +612,7 @@
   #hero-img {
     position: absolute;
     left: 0px;
-    top: 30%;
+    top: 10%;
     z-index: -1;
     width: 150%;
     height: 220%;
