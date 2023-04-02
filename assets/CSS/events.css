@@ -486,9 +486,11 @@
   }
 
   .head h1 {
-    font-family: 'Libre Baskerville', serif;
+    font-family: inherit;
     font-size: 3rem;
     color: black;
+    margin-left: -5%;
+    font-weight: 600;
   }
   #hover-underline-animation {
     display: inline-block;
