@@ -27,7 +27,7 @@
   <section class="title">
     <div class="head">
       <img id="hero-img" src="assets\CSS\bgtitle.jpeg" alt="">
-      <h1 id="hover-underline-animation">Events</h1>
+      <h1 id="hover-underline-animation">EVENTS</h1>
     </div>
     <div class="title-area">
       <div class="title-text">
@@ -156,7 +156,7 @@
   </section>
   <section class="gallary">
     <div class="gallary-head">
-      <h1 id="hover-underline-a">Gallery</h1>
+      <h1 id="hover-underline-a">GALLERY</h1>
     </div>
     <div class="slideshow">
       <div class="content">
