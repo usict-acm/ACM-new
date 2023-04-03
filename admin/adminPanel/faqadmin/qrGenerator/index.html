@@ -10,49 +10,82 @@
 </head>
 
 <body>
+	<script>
+
+		function submit_qr(){
+			var image_data = document.getElementById("qrImg").src;
+			var qrData = new FormData();
+			qrData.append('link_name', $("#link_name").val());
+			qrData.append('link_address', $("#link_address").val());
+			qrData.append('image_data', image_data);
+
+			$.ajax({
+        type: "POST",
+        url: "../../../blogAdmin/api.php/?q=postQr",
+        data : qrData,
+        cache: false,
+        processData: false,
+        contentType: false,
+        success: function(data){
+            alert(data.message);
+            window.location.reload();
+        },
+        error: function(xhr, status, error){
+            window.location.reload();
+        },
+    })
+		}
+		;
+	</script>
+
 	<div class="container">
 		<h1>QR generator</h1>
-		<div class="box">
-			<input type="text" placeholder="link for" style="width:80%" /><br />
-		</div>
-		<div class="box">
-			<input id="text" type="text" placeholder="Enter link" style="width:80%" /><br />
-		</div>
-		<button id="btn" type="submit">Generate qr</button>
+		<form method="POST" enctype="multipart/form-data">
+			<div class="box">
+				<input type="text" placeholder="Link For"  id="link_name" style="width:80%"  /><br />
+			</div>
+			<div class="box">
+				<input type="url" placeholder="Enter link"  id="link_address" style="width:80%"  /><br />
+			</div>
+			<!-- <button id="btn" type="submit" onclick="submit_qr()">Generate qr</button> -->
+			<div id="qrcode" style="width:100px; height:100px; margin: 35px auto 75px auto;"></div>
 
-		<div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+			
+			<input type="submit" name="submit" id="btn" value="submit" onclick="submit_qr()">
+
+		</form>
 		<a id='qrdl' id='btn' hidden>download</a>
 	</div>
-	<script type="text/javascript">
-		var qrcode = new QRCode(document.getElementById("qrcode"), {
-			width: 100,
-			height: 100
-		});
-
-		function makeCode() {
-			var elText = document.getElementById("text");
-
-			qrcode.makeCode(elText.value);
-			setTimeout(() => {
-				let qelen = document.querySelector('#qrcode img');
-				let dlink = document.querySelector("#qrdl");
-				let qr = qelen.getAttribute('src');
-				dlink.setAttribute('href', qr);
-				dlink.setAttribute('download', 'filename');
-				dlink.removeAttribute('hidden');
-			}, 500);
-
-		}
-		makeCode();
-
-		$("#text").
-			on("blur", function () {
-				makeCode();
-			}).
-			on("keydown", function (e) {
-				if (e.keyCode == 13) {
-					makeCode();
-				}
+		<script type="text/javascript">
+			var qrcode = new QRCode(document.getElementById("qrcode"), {
+				width: 150,
+				height: 150
 			});
-	</script>
+	
+			function makeCode() {
+				var elText = document.getElementById("link_address");
+	
+				qrcode.makeCode(elText.value);
+				setTimeout(() => {
+					let qelen = document.querySelector('#qrcode img');
+					let dlink = document.querySelector("#qrdl");
+					let qr = qelen.getAttribute('src');
+					dlink.setAttribute('href', qr);
+					dlink.setAttribute('download', 'filename');
+					dlink.removeAttribute('hidden');
+				}, 500);
+	
+			}
+			// makeCode();
+			
+			$("#link_address").
+				on("blur", function () {
+					makeCode();
+				}).
+				on("keydown", function (e) {
+					if (e.keyCode == 13) {
+						makeCode();
+					}
+				});
+		</script>	
 </body>

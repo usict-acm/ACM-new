@@ -89,7 +89,7 @@
                     $link = $database->connect();
                     $connection = $link;
 
-                    $sql = "SELECT * FROM link ORDER BY id DESC ";
+                    $sql = "SELECT * FROM qr_link ORDER BY id DESC ";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo "<table class='table table-bordered table-striped'>";
@@ -110,11 +110,11 @@
                                         function copy2 (count){navigator.clipboard.writeText('".$siteLink."'+links[count]);}</script>";
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
-                                        $ii = $row['originalLink'];
-                                        $ii = substr($ii,0,51);
+                                        // $ii = $row['originalLink'];
+                                        // $ii = substr($ii,0,51);
                                         echo "<td>" . $row['id'] . "</td>";
-                                        echo "<td>" . $row['linkFor'] . "</td>";
-                                        echo "<td>" . $ii . "....</td>";
+                                        echo "<td>" . $row['link_for'] . "</td>";
+                                        echo "<td>" . $row['link_address'] . "</td>";
                                                                             
                                         echo "<td>";
                                         echo "<a class='download-logo' href='faqadmin/certi_download.php?Sno=". $row['code'] ."' title='Download Certificate' id='down-btn'  data-toggle='tooltip'><span class='glyphicon glyphicon-download-alt'></span></a>";
