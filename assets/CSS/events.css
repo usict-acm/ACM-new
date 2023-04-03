@@ -33,6 +33,7 @@
   font-weight: 400;
   cursor: pointer;
   color: white;
+  padding-top: 2.5%;
 }
 
 #hover-underline-animation {
@@ -458,15 +459,147 @@
 }
 
 @media screen and (max-width: 480px) {
-  .gallary{
-    
-      position: static;
-      transform: rotate(0);
-      width: 100vh;
+  .gallary {
+    background-image: url(pngtree-square-abstract-background-abstract-blue-light-blue-three-dimensional-picture-image_1336894.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: -2rem;
+    /* width:auto; */
+  }
+  
+  .gallary-head h1 {
+    margin-top: 1rem;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-left: 30%;
   }
 
-  .slider{
-    width: 50%;
+  .slideshow {
+    margin-top: 1 rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    height: 20rem;
+    perspective: 1500px;
+  }
+  
+  .content {
+    margin: auto;
+    /* width: 200px; */
+    perspective: 1500px;
+    position: relative;
+    padding-top: 80px;
+    transform-style: preserve-3d;
+  }
+  
+  .slider-content {
+    width: 100%;
+    position: absolute;
+    float: right;
+    animation: rotate 15s infinite linear;
+    transform-style: preserve-3d;
+  }
+  
+  .slider-content:hover {
+    cursor: pointer;
+    animation-play-state: paused;
+  }
+  
+  .slider-content figure {
+    width: 120px;
+    height: 90px;
+    border: 1px solid #555;
+    overflow: hidden;
+    position: absolute;
+  }
+  
+  .slider-content img {
+    image-rendering: auto;
+    transition: all 300ms;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slider-content img:hover {
+    transform: scale(1.2);
+    transition: all 300ms;
+  }
+  
+  .shadow {
+    position: absolute;
+    box-shadow: 0px 0px 0px #000;
+  }
+  
+  .slider-content figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(300px);
+  }
+  
+  .slider-content figure:nth-child(2) {
+    transform: rotateY(30deg) translateZ(300px);
+  }
+  
+  .slider-content figure:nth-child(3) {
+    transform: rotateY(60deg) translateZ(300px);
+  }
+  
+  .slider-content figure:nth-child(4) {
+    transform: rotateY(90deg) translateZ(300px);
+  }
+  
+  .slider-content figure:nth-child(5) {
+    transform: rotateY(120deg) translateZ(300px);
+  }
+  
+  .slider-content figure:nth-child(6) {
+    transform: rotateY(150deg) translateZ(300px);
+  }
+  
+  .slider-content figure:nth-child(7) {
+    transform: rotateY(180deg) translateZ(300px);
+  }
+  
+  .slider-content figure:nth-child(8) {
+    transform: rotateY(210deg) translateZ(300px);
+  }
+  
+  .slider-content figure:nth-child(9) {
+    transform: rotateY(240deg) translateZ(300px);
+  }
+  
+  .slider-content figure:nth-child(10) {
+    transform: rotateY(270deg) translateZ(300px);
+  }
+  
+  .slider-content figure:nth-child(11) {
+    transform: rotateY(300deg) translateZ(300px);
+  }
+  
+  .slider-content figure:nth-child(12) {
+    transform: rotateY(330deg) translateZ(300px);
+  }
+  
+  .slider-content figure:nth-child(13) {
+    transform: rotateY(360deg) translateZ(300px);
+  }
+  
+  .slider-content figure:nth-child(14) {
+    transform: rotateY(390deg) translateZ(300px);
+  }
+  
+  .slider-content figure:nth-child(15) {
+    transform: rotateY(420deg) translateZ(300px);
+  }
+  @keyframes rotate {
+    from {
+      transform: rotateY(0deg);
+    }
+  
+    to {
+      transform: rotateY(360deg);
+    }
   }
 }
 
@@ -479,17 +612,17 @@
   #hero-img {
     position: absolute;
     left: 0px;
-    top: 10%;
+    /* top: 30%; */
     z-index: -1;
-    width: 100%;
-    height: 100vh;
+    /* width: 40rem; */
+    height:40rem;
   }
 
   .head h1 {
     font-family: inherit;
     font-size: 3rem;
     color: black;
-    margin-left: -5%;
+    margin-left: -1%;
     font-weight: 600;
   }
   #hover-underline-animation {
@@ -524,6 +657,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    
+  }
+  .title-area h3,h4{
+    text-align: center;
+
   }
   
   .title-img {
@@ -533,7 +671,8 @@
   }
   
   .title-img img{
-    width: 60vw;
+    width: 150%;
+    margin-left: -35%;
     padding-bottom: 2rem;
     padding-top: 1.5rem;
     cursor: pointer;
@@ -592,12 +731,12 @@
   }
   .events-head h1 {
     margin-top: 1rem;
-    font-family: 'Playfair Display', serif;
+    font-family: inherit;
     font-weight: 400;
     font-size: 3rem;
     letter-spacing: 1px;
     cursor: pointer;
-    margin-left: 25%;
+    margin-left: 20%;
     font-size: 2.5rem;
   }
   .cards {
