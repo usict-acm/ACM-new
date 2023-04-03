@@ -643,51 +643,24 @@ function postQr()
 
     $link_name = $_POST["link_name"];
     $link_address = $_POST["link_address"];
-    // $image_data = $POST["image_data"];
-    // $image_data_ = base64_decode($image_data);
-
-    
-    // var_dump($image_data);
-    // $file = isset($_FILES['qrImg']) ? $_FILES['qrImg'] : false;
-
-    // var_dump($file);
-    // if (!$file) {
-    //     echo json_encode(
-    //         array('message' => 'Generate QR first.')
-    //     );
-    // }
-    // $filename = $file['name'];
-    // $filetemppath= $file['tmp_name'];
-    // $fileext = explode('.',$filename);
-    // $filecheck = strtolower(end($fileext));
-
-    // $fileextstored = array('png', 'jpg', 'jpeg');
+    $image_data = $_POST["image_data"];
 
         if($link_name == "" || $link_address == ""){
             alert("Please fill in all required fields.");
         }else {
-            $sql = "INSERT INTO `qr_link` (`link_for`, `link_address`) VALUES ('$link_name', '$link_address')";
+            $sql = "INSERT INTO `qr_link` (`link_for`, `link_address`, `path`) VALUES ('$link_name', '$link_address', '$image_data')";
             if ($db->query($sql) == true) {
                 echo json_encode(
                     array('message' => 'qr has been saved')
             );
-                // $stmt = $db->prepare("INSERT INTO qr_link (link_for, link_address, image_data) VALUES (?, ?, ?)");
-                // $stmt->bind_param("sss", $link_for, $link_address, $image_data_);
-                // $stmt->execute();
-                // if ($stmt->affected_rows > 0) {
-                //     echo "Image uploaded successfully!";
-                //   } else {
-                //     echo "Image upload failed!";
-                //   }
             } else {
                 echo json_encode(
                     array('message' => 'Internal Server Error. Try Again')
                 );
         };
         };
-    
-    
 }
+    
 
 function certificateForm(){
     $database = new Database();

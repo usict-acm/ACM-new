@@ -45,13 +45,13 @@
 				<input type="text" placeholder="Link For"  id="link_name" style="width:80%"  /><br />
 			</div>
 			<div class="box">
-				<input type="url" placeholder="Enter link"  id="link_address" style="width:80%"  /><br />
+				<input type="text" placeholder="Enter link"  id="link_address" style="width:80%"  /><br />
 			</div>
 			<!-- <button id="btn" type="submit" onclick="submit_qr()">Generate qr</button> -->
 			<div id="qrcode" style="width:100px; height:100px; margin: 35px auto 75px auto;"></div>
 
 			
-			<input type="submit" name="submit" id="btn" value="submit" onclick="submit_qr()">
+			<input type="submit" id="btn" value="submit" onclick="submit_qr()">
 
 		</form>
 		<a id='qrdl' id='btn' hidden>download</a>
@@ -77,7 +77,7 @@
 	
 			}
 			// makeCode();
-			
+
 			$("#link_address").
 				on("blur", function () {
 					makeCode();
