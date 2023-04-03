@@ -1,4 +1,8 @@
 /* **********************hero section *********************** */
+body{
+	max-width: 1440px !important;
+	margin: auto;
+}
 .container {
 	width: 100%;
 	padding-right: 15px;
