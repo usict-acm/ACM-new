@@ -612,10 +612,10 @@
   #hero-img {
     position: absolute;
     left: 0px;
-    top: 10%;
+    /* top: 30%; */
     z-index: -1;
-    width: 150%;
-    height: 220%;
+    /* width: 40rem; */
+    height:40rem;
   }
 
   .head h1 {
