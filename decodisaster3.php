@@ -33,53 +33,74 @@
     <div class="container">
       <h1 class="collab-main-heading">Deco<span class="highlight">Disaster 3.0</span>:</h1>
       <div class="row d-flex justify-content-center">
-        <a class="collab-card" target="_blank" href="./assets/images/DecoDisaster/hp2.pdf">
+        <a class="collab-card" target="_blank" href="./upload/decodisaster3/hp1.pdf">
+            <div>
+          <hr class="blue-hr">
+          <div class="card-1"></div>
+            <h1 class="collab-heading">Clue 1</h1>
+          </div>
+        </a>
+        <a class="collab-card" target="_blank" href="./upload/decodisaster3/hp2.pdf">
             <div>
           <hr class="blue-hr">
           <div class="card-1"></div>
             <h1 class="collab-heading">Clue 2</h1>
           </div>
         </a>
-          <a class="collab-card" target="_blank" href="./assets/images/DecoDisaster/hp3.pdf">
+          <a class="collab-card" target="_blank" href="./upload/decodisaster3/hp3.pdf">
             <div>
             <hr class="blue-hr">
             <div class="card-2"></div>
             <h1 class="collab-heading">Clue 3</h1>
           </div>
         </a>
-          <a class="collab-card" target="_blank" href="./assets/images/DecoDisaster/hp4.pdf">
+          <a class="collab-card" target="_blank" href="./upload/decodisaster3/hp4.pdf">
             <div>
             <hr class="blue-hr">
             <div class="card-3"></div>
             <h1 class="collab-heading">Clue 4</h1>
           </div>
         </a>
-          <a class="collab-card" target="_blank" href="./assets/images/DecoDisaster/hp5.pdf">
+          <a class="collab-card" target="_blank" href="./upload/decodisaster3/hp5.pdf">
             <div>
             <hr class="blue-hr">
             <div class="card-4"></div>
             <h1 class="collab-heading">Clue 5</h1>
           </div>
         </a>
-          <a href="./assets/images/DecoDisaster/hp6.pdf" target="_blank" class="collab-card">
+          <a href="./upload/decodisaster3/hp6.pdf" target="_blank" class="collab-card">
           <div>
             <hr class="blue-hr">
             <div class="card-5"></div>
             <h1 class="collab-heading">Clue 6</h1>
           </div>
         </a>
-          <a href="./assets/images/DecoDisaster/hp7.pdf" target="_blank" class="collab-card">
+          <a href="./upload/decodisaster3/hp7.pdf" target="_blank" class="collab-card">
           <div>
             <hr class="blue-hr">
             <div class="card-6"></div>
             <h1 class="collab-heading">Clue 7</h1>
           </div>
           </a>
-          <a href="./assets/images/DecoDisaster/hp8.pdf" target="_blank" class="collab-card">
+          <a href="./upload/decodisaster3/hp8.pdf" target="_blank" class="collab-card">
           <div>
             <hr class="blue-hr">
             <div class="card-6"></div>
             <h1 class="collab-heading">Clue 8</h1>
+          </div>
+          </a>
+          <a href="./upload/decodisaster3/Hints_Decodisaster3.pdf" target="_blank" class="collab-card">
+          <div>
+            <hr class="blue-hr">
+            <div class="card-6"></div>
+            <h1 class="collab-heading">Hints</h1>
+          </div>
+          </a>
+          <a href="./upload/decodisaster3/Answers_Decodisaster3.pdf" target="_blank" class="collab-card">
+          <div>
+            <hr class="blue-hr">
+            <div class="card-6"></div>
+            <h1 class="collab-heading">Answers</h1>
           </div>
           </a>
           <!-- <a href="./assets/images/DecoDisaster/Clue 7.pdf" target="_blank" class="collab-card">
