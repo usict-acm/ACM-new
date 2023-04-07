@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://usict.acm.org/assets/images/acm-logo.svg" alt="GGSIP University USS ACM Student Chapter">
+<img src="https://usict.acm.org/assets/images/acm-Icon.png" style="height:50vh" alt="GGSIP University USS ACM Student Chapter">
 </div>
 
 <h4 align="center">
