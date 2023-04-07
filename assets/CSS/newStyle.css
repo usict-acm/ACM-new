@@ -2263,13 +2263,16 @@ a:hover {
 	margin-top: -40px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1160px) {
 	.imag {
 		width: 11rem;
 		height: 11rem;
 	}
 	.text-head1{
 		color:#0092cf
+	}
+	.blogs{
+		width: 120%;
 	}
 }
 
