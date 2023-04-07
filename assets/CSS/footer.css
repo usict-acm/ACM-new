@@ -227,9 +227,11 @@ ul {
 
 .social-menu ul li a.instagram-footer:hover {
   background: rgb(177, 42, 176);
-  background: linear-gradient(200deg,
-      rgba(177, 42, 176, 1) 0%,
-      rgba(249, 125, 31, 1) 100%);
+  background: linear-gradient(
+    200deg,
+    rgba(177, 42, 176, 1) 0%,
+    rgba(249, 125, 31, 1) 100%
+  );
 }
 
 .social-menu ul li a.github-footer:hover {
