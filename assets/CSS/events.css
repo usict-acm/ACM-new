@@ -483,6 +483,7 @@
     padding-top: 1rem;
     padding-bottom: 2rem;
     height: 20rem;
+    overflow: hidden;
     perspective: 1500px;
   }
   
