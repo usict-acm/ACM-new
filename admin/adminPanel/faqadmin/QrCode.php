@@ -115,7 +115,7 @@
                                         echo "<td>" . $row['link_for'] . "</td>";
                                         echo "<td>" . $row['link_address'] . "</td>";                                       
                                         echo "<td>";
-                                        echo "<a class='download-logo' href='faqadmin/certi_download.php?Sno=". $row['code'] ."' title='Download Certificate' id='down-btn'  data-toggle='tooltip'><span class='glyphicon glyphicon-download-alt'></span></a>";
+                                            echo "<a class='download-logo' href='".$row['path']."' download='".$row['link_for'].".png' title='Download QR' id='down-btn'  data-toggle='tooltip'><span class='glyphicon glyphicon-download-alt'></span></a>";
                                             echo "<a class='tash-bin' href='faqadmin/del.php?Sno=". $row['code'] ."' title='Delete Record' data-toggle='tooltip' onclick='return checkdelete()'><span class='glyphicon glyphicon-trash'></span></a>";
                                         echo "</td>";
 

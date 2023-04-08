@@ -29,7 +29,7 @@
         contentType: false,
         success: function(data){
             alert(data.message);
-            window.location.reload();
+            // window.location.reload();
         },
         error: function(xhr, status, error){
             window.location.reload();
@@ -41,19 +41,17 @@
 
 	<div class="container" style="height:70vh; margin-top: auto;">
 		<h1>QR generator</h1>
-		<form method="POST" enctype="multipart/form-data">
+		<form method="POST" enctype="multipart/form-data" onsubmit="submit_qr();return false">
 			<div class="box">
 				<input type="text" placeholder="Link For"  id="link_name" style="width:80%" class="input-form"  /><br />
 			</div>
 			<div class="box">
 				<input type="text" placeholder="Enter link"  id="link_address" style="width:80%"  /><br />
 			</div>
-			<input type="submit" id="btn" value="submit" onclick="submit_qr()">
+			<input type="submit" id="btn" value="submit">
 			<!-- <button id="btn" type="submit" onclick="submit_qr()">Generate qr</button> -->
 			<div id="qrcode" style="width:100px; height:100px; margin: 35px auto 75px auto;"></div>
 
-			
-			
 
 		</form>
 		<a id='qrdl' id='btn' hidden>download</a>
