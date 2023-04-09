@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -150,7 +151,7 @@
   font-size: 3rem;
   letter-spacing: 1px;
   cursor: pointer;
-  margin-left: 40%;
+  margin-left: 35%;
 }
 
 #hover-underline-a {
@@ -299,7 +300,7 @@
   padding: 0.5rem 1rem;
   margin-left: 68%;
   margin-top: 4%;
-  border: none;
+  border: 2px solid #005daa ;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -483,8 +484,8 @@
     padding-top: 1rem;
     padding-bottom: 2rem;
     height: 20rem;
-    overflow: hidden;
     perspective: 1500px;
+    overflow: hidden;
   }
   
   .content {
@@ -614,9 +615,11 @@
     position: absolute;
     left: 0px;
     /* top: 30%; */
-    z-index: -1;
+    /* z-index: -1; */
     /* width: 40rem; */
-    height:40rem;
+    /* height:40rem; */
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .head h1 {
@@ -627,9 +630,10 @@
     font-weight: 600;
   }
   #hover-underline-animation {
-    display: inline-block;
-    position: relative;
-    left: 28%;
+    display: inherit;
+    text-align: center;
+    /* position: relative;
+    left: 28%; */
     color: black;
   }
   
@@ -672,9 +676,9 @@
   }
   
   .title-img img{
-    width: 150%;
-    margin-left: -30%;
-    padding-bottom: 2rem;
+    width: 180%;
+    margin-left: -54%;
+    padding-bottom: 2.5rem;
     padding-top: 1.5rem;
     cursor: pointer;
     transition: transform .4s;
@@ -685,7 +689,8 @@
   }
   
   .title-text {
-    padding-left: 1rem;
+    /* padding-left: 1rem; */
+    display: contents;
   }
   
   .title-text h1 { 
@@ -707,7 +712,7 @@
   .title-text button {
     width: 13rem;
     margin-top: 2rem;
-    margin-left: 23%;
+    /* margin-left: 23%; */
     font-size: 1.3rem;
     padding:  0.5rem 1rem;
     border-radius: 15px;
@@ -737,7 +742,7 @@
     font-size: 3rem;
     letter-spacing: 1px;
     cursor: pointer;
-    margin-left: 15%;
+    margin-left: 18%;
     font-size: 2.5rem;
   }
   .cards {
@@ -816,7 +821,7 @@
   .card button {
     border-radius: 15px;
     color: #005daa;
-    background-color: white;
+    background-color: lightgrey;
     padding: 0.5rem 1rem;
     margin-left: 68%;
     margin-top: 4%;
