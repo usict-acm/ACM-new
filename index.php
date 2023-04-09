@@ -297,6 +297,60 @@
 		</div>
 
 	</div>
+	<form class="subscriber-strip">
+
+		<style>
+			h1{
+				color:#46aff5;
+				font-family:math;
+				margin-bottom:-16rem;
+
+
+
+			}
+			.subscriber-strip{
+				width:100%;
+				border-radius:.3rem;
+				/* background:#46aff5; */
+				/* color:white; */
+				max-height:6rem
+			}
+			span{
+				display:none;
+			}
+			.newsletter{
+				margin-bottom:.5rem;
+			}
+			.btn{
+				background: #005daa;
+				margin-left:41rem;
+				font-size:1rem;
+				color:#fff;
+				font-weight:500;
+				margin-top:-3.6rem;
+				height:30px;
+				border-radius:.4rem;
+				cursor: pointer;
+				line-height: 1;
+				padding-bottom: 1rem;
+				text-transform: uppercase;
+
+			}
+			.btn:hover{
+				background:#fff;
+				color:#46aff5;
+				border: 2px solid #005daa;
+
+			}
+			
+		</style>
+        <div class="info">
+		  <h1 class="newsletter" style="margin-bottom:-2.3rem;"></h1>
+          <input type="email" placeholder="Email" style=" border-radius:.4rem; border-color: #005daa;margin-left:28rem;">
+       </div>
+          <button class="btn" type="submit" value="Subscribe">subscribe</button>
+    </form>
+
 	<!-- back to top and contact us-->
 	<?php
 	include("contact.php")
@@ -309,7 +363,22 @@
 
 	<!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script src="assets\JS\home_new.js"></script>
+	<script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+
+<script>
+	const type = new Typed ('.newsletter',{
+		strings:['ACM Newsletter Signup'],
+		typeSpeed:100, 
+		backSpeed: 100 , 
+		backDelay:100, 
+		loop:true
+	})
+
+
+
+</script>
     </body>
 
     </html>
