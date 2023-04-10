@@ -315,11 +315,11 @@
 				/* color:white; */
 				max-height:6rem
 			}
-			span{
-				display:none;
-			}
 			.newsletter{
 				margin-bottom:.5rem;
+			}
+			.typed-cursor{
+				display:none;
 			}
 			.btn{
 				background: #005daa;
