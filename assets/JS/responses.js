@@ -112,7 +112,11 @@ function getBotResponse(input) {
     } else if (input.toLowerCase().includes("event")) {
         return "Our website has information on upcoming events, conferences, and workshops. Would you like me to find more information on a specific event for you?";
     }
+    else if(input.toLowerCase().includes("I'm feeling ill || Ill")){
+        return "Thank you for your response. Just to clarify, if you're feeling ill, it's important to seek medical advice from a healthcare professional Doctor nearby you"
+    }
     else{
-        return "I am unable to answer your query at the moment as I am currently under the learning phase. Sorry for the inconvenience caused. Please email us your query at :<a href=https://acm@ipu.ac.in>Gmail</a>";
+        return "I am unable to answer your query at the moment as I am currently under the learning phase. Sorry for the inconvenience caused. Please email us your query at:<span><a href=mailto:acm@ipu.ac.in></a></span>";
+
     }
 }
