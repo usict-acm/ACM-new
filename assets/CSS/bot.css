@@ -4,6 +4,7 @@
     position: fixed;
     bottom: 1px;
     left: 0rem;
+
     /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
     cursor: pointer;
     font-size: 30px;
@@ -36,8 +37,8 @@
 .collapsible {
     background-color:#fff;
     cursor: pointer;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     text-align: center;
     outline: none;
     font-size: 18px;
@@ -47,13 +48,20 @@
     border-bottom: none;
     justify-content: center;
     margin-left: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
 
 }
 
 .Card-content {
     max-height: 0;
-    border-radius: 10px;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    border-style: solid;
+    margin-left: 10px;
+    margin-bottom: -0.4rem;
+    /* border-color: blue; */
+    border-color:#005daa;
+    /* border-top-right-radius: 1px solid #005daa; */
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
@@ -67,10 +75,10 @@
     scrollbar-width: none;
     height: max-content;
     transition: max-height 0.2s ease-out;
-    border: 1px solid black;
+    /* border: 1.8px solid black; */
     border-bottom: 0px !important;
-    border-top-right: .1px solid black !important;
-    border-top-right-radius: 6px !important;
+    /* border-top-right-radius: 1px solid black !important; */
+   /* border-top-right-radius: 6px !important; */
 }
 
 .outer-container {
@@ -180,7 +188,7 @@
 .botText span {
     line-height: 1.5em;
     display: inline-block;
-    background:white;
+    background: #46aff5;
     padding: 10px;
     border-radius: 8px;
     border-bottom-left-radius: 2px;
@@ -220,7 +228,7 @@
 }
 @media  screen and (max-width: 400px){
     #chat-icon {
-        margin-right: 6.5rem;
+        margin-left: 5rem;
     }
     .input-box {
         width : 150%;

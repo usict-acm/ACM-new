@@ -304,16 +304,19 @@
 				color:#46aff5;
 				font-family:math;
 				margin-bottom:-16rem;
+				/* margin-left:28rem; */
 
 
 
 			}
 			.subscriber-strip{
-				width:100%;
+				/* width:100%; */
 				border-radius:.3rem;
 				/* background:#46aff5; */
 				/* color:white; */
-				max-height:6rem
+				max-height:6rem;
+				align-items:center;
+				margin-left:20rem;
 			}
 			.newsletter{
 				margin-bottom:.5rem;
@@ -323,7 +326,7 @@
 			}
 			.btn{
 				background: #005daa;
-				margin-left:41rem;
+				margin-left:40rem;
 				font-size:1rem;
 				color:#fff;
 				font-weight:500;
@@ -336,17 +339,70 @@
 				text-transform: uppercase;
 
 			}
+			.email{
+				margin-left:27.5rem;
+			}
 			.btn:hover{
 				background:#fff;
 				color:#46aff5;
 				border: 2px solid #005daa;
 
 			}
-			
+			@media screen and (min-width: 900px) and (max-width: 1100px){
+
+				.newsletter{
+				   margin-left:-12rem;
+			    }
+				.email{
+					margin-left:13rem
+				}
+				.btn{
+					margin-left:26rem;
+				}
+			}
+			@media screen and (min-width: 700px) and (max-width: 900px){
+				.newsletter{
+				   margin-left:-17rem;
+			    }
+				.email{
+					margin-left:5rem
+				}
+				.btn{
+					margin-left:18rem;
+				}
+
+			}
+			@media screen and (min-width: 500px) and (max-width: 700px){
+				.newsletter{
+				   margin-left:-10rem;
+			    }
+				.email{
+					margin-left:-9rem;
+					margin-top:3rem;
+				}
+				.btn{
+					margin-left:4rem;
+				}
+
+			}
+			@media screen and (max-width: 500px){
+				.newsletter{
+				   margin-left:-15rem;
+			    }
+				.email{
+					margin-left:-16rem;
+					margin-top:3rem;
+				}
+				.btn{
+					margin-left:-3rem;
+				}
+
+			}
+		
 		</style>
         <div class="info">
 		  <h1 class="newsletter" style="margin-bottom:-2.3rem;"></h1>
-          <input type="email" placeholder="Email" style=" border-radius:.4rem; border-color: #005daa;margin-left:28rem;">
+          <input type="email" class="email" placeholder="Email" style=" border-radius:.4rem; border-color: #005daa;">
        </div>
           <button class="btn" type="submit" value="Subscribe">subscribe</button>
     </form>

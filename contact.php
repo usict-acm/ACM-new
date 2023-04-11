@@ -99,7 +99,9 @@
     clearChat() 
     }
 
- 
+
+
+
     function firstBotMessage() {
         let firstMessage = "Hi there! Welcome to the ACM website. How can I help you today?"
         document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
@@ -161,7 +163,7 @@
 </div>
     <!-- CHAT BAR BLOCK -->
     <div class="chat-bar-collapsible" id="chatbot" style="z-index:+1 !important;">
-        <button id="chat-button" type="button" class="collapsible" onclick="popup()"> <i id="chat-icon" style="color: #005daa; width:50px;font-size:37px; margin-left:-2px;margin-bottom:5px" class="fas fa-robot" ></i>
+        <button id="chat-button" type="button" class="collapsible" onclick="popup()"> <i id="chat-icon" style="color: #005daa;height:2px; width:25px;font-size:30px; margin-left:-10px" class="fas fa-robot" ></i>
            
         </button>
 
@@ -197,7 +199,7 @@
 
 
                     <div class="chat-bar-icons">
-                        <i id="chat-icon" style="color: #005daa;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+                        <i id="chat-icon" style="color: #005daa; margin-left:1rem; font-size:25px;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
                     </div>
             </div>
                 <script>
@@ -207,6 +209,7 @@
                         getResponse();
                     }
                     });
+                    
                 </script>
         </div>
 
