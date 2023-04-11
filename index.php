@@ -390,11 +390,11 @@
 				   margin-left:-15rem;
 			    }
 				.email{
-					margin-left:-16rem;
+					margin-left:-17rem;
 					margin-top:3rem;
 				}
 				.btn{
-					margin-left:-3rem;
+					margin-left:-4rem;
 				}
 
 			}
