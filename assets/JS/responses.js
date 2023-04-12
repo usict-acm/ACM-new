@@ -17,9 +17,13 @@ function getBotResponse(input) {
         return "Good evening! How can I help you today?";
     }
     // basic questions
+    else if(input.toLowerCase().includes("i'm feeling ill")){
+        return "Thank you for your response. Just to clarify, if you're feeling ill, it's important to seek medical advice from a healthcare professional doctor nearby you.";
+    }
     else if (input.toLowerCase().includes("who can apply for membership")) {
         return "Membership in ACM is open to individuals and organizations in the computing field, including computer science professionals, educators, and students.";
-    } else if (input.toLowerCase().includes("mission ")) {
+    }     
+    else if (input.toLowerCase().includes("mission ")) {
         return "The mission of ACM is to advance the art, science, engineering, and application of information technology, particularly in the field of computer science. It promotes the open exchange of information and ideas among its members and the wider computing community, and works to improve the public's understanding of computing and its impact on society.";
     } else if (input.toLowerCase().includes("acm full form")) {
         return "The full form of ACM is the Association for Computing Machinery.";
@@ -111,9 +115,6 @@ function getBotResponse(input) {
         return "you can check about all members in home page of USS ACM website"
     } else if (input.toLowerCase().includes("event")) {
         return "Our website has information on upcoming events, conferences, and workshops. Would you like me to find more information on a specific event for you?";
-    }
-    else if(input.toLowerCase().includes("I'm feeling ill || Ill")){
-        return "Thank you for your response. Just to clarify, if you're feeling ill, it's important to seek medical advice from a healthcare professional Doctor nearby you"
     }
     else{
         return "I am unable to answer your query at the moment as I am currently under the learning phase. Sorry for the inconvenience caused. Please email us your query at:<span><a href=mailto:acm@ipu.ac.in></a></span>";
