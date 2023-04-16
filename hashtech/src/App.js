@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Contactus from "./components/Contactus";
 import Home from "./components/Home";
 import PageNotFound from "./components/PageNotFound.js";
+import Results from "./components/Results.js";
 
 // root routes
 const router = createBrowserRouter([
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "*",
     element: <PageNotFound></PageNotFound>,
+  },
+  {
+    path: "/results",
+    element: <Results></Results>,
   },
 ]);
 
