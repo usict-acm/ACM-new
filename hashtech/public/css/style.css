@@ -361,9 +361,7 @@ animation: 60s para infinite linear;
 .bg-trans{
 	background-color: transparent;
 }
-.text-base-color {
-    color: #e62b1e !important;
-}
+
 .text-white {
     color: #fff!important;
 }

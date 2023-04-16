@@ -1,7 +1,5 @@
 html{
-    background: #000000;
-    
-     
+    background-color: #1b1b1b;
 }
 
 .hashtech{
@@ -11,9 +9,7 @@ html{
 
     
 }
-.container{
-    background: #000000;
-}
+
  
 .our-team{
     margin-top: 7%;
@@ -61,10 +57,16 @@ html{
     text-transform: uppercase;
     margin: 0 0 7px 0;
 }
+.fa-instagram{
+    color: red;
+}
+.fa-linkedin{
+    color:red;
+}
 .our-team .post{
     display: block;
     font-size: 15px;
-    color: #17bebb;
+    color: red;
     text-transform: capitalize;
     margin-bottom: 15px;
 }

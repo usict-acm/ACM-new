@@ -87,7 +87,10 @@ nav ul .list-navbar a {
   opacity: 0;
   pointer-events: none;
 }
-
+.navbar--list--item{
+  font-size: larger;
+  font-weight:  800;
+}
 nav ul .list-navbar a:after {
   content: "";
   width: 100%;
