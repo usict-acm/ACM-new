@@ -67,12 +67,14 @@
     scrollbar-width: none;
     height: max-content;
     transition: max-height 0.2s ease-out;
-    border: .3px solid black;
+    border: 1px solid black;
     border-bottom: 0px !important;
+    border-top-right: .1px solid black !important;
+    border-top-right-radius: 6px !important;
 }
 
 .outer-container {
-    min-height: 500px;
+    min-height: 400px;
     bottom: 0%;
     position: relative;
 }
@@ -213,5 +215,14 @@
         border: 0px;
         border-top: 3px solid white;
         border-radius: 0px;
+    }
+    
+}
+@media  screen and (max-width: 400px){
+    #chat-icon {
+        margin-right: 6.5rem;
+    }
+    .input-box {
+        width : 150%;
     }
 }

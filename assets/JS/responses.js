@@ -33,13 +33,17 @@ function getBotResponse(input) {
         return "To join, please visit our website and fill out the membership application form.";
     } else if (input.toLowerCase().includes("acm clubs")) {
         return "In ACM we have Dev surce,RobIOtics,Lens,Canvas,enGame,InnovateAI,Cyberchain,ICPC,Research Cell"
+    } else if (input.toLowerCase().includes("club")) {
+        return "In ACM we have Dev surce,RobIOtics,Lens,Canvas,enGame,InnovateAI,Cyberchain,ICPC,Research Cell"
     } else if (input.toLowerCase().includes("webchair")) {
-        return "Apoorva Aron is web chair of USS ACM STUDENT CHAPTER";
-    } else if (input.toLowerCase().includes("apoorva")) {
-        return "he is web chair of uss acm ,if you want to know more about him follow him on social media";
+        return "Apoorv Aron is web chair of USS ACM STUDENT CHAPTER";
+    } else if (input.toLowerCase().includes("apoorv")) {
+        return "He is web chair of uss acm ,if you want to know more about him follow him on social media";
     } else if (input.toLowerCase().includes("team")) {
         return "You can meet the team in our website office bearer section";
-    } else if (input.toLowerCase().includes("can i join")) {
+    }else if (input.toLowerCase().includes("love")) {
+        return "I love ACM too.";
+    }  else if (input.toLowerCase().includes("can i join")) {
         return "Yes , you can fill the application form in our website";
     } else if (input.toLowerCase().includes("your name")) {
         return "I don't have any name yet ";

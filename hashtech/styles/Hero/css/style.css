@@ -308,6 +308,7 @@ color:red;
 }
 
 #main{
+  width: 100% !important;
 	position: relative;
   background-image: url("../assets/bgfinal.png") !important;
   background-size: cover;
