@@ -138,3 +138,35 @@ body {
   top: calc(100% + 2px);
 } /*# sourceMappingURL=style.css.map */
 
+@media(min-width:900px)
+{
+  .timeline-section{
+    padding-bottom: 5%;
+  }
+}
+@media(max-width:900px)
+{
+  .timeline-section{
+    padding-bottom: 15%;
+  }
+}
+@media(max-width:750px)
+{
+  .timeline-section{
+    padding-bottom: 20%;
+  }
+}
+@media(max-width:500px)
+{
+  .timeline-section{
+    padding-bottom: 25%;
+  }
+}
+@media(max-width:350px)
+{
+  .timeline-section{
+    padding-bottom: 35%;
+  }
+}
+
+
