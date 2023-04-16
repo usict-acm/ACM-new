@@ -9,10 +9,10 @@ body {
 	background-image: url(back.jpg);
 	/* width: 100%; */
 	min-height: 100vh;
-	display: flex;
+	/* display: flex; */
 	justify-content: center;
 	align-items: center;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 h1 {
@@ -69,11 +69,11 @@ nav ul {
 	list-style: none;
 }
 
-nav ul li{
+nav ul .list-navbar{
 	margin: 50px 0;
 }
 
-nav ul li a{
+nav ul .list-navbar a{
 	color: red;
 	font-size: 2em;
 	text-decoration: none;
@@ -83,7 +83,7 @@ nav ul li a{
 	pointer-events: none;
 }
 
-nav ul li a:after{
+nav ul .list-navbar a:after{
 	content: '';
 	width: 100%;
 	position: absolute;
@@ -98,7 +98,7 @@ nav ul li a:after{
 }
 
 
-nav ul li a:hover:after{
+nav ul .list-navbar a:hover:after{
 	transform: scaleX(1);
 }
 

@@ -77,7 +77,7 @@ html{
     display: inline-block;
     margin-right: 5px;
 }
-.our-team .social li a{
+.our-team .social li .anchor-navbar{
     display: block;
     width: 30px;
     height: 30px;
@@ -88,13 +88,16 @@ html{
     border: 1px solid #17bebb;
     transition: all 0.5s ease 0s;
 }
-.our-team:hover .social li a{
+.our-team:hover .social li .anchor-navbar{
     background: #17bebb;
     color: #fff;
 }
     
-    @media only screen and (max-width: 575px) {
+    @media only screen and (max-width: 575px) and (min-width:350px) {
         /* For mobile phones: */
+        /* .navbar--open{
+            margin-top: -150%;
+        } */
         [class*="our-team"] {
           margin: auto;
           margin-top: 13px;
@@ -102,6 +105,7 @@ html{
           height: auto;
         }
     }
+
 
     @media only screen and (max-width: 767px) and (min-width: 576px) {
         /* For mobile phones: */
@@ -111,6 +115,7 @@ html{
           width: 70%;
           height: auto;
         }
+       
 
         .our-team .social{
             display: grid;
@@ -119,7 +124,7 @@ html{
 
         }
 
-        .our-team .social li{
+        .our-team .social .list-navbar{
             display: block;
             margin-left: auto;
             margin-right: auto;
