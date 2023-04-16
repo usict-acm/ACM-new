@@ -307,7 +307,7 @@ color:red;
   color: #474747;
 }
 
-#main-hero{
+#main{
 	position: relative;
   background-image: url("../assets/bgfinal.png") !important;
   background-size: cover;
@@ -516,7 +516,7 @@ padding: 0px 0px;
   font-size: 20px;
   padding-top: 25px;
 }
-  #main-hero{
+  #main{
   position: relative;
   background-image: url("../assets/bgmobile.png");
   background-size: cover;
