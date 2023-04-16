@@ -74,7 +74,7 @@
   width: 50%;
 }
 
-.title-img img{
+.title-img img {
   width: 77%;
   padding-bottom: 2rem;
   padding-left: 7rem;
@@ -137,12 +137,13 @@
   background-attachment: scroll;
   background-repeat: no-repeat;
 }
+
 .events-head h1 b {
-    color: #0297ff;
+  color: #0297ff;
 }
 
 
-.events-head h1 {
+.events-head {
   margin-top: 1rem;
   /* font-family: 'Montserrat', sans-serif; */
   font-family: inherit;
@@ -150,7 +151,7 @@
   font-size: 3rem;
   letter-spacing: 1px;
   cursor: pointer;
-  margin-left: 40%;
+  text-align: center;
 }
 
 #hover-underline-a {
@@ -230,7 +231,7 @@
   padding: 6px 12px;
   border-radius: 8px;
   transition: background 0.2s;
-} 
+}
 
 .card:hover .card-link {
   background: var(--darkred);
@@ -295,20 +296,20 @@
 }
 
 .card button {
+  width: 13rem;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  padding: 0.5rem 0.7rem;
   border-radius: 15px;
+  border: 2px solid #005daa;
   color: #005daa;
-  background-color: lightgrey;
-  padding: 0.5rem 1rem;
-  margin-left: 68%;
-  margin-top: 4%;
-  border: none;
+  font-weight: 500;
+  background-color: transparent;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1.1rem;
   transition-duration: 0.6s;
   cursor: pointer;
-  font-weight: 600;
 }
 
 .card button:hover {
@@ -467,7 +468,7 @@
     padding-bottom: -2rem;
     /* width:auto; */
   }
-  
+
   /* .gallary-head h1 {
     margin-top: 1rem;
     font-family: 'Montserrat', sans-serif;
@@ -487,7 +488,7 @@
     perspective: 1500px;
     overflow: hidden;
   }
-  
+
   .content {
     margin: auto;
     /* width: 200px; */
@@ -496,7 +497,7 @@
     padding-top: 80px;
     transform-style: preserve-3d;
   }
-  
+
   .slider-content {
     width: 100%;
     position: absolute;
@@ -504,12 +505,12 @@
     animation: rotate 15s infinite linear;
     transform-style: preserve-3d;
   }
-  
+
   .slider-content:hover {
     cursor: pointer;
     animation-play-state: paused;
   }
-  
+
   .slider-content figure {
     width: 120px;
     height: 90px;
@@ -517,88 +518,89 @@
     overflow: hidden;
     position: absolute;
   }
-  
+
   .slider-content img {
     image-rendering: auto;
     transition: all 300ms;
     width: 100%;
     height: 100%;
   }
-  
+
   .slider-content img:hover {
     transform: scale(1.2);
     transition: all 300ms;
   }
-  
+
   .shadow {
     position: absolute;
     box-shadow: 0px 0px 0px #000;
   }
-  
+
   .slider-content figure:nth-child(1) {
     transform: rotateY(0deg) translateZ(300px);
   }
-  
+
   .slider-content figure:nth-child(2) {
     transform: rotateY(30deg) translateZ(300px);
   }
-  
+
   .slider-content figure:nth-child(3) {
     transform: rotateY(60deg) translateZ(300px);
   }
-  
+
   .slider-content figure:nth-child(4) {
     transform: rotateY(90deg) translateZ(300px);
   }
-  
+
   .slider-content figure:nth-child(5) {
     transform: rotateY(120deg) translateZ(300px);
   }
-  
+
   .slider-content figure:nth-child(6) {
     transform: rotateY(150deg) translateZ(300px);
   }
-  
+
   .slider-content figure:nth-child(7) {
     transform: rotateY(180deg) translateZ(300px);
   }
-  
+
   .slider-content figure:nth-child(8) {
     transform: rotateY(210deg) translateZ(300px);
   }
-  
+
   .slider-content figure:nth-child(9) {
     transform: rotateY(240deg) translateZ(300px);
   }
-  
+
   .slider-content figure:nth-child(10) {
     transform: rotateY(270deg) translateZ(300px);
   }
-  
+
   .slider-content figure:nth-child(11) {
     transform: rotateY(300deg) translateZ(300px);
   }
-  
+
   .slider-content figure:nth-child(12) {
     transform: rotateY(330deg) translateZ(300px);
   }
-  
+
   .slider-content figure:nth-child(13) {
     transform: rotateY(360deg) translateZ(300px);
   }
-  
+
   .slider-content figure:nth-child(14) {
     transform: rotateY(390deg) translateZ(300px);
   }
-  
+
   .slider-content figure:nth-child(15) {
     transform: rotateY(420deg) translateZ(300px);
   }
+
   @keyframes rotate {
     from {
       transform: rotateY(0deg);
     }
-  
+
     to {
       transform: rotateY(360deg);
     }
@@ -609,8 +611,9 @@
 @media screen and (max-width: 480px) {
   .title {
     padding-top: 20%;
+    text-align: center;
   }
-  
+
   #hero-img {
     position: absolute;
     left: 0px;
@@ -629,6 +632,7 @@
     margin-left: -1%;
     font-weight: 600;
   }
+
   #hover-underline-animation {
     display: inherit;
     text-align: center;
@@ -636,7 +640,7 @@
     left: 28%; */
     color: black;
   }
-  
+
   #hover-underline-animation:after {
     content: '';
     position: absolute;
@@ -649,12 +653,12 @@
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
-  
+
   #hover-underline-animation:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-  
+
   .title-area {
     margin: 1rem;
     margin-top: 0.5rem;
@@ -662,20 +666,16 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    
-  }
-  .title-area h3,h4{
-    text-align: center;
 
   }
-  
+
   .title-img {
     width: 50%;
     text-align: center;
     margin-right: 17%;
   }
-  
-  .title-img img{
+
+  .title-img img {
     width: 180%;
     margin-left: -54%;
     padding-bottom: 2.5rem;
@@ -683,23 +683,23 @@
     cursor: pointer;
     transition: transform .4s;
   }
-  
+
   .title-img img:hover {
     transform: scale(1);
   }
-  
+
   .title-text {
     /* padding-left: 1rem; */
     display: contents;
   }
-  
-  .title-text h1 { 
+
+  .title-text h1 {
     font-family: 'Labrada', serif;
     font-size: 2rem;
     line-height: 4rem;
     color: black;
   }
-  
+
   .title-text h4 {
     font-family: 'Labrada', serif;
     font-size: 1.4rem;
@@ -708,13 +708,13 @@
     cursor: pointer;
     color: black;
   }
-  
+
   .title-text button {
     width: 13rem;
     margin-top: 2rem;
     /* margin-left: 23%; */
     font-size: 1.3rem;
-    padding:  0.5rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 15px;
     border: 2px solid #005daa;
     color: #005daa;
@@ -725,26 +725,30 @@
     display: inline-block;
     cursor: pointer;
   }
-  
+
   .title-text button:active {
     color: white;
     font-weight: 500;
     background-color: #005daa;
     border: none;
   }
-  .events-head{
+
+  .events-head {
     margin-top: -8%;
   }
-  .events-head h1 {
+
+  .events-head {
     margin-top: 1rem;
     font-family: inherit;
     font-weight: 400;
     font-size: 3rem;
     letter-spacing: 1px;
     cursor: pointer;
-    margin-left: 12%;
+    /* margin-left: 12%; */
     font-size: 2.5rem;
+    text-align: center;
   }
+
   .cards {
     display: flex;
     padding: 25px 0px;
@@ -754,7 +758,7 @@
     margin-left: 10px;
     margin-right: 10px;
   }
-  
+
   .card {
     display: flex;
     flex-direction: column;
@@ -767,29 +771,29 @@
     transition: all 0.2s;
     background-color: white;
   }
-  
+
   .card:not(:last-child) {
     margin-right: 10px;
   }
-  
+
   /* .card:hover {
     color: var(--white);
     background: var(--blue);
   } */
-  
+
   .card .card-title {
     font-size: 20px;
   }
-  
+
   .card .card-content {
     margin: 20px 0;
     max-width: 85%;
   }
-  
+
   .card .card-link-wrapper {
     margin-top: auto;
   }
-  
+
   .card .card-link {
     display: inline-block;
     text-decoration: none;
@@ -799,46 +803,47 @@
     border-radius: 8px;
     transition: background 0.2s;
   }
-  
+
   .card:hover .card-link {
     background: var(--darkred);
   }
-  
+
   .cards::-webkit-scrollbar {
     height: 12px;
   }
-  
+
   .cards::-webkit-scrollbar-thumb,
   .cards::-webkit-scrollbar-track {
     border-radius: 92px;
   }
-  
+
   .cards::-webkit-scrollbar-thumb {
     background: var(--darkred);
   }
-  
+
   .cards::-webkit-scrollbar-track {
     background: var(--thumb);
   }
+
   .card button {
+    width: 13rem;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    padding: 0.5rem 0.7rem;
     border-radius: 15px;
+    border: 2px solid #005daa;
     color: #005daa;
-    background-color: lightgrey;
-    padding: 0.5rem 1rem;
-    margin-left: 68%;
-    margin-top: 4%;
-    border: none;
+    font-weight: 500;
+    background-color: transparent;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1rem;
     transition-duration: 0.6s;
     cursor: pointer;
-    font-weight: 600;
   }
-  
+
   .card button:active {
     border: 2px solid #005daa;
   }
-  
+
 }
