@@ -26,7 +26,7 @@
   ?>
   <section class="title">
     <div class="head">
-      <img id="hero-img" src="assets\CSS\bgtitle.jpeg" alt="">
+      <img id="hero-img" src="assets\images\bgtitle.jpeg" alt="">
       <h1 id="hover-underline-animation">EVENTS</h1>
     </div>
     <div class="title-area">
@@ -55,7 +55,7 @@
         <div class="card-text">
           <div class="no-of-events">
             <h1 id="event-no">01</h1>
-            <h2 class="event-text">Event </h2>
+            <h2 class="event-text"> &nbspEvents </h2>
           </div>
           <p id="tagline">"We grow stronger and the journey is still ongoing"</p>
           <button>view details</button>
@@ -69,9 +69,9 @@
         <div class="card-text">
           <div class="no-of-events">
             <h1 id="event-no">22</h1>
-            <h2 class="event-text">events</h2>
+            <h2 class="event-text">&nbspEvents</h2>
           </div>
-          <p id="tagline">"We grow stronger and the journey is still ongoing"</p>
+          <p id="tagline">"Mile by mile we hit a milestone!"</p>
           <button>view details</button>
         </div>
       </div>
@@ -83,9 +83,9 @@
         <div class="card-text">
           <div class="no-of-events">
             <h1 id="event-no">27</h1>
-            <h2 class="event-text">events</h2>
+            <h2 class="event-text">&nbspEvents</h2>
           </div>
-          <p id="tagline">"We grow stronger and the journey is still ongoing"</p>
+          <p id="tagline">"We always grow and move upward"</p>
           <button>view details</button>
         </div>
       </div>
@@ -97,9 +97,9 @@
         <div class="card-text">
           <div class="no-of-events">
             <h1 id="event-no">08</h1>
-            <h2 class="event-text">events</h2>
+            <h2 class="event-text">&nbspEvents</h2>
           </div>
-          <p id="tagline">"We grow stronger and the journey is still ongoing"</p>
+          <p id="tagline">"Pandemic cannot stop us!"</p>
           <button>view details</button>
         </div>
       </div>
@@ -111,53 +111,22 @@
         <div class="card-text">
           <div class="no-of-events">
             <h1 id="event-no">08</h1>
-            <h2 class="event-text">events</h2>
+            <h2 class="event-text">&nbspEvents</h2>
           </div>
-          <p id="tagline">"We grow stronger and the journey is still ongoing"</p>
+          <p id="tagline">"The year in which it all started."</p>
           <button>view details</button>
         </div>
       </div>
 
 
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      let urlcarousel = './admin/blogAdmin/api.php/?q=carousel';
-      let carouselDIV = document.getElementById("carousel");
-
-      $(document).ready(function() {
-        $.ajax({
-          url: urlcarousel,
-          method: 'GET',
-          dataType: 'JSON',
-          success: function(data) {
-            //console.log("check data 123 ", data);
-            carouselDIV.innerHTML += " <div class='carousel-item active'>\
-                                                    <img src=" + data[0].poster + "  class='live-carousel-img'>\
-                                                  </div>";
-            //console.log(data[0].poster);
-            //console.log(carouselDIV);
-
-            function carouselfunction() {
-
-              for (i = 1; i < data.length; i++) {
-                carouselDIV.innerHTML += " <div class='carousel-item'>\
-                                                      <img src=" + data[i].poster + "  class='live-carousel-img'>\
-                                                    </div>";
-              }
-            }
-            carouselfunction();
-            //console.log(carouselDIV);
-          },
-        });
-      });
-    </script>
+ 
 
   </section>
-  <section class="gallary">
-    <div class="gallary-head">
+  <section class="gallary" >
+    <!-- <div class="gallary-head">
       <h1 id="hover-underline-a">GALLERY</h1>
-    </div>
+    </div> -->
     <div class="slideshow">
       <div class="content">
         <div class="slider-content">
@@ -182,29 +151,6 @@
       </div>
     </div>
   </section>
-
-  
-  <script>
-    let url = './admin/blogAdmin/api.php/?q=getImage';
-    var galleryImage = document.getElementById("galleryImage");
-    galleryImage.innerHTML = "";
-
-    $(document).ready(function() {
-      $.ajax({
-        url: url,
-        method: 'GET',
-        dataType: 'JSON',
-        success: function(data) {
-          //console.log("gallery data", data);
-          data.forEach(myFunc);
-
-          function myFunc(row, index) {
-            galleryImage.innerHTML += " <img class='quote-img' style='transition: 2s;' src=" + row.Image + " alt=' ' />";
-          }
-        }
-      })
-    })
-  </script>
 
   
 
@@ -262,7 +208,7 @@
 	<?php
 	include("./contact.php")
 	?>
-  <!-- ****************Footer************************* -->
+  <!-- *****Footer******** -->
   <?php
   include('./footer.php');
   ?>
