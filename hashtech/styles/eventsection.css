@@ -20,6 +20,7 @@ body {
   border-radius: 5px;
   overflow: hidden;
   z-index: 0;
+  max-width: 86%;
 }
 .blog-card-event a {
   color: inherit;
@@ -44,6 +45,10 @@ body {
   background-size: cover;
   background-position: center;
   transition: transform 0.2s;
+}
+.eventSection{
+  background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+  padding-top: 1%;
 }
 .blog-card-event .details-event,
 .blog-card-event .details-event ul {
