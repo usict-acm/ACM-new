@@ -13,6 +13,7 @@
     rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
   <link
     href="https://fonts.googleapis.com/css2?family=Labrada:wght@500&family=Libre+Baskerville:wght@700&family=Playfair+Display:wght@500&family=Tilt+Prism&display=swap"
     rel="stylesheet">
@@ -71,8 +72,8 @@
             <h1 id="event-no">22</h1>
             <h2 class="event-text">&nbspEvents</h2>
           </div>
-          <p id="tagline">"Mile by mile we hit a milestone!"</p>
-          <button>view details</button>
+          <p id="tagline">"Mile by mile, we're crushing milestones with style!"</p>
+          <button >view details</button>
         </div>
       </div>
 
@@ -99,8 +100,8 @@
             <h1 id="event-no">08</h1>
             <h2 class="event-text">&nbspEvents</h2>
           </div>
-          <p id="tagline">"Pandemic cannot stop us!"</p>
-          <button>view details</button>
+          <p id="tagline">"Pandemic or not, we're unstoppable!"</p>
+          <button >view details</button>
         </div>
       </div>
 
@@ -113,8 +114,8 @@
             <h1 id="event-no">08</h1>
             <h2 class="event-text">&nbspEvents</h2>
           </div>
-          <p id="tagline">"The year in which it all started."</p>
-          <button>view details</button>
+          <p id="tagline">"The only way to do great work is to love what you do."</p>
+          <button >view details</button>
         </div>
       </div>
 
