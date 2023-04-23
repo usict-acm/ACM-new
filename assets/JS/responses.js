@@ -17,7 +17,7 @@ function getBotResponse(input) {
         return "Good evening! How can I help you today?";
     }
     // basic questions
-    else if(input.toLowerCase().includes("i'm feeling ill")){
+    else if(input.toLowerCase().includes("i am feeling ill")){
         return "Thank you for your response. Just to clarify, if you're feeling ill, it's important to seek medical advice from a healthcare professional doctor nearby you.";
     }
     else if (input.toLowerCase().includes("who can apply for membership")) {
