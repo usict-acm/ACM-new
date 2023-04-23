@@ -163,7 +163,7 @@
 </div>
     <!-- CHAT BAR BLOCK -->
     <div class="chat-bar-collapsible" id="chatbot" style="z-index:+1 !important;">
-        <button id="chat-button" type="button" class="collapsible" onclick="popup()"> <i id="chat-icon" style="color: #005daa;height:2px; width:25px;font-size:30px; margin-left:-10px" class="fas fa-robot" ></i>
+        <button id="chat-button" type="button" class="collapsible" onclick="popup()"> <i id="chat-icon" style="color: #005daa;height:2px; width:27px;font-size:30px; margin-left:-10px" class="fas fa-robot" ></i>
            
         </button>
 
