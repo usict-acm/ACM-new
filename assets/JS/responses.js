@@ -41,6 +41,10 @@ function getBotResponse(input) {
         return "In ACM we have Dev surce,RobIOtics,Lens,Canvas,enGame,InnovateAI,Cyberchain,ICPC,Research Cell"
     } else if (input.toLowerCase().includes("webchair")) {
         return "Apoorv Aron is web chair of USS ACM STUDENT CHAPTER";
+    } else if (input.toLowerCase().includes("treasurer")) {
+        return "Akash Mohan is  treasurer of USS ACM STUDENT CHAPTER";
+    } else if (input.toLowerCase().includes("secretary")) {
+        return "Nidhi Rathore is secretary of USS ACM STUDENT CHAPTER";
     } else if (input.toLowerCase().includes("apoorv")) {
         return "He is web chair of uss acm ,if you want to know more about him follow him on social media";
     } else if (input.toLowerCase().includes("team")) {
