@@ -404,8 +404,9 @@
 		  <h1 class="newsletter" style="margin-bottom:-2.3rem;"></h1>
           <input type="email" class="email" placeholder="Email" style=" border-radius:.4rem; border-color: #005daa;">
        </div>
-          <button class="btn" type="submit" value="Subscribe">subscribe</button>
+          <button class="btn" type="submit" onclick="alertMsg(event)" value="Subscribe">subscribe</button>
     </form>
+	
 
 	<!-- back to top and contact us-->
 	<?php
@@ -422,6 +423,8 @@
 
     <script src="assets\JS\home_new.js"></script>
 	<script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.3/dist/sweetalert2.all.min.js"></script>
+
 
 <script>
 	const type = new Typed ('.newsletter',{
@@ -431,6 +434,15 @@
 		backDelay:100, 
 		loop:true
 	})
+	function alertMsg(event){
+		  event.preventDefault();
+		  Swal.fire({
+            title: 'Thanks for Subscribing Our Newsletter!',
+            text: 'You clicked the button!',
+            icon: 'success',
+            confirmButtonColor: '#005daa' // Change the color of the "OK" button to green
+            });
+        } 
 
 
 
