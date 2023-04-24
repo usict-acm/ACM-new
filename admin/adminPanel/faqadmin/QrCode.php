@@ -68,7 +68,7 @@
     </style>
         <script>
         function checkdelete(){
-            return confirm("Are you sure? You wan't to delete ?");
+            return confirm("Are you sure you want to delete this row?");
         }
     </script>
 </head>
@@ -116,7 +116,7 @@
                                         echo "<td>" . $row['link_address'] . "</td>";                                       
                                         echo "<td>";
                                             echo "<a class='download-logo' href='".$row['path']."' download='".$row['link_for'].".png' title='Download QR' id='down-btn'  data-toggle='tooltip'><span class='glyphicon glyphicon-download-alt'></span></a>";
-                                            echo "<a class='tash-bin' href='faqadmin/del.php?Sno=". $row['code'] ."' title='Delete Record' data-toggle='tooltip' onclick='return checkdelete()'><span class='glyphicon glyphicon-trash'></span></a>";
+                                            echo "<a class='tash-bin' href='faqadmin/qrGenerator/delete_qr.php?Sno=". $row['id'] ."' title='Delete Record' data-toggle='tooltip' onclick='return checkdelete()'><span class='glyphicon glyphicon-trash'></span></a>";
                                         echo "</td>";
 
                                     echo "</tr>";
