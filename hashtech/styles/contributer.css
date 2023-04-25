@@ -13,7 +13,7 @@ html{
 
 
 .contributerDiv{
-    padding: 100px 0px;
+    padding: 100px 0px 200px 0px;
 }
 
 .contributer-heading{
@@ -164,6 +164,11 @@ html{
           width: 70%;
           height: auto;
         }
+    
+
+        .contri-main{
+            padding-bottom: 130px;
+        }
 
         .our-team .pic {
            width: 50%;
@@ -224,6 +229,10 @@ html{
           margin-top: 13px;
           width: 70%;
           height: auto;
+        }
+
+        .contributerDiv{
+            padding: 100px 0px 600px 0px;
         }
        
 
