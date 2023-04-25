@@ -27,6 +27,11 @@ body {
   padding: 0px;
   background-color: #4a81ff;
 }
+/* 
+.box{
+  padding-left: 0%;
+} */
+
 
 /* width */
 ::-webkit-scrollbar {
