@@ -23,7 +23,7 @@ h1 {
 .container-Navbar {
   cursor: pointer;
   position: absolute;
-  top: 5%;
+  top: 15%;
   right: 5%;
   width: 30px;
   height: 20px;
@@ -139,6 +139,7 @@ nav .close-Navbar div::after {
   background: #fff;
   transition: background 0.5s ease;
 }
+
 nav .close-Navbar div::before {
   transform: rotate(-45deg);
 }

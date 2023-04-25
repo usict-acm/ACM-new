@@ -10,6 +10,63 @@ html{
     
 }
 
+
+
+.contributerDiv{
+    padding: 100px 0px;
+}
+
+.contributer-heading{
+
+    padding-top: 100px;
+}
+
+.contributer-heading > h1 {
+    font-size: 50px;
+    color: red;
+    font-weight: bold;
+}
+
+.contributer-heading > .heading-bar {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.contributer-heading > .heading-bar > hr {
+    padding: 6px;
+    width: 50%;
+    border-radius: 30px;
+}
+
+
+
+.contributer-subheading{
+    padding-top: 70px;
+}
+
+.contributer-subheading > h1{
+    font-size: 50px;
+    color: white;
+}
+
+.contributer-subheading > .heading-bar > hr {
+    padding: 6px;
+    width: 30%;
+    border-radius: 30px;
+    
+}
+
+.contributer-subheading > .heading-bar {
+    display: flex;
+    justify-content: center;
+    
+}
+ 
+
+
+
+
  
 .our-team{
     margin-top: 7%;
@@ -24,6 +81,7 @@ html{
     transform: scale(1.05);
     transition: ease;
     transition: all 0.5s ease 0s;
+    box-shadow: 3px 3px 30px rgba(247, 5, 5, 0.842);
 
 }
 .our-team .pic{
@@ -106,6 +164,56 @@ html{
           width: 70%;
           height: auto;
         }
+
+        .our-team .pic {
+           width: 50%;
+           
+        }
+
+
+
+
+
+        .contributerDiv{
+            padding: 50px 0px;
+        }
+        
+        .contributer-heading{
+        
+            padding-top: 150px;
+        }
+        
+        .contributer-heading > h1 {
+            font-size: 25px;
+        }
+        
+        .contributer-heading > .heading-bar {
+          display: flex;
+          justify-content: center;
+          
+        }
+        
+        .contributer-heading > .heading-bar > hr {
+            width: 50%;
+        }
+        
+        
+        .contributer-subheading{
+            padding-top: 70px;
+        }
+        
+        .contributer-subheading > h1{
+            font-size: 30px;
+        }
+        
+        .contributer-subheading > .heading-bar > hr {
+            padding: 4px;
+            width: 50%;
+            
+        }
+         
+        
+        
     }
 
 
@@ -137,5 +245,11 @@ html{
             
         }
         /* .our-team .pic  */
+
+
+
+
+   
+        
         
     }
