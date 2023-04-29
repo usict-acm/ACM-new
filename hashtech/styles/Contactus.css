@@ -346,7 +346,7 @@
     }
 
     .Contactus-section{
-        min-height: 130vh;
+        min-height: 170vh !important;
         padding-bottom:100px;
         padding-top: 50px;
        }
@@ -384,7 +384,7 @@
 {
 
     .Contactus-section{
-     min-height: 150vh;
+     min-height: 200vh !important;
      padding-bottom:150px;
      
     }
