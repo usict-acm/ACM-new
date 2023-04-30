@@ -8,11 +8,11 @@ body {
   background: #f1f1f1;
 }
 
-.events-subheading{
+.events-subheading {
   padding-top: 70px;
 }
 
-.events-subheading > h1{
+.events-subheading > h1 {
   font-size: 50px;
   color: white;
 }
@@ -21,13 +21,11 @@ body {
   padding: 6px;
   width: 12%;
   border-radius: 30px;
-  
 }
 
 .events-subheading > .heading-bar {
   display: flex;
   justify-content: center;
-  
 }
 
 .blog-card-event {
@@ -68,9 +66,12 @@ body {
   background-position: center;
   transition: transform 0.2s;
 }
-.eventSection{
+.eventSection {
   background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
   padding-top: 1%;
+  background: linear-gradient(112.1deg, #0f0d0d 11.4%, #1a0101 70.2%);
+  background: url(https://images.unsplash.com/photo-1567360425618-1594206637d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBhbmQlMjByZWR8ZW58MHx8MHx8&w=1000&q=80)
+    center center/cover no-repeat;
 }
 .blog-card-event .details-event,
 .blog-card-event .details-event ul {
@@ -93,7 +94,7 @@ body {
 }
 .blog-card-event .details-event a {
   -webkit-text-decoration: dotted underline;
-          text-decoration: dotted underline;
+  text-decoration: dotted underline;
 }
 .blog-card-event .details-event ul li {
   display: inline-block;
@@ -181,7 +182,7 @@ body {
   left: 0%;
 }
 @media (min-width: 640px) {
-  .blog-card{
+  .blog-card {
     width: 80% !important;
   }
   .blog-card-event {
@@ -220,7 +221,7 @@ body {
 }
 
 @media (max-width: 833px) {
-  .blog-card{
+  .blog-card {
     width: 80% !important;
   }
   .blog-card-event {
@@ -258,7 +259,7 @@ body {
   }
 }
 
-.blog-card{
+.blog-card {
   width: 98%;
 }
 .blog-card.blog-card-event {

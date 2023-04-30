@@ -1,4 +1,4 @@
-  * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -87,9 +87,9 @@ nav ul .list-navbar a {
   opacity: 0;
   pointer-events: none;
 }
-.navbar--list--item{
+.navbar--list--item {
   font-size: larger;
-  font-weight:  800;
+  font-weight: 800;
 }
 nav ul .list-navbar a:after {
   content: "";
@@ -158,23 +158,20 @@ nav .close-Navbar:hover div::after {
     font-size: 25px;
   }
 }
-@media (max-width:900)
-{
-  .container-Navbar{
+@media (max-width: 900) {
+  .container-Navbar {
     top: 5%;
     margin-right: 10px;
   }
 }
-@media (max-width:500)
-{
-  .container-Navbar{
+@media (max-width: 500) {
+  .container-Navbar {
     top: 5%;
     right: 10px;
   }
 }
-@media (max-width:420)
-{
-  .container-Navbar{
+@media (max-width: 420) {
+  .container-Navbar {
     top: 5%;
     right: 20px;
   }
