@@ -27,7 +27,7 @@ h1 {
   right: 5%;
   /* width: 30px; */
   height: 20px;
-  width: 5%;
+  width: 20%;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -43,7 +43,7 @@ h1 {
 .bars-Navbar::after {
   content: "";
   position: absolute;
-  width: 30px;
+  width: 30px !important;
   height: 4px;
   background: red;
 }
