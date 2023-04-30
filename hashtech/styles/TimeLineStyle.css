@@ -11,6 +11,28 @@ body {
   border: 2px;
 }
 
+.timeline-subheading{
+  padding-top: 70px;
+}
+
+.timeline-subheading > h1{
+  font-size: 50px;
+  color: white;
+}
+
+.timeline-subheading > .heading-bar > hr {
+  padding: 6px;
+  width: 100%;
+  border-radius: 30px;
+  
+}
+
+.timeline-subheading > .heading-bar {
+  display: flex;
+  justify-content: center;
+  
+}
+
 .timeline-section {
   height: 100vh;
   padding: 2rem;
