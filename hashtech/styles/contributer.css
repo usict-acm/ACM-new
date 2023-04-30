@@ -63,8 +63,25 @@ html{
     
 }
  
+.hashtech_logo_contri{
+    
+        height: 200%;
+        width: 30%;
+        margin-left: 100%;
+        margin-top: -2%;
 
+}
+@media only screen and (max-width: 600px) and (min-width:350px) {
+    
+    .hashtech_logo_contri{
+    
+        height: 200%;
+        width: 30%;
+        margin-left: 100%;
+        margin-top: -7%;
 
+}
+}
 
 
  
