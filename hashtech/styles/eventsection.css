@@ -8,6 +8,28 @@ body {
   background: #f1f1f1;
 }
 
+.events-subheading{
+  padding-top: 70px;
+}
+
+.events-subheading > h1{
+  font-size: 50px;
+  color: white;
+}
+
+.events-subheading > .heading-bar > hr {
+  padding: 6px;
+  width: 12%;
+  border-radius: 30px;
+  
+}
+
+.events-subheading > .heading-bar {
+  display: flex;
+  justify-content: center;
+  
+}
+
 .blog-card-event {
   display: flex;
   flex-direction: column;
