@@ -380,11 +380,11 @@
     }
 }
 
-@media (max-width: 600px)
+@media (max-width: 990px)
 {
 
     .Contactus-section{
-     min-height: 140vh !important;
+     min-height: 175vh !important;
      padding-bottom:50px;
      
     }
@@ -413,7 +413,7 @@
 }
 
 
-@media (max-width: 380px)
+@media (max-width: 550px)
 {
 
     .Contactus-section{
