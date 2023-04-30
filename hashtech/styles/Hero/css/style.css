@@ -40,6 +40,28 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000; 
 }
+
+img{
+  width: 40px !important;
+    height: 40px !important ;
+    margin-top: 30px !important ;
+    margin-left: 10px !important ;
+}
+.colons{
+  color: #fff;
+  font-size: 40px;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+}
+
+
 .fs-10{
   font-size: 10px;
 }
@@ -398,15 +420,6 @@ animation: 150s para infinite linear;
     top: 22px;
     right: 0px;
 }
-header{
-  padding-top: 4px;
-}
-
-header > img {
-  width: 110px;
-  margin: 20px;
-}
-
 
 .timer{
   font-size: 25px;
@@ -453,17 +466,27 @@ padding: 0px 0px;
 	margin-top: 170px;
 
   }
+
+  .content #countdown ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
   
   .content #countdown ul li {
     
     color: #c0ebf9;
     text-shadow: 0 0 40px rgba(10, 175, 230, 1),  0 0 40px rgba(10, 175, 230, 0);
-
     display: inline-block;
     font-size: 1.5em;
     list-style-type: none;
     padding: 1em;
     text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .colons{
+    margin-bottom: 39px;
   }
   
   .content #countdown ul li span {

@@ -5,7 +5,7 @@
           day = hour * 24;
 
     
-    const countDown = new Date("may 14,  2023 00:00:00").getTime(),
+    const countDown = new Date("may 18,  2023 00:00:00").getTime(),
         x = setInterval(function() {    
   
           const now = new Date().getTime(),
@@ -16,10 +16,12 @@
             document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
             document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
   
-          if (distance < 0) {
-            document.getElementById("countdown").style.display = "none";
-            // document.getElementById("content").style.display = "block";
-            clearInterval(x);
-          }
+            if (distance < 0) {
+              document.getElementById("days").innerText = "00",
+              document.getElementById("hours").innerText = "00",
+              document.getElementById("minutes").innerText = "00",
+              document.getElementById("seconds").innerText = "00";
+              clearInterval(x);
+            }
         }, 0)
     }());
