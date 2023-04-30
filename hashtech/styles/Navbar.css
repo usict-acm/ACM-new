@@ -162,13 +162,20 @@ nav .close-Navbar:hover div::after {
 {
   .container-Navbar{
     top: 5%;
-    margin-right: 35px;
+    margin-right: 10px;
   }
 }
-@media (max-width:400)
+@media (max-width:500)
 {
   .container-Navbar{
     top: 5%;
-    right: 10%;
+    right: 10px;
+  }
+}
+@media (max-width:420)
+{
+  .container-Navbar{
+    top: 5%;
+    right: 20px;
   }
 }

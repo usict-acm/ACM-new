@@ -45,9 +45,9 @@ body {
 }
 
 img{
-  width: 40px !important;
-    height: 40px !important ;
-    margin-top: 30px !important ;
+  width: 60px !important;
+    height: 60px !important ;
+    margin-top: 55px !important ;
     margin-left: 10px !important ;
 }
 .colons{
@@ -435,7 +435,7 @@ header > img:nth-child(2){
 
 .hero-btn input      
 {
-    margin-top: 80px;
+    margin-top: 40px;
     position: relative;
     cursor: pointer;
     background: #de1414;
@@ -517,7 +517,7 @@ padding: 0px 0px;
     display: flex;
     color: black;
 	justify-content: center;
-	margin-top: 60px;
+	margin-top: 110px;
 
   }
 
@@ -549,6 +549,7 @@ padding: 0px 0px;
   }
   
   @media all and (max-width: 768px) {
+
 
     
     .content #countdown ul li {
@@ -628,6 +629,23 @@ padding: 0px 0px;
 
 
 @media only screen and (max-width: 768px) {
+/* 
+  .hero-btn input      
+{
+    margin-top: 110px;
+    /* position: relative; */
+    /* cursor: pointer; */
+    /* background: #de1414; */
+    /* border-radius: 30px; */
+    /* color: #fff; */
+    /* border: none; */
+    /* width: 180px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 5px;
+} */ 
+
   .colon{
   font-size: 32px;
   padding-top: 0rem;
