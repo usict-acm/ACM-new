@@ -2,7 +2,7 @@
 .footer-work{
     position: relative;
     width: 100%;
-    background: #1b1b1b;
+    background: #1c1e21;
     min-height: 100px;
     padding: 20px 50px;
     display: flex;
@@ -105,5 +105,38 @@
     100%
     {
         background-position-x: 1000px;
+    }
+}
+
+
+.footer-work .footer-thankyou{
+    display: flex;
+}
+
+.footer-work .footer-thankyou img{
+    width: 60px;
+
+}
+
+.footer-work .footer-thankyou p{
+    padding: 20px 0px;
+}
+
+.footer-work .footer-thankyou .footer-thankyou-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 30px;
+}
+
+
+
+@media (max-width: 600px){
+    .footer-work .footer-thankyou {
+        display: block;
+    }
+
+    .footer-work .footer-thankyou .footer-thankyou-logo{
+        padding: 10px 30px 0px 30px;
     }
 }

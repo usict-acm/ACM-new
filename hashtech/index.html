@@ -19,6 +19,8 @@
   <!-- Event section Css -->
   <link rel="stylesheet" href="./styles/eventsection.css">
 
+  
+
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
   <!-- Navbar Links end-->
@@ -53,7 +55,7 @@
 
 
   <!-- navbar starts -->
-  <div class=" container container-Navbar" style="z-index:+1">
+  <div class=" container container-Navbar" style="z-index:+1;position: fixed;">
     <div class="bars-Navbar bars"></div>
   </div>
   <nav style="z-index:+2 !important" class="navbar--open">
@@ -78,7 +80,10 @@
     <div id="main">
       <div id="particles-js"></div>
 
-
+      <header>
+        <img src='https://usict.acm.org/assets/images/acm-logo-round.png' />
+        <img id="logo2" src="styles/Hero/assets/acmLogo2.png" alt="ACM LOGO 2">
+      </header>
 
       <div class="container-fluid">
         <img class="acm_logo" src="https://usict.acm.org/assets/images/acm-logo-round.png" height="80px" alt="acm-logo">
@@ -114,6 +119,10 @@
 
 
 
+            <div class="hero-btn">
+              <input type="submit" value="Result">
+          </div>
+
 
           </div>
         </div>
@@ -122,6 +131,9 @@
   </section>
 
   <!-- Hero Section End -->
+
+
+
 
   <!-- TimeLine Section Start -->
   <section id="TimeLine" class="timeline-section">
@@ -337,6 +349,10 @@
 
   <!--contact us end-->
 
+
+
+
+
   <!--footer start-->
   <footer class="footer-work">
     <div class="footer-waves">
@@ -357,8 +373,13 @@
       <li><a href="#">Our Team</a></li>
       <li><a href="#">Contact us</a></li>
     </ul>
-    <p>Thank you for connecting with us.</p>
-  </footer>
+    <div class="footer-thankyou">
+      <div class="footer-thankyou-logo">
+        <img src="https://usict.acm.org/assets/images/acm-logo-round.png" alt="Footer-ACM-LOGO">
+      </div>
+      <p>Thank you for connecting with us.</p>
+    </div>
+</footer>
 
 
 
