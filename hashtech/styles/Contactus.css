@@ -411,3 +411,37 @@
         width: 100%;
     }
 }
+
+
+@media (max-width: 380px)
+{
+
+    .Contactus-section{
+     min-height: 180vh !important;
+     padding-bottom:50px;
+     
+    }
+
+
+    .Contact-container .contactForm
+    {
+        padding: 25px;
+    }
+
+    .Contact-container .contactInfo{
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .Contact-container .contactInfo ul.sci
+    {
+        margin-top: 40px;
+    }
+
+    .Contact-container .contactForm .formBox .inputBox.w50
+    {
+        width: 100%;
+    }
+}
+
