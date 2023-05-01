@@ -24,7 +24,10 @@ h2 {
       animation-duration: 3s;
   }
   
-  
+  .acm_logo{
+    height: 10em;
+    background: transparent;
+  }
   
   
   
