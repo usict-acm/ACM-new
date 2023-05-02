@@ -693,7 +693,7 @@ header {
   width: 10px;
 }
 
-header > img {
+/* header > img {
   width: 70px;
 }
 
@@ -706,7 +706,8 @@ header > #logo2{
 header > img:nth-child(2){
   width: 210px;
   border-radius: 10px;
-}
+} */
+
 
 /* Track */
 ::-webkit-scrollbar-track {
