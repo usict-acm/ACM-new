@@ -14,12 +14,11 @@ body {
 
 .events-subheading > h1 {
   font-size: 50px;
-  color: white;
+  color: #ff2c2c;
 }
 
 .events-subheading > .heading-bar > hr {
-  padding: 6px;
-  width: 12%;
+  width: 100%;
   border-radius: 30px;
 }
 
@@ -67,6 +66,13 @@ body {
   transition: transform 0.2s;
 }
 .eventSection {
+  min-height: 100vh;
+  padding: 2rem;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
   padding-top: 1%;
   background: linear-gradient(112.1deg, #0f0d0d 11.4%, #1a0101 70.2%);
