@@ -40,7 +40,7 @@ a:focus {
 .sec-title .title {
   position: relative;
   display: block;
-  font-size: 38px;
+  font-size: clamp(1.9rem, 3.8vw, 38px);
   line-height: 24px;
   color: #f54848;
   font-weight: 500;
@@ -195,8 +195,10 @@ a:focus {
 }
 
 .about-image {
-  width: 420px;
+  max-width: 420px;
+  width: 100%;
   height: 510px;
+
   object-fit: cover;
 }
 .about-section .image-column .text-layer {
@@ -226,14 +228,14 @@ a:focus {
   border-radius: 50px;
 }
 .about-section .image-column .inner-column .author-desc h2 {
-  font-size: 21px;
+  font-size: clamp(1rem, 3.8vw, 21px);
   letter-spacing: 1px;
   text-align: center;
   color: #fff;
   margin: 0;
 }
 .about-section .image-column .inner-column .author-desc span {
-  font-size: 16px;
+  font-size: clamp(0.7rem, 3.8vw, 16px);
   letter-spacing: 6px;
   text-align: center;
   color: #fff;
