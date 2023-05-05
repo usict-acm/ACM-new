@@ -1026,7 +1026,6 @@ header > img:nth-child(2){
   margin-top: 5vh;
   font-size: 5vh;
   color: whitesmoke;
-
 }
 
 .spnsrhr{
@@ -1061,11 +1060,34 @@ body{
   .card{
     width: 30vw;
   }
+
+  .spnsrhr{
+    width: 25% ;
+  }
 }
 
 @media only screen and (max-width: 700px){
   .card{
     width: 40vw;
   }
+
+  .spnsrhr{
+    width: 25% ;
+  }
 }
 
+@media only screen and (max-width: 550px){
+ 
+  .spnsrhr{
+    width: 35% ;
+  }
+
+}
+
+@media only screen and (max-width: 400px){
+ 
+  .spnsrhr{
+    width: 45% ;
+  }
+
+}
