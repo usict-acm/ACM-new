@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<head>
+	<title>QRCode generator</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="qrcode.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+	<script>
+
+		function submit_qr(){
+			var image_data = document.getElementById("qrImg").src;
+			var qrData = new FormData();
+			qrData.append('link_name', $("#link_name").val());
+			qrData.append('link_address', $("#link_address").val());
+			qrData.append('image_data', image_data);
+
+			$.ajax({
+        type: "POST",
+        url: "../../../blogAdmin/api.php/?q=postQr",
+        data : qrData,
+        cache: false,
+        processData: false,
+        contentType: false,
+        success: function(data){
+            alert(data.message);
+            // window.location.reload();
+        },
+        error: function(xhr, status, error){
+            window.location.reload();
+        },
+    })
+		}
+		;
+	</script>
+
+	<div class="container" style="height:70vh; margin-top: auto;">
+		<h1>QR generator</h1>
+		<form method="POST" enctype="multipart/form-data" onsubmit="submit_qr();return false">
+			<div class="box">
+				<input type="text" placeholder="Link For"  id="link_name" style="width:80%" class="input-form"  /><br />
+			</div>
+			<div class="box">
+				<input type="text" placeholder="Enter link"  id="link_address" style="width:80%"  /><br />
+			</div>
+			<input type="submit" id="btn" value="submit">
+			<!-- <button id="btn" type="submit" onclick="submit_qr()">Generate qr</button> -->
+			<div id="qrcode" style="width:100px; height:100px; margin: 35px auto 75px auto;"></div>
+
+
+		</form>
+		<a id='qrdl' id='btn' hidden>download</a>
+	</div>
+		<script type="text/javascript">
+			var qrcode = new QRCode(document.getElementById("qrcode"), {
+				width: 150,
+				height: 150
+			});
+	
+			function makeCode() {
+				var elText = document.getElementById("link_address");
+	
+				qrcode.makeCode(elText.value);
+				setTimeout(() => {
+					let qelen = document.querySelector('#qrcode img');
+					let dlink = document.querySelector("#qrdl");
+					let qr = qelen.getAttribute('src');
+					dlink.setAttribute('href', qr);
+					dlink.setAttribute('download', 'filename');
+					dlink.removeAttribute('hidden');
+				}, 500);
+	
+			}
+			// makeCode();
+
+			$("#link_address").
+				on("blur", function () {
+					makeCode();
+				}).
+				on("keydown", function (e) {
+					if (e.keyCode == 13) {
+						makeCode();
+					}
+				});
+		</script>	
+</body>
