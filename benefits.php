@@ -601,7 +601,7 @@
                   </div>
                   <div class="form-group col-md-6">
                     <input id="acm_no" required type="number" name="acm_no" class="form-input-boxes-manual form-control test-dev3" placeholder="ACM Membership No.">
-                    If you don't have membership number, <a href="https://bit.do/joinacm" target="_blank"><b>Click Here</b></a> to get one.
+                    If you don't have membership number, <a href="https://usict.acm.org/link/joinacm" target="_blank"><b>Click Here</b></a> to get one.
                   </div>
                 </div>
                 <div class="form-group">

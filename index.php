@@ -291,7 +291,7 @@
 			<a class="btn skype"><i class="fa fa fa-child"></i></a>
 			<div class="write" id="wrete">
 			<?php include './visitorCounter.php'?>
-				<h1 class="sob-heading"><?php echo  $total_visitors?>+</h1>
+				<h1 class="sob-heading"><?php echo  $visitor_count?>+</h1>
 				<p class="gratext">Monthly Visitors</p>
 			</div>
 		</div>
