@@ -9,6 +9,7 @@
 	
 	<title>GGSIP University USS ACM Student Chapter</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
 	<link rel="stylesheet" href="./assets/CSS/newStyle.css" />
 	<link rel="stylesheet" href="./assets/CSS/header.css">
@@ -297,7 +298,48 @@
 		</div>
 
 	</div>
-	<form class="subscriber-strip">
+	<?php
+	if($_SERVER["REQUEST_METHOD"] == "POST"){
+		require_once('./admin/blogAdmin/database.php');
+
+		$database = new Database();
+    	$db = $database->connect();
+		$conn = $db;
+
+		if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		}
+
+		$email = $_POST["email"];
+
+		$sql = "SELECT email FROM newsletter_email WHERE email = '$email'";
+		$result = $conn->query($sql);
+
+		if ($result->num_rows > 0) {
+			// echo "Email address already exists in our database. Please try again with a different email address.";
+			echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+			echo '<script>';
+			echo 'Swal.fire({icon: "error", title: "Email already exist", text: "Please try again with a different email", confirmButtonColor: "#005daa"});';
+			echo '</script>';
+		} else {
+			// Insert form data into database
+			$sql = "INSERT INTO newsletter_email (email) VALUES ('$email')";
+
+			if ($conn->query($sql) === TRUE) {
+				// echo "Thank you for subscribing to our newsletter!";
+				echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+				echo '<script>';
+				echo 'Swal.fire({icon: "success", title: "Thank you for subscribing to our newsletter!", confirmButtonColor: "#005daa"});';
+				echo '</script>';
+			} else {
+				echo "Error: " . $sql . "<br>" . $conn->error;
+			}
+		}
+		$conn->close();
+
+	}
+	?>
+	<form class="subscriber-strip" method="post" >
 
 		<style>
 			h1{
@@ -402,12 +444,12 @@
 		</style>
         <div class="info">
 		  <h1 class="newsletter" style="margin-bottom:-2.3rem;"></h1>
-          <input type="email" class="email" placeholder="Email" style=" border-radius:.4rem; border-color: #005daa;">
+          <input type="email" class="email" id="email" name="email" placeholder="Email" style=" border-radius:.4rem; border-color: #005daa;" required >
        </div>
-          <button class="btn" type="submit" onclick="alertMsg(event)" value="Subscribe">subscribe</button>
+          <input class="btn" type="submit" value="Subscribe"></input>
     </form>
 	
-
+	
 	<!-- back to top and contact us-->
 	<?php
 	include("contact.php")
@@ -423,7 +465,6 @@
 
     <script src="assets\JS\home_new.js"></script>
 	<script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.3/dist/sweetalert2.all.min.js"></script>
 
 
 <script>
@@ -433,19 +474,7 @@
 		backSpeed: 100 , 
 		backDelay:100, 
 		loop:true
-	})
-	function alertMsg(event){
-		  event.preventDefault();
-		  Swal.fire({
-            title: 'Thanks for Subscribing Our Newsletter!',
-            text: 'You clicked the button!',
-            icon: 'success',
-            confirmButtonColor: '#005daa' // Change the color of the "OK" button to green
-            });
-        } 
-
-
-
+	});
 </script>
     </body>
 
