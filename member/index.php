@@ -32,9 +32,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <?php
-	include("./header.php");
-	?>
+   
     <div class="container--member">
       <div class="left-container--member">
         <h2>I am Nandini Sharma</h2>
@@ -98,10 +96,6 @@
 
         <div class="stats-section--member">
           <div class="stat--member">
-            <h4>Age</h4>
-            <p>21</p>
-          </div>
-          <div class="stat--member">
             <h4>Position in ACM</h4>
             <p>Web Chair</p>
           </div>
@@ -124,10 +118,6 @@
           <div class="stat--member">
             <h4>Team</h4>
             <p>Web Team, Core Team</p>
-          </div>
-          <div class="stat--member">
-            <h4>First Joined ACM on</h4>
-            <p>9th October 2022</p>
           </div>
           <div class="stat--member">
             <h4>Email</h4>
@@ -184,10 +174,10 @@
             class="project-img--member"
           />
           <ul class="description--member">
-            <span>Notepad</span>
+            <!-- <span>Notepad</span> -->
             <li>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa,
-              hic similique doloremque rerum saepe autem!
+              Built a notepad from scratch using react and tailwindcss which  can be used to track your progress and leleleleelel
+              
             </li>
             <li>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa,

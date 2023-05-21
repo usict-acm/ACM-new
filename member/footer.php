@@ -38,7 +38,7 @@
 						<div class="footer-logo text-center">
 							<a href="./">
 								<img src="./acm-icon.png" class="img-primary" alt="logoss" />
-								<img src="./assets/images/outstanding-website.png" class="img-secondary" alt="" />
+								<img src="./outstanding-website.png" class="img-secondary" alt="" />
 							</a>
 						</div>
 					</div>

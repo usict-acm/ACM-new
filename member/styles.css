@@ -84,7 +84,7 @@ body {
 
 .heading--member {
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 50px;
 }
 .heading--member span {
   color: #598fe2;
@@ -126,14 +126,16 @@ body {
   border-radius: 10px;
   color: white;
   transition: all 0.4s ease-in-out;
-
-  background-color: #598fe2;
+  border: 2px solid #005daa;
+  background-color: #005daa;
   font-family: "Poppins";
   cursor: pointer;
+  font-weight: 500;
 }
 .cvbtn--member:hover {
-  color: black;
-  background-color: lightblue;
+  border: 2px solid #005daa;
+  background-color: white;
+  color: #598fe2;
 }
 
 .right-container--member {
@@ -257,14 +259,20 @@ body {
   padding: 0.8rem;
   color: white;
   border-radius: 10px;
-  border: none;
-  background-color: #0e76a8;
+  border: 2px solid #005daa;
+  background-color: #005daa;
   cursor: pointer;
   transition: 0.4s all ease;
 }
 .project-btn--member:hover {
   background-color: #e3f0ff;
+  color: #598fe2;
+  border: 2px solid #005daa;
+}
+.description--member span {
+  font-size: 30px;
   color: black;
+  border-bottom: 3px solid black;
 }
 .description--member {
   /* width: 380px; */
@@ -310,7 +318,7 @@ body {
 .icons-link--member {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .project-img--member {
@@ -389,6 +397,7 @@ body {
     width: 17rem;
   }
   .heading--member {
-    font-size: 25px;
+    font-size: 5rem;
+    margin-bottom: 2rem;
   }
 }
