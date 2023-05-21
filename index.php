@@ -368,7 +368,7 @@
 			}
 			.btn{
 				background: #005daa;
-				margin-left:40rem;
+				margin-left:31rem;
 				font-size:1rem;
 				color:#fff;
 				font-weight:500;
@@ -382,7 +382,7 @@
 
 			}
 			.email{
-				margin-left:27.5rem;
+				margin-left:18.5rem;
 			}
 			.btn:hover{
 				background:#fff;
@@ -432,11 +432,11 @@
 				   margin-left:-15rem;
 			    }
 				.email{
-					margin-left:-17rem;
+					margin-left:-19rem;
 					margin-top:3rem;
 				}
 				.btn{
-					margin-left:-4rem;
+					margin-left:-6rem;
 				}
 
 			}
@@ -469,7 +469,7 @@
 
 <script>
 	const type = new Typed ('.newsletter',{
-		strings:['ACM Newsletter Signup'],
+		strings:['ACM Newsletter'],
 		typeSpeed:100, 
 		backSpeed: 100 , 
 		backDelay:100, 
