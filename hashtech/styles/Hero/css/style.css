@@ -1056,7 +1056,7 @@ body{
   overflow-x: hidden;
 }
 
-@media only screen and (max-width: 900px){
+
   .card{
     width: 30vw;
   }
@@ -1064,7 +1064,6 @@ body{
   .spnsrhr{
     width: 25% ;
   }
-}
 
 @media only screen and (max-width: 700px){
   .card{
@@ -1087,6 +1086,13 @@ body{
 @media only screen and (max-width: 400px){
  
   .spnsrhr{
+    width: 45% ;
+  }
+
+}
+@media only screen and (max-width: 400px){
+ 
+  .{
     width: 45% ;
   }
 

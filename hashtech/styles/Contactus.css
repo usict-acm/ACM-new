@@ -29,7 +29,7 @@
   min-width: 1050px;
   min-height: 500px;
   display: flex;
-  z-index: 1000;
+  z-index: 1;
   /* border-radius: 22px; */
   /* background-color: #fff; */
 }
