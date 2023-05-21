@@ -207,18 +207,23 @@
 }
 #ss1 {
   border-radius: 15px;
+  padding-left: 15px;
 }
 #ss2 {
   border-radius: 15px;
+  padding-left: 15px;
 }
 #ss3 {
   border-radius: 15px;
+  padding-left: 15px;
 }
 #ss4 {
   border-radius: 15px;
+  padding-left: 15px;
 }
 #ss5 {
   border-radius: 15px;
+  padding-left: 15px;
 }
 
 .Contact-container .contactForm .formBox .inputBox input:focus ~ span,
