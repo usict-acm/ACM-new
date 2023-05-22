@@ -1036,7 +1036,7 @@ header > img:nth-child(2){
 }
 
 .card{
-  margin-top: 15vh;
+  margin-top: 7vh;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -1056,15 +1056,14 @@ body{
   overflow-x: hidden;
 }
 
-@media only screen and (max-width: 900px){
+
   .card{
-    width: 30vw;
+    width: 19vw;
   }
 
   .spnsrhr{
     width: 25% ;
   }
-}
 
 @media only screen and (max-width: 700px){
   .card{
