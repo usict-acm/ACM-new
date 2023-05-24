@@ -31,6 +31,7 @@ a:focus {
 .h2-color {
   color: #c0c0c0;
 }
+
 .sec-title {
   position: relative;
   z-index: 1;
@@ -140,6 +141,7 @@ a:focus {
   background-color: #ff2222;
   color: #ffffff;
 }
+
 .about-section {
   position: relative;
   padding: 60px 0;
@@ -147,9 +149,7 @@ a:focus {
   padding: 120px 0 70px;
   background-color: #191e34;
   background: linear-gradient(112.1deg, #0f0d0d 11.4%, #1a0101 70.2%);
-  background: #fff
-    url(https://images.unsplash.com/photo-1624139283061-adee53a59791?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBncmFkaWVudHxlbnwwfHwwfHw%3D&w=1000&q=80)
-    center center/cover no-repeat;
+  background: #fff url(https://images.unsplash.com/photo-1624139283061-adee53a59791?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBncmFkaWVudHxlbnwwfHwwfHw%3D&w=1000&q=80) center center/cover no-repeat;
 
   color: #fff;
 }
@@ -201,6 +201,7 @@ a:focus {
 
   object-fit: cover;
 }
+
 .about-section .image-column .text-layer {
   position: absolute;
   right: -110px;
@@ -217,6 +218,7 @@ a:focus {
   padding-left: 80px;
   padding-bottom: 0px;
 }
+
 .about-section .image-column .inner-column .author-desc {
   position: absolute;
   bottom: 16px;
@@ -227,6 +229,7 @@ a:focus {
   width: calc(100% - 152px);
   border-radius: 50px;
 }
+
 .about-section .image-column .inner-column .author-desc h2 {
   font-size: clamp(1rem, 3.8vw, 21px);
   letter-spacing: 1px;
@@ -234,6 +237,7 @@ a:focus {
   color: #fff;
   margin: 0;
 }
+
 .about-section .image-column .inner-column .author-desc span {
   font-size: clamp(0.7rem, 3.8vw, 16px);
   letter-spacing: 6px;
@@ -242,6 +246,7 @@ a:focus {
   display: block;
   font-weight: 400;
 }
+
 .about-section .image-column .inner-column:before {
   content: "";
   position: absolute;
@@ -258,6 +263,7 @@ a:focus {
 .about-section .image-column .image-1 {
   position: relative;
 }
+
 .about-section .image-column .image-2 {
   position: absolute;
   left: 0;

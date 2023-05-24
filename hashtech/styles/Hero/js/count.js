@@ -5,7 +5,7 @@
           day = hour * 24;
 
     
-    const countDown = new Date("may 18,  2023 00:00:00").getTime(),
+    const countDown = new Date("may 29,  2023 00:00:00").getTime(),
         x = setInterval(function() {    
   
           const now = new Date().getTime(),
