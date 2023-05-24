@@ -627,9 +627,10 @@
             <li><a href="https://usict.acm.org/linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
           </ul>
         </div>
+
         <div class="contactForm">
           <h1 id="PY">Contact us</h1>
-          <form class="formBox" id="contactUsForm">
+          <form class="formBox" id="contactUsForm" method="POST" onsubmit="submit_form()">
             <div class="inputBox w50">
               <input type="text" id="ss1" name="" required>
 
@@ -732,7 +733,35 @@
 <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
 <script src="./styles/Navbar.js"></script>
 <script src="./styles/Hero/js/count.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script>
+          function submit_form() {
+            let formData = new FormData();
 
+            formData.append('firstName', $("#ss1").val());
+            formData.append('lastName', $("#ss2").val());
+            formData.append('email', $("#ss3").val());
+            formData.append('mobileNumber', $("#ss4").val());
+            formData.append('message', $("#ss5").val());
+            console.log(formData);
+            $.ajax({
+              type: "POST",
+              url: "./api.php/?q=postForm",
+              data: formData,
+              cache: false,
+              processData: false,
+              contentType: false,
+              success: function (data) {
+                alert(data.message);
+                // window.location.reload();
+              },
+              error: function (xhr, status, error) {
+                window.location.reload();
+              },
+            });
+          }
+        </script>`
 <script>
   document.getElementById("in-down").style.zIndex = "0";
   let form = document.getElementById("contactUsForm");
@@ -742,7 +771,7 @@
       keyboard: false
     })
     // call backend here!
-    console.log(e);
+    // console.log(e);
     myModal.show();
   })
 </script>
