@@ -1,6 +1,6 @@
 const open = document.querySelector(".container");
 const close = document.querySelector(".close");
-var tl = gsap.timeline({ defaults: { duration: 0.85, ease: "expo.inOut" } });
+var tl = gsap.timeline({ defaults: { duration: 0.4, ease: "expo.inOut" } });
 open.addEventListener("click", () => {
   if (tl.reversed()) {
     tl.play();
