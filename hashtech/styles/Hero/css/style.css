@@ -831,7 +831,7 @@ header > img:nth-child(2){
   flex-direction: column;
 }
  .spnsrimg{
-  height: 100%;
+  /* height: 150%; */
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -840,12 +840,21 @@ header > img:nth-child(2){
   z-index: -5;
  }
 .card img{
-  position: relative;
-    height: 30vh;
-    left: -10%;
-    width: 130%;
-    top: -10%;
-    /* z-index: -20; */
+    position: relative;
+    height: 32vh;
+    left: 4%;
+    width: 93%;
+    top: 2%;
+    border-radius: 12px;
+}
+
+.cardtxt{
+    margin-left: 9px;
+    margin-top: 35px;
+    text-align: center;
+    font-size: 169%;
+    color: white;
+    font-weight: bolder;
 }
 
 /* .spnsrtxt{
@@ -872,22 +881,28 @@ header > img:nth-child(2){
     width: 23%;
     height: .8%;
     border-radius: 650px;
-} */
-
+  } */
+  
 .card {
-  /* top: -72.5%;
-  left: 40%; */
-  width: 19vw;
-  height: 40vh;
-  /* padding: 2vw; */
+  width: 26vw;
+  height: 45vh;
   position: relative;
-  display: inline-block;
-  justify-content: space-around;
-  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
   background-color: hsl(0, 0%, 0%);
   font-size: 15px;
-  text-align: center;
   border-radius: 20px;
+  margin-top: 7vh;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  
+  /* display: inline-block; */
+  /* padding: 2vw; */
+  /* top: -72.5%;
+  left: 40%; */
+  /* text-align: center; */
  }
  .card::before {
   content: "";
@@ -929,6 +944,12 @@ header > img:nth-child(2){
   z-index: -2;
   animation: spin 3s infinite ease-in-out;
   will-change: contents;
+ }
+
+ .cardss{
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
  }
  
  /*
@@ -1012,13 +1033,14 @@ header > img:nth-child(2){
 
  .sponsor{
   display: flex;
+
   align-items: center;
   justify-content: start;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
   background-image: url("../../../asset/img2/back.jpg");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
  }
 
@@ -1029,18 +1051,13 @@ header > img:nth-child(2){
 }
 
 .spnsrhr{
-  height: 1vh;
-  width: 15%;
+  height: 1vh !important;
+  width: 15%; 
   border-radius: 10px;
   margin-top: 2vh;
-}
-
-.card{
-  margin-top: 7vh;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 2;
+  color: red;
+  opacity: 1;
 }
 
 .black-box{
@@ -1057,13 +1074,29 @@ body{
 }
 
 
-  .card{
-    width: 19vw;
+@media only screen and (max-width: 1000px){
+  .cardss{
+    flex-direction: column;
+    align-items: center;
   }
 
-  .spnsrhr{
-    width: 25% ;
+  .sponsor{
+    height: 176vh;
   }
+
+  .card{
+    width: 30vw;
+  }
+}
+@media only screen and (max-width: 810px){
+  /* .cardtxt{
+  
+    margin-top: 12px;
+  } */
+  .card{
+    width:30vw ;
+  }
+}
 
 @media only screen and (max-width: 700px){
   .card{
@@ -1075,6 +1108,15 @@ body{
   }
 }
 
+@media only screen and (max-width: 527px){
+ 
+
+
+  .card{
+    width: 50vw;
+  }
+
+}
 @media only screen and (max-width: 550px){
  
   .spnsrhr{
@@ -1083,10 +1125,25 @@ body{
 
 }
 
+@media only screen and (max-width: 422px){
+ 
+  .card{
+    width: 65vw;
+  }
+
+}
 @media only screen and (max-width: 400px){
  
   .spnsrhr{
     width: 45% ;
+  }
+
+}
+
+@media only screen and (max-width: 360px){
+ 
+  .card{
+    width: 70vw;
   }
 
 }
