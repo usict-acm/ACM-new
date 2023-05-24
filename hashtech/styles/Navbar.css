@@ -181,3 +181,10 @@ nav .close-Navbar:hover div::after {
     right: 20px;
   }
 }
+
+
+hr {
+  border: none;
+  border-top: 10px solid red;
+  margin: 20px 0;
+}
