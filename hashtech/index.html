@@ -735,44 +735,86 @@
 <script src="./styles/Hero/js/count.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"
   integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-<script>
-          function submit_form() {
-            let formData = new FormData();
 
-            formData.append('firstName', $("#ss1").val());
-            formData.append('lastName', $("#ss2").val());
-            formData.append('email', $("#ss3").val());
-            formData.append('mobileNumber', $("#ss4").val());
-            formData.append('message', $("#ss5").val());
-            console.log(formData);
-            $.ajax({
-              type: "POST",
-              url: "./api.php/?q=postForm",
-              data: formData,
-              cache: false,
-              processData: false,
-              contentType: false,
-              success: function (data) {
-                alert(data.message);
-                // window.location.reload();
-              },
-              error: function (xhr, status, error) {
-                window.location.reload();
-              },
-            });
+
+
+<!-- sweet alert  -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.all.min.js"></script>
+
+<style>
+  /* Custom button class */
+  .swal2-confirm.custom-btn {
+    background-color: #DC143C;
+    color: white;
+  }
+</style>
+
+
+
+<script>
+  function submit_form() {
+    let formData = new FormData();
+
+    formData.append('firstName', $("#ss1").val());
+    formData.append('lastName', $("#ss2").val());
+    formData.append('email', $("#ss3").val());
+    formData.append('mobileNumber', $("#ss4").val());
+    formData.append('message', $("#ss5").val());
+    console.log(formData);
+    $.ajax({
+      type: "POST",
+      url: "./api.php/?q=postForm",
+      data: formData,
+      cache: false,
+      processData: false,
+      contentType: false,
+      success: function (data) {
+        Swal.fire({
+          title: 'Your Response have been Saved!!',
+          text: '',
+          icon: 'success',
+          customClass: {
+            confirmButton: 'custom-btn' // Apply custom button class
           }
-        </script>`
+        });
+        // window.location.reload();
+      },
+      error: function (xhr, status, error) {
+        // window.location.reload();
+        Swal.fire({
+          title: 'Your Response have been Saved!!',
+          text: '',
+          icon: 'success',
+          customClass: {
+            confirmButton: 'custom-btn' // Apply custom button class
+          }
+        });
+      },
+    });
+  }
+</script>`
+
+
+
 <script>
   document.getElementById("in-down").style.zIndex = "0";
   let form = document.getElementById("contactUsForm");
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    let myModal = new bootstrap.Modal(document.getElementById('contactUsModal'), {
-      keyboard: false
-    })
+    // let myModal = new bootstrap.Modal(document.getElementById('contactUsModal'), {
+    //   keyboard: false
+    // })
     // call backend here!
     // console.log(e);
-    myModal.show();
+    // myModal.show();
+    // let myModal = new bootstrap.Modal(document.getElementById('contactUsModal'), {
+    //   keyboard: false
+    // })
+    // // call backend here!
+    // console.log(e);
+    // myModal.show();
+
   })
 </script>
 
