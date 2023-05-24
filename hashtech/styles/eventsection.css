@@ -268,7 +268,7 @@ body {
 
 @media (max-width: 833px) {
   .blog-card {
-    width: 80% !important;
+    width: 100% !important;
   }
 
   .blog-card-event {
