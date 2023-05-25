@@ -1,8 +1,9 @@
 /* **********************hero section *********************** */
-body{
-	max-width: 1440px !important;
+body {
+	max-width: 100% !important;
 	margin: auto;
 }
+
 .container {
 	width: 100%;
 	padding-right: 15px;
@@ -1960,26 +1961,28 @@ a:hover {
 	.margin-media {
 		margin-left: 50px;
 	}
+
 	.b-container {
 		display: flex;
 		flex-wrap: wrap;
-		grid-template-columns:repeat(2,100px);
+		grid-template-columns: repeat(2, 100px);
 		grid-row-gap: -10rem;
 		grid-gap: 15px;
-	  }
-	
+	}
+
 
 }
+
 @media screen and (min-width: 992px) and (max-width: 1180px) {
 	.b-container {
-	  display: flex;
-	  flex-wrap: wrap;
-	  grid-template-columns: repeat(2, 200px);
-	  grid-row-gap: 6rem;
-	  /* justify-content: space-around; */
+		display: flex;
+		flex-wrap: wrap;
+		grid-template-columns: repeat(2, 200px);
+		grid-row-gap: 6rem;
+		/* justify-content: space-around; */
 	}
-  }
-  
+}
+
 
 /* @media screen and (max-width: 991px){
 	.blogs{
@@ -2180,11 +2183,11 @@ a:hover {
 }
 
 .social-btns .btn.linkedin:before {
-	background-color:  #0072b1;
+	background-color: #0072b1;
 }
 
 .social-btns .btn.linkedin .fa {
-	color:  #0072b1;
+	color: #0072b1;
 }
 
 .social-btns .btn.instagram:before {
@@ -2260,7 +2263,8 @@ a:hover {
 	transform: rotate(45deg);
 }
 
-.social-btns .btn .fa,.social-btns .btn .fab {
+.social-btns .btn .fa,
+.social-btns .btn .fab {
 	font-size: 70px;
 	vertical-align: middle;
 }
@@ -2307,8 +2311,9 @@ a:hover {
 		width: 11rem;
 		height: 11rem;
 	}
-	.text-head1{
-		color:#0092cf
+
+	.text-head1 {
+		color: #0092cf
 	}
 }
 
@@ -2316,8 +2321,9 @@ a:hover {
 	.imag {
 		margin: auto;
 	}
-	.text-head1{
-		color:black
+
+	.text-head1 {
+		color: black
 	}
 }
 
@@ -2339,7 +2345,12 @@ a:hover {
 	margin-bottom: 50px;
 }
 
-.alumini-content p,a,h1,h2,h3,h4 {
+.alumini-content p,
+a,
+h1,
+h2,
+h3,
+h4 {
 	margin: 0;
 	padding: 0;
 }
@@ -2358,37 +2369,37 @@ a:hover {
 }
 
 .alumini-content .single-person .person-image {
-    position: relative;
-    margin-bottom: 50px;
-    border-radius: 50%;
-    border: 4px dashed transparent;
-    transition: padding .3s;
+	position: relative;
+	margin-bottom: 50px;
+	border-radius: 50%;
+	border: 4px dashed transparent;
+	transition: padding .3s;
 }
 
 .alumini-content .single-person:hover .person-image {
 	padding: 12px;
-    border: 4px dashed #fff;
+	border: 4px dashed #fff;
 }
 
 .alumini-content .single-person .person-image img {
 	width: 100%;
-    border-radius: 50%;
+	border-radius: 50%;
 }
 
 .alumini-content .single-person .person-image .icon {
 	position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%,50%);
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    background: linear-gradient(to right, #016cec, #00b5f7);
-    color: #fff;
-    border-radius: 50%;
-    font-size: 24px;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	background: linear-gradient(to right, #016cec, #00b5f7);
+	color: #fff;
+	border-radius: 50%;
+	font-size: 24px;
 }
 
 .alumini-content .single-person:hover .person-image .icon {
@@ -2400,13 +2411,13 @@ a:hover {
 .alumini-content .single-person .person-info .full-name {
 	margin-bottom: 10px;
 	font-size: 28px;
-    font-weight: 700;
+	font-weight: 700;
 }
 
 .alumini-content .single-person .person-info .speciality {
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #016cec;
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #016cec;
 }
 
 .alumini-content .single-person:hover .full-name,
@@ -2415,7 +2426,7 @@ a:hover {
 }
 
 .text-head {
-	color:#0092cf;
+	color: #0092cf;
 }
 
 .btn-theme {
