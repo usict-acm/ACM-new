@@ -188,3 +188,36 @@ hr {
   border-top: 10px solid red;
   margin: 20px 0;
 }
+
+
+
+.logo-container {
+  position: fixed;
+  display: inline-block;
+  /* or position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100px;
+  /* Adjust dimensions as needed */
+  height: 100px;
+  margin: 10px;
+  /* Adjust margins as needed */
+  padding: 10px;
+  /* Adjust padding as needed */
+  z-index: 0;
+  /* Set a high z-index to ensure it appears above other elements */
+}
+
+.logo-container img {
+  width: 126%;
+  z-index: -1;
+  /* Adjust width as needed */
+  height: auto;
+  /* Adjust height as needed */
+}
+
+.contributor-hashtech-logo {
+  POSITION: RELATIVE;
+  margin-left: 150%;
+  margin-top: -163%;
+}
