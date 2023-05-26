@@ -9,25 +9,25 @@ html {
 }
 
 .contributerDiv {
-  padding: 100px 0px 200px 0px;
+  /* padding: 100px 0px 200px 0px; */
 }
 
 .contributer-heading {
   padding-top: 100px;
 }
 
-.contributer-heading > h1 {
+.contributer-heading>h1 {
   font-size: 50px;
   color: red;
   font-weight: bold;
 }
 
-.contributer-heading > .heading-bar {
+.contributer-heading>.heading-bar {
   display: flex;
   justify-content: center;
 }
 
-.contributer-heading > .heading-bar > hr {
+.contributer-heading>.heading-bar>hr {
   padding: 6px;
   width: 50%;
   border-radius: 30px;
@@ -37,18 +37,18 @@ html {
   padding-top: 70px;
 }
 
-.contributer-subheading > h1 {
+.contributer-subheading>h1 {
   font-size: 50px;
   color: white;
 }
 
-.contributer-subheading > .heading-bar > hr {
+.contributer-subheading>.heading-bar>hr {
   padding: 6px;
   width: 30%;
   border-radius: 30px;
 }
 
-.contributer-subheading > .heading-bar {
+.contributer-subheading>.heading-bar {
   display: flex;
   justify-content: center;
 }
@@ -59,6 +59,7 @@ html {
   margin-left: 100%;
   margin-top: -2%;
 }
+
 @media only screen and (max-width: 600px) and (min-width: 350px) {
   .hashtech_logo_contri {
     height: 200%;
@@ -83,6 +84,7 @@ html {
   transition: all 0.5s ease 0s;
   box-shadow: 3px 3px 30px rgba(247, 5, 5, 0.842);
 }
+
 .our-team .pic {
   display: inline-block;
   width: 100%;
@@ -93,6 +95,7 @@ html {
   border-radius: 100%;
   filter: drop-shadow(2px 4px 6px black);
 }
+
 /* .our-team:hover .pic{
     background: #020505;
     border-radius: 50%;
@@ -104,6 +107,7 @@ html {
   height: auto;
   border-radius: 50%;
 }
+
 .our-team .title {
   display: block;
   font-size: 20px;
@@ -112,12 +116,15 @@ html {
   text-transform: uppercase;
   margin: 0 0 7px 0;
 }
+
 .fa-instagram {
   color: red;
 }
+
 .fa-linkedin {
   color: red;
 }
+
 .our-team .post {
   display: block;
   font-size: 15px;
@@ -125,15 +132,18 @@ html {
   text-transform: capitalize;
   margin-bottom: 15px;
 }
+
 .our-team .social {
   padding: 0;
   margin: 0;
   list-style: none;
 }
+
 .our-team .social li {
   display: inline-block;
   margin-right: 5px;
 }
+
 .our-team .social li .anchor-navbar {
   display: block;
   width: 30px;
@@ -145,12 +155,14 @@ html {
   border: 1px solid #17bebb;
   transition: all 0.5s ease 0s;
 }
+
 .our-team:hover .social li .anchor-navbar {
   background: #17bebb;
   color: #fff;
 }
 
 @media only screen and (max-width: 575px) and (min-width: 350px) {
+
   /* For mobile phones: */
   /* .navbar--open{
             margin-top: -150%;
@@ -171,23 +183,23 @@ html {
   }
 
   .contributerDiv {
-    padding: 50px 0px;
+    /* padding: 50px 0px; */
   }
 
   .contributer-heading {
     padding-top: 150px;
   }
 
-  .contributer-heading > h1 {
+  .contributer-heading>h1 {
     font-size: 25px;
   }
 
-  .contributer-heading > .heading-bar {
+  .contributer-heading>.heading-bar {
     display: flex;
     justify-content: center;
   }
 
-  .contributer-heading > .heading-bar > hr {
+  .contributer-heading>.heading-bar>hr {
     width: 50%;
   }
 
@@ -195,17 +207,18 @@ html {
     padding-top: 70px;
   }
 
-  .contributer-subheading > h1 {
+  .contributer-subheading>h1 {
     font-size: 30px;
   }
 
-  .contributer-subheading > .heading-bar > hr {
+  .contributer-subheading>.heading-bar>hr {
     padding: 4px;
     width: 50%;
   }
 }
 
 @media only screen and (max-width: 767px) and (min-width: 576px) {
+
   /* For mobile phones: */
   [class*="our-team"] {
     margin: auto;
@@ -215,7 +228,7 @@ html {
   }
 
   .contributerDiv {
-    padding: 100px 0px 600px 0px;
+    /* padding: 100px 0px 600px 0px; */
   }
 
   .our-team .social {
@@ -233,5 +246,6 @@ html {
   .our-team .pic {
     padding: 6px;
   }
+
   /* .our-team .pic  */
 }
