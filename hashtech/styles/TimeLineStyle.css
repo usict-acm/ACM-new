@@ -139,7 +139,7 @@ body {
   content: "";
   position: absolute;
   top: -20px;
-  left: calc(50% - 6px);
+  left: calc(50% - 10px);
   z-index: 2;
 }
 
@@ -160,7 +160,7 @@ body {
 }
 
 .timeline-content:nth-child(even) .timeline-period:before {
-  top: calc(100% + 2px);
+  top: calc(100% + -6px);
 }
 
 /*# sourceMappingURL=style.css.map */
