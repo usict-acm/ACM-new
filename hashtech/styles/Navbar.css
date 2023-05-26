@@ -201,8 +201,20 @@ hr {
   margin: 20px 0;
 }
 
+/* 
 
+.logo-container {
+  position: fixed;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+  z-index: 0;
 
+} */
 .logo-container {
   position: fixed;
   display: inline-block;
@@ -216,7 +228,7 @@ hr {
   /* Adjust margins as needed */
   padding: 10px;
   /* Adjust padding as needed */
-  z-index: 0;
+  z-index: 1;
   /* Set a high z-index to ensure it appears above other elements */
 }
 
@@ -232,4 +244,5 @@ hr {
   POSITION: RELATIVE;
   margin-left: 150%;
   margin-top: -163%;
+  border-radius: 100%;
 }
