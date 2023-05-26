@@ -145,7 +145,7 @@ a:focus {
 .about-section {
   position: relative;
   padding: 60px 0;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   padding: 120px 0 70px;
   background-color: #191e34;
   background: linear-gradient(112.1deg, #0f0d0d 11.4%, #1a0101 70.2%);

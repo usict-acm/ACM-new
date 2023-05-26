@@ -73,7 +73,7 @@
   display: flex;
   margin: 20px 0;
   margin-top: 23%;
-  cursor: pointer;
+  cursor: initial;
   align-items: flex-start;
 }
 
