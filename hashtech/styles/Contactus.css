@@ -8,6 +8,7 @@
   background-position: center center;
   height: 100%;
 }
+
 .Contactus-section {
   display: flex;
   justify-content: center;
@@ -15,6 +16,7 @@
   min-height: 120vh;
   /*  background-color: #095a55; */
 }
+
 .Contactus-section::before {
   content: "";
   position: absolute;
@@ -33,6 +35,7 @@
   /* border-radius: 22px; */
   /* background-color: #fff; */
 }
+
 #PY {
   color: #fff;
 }
@@ -69,6 +72,7 @@
   list-style: none;
   display: flex;
   margin: 20px 0;
+  margin-top: 23%;
   cursor: pointer;
   align-items: flex-start;
 }
@@ -109,6 +113,7 @@
   margin-right: 15px;
   display: inline-block;
 }
+
 .sci li a {
   text-decoration: none;
   font-size: 30px;
@@ -117,6 +122,7 @@
   display: inline-block;
   transition: transform 0.2s;
 }
+
 .sci li a:hover {
   /* color: #ff004f; */
   /* background-color: #fff; */
@@ -205,37 +211,43 @@
   font-weight: 300;
   transition: 0.3s;
 }
+
 #ss1 {
   border-radius: 15px;
   padding-left: 15px;
 }
+
 #ss2 {
   border-radius: 15px;
   padding-left: 15px;
 }
+
 #ss3 {
   border-radius: 15px;
   padding-left: 15px;
 }
+
 #ss4 {
   border-radius: 15px;
   padding-left: 15px;
 }
+
 #ss5 {
   border-radius: 15px;
   padding-left: 15px;
 }
 
-.Contact-container .contactForm .formBox .inputBox input:focus ~ span,
-.Contact-container .contactForm .formBox .inputBox input:valid ~ span,
-.Contact-container .contactForm .formBox .inputBox textarea:focus ~ span,
-.Contact-container .contactForm .formBox .inputBox textarea:valid ~ span {
+.Contact-container .contactForm .formBox .inputBox input:focus~span,
+.Contact-container .contactForm .formBox .inputBox input:valid~span,
+.Contact-container .contactForm .formBox .inputBox textarea:focus~span,
+.Contact-container .contactForm .formBox .inputBox textarea:valid~span {
   transform: translateY(-20px);
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 1px;
   color: #faf5f5;
   font-weight: 500;
+  margin: -1.7%;
 }
 
 /*--------------------------------------------------- Css for the submit button --------------------------------------------*/
@@ -253,13 +265,16 @@
 .Contact-container .contactForm .formBox .inputBox input[type="submit"]:hover {
   background: #0d0d0d;
 }
+
 .Contact-container .contactForm .formBox .inputBox input {
   transition: background-color 0.15s;
 }
+
 .Contact-container .contactForm .formBox .inputBox input:hover {
   /* color: white; */
   transform: translateY(-2px);
 }
+
 /*--------------------------------------------------- make the form responsive -------------------------------*/
 @media (max-width: 1200px) {
   .Contact-container {
@@ -325,6 +340,7 @@
     flex-direction: row;
     border-radius: 0px;
   }
+
   .Contact-container .contactInfo ul.sci {
     position: relative;
     display: flex;
