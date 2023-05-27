@@ -166,16 +166,27 @@ nav .close-Navbar:hover div::after {
   background: rgb(209, 3, 3);
 }
 
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .circle {
+    top: 98%;
+    left: 87%;
+    width: 60px;
+    height: 60px;
+    }
+}
+@media (min-width: 900px) and (max-width: 1000px) {
+  .circle {
+    top: 98%;
+    left: 86%;
+    width: 60px;
+    height: 60px;
+    }
+}
 @media (max-width: 992px) {
   h1 {
     font-size: 25px;
   }
-  .circle {
-    top: 91%;
-    left: 83%;
-    width: 60px;
-    height: 60px;
-    }
+
 }
 
 @media (max-width: 900px) {
@@ -192,6 +203,18 @@ nav .close-Navbar:hover div::after {
   .circle {
     top: 91%;
     left: 81%;
+    }
+}
+@media (min-width: 689px) and (max-width: 910px) {
+  .circle {
+    top: 88%;
+    left: 82%;
+    }
+}
+@media (min-width: 500px) and (max-width: 630px) {
+  .circle {
+    top: 98%;
+    left: 76%;
     }
 }
 
