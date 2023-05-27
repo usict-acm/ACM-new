@@ -32,6 +32,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="./dashboard">Dashboard</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link"  style="color:red !important;" href="./hashtech"> <span>HashTech</span> </a>
+            </li>
         </ul>
     </div>
 </nav>

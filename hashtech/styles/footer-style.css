@@ -1,0 +1,147 @@
+.footer-work {
+  position: relative;
+  width: 100%;
+  background: #1c1e21;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-work .footer-social_icon,
+.footer-work .footer-menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.footer-work .footer-social_icon li,
+.footer-work .footer-menu li {
+  list-style: none;
+}
+
+.footer-work .footer-social_icon li a {
+  font-size: 2em;
+  color: white;
+  cursor: inherit !important;
+  margin: 0 10px;
+  display: inline-block;
+  transform: 0.5s;
+}
+
+.footer-work .footer-social_icon li a:hover {
+  transform: translateY(-10px);
+}
+
+.footer-work .footer-menu li a {
+  font-size: 1.2em;
+  color: white;
+  margin: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+.footer-work .footer-menu li a:hover {
+  opacity: 1;
+}
+
+.footer-work p {
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.footer-work .footer-wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(./../asset/images/fff.png);
+  background-size: 1000px 100px;
+}
+
+.footer-work .footer-wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 4s linear infinite;
+}
+
+.footer-work .footer-wave#wave2 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 15px;
+  animation: animateWave_02 3s linear infinite;
+}
+
+.footer-work .footer-wave#wave3 {
+  z-index: 1000;
+  opacity: 0.5;
+  bottom: 20px;
+  animation: animateWave 3s linear infinite;
+}
+
+.footer-work .footer-wave#wave2 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 10px;
+  animation: animateWave_02 4s linear infinite;
+}
+
+@keyframes animateWave {
+  0% {
+    background-position-x: 1000px;
+  }
+
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animateWave_02 {
+  0% {
+    background-position-x: 0px;
+  }
+
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+.footer-work .footer-thankyou {
+  display: flex;
+}
+
+.footer-work .footer-thankyou img {
+  width: 60px;
+}
+
+.footer-work .footer-thankyou p {
+  padding: 20px 0px;
+}
+
+.footer-work .footer-thankyou .footer-thankyou-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 30px;
+}
+
+@media (max-width: 600px) {
+  .footer-work .footer-thankyou {
+    display: block;
+  }
+
+  .footer-work .footer-thankyou .footer-thankyou-logo {
+    padding: 10px 30px 0px 30px;
+  }
+}
