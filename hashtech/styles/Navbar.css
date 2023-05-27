@@ -69,6 +69,7 @@ nav {
   /* right: 3rem; */
   transform: translateX(-100%);
 }
+
 .circle {
   position: absolute;
   top: 91%;
@@ -81,6 +82,7 @@ nav {
   backdrop-filter: blur(10px);
   z-index: -1;
 }
+
 nav ul {
   list-style: none;
 }
@@ -180,7 +182,7 @@ nav .close-Navbar:hover div::after {
     left: 86%;
     width: 60px;
     height: 60px;
-    }
+  }
 }
 @media (max-width: 992px) {
   h1 {
@@ -194,16 +196,18 @@ nav .close-Navbar:hover div::after {
     top: 5%;
     margin-right: 10px;
   }
+
   .circle {
     top: 91%;
     left: 86%;
-    }
+  }
 }
-@media (max-width: 680px){
+
+@media (max-width: 680px) {
   .circle {
     top: 91%;
     left: 81%;
-    }
+  }
 }
 @media (min-width: 689px) and (max-width: 910px) {
   .circle {
@@ -223,12 +227,13 @@ nav .close-Navbar:hover div::after {
     top: 5%;
     right: 10px;
   }
+
   .circle {
     top: 91%;
     left: 72%;
     width: 50px;
     height: 50px;
-    }
+  }
 }
 
 @media (max-width: 420px) {
@@ -236,13 +241,14 @@ nav .close-Navbar:hover div::after {
     top: 5%;
     right: 20px;
   }
+
   .circle {
-  top: 91%;
-  left: 67%;
-  width: 50px;
-  height: 50px;
+    top: 91%;
+    left: 67%;
+    width: 50px;
+    height: 50px;
   }
-  
+
 }
 
 
@@ -279,7 +285,7 @@ hr {
   /* Adjust margins as needed */
   padding: 10px;
   /* Adjust padding as needed */
-  z-index: 1;
+  z-index: 2;
   /* Set a high z-index to ensure it appears above other elements */
 }
 
@@ -289,6 +295,9 @@ hr {
   /* Adjust width as needed */
   height: auto;
   /* Adjust height as needed */
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 100%;
+
 }
 
 .contributor-hashtech-logo {
