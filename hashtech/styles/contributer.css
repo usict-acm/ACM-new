@@ -104,8 +104,15 @@ html {
     */
 .pic img {
   width: 100%;
-  height: auto;
-  border-radius: 50%;
+  height: 25vh !important;
+  border-radius: 100%;
+}
+
+@media only screen and (max-width: 575px) and (min-width: 350px) {
+  .pic img {
+    height: 12vh !important;
+  }
+
 }
 
 .our-team .title {
