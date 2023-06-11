@@ -1,0 +1,265 @@
+@font-face {
+    font-family: myFont;
+    src: url(./upload/projects/font.ttf);
+}
+
+
+#row1 {
+    padding-right: 25px;
+    /* margin-top: 25px; */
+    /* border-top: solid; */
+    /* border-right: solid; */
+    /* border-color: #46aff5; */
+    /* border-width: medium; */
+}
+
+.post-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-content img {
+    width: 500px;
+    height: auto;
+    padding: 10px;
+    align-items: flex-end;
+    /* margin-top: 40px; */
+    margin-bottom: 2%;
+}
+.post-content h1{
+    /* margin-top: 6%; */
+    font-family: myFont;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.post-content a{
+    position: relative;
+}
+
+.view-btn{
+    width: fit-content;
+    min-width: 100px;
+    /* margin-top: 5%; */
+    /* margin-left: 2%; */
+    /* margin-bottom: 6%; */
+    padding: 1%;
+    font-family: myFont;
+    background-color: inherit;
+    border-radius: 10px;
+    border-color: #0b7cc2;
+    color: #0b7cc2;
+}
+
+
+.middle{
+    /* position: absolute; */
+    width: fit-content;
+}
+
+@media (max-width: 850px) {
+    .post-content {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+}
+
+.btn{
+    position: relative;
+    display: block;
+    /* color: white; */
+    font-size: 14px;
+    font-family: "montserrat";
+    text-decoration: none;
+    margin: 30px 0;
+    border: 2px solid #0b7cc2;
+    padding: 14px 60px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+}
+.btn::before{
+    background: #0b7cc2;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+}
+
+.btn3::before{
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+.btn3:hover::before{
+    height: 380%;
+}
+
+.btn:hover{
+    color: white;
+}
+
+.projBtn {
+    margin-top: 20%;
+    margin-bottom: 5px;
+    display: block;
+    box-sizing: border-box;
+    appearance: none;
+    background-color: #005daa;
+    border: 2px solid #005daa;
+    border-radius: 0.6em;
+    cursor: pointer;
+    font-size: 1rem !important;
+    line-height: 1;
+    padding: 1rem;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    transition: all 150ms ease-in-out;
+}
+
+.projBtn:hover{
+    color: var(--blue);
+    background-color: #fff;
+    outline: 0;
+}
+
+
+
+
+/*HOMeteam CSS*/
+
+
+/* .team {
+  margin: 0;
+  padding: 0;
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+}  */
+
+
+/* .secondLine {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+} */
+
+
+/* .blue-bg {
+  background: linear-gradient(230deg, #46aff5 15%, white 15%);
+    color: #5a5a5a;
+    font-family: "Lato", sans-serif;
+    margin-left: 1px;
+} */
+
+
+.team_heading h2 {
+    border-top: solid;
+    padding-top: 2%;
+    border-color: #46aff5;
+  }
+  
+  .profile-card {
+    position: relative;
+    font-family: sans-serif;
+    width: 180px;
+    height: 215px;
+    background: #46aff5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 4px 1px 20px 0px rgb(71 71 71 / 40%);
+    transition: 0.6s;
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-bottom: 60px;
+    margin-left: 25px;
+  }
+  
+  /* .profile-card {
+    border-radius: 10px;
+  } */
+  
+  .profile-card .img {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    transition: 0.6s;
+    z-index: 99;
+  }
+  
+  .profile-card .img {
+    transform: translateY(-60px);
+  }
+  
+  .img img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 2px 6px 22px #46aff5;
+    transition: 0.6s;
+  }
+  
+  .profile-card img {
+    border-radius: 10px;
+  }
+  
+  .caption {
+    text-align: center;
+    margin-top: 47px;
+    transform: translateY(-100px);
+    opacity: 1;
+    transition: 0.6s;
+  }
+  
+  /* .profile-card .caption {
+    opacity: 1;
+  } */
+  
+  .caption h3 {
+    font-size: 17px;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+  
+  .caption p {
+    font-size: 13px;
+    color: #ffffff;
+    font-family: sans-serif;
+    margin: 2px 0 9px 0;
+  }
+  
+  .caption .social-links a {
+    color: rgb(7, 7, 7);
+    /* margin-right: 15px; */
+    font-size: 18px;
+    transition: 0.6s;
+  }
+  
+  .social-links a:hover {
+    color: #fbfbff;
+  }
+  
+  /* .gap {
+    height: 10px;
+    width: 5vw;
+  } */
