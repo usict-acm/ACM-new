@@ -636,6 +636,31 @@ function postAnnouncement()
         );
     }
 };
+function postQr()
+{
+    $database = new Database();
+    $db = $database->connect();
+
+    $link_name = $_POST["link_name"];
+    $link_address = $_POST["link_address"];
+    $image_data = $_POST["image_data"];
+
+        if($link_name == "" || $link_address == ""){
+            alert("Please fill in all required fields.");
+        }else {
+            $sql = "INSERT INTO `qr_link` (`link_for`, `link_address`, `path`) VALUES ('$link_name', '$link_address', '$image_data')";
+            if ($db->query($sql) == true) {
+                echo json_encode(
+                    array('message' => 'qr has been saved')
+            );
+            } else {
+                echo json_encode(
+                    array('message' => 'Internal Server Error. Try Again')
+                );
+        };
+        };
+}
+    
 
 function certificateForm(){
     $database = new Database();
@@ -1036,6 +1061,9 @@ switch ($q) {
         break;
     case 'postAnnouncement':
         postAnnouncement();
+        break;
+    case 'postQr': 
+        postQr();
         break;
     case 'getYearEvent':
         yearWiseEvent1();

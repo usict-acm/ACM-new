@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-custom navbar-mainbg">
+<nav class="navbar navbar-zindex navbar-expand-custom navbar-mainbg">
     <div class="d-flex main-logo">
         <a href="./"><img class="acm-logo-navbar" src="./assets/images/acm-logo.svg" height="60px" alt="acm-logo" /></a>
         <div class="text-and-logo">
@@ -21,7 +21,7 @@
                 <a class="nav-link" id="events" href="./events.php">Events</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="why_join_us" href="./benefits.php">Why Join Us?</a>
+                <a class="nav-link" id="why_join_us" href="./benefits.php">Benefits</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="clubs" href="./clubs.php">Clubs</a>
@@ -33,7 +33,7 @@
                 <a class="nav-link" href="./dashboard">Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./hof.php">Hall of Fame</a>
+                <a class="nav-link"  style="color:red !important;" href="./hashtech"> <span>HashTech</span> </a>
             </li>
         </ul>
     </div>

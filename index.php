@@ -4,10 +4,12 @@
 
 <head>
 	<?php
-	include("head.php")
+	include("head.php");
 	?>
+	
 	<title>GGSIP University USS ACM Student Chapter</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
 	<link rel="stylesheet" href="./assets/CSS/newStyle.css" />
 	<link rel="stylesheet" href="./assets/CSS/header.css">
@@ -18,7 +20,7 @@
 <body>
 	<!-- nav bar -->
 	<?php
-	include("header.php")
+	include("header.php");
 	?>
 	<!-- nav-bar end -->
 	<!-- hero Section -->
@@ -26,22 +28,22 @@
 		<div class="swiper-container" id="myCarousel">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-1-mobile.JPG" data-background="./assets/images/carousel-img-1.png"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-1-mobile.jpg" data-background="./upload/hmpg-img/carousel-img-1.png"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-2-mobile.png" data-background="./assets/images/carousel-img-2.jpeg"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-2-mobile.png" data-background="./upload/hmpg-img/carousel-img-2.jpeg"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-3-mobile.JPG" data-background="./assets/images/carousel-img-3.png"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-3-mobile.jpg" data-background="./upload/hmpg-img/carousel-img-3.png"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-4-mobile.png" data-background="./assets/images/carousel-img-4.png"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-4-mobile.png" data-background="./upload/hmpg-img/carousel-img-4.png"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-5-mobile.png" data-background="./assets/images/carousel-img-5.png"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-5-mobile.png" data-background="./upload/hmpg-img/carousel-img-5.png"></div>
 				</div>
 				<div class="swiper-slide">
-					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./assets/images/carousel-img-6-mobile.png" data-background="./assets/images/carousel-img-6.png"></div>
+					<div class="slide-inner slide-bg-image" data-swiper-parallax="0" data-background-small="./upload/hmpg-img/carousel-img-6-mobile.png" data-background="./upload/hmpg-img/carousel-img-6.png"></div>
 				</div>
 
 				<div class="swiper-button-next"></div>
@@ -68,7 +70,7 @@
 				<img src="./assets/images/aboutUs-icon.png" alt="" class="w-100" />
 			</div>
 		</div>
-		<div class="col-sm-6 col-9 mx-auto mt-3 pe-sm-5 align-self-center">
+		<div class="col-sm-6 col-9 mx-auto px-0 mt-3 pe-sm-5 align-self-center">
 			<div class="text">
 				<h2 class="mb-4 display-4 fw-bolder text-center text-md-start">
 					About <span class="text-head">Our Chapter</span>
@@ -181,173 +183,80 @@
 				},
 			});
 		});
+        function displayFaculty(facultyMembers) {
+            let div = document.getElementById("officeList");
+            let html = '';
+            for(let i = 0 ; i < facultyMembers.length; i++) {
+                html += `
+                      <div class="profile-card col-md-4 col-sm-6">
+                        <div class="img">
+                          <img
+                            src="/${facultyMembers[i].image}"
+                          />
+                        </div>
+                        <div class="caption">
+                          <h3>${facultyMembers[i].name}</h3>
+                          <p>${facultyMembers[i].designation}</p>
+                        </div>
+                      </div>`;
+            }
+            // div.innerHTML = html;
+        }
+        function displayTeam(teamMembers) {
+            let div = document.getElementById("teamList");
+            let html = ''
+            for(let i = 0 ; i < teamMembers.length; i++) {
+                html +=`
+                      <div class="profile-card col-md-4 col-sm-6">
+                        <div class="img">
+                          <img
+                            src="./${teamMembers[i].image}"
+                          />
+                        </div>
+                        <div class="caption">
+                          <h3>${teamMembers[i].name}</h3>
+                          <p>${teamMembers[i].designation}</p>
+                          <div class="social-links"> `
+                if(teamMembers[i].linkendin) {
+                    html += `<a href="${teamMembers[i].linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>`;
+                } 
+                if(teamMembers[i].github) {
+                    html += `<a href="${teamMembers[i].github}" target="_blank"><i class="fab fa-github"></i></a>`;
+                } 
+                if(teamMembers[i].instagram) {
+                    html += `<a href="${teamMembers[i].instagram}" target="_blank"><i class="fab fa-instagram"></i></a>`;
+                } 
+                html += "</div> </div> </div>";
+            }
+            // div.innerHTML = html;
+        }
+        async function getTeamData(year) {
+            let url = `./admin/adminPanel/faqadmin/teams/api.php/?q=readMember&year=${year}`
+            const response = await fetch(url);
+            let array = await response.json();
+            let teamMember = [];
+            let facultyMember = [];
+            for(let i = 0 ; i < array.length; i++) {
+                if(array[i].category === 'Office-Bearers') {
+                    teamMember.push(array[i]);
+                }
+                if(array[i].category === 'Faculty') {
+                    facultyMember.push(array[i]);
+                }
+            }
+            return [facultyMember, teamMember];
+        }
+        getTeamData(2023).then(([facultyMembers, teamMembers]) => { 
+            displayFaculty(facultyMembers);
+            displayTeam(teamMembers);
+        });
 	</script>
 	<!-- ******************************blog section end***************************************** -->
 	<!-- *******************************************our team************* -->
-	<section class="tag container-fluid">
-		<div class="">
-			<h2 class="my-4 display-4 fw-bolder text-center">Office<span class="text-head"> Bearers</span></h2>
-		</div>
-	 <div class="row justify-content-center">
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/deanSirSquared.jpeg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Prof. Pravin Chandra</h3>
-          <p>Dean, USICT</p>
-        </div>
-      </div>
-	  <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/ArvinderKaur.png"
-          />
-        </div>
-        <div class="caption">
-          <h3>Prof. Arvinder Kaur</h3>
-          <p>Dean, USAR & USDI</p>
-        </div>
-      </div>
-      <!-- <div class="gap"></div> -->
-	  <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/rahulsir.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Dr. Rahul Johari</h3>
-          <p>Branch Mentor, USS ACM</p>
-        </div>
-      </div>
+    <?php 
+    include_once 'officebearer.php';
+    ?>
 
-	  <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/ruchi-sehrawat.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Dr. Ruchi Sehrawat</h3>
-          <p>Branch Mentor, USS ACM</p>
-        </div>
-      </div>
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/jaspreeti-singh.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Dr. Jaspreeti Singh</h3>
-          <p>Branch Mentor, USS ACM</p>
-        </div>
-      </div>
-	 </div>
-
-
-
-	 <div class="row justify-content-center">
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/anuragParashar.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Anurag Parashar</h3>
-          <p>Chair</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/anurag-parashar/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/rajnikantRoy.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Rajnikant Roy</h3>
-          <p>Vice Chair</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/rajnnikantroy/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/nidhiRathore.png"
-          />
-        </div>
-        <div class="caption">
-          <h3>Nidhi Rathore</h3>
-          <p>Secretary</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/nidhi-rathore-431317213/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/akashMohan.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Akash Mohan </h3>
-          <p>Treasurer</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/akash-mohan-697513227" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/apoorvAron.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Apoorv Aron</h3>
-          <p>Web Chair</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/apoorv-aron-742882212" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="profile-card col-md-4 col-sm-6">
-        <div class="img">
-          <img
-            src="./assets/images/team/aryanGarg.jpg"
-          />
-        </div>
-        <div class="caption">
-          <h3>Aryan Garg</h3>
-          <p>Membership Chair</p>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/aryan-garg" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-	</div>
-    
-
-
-		<div class="py-3 mt-2 d-flex justify-content-sm-center">
-			<div class="col-lg-2 col-md-4 col mb-2 mt-4 mt-lg-0">
-				<a id="meet-the-team-btn" href="./team.php" class="about-button team-mobile-btn">Meet the Team</a>
-				</div>
-		</div>
-		
-		<!-- </div> -->
-	</section>
 	<!-- *****************************our team end************************************************** -->
 	<!-- socail bar******************************* -->
 	<div class="social-btns tag">
@@ -368,7 +277,7 @@
 		<div class="try1">
 			<a class="btn instagram" href="https://usict.acm.org/instagram" target="_blank"><i class=" fa fa fa-instagram"></i></a>
 			<div class="write" id="wrete">
-				<h1 class="sob-heading">500+</h1>
+				<h1 class="sob-heading">550+</h1>
 				<p class="gratext">Instagram Followers</p>
 			</div>
 		</div>
@@ -382,12 +291,165 @@
 		<div class="try1">
 			<a class="btn skype"><i class="fa fa fa-child"></i></a>
 			<div class="write" id="wrete">
-				<h1 class="sob-heading">1500+</h1>
-				<p class="gratext">Connected Students</p>
+			<?php include './visitorCounter.php'?>
+				<h1 class="sob-heading"><?php echo  $visitor_count?>+</h1>
+				<p class="gratext">Monthly Visitors</p>
 			</div>
 		</div>
 
 	</div>
+	<?php
+	if($_SERVER["REQUEST_METHOD"] == "POST"){
+		require_once('./admin/blogAdmin/database.php');
+
+		$database = new Database();
+    	$db = $database->connect();
+		$conn = $db;
+
+		if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		}
+
+		$email = $_POST["email"];
+
+		$sql = "SELECT email FROM newsletter_email WHERE email = '$email'";
+		$result = $conn->query($sql);
+
+		if ($result->num_rows > 0) {
+			// echo "Email address already exists in our database. Please try again with a different email address.";
+			echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+			echo '<script>';
+			echo 'Swal.fire({icon: "error", title: "Email already exist", text: "Please try again with a different email", confirmButtonColor: "#005daa"});';
+			echo '</script>';
+		} else {
+			// Insert form data into database
+			$sql = "INSERT INTO newsletter_email (email) VALUES ('$email')";
+
+			if ($conn->query($sql) === TRUE) {
+				// echo "Thank you for subscribing to our newsletter!";
+				echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+				echo '<script>';
+				echo 'Swal.fire({icon: "success", title: "Thank you for subscribing to our newsletter!", confirmButtonColor: "#005daa"});';
+				echo '</script>';
+			} else {
+				echo "Error: " . $sql . "<br>" . $conn->error;
+			}
+		}
+		$conn->close();
+
+	}
+	?>
+	<form class="subscriber-strip" method="post" >
+
+		<style>
+			h1{
+				color:#46aff5;
+				font-family:math;
+				margin-bottom:-16rem;
+				/* margin-left:28rem; */
+
+
+
+			}
+			.subscriber-strip{
+				/* width:100%; */
+				border-radius:.3rem;
+				/* background:#46aff5; */
+				/* color:white; */
+				max-height:6rem;
+				align-items:center;
+				margin-left:20rem;
+			}
+			.newsletter{
+				margin-bottom:.5rem;
+			}
+			.typed-cursor{
+				display:none;
+			}
+			.btn{
+				background: #005daa;
+				margin-left:31rem;
+				font-size:1rem;
+				color:#fff;
+				font-weight:500;
+				margin-top:-3.6rem;
+				height:30px;
+				border-radius:.4rem;
+				cursor: pointer;
+				line-height: 1;
+				padding-bottom: 1rem;
+				text-transform: uppercase;
+
+			}
+			.email{
+				margin-left:18.5rem;
+			}
+			.btn:hover{
+				background:#fff;
+				color:#46aff5;
+				border: 2px solid #005daa;
+
+			}
+			@media screen and (min-width: 900px) and (max-width: 1100px){
+
+				.newsletter{
+				   margin-left:-12rem;
+			    }
+				.email{
+					margin-left:13rem
+				}
+				.btn{
+					margin-left:26rem;
+				}
+			}
+			@media screen and (min-width: 700px) and (max-width: 900px){
+				.newsletter{
+				   margin-left:-17rem;
+			    }
+				.email{
+					margin-left:5rem
+				}
+				.btn{
+					margin-left:18rem;
+				}
+
+			}
+			@media screen and (min-width: 500px) and (max-width: 700px){
+				.newsletter{
+				   margin-left:-10rem;
+			    }
+				.email{
+					margin-left:-9rem;
+					margin-top:3rem;
+				}
+				.btn{
+					margin-left:4rem;
+				}
+
+			}
+			@media screen and (max-width: 500px){
+				.newsletter{
+				   margin-left:-15rem;
+			    }
+				.email{
+					margin-left:-19rem;
+					margin-top:3rem;
+				}
+				.btn{
+					margin-left:-6rem;
+				}
+
+			}
+		
+		</style>
+        <div class="info">
+		  <h1 class="newsletter" style="margin-bottom:-2.3rem;"></h1>
+          <input type="email" class="email" id="email" name="email" placeholder="Email" style=" border-radius:.4rem; border-color: #005daa;" required >
+       </div>
+          <input class="btn" type="submit" value="Subscribe"></input>
+    </form>
+	
+	
 	<!-- back to top and contact us-->
 	<?php
 	include("contact.php")
@@ -399,8 +461,21 @@
 	<!--  footer ends -->
 
 	<!-- Swiper JS -->
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-	<script src="assets\JS\home_new.js"></script>
-	</body>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-</html>
+    <script src="assets\JS\home_new.js"></script>
+	<script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+
+
+<script>
+	const type = new Typed ('.newsletter',{
+		strings:['ACM Newsletter'],
+		typeSpeed:100, 
+		backSpeed: 100 , 
+		backDelay:100, 
+		loop:true
+	});
+</script>
+    </body>
+
+    </html>

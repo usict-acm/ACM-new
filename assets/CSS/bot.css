@@ -1,0 +1,237 @@
+ 
+
+.chat-bar-collapsible {
+    position: fixed;
+    bottom: 1px;
+    left: 0rem;
+
+    /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); */
+    cursor: pointer;
+    font-size: 30px;
+    text-align: left;
+    /* color: #005daa; */
+    display: block;
+    box-sizing: border-box;
+    z-index: +1 !important;
+}
+.timestamp {
+    font-size: 14px;
+    display: inline-block;
+    margin-top: -3.4rem;
+    opacity: 0.6;
+    vertical-align: middle;
+    margin-right: -17.2rem;
+    color: #005daa;
+}
+.bottime{
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+    margin-top:-3.4rem;
+    opacity: 0.8;
+    vertical-align: middle;
+    margin-left: -17.5rem;
+    color: rgb(128, 125, 125);
+
+}
+.collapsible {
+    background-color:#fff;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    outline: none;
+    font-size: 18px;
+    border-radius: 20rem !important;
+    border: 3px solid white;
+    box-shadow: 1px 0px 4px 3px rgba(36, 32, 32, 0.2);
+    border-bottom: none;
+    justify-content: center;
+    margin-left: 0.5rem;
+    margin-bottom: 1.2rem;
+
+}
+
+.Card-content {
+    max-height: 0;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    border-style: solid;
+    margin-left: 10px;
+    margin-bottom: -0.4rem;
+    /* border-color: blue; */
+    border-color:#005daa;
+    /* border-top-right-radius: 1px solid #005daa; */
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+.full-chat-block {
+    width: 350px;
+    background:rgb(239, 238, 238);
+    text-align: center;
+    overflow: auto;
+    scrollbar-width: none;
+    height: max-content;
+    transition: max-height 0.2s ease-out;
+    /* border: 1.8px solid black; */
+    border-bottom: 0px !important;
+    /* border-top-right-radius: 1px solid black !important; */
+   /* border-top-right-radius: 6px !important; */
+}
+
+.outer-container {
+    min-height: 400px;
+    bottom: 0%;
+    position: relative;
+}
+
+.chat-container {
+    max-height: 500px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    scroll-behavior: smooth;
+    hyphens: auto;
+}
+
+.chat-container::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-bar-input-block {
+    display: flex;
+    float: left;
+    position: sticky;
+    
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(194,194,194);
+    /* border-radius: 10px 10px 0px 0px; */
+    padding: 10px 0px 10px 10px;
+}
+
+.chat-bar-icons {
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 25%;
+    float: right;
+    font-size: 20px;
+}
+#chat-icon:hover {
+    opacity: 1;
+}
+
+.small-text {
+    font-size: small;
+    color:#005daa;
+    
+ }
+
+/* Chat bubbles */
+
+.userInput {
+    width: 75%;
+}
+
+.input-box {
+    float: left;
+    border: none;
+    box-sizing: border-box;
+    width: 135%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: #000;
+    background-color: white;
+    outline: none;
+    z-index: +1;
+
+}
+
+.userText {
+    color: white;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
+    clear: both;
+}
+
+.userText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #005daa;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-right-radius: 2px;
+    max-width: 80%;
+    margin-right: 10px;
+    animation: floatup .5s forwards
+}
+
+
+.botText {
+    color:black;
+    font-weight: 300;
+    font-family: Helvetica;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+}
+
+.botText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #46aff5;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-left-radius: 2px;
+    max-width: 80%;
+    margin-left: 10px;
+    animation: floatup .5s forwards
+}
+
+@keyframes floatup {
+    from {
+        transform: translateY(14px);
+        opacity: .0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .full-chat-block {
+        width: 100%;
+        border-radius: 0px;
+    }
+    .chat-bar-collapsible {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 97%;
+    }
+    .collapsible {
+        border: 0px;
+        border-top: 3px solid white;
+        border-radius: 0px;
+    }
+    
+}
+@media  screen and (max-width: 400px){
+    #chat-icon {
+        margin-left: 5rem;
+    }
+    .input-box {
+        width : 150%;
+    }
+
+}

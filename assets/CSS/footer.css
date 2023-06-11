@@ -18,6 +18,7 @@ ul {
 .footer-section {
   background: #f1f1f1;
   position: relative;
+   z-index: 0 !important; 
 }
 
 .footer-cta {
@@ -80,7 +81,7 @@ ul {
 }
 
 .footer-logo .img-primary {
-  max-width: 150px;
+  max-width: 170px;
 }
 
 .footer-text p {
