@@ -50,6 +50,51 @@ function read()
     }
 };
 
+function read_user()
+{
+
+    $database = new Database();
+    $db = $database->connect();
+
+    $member = new Member($db);
+
+    $id = $_GET['id'];
+    // echo $id;
+
+    // Member query
+    $result = $member->readUserById($id);
+
+    // Check if any members
+    if ($result) {
+        // echo 1;
+        // Member array
+        $member_arr = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $member_item = array(
+                'id' => $row["id"],
+                'image' => $row["image"],
+                'name' => $row["name"],
+                'designation' => $row["designation"],
+                'linkedin' => $row["linkedin"],
+                'github' => $row["github"],
+                'instagram' => $row["instagram"],
+                'year' => $row["year"],
+                'category' => $row["category"]
+            );
+            // Push to "data"
+            array_push($member_arr, $member_item);
+        }
+
+        // Turn to JSON & output
+        echo json_encode($member_arr);
+    } else {
+        // No Posts
+        echo json_encode(array('message' => 'No members found'));
+    }
+}
+
+
 function postMember()
 {
     $database = new Database();
@@ -151,6 +196,9 @@ $q = $_GET['q'];
 switch ($q) {
     case 'readMember':
         read();
+        break;
+    case 'readUserById':
+        read_user();
         break;
     case 'postMember':
         postMember();

@@ -1,0 +1,9 @@
+.heading{
+    text-align: center;
+    font-size: 100px;
+    font-family: myFont, 'Arial';
+    color: white;
+    height: fit-content;
+    padding: 0;
+    text-shadow: 3px 6px 10px #6cde01;
+}
