@@ -538,6 +538,11 @@ a {
   justify-content: space-between;
 
 }
+.post-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .post {
   display: flex;
@@ -545,7 +550,7 @@ a {
 }
 
 .post-content img {
-  width: 500px;
+  max-width: 500px;
   height: auto;
   padding: 10px;
   align-items: flex-end;
