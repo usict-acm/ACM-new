@@ -4,7 +4,7 @@
     <?php
       include("head.php")
     ?>
-    <title>GGGSIP University USS ACM Student Chapter</title>
+    <title>GGSIP University USS ACM Student Chapter</title>
     <link href="./assets/CSS/singleProj.css" rel="stylesheet" />
     <link href="./assets/CSS/new.css" rel="stylesheet" />
     <link href="./assets/CSS/glider.css" rel="stylesheet" />
@@ -12,6 +12,7 @@
     <link href="./assets/CSS/footer.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/CSS/homeTeam.css">
     <link rel="stylesheet" href="./assets/CSS/newStyle.css">
+    <link rel="stylesheet" href="./assets/CSS/singleProject.css">
 
   </head>
 
