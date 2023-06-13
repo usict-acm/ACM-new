@@ -537,6 +537,9 @@ function carouselFunctionAPI()
         while ($row = $result->fetch_assoc()) {
             $post_item = array(
                 'poster' => $row["poster"],
+                'button1Text' => $row["button1Text"],
+                'button1Link' => $row["button1Link"],
+
             );
             // Push to "data"
             array_push($posts_arr, $post_item);
