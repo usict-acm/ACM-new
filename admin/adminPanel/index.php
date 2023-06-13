@@ -158,6 +158,12 @@
                         case 'ShortLink';
                             include('./faqadmin/linkAdmin.php');
                             break;
+                        case 'QrCode';
+                            include('./faqadmin/QrCode.php');
+                            break;
+                        case 'AddQrCode';
+                           echo  "<iframe src='./faqadmin/qrGenerator/index.html' style='border: 0; width: 100%; height: 100vh' ></iframe>";
+                            break;
                         case 'AddLink':
                             include('./faqadmin/linkAdminAdd.php');
                             break;

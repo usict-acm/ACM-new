@@ -35,11 +35,25 @@
                                 echo "<p>Time: " . $row["time"] . " </p> ";
                             }
                             echo "<div class='announcement-button-group'>";
+                           // var_dump( $row["startDate"]);
+
+                           if($row["startDate"]>date("Y-m-d")){
+
                             if($row["button1Text"] != ""){
                                 echo "<a target='_blank' href=" . $row["button1Link"] . " class='about-button'>";
                                     echo $row["button1Text"];
                                     echo "</a>";
                             }
+
+                            }
+                            else{
+                                if($row["button1Text"] != ""){
+                                    echo "<a target='_blank' href='' class='about-button'>";
+                                        echo "Registration is closed";
+                                        echo "</a>";
+                                }
+                            }
+
                             if($row["button2Text"] != ""){
                                 echo "<a target='_blank' href=" . $row["button1Link"] . " class='about-button'>";
                                     echo $row["button2Text"];
@@ -89,10 +103,22 @@
                                 echo "<p>Time: " . $row["time"] . " </p> ";
                             }
                             echo "<div class='announcement-button-group'>";
-                            if($row["button1Text"] != ""){
-                                echo "<a target='_blank' href=" . $row["button1Link"] . " class='about-button'>";
-                                    echo $row["button1Text"];
-                                    echo "</a>";
+
+                            if($row["startDate"]>date("Y-m-d")){
+
+                                if($row["button1Text"] != ""){
+                                    echo "<a target='_blank' href=" . $row["button1Link"] . " class='about-button'>";
+                                        echo $row["button1Text"];
+                                        echo "</a>";
+                                }
+
+                            }
+                            else{
+                                if($row["button1Text"] != ""){
+                                    echo "<a target='_blank' href='' class='about-button'>";
+                                        echo "Registration is closed";
+                                        echo "</a>";
+                                }
                             }
                             if($row["button2Text"] != ""){
                                 echo "<a target='_blank' href=" . $row["button1Link"] . " class='about-button'>";

@@ -1,0 +1,582 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Catamaran:400,700,900);
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,800,800i,900&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 90vh;
+    box-sizing: border-box;   
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px transparent; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+.fs-10{
+  font-size: 10px;
+}
+.fs-11{
+  font-size:11px; 
+}
+.fs-12{
+  font-size: 12px;
+}
+.fs-13{
+font-size: 13px;
+}
+.fs-14{
+  font-size: 14px;
+}
+.fs-15{
+  font-size: 15px;
+}
+.fs-16{
+  font-size: 16px;
+}
+.fs-17{
+  font-size: 17px;
+}
+.fs-18{
+  font-size: 18px;
+}
+.fs-19{
+  font-size: 19px;
+}
+.fs-20{
+  font-size: 20px;
+}
+.fs-21{
+  font-size: 21px;
+}
+.fs-22{
+  font-size: 22px;
+}
+.fs-23{
+  font-size:23px;
+}
+.fs-24{
+  font-size: 24px;
+}
+.fs-25{
+  font-size: 25px;
+}
+.fs-45{
+  font-size: 45px;
+}
+.fs-60{
+  font-size: 60px;
+}
+.fs-45{
+  font-size: 45px;
+}
+
+.fs-28{
+  font-size: 28px;
+}
+.fs-32{
+  font-size: 32px;
+}
+.fs-34{
+  font-size: 34px;
+}
+.fs-35{
+  font-size: 35px;
+}
+.fs-55{
+  font-size: 55px;
+}
+.fw-100{
+  font-weight: 100;
+}
+.fw-200{
+  font-weight: 200;
+}
+.fw-100{
+  font-weight: 200;
+}
+.fw-300{
+  font-weight: 300;
+}
+.fw-400{
+  font-weight: 400;
+}
+.fw-500{
+  font-weight: 500;
+}
+.fw-600{
+  font-weight: 600;
+}
+.lh-56{
+  line-height: 56px;
+}
+.lh-46{
+  line-height: 46px;
+}
+.lh-30{
+  line-height: 30px;
+}
+.color-primary{
+  color:#4a81ff;
+}
+.cl-black{
+  color:black;
+}
+.cl-white{
+  color: white
+}
+.m-0{
+  margin: 0px;
+}
+.pl-0{
+  padding-left: 0px;
+
+}
+.pl-120{
+  padding-left: 120px;
+}
+.pl-30{
+  padding-left: 30px;
+}
+.pl-31{
+  padding-left: 31px;
+
+}
+.pl-35{
+  padding-left: 35px;
+}
+.pl-40
+{
+  padding-left: 40px;
+}
+.pl-51{
+  padding-left: 51px;
+}
+.pb-10{
+  padding-bottom: 10px;
+}
+.pb-20{
+  padding-bottom: 20px;
+}
+.pt-30{
+  padding-top: 30px;
+}
+.pb-100{
+  padding-bottom: 100px;
+}
+.pt-20{
+  padding-top: 20px;
+}
+.pt-35{
+  padding-top: 35px;
+}
+.pt-60{
+  padding-top: 60px;
+}
+.pt-11{
+  padding-top: 11px;
+}
+.pt-90{
+  padding-top: 90px;
+}
+
+.pt-0{
+  padding-top: 0px;
+}
+.pb-30{
+  padding-bottom: 30px;
+}
+.pr-20{
+  padding-right: 20px;
+}
+.pr-0{
+  padding-right: 0px;
+}
+.pr-40{
+  padding-right: 40px;
+}
+.pr-100{
+  padding-right: 100px;
+}
+.pr-56{
+  padding-right: 56px;
+}
+
+.postion-r{
+  position: relative;
+}
+.border-n{
+  border:none;
+}
+.float-l{
+  float:left;
+}
+.out-no{
+  outline: none;
+}
+.br-50{
+  border-radius: 50px;
+}
+.bg-clr-prm{
+  background-color:#4a81ff;
+
+}
+.brd-no{
+  border:none;
+} 
+.bg-trans
+{
+  background:transparent;
+}
+.bg-clr-grey{
+  background-color:#ebebeb;   
+}
+.mt-90{
+  margin-top: 90px;
+}
+.mb-20{
+  margin-bottom: 20px;
+}
+.ml--56{
+  margin-left: -56px;
+
+}
+.ws-5
+{
+  word-spacing: 5px;
+}
+.wd-170{
+  width:170px;
+}
+
+.fw-800{
+  font-weight: 800;
+}
+.fw-700{
+	font-weight: 700;
+}
+.font-family-alt {
+    font-family: Catamaran, sans-serif!important;
+}
+.font-family-roboto{
+  font-family: Roboto,sans-serif!important;
+}
+.ff-mont{
+  font-family: Montserrat, sans-serif;
+}
+.fw-700{
+  font-weight: 700;
+}
+.fw-600{
+  font-weight: 600;
+}
+.fw-500{
+  font-weight: 500;
+}
+.fw-400{
+  font-weight: 400;
+}
+.cl-red{
+color:red;
+}
+.text-black{
+  color: #474747;
+}
+
+#main{
+	position: relative;
+  background-image: url("../assets/bgfinal.png");
+  background-size: cover;
+  height: 100vh;
+  background-repeat: repeat-x;
+background-position: 
+  0 20%,
+  0 100%,
+  0 50%,
+  0 100%,
+  0 0;
+background-size: 
+  2500px,
+  800px,
+  500px 200px,
+  1000px,
+  400px 260px;
+animation: 60s para infinite linear;
+}
+
+
+
+@keyframes para {
+100% {
+  background-position: 
+    -5000px 20%,
+    -800px 95%,
+    500px 50%,
+    1000px 100%,
+    400px 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#particles-js{
+	width: 100%;
+  height: 100vh;
+	position: absolute;
+}
+.bg-trans{
+	background-color: transparent;
+}
+
+.text-white {
+    color: #fff!important;
+}
+.letter-spacing-2 {
+    letter-spacing: 2px!important;
+}
+.font-weight-900 {
+    font-weight: 900!important;
+}
+.title-extra-large-5 {
+    font-size: 80px!important;
+    line-height: 80px!important;
+}
+.main-body{
+  width: 100%;
+    margin-top: 0%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 30%;
+}
+
+.dateandplace > .h-text{
+  padding-top: 35px;
+}
+
+.astro{
+  
+  position: absolute;
+    z-index: -1;
+    top: 22px;
+    right: 0px;
+}
+header{
+  padding-top: 4px;
+}
+
+header > img {
+  width: 90px;
+  margin: 20px;
+}
+
+
+.timer{
+  font-size: 25px;
+  color: azure;
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+}
+.timer > div{
+
+width: 12%;
+padding: 0px 0px;
+
+}
+
+
+.neon {
+  color: #fff;
+  font-size: 40px;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+  .colon{
+  font-size: 32px;
+  padding-top: 0rem;
+}
+  .dateandplace h1{
+  font-size: 26px;
+}
+.dateandplace h2{
+  font-size: 23px;
+}
+
+.dateandplace > .h-text{
+  font-size: 20px;
+  padding-top: 25px;
+}
+  #main{
+  position: relative;
+  background-image: url("../assets/bgmobile.png");
+  background-size: cover;
+  background-repeat: repeat-x;
+  height: 100vh;
+}
+
+  .title-extra-large-5 {
+    font-size: 42px!important;
+    line-height: 48px!important;
+}
+.main-body h4{
+  font-size: 30px!important;
+}
+.sm-title-extra-large{
+  font-size: 20px;
+}
+
+
+header {
+    padding-top: 4px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px transparent; 
+  border-radius: 10px;
+}
+ 
+
+.main-body{
+  width: 100%;
+    margin-top: 0%;
+}
+.section2title{
+ font-size: 30px; 
+}
+.maintitle img{
+  width: 100%;
+}
+
+
+.timer > div{
+
+  width: 17%;
+  padding: 0px 0px;
+  
+  }
+  .timer{
+    font-size: 20px;
+    color: azure;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+  }
+
+
+
+
+}

@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "lato";
+  letter-spacing: 1px;
+}
+.container {
+  width: 100%;
+  background-color: white;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 35px;
+  font-weight: 400;
+}
+.box {
+  width: 500px;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#btn {
+  background-color: rgb(20, 20, 162);
+  color: white;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+}

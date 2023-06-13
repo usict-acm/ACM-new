@@ -151,6 +151,14 @@
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Teams</span></a>
             </li>
+            
+            <!-- QR code  -->
+            <hr class="sidebar-divider">
+            <li class="nav-item">
+                <a class="nav-link" href="?table=QrCode">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Qr Code</span></a>
+            </li>
 
            
             <hr class="sidebar-divider">
@@ -164,7 +172,7 @@
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Contact Us</span></a>
                     </li>
-           
+
 
             <!-- Nav Item - Tables -->
             <!-- <li class="nav-item">

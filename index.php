@@ -9,6 +9,7 @@
 	
 	<title>GGSIP University USS ACM Student Chapter</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
 	<link rel="stylesheet" href="./assets/CSS/newStyle.css" />
 	<link rel="stylesheet" href="./assets/CSS/header.css">
@@ -297,6 +298,158 @@
 		</div>
 
 	</div>
+	<?php
+	if($_SERVER["REQUEST_METHOD"] == "POST"){
+		require_once('./admin/blogAdmin/database.php');
+
+		$database = new Database();
+    	$db = $database->connect();
+		$conn = $db;
+
+		if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		}
+
+		$email = $_POST["email"];
+
+		$sql = "SELECT email FROM newsletter_email WHERE email = '$email'";
+		$result = $conn->query($sql);
+
+		if ($result->num_rows > 0) {
+			// echo "Email address already exists in our database. Please try again with a different email address.";
+			echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+			echo '<script>';
+			echo 'Swal.fire({icon: "error", title: "Email already exist", text: "Please try again with a different email", confirmButtonColor: "#005daa"});';
+			echo '</script>';
+		} else {
+			// Insert form data into database
+			$sql = "INSERT INTO newsletter_email (email) VALUES ('$email')";
+
+			if ($conn->query($sql) === TRUE) {
+				// echo "Thank you for subscribing to our newsletter!";
+				echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+				echo '<script>';
+				echo 'Swal.fire({icon: "success", title: "Thank you for subscribing to our newsletter!", confirmButtonColor: "#005daa"});';
+				echo '</script>';
+			} else {
+				echo "Error: " . $sql . "<br>" . $conn->error;
+			}
+		}
+		$conn->close();
+
+	}
+	?>
+	<form class="subscriber-strip" method="post" >
+
+		<style>
+			h1{
+				color:#46aff5;
+				font-family:math;
+				margin-bottom:-16rem;
+				/* margin-left:28rem; */
+
+
+
+			}
+			.subscriber-strip{
+				/* width:100%; */
+				border-radius:.3rem;
+				/* background:#46aff5; */
+				/* color:white; */
+				max-height:6rem;
+				align-items:center;
+				margin-left:20rem;
+			}
+			.newsletter{
+				margin-bottom:.5rem;
+			}
+			.typed-cursor{
+				display:none;
+			}
+			.btn{
+				background: #005daa;
+				margin-left:31rem;
+				font-size:1rem;
+				color:#fff;
+				font-weight:500;
+				margin-top:-3.6rem;
+				height:30px;
+				border-radius:.4rem;
+				cursor: pointer;
+				line-height: 1;
+				padding-bottom: 1rem;
+				text-transform: uppercase;
+
+			}
+			.email{
+				margin-left:18.5rem;
+			}
+			.btn:hover{
+				background:#fff;
+				color:#46aff5;
+				border: 2px solid #005daa;
+
+			}
+			@media screen and (min-width: 900px) and (max-width: 1100px){
+
+				.newsletter{
+				   margin-left:-12rem;
+			    }
+				.email{
+					margin-left:13rem
+				}
+				.btn{
+					margin-left:26rem;
+				}
+			}
+			@media screen and (min-width: 700px) and (max-width: 900px){
+				.newsletter{
+				   margin-left:-17rem;
+			    }
+				.email{
+					margin-left:5rem
+				}
+				.btn{
+					margin-left:18rem;
+				}
+
+			}
+			@media screen and (min-width: 500px) and (max-width: 700px){
+				.newsletter{
+				   margin-left:-10rem;
+			    }
+				.email{
+					margin-left:-9rem;
+					margin-top:3rem;
+				}
+				.btn{
+					margin-left:4rem;
+				}
+
+			}
+			@media screen and (max-width: 500px){
+				.newsletter{
+				   margin-left:-15rem;
+			    }
+				.email{
+					margin-left:-19rem;
+					margin-top:3rem;
+				}
+				.btn{
+					margin-left:-6rem;
+				}
+
+			}
+		
+		</style>
+        <div class="info">
+		  <h1 class="newsletter" style="margin-bottom:-2.3rem;"></h1>
+          <input type="email" class="email" id="email" name="email" placeholder="Email" style=" border-radius:.4rem; border-color: #005daa;" required >
+       </div>
+          <input class="btn" type="submit" value="Subscribe"></input>
+    </form>
+	
+	
 	<!-- back to top and contact us-->
 	<?php
 	include("contact.php")
@@ -309,7 +462,20 @@
 
 	<!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script src="assets\JS\home_new.js"></script>
+	<script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+
+
+<script>
+	const type = new Typed ('.newsletter',{
+		strings:['ACM Newsletter'],
+		typeSpeed:100, 
+		backSpeed: 100 , 
+		backDelay:100, 
+		loop:true
+	});
+</script>
     </body>
 
     </html>
