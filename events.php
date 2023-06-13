@@ -30,17 +30,50 @@
       <img id="hero-img" src="assets\images\bgtitle.jpeg" alt="">
       <h1 id="hover-underline-animation">EVENTS</h1>
     </div>
-    <div class="title-area">
-      <div class="title-text">
-        <h3>"The starting point of all achievements is desire"</h3>
-        <h4>Register for our upcoming event</h4>
-        <button>Register Now</button>
-      </div>
-      <div class="title-img">
-        <img src="assets\images\Events\aagaz.jpeg" alt="">
-      </div>
+    <div class="title-area" id="carousel">
+      
     </div>
   </section>
+
+  <script>
+      let urlcarousel = './admin/blogAdmin/api.php/?q=carousel';
+      let carouselDIV = document.getElementById("carousel");
+
+      $(document).ready(function() {
+        $.ajax({
+          url: urlcarousel,
+          method: 'GET',
+          dataType: 'JSON',
+          success: function(data) {
+            //console.log("check data 123 ", data);
+           
+            carouselDIV.innerHTML += " <div class='title-text'>\
+                                          <h3>'The starting point of all achievements is desire'</h3>\
+                                          <h4>Register for our upcoming event</h4>\
+                                          <a href ="+ data[0].button1Link +" target='_blank' > <button>"+ data[0].button1Text +"</button></a>\
+                                        </div>\
+                                        <div class='title-img'>\
+                                          <img src="+ data[0].poster +" alt=''>\
+                                        </div> ";
+                                                  
+            //console.log(data[0].poster);
+            //console.log(carouselDIV);
+
+            // function carouselfunction() {
+
+            //   for (i = 1; i < data.length; i++) {
+            //     carouselDIV.innerHTML += " <div class='carousel-item'>\
+            //                                           <img src=" + data[i].poster + "  class='live-carousel-img'>\
+            //                                         </div>";
+            //   }
+            // }
+            // carouselfunction();
+            //console.log(carouselDIV);
+          },
+        });
+      });
+    </script>
+
   <section class="yearly-events">
     <div class="events-head">
       <h1 id="hover-underline-a">YEARLY
@@ -48,77 +81,8 @@
 
       </h1>
     </div>
-    <div class="cards">
-      <div class="card">
-        <div id="year">
-          <h4>2023</h4>
-        </div>
-        <div class="card-text">
-          <div class="no-of-events">
-            <h1 id="event-no">01</h1>
-            <h2 class="event-text"> &nbspEvents </h2>
-          </div>
-          <p id="tagline">"We grow stronger and the journey is still ongoing"</p>
-          <button>view details</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <div id="year">
-          <h4>2022</h4>
-        </div>
-        <div class="card-text">
-          <div class="no-of-events">
-            <h1 id="event-no">22</h1>
-            <h2 class="event-text">&nbspEvents</h2>
-          </div>
-          <p id="tagline">"Mile by mile, we're crushing milestones with style!"</p>
-          <button >view details</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <div id="year">
-          <h4>2021</h4>
-        </div>
-        <div class="card-text">
-          <div class="no-of-events">
-            <h1 id="event-no">27</h1>
-            <h2 class="event-text">&nbspEvents</h2>
-          </div>
-          <p id="tagline">"We always grow and move upward"</p>
-          <button>view details</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <div id="year">
-          <h4>2020</h4>
-        </div>
-        <div class="card-text">
-          <div class="no-of-events">
-            <h1 id="event-no">08</h1>
-            <h2 class="event-text">&nbspEvents</h2>
-          </div>
-          <p id="tagline">"Pandemic or not, we're unstoppable!"</p>
-          <button >view details</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <div id="year">
-          <h4>2019</h4>
-        </div>
-        <div class="card-text">
-          <div class="no-of-events">
-            <h1 id="event-no">08</h1>
-            <h2 class="event-text">&nbspEvents</h2>
-          </div>
-          <p id="tagline">"The only way to do great work is to love what you do."</p>
-          <button >view details</button>
-        </div>
-      </div>
-
+    <div class="cards" id="eventIndex">
+      
 
     </div>
  
@@ -130,24 +94,8 @@
     </div> -->
     <div class="slideshow">
       <div class="content">
-        <div class="slider-content">
-          <figure class="shadow"><img src="assets\CSS\eventGallery\eventGallery\image1.png"></figure>
-          <figure class="shadow"><img src="assets\CSS\eventGallery\eventGallery\image2.png"></figure>
-          <figure class="shadow"><img src="assets\CSS\eventGallery\eventGallery\image3.png"></figure>
-          <figure class="shadow"><img src="assets\CSS\eventGallery\eventGallery\image4.png"></figure>
-          <figure class="shadow"><img src="assets\CSS\eventGallery\eventGallery\image5.jpg"></figure>
-          <figure class="shadow"><img src="assets\CSS\eventGallery\eventGallery\image6.jpg"></figure>
-          <figure class="shadow"><img src="assets\CSS\eventGallery\eventGallery\image7.jpg"></figure>
-          <figure class="shadow"><img src="assets\CSS\eventGallery\eventGallery\image8.jpg"></figure>
-          <figure class="shadow"><img src="assets\CSS\eventGallery\eventGallery\image9.jpg"></figure>
-          <figure class="shadow"><img src="assets\CSS\eventGallery\eventGallery\image10.jpg"></figure>
-          <figure class="shadow"><img src="assets\CSS\eventGallery\eventGallery\image11.jpg"></figure>
-          <figure class="shadow"><img src="assets\CSS\eventGallery\eventGallery\image12.jpg"></figure>
-          <figure class="shadow"><img src="assets\CSS\eventGallery\eventGallery\image13.jpg"></figure>
-          <figure class="shadow"><img src="assets\CSS\eventGallery\eventGallery\image14.jpg"></figure>
-          <figure class="shadow"><img src="assets\CSS\eventGallery\eventGallery\trellathon.jpeg"></figure>
-
-
+        <div class="slider-content" id="galleryImage">
+        
         </div>
       </div>
     </div>
@@ -156,6 +104,29 @@
   
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    let url = './admin/blogAdmin/api.php/?q=getImage';
+    var galleryImage = document.getElementById("galleryImage");
+    galleryImage.innerHTML = "";
+
+    $(document).ready(function() {
+      $.ajax({
+        url: url,
+        method: 'GET',
+        dataType: 'JSON',
+        success: function(data) {
+          //console.log("gallery data", data);
+          data.forEach(myFunc);
+
+          function myFunc(row, index) {
+            
+            galleryImage.innerHTML += " <figure class='shadow'><img src="+ row.Image +"></figure>";
+          }
+        }
+      })
+    })
+  </script>
 
   <script>
     let urlEventIndex = './admin/blogAdmin/api.php/?q=getYearEvent';
@@ -183,19 +154,20 @@
                 //console.log("dataNumber", dataNumber);
                 numberOfEvents = dataNumber[1];
                 //console.log("numberrrr", numberOfEvents);
-                yearWiseEvent.innerHTML += " <li>\
-                                                <div class='time'>\
-                                                    <h2>" + event.year + " <br><span></span></h2>\
+                yearWiseEvent.innerHTML +=  "<div class='card'>\
+                                              <div id='year'>\
+                                                <h4>" + event.year + " </h4>\
+                                              </div>\
+                                              <div class='card-text'>\
+                                                <div class='no-of-events'>\
+                                                  <h1 id='event-no'>" + numberOfEvents + " </h1>\
+                                                  <h2 class='event-text'>&nbspEvents</h2>\
                                                 </div>\
-                                                <div class='details'>\
-                                                    <h3 style='color: black;font-weight: bolder;'>" + numberOfEvents + " events </h3>\
-                                                    <p style='font-size:large; color: #e91e63;font-weight: bolder;'>" + event.heading + "</p>\
-                                                    <p style='text-align: end; margin-right: 2px; font-size: smaller; color:#0092cf;'>" + event.more + "</p>\
-                                                    <a  href='./eventYear.php?year=" + event.year + "'>View details</a>\
-                                                </div>\
-                                                <div style='clear: both;'></div>\
-                                            </li>";
-              }
+                                                <p id='tagline'>" + event.heading + "</p>\
+                                                <a  href='./eventYear.php?year=" + event.year + "'><button >view details</button></a>\
+                                              </div>\
+                                            </div>";
+                    }
             })
           }
         },
@@ -209,7 +181,7 @@
 	<?php
 	include("./contact.php")
 	?>
-  <!-- *****Footer******** -->
+  <!-- **Footer*** -->
   <?php
   include('./footer.php');
   ?>
