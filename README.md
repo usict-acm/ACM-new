@@ -14,7 +14,7 @@ This chapter hosts events such as programming contests, talks by esteemed indust
 <h3>Follow us on</h3>
 <a href="https://www.facebook.com/acmusict" target="_blank"><img alt="Facebook" src="https://img.shields.io/badge/facebook-%231DA1F2.svg?&style=for-the-badge&logo=facebook&logoColor=white" /></a>
 <a href="https://www.linkedin.com/company/acmusict/" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-<a href="https://www.instagram.com/acmusict/" target="_blank"><img alt="Instagram" src="https://img.shields.io/badge/instagram-%FF69B4.svg?&style=for-the-badge&logo=instagram&logoColor=white&color=cd486b" /></a>
+<a href="https://www.instagram.com/ggsipuacm" target="_blank"><img alt="Instagram" src="https://img.shields.io/badge/instagram-%FF69B4.svg?&style=for-the-badge&logo=instagram&logoColor=white&color=cd486b" /></a>
 <a href="https://www.youtube.com/channel/UCI7her-mYrb7QM0t9S_nA_Q" target="_blank"><img alt="YouTube" src="https://img.shields.io/badge/youtube-%23c4302b.svg?&style=for-the-badge&logo=youtube&logoColor=white" /></a>
 <a href="https://discord.com/invite/fbAJs85rzT" target="_blank"><img alt="Discord" src="https://img.shields.io/badge/discord-%235865F2.svg?&style=for-the-badge&logo=discord&logoColor=white" /></a>
 
