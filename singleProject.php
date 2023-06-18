@@ -67,7 +67,7 @@
               contributors.innerHTML = "";
             } else {
               contributors.innerHTML = "Contributors";
-              projNav.innerHTML = "<div class='linker p-1'><a href='./home.php'> Home </a> / <a href='./projects.php'> Projects </a> / "+ data[0].Title +"</div>";
+              projNav.innerHTML = "<div class='linker p-1'><a href='./'> Home </a> / <a href='./projects.php'> Projects </a> / "+ data[0].Title +"</div>";
               
 
               if(data[0].BtnText){
