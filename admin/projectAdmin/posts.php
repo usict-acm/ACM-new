@@ -6,15 +6,14 @@ class Post
   private $table = 'projects';
 
   // Post Properties
-  public $Sno;
-  public $Title;
-  public $Author;
-  public $Content;
+  public $projectId;
+  public $projectTitle;
+  public $user_ids;
+  public $content;
   public $Category;
-  public $Event;
-  public $Image;
-  public $Date;
-  public $catCount;
+  public $coverImage;
+  public $projectLink;
+  public $BtnText;
 
   // Constructor with DB
   public function __construct($db)
@@ -25,48 +24,48 @@ class Post
   // Get Posts
   public function read($start, $limit)
   {
-    $query = 'SELECT b.projectId, b.projectTitle, b.userName, b.content, b.published, b.BtnText, b.projectLink, b.coverImage, b.tags FROM ' . $this->table . ' b WHERE approved=1 AND isDraft=0 ORDER BY published DESC LIMIT ' . $start . ',' . $limit;
+    $query = 'SELECT b.projectId, b.projectTitle, b.user_ids, b.BtnText, b.projectLink, b.content, b.coverImage FROM ' . $this->table . ' b ORDER BY added_on DESC LIMIT ' . $start . ',' . $limit;
     $stmt = $this->conn->query($query);
     return $stmt;
   }
 
   // Get Posts
-  public function getCategories()
-  {
-    // Create query
-    $query = 'SELECT b.Category, COUNT(Category) AS CatCount
-                                FROM ' . $this->table . ' b 
-                                GROUP BY Category';
+  // public function getCategories()
+  // {
+  //   // Create query
+  //   $query = 'SELECT b.Category, COUNT(Category) AS CatCount
+  //                               FROM ' . $this->table . ' b 
+  //                               GROUP BY Category';
 
-    $stmt = $this->conn->query($query);
-    // Prepare statement
-    // $stmt = $this->conn->prepare($query);
+  //   $stmt = $this->conn->query($query);
+  //   // Prepare statement
+  //   // $stmt = $this->conn->prepare($query);
 
-    // Execute query
-    // $stmt->execute();
+  //   // Execute query
+  //   // $stmt->execute();
 
-    return $stmt;
-  }
+  //   return $stmt;
+  // }
 
   // Get Posts
-  public function readCategories($Category)
-  {
-    // Create query
-    $query = 'SELECT b.Sno, b.Title, b.Author, b.Content, b.Category, b.Event, b.Image, b.Date, b.tags
-                                FROM ' . $this->table . ' b 
-                                WHERE Category=' . $Category;
+  // public function readCategories($Category)
+  // {
+  //   // Create query
+  //   $query = 'SELECT b.Sno, b.Title, b.Author, b.Content, b.Category, b.Event, b.Image, b.Date, b.tags
+  //                               FROM ' . $this->table . ' b 
+  //                               WHERE Category=' . $Category;
 
-    $stmt = $this->conn->query($query);
-    // Prepare statement
-    // $stmt = $this->conn->prepare($query);
+  //   $stmt = $this->conn->query($query);
+  //   // Prepare statement
+  //   // $stmt = $this->conn->prepare($query);
 
-    // Execute query
-    // $stmt->execute();
+  //   // Execute query
+  //   // $stmt->execute();
 
-    return $stmt;
-  }
+  //   return $stmt;
+  // }
 
-  public function countprojects()
+  public function countProjects()
   {
     $query = 'SELECT COUNT(*) FROM projects';
     $stmt = $this->conn->query($query);
@@ -76,7 +75,7 @@ class Post
   public function readThree()
   {
     // Create query
-    $query = 'SELECT b.projectId, b.projectTitle, b.userName, b.content,b.BtnText, b.projectLink, b.published, b.coverImage, b.tags
+    $query = 'SELECT b.projectId, b.projectTitle, b.user_ids, b.BtnText, b.projectLink, b.content, b.coverImage
                                 FROM ' . $this->table . ' b
                                 WHERE approved=1 AND isDraft=0 ORDER BY projectId DESC LIMIT 3';
 
@@ -97,10 +96,10 @@ class Post
   }
 
 
-  public function readGalleryImage()
-  {
-    $query = 'SELECT g.Sno, g.source, g.date FROM gallery g';
-    $stmt = $this->conn->query($query);
-    return $stmt;
-  }
+  // public function readGalleryImage()
+  // {
+  //   $query = 'SELECT g.Sno, g.source, g.date FROM gallery g';
+  //   $stmt = $this->conn->query($query);
+  //   return $stmt;
+  // }
 }

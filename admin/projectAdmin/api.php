@@ -11,19 +11,19 @@ include_once '../../mail.php';
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-/*function read()
+function read()
 {
     // Instantiate DB & connect
     $database = new Database();
     $db = $database->connect();
-    // Instantiate project post object
+    // Instantiate blog post object
     $post = new Post($db);
 
     $limit = 10;
     $page = isset($_GET['page']) ? $_GET["page"] : 1;
     $start = ($page - 1) * $limit;
 
-    // project post query
+    // Blog post query
     $result = $post->read($start, $limit);
     $countProjects = $post->countProjects();
     foreach ($countProjects as $key => $item) {
@@ -44,6 +44,9 @@ $method = $_SERVER['REQUEST_METHOD'];
                 'Title' => $row["projectTitle"],
                 'Content' => $row["content"],
                 'Image' => $row["coverImage"],
+                'Users' => $row["user_ids"],
+                'Link' => $row["projectLink"],
+                'BtnText' => $row["BtnText"]
             );
             // Push to "data"
             array_push($posts_arr, $post_item);
@@ -60,7 +63,7 @@ $method = $_SERVER['REQUEST_METHOD'];
         // No Posts
         echo json_encode(array('message' => 'No Posts Found'));
     }
-};*/
+};
 
 /*function readCategory()
 {
@@ -999,6 +1002,9 @@ function contactus()
 */
 $q = $_GET['q'];
 switch ($q) {
+    case 'readAll':
+        read();
+        break;
     case 'readOne':
         read_one();
         break;
