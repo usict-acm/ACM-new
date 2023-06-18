@@ -68,6 +68,9 @@
             } else {
               contributors.innerHTML = "Contributors";
               projNav.innerHTML = "<div class='linker p-1'><a href='./home.php'> Home </a> / <a href='./projects.php'> Projects </a> / "+ data[0].Title +"</div>";
+              
+
+              if(data[0].BtnText){
               posts.innerHTML = "<div class='post' style='width:100%'>\
               <div class='post-content'> <div class='post-text'>\
               <h1 class='heading'>" + data[0].Title + "</h1>\
@@ -76,6 +79,19 @@
               <img src='" + data[0].Image + "'>\
               </div></div>\
               <div style='padding: 2%'>" + data[0].Content + "</div>";
+              }
+              else{
+              posts.innerHTML = "<div class='post' style='width:100%'>\
+              <div class='post-content'> <div class='post-text'>\
+              <h1 class='heading'>" + data[0].Title + "</h1>\
+              </div>\
+              <img src='" + data[0].Image + "'>\
+              </div></div>\
+              <div style='padding: 2%'>" + data[0].Content + "</div>";
+              }
+
+
+
               const userIdsString = data[0].Users;
               const userIds = userIdsString.split(',');
               
