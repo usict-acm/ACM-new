@@ -37,6 +37,7 @@ a {
 .post {
   display: flex;
   flex-direction: column;
+  padding: 2%;
 }
 
 
@@ -50,7 +51,7 @@ a {
 .post-text{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 
@@ -119,27 +120,16 @@ a {
     }
 }
   
-.about-button {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    display: block;
-    box-sizing: border-box;
-    appearance: none;
-    background-color: #005daa;
-    border: 2px solid #005daa;
-    border-radius: 0.6em;
-    cursor: pointer;
-    font-size: 1rem;
-    line-height: 1;
-    padding: 1rem;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #fff;
-    transition: all 150ms ease-in-out;
+.about-button:hover,
+.about-button:focus {
+	color: var(--blue);
+	background-color: #fff;
+	outline: 0;
 }
 
+a:hover{
+  text-decoration: none;
+}
 
 #row1 {
   padding: 2%;
