@@ -33,6 +33,8 @@
         <div class="row" id="row2"></div>
       </div>
     </section>
+    <section>
+      
     <section class="container mt-5">
       <h1 class="category-heading">Let The <span class = "text-head"> Words Speak</h1>
       <div class="lower">
@@ -45,12 +47,12 @@
         </div>
         <div class="right-side">
         <!-- ==============================================Show rightside three blogs================================== -->
-        <div class="row categoryCards mt-0">
+        <!-- <div class="row categoryCards mt-0">
           <div class="col">
             <h4>Recent <span class="text-head">Projects</h4>
           </div>
-        </div>
-        <div id="row4"></div>
+        </div> -->
+        <!-- <div id="row4"></div> -->
 
         <!-- <div class="row categoryCards">
           <div class="col">
