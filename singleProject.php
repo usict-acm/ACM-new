@@ -78,7 +78,7 @@
               </div>\
               <img src='" + data[0].Image + "'>\
               </div></div>\
-              <div style='padding: 2%'>" + data[0].Content + "</div>";
+              <div style='padding: 2%'><h1 class='heading'>About this project:</h1> <br>" + data[0].Content + "</div>";
               }
               else{
               posts.innerHTML = "<div class='post' style='width:100%'>\
@@ -87,7 +87,7 @@
               </div>\
               <img src='" + data[0].Image + "'>\
               </div></div>\
-              <div style='padding: 2%'>" + data[0].Content + "</div>";
+              <div style='padding: 2%'><h1 class='heading'>About this project:</h1> <br>" + data[0].Content + "</div>";
               }
 
 
