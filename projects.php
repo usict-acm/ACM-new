@@ -130,59 +130,70 @@
                       return CardComponent;
                     }
 
-                    function GenerateCarousel(data) {
-                      let ProjectSlide = "";
+                      function GenerateCarousel(data) {
+                          let ProjectSlide = "";
 
-                      // Loop through  data and generate carousel items with three cards each
-                      for (let i = 0; i < data[0].length; i += 3) {
-                        let row = document.createElement("div");
-                        row.classList.add("row");
+                          // Calculate the number of slides needed
+                          let numSlides = Math.ceil(data[0].length / 3);
 
-                        for (let j = i; j < Math.min(i + 3, data[0].length); j++) {
-                          let cardComponent = GenerateCard(data[0][j], j);
+                          // Generate carousel indicators dynamically
+                          let carouselIndicators = "";
+                          for (let i = 0; i < numSlides; i++) {
+                            carouselIndicators += `
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${i}" ${
+                              i === 0 ? 'class="active" aria-current="true"' : ""
+                            } aria-label="Slide ${i + 1}"></button>
+                            `;
+                          }
 
-                          let cardWrapper = document.createElement("div");
-                          cardWrapper.classList.add("col-lg-4");
-                          cardWrapper.innerHTML = cardComponent;
+                          // Loop through data and generate carousel items with three cards each
+                          for (let i = 0; i < data[0].length; i += 3) {
+                            let row = document.createElement("div");
+                            row.classList.add("row");
 
-                          row.appendChild(cardWrapper);
+                            for (let j = i; j < Math.min(i + 3, data[0].length); j++) {
+                              let cardComponent = GenerateCard(data[0][j], j);
+
+                              let cardWrapper = document.createElement("div");
+                              cardWrapper.classList.add("col-lg-4");
+                              cardWrapper.innerHTML = cardComponent;
+
+                              row.appendChild(cardWrapper);
+                            }
+
+                            let carouselItem = document.createElement("div");
+                            carouselItem.classList.add("carousel-item");
+                            if (i === 0) {
+                              carouselItem.classList.add("active");
+                            }
+                            carouselItem.appendChild(row);
+
+                            ProjectSlide += carouselItem.outerHTML;
+                          }
+
+                          let carouselComponent = `
+                            <section class="container mt-4">
+                              <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                  ${carouselIndicators}
+                                </div>
+                                <div class="carousel-inner">
+                                  ${ProjectSlide}
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                            </section>
+                          `;
+
+                          return carouselComponent;
                         }
-
-                        let carouselItem = document.createElement("div");
-                        carouselItem.classList.add("carousel-item");
-                        if (i === 0) {
-                          carouselItem.classList.add("active");
-                        }
-                        carouselItem.appendChild(row);
-
-                        ProjectSlide += carouselItem.outerHTML;
-                      }
-
-                      let carouselComponent = `
-                        <section class="container mt-4">
-                          <div id="carouselExampleIndicators" class="carousel  carousel-dark slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                              ${ProjectSlide}
-                            </div>
-                            <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Next</span>
-                            </button>
-                          </div>
-                        </section>
-                      `;
-
-                      return carouselComponent;
-                    }
 
                     // Call the function and set the innerHTML of the posts element
 
@@ -194,7 +205,7 @@
                             posts.innerHTML = `<h1>An error occurred: Carousel Component Not working </h1>`;
                           }
 
-/////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////// 
 
                 // data[0].forEach(GenerateCard);
                 // function GenerateCard(row, index) {
