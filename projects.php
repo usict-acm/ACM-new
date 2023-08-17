@@ -8,7 +8,7 @@
     
     <link href="./assets/CSS/glider.css" rel="stylesheet"/>
 	  <link rel="stylesheet" href="./assets/CSS/newStyle.css" />
-    <link href="./assets/CSS/blogs.css" rel="stylesheet" />
+    <link href="./assets/CSS/projects.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </head>
@@ -32,25 +32,25 @@
         <!-- ==============================================header Three Blogs========================================== -->
     <section class="blog-header">
       <div class="container mt-4">
-        <div class="row" id="row2"></div>
+        <!-- <div class="row" id="row2"></div> -->
       </div>
     </section>
     <section>
       
-    <section class="container mt-5">
-      <h1 class="category-heading">Let The <span class = "text-head"> Words Speak</h1>
+    <section class="container mt-5 mb-5">
+      <!-- <h1 class="category-heading">Let The <span class = "text-head"> Words Speak</h1> -->
       <div class="lower">
         <!-- ====================================================Show All Blogs=========================================   -->
         <div class="left-side">
           <div class="" id="row1">
-        
           </div>
-          <div class="" id="row1-carousel"></div>
+          <div class="" id="row1-carousel">
+          </div>
           <div class="row">
-            <div class="m-auto" id="pagination_row"></div>
+            <!-- <div class="m-auto" id="pagination_row"></div> -->
           </div>
         </div>
-        <div class="right-side">
+        <!-- <div class="right-side"> -->
         <!-- ==============================================Show rightside three blogs================================== -->
         <!-- <div class="row categoryCards mt-0">
           <div class="col">
@@ -113,10 +113,11 @@
                       
                       // Change this to adjust the Card Component HTML structure
                       let CardComponent = `
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-3">
                                           <div class="card" style="width: 18rem; height: 30rem;"> <!-- Set a fixed height for the card -->
                                             <div style="height: 13rem; overflow: hidden;"> 
-                                              <img src="${row.Image}" class="card-img-top" alt="Card image cap" style="object-fit: cover; width: 100%;">
+                                            <a href="#" onClick="redirec(${row.Sno})">
+                                            <img src="${row.Image}" class="card-img-top" alt="Card image cap" style="object-fit: cover; width: 100%;"></a>
                                             </div>
                                             <div class="card-body">
                                               <h5 class="card-title">${row.Title}</h5>
@@ -155,7 +156,7 @@
                               let cardComponent = GenerateCard(data[0][j], j);
 
                               let cardWrapper = document.createElement("div");
-                              cardWrapper.classList.add("col-lg-4");
+                              cardWrapper.classList.add("col-lg-3");
                               cardWrapper.innerHTML = cardComponent;
 
                               row.appendChild(cardWrapper);
