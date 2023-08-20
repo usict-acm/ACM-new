@@ -49,7 +49,7 @@
 .navbar-mainbg {
 	background-color: #fff;
 	padding: 10px 0px;
-	position: fixed;
+	position: fixed !important;
 	top: 0;
 	z-index: 999;
 	width: 100%;
