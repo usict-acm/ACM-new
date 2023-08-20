@@ -38,6 +38,7 @@ a {
   display: flex;
   flex-direction: column;
   padding: 2%;
+  padding-bottom: 0 !important;
 }
 
 
@@ -57,7 +58,7 @@ a {
 
 
 .post-content img {
-  max-width: 700px;
+  width: 450px;
   height: auto;
   padding: 10px;
   align-items: flex-end;
@@ -65,7 +66,8 @@ a {
   margin-bottom: 2%;
 }
 .post-content h1{
-  font-size: 35px;
+  font-size: 50px;
+  font-weight: bold;
   /* margin-top: 6%; */
   /* font-family: myFont !important; */
   /* font-variant: small-caps; */
@@ -81,7 +83,8 @@ a {
 
 .middleBtn{
   /* position: absolute; */
-  width: fit-content;
+  margin-top: 4%;
+  width: 40%;
 }
 
 

@@ -63,7 +63,7 @@
       ?>;
       console.log(projectId);
       if (projectId === null) {
-        posts.innerHTML = "<div class='d-flex flex-column m-auto align-items-center'><h1 class='heading'> Project ID should be a number </h1><br><h3>Go back to <a href='./projects.php'>Projects</a></h3></div>";
+        posts.innerHTML = "<div class='d-flex flex-column m-auto align-items-center'><h1 class='heading'> Project Not Found </h1><br><h3>Go back to <a href='./projects.php'>Projects</a></h3></div>";
         return;
       }
       let url = './admin/projectAdmin/api.php/?q=readOne&id=' + projectId;
@@ -90,7 +90,7 @@
               </div>\
               <img src='" + data[0].Image + "'>\
               </div></div>\
-              <div style='padding: 2%'><h1 class='heading'>About this project:</h1> <br><p>" + data[0].Content + "</p></div></div>";
+              <div style='padding: 2%; padding-top: 0 !important'><h1 class='heading'>About this project:</h1> <br><p>" + data[0].Content + "</p></div></div>";
               }
               else{
               posts.innerHTML = "<div class='row' id='row1'><div class='post' style='width:100%'>\

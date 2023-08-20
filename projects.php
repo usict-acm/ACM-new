@@ -109,7 +109,7 @@
                     function GenerateCard(row, index) {
                       console.log("This Function Generate Project Card Component");
                       var desc = row.Content;
-                      var descSub = desc.substring(0, 70) + "...";
+                      var descSub = desc.substring(0, 100) + "...";
                       
                       // Change this to adjust the Card Component HTML structure
                       let CardComponent = `

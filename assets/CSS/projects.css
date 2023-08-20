@@ -240,6 +240,9 @@ input[type="number"] {
 .card-text {
   margin-top: 7%;
 }
+.card-title{
+  text-align: center;
+}
 .card-span {
   color: #b3b3b3;
 }
