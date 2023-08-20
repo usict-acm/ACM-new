@@ -65,9 +65,10 @@ a {
   margin-bottom: 2%;
 }
 .post-content h1{
+  font-size: 35px;
   /* margin-top: 6%; */
-  font-family: myFont !important;
-  font-variant: small-caps;
+  /* font-family: myFont !important; */
+  /* font-variant: small-caps; */
 }
 #contributors{
     font-family: myFont;
@@ -158,6 +159,7 @@ a:hover{
   margin-left: 25px;
 }
 .profile-card .img {
+  text-align: center;
   margin: 0;
   padding: 0;
   position: relative;
@@ -169,7 +171,8 @@ a:hover{
 }
 
 .profile-card img{
-  width: 100%;
+  height: 100%;
+  /* width: 100%; */
   border-radius: 10px;
   box-shadow: 2px 6px 22px #46aff5;
   transition: 0.6s;
@@ -202,4 +205,8 @@ a:hover{
     }
 }
 
-
+.social-links{
+  display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
