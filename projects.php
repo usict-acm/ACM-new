@@ -122,7 +122,7 @@
                                             <div class="card-body">
                                               <h5 class="card-title">${row.Title}</h5>
                                               <p class="card-text">${descSub}</p>
-                                              <a href="#" class="btn btn-primary" onClick="redirec(${row.Sno})">View Project</a>
+                                              <a href="#" class="about-button" onClick="redirec(${row.Sno})">View Project</a>
                                             </div>
                                           </div>
                                         </div>
