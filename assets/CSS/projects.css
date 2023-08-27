@@ -553,6 +553,6 @@ input[type="number"] {
 
 @media (max-width:992px) {
   .carousel-indicators{
-    bottom: -2% !important;
+    /* bottom: -2% !important; */
   }
 }

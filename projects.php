@@ -136,6 +136,9 @@
 
                           // Calculate the number of slides needed
                           let numSlides = Math.ceil(data[0].length / 3);
+                          if(window.innerWidth <= 767){
+                            numSlides = data[0].length;
+                          }
 
                           // Generate carousel indicators dynamically
                           let carouselIndicators = "";
@@ -148,11 +151,15 @@
                           }
 
                           // Loop through data and generate carousel items with three cards each
-                          for (let i = 0; i < data[0].length; i += 3) {
+                          let k = 3;
+                          if(window.innerWidth <= 767){
+                            k = 1;
+                          }
+                          for (let i = 0; i < data[0].length; i += k) {
                             let row = document.createElement("div");
                             row.classList.add("row");
 
-                            for (let j = i; j < Math.min(i + 3, data[0].length); j++) {
+                            for (let j = i; j < Math.min(i + k, data[0].length); j++) {
                               let cardComponent = GenerateCard(data[0][j], j);
 
                               let cardWrapper = document.createElement("div");
@@ -174,18 +181,18 @@
 
                           let carouselComponent = `
                             <section class="container mt-4">
-                              <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                              <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="3000">
                                 <div class="carousel-indicators">
                                   ${carouselIndicators}
                                 </div>
                                 <div class="carousel-inner">
                                   ${ProjectSlide}
                                 </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <button style="left:-15px" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                   <span class="visually-hidden">Previous</span>
                                 </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <button style="right:-15px" class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                   <span class="visually-hidden">Next</span>
                                 </button>
@@ -205,6 +212,15 @@
                           } catch (error) {
                             posts.innerHTML = `<h1>An error occurred: Carousel Component Not working </h1>`;
                           }
+                          window.addEventListener("resize", () => {
+                          try {
+                            const carouselComponent = GenerateCarousel(data);
+                            posts.innerHTML = carouselComponent;
+                          } catch (error) {
+                            console.log(error);
+                            posts.innerHTML = `<h1>An error occurred: Carousel Component Not working </h1>`;
+                          }
+                        });
 
 ///////////////////////////////////////////////////////////////////////////////// 
 
