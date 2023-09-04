@@ -29,7 +29,7 @@
 
   <!-- ===============================================Team======================================= -->
   <div class="team_heading" style="display: flex;justify-content: center;">
-    <h2 class="font-weight-bold text-center mb-5 h1 w-50" id="contributors"></h2>
+    <h2 class="font-weight-bold text-center mb-5 h1" id="contributors"></h2>
   </div>
   <div class="row justify-content-center ml-5 mr-5" id="members"></div>
 
@@ -90,7 +90,7 @@
               </div>\
               <img src='" + data[0].Image + "'>\
               </div></div>\
-              <div style='padding: 2%; padding-top: 0 !important'><h1 class='heading'>About this project:</h1> <br><p>" + data[0].Content + "</p></div></div>";
+              <div style='padding: 2%; padding-top: 0 !important'><h1 class='heading'>About this project:</h1><p>" + data[0].Content + "</p></div></div>";
               }
               else{
               posts.innerHTML = "<div class='row' id='row1'><div class='post' style='width:100%'>\
@@ -99,7 +99,7 @@
               </div>\
               <img src='" + data[0].Image + "'>\
               </div></div>\
-              <div style='padding: 2%'><h1 class='heading'>About this project:</h1> <br><p>" + data[0].Content + "</p></div></div>";
+              <div style='padding: 2%'><h1 class='heading'>About this project:</h1><p>" + data[0].Content + "</p></div></div>";
               }
 
 

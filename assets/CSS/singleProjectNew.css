@@ -93,6 +93,20 @@ a {
     display: flex;
     flex-direction: column-reverse;
   }
+  .post-content img{
+    max-width: 100%;
+  }
+  #row1{
+    margin:4%;
+  }
+  .post-text{
+    align-items: center;
+    text-align: center;
+  }
+  .heading{
+    font-size: 1.5rem;
+    padding-top: 3%;
+  }
 }
 
 .about-button {
@@ -143,6 +157,7 @@ a:hover{
   backdrop-filter: blur(12.1px);
   -webkit-backdrop-filter: blur(12.1px);
   border: 1px solid rgba(203, 233, 255, 0.81);
+  width: 100%;
 }
 
 
