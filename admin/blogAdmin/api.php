@@ -497,40 +497,27 @@ function readEvents()
     }
 };
 
-function carouselFunctionAPI()
-{
+function carouselFunctionAPI(){
     include_once '../../events/eventPost.php';
-    // echo "1";
+
     // Instantiate DB & connect
     $database = new Database();
-    // echo "2";
     $db = $database->connect();
-    // echo "3";
-    // echo $db;
+
     // Instantiate blog post object
     $post = new PostEvent($db);
-    // echo "4";
 
-    $numEvents = $post->countEvents();
+    // Get the count of events in the current month
+    $count = $post->countEvents();
 
-    foreach ($numEvents as $key => $item) {
-        $count = $item;
-    }
-    // echo $count;
-    // var_dump($count);
-    // echo sizeof($count);
-
-    if (sizeof($count)==1) {
-        // echo "dfgh";
+    if ($count == 1) {
         $result = $post->carouselquerryOne();
     } else {
         $result = $post->carouselquerry();
     }
-    // echo "5";
 
     // Check if any posts
     if ($result) {
-
         // Post array
         $posts_arr = array();
 
@@ -539,7 +526,6 @@ function carouselFunctionAPI()
                 'poster' => $row["poster"],
                 'button1Text' => $row["button1Text"],
                 'button1Link' => $row["button1Link"],
-
             );
             // Push to "data"
             array_push($posts_arr, $post_item);
@@ -553,7 +539,8 @@ function carouselFunctionAPI()
             array('message' => 'No Posts Found')
         );
     }
-};
+}
+
 
 function readAllAnnouncements()
 {
