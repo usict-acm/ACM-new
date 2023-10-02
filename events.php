@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,6 +20,12 @@
     rel="stylesheet">
   <link rel="stylesheet" href="assets\CSS\events.css">
   <link rel="stylesheet" href="./assets/CSS/newStyle.css">
+  <!-- Add these lines to include Bootstrap CSS and JavaScript -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -30,14 +37,40 @@
       <img id="hero-img" src="assets\images\bgtitle.jpeg" alt="">
       <h1 id="hover-underline-animation">EVENTS</h1>
     </div>
-    <div class="title-area" id="carousel">
-      
-    </div>
+    <div class="title-area" >
+      <div class='title-text'>
+                                            <h3>'The starting point of all achievements is desire'</h3>
+                                            <h4>Register for our upcoming event</h4>
+                                            <div id="carousel-button">
+                                            
+                                            </div>
+                                          </div>
+                                          <div class='title-img' >
+                                            <div id="carouselExampleFade" class="carousel slide carousel-fade " data-ride="carousel" data-interval="3000" >
+
+                                            <div class="carousel-inner" id="carousel" style="height: 100%;"></div>
+
+                                              <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                              </a>
+                                              <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                              </a>
+
+                                            </div>
+                                          </div>
+        
+      </div>
   </section>
 
-  <script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
       let urlcarousel = './admin/blogAdmin/api.php/?q=carousel';
       let carouselDIV = document.getElementById("carousel");
+      let carouselbuttonDIV = document.getElementById("carousel-button");
+
 
       $(document).ready(function() {
         $.ajax({
@@ -45,30 +78,25 @@
           method: 'GET',
           dataType: 'JSON',
           success: function(data) {
-            //console.log("check data 123 ", data);
-           
-            carouselDIV.innerHTML += " <div class='title-text'>\
-                                          <h3>'The starting point of all achievements is desire'</h3>\
-                                          <h4>Register for our upcoming event</h4>\
-                                          <a href ="+ data[0].button1Link +" target='_blank' > <button>"+ data[0].button1Text +"</button></a>\
-                                        </div>\
-                                        <div class='title-img'>\
-                                          <img src="+ data[0].poster +" alt=''>\
-                                        </div> ";
-                                                  
-            //console.log(data[0].poster);
-            //console.log(carouselDIV);
+            // console.log("check data 123 ", data);
+            carouselDIV.innerHTML += " <div class='carousel-item active'>\
+                                                    <img src=" + data[0].poster + " style='max-height : 30%'   >\
+                                                  </div>";
+            carouselbuttonDIV.innerHTML +="<a href ="+ data[0].button1Link +" target='_blank' > <button>"+ data[0].button1Text +"</button></a>"
+            // console.log(data[0].poster);
+            // console.log(carouselDIV);
 
-            // function carouselfunction() {
+            function carouselfunction() {
 
-            //   for (i = 1; i < data.length; i++) {
-            //     carouselDIV.innerHTML += " <div class='carousel-item'>\
-            //                                           <img src=" + data[i].poster + "  class='live-carousel-img'>\
-            //                                         </div>";
-            //   }
-            // }
-            // carouselfunction();
-            //console.log(carouselDIV);
+              for (i = 1; i < data.length; i++) {
+                carouselDIV.innerHTML += " <div class='carousel-item'>\
+                                                      <img src=" + data[i].poster + "  style='max-height : 30%' >\
+                                                    </div>";
+                
+              }
+            }
+            carouselfunction();
+            // console.log(carouselDIV);
           },
         });
       });

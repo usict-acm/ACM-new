@@ -700,21 +700,25 @@
 
   }
 
-  .title-img {
+  /* .title-img {
     width: 50%;
     text-align: center;
     margin-right: 17%;
-  }
+  } */
+  
 
   .title-img img {
-    width: 135%;
-    /* margin-left: -54%; */
+    
+    width: 50%;
     padding-bottom: 2.5rem;
     padding-top: 1.5rem;
-    padding-left: 0px;
+    padding-left: 20px;
     cursor: pointer;
     transition: transform .4s;
+    overflow: hidden;
   }
+
+  
 
   .title-img img:hover {
     transform: scale(1);
