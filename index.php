@@ -368,11 +368,11 @@
 			}
 			.btn{
 				background: #005daa;
-				margin-left:31rem;
+				margin-left:20rem;
 				font-size:1rem;
 				color:#fff;
 				font-weight:500;
-				margin-top:-3.6rem;
+				margin-top:0.6rem;
 				height:30px;
 				border-radius:.4rem;
 				cursor: pointer;
