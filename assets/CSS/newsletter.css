@@ -1,0 +1,92 @@
+/* Starting of Newsletter*/
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+:root {
+    --start-color: #0575E6;
+    --end-color: #021B79;
+    --p-color: #929DA6;
+    --button-background: #0575E6;
+    --input-background: #e4eff8;
+    --radius-50: 50px;
+    --padding-15: 15px;
+  }
+  
+  .subscriber-strip {
+    margin: 0;
+    padding: 2vw;
+    height: 28vh;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  .wrapper--newsletter {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wrapper--newsletter .content {
+    background: #fff;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    min-width: 200px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .wrapper--newsletter .content header h1 {
+    font-size: 230%;
+    margin-top: 0;
+  }
+  .wrapper--newsletter .content section {
+    color: var(--p-color);
+    font-size: 15px;
+  }
+  .wrapper--newsletter .content footer {
+    padding: var(--padding-15);
+  }
+  .wrapper--newsletter .content footer input {
+    border: unset;
+    background-color: var(--input-background);
+    padding: var(--padding-15);
+    font-size: 13px;
+    border-radius: var(--radius-50);
+    width: 250px;
+  }
+  .wrapper--newsletter .content footer button {
+    background-color: #005daa;
+    border: 2px solid #005daa;
+    border-radius: 0.6em;
+    color: #fff;
+    width: 120px;
+    padding: 0.5rem;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+    font-weight: 700;
+  
+  }
+  
+      .wrapper--newsletter .content footer button:hover, .wrapper--newsletter .content footer button:focus {
+      
+      color: var(--blue);
+      background-color: #fff;
+      outline: 0;
+  }
+  
+  @media screen and (max-width: 720px) {
+    .wrapper--newsletter .content {
+      margin-right: 20px !important;
+      margin-left: 20px !important;
+      padding: var(--padding-15);
+    }
+    .wrapper--newsletter .content footer input {
+      width: 200px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /*Ending*/

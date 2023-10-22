@@ -15,6 +15,8 @@
 	<link rel="stylesheet" href="./assets/CSS/header.css">
 	<link rel="stylesheet" href="./assets/CSS/footer.css">
 	<link rel="stylesheet" href="./assets/CSS/homeTeam.css">
+	<link rel="stylesheet" href="./assets/CSS/newsletter.css" />
+
 </head>
 
 <body>
@@ -341,112 +343,17 @@
 	?>
 	<form class="subscriber-strip" method="post" >
 
-		<style>
-			h1{
-				color:#46aff5;
-				font-family:math;
-				margin-bottom:-16rem;
-				/* margin-left:28rem; */
-
-
-
-			}
-			.subscriber-strip{
-				/* width:100%; */
-				border-radius:.3rem;
-				/* background:#46aff5; */
-				/* color:white; */
-				max-height:6rem;
-				align-items:center;
-				margin-left:20rem;
-			}
-			.newsletter{
-				margin-bottom:.5rem;
-			}
-			.typed-cursor{
-				display:none;
-			}
-			.btn{
-				background: #005daa;
-				margin-left:20rem;
-				font-size:1rem;
-				color:#fff;
-				font-weight:500;
-				margin-top:0.6rem;
-				height:30px;
-				border-radius:.4rem;
-				cursor: pointer;
-				line-height: 1;
-				padding-bottom: 1rem;
-				text-transform: uppercase;
-
-			}
-			.email{
-				margin-left:18.5rem;
-			}
-			.btn:hover{
-				background:#fff;
-				color:#46aff5;
-				border: 2px solid #005daa;
-
-			}
-			@media screen and (min-width: 900px) and (max-width: 1100px){
-
-				.newsletter{
-				   margin-left:-12rem;
-			    }
-				.email{
-					margin-left:13rem
-				}
-				.btn{
-					margin-left:26rem;
-				}
-			}
-			@media screen and (min-width: 700px) and (max-width: 900px){
-				.newsletter{
-				   margin-left:-17rem;
-			    }
-				.email{
-					margin-left:5rem
-				}
-				.btn{
-					margin-left:18rem;
-				}
-
-			}
-			@media screen and (min-width: 500px) and (max-width: 700px){
-				.newsletter{
-				   margin-left:-10rem;
-			    }
-				.email{
-					margin-left:-9rem;
-					margin-top:3rem;
-				}
-				.btn{
-					margin-left:4rem;
-				}
-
-			}
-			@media screen and (max-width: 500px){
-				.newsletter{
-				   margin-left:-15rem;
-			    }
-				.email{
-					margin-left:-19rem;
-					margin-top:3rem;
-				}
-				.btn{
-					margin-left:-6rem;
-				}
-
-			}
-		
-		</style>
-        <div class="info">
-		  <h1 class="newsletter" style="margin-bottom:-2.3rem;"></h1>
-          <input type="email" class="email" id="email" name="email" placeholder="Email" style=" border-radius:.4rem; border-color: #005daa;" required >
-       </div>
-          <input class="btn" type="submit" value="Subscribe"></input>
+        <section class="wrapper wrapper--newsletter">
+           <div class="content">
+    			<header>
+      				<h1>ACM Newsletter</h1>
+    			</header>
+    		<footer>
+      			<input type="email" class="email" id="email" name="email" placeholder="Enter your email" required>
+      			<button>Subscribe</button>
+    		</footer>
+  			</div>
+		</section>
     </form>
 	
 	
