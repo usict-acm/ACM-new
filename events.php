@@ -35,15 +35,16 @@
   <section class="title">
     <div class="head">
       <img id="hero-img" src="assets\images\bgtitle.jpeg" alt="">
-      <h1 id="hover-underline-animation">EVENTS</h1>
+      
     </div>
     <div class="title-area" >
       <div class='title-text'>
+                                            <h1 id="hover-underline-animation">EVENTS</h1>
                                             <h3>'The starting point of all achievements is desire'</h3>
                                             <h4>Register for our upcoming event</h4>
-                                            <div id="carousel-button">
                                             
-                                            </div>
+                                            
+                                            
                                           </div>
                                           <div class='title-img' >
                                             <div id="carouselExampleFade" class="carousel slide carousel-fade " data-ride="carousel" data-interval="3000" >
@@ -69,9 +70,9 @@
     <script>
       let urlcarousel = './admin/blogAdmin/api.php/?q=carousel';
       let carouselDIV = document.getElementById("carousel");
-      let carouselbuttonDIV = document.getElementById("carousel-button");
-
-
+      
+      
+      
       $(document).ready(function() {
         $.ajax({
           url: urlcarousel,
@@ -80,9 +81,10 @@
           success: function(data) {
             // console.log("check data 123 ", data);
             carouselDIV.innerHTML += " <div class='carousel-item active'>\
-                                                    <img src=" + data[0].poster + " style='max-height : 30%'   >\
+                                                    <img src=" + data[0].poster + " style='max-height : 30%'   ><a  href ="+data[0].button1Link+"  target='_blank' > <button class='register_button' >"+data[0].button1Text+"</button></a>\
                                                   </div>";
-            carouselbuttonDIV.innerHTML +="<a href ="+ data[0].button1Link +" target='_blank' > <button>"+ data[0].button1Text +"</button></a>"
+                                                  
+           
             // console.log(data[0].poster);
             // console.log(carouselDIV);
 
@@ -90,8 +92,11 @@
 
               for (i = 1; i < data.length; i++) {
                 carouselDIV.innerHTML += " <div class='carousel-item'>\
-                                                      <img src=" + data[i].poster + "  style='max-height : 30%' >\
+                                                      <img src=" + data[i].poster + "  style='max-height : 30%' ><a  href ="+data[i].button1Link+"  target='_blank' > <button class='register_button'>"+data[i].button1Text+"</button></a>\
                                                     </div>";
+
+                
+            
                 
               }
             }

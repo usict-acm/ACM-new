@@ -90,13 +90,17 @@
   padding-left: 1rem;
 }
 
-.title-text h1 {
+.title-text h1{
+  font-size: 100px;
+}
+
+/* .title-text h1 {
   font-family: 'Labrada', serif;
   font-size: 3rem;
   line-height: 4rem;
   cursor: pointer;
   color: black;
-}
+} */
 
 .title-text h4 {
   font-family: 'Labrada', serif;
@@ -107,9 +111,10 @@
   color: black;
 }
 
-.title-text button {
+.register_button {
   width: 13rem;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
+  margin-left: 33%;
   font-size: 1.3rem;
   padding: 0.5rem 0.7rem;
   border-radius: 15px;
@@ -124,7 +129,7 @@
   cursor: pointer;
 }
 
-.title-text button:hover {
+.register_button:hover {
   color: white;
   font-weight: 500;
   background-color: #005daa;
@@ -709,7 +714,7 @@
 
   .title-img img {
     
-    width: 50%;
+    /* width: 50%; */
     padding-bottom: 2.5rem;
     padding-top: 1.5rem;
     padding-left: 20px;
@@ -728,13 +733,16 @@
     /* padding-left: 1rem; */
     display: contents;
   }
-
+  .title-text h1{
+    font-size: 50px;
+  }
+/* 
   .title-text h1 {
     font-family: 'Labrada', serif;
     font-size: 2rem;
     line-height: 4rem;
     color: black;
-  }
+  } */
 
   .title-text h4 {
     font-family: 'Labrada', serif;
@@ -745,16 +753,16 @@
     color: black;
   }
 
-  .title-text button {
-    width: 13rem;
-    margin-top: 2rem;
-    /* margin-left: 23%; */
-    font-size: 1.3rem;
-    padding: 0.5rem 1rem;
+  .register_button {
+    width: 8rem;
+    /* margin-top: 2rem; */
+   margin-left: 15%;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
     border-radius: 15px;
     border: 2px solid #005daa;
     color: #005daa;
-    font-weight: 500;
+    /* font-weight: 500; */
     background-color: transparent;
     text-align: center;
     text-decoration: none;
@@ -762,7 +770,7 @@
     cursor: pointer;
   }
 
-  .title-text button:active {
+  .register_button:active {
     color: white;
     font-weight: 500;
     background-color: #005daa;
