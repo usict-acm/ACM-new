@@ -17,6 +17,7 @@
     padding: 2vw;
     height: 28vh;
     font-family: 'Nunito', sans-serif;
+    padding-bottom: 3.5vh !important;
   }
   
   .wrapper--newsletter {
@@ -67,7 +68,7 @@
     cursor: pointer;
     transition: all 150ms ease-in-out;
     font-weight: 700;
-  
+    font-size: 1rem;
   }
   
       .wrapper--newsletter .content footer button:hover, .wrapper--newsletter .content footer button:focus {

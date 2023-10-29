@@ -350,7 +350,7 @@
     			</header>
     		<footer>
       			<input type="email" class="email" id="email" name="email" placeholder="Enter your email" required>
-      			<button>Subscribe</button>
+      			<button>SUBSCRIBE</button>
     		</footer>
   			</div>
 		</section>
