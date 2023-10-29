@@ -20,7 +20,7 @@
   </section>
 
   <!-- ===============================================Project======================================= -->
-  <section class="container" style="margin-top: 1%; margin-bottom:60px;">
+  <section class="container" style="margin-top: 10%; min-height: 50vh;">
     <div class="row" id="projNav"></div>
     <div class="row" id="row-p">
       Loading...
@@ -29,7 +29,7 @@
 
   <!-- ===============================================Team======================================= -->
   <div class="team_heading" style="display: flex;justify-content: center;">
-    <h2 class="font-weight-bold text-center mb-5 h1" id="contributors"></h2>
+    <h2 class="font-weight-bold text-center mb-5 h1" id="contributors" style="margin-top: 5%;"></h2>
   </div>
   <div class="row justify-content-center ml-5 mr-5" id="members"></div>
 
@@ -63,7 +63,7 @@
       ?>;
       console.log(projectId);
       if (projectId === null) {
-        posts.innerHTML = "<div class='mt-4 d-flex flex-column m-auto align-items-center'><h1 class='heading'> Project Not Found </h1><br><h3>Go back to <a href='./projects.php'>Projects</a></h3></div>";
+        posts.innerHTML = "<div class='mt-5 pt-5 d-flex flex-column mx-auto align-items-center'><h1 class='heading'> Project Not Found </h1><br><h3>Go back to <a href='./projects.php'>Projects</a></h3></div>";
         return;
       }
       let url = './admin/projectAdmin/api.php/?q=readOne&id=' + projectId;
@@ -75,7 +75,7 @@
           dataType: 'JSON',
           success: function(data) {
             if (data.length == 0 || data.message == "No Posts Found") {
-              posts.innerHTML = "<div class='d-flex flex-column m-auto align-items-center'><h1 class='heading'> Project Not Found</h1><br><h3>Go back to <a href='./projects.php'>Projects</a></h3></div>";
+              posts.innerHTML = "<div class='pt-5 mt-5 d-flex flex-column mx-auto align-items-center'><h1 class='heading'> Project Not Found</h1><br><h3>Go back to <a href='./projects.php'>Projects</a></h3></div>";
               // contributors.innerHTML = "";
             } else {
               
