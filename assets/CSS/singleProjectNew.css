@@ -54,6 +54,7 @@ a {
 
 }
 .post-text{
+  overflow-wrap: anywhere;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -70,7 +71,7 @@ a {
   margin-bottom: 2%;
 }
 .post-content h1{
-  font-size: 50px;
+  font-size: 2rem;
   font-weight: bold;
   /* margin-top: 6%; */
   /* font-family: myFont !important; */
@@ -88,7 +89,7 @@ a {
 .middleBtn{
   /* position: absolute; */
   margin-top: 4%;
-  width: 40%;
+  min-width: 40%;
 }
 
 
