@@ -78,7 +78,10 @@
               posts.innerHTML = "<div class='d-flex flex-column m-auto align-items-center'><h1 class='heading'> Project Not Found</h1><br><h3>Go back to <a href='./projects.php'>Projects</a></h3></div>";
               // contributors.innerHTML = "";
             } else {
-              contributors.innerHTML = "Contributors";
+              
+              if(data[0].Users){
+                contributors.innerHTML = "Contributors";
+              }
               projNav.innerHTML = "<div class='linker p-1'><a href='./'> Home </a> / <a href='./projects.php'> Projects </a> / "+ data[0].Title +"</div>";
               
 
