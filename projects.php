@@ -7,10 +7,13 @@
     <title>GGSIP University USS ACM Student Chapter</title>
     
     <link href="./assets/CSS/glider.css" rel="stylesheet"/>
+    
 	  <link rel="stylesheet" href="./assets/CSS/newStyle.css" />
     <link href="./assets/CSS/projects.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="./assets/CSS/header.css" rel="stylesheet" />
+    <link href="./assets/CSS/footer.css" rel="stylesheet" />
   </head>
   <body>
     <?php
@@ -31,13 +34,13 @@
 
         <!-- ==============================================header Three Blogs========================================== -->
     <section class="blog-header">
-      <div class="container mt-4">
+      <div class="container-fluid mt-4">
         <!-- <div class="row" id="row2"></div> -->
       </div>
     </section>
     <section>
       
-    <section class="container mt-5 mb-5">
+    <section class="container-fluid mt-5 mb-5">
       <!-- <h1 class="category-heading">Let The <span class = "text-head"> Words Speak</h1> -->
       <div class="lower">
         <!-- ====================================================Show All Blogs=========================================   -->
@@ -112,9 +115,9 @@
                       var descSub = desc.substring(0, 100) + "...";
                       
                       // Change this to adjust the Card Component HTML structure
+                      // <div class="col-lg-3 m-0">
                       let CardComponent = `
-                                        <div class="col-lg-3">
-                                          <div class="card" style="width: 18rem; height: 30rem;"> <!-- Set a fixed height for the card -->
+                                          <div class="card m-auto" style="max-width: 95%; width: min-content; min-width:17rem ;height: 30rem;"> <!-- Set a fixed height for the card -->
                                             <div style="height: 13rem; overflow: hidden;"> 
                                             <a href="#" onClick="redirec(${row.Sno})">
                                             <img src="${row.Image}" class="card-img-top" alt="Card image cap" style="object-fit: cover; width: 100%;"></a>
@@ -155,15 +158,19 @@
                           if(window.innerWidth <= 767){
                             k = 1;
                           }
+                          else if(window.innerWidth <= 1200){
+                            k = 2;
+                          }
                           for (let i = 0; i < data[0].length; i += k) {
                             let row = document.createElement("div");
-                            row.classList.add("row");
+                            row.classList.add("d-flex");
+                            row.classList.add("justify-content-evenly");
 
                             for (let j = i; j < Math.min(i + k, data[0].length); j++) {
                               let cardComponent = GenerateCard(data[0][j], j);
 
                               let cardWrapper = document.createElement("div");
-                              cardWrapper.classList.add("col-lg-3");
+                              // cardWrapper.classList.add("col-lg-3");
                               cardWrapper.innerHTML = cardComponent;
 
                               row.appendChild(cardWrapper);
@@ -180,7 +187,7 @@
                           }
 
                           let carouselComponent = `
-                            <section class="container mt-4">
+                            <section class="container-fluid mt-4">
                               <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="3000">
                                 <div class="carousel-indicators">
                                   ${carouselIndicators}

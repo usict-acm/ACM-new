@@ -132,7 +132,7 @@
 	color: #0b7cc2;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1160px) {
 	.navbar-expand-custom {
 		-ms-flex-flow: row nowrap;
 		flex-flow: row nowrap;

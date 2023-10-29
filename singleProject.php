@@ -7,8 +7,8 @@
   <title>GGSIP University USS ACM Student Chapter</title>
   <link href="./assets/CSS/glider.css" rel="stylesheet" />
   <link href="./assets/CSS/header.css" rel="stylesheet" />
-  <link href="./assets/CSS/footer.css" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/CSS/singleProjectNew.css">
+  <link href="./assets/CSS/footer.css" rel="stylesheet" />
 </head>
 
 <body class="blue-bg">
@@ -63,7 +63,7 @@
       ?>;
       console.log(projectId);
       if (projectId === null) {
-        posts.innerHTML = "<div class='d-flex flex-column m-auto align-items-center'><h1 class='heading'> Project Not Found </h1><br><h3>Go back to <a href='./projects.php'>Projects</a></h3></div>";
+        posts.innerHTML = "<div class='mt-4 d-flex flex-column m-auto align-items-center'><h1 class='heading'> Project Not Found </h1><br><h3>Go back to <a href='./projects.php'>Projects</a></h3></div>";
         return;
       }
       let url = './admin/projectAdmin/api.php/?q=readOne&id=' + projectId;

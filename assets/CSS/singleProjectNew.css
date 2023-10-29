@@ -5,6 +5,9 @@
   font-family: myFont;
   src: url(../../upload/projects/norwester.otf);
 }
+
+
+
 body {
   color: #5a5a5a;
   font-family: "Lato", sans-serif;
@@ -44,6 +47,7 @@ a {
 
 
 .post-content{
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -227,4 +231,8 @@ a:hover{
   display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+.img-secondary{
+  max-width: 100%;
 }
