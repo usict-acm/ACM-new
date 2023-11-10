@@ -148,6 +148,7 @@
                     -moz-appearance: textfield;
 					}
              	</style>
+            
 				<div class="form-group s-form-group col-md-5">
 					<input type="text" name="college" id="college" class="form-control" placeholder="College/ Organization" />					</div>
 				</div>
@@ -157,6 +158,7 @@
 				<div class="row contact-msg">
 					<button type="submit" class="btn btn-primary btn-theme s-form-group contact-btn col-md-3 col-sm-2" onclick="contact_us()">Submit</button>
 				</div>
+      
 			</form>
 		</div>
 	</div>

@@ -5,6 +5,7 @@
 <meta name="description"
 content="GGSIP University USS ACM Student Chapter is an official student body incepted in 2019 under the University School USICT, GGSIPU.The chapter will conduct events including programming contests, talks by renowned speakers, workshops etc">
 
+
 <!-- Google / Search Engine Tags -->
 <meta itemprop="name" content="GGSIP University USS ACM Student Chapter">
 <meta itemprop="description"
