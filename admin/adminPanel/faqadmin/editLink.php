@@ -29,7 +29,7 @@ $link = $database->connect();
 $connection = $link;
 
 /*                      *********           */
-if(isset($_GET["table"]) && isset($_GET["linkFor"]) && isset($_GET["shortLink"]) && isset($_GET["originalLink"]) ){
+if(isset($_GET["table"]) && isset($_GET["linkFor"]) && isset($_GET["shortLink"]) && isset($_GET["originalLink"])){
 
     $linkFor = mysqli_real_escape_string($link,$_GET['linkFor']);
     $shortLink = mysqli_real_escape_string($link,$_GET['shortLink']);
@@ -43,6 +43,7 @@ if(isset($_GET["table"]) && isset($_GET["linkFor"]) && isset($_GET["shortLink"])
 if (isset($_POST['reg'])) {
     $sl = $_POST['in3'];
     $lf = $_POST['in1'];
+    $ol = $_POST['in2'];
 
     $exx = explode(" ",$sl);
     $sl = join("_",$exx);
@@ -97,50 +98,56 @@ if (isset($_POST['reg'])) {
       // echo "<script>function copyAlGen(){navigator.clipboard.writeText('".$row['shortLink']."');}</script>";
       // echo "<h6>Shorted Link</h6>";
       // echo "<input type='text' class='form-control ' value='".$row['shortLink']."' readonly />";
-  }else if(mysqli_num_rows($res_u) > 0){
-      echo "<div class='wrapper'>
-      <div class='container-fluid'>
-          <div class='row'>
-              <div class='col-md-12'>
-                  <div id='container'>
-                      <form method='POST' > 
-                          <div class='form-text new' style='display:inline-block;'>
-                          <div style='width: 700px; margin-left: 300px;'>
-                          <h6>Link For</h6>
-                          <input type='text' class='form-control ' value='".$lf."' /> <br>
+  }
+//   else if(mysqli_num_rows($res_u) > 0){
+//       echo "<div class='wrapper'>
+//       <div class='container-fluid'>
+//           <div class='row'>
+//               <div class='col-md-12'>
+//                   <div id='container'>
+//                       <form method='POST' > 
+//                           <div class='form-text new' style='display:inline-block;'>
+//                           <div style='width: 700px; margin-left: 300px;'>
+//                           <h6>Link For</h6>
+//                           <input type='text' class='form-control ' value='".$lf."' /> <br>
               
-                          <h6>Original Link</h6>
-                          <input type='text' class='form-control ' value='".$originalLink."' readonly />
-                          <br>                            
-                              <input type=text class='form-control' name='in3' style='  padding:20px 5px 20px 180px; font-weight:100em; width:100%;' placeholder='Custom Link Name' id='inn3' required />
-                              <label for='in3' class='static-value' style=' position:absolute;
-                                  color:white;
-                                  left:320px;
-                                  font-weight:bold;
-                                  font-size:1.1em;
-                                  color:#444;
-                                  top:190px;'>".$siteName."
-                              </label>
-                          </div> 
-                      </div>
+//                           <h6>Original Link</h6>
+//                           <input type='text' class='form-control ' value='".$originalLink."' readonly />
+//                           <br>                            
+//                               <input type=text class='form-control' name='in3' style='  padding:20px 5px 20px 180px; font-weight:100em; width:100%;' placeholder='Custom Link Name' id='inn3' required />
+//                               <label for='in3' class='static-value' style=' position:absolute;
+//                                   color:white;
+//                                   left:320px;
+//                                   font-weight:bold;
+//                                   font-size:1.1em;
+//                                   color:#444;
+//                                   top:190px;'>".$siteName."
+//                               </label>
+//                           </div> 
+//                       </div>
 
-                          <br><br>
-                          <button type='submit' class='btn btn-primary' id='submitBtn' name='reg' style='margin-left: 300px;' >Check & Confirm</button>
-                      </form>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>";
-  echo "<div style='position:absolute;margin:400px 0px 0px 460px; color:red;'>";
-  echo "<h2>Custom name Already Taken !!</h2>"    ;
-  echo "<h2> &nbsp; Try Another Custom Name..</h2>"   ;
-  echo "</div>";
-  }else{
-        $query = "UPDATE link SET code = '". $sl."' WHERE originalLink='".$originalLink."'";
-        $query1 = "UPDATE link SET linkFor = '". $lf."' WHERE originalLink='".$originalLink."'";
-        $results1 = mysqli_query($link, $query1);
+//                           <br><br>
+//                           <button type='submit' class='btn btn-primary' id='submitBtn' name='reg' style='margin-left: 300px;' >Check & Confirm</button>
+//                       </form>
+//                   </div>
+//               </div>
+//           </div>
+//       </div>
+//   </div>";
+//   echo "<div style='position:absolute;margin:400px 0px 0px 460px; color:red;'>";
+//   echo "<h2>Custom name Already Taken !!</h2>"    ;
+//   echo "<h2> &nbsp; Try Another Custom Name..</h2>"   ;
+//   echo "</div>";
+//   }
+  else{
+        // $query = "UPDATE link SET code = '". $sl."' WHERE originalLink='".$originalLink."'";
+        // $query1 = "UPDATE link SET linkFor = '". $lf."' WHERE originalLink='".$originalLink."'";
+        // $results1 = mysqli_query($link, $query1);
+        // $results = mysqli_query($link, $query);
+
+        $query = "UPDATE link SET  linkFor = '$lf', originalLink = '$ol' WHERE code = '$sl'";
         $results = mysqli_query($link, $query);
+
         // echo "<br>" . $query;
         echo "<script>function copy2(){navigator.clipboard.writeText('".$siteLink."".$sl."');}</script>";
 
@@ -278,10 +285,10 @@ if (isset($_POST['reg'])) {
                             <h5 class="sub-head">Link For</h5>
                             <input type="text" id="in1" class='form-control alignment123' name="in1" value="<?php echo $linkFor  ?>" required />
                             <h5 class="sub-head org-head">Original Link</h5>
-                            <input type="text" id="in2" class='form-control' name="in2" placeholder="<?php echo $originalLink  ?>" required readonly/>
+                            <input type="text" id="in2" class='form-control' name="in2" value="<?php echo $originalLink  ?>" required />
                             <br>
                             <div class="form-text new">
-                                <input type=text class="form-control" name="in3" placeholder="Custom Link Name" id="in3" required />
+                                <input type=text class="form-control" name="in3" value="<?php echo $shortLink ?>" id="in3" required readonly/>
                                 <label for="in3" class="static-value"><?php echo $siteName ?>  </label>
                             </div> 
                    
@@ -309,3 +316,4 @@ if (isset($_POST['reg'])) {
    
 </body>
 </html>
+
