@@ -73,14 +73,26 @@ class PostEvent {
         
         return $stmt;
         }
-      public function countEvents() {
-        // Create query
-        $query = 'SELECT COUNT(*) FROM ' . $this->table2 .' WHERE EXTRACT(MONTH FROM CURRENT_TIMESTAMP)=EXTRACT(MONTH FROM endDate)';
-        $stmt = $this->conn->query($query);
-        // echo "statement".$stmt;  
-        
-        return $stmt;
-        }
+        public function countEvents() {
+          // Create query
+          $query = 'SELECT COUNT(*) as eventCount FROM ' . $this->table2 .' WHERE EXTRACT(MONTH FROM CURRENT_TIMESTAMP)=EXTRACT(MONTH FROM endDate)';
+          $stmt = $this->conn->query($query);
+          
+          // Check if the query was successful
+          if ($stmt) {
+              // Fetch the result as an associative array
+              $result = $stmt->fetch_assoc();
+              
+              // Check if the 'eventCount' key exists in the result
+              if (isset($result['eventCount'])) {
+                  return intval($result['eventCount']); // Convert to integer and return
+              }
+          }
+          
+          // Return 0 if there was an error or no rows matched the condition
+          return 0;
+      }
+      
       public function carouselquerryOne() {
         // Create query
         $query = 'SELECT * FROM ' . $this->table2 .' ORDER BY endDate DESC LIMIT 1';
