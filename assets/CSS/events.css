@@ -4,21 +4,19 @@
   box-sizing: border-box;
 }
 
-.title {
-  padding-top: 5%;
-}
+
 
 #hero-img {
   position: absolute;
   left: 0px;
   top: 0px;
   z-index: -1;
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  height: calc(100vh-50px);
 }
 
 .head {
-  padding-top: 1.5rem;
+  padding-top: 3rem;
   padding-bottom: 0rem;
   padding-left: 2rem;
   padding-right: 1.3rem;
@@ -33,7 +31,7 @@
   font-weight: 400;
   cursor: pointer;
   color: white;
-  padding-top: 2.5%;
+  /* padding-top: 2.5%; */
 }
 
 #hover-underline-animation {
@@ -63,7 +61,7 @@
 
 .title-area {
   margin: 2rem;
-  margin-top: 0.1rem;
+  margin-top: 0rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -644,7 +642,7 @@
 
 @media screen and (max-width: 480px) and (min-width:0px) {
   .title {
-    padding-top: 20%;
+    padding-top: 15%;
     text-align: center;
   }
 
@@ -697,7 +695,7 @@
 
   .title-area {
     margin: 1rem;
-    margin-top: 0.5rem;
+    margin-top: -0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -717,7 +715,7 @@
     /* width: 50%; */
     padding-bottom: 2.5rem;
     padding-top: 1.5rem;
-    padding-left: 20px;
+    padding-left: 0px;
     cursor: pointer;
     transition: transform .4s;
     overflow: hidden;
@@ -751,23 +749,25 @@
     padding-top: 1rem;
     cursor: pointer;
     color: black;
+    display: none;
   }
 
   .register_button {
     width: 8rem;
     /* margin-top: 2rem; */
-   margin-left: 15%;
-    font-size: 1rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 15px;
-    border: 2px solid #005daa;
-    color: #005daa;
-    /* font-weight: 500; */
-    background-color: transparent;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
+   margin-left: 0%;
+   font-size: 1.05rem;
+   padding: 0.5rem 0.7rem;
+   border-radius: 15px;
+   border: 2px solid #005daa;
+   color: #005daa;
+   font-weight: 500;
+   background-color: transparent;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   transition-duration: 0.6s;
+   cursor: pointer;
   }
 
   .register_button:active {
@@ -777,11 +777,12 @@
     border: none;
   }
 
-  .events-head {
+  /* .events-head {
     margin-top: -8%;
-  }
+  } */
 
   .events-head {
+    padding-top: 1rem;
     margin-top: 1rem;
     font-family: inherit;
     font-weight: 400;
