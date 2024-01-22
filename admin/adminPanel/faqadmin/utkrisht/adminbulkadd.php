@@ -68,7 +68,7 @@ use Shuchkin\SimpleXLSX;
         <form action = "#" method = "POST" enctype="multipart/form-data">
             <input type = "file" name = "excel"><br>
             
-            <input type = "submit" class="btn btn-primary btn-md pull-right" name = "Download">
+            <input type = "submit" class="btn btn-primary btn-md pull-right" name = "submit">
 
             <a href = "<?php echo $file_path; ?>" download="utkrisht_sample.xls">
             
