@@ -13,7 +13,11 @@
 $displayForm = true;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
-    include 'common.php';
+    include '../../blogAdmin/database.php';
+
+    $database = new Database();
+    $link = $database->connect();
+    $conn = $link;
 
     // Check if the database connection is successful
     if (!$conn) {
