@@ -70,7 +70,7 @@ use Shuchkin\SimpleXLSX;
             
             <input type = "submit" class="btn btn-primary btn-md pull-right" name = "submit">
 
-            <a href="<?php echo $file_path; ?>" download="utkrisht_sample.xlsx" class="btn btn-success btn-md pull-left">Download as Excel file</a>
+            <a href="" download="utkrisht_sample.xlsx" class="btn btn-success btn-md pull-left">Download as Excel file</a>
 
 
         </form>
