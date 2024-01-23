@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 if ($displayForm) {
 ?>
     <form method="post">
-        <img src="acm-logo.svg" alt="acm logo">
+        <img src="../../../upload/acm-logo.svg" alt="acm logo">
         <label for="user">Enter your username</label>
         <input type='text' placeholder="user" name="user">
 
