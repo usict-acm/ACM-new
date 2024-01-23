@@ -34,7 +34,7 @@
         $connection = $link;
         echo "Coming to Post";
         $username = $_POST['username'];
-        $password = $_POST['password'];
+        $password = hash('sha256', $_POST['password']);
         $username = stripcslashes($username);
         $password = stripcslashes($password);
         $username = mysqli_real_escape_string($connection, $username);
@@ -87,6 +87,7 @@
                                         </button>
                                         <hr>
                                     </form>
+                                    <button><a href="passwordchange.php">password change</a></button>
                                 </div>
                             </div>
                         </div>
