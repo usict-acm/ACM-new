@@ -112,8 +112,7 @@
                                         echo "<td>" . $row['id'] . "</td>";
                                         echo "<td>" . $row['email'] . "</td>";                                      
                                         echo "<td>";
-                                            echo "<a class='download-logo' href='".$row['path']."' download='".$row['link_for'].".png' title='Download QR' id='down-btn'  data-toggle='tooltip'><span class='glyphicon glyphicon-download-alt'></span></a>";
-                                            echo "<a class='tash-bin' href='faqadmin/qrGenerator/delete_qr.php?Sno=". $row['id'] ."' title='Delete Record' data-toggle='tooltip' onclick='return checkdelete()'><span class='glyphicon glyphicon-trash'></span></a>";
+                                        echo "<a class='tash-bin' href='faqadmin/delete_newsletter.php?id=". $row['id'] ."' title='Delete Record' data-toggle='tooltip' onclick='return checkdelete()'><span class='glyphicon glyphicon-trash'></span></a>";
                                         echo "</td>";
 
                                     echo "</tr>";
