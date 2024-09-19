@@ -1180,6 +1180,7 @@ ul {
   margin-right: 50px;
 }
 .winnerOne {
+  display: flex;
   height: 400px !important;
   box-shadow: 5px 5px 20px #0e8e96;
   background-color: #0e8e96;
