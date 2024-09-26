@@ -1,3 +1,24 @@
+<?php
+// Check if the 'year' parameter is provided, if not, redirect to the default URL
+if (!isset($_GET["year"])) {
+    header("Location: eventYear.php?year=2023");
+    exit();
+}
+
+$year = $_GET["year"];
+
+// Validate $year to ensure it's a valid year (optional)
+$validYears = [2019, 2020, 2021, 2022, 2023];
+if (!in_array($year, $validYears)) {
+    // Handle invalid year (you can redirect to a default year or display an error)
+    header("Location: eventYear.php?year=2023");
+    exit();
+}
+
+$page = isset($_GET["page"]) ? $_GET["page"] : 1;
+$previous = $page == 1 ? 1 : $page - 1;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,12 +56,15 @@
             <div style="margin:auto;" id="pagination_row_2021"></div>
         </div>
     </section>
-
-    <?php
+    
+<!--<?php 
     $page = isset($_GET["page"]) ? $_GET["page"] : 1;
     $year = $_GET["year"];
     $previous = $page == 1 ? 1 : $page - 1;
-    ?>
+
+    ?> 
+-->
+
     <script>
         let allEvents = document.getElementById("eventPage");
         if (<?php echo $year ?> != 2019 && <?php echo $year ?> != 2020 && <?php echo $year ?> != 2021 && <?php echo $year ?> != 2022 && <?php echo $year ?> != 2023) {
