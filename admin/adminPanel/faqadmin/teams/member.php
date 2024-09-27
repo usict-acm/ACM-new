@@ -25,6 +25,14 @@
             $stmt = $this->conn->query($query);
                    
             return $stmt;
-        }
+        }  
+        public function readUserById($id) {
+            echo $id;
+            $query = 'SELECT t.id, t.image, t.name, t.designation, t.linkedin, t.github, t.instagram, t.year, t.category FROM ' . $this->table . ' t WHERE id = ' . $id;
+            $stmt = $this->conn->query($query);
+                   
+            return $stmt;
+        }     
+        
     }
 ?>

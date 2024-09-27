@@ -19,23 +19,40 @@
   justify-content: center;
 } */
 
+
+/* .blue-bg {
+  background: linear-gradient(230deg, #46aff5 15%, white 15%);
+    color: #5a5a5a;
+    font-family: "Lato", sans-serif;
+    margin-left: 1px;
+} */
+
+
+.team_heading h2 {
+  border-top: solid;
+  padding-top: 2%;
+  border-color: #46aff5;
+}
+
 .profile-card {
   position: relative;
   font-family: sans-serif;
   width: 180px;
-  height: 180px;
+  height: 215px;
   background: #46aff5;
   padding: 30px;
-  border-radius: 50%;
-  box-shadow: 0 0 22px rgba(71, 71, 71, 0.4);
+  border-radius: 10px;
+  box-shadow: 4px 1px 20px 0px rgb(71 71 71 / 40%);
   transition: 0.6s;
-  margin: 25px 25px;
+  margin-top: 25px;
+  margin-right: 25px;
+  margin-bottom: 60px;
+  margin-left: 25px;
 }
 
-.profile-card:hover {
+/* .profile-card {
   border-radius: 10px;
-  height: 215px;
-}
+} */
 
 .profile-card .img {
   margin: 0;
@@ -47,18 +64,18 @@
   z-index: 99;
 }
 
-.profile-card:hover .img {
+.profile-card .img {
   transform: translateY(-60px);
 }
 
 .img img {
   width: 100%;
   border-radius: 50%;
-  box-shadow: 0 0 22px #3336;
+  box-shadow: 2px 6px 22px #46aff5;
   transition: 0.6s;
 }
 
-.profile-card:hover img {
+.profile-card img {
   border-radius: 10px;
 }
 
@@ -66,13 +83,13 @@
   text-align: center;
   margin-top: 47px;
   transform: translateY(-100px);
-  opacity: 0;
+  opacity: 1;
   transition: 0.6s;
 }
 
-.profile-card:hover .caption {
+/* .profile-card .caption {
   opacity: 1;
-}
+} */
 
 .caption h3 {
   font-size: 17px;

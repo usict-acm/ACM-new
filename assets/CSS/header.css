@@ -50,6 +50,7 @@
 	background-color: #fff;
 	padding: 10px 0px;
 	position: fixed;
+	top: 0;
 	z-index: 999;
 	width: 100%;
 	box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 3px 10px 0 rgb(0 0 0 / 19%);
@@ -131,7 +132,7 @@
 	color: #0b7cc2;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1160px) {
 	.navbar-expand-custom {
 		-ms-flex-flow: row nowrap;
 		flex-flow: row nowrap;
